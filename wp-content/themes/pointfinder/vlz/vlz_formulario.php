@@ -91,6 +91,21 @@
 
 	$estados = utf8_decode($estados);
 
+	$json = array();
+    foreach ($estados_array as $estado) {
+        
+        $municipios = $wpdb->get_results("SELECT * FROM locations WHERE state_id = {$estado->id} ORDER BY name ASC");
+
+        foreach ($municipios as $municipio) {
+            $json[$estado->id][] = array(
+                "id" => $municipio->id,
+                "name" => $municipio->name
+            );
+        }
+
+    }
+
+    echo "<script> var temp = eval( '(".json_encode($json).")' ); var locaciones = jQuery.makeArray( temp ); </script>"; 
 
 
 	if($_POST['municipios'] != ""){

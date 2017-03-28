@@ -134,7 +134,7 @@
 		var id =  jQuery("#estados").val();
 		var txt = jQuery("#estados option:selected").text();
 
-		jQuery.ajax( {
+		/*jQuery.ajax( {
 			method: "POST",
 	 			data: { estado: id },
 			url: "<?php echo get_template_directory_uri(); ?>/vlz/vlz_estados_municipios.php",
@@ -144,8 +144,19 @@
 		}).done(function(data){
 			jQuery("#municipios").html("<option value=''>Seleccione un Municipio</option>"+data);
 			vlz_coordenadas(CB);
-		});
-	}
+		});*/
+
+		if( id != "" ){
+            var html = "";
+            jQuery.each(locaciones[0][id], function(i, val) {
+                html += "<option value="+val.id+">"+val.name+"</option>";
+            });
+            jQuery("#municipios").html("<option value=''>Seleccione una localidad</option>"+html);
+            vlz_coordenadas();
+        }else{
+            jQuery("#municipios").html("<option value=''>Seleccione una ciudad primero</option>");
+        }
+}
 
 	function vlz_coordenadas(CB){
 		var estado = jQuery("#estados option:selected").text();
@@ -160,7 +171,7 @@
 		jQuery.ajax({ 
 			url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+adress+'&key=AIzaSyD-xrN3-wUMmJ6u2pY_QEQtpMYquGc70F8'
 		}).done(function(data){
-
+/*
 			var location = data.results[0].geometry.location;
 
 			var norte = data.results[0].geometry.viewport.northeast;
@@ -171,10 +182,16 @@
 			jQuery("#otra_latitud").attr("value", location.lat);
 			jQuery("#otra_longitud").attr("value", location.lng);
 			jQuery("#otra_distancia").attr("value", distancia);
-
-			if( CB != undefined) {
-				CB();
-			}
+			*/
+			if( data.results.length > 0 ){
+                var location = data.results[0].geometry.location;
+                var norte = data.results[0].geometry.viewport.northeast;
+                var sur   = data.results[0].geometry.viewport.southwest;
+                var distancia = calcular_rango_de_busqueda(norte, sur);
+                jQuery("#otra_latitud").attr("value", location.lat);
+                jQuery("#otra_longitud").attr("value", location.lng);
+                jQuery("#otra_distancia").attr("value", distancia);
+            }
 
 		});
 	} 
