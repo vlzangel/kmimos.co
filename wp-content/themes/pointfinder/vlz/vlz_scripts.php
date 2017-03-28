@@ -130,22 +130,8 @@
 	}
 
 	function vlz_ver_municipios(CB){
-
 		var id =  jQuery("#estados").val();
 		var txt = jQuery("#estados option:selected").text();
-
-		/*jQuery.ajax( {
-			method: "POST",
-	 			data: { estado: id },
-			url: "<?php echo get_template_directory_uri(); ?>/vlz/vlz_estados_municipios.php",
-		  	beforeSend: function( xhr ) {
-		    	jQuery("#municipios").html("<option value=''>Cargando Municipios</option>");
-		  	}
-		}).done(function(data){
-			jQuery("#municipios").html("<option value=''>Seleccione un Municipio</option>"+data);
-			vlz_coordenadas(CB);
-		});*/
-
 		if( id != "" ){
             var html = "";
             jQuery.each(locaciones[0][id], function(i, val) {
@@ -162,27 +148,14 @@
 		var estado = jQuery("#estados option:selected").text();
 		var municipio_val = jQuery("#municipios option:selected").val();
 		var municipio = jQuery("#municipios option:selected").text();
-
 		var adress = "colombia+"+estado;
 		if( municipio_val != "" ){ 
 			adress+="+"+municipio; 
 		}
-
 		jQuery.ajax({ 
 			url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+adress+'&key=AIzaSyD-xrN3-wUMmJ6u2pY_QEQtpMYquGc70F8'
 		}).done(function(data){
-/*
-			var location = data.results[0].geometry.location;
 
-			var norte = data.results[0].geometry.viewport.northeast;
-			var sur   = data.results[0].geometry.viewport.southwest;
-
-			var distancia = calcular_rango_de_busqueda(norte, sur);
-
-			jQuery("#otra_latitud").attr("value", location.lat);
-			jQuery("#otra_longitud").attr("value", location.lng);
-			jQuery("#otra_distancia").attr("value", distancia);
-			*/
 			if( data.results.length > 0 ){
                 var location = data.results[0].geometry.location;
                 var norte = data.results[0].geometry.viewport.northeast;
@@ -192,7 +165,6 @@
                 jQuery("#otra_longitud").attr("value", location.lng);
                 jQuery("#otra_distancia").attr("value", distancia);
             }
-
 		});
 	} 
 
