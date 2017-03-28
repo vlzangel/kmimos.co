@@ -221,7 +221,7 @@
                                 </div>
                                 <sub>Municipio:</sub><br>
                                 <select id="estado_cuidador" name="estados" data-location="co">
-                                    <option value="">Seleccione un municipio</option>
+                                    <option value="">Seleccione una ciudad</option>
                                     <?php echo $str_estados; ?>
                                 </select>
                             </div>
@@ -234,7 +234,7 @@
                                 </div>
                                 <sub>Localidad:</sub><br>
                                 <select id="municipio_cuidador" name="municipios">
-                                    <option value="">Seleccione primero un municipio</option>
+                                    <option value="">Seleccione primero una ciudad</option>
                                 </select>
                             </div>
                         </div>
