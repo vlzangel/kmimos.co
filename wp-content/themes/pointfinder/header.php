@@ -333,6 +333,7 @@
             }
             ?>
             <div class="wpf-navwrapper">
+            <a  href="<?php echo get_home_url();?>/" class="jj-patica-menu"><img src="https://www.kmimos.com.mx/wp-content/uploads/2016/02/patita.png"></a>
 	            <?php 
 				$pf_navmenu = wp_nav_menu(array(
 				        'echo' => FALSE,
