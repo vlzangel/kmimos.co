@@ -312,6 +312,7 @@
             mpos.change(function(){
                 vlz_coordenadas();
             });
+            vlz_coordenadas();
             var toRadian = function (deg) {
                 return deg * Math.PI / 180;
             };
