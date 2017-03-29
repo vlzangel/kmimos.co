@@ -8,7 +8,7 @@
     extract($_POST);
 
     add_filter( 'wp_mail_from_name', function( $name ) {
-        return 'Kmimos Colombia';
+        return 'Kmimos México';
     });
     add_filter( 'wp_mail_from', function( $email ) {
         return 'kmimos@kmimos.la';
@@ -30,10 +30,10 @@
             <h1>¡Nueva Contraseña Temporal!</h1>
             <p style="text-align: justify;">Hola <strong>'.$user->display_name.'</strong>,</p>
             <p style="text-align: justify;">
-                Hemos recibido la solicitud para restablecer tu contraseña en Kmimos.
+                Hemos recibido tu solicitud para restablecer tu contraseña en Kmimos.
             </p>
             <p style="text-align: justify;">
-                Como parte del proceso de mejoras que tenemos en Kmimos, hemos hecho un cambio en la plataforma con una serie de beneficios que fueron compartidos en un email aparte. En este correo encontrarás tus credenciales temporales para acceder a la nueva plataforma de Kmimos Colombia.
+                Como parte del proceso de mejoras que tenemos en Kmimos, hemos hecho un cambio en la plataforma con una serie de beneficios que fueron compartidos en un email aparte. En este correo encontrarás tus credenciales temporales para acceder a la nueva plataforma de Kmimos México.
             </p>
             <p style="text-align: justify;">
                 Esta contraseña la puedes conservar si lo deseas o puedes cambiarla una vez que inicies sesión desde tu perfil en Kmimos.
@@ -43,10 +43,10 @@
                 <strong>¿Cuál es el siguiente paso?</strong>
             </h2>
             <ul style="text-align: justify;">
-                <li style="text-align: justify;">Dale click al botón de abajo "Confirmar cambio de Contraseña".</li>
+                <li style="text-align: justify;">Pícale al botón de abajo "Confirmar cambio de Contraseña".</li>
                 <li style="text-align: justify;">Inicia sesión con la contraseña temporal.</li>
                 <li style="text-align: justify;">Una vez en  Tu Perfil, cambia tu contraseña.</li>
-                <li style="text-align: justify;">Dale click al botón de "Actualizar" para que los cambios queden registrados.</li>
+                <li style="text-align: justify;">Pícale al botón de "Actualizar" para que los cambios queden registrados.</li>
             </ul>
             <p style="text-align: justify;">
                 <table>
@@ -55,7 +55,7 @@
                 </table>
             </p>    
             <p style="text-align: justify;">
-                Para iniciar sesión, Dale click al botón de abajo para acceder a nuestra nueva plataforma y cambiar la contraseña si así lo deseas.
+                Para iniciar sesión, pícale al botón de abajo para acceder a nuestra nueva plataforma y cambiar la contraseña si así lo deseas.
             </p>
             <p style="text-align: center;">
                 <a  target="_blank"
@@ -84,7 +84,7 @@
 
         $send = kmimos_get_email_html("", $mensaje, '', true, true);
 
-        wp_mail( $user->user_email, "Kmimos Colombia – Restablecimiento de Contraseña! Kmimos la NUEVA forma de cuidar a tu perro!", $send);
+        wp_mail( $user->user_email, "Kmimos México – Restablecimiento de Contraseña! Kmimos la NUEVA forma de cuidar a tu perro!", $send);
 
     }
 ?>
