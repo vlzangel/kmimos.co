@@ -28,6 +28,63 @@
 
 	}
 
+	if( isset($_GET['init'])){
+		global $wpdb;
+
+		$sql = "
+			SELECT 
+				u.user_email AS mail,
+				m.meta_value AS clave
+			FROM 
+				wp_users AS u
+			INNER JOIN wp_usermeta AS m ON (m.user_id = u.ID)
+			WHERE 
+				u.ID = '{$_GET['init']}' AND 
+				m.meta_key = 'user_pass'
+			GROUP BY 
+				u.ID
+		";
+		$data = $wpdb->get_row($sql);
+
+		$info = array();
+	    $info['user_login']     = sanitize_user($data->mail, true);
+	    $info['user_password']  = sanitize_text_field($data->clave);
+
+	    $user_signon = wp_signon( $info, true );
+	    wp_set_auth_cookie($user_signon->ID);
+
+	    header("location: ".get_home_url()."/perfil-usuario/?ua=profile");
+	}
+
+	if( isset($_GET['i'])){
+		global $current_user;
+
+        $_SESSION['id_admin'] = $current_user->ID;
+        $_SESSION['admin_sub_login'] = "YES";
+
+		global $wpdb;
+
+		$sql = "SELECT ID FROM wp_users WHERE md5(ID) = '{$_GET['i']}'";
+		// $sql = "SELECT ID FROM wp_users WHERE ID = '{$_GET['i']}'";
+		$data = $wpdb->get_row($sql);
+
+	    $user_id = $data->ID;
+		$user = get_user_by( 'id', $user_id ); 
+		if( $user ) {
+		    wp_set_current_user( $user_id, $user->user_login );
+		    wp_set_auth_cookie( $user_id );
+		}
+
+		if( isset($_GET['admin']) ){
+	   		header("location: ".get_home_url()."/wp-admin/admin.php?page=kmimos-setup");
+
+	        $_SESSION['id_admin'] 		 = "";
+	        $_SESSION['admin_sub_login'] = "";
+		}else{
+	   		header("location: ".get_home_url()."/perfil-usuario/?ua=profile");
+		}
+	}
+
 ?><!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
@@ -272,13 +329,13 @@
 											if ( !is_user_logged_in() ){
 											?>
 											<li class="pf-login-register<?php echo $pflogintext?>" id="pf-login-trigger-button"><a href="#"><i class="pfadmicon-glyph-584"></i> <?php  echo esc_html__('Login','pointfindert2d')?></a></li>
-											<li class="pf-login-register<?php echo $pflogintext?>" id="pf-register-trigger-button"><a href="#"><i class="pfadmicon-glyph-365"></i> <?php  echo esc_html__('Register','pointfindert2d')?></a></li>
+											<li class="pf-login-register<?php echo $pflogintext?>"><a href="<?php echo get_home_url()."/registrar/"; ?>"><i class="pfadmicon-glyph-365"></i> <?php  echo esc_html__('Register','pointfindert2d')?></a></li>
 											<li class="pf-login-register<?php echo $pflogintext?>" id="pf-lp-trigger-button"><a href="#"><i class="pfadmicon-glyph-889"></i> <?php  echo esc_html__('Forgot Password','pointfindert2d')?></a></li>
 											<?php 
 											}else {
 												global $current_user;
 											?>
-											<li class="pf-my-account pfloggedin">
+											<li class="pf-my-account pfloggedin" style="min-width: 200px; text-align: right;">
 												<a href="#">
 												<i class="pfadmicon-glyph-632"></i> 
 												<?php  echo $current_user->nickname?>
@@ -451,7 +508,7 @@
 										if ( !is_user_logged_in() ){
 										?>
 										<li class="pf-login-register<?php echo $pflogintext?>" id="pf-login-trigger-button-mobi"><a href="#"><i class="pfadmicon-glyph-584"></i> <?php  echo esc_html__('Login','pointfindert2d')?></a></li>
-										<li class="pf-login-register<?php echo $pflogintext?>" id="pf-register-trigger-button-mobi"><a href="#"><i class="pfadmicon-glyph-365"></i> <?php  echo esc_html__('Register','pointfindert2d')?></a></li>
+										<li class="pf-login-register<?php echo $pflogintext?>"><a href="<?php echo get_home_url()."/registrar/"; ?>"><i class="pfadmicon-glyph-365"></i> <?php  echo esc_html__('Register','pointfindert2d')?></a></li>
 										<li class="pf-login-register<?php echo $pflogintext?>" id="pf-lp-trigger-button-mobi"><a href="#"><i class="pfadmicon-glyph-889"></i><?php  echo esc_html__('Forgot Password','pointfindert2d')?></a></li>
 										<?php 
 										}else {
