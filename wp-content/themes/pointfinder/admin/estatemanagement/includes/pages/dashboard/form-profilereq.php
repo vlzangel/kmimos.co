@@ -93,6 +93,11 @@ if(isset($ua_action)){
 					}
 					
 					//header('location: '.get_home_url().'/perfil-usuario/?ua=profile');
+					echo "
+						<script>
+							location.href = '".get_home_url().'/perfil-usuario/?ua=profile'."';
+						</script>
+					";
 				}else{
 				    $errorval .= esc_html__('Please login again to update profile (Invalid UserID).','pointfindert2d');
 			  	}
