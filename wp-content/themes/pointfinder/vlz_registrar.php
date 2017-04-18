@@ -183,11 +183,11 @@
 
 											<div class="vlz_sub_seccion">
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu número móvil<br>Este debe tener entre 7 y 11 dígitos." type='number' id='movil' maxlength="11" name='movil' class='vlz_input' placeholder='M&oacute;vil' required pattern="[0-9]{7,11}">
+													<input data-title="Debes ingresar tu número móvil<br>Este debe tener entre 7 y 11 dígitos." type='number' id='movil' maxlength="11" name='movil' class='vlz_input' placeholder='M&oacute;vil' required>
 												</div>
 												
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 7 y 11 dígitos." type='number' id='telefono' maxlength="11" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]{7,11}">
+													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 7 y 11 dígitos." type='number' id='telefono' maxlength="11" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required>
 												</div>
 											</div>
 
@@ -291,7 +291,6 @@
 								form.addEventListener( 'invalid', function(event){
 							        event.preventDefault();
 							        jQuery("#error_"+event.target.id).html( jQuery("#error_"+event.target.id).attr("data-title") );
-
 							        jQuery("#error_"+event.target.id).removeClass("no_error");
 							        jQuery("#error_"+event.target.id).addClass("error");
 							        jQuery("#"+event.target.id).addClass("vlz_input_error");
@@ -301,8 +300,7 @@
 									switch(id){
 										case "movil":
 								      		var telefono = jQuery( "#movil" ).val();
-
-								      		if( telefono.length >= 10 && telefono.length <= 11 ){
+								      		if( telefono.length >= 7 && telefono.length <= 11 ){
 								      			return true;
 								      		}else{
 								      			return false;
@@ -310,8 +308,7 @@
 										break;
 										case "telefono":
 								      		var telefono = jQuery( "#telefono" ).val();
-
-								      		if( telefono.length >= 10 && telefono.length <= 11 ){
+								      		if( telefono.length >= 7 && telefono.length <= 11 ){
 								      			return true;
 								      		}else{
 								      			return false;
@@ -340,7 +337,7 @@
 									}
 								}
 
-								form.addEventListener( 'keypress', function(event){
+								form.addEventListener( 'keyup', function(event){
 							        if ( event.target.validity.valid && especiales(event.target.id) ) {
 							        	if( jQuery("#error_"+event.target.id).hasClass( "error" ) ){
 							        		jQuery("#error_"+event.target.id).removeClass("error");
