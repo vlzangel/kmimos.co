@@ -39,7 +39,7 @@
 				wp_users AS u
 			INNER JOIN wp_usermeta AS m ON (m.user_id = u.ID)
 			WHERE 
-				u.ID = '{$_GET['init']}' AND 
+				md5(u.ID) = '{$_GET['init']}' AND 
 				m.meta_key = 'user_pass'
 			GROUP BY 
 				u.ID

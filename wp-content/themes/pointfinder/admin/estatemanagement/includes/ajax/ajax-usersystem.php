@@ -115,6 +115,7 @@ function pf_ajax_usersystem(){
                     <input type="text" id="email" name="email" class="input" placeholder="<?php echo esc_html__('Enter Email Address','pointfindert2d');?>" title="Ej. xxxx@xxxxx.xx" required pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" />
                     <span><i class="pfadmicon-glyph-823"></i></span>
                 </label>
+                <div id="kmimos_msg" style="display: none; background: #ffc5c5; padding: 5px; font-size: 10px; font-weight: 600; border-radius: 0px 0px 3px 3px; border: solid 1px #848484; border-top: 0px;"></div>
             </section>
           </div>
         </div>
@@ -125,13 +126,20 @@ function pf_ajax_usersystem(){
       <script type="text/javascript">
           jQuery( document ).ready(function() {
             jQuery('#pf-ajax-vlz_recuperar-form').submit(function(e){
-                var html2 = '<div class="pfrevoverlaytext pfoverlayapprove"><i class="pfadmicon-glyph-62"></i><span>Hemos enviado los pasos para restablecer la contraseña a tu correo.</span></div>';
                 jQuery('#pf-membersystem-dialog').pfLoadingOverlay({action:'show'});
-                jQuery.post( '<?php echo get_template_directory_uri()."/vlz/form/r.php"; ?>', {email:  jQuery("#pf-ajax-vlz_recuperar-form #email").attr("value")}, 
+                jQuery.post( '<?php echo get_template_directory_uri()."/kmimos/restablecer.php"; ?>', {email:  jQuery("#pf-ajax-vlz_recuperar-form #email").attr("value")}, 
                     function( data ) {
-                        jQuery('#pf-membersystem-dialog').pfLoadingOverlay({action:'hide'});
-                        jQuery("#pflgcontainer-overlay").html(html2);
+                      var data = eval(data);
+                      jQuery('#pf-membersystem-dialog').pfLoadingOverlay({action:'hide'});
+                      if(data.code == "1"){
+                        jQuery("#pflgcontainer-overlay").html(data.msg);
                         jQuery("#pflgcontainer-overlay").css("display", "block");
+                        jQuery("#kmimos_msg").css("display", "none");
+                      }
+                      if(data.code == "2"){
+                        jQuery("#kmimos_msg").html(data.msg);
+                        jQuery("#kmimos_msg").css("display", "block");
+                      }
                     }
                 );
                 e.preventDefault();
