@@ -183,11 +183,11 @@
 
 											<div class="vlz_sub_seccion">
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu número móvil<br>Este debe tener entre 10 y 11 dígitos." type='number' id='movil' maxlength="11" name='movil' class='vlz_input' placeholder='M&oacute;vil' required pattern="[0-9]{11}">
+													<input data-title="Debes ingresar tu número móvil<br>Este debe tener entre 7 y 11 dígitos." type='number' id='movil' maxlength="11" name='movil' class='vlz_input' placeholder='M&oacute;vil' required pattern="[0-9]{7,11}">
 												</div>
 												
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 10 y 11 dígitos." type='number' id='telefono' maxlength="11" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]{11}">
+													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 7 y 11 dígitos." type='number' id='telefono' maxlength="11" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]{7,11}">
 												</div>
 											</div>
 
@@ -420,8 +420,6 @@
 						      		jQuery(".vlz_modal_contenido").css("display", "none");
 						      		jQuery("#vlz_cargando").css("display", "block");
 
-						      		// jQuery("#vlz_cargando").html("<h2>Enviando Informaci&oacute;n al correo...</h2>");
-
 						      		jQuery.ajax({
 									    url: '<?php echo get_template_directory_uri()."/vlz/form/vlz_mail_cliente.php"; ?>',
 									    type: "post",
@@ -463,7 +461,6 @@
 								      		jQuery("#vlz_titulo_registro").html("Registrando, por favor espere...");
 							             	
 								      		jQuery.post( a, jQuery("#vlz_form_nuevo_cliente").serialize(), function( data ) {
-								      			// console.log(data);
 									      		mail_ext_temp(data);
 											});
 
