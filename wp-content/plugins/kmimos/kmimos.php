@@ -1203,45 +1203,17 @@ if(!function_exists('kmimos_get_over_price')){
  * */
 
 if(!function_exists('get_referred_list_options')){
-
     function get_referred_list_options(){
-
         $opciones = array(
-            
-            'Volaris'=>'Volaris',
-
-            'Facebook'=>'Facebook',
-
-            'Adwords'=>'Buscador de Google',
-
-            'Instagram'=>'Instagram',
-
-            'Twitter'=>'Twitter',
-
-            'Booking.com'=>'Booking.com',
-
-            'Cabify'=>'Cabify',
-
-            'Bancomer'=>'Bancomer',
-
-            'Mexcovery'=>'Mexcovery',
-
-            'Totems'=>'Totems',
-
-            'Groupon'=>'Groupon',
-
-            'Agencia IQPR'=>'Agencia IQPR',
-
-            'Revistas o periodicos'=>'Revistas o periodicos',
-
-            'Otros'=>'Otros',
-
+            'Facebook'      =>  'Facebook',
+            'Adwords'       =>  'Buscador de Google',
+            'Twitter'       =>  'Twitter',
+            'Amigo/Familiar'        =>  'Recomendación de amigo o familiar',
+            'Youtube'               =>  'Youtube',
+            'Otros'                 =>  'Otros'
         );
-
         return $opciones;
-
     }
-
 }
 
 /**
