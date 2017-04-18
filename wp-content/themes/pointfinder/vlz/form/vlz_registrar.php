@@ -62,7 +62,7 @@
                 $user_photo = 1;
                 $img = end(explode(',', $vlz_img_perfil));
                 $sImagen = base64_decode($img);
-                $dir = "../../../../uploads/avatares_clientes/{$user_id}/";
+                $dir = "../../../../uploads/avatares/{$user_id}/";
                 @mkdir($dir);
                 file_put_contents($dir.'temp.jpg', $sImagen);
                 $sExt = mime_content_type( $dir.'temp.jpg' );
@@ -111,7 +111,7 @@
             ";
             $conn->query( utf8_decode( $sql ) );
 
-            echo $user_id;
+            echo md5($user_id);
 
         }
         
