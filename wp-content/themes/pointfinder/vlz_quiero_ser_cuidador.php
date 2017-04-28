@@ -204,22 +204,11 @@ $mensajes_alerta =
 												type='password' 
 												id='clave' 
 												name='clave' 
-												data-title="
-												La contraseña debe contener al menos:<br>
-												<ul>
-
-													<li>Una letra mayúscula</li>
-											      	<li>Una letra minúscula</li>
-											      	<li>Un número</strong></li>
-											      	<li>Una longitud mínima de 6 caracteres</li>
-											      	<li>Y al final debe llevar  #</li>
-											      	<li><strong>Las contraseñas deben ser iguales</strong></li>
-												</ul>" 
+												data-title="<strong>Las contraseñas son requeridas y deben ser iguales</strong>" 
 												class='vlz_input' 
 												 
 												placeholder='Contraseña' 
 												required 
-												pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[-#\*]).{6,}$"
 												autocomplete="off"
 											>
 										</div>
@@ -229,22 +218,11 @@ $mensajes_alerta =
 												type='password' 
 												id='clave2' 
 												name='clave2' 
-												data-title="
-												La contraseña debe contener al menos:<br>
-												<ul>
-
-													<li>Una letra mayúscula</li>
-											      	<li>Una letra minúscula</li>
-											      	<li>Un número</strong></li>
-											      	<li>Una longitud mínima de 6 caracteres</li>
-											      	<li>Y al final debe llevar  #</li>
-											      	<li><strong>Las contraseñas deben ser iguales</strong></li>
-												</ul>" 
+												data-title="<strong>Las contraseñas son requeridas y deben ser iguales</strong>" 
 												class='vlz_input' 
 												 
 												placeholder='Contraseña' 
 												required 
-												pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[-#\*]).{6,}$"
 												autocomplete="off"
 											>
 										</div>
@@ -637,6 +615,9 @@ $mensajes_alerta =
 											}
 										
 										?>
+
+										<div class='no_error' id='error_hospedaje' data-id="hospedaje_pequenos" style="margin: 3px 6px 0px;">Debe llenar al menos uno de los campos</div>
+
 										<?php // La configuracion esta en la primera linea de este archivo
 										echo $mensajes_alerta; 
 										?>
@@ -1023,6 +1004,42 @@ $mensajes_alerta =
 								      			return false;
 								      		}
 										break;
+										case "clave":
+								      		var clv1 = jQuery("#clave").attr("value");
+								      		var clv2 = jQuery("#clave2").attr("value");
+
+								      		return ( clv1 == clv2 );
+										break;
+										case "clave2":
+								      		var clv1 = jQuery("#clave").attr("value");
+								      		var clv2 = jQuery("#clave2").attr("value");
+
+								      		return ( clv1 == clv2 );
+										break;
+										case "hospedaje":
+								      		var z = 0;
+											var t = [
+												'pequenos',
+												'medianos',
+												'grandes',
+												'gigantes'
+											];
+
+											jQuery.each(t, function( index, value ) {
+												var temp = jQuery('#hospedaje_'+value).attr('value');
+												if( temp == '' ){ temp = 0; }
+												z += parseInt( temp );
+						      					console.log("Z: "+z);	
+											});
+
+											if( z == 0 ){
+												jQuery('#error_hospedaje').attr('class', 'error');
+											}else{
+												jQuery('#error_hospedaje').attr('class', 'no_error');
+											}
+
+											return ( z == 0 );
+										break;
 										default:
 											return true;
 										break;
@@ -1286,21 +1303,46 @@ $mensajes_alerta =
 						      		var clv1 = jQuery("#clave").attr("value");
 						      		var clv2 = jQuery("#clave2").attr("value");
 
-						      		if( clv1 != clv2 ){
-						      			jQuery("#vlz_val_clave_2").html("Las contraseñas deben ser iguales");
-						      			jQuery("#vlz_val_clave_2").css("display", "block");
+						      		if( clv1 == clv2 ){
+
+						      			jQuery("#error_clave").removeClass("error");
+							        	jQuery("#error_clave").addClass("no_error");
+							        	jQuery("#clave").removeClass("vlz_input_error");
+
+						      			jQuery("#error_clave2").removeClass("error");
+							        	jQuery("#error_clave2").addClass("no_error");
+							        	jQuery("#clave2").removeClass("vlz_input_error");
+
 						      		}else{
-						      			jQuery("#vlz_val_clave_2").css("display", "none");
+						        		jQuery("#error_clave").removeClass("no_error");
+							        	jQuery("#error_clave").addClass("error");
+							        	jQuery("#clave").addClass("vlz_input_error");
+
+						        		jQuery("#error_clave2").removeClass("no_error");
+							        	jQuery("#error_clave2").addClass("error");
+							        	jQuery("#clave2").addClass("vlz_input_error");
 						      		}
 						      	}
 
-						      	jQuery( "#clave1" ).keyup(clvs_iguales);
+						      	jQuery( "#clave" ).keyup(clvs_iguales);
 						      	jQuery( "#clave2" ).keyup(clvs_iguales);
 
 						      	function vlz_validar(){
+						      		var error = 0;
 
 						      		if( !form.checkValidity() ){
+						      			error++;						      			
+						      		}
 
+						      		if( !especiales("clave") ){
+						      			error++;						      			
+						      		}
+
+						      		if( especiales("hospedaje") ){
+						      			error++;						      			
+						      		}
+
+						      		if( error > 0 ){
 						      			var primer_error = ""; var z = true;
 						      			jQuery( ".error" ).each(function() {
 										  	if( jQuery( this ).css( "display" ) == "block" ){
@@ -1310,6 +1352,8 @@ $mensajes_alerta =
 										  		}
 										  	}
 										});
+
+										console.log("primer_error: "+primer_error);
 
 						      			jQuery('html, body').animate({ scrollTop: jQuery(primer_error).offset().top-75 }, 2000);
 						      		}else{
