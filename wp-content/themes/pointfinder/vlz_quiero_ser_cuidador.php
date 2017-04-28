@@ -616,7 +616,7 @@ $mensajes_alerta =
 										
 										?>
 
-										<div class='no_error' id='error_hospedaje' data-id="hospedaje_pequeno" style="margin: 3px 6px 0px;">Debe llenar al menos uno de los campos</div>
+										<div class='no_error' id='error_hospedaje' data-id="hospedaje_pequenos" style="margin: 3px 6px 0px;">Debe llenar al menos uno de los campos</div>
 
 										<?php // La configuracion esta en la primera linea de este archivo
 										echo $mensajes_alerta; 
@@ -1352,6 +1352,8 @@ $mensajes_alerta =
 										  		}
 										  	}
 										});
+
+										console.log("primer_error: "+primer_error);
 
 						      			jQuery('html, body').animate({ scrollTop: jQuery(primer_error).offset().top-75 }, 2000);
 						      		}else{
