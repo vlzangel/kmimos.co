@@ -472,7 +472,7 @@
 											if( $EC != 1 ){
 												echo "
 													<li>
-														<a class='ser_cuidador' href='".get_home_url()."/quiero-ser-cuidador/'>
+														<a class='ser_cuidador' href='".get_home_url()."/quiero-ser-cuidador-certificado-de-perros/'>
 															<span></span>
 															<div>Quiero ser cuidador</div>
 														</a>
