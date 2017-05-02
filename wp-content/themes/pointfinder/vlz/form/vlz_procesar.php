@@ -25,7 +25,7 @@
         if( $vlz_img_perfil != "0" ){
         	$foto = "1";
         }
-        $experiencia = $cuidando_desde;
+        $experiencia = date("Y")-$cuidando_desde;
 
         $mascotas_cuidador = array(
         	"pequenos" => $tengo_pequenos+0,
@@ -355,6 +355,7 @@
                         (NULL, ".$user_id.", 'nickname',            '".$username."'),
                         (NULL, ".$user_id.", 'first_name',          '".$nombres."'),
                         (NULL, ".$user_id.", 'last_name',           '".$apellidos."'),
+                        (NULL, ".$user_id.", 'user_referred',       '".$referido."'),
                         (NULL, ".$user_id.", 'description',         ''),
                         (NULL, ".$user_id.", 'rich_editing',        'true'),
                         (NULL, ".$user_id.", 'comment_shortcuts',   'false'),
@@ -523,6 +524,13 @@
                         $conn->query( ($sql) );
 
                     }
+
+                    $info = array();
+                    $info['user_login']     = sanitize_user($email, true);
+                    $info['user_password']  = sanitize_text_field($clave);
+
+                    $user_signon = wp_signon( $info, true );
+                    wp_set_auth_cookie($user_signon->ID);
 
             }else{
                 $error = array(
