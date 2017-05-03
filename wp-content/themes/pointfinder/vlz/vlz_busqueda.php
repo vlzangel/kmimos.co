@@ -27,7 +27,6 @@
 	$xpagina = $pagina*15;
 
 	include("vlz_style.php");
-	include("vlz_funciones.php");
 
 	get_header();
 	

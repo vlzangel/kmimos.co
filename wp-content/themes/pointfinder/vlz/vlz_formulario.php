@@ -81,7 +81,7 @@
 	global $wpdb;
 	$estados_array = $wpdb->get_results("SELECT * FROM states WHERE country_id = 1 ORDER BY name ASC");
 
-    $estados = "<option value=''>Seleccione una localidad</option>";
+    $estados = "<option value=''>Seleccione una ciudad</option>";
     foreach($estados_array as $estado) { 
     	if( $_POST['estados'] == $estado->id ){ 
 			$sel = "selected"; 

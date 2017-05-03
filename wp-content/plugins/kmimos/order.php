@@ -1,18 +1,17 @@
 <?php
-	
 
     define('WP_USE_THEMES', false);
     require('../../../wp-blog-header.php');
 
     add_filter( 'wp_mail_from_name', function( $name ) {
-		return 'Kmimos Colombia';
+		return 'Kmimos México';
 	});
 	add_filter( 'wp_mail_from', function( $email ) {
-		return 'contactoco@kmimos.la';
+		return 'kmimos@kmimos.la';
 	});
-	
-    include("vlz_data_orden.php");
-    include("vlz_order_funciones.php");
+
+	include("vlz_data_orden.php");
+	include("vlz_order_funciones.php");
 
 	echo "
 		<style>
@@ -27,12 +26,8 @@
 			    margin: 1em 0px;
 			}
 		</style>
-	";
+	"; 
 
-	// $administradores = "e.celli@kmimos.la, e.celli@desdigitec.com, r.cuevas@kmimos.la, r.cuevas@desdigitec.com, r.gonzalez@kmimos.la, r.gonzalez@desdigitec.com";
-
-	$mail_admin = "contactoco@kmimos.la";
-	
 	$status = $booking->get_status();
 
 	if( $status == "confirmed" || $status == "cancelled" ){
@@ -85,8 +80,6 @@
 	   		echo $msg_cuidador = kmimos_get_email_html("Reserva Cancelada Exitosamente!", $msg, "", true, true);
 	   		wp_mail( $email_cuidador, "Cancelación de Reserva", $msg_cuidador);
 
-	   		//wp_mail( $administradores, "Copia Administradores: Cancelación de Reserva", $msg_cuidador);
-
 			$msg = $styles.'
 		    	<p><strong>Cancelación de Reserva (N°. '.$reserva_id.')</strong></p>
 				<p>Hola <strong>Administrador</strong>,</p>
@@ -94,16 +87,19 @@
 				.$detalles_cliente
 				.$detalles_cuidador
 				.$detalles_mascotas
-				.$detalles_servicio;
+				.$detalles_servicio
+				.'
+					<p align="justify">
+						Esta son las sugerencias que se le enviaron al cliente:
+					</p>
+				'
+				.$lista_cercanos;
 		    
 	   		$msg_admin = kmimos_get_email_html("Reserva Cancelada por Cuidador - ".$cuidador_post->post_title, $msg, "", true, true);
-	   		wp_mail( $mail_admin, "Cancelación de Reserva", $msg_admin);
+	   		wp_mail( $email_admin, "Cancelación de Reserva", $msg_admin, kmimos_mails_administradores());
 
-	   		// wp_mail( $administradores, "Copia Administradores: Cancelación de Reserva", $msg_admin);
-
-	 
 	   		$msg = $styles.'
-	   			<div style="padding-right: 10px;">
+	   			<div>
 			    	<p><strong>Cancelación de Reserva (N°. '.$reserva_id.')</strong></p>
 					<p>Hola <strong>'.$nom.'</strong>,</p>
 					<p align="justify">Te notificamos que el cuidador <strong>'.$cuidador_post->post_title.'</strong> ha cancelado la reserva N° <strong>'.$reserva_id.'</strong>.</p>
@@ -118,8 +114,6 @@
 		    
 	   		$msg_cliente = kmimos_get_email_html("Cancelación de Reserva", $msg, "", true, true);
 	   		wp_mail( $user->data->user_email, "Cancelación de Reserva", $msg_cliente, kmimos_mails_administradores());
-
-	   		// wp_mail( $administradores, "Copia Administradores: Cancelación de Reserva", $msg_cliente);
 
 	    } else {
 			$order->update_status('wc-on-hold');
@@ -157,8 +151,6 @@
 	   		echo $msg_cuidador = kmimos_get_email_html("Confirmación de Reserva", $msg, "", true, true);
 	   		wp_mail( $email_cuidador, "Confirmación de Reserva", $msg_cuidador);
 
-	   		//wp_mail( $administradores, "Copia Administradores: Confirmación de Reserva", $msg_cuidador);
-
 			$msg_admin = $styles.'
 		    	<p><strong>Confirmación de Reserva (N°. '.$reserva_id.')</strong></p>
 				<p>Hola <strong>Administrador</strong>,</p>
@@ -169,9 +161,7 @@
 				.$detalles_servicio;
 
 	   		$msg_admin = kmimos_get_email_html("Confirmación de Reserva", $msg_admin, "", true, true);
-	   		wp_mail( $mail_admin, "Confirmación de Reserva", $msg_admin);
-
-	   		// wp_mail( $administradores, "Copia Administradores: Confirmación de Reserva", $msg_admin);
+	   		wp_mail( $email_admin, "Confirmación de Reserva", $msg_admin, kmimos_mails_administradores());
 
 	   		$nota_importante = $styles.'
 	   			<p align="justify"><strong>Importante:</strong></p>
@@ -181,7 +171,7 @@
 
 			$msg_cliente = $styles.'
 				<p align="center">¡Todo está listo <strong>'.$nom.'</strong>!</p>
-				<p align="justify">Tu reserva ha sido confirmada por el cuidador <strong>'.$cuidador_post->post_title.'</strong>.</p>
+				<p align="justify">Tu reserva (N°. '.$reserva_id.') ha sido confirmada por el cuidador <strong>'.$cuidador_post->post_title.'</strong>.</p>
 		    	<p>Detalles de la reserva:</p>'
 				.$detalles_cuidador
 				.$detalles_mascotas
@@ -189,9 +179,7 @@
 				.$nota_importante;
 
 			$msg_cliente = kmimos_get_email_html("Confirmación de Reserva", $msg_cliente, "", true, true);
-	   		wp_mail( $user->data->user_email, "Confirmación de Reserva", $msg_cliente, kmimos_mails_administradores());
-
-	   		// wp_mail( $administradores, "Copia Administradores: Confirmación de Reserva", $msg_cliente);
+	   		wp_mail( $email_cliente, "Confirmación de Reserva", $msg_cliente);
 
 	    }
 

@@ -70,7 +70,7 @@ function pf_ajax_usersystem(){
       </section>
     <?php } ?>
 
-    <div class="form-enclose"><div class="form-section"><?php echo $facebook_login_text;echo $twitter_login_text;echo $google_login_text;?><section><label class="cxb"><?php echo esc_html__('Not a member yet?','pointfindert2d');?> <strong><a id="pf-register-trigger-button-inner" class="glink ext"><?php echo esc_html__('Register Now','pointfindert2d');?></a></strong> <?php echo esc_html__('- Its  Free','pointfindert2d');?></label><div class="tagline"><span><?php echo esc_html__('OR','pointfindert2d');?></span></div></section><section><label for="usernames" class="lbl-text">E-mail</label><label class="lbl-ui append-icon"><input type="text" name="username" class="input" placeholder="E-mail" autofocus /><span><i class="pfadmicon-glyph-632"></i></span></label></section> <section><label for="pass" class="lbl-text"><?php echo esc_html__('Password:','pointfindert2d');?></label><label class="lbl-ui append-icon"><input type="password" name="password" class="input" placeholder="<?php echo esc_html__('Enter Password','pointfindert2d');?>" /><span><i class="pfadmicon-glyph-465"></i></span></label></section><?php echo $recaptcha_vars;?><section><span class="gtoggle"><label class="toggle-switch blue"><input type="checkbox" name="rem" id="toggle1_rememberme" /><label for="toggle1_rememberme" data-on="<?php echo esc_html__('YES','pointfindert2d');?>" data-off="<?php echo esc_html__('NO','pointfindert2d');?>"></label></label><label for="toggle1"><?php echo esc_html__('Remember me','pointfindert2d');?> <strong><a id="pf-lp-trigger-button-inner" class="glink ext"><?php echo esc_html__('Forgot Password?','pointfindert2d');?></a></strong></label></span></section></div></div><div class="form-buttons"><section><input type="hidden" name="redirectpage" value="<?php echo $redirectpage;?>"/><button id="pf-ajax-login-button" class="button blue"><?php echo esc_html__('Login Now','pointfindert2d');?></button></section></div></form></div><?php
+    <div class="form-enclose"><div class="form-section"><?php echo $facebook_login_text;echo $twitter_login_text;echo $google_login_text;?><section><label class="cxb"><?php echo esc_html__('Not a member yet?','pointfindert2d');?> <strong><a href="<?php echo get_home_url()."/registrar/"; ?>" class="glink ext"><?php echo esc_html__('Register Now','pointfindert2d');?></a></strong> <?php echo esc_html__('- Its  Free','pointfindert2d');?></label><div class="tagline"><span><?php echo esc_html__('OR','pointfindert2d');?></span></div></section><section><label for="usernames" class="lbl-text">E-mail</label><label class="lbl-ui append-icon"><input type="text" name="username" class="input" placeholder="E-mail" autofocus /><span><i class="pfadmicon-glyph-632"></i></span></label></section> <section><label for="pass" class="lbl-text"><?php echo esc_html__('Password:','pointfindert2d');?></label><label class="lbl-ui append-icon"><input type="password" name="password" class="input" placeholder="<?php echo esc_html__('Enter Password','pointfindert2d');?>" /><span><i class="pfadmicon-glyph-465"></i></span></label></section><?php echo $recaptcha_vars;?><section><span class="gtoggle"><label class="toggle-switch blue"><input type="checkbox" name="rem" id="toggle1_rememberme" /><label for="toggle1_rememberme" data-on="<?php echo esc_html__('YES','pointfindert2d');?>" data-off="<?php echo esc_html__('NO','pointfindert2d');?>"></label></label><label for="toggle1"><?php echo esc_html__('Remember me','pointfindert2d');?> <strong><a id="pf-lp-trigger-button-inner" class="glink ext"><?php echo esc_html__('Forgot Password?','pointfindert2d');?></a></strong></label></span></section></div></div><div class="form-buttons"><section><input type="hidden" name="redirectpage" value="<?php echo $redirectpage;?>"/><button id="pf-ajax-login-button" class="button blue"><?php echo esc_html__('Login Now','pointfindert2d');?></button></section></div></form></div><?php
 		break;
 /**
 *Register
@@ -115,6 +115,7 @@ function pf_ajax_usersystem(){
                     <input type="text" id="email" name="email" class="input" placeholder="<?php echo esc_html__('Enter Email Address','pointfindert2d');?>" title="Ej. xxxx@xxxxx.xx" required pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" />
                     <span><i class="pfadmicon-glyph-823"></i></span>
                 </label>
+                <div id="kmimos_msg" style="display: none; background: #ffc5c5; padding: 5px; font-size: 10px; font-weight: 600; border-radius: 0px 0px 3px 3px; border: solid 1px #848484; border-top: 0px;"></div>
             </section>
           </div>
         </div>
@@ -125,13 +126,20 @@ function pf_ajax_usersystem(){
       <script type="text/javascript">
           jQuery( document ).ready(function() {
             jQuery('#pf-ajax-vlz_recuperar-form').submit(function(e){
-                var html2 = '<div class="pfrevoverlaytext pfoverlayapprove"><i class="pfadmicon-glyph-62"></i><span>Hemos enviado los pasos para restablecer la contraseña a tu correo.</span></div>';
                 jQuery('#pf-membersystem-dialog').pfLoadingOverlay({action:'show'});
-                jQuery.post( '<?php echo get_template_directory_uri()."/vlz/form/r.php"; ?>', {email:  jQuery("#pf-ajax-vlz_recuperar-form #email").attr("value")}, 
+                jQuery.post( '<?php echo get_template_directory_uri()."/kmimos/restablecer.php"; ?>', {email:  jQuery("#pf-ajax-vlz_recuperar-form #email").attr("value")}, 
                     function( data ) {
-                        jQuery('#pf-membersystem-dialog').pfLoadingOverlay({action:'hide'});
-                        jQuery("#pflgcontainer-overlay").html(html2);
+                      var data = eval(data);
+                      jQuery('#pf-membersystem-dialog').pfLoadingOverlay({action:'hide'});
+                      if(data.code == "1"){
+                        jQuery("#pflgcontainer-overlay").html(data.msg);
                         jQuery("#pflgcontainer-overlay").css("display", "block");
+                        jQuery("#kmimos_msg").css("display", "none");
+                      }
+                      if(data.code == "2"){
+                        jQuery("#kmimos_msg").html(data.msg);
+                        jQuery("#kmimos_msg").css("display", "block");
+                      }
                     }
                 );
                 e.preventDefault();
