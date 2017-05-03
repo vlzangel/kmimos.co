@@ -31,6 +31,7 @@
 * Location: /public_html/wp-content/themes/pointfinder/admin/estatemanagement/includes/pages/dashboard/
 *
 ***********************************************************************************************************************************/
+get_template_part('vlz/admin/dashboard/frontend/functions');
 
 if ( ! class_exists( 'PF_Frontend_Fields' ) ){
 	class PF_Frontend_Fields
@@ -3982,7 +3983,7 @@ if ( ! class_exists( 'PF_Frontend_Fields' ) ){
 						*Start: Bookings list Page Content
 						**/
 
-						include("./wp-content/themes/pointfinder/vlz/admin/page_bookings.php");
+						include("./wp-content/themes/pointfinder/vlz/admin/dashboard/frontend/mybookings.php");
 
 					break;
     

@@ -4,7 +4,7 @@
 
 /Migracion/
 /Cambios/
-
+/.idea/
 /Pruebas/
 /wp-admin/
 /wp-includes/
@@ -96,3 +96,5 @@ licencia.txt
 *.txt
 logo-kmimos210x120.png
 readme.html
+.idea/workspace.xml
+.idea/modules.xml

@@ -88,6 +88,7 @@ if(isset($ua_action)){
                         $setup29_dashboard_contents_vendor_pictures_menuname= 'Mis Fotos';
                         $setup29_dashboard_contents_pets_list_menuname = 'Mis Mascotas';
                         $setup29_dashboard_contents_vendor_bookings_menuname = 'Mis Reservas';
+						$setup29_dashboard_contents_caregiver_menuname = 'Mis Solicitudes';
 						$setup_invoices_sh = PFASSIssetControl('setup_invoices_sh','','1');
 
 						$pfmenu_output = '';
@@ -262,6 +263,7 @@ if(isset($ua_action)){
                         /*
                         *   Muestra botón para ver las mascotas del usuario
                         */
+                        $pets = kmimos_get_my_pets($current_user->ID);
                         if ($_GET['ua']=='mypets'){
                             $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-871"></i> '. $setup29_dashboard_contents_pets_list_menuname.'<span class="pfbadge">'.$pets['count'].'</span></li>';
                         }
@@ -272,6 +274,7 @@ if(isset($ua_action)){
                         /*
                         *   Muestra botón para ver los cuidadores favoritos del usuario
                         */
+                        $favorites = kmimos_get_my_favorites($current_user->ID);
                         if($_GET['ua']=='favorites'){
                             $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'<span class="pfbadge">'.$favorites['count'].'</span></a></li>';
                         }
@@ -294,6 +297,17 @@ if(isset($ua_action)){
                         */
                         $user_info = get_userdata($current_user->ID);
                         $user_roles = $user_info->roles;
+
+						//SOLICITUDES DE CONOCER AL CUIDADOR POR EL CLIENTE
+						if(!in_array('vendor',$user_roles)){
+							if($_GET['ua']=='caregiver'){
+								$pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							} else {
+								$class = ($_GET['ua']=='caregiver')? ' class="selected_option"':'';
+								$pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							}
+						}
+
                         if(current_user_can( 'manage_options' )){
                             $pfmenu_output .= '<li class="negative">ADMINISTRADOR</li>';
                             $pfmenu_output .= '<li><a href="'.get_home_url().'/wp-admin" target="_blank"><i class="pfadmicon-glyph-421"></i> '. $setup29_dashboard_contents_back_end_menuname.'</a></li>';
@@ -309,42 +323,96 @@ if(isset($ua_action)){
                             $pfmenu_output .= '<li class="negative">CUIDADOR</li>';
                             if ($_GET['ua']=='myshop'){
                                 $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-664"></i> '.$setup29_dashboard_contents_shop_menuname.'</li>';
-                            } else {
+                            }
+                            else {
                                 $pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myshop"><i class="pfadmicon-glyph-664"></i> '. $setup29_dashboard_contents_shop_menuname.'</a></li>';
                             }
                             /*
+                            *   Muestra los asuntos pendientes del cuidador
+                            */
+                            // $issues = kmimos_get_my_pending_issues($current_user->ID);
+                            // $color = ( $issues['count'] > 0 ) ? ' red': '';
+                            // if ($_GET['ua']=='myissues'){
+                            //     $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-403'.$color.'"></i> '. $setup29_dashboard_contents_issues_menuname.'<span class="pfbadge'.$color.'">'.$issues['count'].'</span></li>';
+                            // } else {
+                            //     $class = ($_GET['ua']=='myissue')? ' class="selected_option"':'';
+                            //     $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myissues"><i class="pfadmicon-glyph-403'.$color.'"></i> '. $setup29_dashboard_contents_issues_menuname.'<span class="pfbadge'.$color.'">'.$issues['count'].'</span></a></li>';
+                            // }
+                            /*
                             *   Muestra los servicios ofrecidos por el cuidador
                             */
+                            $services = kmimos_get_my_services($current_user->ID);
                             if ($_GET['ua']=='myservices'){
-                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'</li>';
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'<span class="pfbadge">'.$services['count'].'</span></li>';
                             }
                             else {
                                 $class = ($_GET['ua']=='myservice' || $_GET['ua']=='newservice')? ' class="selected_option"':'';
-                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myservices"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'</a></li>';
+                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myservices"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'<span class="pfbadge">'.$services['count'].'</span></a></li>';
                             }
+                            
                             /* 
                              * Muestra la galería de fotos del cuidador
                              * Italo Gallery
                              */
+                            $pictures = kmimos_get_my_pictures($current_user->ID);
                             if ($_GET['ua']=='mypictures'){
-                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-82"></i> '. $setup29_dashboard_contents_vendor_pictures_menuname.'</li>';
-                            } else {
-                                $pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypictures"><i class="pfadmicon-glyph-82"></i> '. $setup29_dashboard_contents_vendor_pictures_menuname.'</a></li>';
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-82"></i> '. $setup29_dashboard_contents_vendor_pictures_menuname.'<span class="pfbadge">'.$pictures['count'].'</span></li>';
                             }
+                            else {
+                                $pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypictures"><i class="pfadmicon-glyph-82"></i> '. $setup29_dashboard_contents_vendor_pictures_menuname.'<span class="pfbadge">'.$pictures['count'].'</span></a></li>';
+                            }
+                            
+                            
                             /*
                             *   Muestra el listado de las reservas activas del cuidador
                             */
+                            $bookings = kmimos_get_my_bookings($current_user->ID);
                             if ($_GET['ua']=='mybookings'){
-                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'</li>';
-                            } else {
-                                $class = ($_GET['ua']=='mybooking')? ' class="selected_option"':'';
-                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mybookings"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'</a></li>';
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'</li>';//<span class="pfbadge">'.$bookings['count'].'</span>
                             }
-                        } 
+                            else {
+                                $class = ($_GET['ua']=='mybooking')? ' class="selected_option"':'';
+                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mybookings"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'</a></li>';//<span class="pfbadge">'.$bookings['count'].'</span>
+                            }
 
+							//SOLICITUDES DE CONOCER AL CUIDADOR
+							if($_GET['ua']=='caregiver'){
+								$pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							} else {
+								$class = ($_GET['ua']=='caregiver')? ' class="selected_option"':'';
+								$pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							}
+                            /*
+                            *   Muestra el listado de las ventas del cuidador
+                            */
+  /*                          $sales_count = kmimos_get_my_sales_count($current_user->ID);
+                            if ($_GET['ua']=='mysales'){
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-265"></i> '. $setup29_dashboard_contents_vendor_sales_menuname.'<span class="pfbadge">'.$sales_count.'</span></li>';
+                            }
+                            else {
+                                $pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mysales"><i class="pfadmicon-glyph-265"></i> '. $setup29_dashboard_contents_vendor_sales_menuname.'<span class="pfbadge">'.$sales_count.'</span></a></li>';
+                            }
+*/
+                        } else {
+                            /*
+                            *   Si no es cuidador, muestra botón para postularse como cuidador
+                            
+                            if ($_GET['ua']=='newitem'){
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-475"></i> '. $setup29_dashboard_contents_submit_page_menuname.'</a></li>';
+                            }
+                            else {
+                                $pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=newitem"><i class="pfadmicon-glyph-475"></i> '. $setup29_dashboard_contents_submit_page_menuname.'</a></li>';
+                            }*/
+                        }
+/*
+						$pfmenu_output .= ($setup4_membersettings_frontend == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myitems"><i class="pfadmicon-glyph-460"></i> '. $setup29_dashboard_contents_my_page_menuname.'<span class="pfbadge">'.$item_count.'</span></a></li>' : '' ;
+
+						$pfmenu_output .= ($setup4_membersettings_frontend == 1 && $setup_invoices_sh == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=invoices"><i class="pfadmicon-glyph-33"></i> '. $setup29_dashboard_contents_inv_page_menuname.'</a></li>' : '' ;
+*/
 						$pfmenu_output .= ($setup11_reviewsystem_check == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=reviews"><i class="pfadmicon-glyph-377"></i> '. $setup29_dashboard_contents_rev_page_menuname.'</a></li>' : '';
                         
 						$pfmenu_output .= '<li><a href="'.esc_url(wp_logout_url( home_url() )).'"><i class="pfadmicon-glyph-476"></i> '. esc_html__('Cerrar Sesión','pointfindert2d').'</a></li>';
+						
 						
 						$sidebar_output .= '
 							<div class="pfuaformsidebar ">
@@ -359,6 +427,9 @@ if(isset($ua_action)){
 					*End: Menu
 					**/
 					
+
+
+
 					/**
 					*Start: Page Start Actions / Divs etc...
 					**/
@@ -4016,8 +4087,12 @@ Array
 								*Invoices Page Content
 								**/
 
-								include("./wp-content/themes/pointfinder/vlz/admin/page_invoices.php");
+							//include("./wp-content/themes/pointfinder/vlz/admin/page_invoices.php");
+							include("./wp-content/themes/pointfinder/vlz/admin/dashboard/frontend/invoices.php");
+						break;
 
+						case 'caregiver':
+							include("./wp-content/themes/pointfinder/vlz/admin/dashboard/frontend/caregiver.php");
 						break;
 
 					}
