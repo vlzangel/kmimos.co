@@ -41,7 +41,7 @@
 
     if(!function_exists('kmimos_box_details_of_petsitter')){
         function kmimos_box_details_of_petsitter() {
-            $values = kmimos_get_fields_values(array());
+            
             add_meta_box(
                 'active_petsitter',
                 'Datos Cuidador',
@@ -54,26 +54,26 @@
     if(!function_exists('kmimos_active_petsitter')){
         function kmimos_active_petsitter($post, $params) {
             $values=$params['args'];
-            if( $post->post_status == 'pending' ){
-                $link = "<a class='vlz_activar' href='".get_template_directory_uri()."/vlz/admin/activar_cuidadores.php?p=".$post->ID."&a=1&u=".$post->post_author."'>Activar Cuidador</a>";
-            }else{
-                $link = "<a class='vlz_desactivar' href='".get_template_directory_uri()."/vlz/admin/activar_cuidadores.php?p=".$post->ID."&a=0&u=".$post->post_author."'>Desactivar Cuidador</a>";
-            }
 
             global $wpdb;
 
             $usuario = $wpdb->get_row("SELECT * FROM wp_users WHERE ID = ".$post->post_author);
             $cuidador = $wpdb->get_row("SELECT * FROM cuidadores WHERE id_post = ".$post->ID);
 
+            if( $cuidador->hospedaje_desde > 0 ){
+                if( $post->post_status == 'pending' ){
+                    $link = "<a class='vlz_activar' href='".get_home_url()."/wp-content/themes/pointfinder"."/vlz/admin/activar_cuidadores.php?p=".$post->ID."&a=1&u=".$post->post_author."'>Activar Cuidador</a>";
+                }else{
+                    $link = "<a class='vlz_desactivar' href='".get_home_url()."/wp-content/themes/pointfinder"."/vlz/admin/activar_cuidadores.php?p=".$post->ID."&a=0&u=".$post->post_author."'>Desactivar Cuidador</a>";
+                }
+            }else{
+                $link = "Este cuidador no tiene precios de hospedaje, no puede ser activado";
+            }
+               
+
             $fecha = strtotime($usuario->user_registered);
             $hora = date("H:i", $fecha);
             $fecha = "El ".date("d/m/Y", $fecha)." a las ".$hora;
-
-            $metas = get_user_meta($usuario->ID);
-
-            if( $metas['user_phone'][0] == "" ){
-                $metas['user_phone'][0] = "No registrado";
-            }
 
             echo "
                 <style>
@@ -117,10 +117,9 @@
                 </style>
                 <div class='vlz_contenedor_datos_cuidador'>
                     <div><strong>Nombre:</strong> {$cuidador->nombre} {$cuidador->apellido}</div>
-                    <div><strong>DNI:</strong> {$cuidador->dni}</div>
+                    <div><strong>IFE:</strong> {$cuidador->dni}</div>
                     <div><strong>E-Mail:</strong> {$cuidador->email}</div>
-                    <div><strong>Tel&eacute;fono 1:</strong> {$metas['user_mobile'][0]}</div>
-                    <div><strong>Tel&eacute;fono 2:</strong> {$metas['user_phone'][0]}</div>
+                    <div><strong>Tel&eacute;fono:</strong> {$cuidador->telefono}</div>
                     <div><strong>Registrado:</strong> {$fecha}</div>
                     <div class='vlz_contenedor_botones'>{$link}</div>
                 </div>
@@ -130,7 +129,14 @@
 
     if(!function_exists('kmimos_save_details_of_petsitter')){
         function kmimos_save_details_of_petsitter($post_id) {
-            return;
+            global $wpdb;
+            $post_id    = get_the_ID();
+            $user_id    = get_the_author();
+
+            if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )  return;
+            if ( 'petsitters' != $_POST['post_type'] ) return;
+            if ( ! current_user_can( 'edit_post', $post_id ) )  return;
+
         }
     }
 

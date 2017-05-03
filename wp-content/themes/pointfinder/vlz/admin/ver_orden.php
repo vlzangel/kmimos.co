@@ -97,11 +97,11 @@
 		$detalles_mascotas .= '
 			<table style="width:100%" cellspacing=0 cellpadding=0>
 				<tr>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> <strong>Nombre</strong> </th>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> <strong>Raza</strong> </th>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> <strong>Edad</strong> </th>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> <strong>Tamaño</strong> </th>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> <strong>Comportamiento</strong> </th> 
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> <strong>Nombre</strong> </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> <strong>Raza</strong> </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> <strong>Edad</strong> </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> <strong>Tamaño</strong> </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> <strong>Comportamiento</strong> </th> 
 				</tr>';
 
 		$comportamientos_array = array(
@@ -363,7 +363,9 @@
 			"pequenos" => "Mascotas Pequeños", 
 			"medianos" => "Mascotas Medianos", 
 			"grandes"  => "Mascotas Grandes", 
-			"gigantes" => "Mascotas Gigantes"
+			"gigantes" => "Mascotas Gigantes",
+			"pequenos" => "Mascotas Pequeñas", 
+			"medianos" => "Mascotas Medianas"
 		);
 
 		$txts = array(
@@ -392,11 +394,11 @@
 
 				$variaciones .= '
 				<tr>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;"> '.$txts[$key].' </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" align="center"> '.$detalles_reserva[$value].' </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" align="center"> '.$dias.' '.$dias_noches.' </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" align="right"> '.number_format( $unitario, 2, ',', '.').'$ </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" align="right"> '.number_format( ($unitario*$detalles_reserva[$value]*$dias), 2, ',', '.').'$ </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;"> '.$txts[$key].' </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;" align="center"> '.$detalles_reserva[$value].' </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;" align="center"> '.$dias.' '.$dias_noches.' </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;" align="right"> '.number_format( $unitario, 2, ',', '.').'$ </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;" align="right"> '.number_format( ($unitario*$detalles_reserva[$value]*$dias), 2, ',', '.').'$ </td>
 				</tr>';
 
 				$grupo += $detalles_reserva[$value];
@@ -406,16 +408,16 @@
 
 		if( count($adicionales_array) > 0 ){
 
-			$adicionales = '<tr> <td style="padding: 3px; background: #00d2b7; border-left: solid 1px #00d2b7; font-weight: 800;" colspan=5> Servicios Adicionales </td> </tr>';
+			$adicionales = '<tr> <td style="padding: 3px; border-bottom: solid 1px #cccccc;  font-weight: 600;" colspan=5> Servicios Adicionales </td> </tr>';
 			foreach ($adicionales_array as $key => $value) {
 				$servicio = $value[0];
 				$costo = ($value[1]);
 				$adicionales .= '
 				<tr>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7;" colspan=2> '.$servicio.' </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" align="center"> '.$grupo.' Mascota(s) </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" align="right"> '.number_format( $costo, 2, ',', '.').'$ </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right"> '.number_format( ($costo*$grupo), 2, ',', '.').'$ </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " colspan=2> '.$servicio.' </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;" align="center"> '.$grupo.' Mascota(s) </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;" align="right"> '.number_format( $costo, 2, ',', '.').'$ </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right"> '.number_format( ($costo*$grupo), 2, ',', '.').'$ </td>
 				</tr>';
 			}
 
@@ -423,16 +425,16 @@
 
 		if( count($transporte) > 0 ){
 			
-			$transporte_str = '<tr> <td style="padding: 3px; background: #00d2b7; border-left: solid 1px #00d2b7; font-weight: 800;" colspan=5> Servicio de Transporte </td> </tr>';
+			$transporte_str = '<tr> <td style="padding: 3px; border-bottom: solid 1px #cccccc;  font-weight: 600;" colspan=5> Servicio de Transporte </td> </tr>';
 			foreach ($transporte as $key => $value) {
 				$servicio = $value[0];
 				$costo = ($value[1]);
 				$transporte_str .= '
 				<tr>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7;" colspan=2> '.$servicio.' </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" align="center"> Precio por Grupo </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" align="right"> '.number_format( $costo, 2, ',', '.').'$ </td>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right"> '.number_format( $costo, 2, ',', '.').'$ </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " colspan=2> '.$servicio.' </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;" align="center"> Precio por Grupo </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc;" align="right"> '.number_format( $costo, 2, ',', '.').'$ </td>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right"> '.number_format( $costo, 2, ',', '.').'$ </td>
 				</tr>';
 			}
 
@@ -452,9 +454,8 @@
 					<tr>
 						<td></td>
 						<td></td>
-						<td></td>
-						<th style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7;">Descuento</th>
-						<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right">'.number_format( $metas_orden["_cart_discount"][0], 2, ',', '.').'$</td>
+						<th colspan=2 style="padding: 3px; border-bottom: solid 1px #cccccc; ">Descuento</th>
+						<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right">'.number_format( $metas_orden["_cart_discount"][0], 2, ',', '.').'$</td>
 					</tr>
 				';
 
@@ -468,9 +469,8 @@
 					<tr>
 						<td></td>
 						<td></td>
-						<td></td>
-						<th style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7;">Descuento</th>
-						<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right">'.number_format( $metas_orden["_cart_discount"][0], 2, ',', '.').'$</td>
+						<th style="padding: 3px; border-bottom: solid 1px #cccccc; ">Descuento</th>
+						<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right">'.number_format( $metas_orden["_cart_discount"][0], 2, ',', '.').'$</td>
 					</tr>
 				';
 
@@ -484,25 +484,22 @@
 				<tr>
 					<td></td>
 					<td></td>
-					<td></td>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7;">Total</th>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right">'.number_format( $pago, 2, ',', '.').'$</td>
+					<th colspan=2 style="padding: 3px; border-bottom: solid 1px #cccccc; ">Total</th>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right">'.number_format( $pago, 2, ',', '.').'$</td>
 				</tr>
 				'.$descuento_total.'
 				<tr>
 					<td></td>
 					<td></td>
-					<td></td>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7;">Pago en Tienda</th>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right">'.number_format( $remanente['deposit'], 2, ',', '.').'$</td>
+					<th colspan=2 style="padding: 3px; border-bottom: solid 1px #cccccc; ">Pago en Tienda</th>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right">'.number_format( $remanente['deposit'], 2, ',', '.').'$</td>
 				</tr>
 				'.$descuento_parcial.'
 				<tr>
 					<td></td>
 					<td></td>
-					<td></td>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7;">Pago al Cuidador</th>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right">'.number_format( $remanente['remaining'], 2, ',', '.').'$</td>
+					<th colspan=2 style="padding: 3px; border-bottom: solid 1px #cccccc;  text-align: left;">Cliente debe pagar al Cuidador:<div style="color: red;">en efectivo, al llevar a la mascota</div></th>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right">'.number_format( $remanente['remaining'], 2, ',', '.').'$</td>
 				</tr>
 			';
 		}else{
@@ -511,25 +508,22 @@
 				<tr>
 					<td></td>
 					<td></td>
-					<td></td>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7; text-align: left;">Total</th>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right">'.number_format( $pago, 2, ',', '.').'$</td>
+					<th colspan=2 style="padding: 3px; border-bottom: solid 1px #cccccc;  text-align: left;">Total</th>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right">'.number_format( $pago, 2, ',', '.').'$</td>
 				</tr>
 				'.$descuento_total.'
 				<tr>
 					<td></td>
 					<td></td>
-					<td></td>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7; text-align: left;">Pagado</th>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right">'.number_format( $remanente['deposit'], 2, ',', '.').'$</td>
+					<th colspan=2 style="padding: 3px; border-bottom: solid 1px #cccccc;  text-align: left;">Pagado</th>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right">'.number_format( $remanente['deposit'], 2, ',', '.').'$</td>
 				</tr>
 				'.$descuento_parcial.'
 				<tr>
 					<td></td>
 					<td></td>
-					<td></td>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7; border-left: solid 1px #00d2b7; text-align: left;">Pago al Cuidador</th>
-					<td style="padding: 3px; border-bottom: solid 1px #00d2b7; border-right: solid 1px #00d2b7;" align="right">'.number_format( $remanente['remaining'], 2, ',', '.').'$</td>
+					<th colspan=2 style="padding: 3px; border-bottom: solid 1px #cccccc;  text-align: left;">Cliente debe pagar al Cuidador:<div style="color: red;">en efectivo, al llevar a la mascota</div></th>
+					<td style="padding: 3px; border-bottom: solid 1px #cccccc; " align="right">'.number_format( $remanente['remaining'], 2, ',', '.').'$</td>
 				</tr>
 			';
 
@@ -558,11 +552,11 @@
 		$detalles_factura .= '
 			<table style="width:100%" cellspacing=0 cellpadding=0>
 				<tr>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> Tamaño </th>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> Num. Mascotas </th>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> Tiempo </th>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> Precio Unitario </th>
-					<th style="padding: 3px; border-bottom: solid 1px #00d2b7;"> Precio Total </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> Tamaño </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> Num. Mascotas </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> Tiempo </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc; width: 150px;"> Precio Unitario </th>
+					<th style="padding: 3px; border-bottom: solid 1px #cccccc;"> Precio Total </th>
 				</tr>
 				'.$variaciones.'
 				'.$transporte_str.'
@@ -579,7 +573,7 @@
 				<table>
 					<tr>
 						<td>
-							<a href="'.get_home_url().'/wp-content/plugins/kmimos/order.php?o='.$id.'&s=1&t=1" style="text-decoration: none; padding: 7px 0px; background: #00d2b7; color: #FFF; font-size: 16px; font-weight: 500; border-radius: 5px; width: 100px; display: inline-block; text-align: center;">Aceptar</a>
+							<a href="'.get_home_url().'/wp-content/plugins/kmimos/order.php?o='.$id.'&s=1&t=1" style="text-decoration: none; padding: 7px 0px; border-bottom: solid 1px #cccccc; color: #FFF; font-size: 16px; font-weight: 500; border-radius: 5px; width: 100px; display: inline-block; text-align: center;">Aceptar</a>
 						</td>
 						<td>
 							<a href="'.get_home_url().'/wp-content/plugins/kmimos/order.php?o='.$id.'&s=0&t=1" style="text-decoration: none; padding: 7px 0px; background: #dc2222; color: #FFF; font-size: 16px; font-weight: 500; border-radius: 5px; width: 100px; display: inline-block; text-align: center;">Rechazar</a>

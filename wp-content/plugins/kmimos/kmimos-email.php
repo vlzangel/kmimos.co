@@ -135,7 +135,7 @@ if(!function_exists('kmimos_get_email_banners')){
 if(!function_exists('kmimos_get_email_footer')){
     function kmimos_get_email_footer(){
         $html  = '<style> .footer {border-bottom: 3px solid #f25555; background-color: #00d2b7; font-size: 14px;font-family: HelveticaNeue, sans-serif; color: #494949; padding: 30px;} </style>';
-        $html .= '<div class="footer"><span>Más información en <a href="'.get_home_url().'">'.$_SERVER['HTTP_HOST'].'</a> o por nuestros teléfonos </span><span><strong>(+57) 315 849.2186</strong><span></div></div></div>';
+        $html .= '<div class="footer"><span>Más información en <a href="'.get_home_url().'">'.$_SERVER['HTTP_HOST'].'</a> o por nuestros teléfonos </span><span><strong>+52 (55) 1791.4931</strong><span></div></div></div>';
         return $html;
     }
 
