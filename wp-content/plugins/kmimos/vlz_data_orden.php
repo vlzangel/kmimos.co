@@ -12,7 +12,7 @@
 
     $url = get_home_url();
 
-    $email_admin = "contactoco@kmimos.la";
+    $email_admin = "contactomex@kmimos.la";
 
 	/* Orden y Reserva  */
 
@@ -36,16 +36,22 @@
 		$cuidador_post 	= $wpdb->get_row("SELECT * FROM $wpdb->posts WHERE ID = '".$producto->post_parent."'");
 		$cuidador = $wpdb->get_row("SELECT * FROM cuidadores WHERE user_id = '".$producto->post_author."'");
 
-		$email_cuidador = $cuidador->email;
 
 		$metas_cuidador = get_user_meta($cuidador->user_id);
-
 		$telf = $metas_cuidador["user_phone"][0];
+		$dir = $metas_cuidador["user_address"][0];
+		$dir = $cuidador->direccion;
+		$email_cuidador = $cuidador->email;
+
 		if( $telf == "" ){
 			$telf = $metas_cuidador["user_mobile"][0];
 		}
 		if( $telf == "" ){
 			$telf = "No registrado";
+		}
+
+		if( $dir == "" || $dir == 0 ){
+			$dir = "No registrada";
 		}
 
 		$detalles_cuidador = '
@@ -61,11 +67,11 @@
 				</tr>
 				<tr>
 					<td valign="top"> <strong>Correo:</strong> </td>
-					<td valign="top">'.$cuidador->email.'</td>
+					<td valign="top">'.$email_cuidador.'</td>
 				</tr>
 				<tr>
 					<td valign="top"> <strong>Dirección: </strong> </td>
-					<td valign="top"> '.$cuidador->direccion.'</td>
+					<td valign="top"> '.$dir.'</td>
 				</tr>
 			</table>
 		';
@@ -73,6 +79,12 @@
 	/* Cliente */
 
 		$cliente = $metas_orden["_customer_user"][0];
+
+		if( $cliente == 0 ){
+			$temp_email = $metas_orden["_billing_email"][0];
+			$cliente = get_var("SELECT ID FROM wp_users WHERE user_email = '{$temp_email}'");
+		}
+
 		$metas_cliente = get_user_meta($cliente);
 
 		$nombre = $metas_cliente["first_name"][0];
@@ -80,8 +92,8 @@
 
 		$nom = $nombre." ".$apellido;
 		$dir = $metas_cliente["user_address"][0];
-
 		$telf = $metas_cliente["user_phone"][0];
+
 		if( $telf == "" ){
 			$telf = $metas_cliente["user_mobile"][0];
 		}
@@ -89,7 +101,7 @@
 			$telf = "No registrado";
 		}
 
-		if( $dir == "" ){
+		if( $dir == "" || $dir == 0 ){
 			$dir = "No registrada";
 		}
 
@@ -123,6 +135,8 @@
 
 		$mascotas = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_author = '".$cliente."' AND post_type='pets'");
 		$detalles_mascotas = "";
+
+		/*
 		$detalles_mascotas .= '
 			<h2 style="color: #557da1; font-size: 16px;">Detalles de las mascotas: </h2>
 			<table style="width:100%" cellspacing=0 cellpadding=0>
@@ -133,6 +147,15 @@
 					<th style="padding: 3px; background: #00d2b7;"> <strong>Tamaño</strong> </th>
 					<th style="padding: 3px; background: #00d2b7;"> <strong>Comportamiento</strong> </th> 
 				</tr>';
+		*/
+		$detalles_mascotas .= '
+			<h2 style="color: #557da1; font-size: 16px;">Detalles de las mascotas: </h2>
+			<table style="width:100%" cellspacing=0 cellpadding=0>
+				<tr>
+					<th style="padding: 3px; background: #00d2b7;"> <strong>Nombre</strong> </th>
+					<th style="padding: 3px; background: #00d2b7;"> <strong>Detalles</strong> </th>
+				</tr>';
+
 
 		$comportamientos_array = array(
 			"pet_sociable" 			 => "Sociables",
@@ -179,7 +202,7 @@
 				$edad = date("Y")-$anio[0];
 
 				$raza = $wpdb->get_var("SELECT nombre FROM razas WHERE id=".$data_mascota['breed_pet'][0]);
-
+				/*
 				$detalles_mascotas .= '
 					<tr>
 						<td style="border-bottom: solid 1px #00d2b7; padding: 3px;" valign="top"> '.$data_mascota['name_pet'][0].'</td>
@@ -189,11 +212,31 @@
 						<td style="padding: 3px; border-bottom: solid 1px #00d2b7;" valign="top"> '.implode("<br>", $temp).'</td>
 					</tr>
 				';
+				*/
+
+				$detalles_mascotas .= '
+					<tr>
+						<td style="border-bottom: solid 1px #00d2b7; padding: 3px;" valign="top"> '.$data_mascota['name_pet'][0].'</td>
+						<td style="padding: 5px; border-bottom: solid 1px #00d2b7;" valign="top">
+							<strong>Raza:</strong> '.$raza.'<br>
+							<strong>Edad:</strong> '.$edad.' año(s)<br>
+							<strong>Tamaño:</strong> '.$tamanos_array[ $data_mascota['size_pet'][0] ].'<br>
+							<strong>Comportamiento:</strong> '.implode("<br>", $temp).'<br>
+						</td>
+					</tr>
+				';
 			}
 		}else{
+			/*
 			$detalles_mascotas .= '
 				<tr>
 					<td colspan="5">No tiene mascotas registradas.</td>
+				</tr>
+			';
+			*/
+			$detalles_mascotas .= '
+				<tr>
+					<td colspan="2">No tiene mascotas registradas.</td>
 				</tr>
 			';
 		}
@@ -225,12 +268,14 @@
 	                )
 	            ), 2 ) as DISTANCIA,
 	            id_post,
-	            hospedaje_desde,
-	            user_id
+	            user_id,
+	            hospedaje_desde
 	        FROM 
 	            cuidadores
 	        WHERE
-	            id_post != $cuidador->id_post
+	            id_post != $cuidador->id_post AND 
+	            portada = 1 AND 
+	            activo = 1
 	        ORDER BY DISTANCIA ASC
 	        LIMIT 0, 4
 	    ";
@@ -241,15 +286,16 @@
 
 	    foreach ($sugeridos as $key => $cuidador) {
 
-	    	$user_id = $cuidador->user_id;
-	    	$name_photo = get_user_meta($user_id, "name_photo", true);
-		    if( $name_photo == "" ){ $name_photo = "0"; }
-			if( file_exists("../../../wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-				$img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-			}elseif( file_exists("../../../wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
-				$img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
+	        $name_photo = get_user_meta($cuidador->user_id, "name_photo", true);
+			$cuidador_id = $cuidador->id;
+
+			if( empty($name_photo)  ){ $name_photo = "0"; }
+			if( file_exists("../../uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}") ){
+				$img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}";
+			}elseif( file_exists("../../uploads/cuidadores/avatares/".$cuidador_id."/0.jpg") ){
+				$img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg";
 			}else{
-				$img = get_template_directory_uri().'/images/noimg.png';
+				$img = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
 			}
 
 	        $post = get_post($cuidador->id_post);
@@ -280,7 +326,7 @@
                             border: solid 1px #CCC;
                             border-top: 0;">
                             Hospedaje desde<br>
-                            MXN $'.$cuidador->hospedaje_desde.'
+                            MXN $'.($cuidador->hospedaje_desde*1.2).'
                         </div>
                     </a>
                 </div>
@@ -291,11 +337,11 @@
 	    $lista_cercanos = '
 	    	<ol class="lista" style="padding-left: 10px;"> 
                 <li align="justify" style="font-size: 12px;">
-                    Revisa estas recomendaciones y selecciona cualquiera de ellas para ver más detalles sobre su perfil.
+                    Revisa estas recomendaciones y pícale a cualquiera de ellas para ver más detalles sobre su perfil.
                     <div style="overflow: hidden; text-align: center; margin: 0px auto; max-width: 600px;">'.$str_sugeridos_img.'</div>
                 </li>
-                <li align="justify" style="padding-bottom: 10px; font-size: 12px;">En caso de que alguna de estas opciones no se adecúe a tus necesidades, por favor ingresa a <strong><a style="text-decoration: none; color: #3d68b9;" href="'.get_home_url().'/busqueda">Kmimos Colombia</a></strong> en donde podrás encontrar cientos de cuidadores que seguro te encantarán.</li>
-                <li align="justify" style="font-size: 12px;">Para asistencia personalizada por favor márcanos a nuestros números. (+57) 315 849.2186.</li>
+                <li align="justify" style="padding-bottom: 10px; font-size: 12px;">En caso de que alguna de estas opciones no se adecúe a tus necesidades, por favor ingresa a <strong><a style="text-decoration: none; color: #3d68b9;" href="'.get_home_url().'/busqueda">Kmimos México</a></strong> en donde podrás encontrar cientos de cuidadores que seguro te encantarán.</li>
+                <li align="justify" style="font-size: 12px;">Para asistencia personalizada por favor márcanos a nuestros números. +52 (55) 1791.4931.</li>
             </ol>
 	    ';
 
