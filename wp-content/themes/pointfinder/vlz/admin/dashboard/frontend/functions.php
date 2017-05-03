@@ -106,7 +106,7 @@ if(!function_exists('build_select')){
         $select='';
         if(count($args)>0){
             $select.='<select class="redirect theme_btn">';
-            $select.='<option value="" selected="selected">Seleccionar Acción</option>';
+            $select.='<option value="" selected="selected">Seleccionar AcciÃ³n</option>';
             foreach($args as $option){
                 if(array_key_exists('text',$option)){
                     $class='';
