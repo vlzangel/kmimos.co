@@ -54,6 +54,13 @@ function mycode_more_info_button() {
 	echo '<a href="' . get_permalink( $product->id ) . '" class="button add_to_cart_button product_type_external">Reservar</a>';
 }
 
+//Woocommerce only 1 product in the cart
+add_filter( 'woocommerce_add_cart_item_data', '_empty_cart' );
+function _empty_cart( $cart_item_data ){
+	WC()->cart->empty_cart();
+	return $cart_item_data;
+}
+
 
 /*------------------------------------
 

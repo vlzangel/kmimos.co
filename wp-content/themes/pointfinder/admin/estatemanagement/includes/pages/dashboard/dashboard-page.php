@@ -88,6 +88,7 @@ if(isset($ua_action)){
                         $setup29_dashboard_contents_vendor_pictures_menuname= 'Mis Fotos';
                         $setup29_dashboard_contents_pets_list_menuname = 'Mis Mascotas';
                         $setup29_dashboard_contents_vendor_bookings_menuname = 'Mis Reservas';
+						$setup29_dashboard_contents_caregiver_menuname = 'Mis Solicitudes';
 						$setup_invoices_sh = PFASSIssetControl('setup_invoices_sh','','1');
 
 						$pfmenu_output = '';
@@ -296,6 +297,17 @@ if(isset($ua_action)){
                         */
                         $user_info = get_userdata($current_user->ID);
                         $user_roles = $user_info->roles;
+
+						//SOLICITUDES DE CONOCER AL CUIDADOR POR EL CLIENTE
+						if(!in_array('vendor',$user_roles)){
+							if($_GET['ua']=='caregiver'){
+								$pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							} else {
+								$class = ($_GET['ua']=='caregiver')? ' class="selected_option"':'';
+								$pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							}
+						}
+
                         if(current_user_can( 'manage_options' )){
                             $pfmenu_output .= '<li class="negative">ADMINISTRADOR</li>';
                             $pfmenu_output .= '<li><a href="'.get_home_url().'/wp-admin" target="_blank"><i class="pfadmicon-glyph-421"></i> '. $setup29_dashboard_contents_back_end_menuname.'</a></li>';
@@ -356,12 +368,20 @@ if(isset($ua_action)){
                             */
                             $bookings = kmimos_get_my_bookings($current_user->ID);
                             if ($_GET['ua']=='mybookings'){
-                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'<span class="pfbadge">'.$bookings['count'].'</span></li>';
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'</li>';//<span class="pfbadge">'.$bookings['count'].'</span>
                             }
                             else {
                                 $class = ($_GET['ua']=='mybooking')? ' class="selected_option"':'';
-                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mybookings"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'<span class="pfbadge">'.$bookings['count'].'</span></a></li>';
+                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mybookings"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'</a></li>';//<span class="pfbadge">'.$bookings['count'].'</span>
                             }
+
+							//SOLICITUDES DE CONOCER AL CUIDADOR
+							if($_GET['ua']=='caregiver'){
+								$pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							} else {
+								$class = ($_GET['ua']=='caregiver')? ' class="selected_option"':'';
+								$pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							}
                             /*
                             *   Muestra el listado de las ventas del cuidador
                             */
@@ -4067,8 +4087,12 @@ Array
 								*Invoices Page Content
 								**/
 
-								include("./wp-content/themes/pointfinder/vlz/admin/page_invoices.php");
+							//include("./wp-content/themes/pointfinder/vlz/admin/page_invoices.php");
+							include("./wp-content/themes/pointfinder/vlz/admin/dashboard/frontend/invoices.php");
+						break;
 
+						case 'caregiver':
+							include("./wp-content/themes/pointfinder/vlz/admin/dashboard/frontend/caregiver.php");
 						break;
 
 					}
