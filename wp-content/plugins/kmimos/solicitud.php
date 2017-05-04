@@ -257,7 +257,7 @@
 
    		// wp_mail( $administradores, "Copia Administradores: Solicitud Rechazada", $msg_cliente);
 
-    } else {
+     }else {
 		$wpdb->query("UPDATE wp_postmeta SET meta_value = '2' WHERE post_id = $id AND meta_key = 'request_status';");
 		$wpdb->query("UPDATE wp_posts SET post_status = 'publish' WHERE ID = '{$id}';");
 
