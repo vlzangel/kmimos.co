@@ -20,8 +20,7 @@ $user_id = $current_user->ID;
 
 //VALIDATE TOKEN
 $request_id = 0;
-if(isset($_SESSION['caregiver_request']) && isset($_POST['id'])){
-    //if($_SESSION['caregiver_request']==$_POST['id']){}
+if(isset($_SESSION['caregiver_request'])){
     unset($_SESSION['caregiver_request']);
 
     /*
