@@ -19,6 +19,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+
+<style>
+	.variation-Duracin,
+	.variation-Ofrecidopor{
+		display: none !important;
+	}
+
+	#add_payment_method #payment ul.payment_methods,
+	.woocommerce-checkout #payment ul.payment_methods>li>label {
+		color: #54c8a7;
+		font-size: large;
+		font-weight: bold;
+		text-shadow: 3px 2px 12px rgba(255, 255, 255, 0.57);
+	}
+</style>
+
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
 		<tr>
@@ -110,9 +126,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</tfoot>
 </table>
-<style>
-	.variation-Duracin,
-	.variation-Ofrecidopor{
-		display: none !important;
-	}
-</style>

@@ -136,7 +136,7 @@ $mensajes_alerta =
 
 									<h2 class="vlz_titulo_interno">Datos Personales</h2>
 									
-									<div class="vlz_seccion">
+									<div class="">
 
 										<div class="vlz_cell50 jj_input_cell00">
 
@@ -149,7 +149,6 @@ $mensajes_alerta =
 													<input data-title="Debes ingresar tu apellido<br>Este debe tener mínimo 3 caracteres." type='text' id='apellidos' name='apellidos' class='vlz_input' placeholder='Apellidos' required minlength="3" >
 												</div>
 											</div>
-											<!-- Pendiente Jauregui -->
 											<div class="vlz_sub_seccion">
 												<div class="vlz_cell50">
 													<input data-title="La Cedula de Ciudadania debe ser de entre 7 y 10 dígitos." type='number' id='ife' name='ife' class='vlz_input' min="0" placeholder='Cedula de Ciudadania' minlenght="7" maxlength="10" required pattern="[0-9]{10}" >
@@ -157,6 +156,20 @@ $mensajes_alerta =
 												
 												<div class="vlz_cell50">
 													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 7 y 11 dígitos." type='number' id='telefono' maxlength="11" min="0" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]{11}">
+												</div>
+											</div>
+
+											<div class="vlz_sub_seccion">
+												<div class="vlz_cell100">
+													<select id="referido" name="referido" class="vlz_input" data-title="Debes seleccionar una opción" required>
+														<option value="">¿Cómo nos conoció?</option>
+														<?php
+															$referidos = get_referred_list_options();
+															foreach ($referidos as $key => $value) {
+																echo "<option value='{$key}'>{$value}</option>";
+															}
+														?>
+	                                                </select>
 												</div>
 											</div>
 
@@ -204,22 +217,11 @@ $mensajes_alerta =
 												type='password' 
 												id='clave' 
 												name='clave' 
-												data-title="
-												La contraseña debe contener al menos:<br>
-												<ul>
-
-													<li>Una letra mayúscula</li>
-											      	<li>Una letra minúscula</li>
-											      	<li>Un número</strong></li>
-											      	<li>Una longitud mínima de 6 caracteres</li>
-											      	<li>Y al final debe llevar  #</li>
-											      	<li><strong>Las contraseñas deben ser iguales</strong></li>
-												</ul>" 
+												data-title="<strong>Las contraseñas son requeridas y deben ser iguales</strong>" 
 												class='vlz_input' 
 												 
 												placeholder='Contraseña' 
 												required 
-												pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[-#\*]).{6,}$"
 												autocomplete="off"
 											>
 										</div>
@@ -229,22 +231,11 @@ $mensajes_alerta =
 												type='password' 
 												id='clave2' 
 												name='clave2' 
-												data-title="
-												La contraseña debe contener al menos:<br>
-												<ul>
-
-													<li>Una letra mayúscula</li>
-											      	<li>Una letra minúscula</li>
-											      	<li>Un número</strong></li>
-											      	<li>Una longitud mínima de 6 caracteres</li>
-											      	<li>Y al final debe llevar  #</li>
-											      	<li><strong>Las contraseñas deben ser iguales</strong></li>
-												</ul>" 
+												data-title="<strong>Las contraseñas son requeridas y deben ser iguales</strong>" 
 												class='vlz_input' 
 												 
 												placeholder='Contraseña' 
 												required 
-												pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[-#\*]).{6,}$"
 												autocomplete="off"
 											>
 										</div>
@@ -637,6 +628,9 @@ $mensajes_alerta =
 											}
 										
 										?>
+
+										<div class='no_error' id='error_hospedaje' data-id="hospedaje_pequenos" style="margin: 3px 6px 0px;">Debe llenar al menos uno de los campos</div>
+
 										<?php // La configuracion esta en la primera linea de este archivo
 										echo $mensajes_alerta; 
 										?>
@@ -1023,6 +1017,42 @@ $mensajes_alerta =
 								      			return false;
 								      		}
 										break;
+										case "clave":
+								      		var clv1 = jQuery("#clave").attr("value");
+								      		var clv2 = jQuery("#clave2").attr("value");
+
+								      		return ( clv1 == clv2 );
+										break;
+										case "clave2":
+								      		var clv1 = jQuery("#clave").attr("value");
+								      		var clv2 = jQuery("#clave2").attr("value");
+
+								      		return ( clv1 == clv2 );
+										break;
+										case "hospedaje":
+								      		var z = 0;
+											var t = [
+												'pequenos',
+												'medianos',
+												'grandes',
+												'gigantes'
+											];
+
+											jQuery.each(t, function( index, value ) {
+												var temp = jQuery('#hospedaje_'+value).attr('value');
+												if( temp == '' ){ temp = 0; }
+												z += parseInt( temp );
+						      					console.log("Z: "+z);	
+											});
+
+											if( z == 0 ){
+												jQuery('#error_hospedaje').attr('class', 'error');
+											}else{
+												jQuery('#error_hospedaje').attr('class', 'no_error');
+											}
+
+											return ( z == 0 );
+										break;
 										default:
 											return true;
 										break;
@@ -1169,11 +1199,17 @@ $mensajes_alerta =
 									    success: function (r) {
 								      		jQuery("#vlz_titulo_registro").html("Registro Completado!");
 										  	jQuery("#vlz_cargando").html(r);
-
-								      		jQuery("#vlz_modal_cerrar_registrar").attr("onclick", "location.reload();");
+								      		jQuery("#vlz_modal_cerrar_registrar").attr("onclick", "GoToHomePage()");
+								      		jQuery("#check_term").hide();
+								      		jQuery("#boton_registrar_modal").hide();
+								      		jQuery("#vlz_contenedor_botones").css("display", "block");
+								      		jQuery("#vlz_contenedor_botones").append('<div class="vlz_modal_pie" style="border-radius: 0px 0px 5px 5px!important; height: 70px;"><input type="button" style="text-align: center;" class="vlz_boton_siguiente" onclick="GoToHomePage()" value="Cerrar" /></div>')
 									    }
 									});
 						      	}
+						      	function GoToHomePage(){
+							    	location = '<?php echo get_home_url()."/perfil-usuario/?ua=profile"; ?>';   
+							  	}
 
 						      	jQuery("#vlz_form_nuevo_cuidador").submit(function(e){
 
@@ -1286,21 +1322,46 @@ $mensajes_alerta =
 						      		var clv1 = jQuery("#clave").attr("value");
 						      		var clv2 = jQuery("#clave2").attr("value");
 
-						      		if( clv1 != clv2 ){
-						      			jQuery("#vlz_val_clave_2").html("Las contraseñas deben ser iguales");
-						      			jQuery("#vlz_val_clave_2").css("display", "block");
+						      		if( clv1 == clv2 ){
+
+						      			jQuery("#error_clave").removeClass("error");
+							        	jQuery("#error_clave").addClass("no_error");
+							        	jQuery("#clave").removeClass("vlz_input_error");
+
+						      			jQuery("#error_clave2").removeClass("error");
+							        	jQuery("#error_clave2").addClass("no_error");
+							        	jQuery("#clave2").removeClass("vlz_input_error");
+
 						      		}else{
-						      			jQuery("#vlz_val_clave_2").css("display", "none");
+						        		jQuery("#error_clave").removeClass("no_error");
+							        	jQuery("#error_clave").addClass("error");
+							        	jQuery("#clave").addClass("vlz_input_error");
+
+						        		jQuery("#error_clave2").removeClass("no_error");
+							        	jQuery("#error_clave2").addClass("error");
+							        	jQuery("#clave2").addClass("vlz_input_error");
 						      		}
 						      	}
 
-						      	jQuery( "#clave1" ).keyup(clvs_iguales);
+						      	jQuery( "#clave" ).keyup(clvs_iguales);
 						      	jQuery( "#clave2" ).keyup(clvs_iguales);
 
 						      	function vlz_validar(){
+						      		var error = 0;
 
 						      		if( !form.checkValidity() ){
+						      			error++;						      			
+						      		}
 
+						      		if( !especiales("clave") ){
+						      			error++;						      			
+						      		}
+
+						      		if( especiales("hospedaje") ){
+						      			error++;						      			
+						      		}
+
+						      		if( error > 0 ){
 						      			var primer_error = ""; var z = true;
 						      			jQuery( ".error" ).each(function() {
 										  	if( jQuery( this ).css( "display" ) == "block" ){
@@ -1310,6 +1371,8 @@ $mensajes_alerta =
 										  		}
 										  	}
 										});
+
+										console.log("primer_error: "+primer_error);
 
 						      			jQuery('html, body').animate({ scrollTop: jQuery(primer_error).offset().top-75 }, 2000);
 						      		}else{

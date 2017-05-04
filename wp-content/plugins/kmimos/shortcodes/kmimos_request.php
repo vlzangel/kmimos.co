@@ -17,7 +17,12 @@ date_default_timezone_set('America/Mexico_City');
 
 $user_id = $current_user->ID;
 
-if($_POST['funcion'] == 'request'){
+
+//VALIDATE TOKEN
+$request_id = 0;
+if(isset($_SESSION['caregiver_request']) && isset($_POST['id'])){
+    //if($_SESSION['caregiver_request']==$_POST['id']){}
+    unset($_SESSION['caregiver_request']);
 
     /*
         Data General
@@ -522,6 +527,7 @@ if($_POST['funcion'] == 'request'){
 }else{
 
     $post_id = $_GET['id'];
+    $_SESSION['caregiver_request']=$post_id;
 
     if($post_id==''){
         echo "Selecciona el cuidador que deseas conocer";
@@ -646,7 +652,6 @@ if($_POST['funcion'] == 'request'){
                 <td><input type="date" id="service_end" name="service_end" style="width: 100%; padding: 5px; line-height: 1;" required min="<?php echo date("Y-m-d", strtotime('Now +1 day')) ?>" max="<?php echo date("Y-m-d", strtotime('Now +1 year')) ?>"></td>
             </tr>
         </table>
-        <input type="hidden" name="funcion" value="request">
         <input type="hidden" name="id" value="<?php echo $post_id; ?>">
         <input type="submit" id="request-button" class="boton_aplicar_filtros" value="Enviar solicitud"<?php if(($pasos[0] && $pasos[1] && $pasos[2])==false) echo " disabled"; ?>>
     </form>

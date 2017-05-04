@@ -39,7 +39,7 @@
 				wp_users AS u
 			INNER JOIN wp_usermeta AS m ON (m.user_id = u.ID)
 			WHERE 
-				u.ID = '{$_GET['init']}' AND 
+				md5(u.ID) = '{$_GET['init']}' AND 
 				m.meta_key = 'user_pass'
 			GROUP BY 
 				u.ID
@@ -370,6 +370,7 @@
 													$pfmenu_output .= ($setup4_membersettings_frontend == 1 && $setup_invoices_sh == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=invoices"><i class="pfadmicon-glyph-33"></i> Mis Reservas </a></li>' : '' ;
 													$pfmenu_output .= ($setup4_membersettings_favorites == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=favorites"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'</a></li>' : '';
 													$pfmenu_output .= ($setup11_reviewsystem_check == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=reviews"><i class="pfadmicon-glyph-377"></i> '. $setup29_dashboard_contents_rev_page_menuname.'</a></li>' : '';
+													$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i> Solicitudes</a></li>';
 													$pfmenu_output .= '<li><a href="'.wp_logout_url( home_url() ).'"><i class="pfadmicon-glyph-476"></i> '. esc_html__('Logout','pointfindert2d').'</a></li>';
 													echo $pfmenu_output;
 													?>
@@ -472,7 +473,7 @@
 											if( $EC != 1 ){
 												echo "
 													<li>
-														<a class='ser_cuidador' href='".get_home_url()."/quiero-ser-cuidador/'>
+														<a class='ser_cuidador' href='".get_home_url()."/quiero-ser-cuidador-certificado-de-perros/'>
 															<span></span>
 															<div>Quiero ser cuidador</div>
 														</a>
@@ -541,6 +542,7 @@
 										$pfmenu_output .= ($setup4_membersettings_frontend == 1 && $setup_invoices_sh == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=invoices"><i class="pfadmicon-glyph-33"></i> Mis Reservas </a></li>' : '' ;
 										$pfmenu_output .= ($setup4_membersettings_favorites == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=favorites"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'</a></li>' : '';
 										$pfmenu_output .= ($setup11_reviewsystem_check == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=reviews"><i class="pfadmicon-glyph-377"></i> '. $setup29_dashboard_contents_rev_page_menuname.'</a></li>' : '';
+										$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i> Solicitudes</a></li>';
 										$pfmenu_output .= '<li><a href="'.wp_logout_url( home_url() ).'"><i class="pfadmicon-glyph-476"></i> '. esc_html__('Logout','pointfindert2d').'</a></li>';
 										echo $pfmenu_output;
 										
