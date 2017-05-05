@@ -553,6 +553,7 @@ if(isset($_SESSION['caregiver_request']) && isset($_POST['id'])){
         $pets = $loop->posts;
         $pasos[1]=kmimos_user_info_ready($user_id);
 
+
         if(count($pets)>0){
             $pasos[2]=true;
         }
