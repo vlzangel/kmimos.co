@@ -522,8 +522,7 @@
 										$setup4_membersettings_favorites = PFSAIssetControl('setup4_membersettings_favorites','','1');
 										$setup11_reviewsystem_check = PFREVSIssetControl('setup11_reviewsystem_check','','0');
 										$setup4_membersettings_dashboard_link = esc_url(get_permalink($setup4_membersettings_dashboard));
-
-
+											
 										$setup29_dashboard_contents_my_page_menuname = esc_html(PFSAIssetControl('setup29_dashboard_contents_my_page_menuname','',''));
 //										$setup29_dashboard_contents_inv_page_menuname = esc_html(PFSAIssetControl('setup29_dashboard_contents_inv_page_menuname','',''));
 										$setup29_dashboard_contents_inv_page_menuname = __('Mis Compras','pointfindert2d');
