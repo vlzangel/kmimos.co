@@ -1134,6 +1134,23 @@ if(!function_exists('kmimos_petsitter_rating')){
     }
 }
 
+if(!function_exists('kmimos_user_info_ready')){
+
+    function kmimos_user_info_ready($user_id){
+        $nombre = get_user_meta($user_id,'first_name',true);
+        $apellido = get_user_meta($user_id,'last_name',true);
+        $local = get_user_meta($user_id,'user_phone',true);
+        $movil = get_user_meta($user_id,'user_mobile',true);
+        if ($local!='' || $movil!='') {
+            $telefono= true;
+        }else{
+            $telefono= false;
+        }
+        $ready = ($nombre!='' && $apellido!='' && $telefono==true );
+        return $ready;
+    }
+}
+
 include_once('kmimos-email.php');
 
 ?>
