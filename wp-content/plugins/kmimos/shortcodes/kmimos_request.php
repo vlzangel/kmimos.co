@@ -17,7 +17,12 @@ date_default_timezone_set('America/Mexico_City');
 
 $user_id = $current_user->ID;
 
-if($_POST['funcion'] == 'request'){
+
+//VALIDATE TOKEN
+$request_id = 0;
+if(isset($_SESSION['caregiver_request']) && isset($_POST['id'])){
+    //if($_SESSION['caregiver_request']==$_POST['id']){}
+    unset($_SESSION['caregiver_request']);
 
     /*
         Data General
@@ -522,6 +527,7 @@ if($_POST['funcion'] == 'request'){
 }else{
 
     $post_id = $_GET['id'];
+    $_SESSION['caregiver_request']=$post_id;
 
     if($post_id==''){
         echo "Selecciona el cuidador que deseas conocer";
@@ -547,6 +553,7 @@ if($_POST['funcion'] == 'request'){
         $pets = $loop->posts;
         $pasos[1]=kmimos_user_info_ready($user_id);
 
+
         if(count($pets)>0){
             $pasos[2]=true;
         }
@@ -554,7 +561,7 @@ if($_POST['funcion'] == 'request'){
     $paso1 = ($pasos[0]) ? '<i class="pfadmicon-glyph-469 green"></i> (Iniciaste sesión)':'<i class="pfadmicon-glyph-476 red"></i> <a href="'.wp_login_url( 'conocer-al-cuidador/?id='.$post_id ).'" class="kmm-login-register" target="_self">Inicia Sesión</a>';
     $paso2 = ($pasos[1]) ? '<i class="pfadmicon-glyph-469 green"></i> (Todo en orden)':'<i class="pfadmicon-glyph-476 red"></i> <a href="'.get_home_url().'/perfil-usuario/?ua=profile" target="_blank" class="kmi_link" class="kmi_link"><strong>Ir a mi perfil</strong></a>';
     $paso3 = ($pasos[2]) ? '<i class="pfadmicon-glyph-469 green"></i> (Tienes '.count($pets).' mascotas)': '<i class="pfadmicon-glyph-476 red"></i> <a href="'.get_home_url().'/perfil-usuario/?ua=mypets" target="_blank" class="kmi_link">Ir a mis mascotas</a>'; ?>
-
+    
     <style>
         .green { color: forestgreen !important; }
         .red { color:crimson !important; }
@@ -646,7 +653,6 @@ if($_POST['funcion'] == 'request'){
                 <td><input type="date" id="service_end" name="service_end" style="width: 100%; padding: 5px; line-height: 1;" required min="<?php echo date("Y-m-d", strtotime('Now +1 day')) ?>" max="<?php echo date("Y-m-d", strtotime('Now +1 year')) ?>"></td>
             </tr>
         </table>
-        <input type="hidden" name="funcion" value="request">
         <input type="hidden" name="id" value="<?php echo $post_id; ?>">
         <input type="submit" id="request-button" class="boton_aplicar_filtros" value="Enviar solicitud"<?php if(($pasos[0] && $pasos[1] && $pasos[2])==false) echo " disabled"; ?>>
     </form>

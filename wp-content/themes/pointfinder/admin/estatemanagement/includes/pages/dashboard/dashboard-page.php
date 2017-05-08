@@ -88,6 +88,7 @@ if(isset($ua_action)){
                         $setup29_dashboard_contents_vendor_pictures_menuname= 'Mis Fotos';
                         $setup29_dashboard_contents_pets_list_menuname = 'Mis Mascotas';
                         $setup29_dashboard_contents_vendor_bookings_menuname = 'Mis Reservas';
+						$setup29_dashboard_contents_caregiver_menuname = 'Mis Solicitudes';
 						$setup_invoices_sh = PFASSIssetControl('setup_invoices_sh','','1');
 
 						$pfmenu_output = '';
@@ -262,24 +263,22 @@ if(isset($ua_action)){
                         /*
                         *   Muestra botón para ver las mascotas del usuario
                         */
-                        $pets = kmimos_get_my_pets($current_user->ID);
                         if ($_GET['ua']=='mypets'){
-                            $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-871"></i> '. $setup29_dashboard_contents_pets_list_menuname.'<span class="pfbadge">'.$pets['count'].'</span></li>';
+                            $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-871"></i> '. $setup29_dashboard_contents_pets_list_menuname.'</li>';
                         }
                         else {
                             $class = ($_GET['ua']=='mypet' || $_GET['ua']=='newpet')? ' class="selected_option"':'';
-                            $pfmenu_output .= '<li'.$class.'><a  href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypets"><i class="pfadmicon-glyph-871"></i> '. $setup29_dashboard_contents_pets_list_menuname.'<span class="pfbadge">'.$pets['count'].'</span></a></li>';
+                            $pfmenu_output .= '<li'.$class.'><a  href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypets"><i class="pfadmicon-glyph-871"></i> '. $setup29_dashboard_contents_pets_list_menuname.'</a></li>';
                         }
                         /*
                         *   Muestra botón para ver los cuidadores favoritos del usuario
                         */
-                        $favorites = kmimos_get_my_favorites($current_user->ID);
                         if($_GET['ua']=='favorites'){
-                            $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'<span class="pfbadge">'.$favorites['count'].'</span></a></li>';
+                            $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'</a></li>';
                         }
                         else {
                             $class = ($_GET['ua']=='myfavorite')? ' class="selected_option"':'';
-                            $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=favorites"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'<span class="pfbadge">'.$favorites['count'].'</span></a></li>';
+                            $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=favorites"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'</a></li>';
                         }
                         /*
                         *   Muestra botón para ver las compras del usuario
@@ -296,6 +295,17 @@ if(isset($ua_action)){
                         */
                         $user_info = get_userdata($current_user->ID);
                         $user_roles = $user_info->roles;
+
+						//SOLICITUDES DE CONOCER AL CUIDADOR POR EL CLIENTE
+						if(!in_array('vendor',$user_roles)){
+							if($_GET['ua']=='caregiver'){
+								$pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							} else {
+								$class = ($_GET['ua']=='caregiver')? ' class="selected_option"':'';
+								$pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							}
+						}
+
                         if(current_user_can( 'manage_options' )){
                             $pfmenu_output .= '<li class="negative">ADMINISTRADOR</li>';
                             $pfmenu_output .= '<li><a href="'.get_home_url().'/wp-admin" target="_blank"><i class="pfadmicon-glyph-421"></i> '. $setup29_dashboard_contents_back_end_menuname.'</a></li>';
@@ -318,7 +328,6 @@ if(isset($ua_action)){
                             /*
                             *   Muestra los asuntos pendientes del cuidador
                             */
-                            // $issues = kmimos_get_my_pending_issues($current_user->ID);
                             // $color = ( $issues['count'] > 0 ) ? ' red': '';
                             // if ($_GET['ua']=='myissues'){
                             //     $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-403'.$color.'"></i> '. $setup29_dashboard_contents_issues_menuname.'<span class="pfbadge'.$color.'">'.$issues['count'].'</span></li>';
@@ -329,39 +338,44 @@ if(isset($ua_action)){
                             /*
                             *   Muestra los servicios ofrecidos por el cuidador
                             */
-                            $services = kmimos_get_my_services($current_user->ID);
                             if ($_GET['ua']=='myservices'){
-                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'<span class="pfbadge">'.$services['count'].'</span></li>';
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'</li>';
                             }
                             else {
                                 $class = ($_GET['ua']=='myservice' || $_GET['ua']=='newservice')? ' class="selected_option"':'';
-                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myservices"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'<span class="pfbadge">'.$services['count'].'</span></a></li>';
+                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myservices"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'</a></li>';
                             }
                             
                             /* 
                              * Muestra la galería de fotos del cuidador
                              * Italo Gallery
                              */
-                            $pictures = kmimos_get_my_pictures($current_user->ID);
                             if ($_GET['ua']=='mypictures'){
-                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-82"></i> '. $setup29_dashboard_contents_vendor_pictures_menuname.'<span class="pfbadge">'.$pictures['count'].'</span></li>';
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-82"></i> '. $setup29_dashboard_contents_vendor_pictures_menuname.'</li>';
                             }
                             else {
-                                $pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypictures"><i class="pfadmicon-glyph-82"></i> '. $setup29_dashboard_contents_vendor_pictures_menuname.'<span class="pfbadge">'.$pictures['count'].'</span></a></li>';
+                                $pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypictures"><i class="pfadmicon-glyph-82"></i> '. $setup29_dashboard_contents_vendor_pictures_menuname.'</a></li>';
                             }
                             
                             
                             /*
                             *   Muestra el listado de las reservas activas del cuidador
                             */
-                            $bookings = kmimos_get_my_bookings($current_user->ID);
                             if ($_GET['ua']=='mybookings'){
-                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'<span class="pfbadge">'.$bookings['count'].'</span></li>';
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'</li>';//<span class="pfbadge">'.$bookings['count'].'</span>
                             }
                             else {
                                 $class = ($_GET['ua']=='mybooking')? ' class="selected_option"':'';
-                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mybookings"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'<span class="pfbadge">'.$bookings['count'].'</span></a></li>';
+                                $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mybookings"><i class="pfadmicon-glyph-28"></i> '. $setup29_dashboard_contents_vendor_bookings_menuname.'</a></li>';//<span class="pfbadge">'.$bookings['count'].'</span>
                             }
+
+							//SOLICITUDES DE CONOCER AL CUIDADOR
+							if($_GET['ua']=='caregiver'){
+								$pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							} else {
+								$class = ($_GET['ua']=='caregiver')? ' class="selected_option"':'';
+								$pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i>'.$setup29_dashboard_contents_caregiver_menuname.'</a></li>';
+							}
                             /*
                             *   Muestra el listado de las ventas del cuidador
                             */
@@ -794,283 +808,6 @@ if(isset($ua_action)){
                                     }
                                 }
                             }
-
-                        case 'myservice':
-
-                            /**
-                            *Start: My Service Detail Page Content
-                            **/
-
-	                            $service_id = $_GET['id']+0;
-
-	                            if( $_POST['delete_service'] == "1" ){
-
-									global $wpdb;
-									if( $service_id > 0 ){
-	                            		$vari_eli = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent='$service_id'");
-
-		                            	wp_delete_post($service_id);
-		                            	$wpdb->query("DELETE FROM $wpdb->postmeta WHERE post_id = '{$service_id}'");
-		                            	foreach ($vari_eli as $key => $value) {
-		                            		wp_delete_post($value->ID);
-		                            		$wpdb->query("DELETE FROM $wpdb->postmeta WHERE post_id = '{$value->ID}'");
-		                            	}
-	                        		}
-
-	                            	header("Location: ?ua=myservices");
-	                            	
-	                            }else{
-
-	                            	if($ua_action == 'myservice'){
-		                            	echo '<h1>'.get_the_title($service_id).'</h1><hr><br>';
-		                            }
-
-		                            if( isset($_POST) && $_POST!='' && count($_POST)>0 ){
-	                                	if ( esc_attr($_POST['action']) == 'pfupdate_my_service' ) {
-
-	                                		$nonce = esc_attr($_POST['security']);
-		                                    if ( ! wp_verify_nonce( $nonce, 'pfupdate_my_service' ) ) { die( 'Security check' );  }
-
-		                                    $vars = $_POST;
-
-		                                    $vars = PFCleanArrayAttr('PFCleanFilters', $vars);
-
-		                                    if($user_id == 0){
-		                                        $errorval .= esc_html__('Por favor inicie sesión (Usuario Inválido).', 'pointfindert2d');
-		                                        break;
-		                                    }else{
-
-		                                    	include("vlz_back_funtions.php");
-
-		                                    	$depuracion = array();
-
-		                                    	// Guardando data base
-
-	                                    		$args = array(
-		                                            'posts_per_page' => 1,
-		                                            'post_type' 	 => 'petsitters',
-		                                            'meta_key' 		 => 'user_petsitter',
-		                                            'meta_value' 	 => $user_id,
-		                                            'post_status' 	 => 'publish'
-		                                        );
-
-		                                        $petsitter 		= get_posts( $args );
-		                                        $petsitter 		= $petsitter[0];
-		                                        $petsitter_id 	= $petsitter->ID;
-
-	                                    		$model_id = $_POST['service_model'];
-	                                    		$modelo   = get_post($model_id, ARRAY_A);
-	                                        	$sevice = explode("-", $modelo['post_name']);
-                                        		$sevice = $sevice[0];
-
-                                    			$over_price = kmimos_get_over_price();
-
-                                        		$addons = kmimos_get_service_info('');
-										        $addons = unserialize($addons['addons']);
-
-										        for($i=0; $i<6; $i++){
-										        	if( $_POST['price_transportation_'.$i] != '' ){
-										        		$addons[0]['options'][$i]['price'] = ($_POST['price_transportation_'.$i]*$over_price);
-										        	}else{
-										        		unset($addons[0]['options'][$i]);
-										        	}
-										        }
-
-										        $adicional = array(
-										        	'bano_adicional', 
-										        	'corte_adicional', 
-										        	'visita_veterinario', 
-										        	'limpieza_dental', 
-										        	'precio_acupuntura'
-										        );
-										        for($i=0; $i<count($adicional); $i++){
-										        	if( $_POST['price_aditional_'.$i] != '' ){
-										        		$addons[1]['options'][$i]['price'] = ($_POST['price_aditional_'.$i]*$over_price);
-										        	}else{
-										        		unset($addons[1]['options'][$i]);
-										        	}
-										        }
-
-										        $addons[1]['description'] = $_POST['aditional_description'];
-
-                                        		// Existe el servicio.?
-
-                                    			$servicio_ID = get_post_meta($petsitter_id, "vlz_categoria_{$sevice}", true);
-
-                                    			//  Obtiene el ID del modelo del servicio 
-
-                                    				$model_id = $_POST['service_model'];
-
-                                        			$model_meta = array();
-			                                        $values 	= get_post_meta($model_id);
-			                                        foreach($values as $key => $value){
-			                                        	$model_meta[$key] = $value[0];
-			                                        }
-
-		                                        // Cargamos los metadatos del servicio
-
-		                                        	$model_meta['_wc_booking_qty'] 					= $_POST['service_capacity'];
-			                                        $model_meta['_wc_booking_max_persons_group'] 	= $_POST['service_capacity'];
-			                                        $model_meta['_product_addons'] 					= $addons;
-
-                                    			if( $servicio_ID == "" ){
-
-                                    				//  Obtiene el modelo del servicio 
-
-				                                        $model = get_post($model_id, ARRAY_A);
-
-				                                    // Preparamos el modelo del producto
-
-                                        				$model['ID'] 			= 	$service_id;
-				                                        $model['post_author']	=	$user_id;
-				                                        $model['post_parent'] 	= 	$petsitter_id;
-				                                        $model['post_type'] 	= 	'product';
-				                                        $model['post_title'] 	.= 	' - '.$current_user->first_name.' '.$current_user->last_name;
-
-				                                        unset($model['post_date']);
-				                                        unset($model['post_date_gmt']);
-				                                        unset($model['guid']);
-				                                        unset($model['post_name']);
-				                                        unset($model['post_modified']);
-				                                        unset($model['post_modified_gmt']);
-
-				                                    // Creamos el servicio
-
-		                                        		$service_id = wp_insert_post($model);
-
-		                                        	// Le asignamos las categorias
-
-			                                        	wp_set_post_terms($service_id, $_POST['service_category'],'product_cat', false);
-			                                        	wp_set_post_terms($service_id, 'booking','product_type', true);
-
-			                                        // Guardamos el ID asignado el servicio
-	                                    				
-	                                    				update_post_meta($petsitter_id, "vlz_categoria_{$sevice}", $service_id);
-
-			                                        // Obtenemos y asociamos la imagen de portada del cuidador al servicio
-
-				                                        $img = get_post_meta($petsitter_id, '_thumbnail_id', true);
-				                                        if( $img == "" ){ $img = "7335"; }
-				                                        update_post_meta($service_id, '_thumbnail_id', $img );
-                                    			}
-
-                                    			// Asignamos el _sku al producto para relacionarlo con el cuidador
-
-                                    				$model_meta['_sku'] = substr($model_meta['_sku'], 0, 8). str_pad($petsitter_id, 5, '0', STR_PAD_LEFT);
-
-					                            $precios = array(); $precios_all = array();
-					                            for ($i=0; $i < 4; $i++) { 
-					                            	$precio = $_POST['price_size_'.$i]+0;
-					                            	if( $precio > 0 ){ $precios[] = $precio * $over_price; }
-                                    				$precios_all[] = $precio * $over_price;
-	                                    		}
-	                                    		$precio_base = min($precios);
-
-	                                    		update_post_meta($petsitter_id, "vlz_servicio_{$sevice}_capacity", $_POST['service_capacity'] );
-	                                    		update_post_meta($petsitter_id, "vlz_precio_{$sevice}", serialize($precios_all) );
-	                                    		update_post_meta($petsitter_id, "vlz_precio_{$sevice}_desde", $precio_base );
-
-		                                        // Guardamos o actualizamos los metadatos del servicio
-
-		                                        	$model_meta['_price']					=	$precio_base;
-			                                        $model_meta['_wc_booking_base_cost'] 	= 	$precio_base;
-
-			                                        foreach($model_meta as $meta_key => $meta_value){
-			                                        	update_post_meta($service_id, $meta_key, $meta_value);
-			                                        }
-
-			                                    /*
-												* Cargamos o Actualizamos las variaciones
-			                                    */
-
-			                                    // Obtiene los datos de las variantes del servicio para los tamaños de mascota
-    
-											        $variante 		= array();
-											        $variante_id 	= array();
-											        $variante_meta 	= array();
-
-											        $mascotas = array(
-											            0 => 'Pequeñas', 
-											            1 => 'Medianas', 
-											            2 => 'Grandes', 
-											            3 => 'Gigantes' 
-											        );
-
-											       	foreach ($precios_all as $key => $precio) {
-
-											            $id_temp = 0;
-											            if( $service_id > 0 ){
-											            	$id_temp = $service_id+$key+1;
-											            }
-
-											            $p = get_post($id_temp);
-											            if( $p == null ){
-
-											            	$variante[$i] 					= 	get_post($model_id+$key+1, ARRAY_A);
-											            	$variante[$i]['ID'] = 0;
-												            $variante[$i]['post_author']	=	$user_id;
-												            $variante[$i]['post_title']		=	esc_html__('Mascotas ', 'pointfindert2d').$mascotas[$key];
-												            $variante[$i]['post_excerpt']	=	esc_html__('Precio por Mascotas ', 'pointfindert2d').$mascotas[$key].': $'.$precio.' c/u';
-												            $variante[$i]['post_status'] 	= 	($precio > 0 ) ? 'publish' : 'unpublish';
-												            $variante[$i]['post_parent'] 	= 	$service_id;
-												            $variante[$i]['menu_order'] 	= 	$i;
-												            $variante[$i]['post_type'] 		= 	"bookable_person";
-
-												            unset($variante[$i]['post_modified']);
-												            unset($variante[$i]['post_modified_gmt']);
-												            unset($variante[$i]['post_date']);
-												            unset($variante[$i]['post_date_gmt']);
-
-											            	$variante_id = wp_insert_post($variante[$i]);
-											            }else{
-
-											            	$variante[$i]['ID'] = $p->ID;
-											            	$variante[$i]['post_excerpt'] 	= 	esc_html__('Precio por Mascotas ', 'pointfindert2d').$mascotas[$key].': $'.$precio.' c/u';
-											            	$variante[$i]['post_status'] 	= 	($precio > 0 ) ? 'publish' : 'unpublish';
-												            
-											            	$variante_id = wp_update_post($variante[$i]);
-											            }
-											            $p = null;
-
-											            $xmodel_id = $model_id+1;
-											            $metas_model_variante = get_post_meta($xmodel_id);
-											            foreach($metas_model_variante as $key_variante => $value_variante){
-											            	if( $key_variante == "block_cost"){
-											            		update_post_meta($variante_id, $key_variante, ($precio-$precio_base) );
-											            	}else{
-											            		update_post_meta($variante_id, $key_variante, $value_variante[0]);
-											            	}
-											            }
-										            	
-											        }
-
-				                                header("Location: ?ua=myservice&id={$service_id}");
-
-		                                    }
-
-	                                	}
-	                                }
-
-	                            }
-
-	                            $output = new PF_Frontend_Fields(
-	                                array(
-	                                    'formtype' => 'myservice',
-	                                    'current_user' => $user_id,
-	                                    'service_id' => $service_id
-	                                )
-	                            );
-	                            echo $output->FieldOutput;
-	                            echo '<script type="text/javascript">
-	                            (function($) {
-	                                "use strict";
-	                                '.$output->ScriptOutput.'
-	                            })(jQuery);</script>';
-	                            unset($output);
-
-                            /**
-                            *	End: My Service Detail Page Content
-                            **/
 
                         break;
 
@@ -4067,8 +3804,12 @@ Array
 								*Invoices Page Content
 								**/
 
-								include("./wp-content/themes/pointfinder/vlz/admin/page_invoices.php");
+							//include("./wp-content/themes/pointfinder/vlz/admin/page_invoices.php");
+							include("./wp-content/themes/pointfinder/vlz/admin/dashboard/frontend/invoices.php");
+						break;
 
+						case 'caregiver':
+							include("./wp-content/themes/pointfinder/vlz/admin/dashboard/frontend/caregiver.php");
 						break;
 
 					}

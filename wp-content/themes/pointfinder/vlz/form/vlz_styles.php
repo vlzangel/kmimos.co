@@ -43,15 +43,6 @@
 	    padding-bottom: 10px;
 	}
 
-	/*.vlz_titulo_interno span{
-	    color: #d80606;
-		font-size: 12px;
-		vertical-align: middle;
-		float: right;
-		line-height: 1.2;
-		padding: 7px 0px;
-	}*/
-
 	.vlz_cell20  { position: relative; margin: 0px 3px; display: inline-block; width: calc( 20% - 9px ); }
 	.vlz_cell25  { position: relative; margin: 0px 3px; display: inline-block; width: calc( 25% - 9px ); }
 	.vlz_cell33  { position: relative; margin: 0px 3px; display: inline-block; width: calc( 33.333333333% - 9px ); }
@@ -94,7 +85,7 @@
 
 	textarea.vlz_input{
 		resize: none;
-		height: 153px;
+		height: 103px;
 	}
 
 	.vlz_check, .vlz_no_check{

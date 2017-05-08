@@ -3,9 +3,8 @@
     define('WP_USE_THEMES', false);
     require('../../../../../wp-blog-header.php');
 
-    include('generarCodigo.php');
-
     extract($_POST);
+
 
     add_filter( 'wp_mail_from_name', function( $name ) {
         return 'Kmimos Colombia';
@@ -30,7 +29,7 @@
             <h1>¡Nueva Contraseña Temporal!</h1>
             <p style="text-align: justify;">Hola <strong>'.$user->display_name.'</strong>,</p>
             <p style="text-align: justify;">
-                Hemos recibido la solicitud para restablecer tu contraseña en Kmimos.
+                Hemos recibido tu solicitud para restablecer tu contraseña en Kmimos.
             </p>
             <p style="text-align: justify;">
                 Como parte del proceso de mejoras que tenemos en Kmimos, hemos hecho un cambio en la plataforma con una serie de beneficios que fueron compartidos en un email aparte. En este correo encontrarás tus credenciales temporales para acceder a la nueva plataforma de Kmimos Colombia.
