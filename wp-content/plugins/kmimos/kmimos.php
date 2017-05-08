@@ -961,20 +961,9 @@ if(!function_exists('kmimos_get_valuations_of_petsitter')){
 if(!function_exists('get_referred_list_options')){
     function get_referred_list_options(){
         $opciones = array(
-            'Volaris'       =>  'Volaris',
             'Facebook'      =>  'Facebook',
             'Adwords'       =>  'Buscador de Google',
-            'Instagram'     =>  'Instagram',
             'Twitter'       =>  'Twitter',
-            'Booking.com'   =>  'Booking.com',
-            'Cabify'        =>  'Cabify',
-            'Bancomer'      =>  'Bancomer',
-            'Mexcovery'     =>  'Mexcovery',
-            'Totems'        =>  'Totems',
-            'Groupon'       =>  'Groupon',
-            'Agencia IQPR'  =>  'Agencia IQPR',
-            'Revistas o periodicos' =>  'Revistas o periodicos',
-            'Vintermex'             =>  'Vintermex',
             'Amigo/Familiar'        =>  'Recomendación de amigo o familiar',
             'Youtube'               =>  'Youtube',
             'Otros'                 =>  'Otros'
@@ -1142,6 +1131,23 @@ if(!function_exists('kmimos_petsitter_rating')){
         }
         $html .= '</div>';
         return $html;
+    }
+}
+
+if(!function_exists('kmimos_user_info_ready')){
+
+    function kmimos_user_info_ready($user_id){
+        $nombre = get_user_meta($user_id,'first_name',true);
+        $apellido = get_user_meta($user_id,'last_name',true);
+        $local = get_user_meta($user_id,'user_phone',true);
+        $movil = get_user_meta($user_id,'user_mobile',true);
+        if ($local!='' || $movil!='') {
+            $telefono= true;
+        }else{
+            $telefono= false;
+        }
+        $ready = ($nombre!='' && $apellido!='' && $telefono==true );
+        return $ready;
     }
 }
 
