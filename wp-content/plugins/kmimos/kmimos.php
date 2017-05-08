@@ -25,11 +25,7 @@ if(!function_exists('get_estados_municipios')){
 if(!function_exists('kmimos_mails_administradores')){
     function kmimos_mails_administradores(){
 
-        $headers[] = 'BCC: e.celli@kmimos.la';
-        $headers[] = 'BCC: r.cuevas@kmimos.la';
-        $headers[] = 'BCC: r.gonzalez@kmimos.la';
-        $headers[] = 'BCC: m.castellon@kmimos.la';
-        $headers[] = 'BCC: a.veloz@kmimos.la';
+        $headers[] = 'BCC: n.deligny@kmimos.la';
         $headers[] = 'BCC: a.pedroza@kmimos.la';
 
         /*        
