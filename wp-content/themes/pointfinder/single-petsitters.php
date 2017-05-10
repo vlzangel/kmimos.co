@@ -158,12 +158,14 @@
 			}
 		?>
 		
-		<h3 class="vlz_titulo">Descripción del Cuidador</h3>
-		<div class="vlz_seccion vlz_descripcion">
-			<p>
-				<?php echo $cuidador->descripcion; ?>
-			</p>
-		</div>
+		<?php if( $cuidador->descripcion != "" ){ ?>
+			<h3 class="vlz_titulo">Descripción del Cuidador</h3>
+			<div class="vlz_seccion vlz_descripcion">
+				<p>
+					<?php echo $cuidador->descripcion; ?>
+				</p>
+			</div>
+		<?php } ?>
 
 		<?php if( $galeria != "" ){ ?>
 
