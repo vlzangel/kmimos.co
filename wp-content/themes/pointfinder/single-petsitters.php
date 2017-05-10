@@ -16,23 +16,8 @@
 	$longitud = $cuidador->longitud;
 
 	$user_id = $cuidador->user_id;
-	$name_photo = get_user_meta($user_id, "name_photo", true);
-    if( $name_photo == "" ){ $name_photo = "0"; }
-	if( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-		$foto = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-	}elseif( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
-		$foto = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
-	}else{
-		$foto = get_template_directory_uri().'/images/noimg.png';
-	}
 
-	// $name_photo = get_user_meta($user_id, "name_photo", true);
-	// if( $name_photo == "" ){ $name_photo = "0"; }
-	// if( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-	// 	$foto = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-	// }else{
-	// 	$foto = get_template_directory_uri().'/images/noimg.png';
-	// }
+	$foto = kmimos_get_foto($user_id);
 
 	$tama_aceptados = unserialize( $cuidador->tamanos_aceptados );
 	$tamanos = array(

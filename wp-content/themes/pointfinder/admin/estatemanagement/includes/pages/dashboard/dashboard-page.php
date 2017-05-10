@@ -12,13 +12,12 @@
 global $current_user;
 global $redirect_to;
 
-if($redirect_to!='') {
-//    die('Redirect: '.$redirect_to);
+if($redirect_to != '') {
     header('Location: '.$redirect);
 }
 
 if(isset($_GET['ua']) && $_GET['ua']!=''){
-$ua_action = esc_attr($_GET['ua']);
+    $ua_action = esc_attr($_GET['ua']);
 }
 $setup4_membersettings_dashboard = PFSAIssetControl('setup4_membersettings_dashboard','','');
 
@@ -31,24 +30,15 @@ if(isset($ua_action)){
  		if($setup4_membersettings_dashboard != 0){
 
 				if ($ua_action == 'profile') {
-					/**
-					*Start: Profile Form Request
-					**/
-						get_template_part('admin/estatemanagement/includes/pages/dashboard/form','profilereq');
-					/**
-						*End: Profile Form Request
-					**/
+					get_template_part('admin/estatemanagement/includes/pages/dashboard/form','profilereq');
 				}
-//				$setup3_pointposttype_pt1 = PFSAIssetControl('setup3_pointposttype_pt1','','pfitemfinder');
 				$setup3_pointposttype_pt1 = 'petsitters';
 				$setup4_membersettings_paymentsystem = PFSAIssetControl('setup4_membersettings_paymentsystem','','1');
 				$setup4_submitpage_status_old = PFSAIssetControl('setup4_submitpage_status_old','','0');
 
 				$current_user = wp_get_current_user();
 				$user_id = $current_user->ID;
-				/**
-				*Start: Member Page Actions
-				**/
+
 				if (is_page($setup4_membersettings_dashboard)) {
 
 					
@@ -60,7 +50,6 @@ if(isset($ua_action)){
 
 						global $wpdb;
 
-/*						$item_count = $wpdb->get_var( $wpdb->prepare("SELECT COUNT(*) FROM $wpdb->posts where post_author = %d and post_type = %s and post_status IN (%s,%s,%s)",$user_id,"pets","publish","pendingpayment","pendingapproval")  );*/
 						$item_count = $wpdb->get_var( $wpdb->prepare("SELECT COUNT(*) FROM  $wpdb->postmeta AS pm INNER JOIN $wpdb->posts AS p ON p.ID=pm.post_id WHERE pm.meta_value = %s and pm.meta_key = %d and post_status = %s",$user_id,"owner_pet","publish")  );
 						$item_count = (empty($item_count)) ? 0 : $item_count ;
 
@@ -96,161 +85,9 @@ if(isset($ua_action)){
 						$user_name_field = get_user_meta( $user_id, 'first_name', true ).' '.get_user_meta( $user_id, 'last_name', true );
 						if ($user_name_field == ' ') {$user_name_field = $current_user->user_login;}
 
-						$name_photo = get_user_meta($user_id, "name_photo", true);
-					    if( $name_photo == "" ){ $name_photo = "0"; }
-						if( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-							$user_photo_field_output = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-						}elseif( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
-							$user_photo_field_output = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
-						}else{
-							$user_photo_field_output = get_template_directory_uri().'/images/noimg.png';
-						}
-						// $user_photo_field = get_user_meta( $user_id, 'user_photo', true );
-						// $user_photo_field_output = get_template_directory_uri().'/images/noimg.png';
-						// if(!empty($user_photo_field)){
-						// 	if( $user_photo_field == 1){
-						// 		$referred = get_user_meta($user_id, 'name_photo', true);
-      //                           if( $referred == "" ){
-						// 			$referred = "0";
-						// 		}
-						// 		$user_photo_field_output = get_home_url()."/wp-content/uploads/avatares_clientes/".$user_id."/".$referred.".jpg";
-						// 	}
-						// }
-
-						if ($setup4_membersettings_paymentsystem == 2) {
-							/*Get user meta*/
-							$membership_user_package_id = get_user_meta( $user_id, 'membership_user_package_id', true );
-							$packageinfo = pointfinder_membership_package_details_get($membership_user_package_id);
-
-							$membership_user_package = get_user_meta( $user_id, 'membership_user_package', true );
-							$membership_user_item_limit = get_user_meta( $user_id, 'membership_user_item_limit', true );
-							$membership_user_featureditem_limit = get_user_meta( $user_id, 'membership_user_featureditem_limit', true );
-							$membership_user_image_limit = get_user_meta( $user_id, 'membership_user_image_limit', true );
-							$membership_user_trialperiod = get_user_meta( $user_id, 'membership_user_trialperiod', true );
-							$membership_user_recurring = get_user_meta( $user_id, 'membership_user_recurring', true );
-							
-							$membership_user_activeorder = get_user_meta( $user_id, 'membership_user_activeorder', true );
-              				$membership_user_expiredate = get_post_meta( $membership_user_activeorder, 'pointfinder_order_expiredate', true );
-
-              				/*Bank Transfer vars*/
-              				$membership_user_activeorder_ex = get_user_meta( $user_id, 'membership_user_activeorder_ex', true );
-              				$membership_user_package_id_ex = get_user_meta( $user_id, 'membership_user_package_id_ex', true );
-              				if (!empty($membership_user_activeorder_ex)) {
-              					$pointfinder_order_bankcheck = get_post_meta( $membership_user_activeorder_ex, 'pointfinder_order_bankcheck', true );
-              				}else{
-              					$pointfinder_order_bankcheck = '';
-              				}
-              				
-
-							$package_itemlimit = $package_fitemlimit = 0;
-							if (!empty($membership_user_package_id)) {
-								/*Get package info*/
-								$package_itemlimit = $packageinfo['packageinfo_itemnumber_output_text'];
-								$package_itemlimit_num = $packageinfo['webbupointfinder_mp_itemnumber'];
-								$package_fitemlimit = $packageinfo['webbupointfinder_mp_fitemnumber'];
-							}
-
-							$pfmenu_output .= '<li class="pf-dash-userprof"><img src="'.$user_photo_field_output.'" class="pf-dash-userphoto"/><span class="pf-dash-usernamef">'.$user_name_field.'</span></li>';
-							
-							$pfmenu_output .= '<li class="pf-dash-userprof">';
-
-							if (empty($membership_user_package_id)) {
-								
-								$pfmenu_output .= '<div class="pf-dash-packageinfo pf-dash-newpackage">
-								<button class="pf-dash-purchaselink" title="'.esc_html__('Click here for purchase new membership package.','pointfindert2d').'">'.esc_html__('Purchase Membership Package','pointfindert2d').'</button>';
-								$pfmenu_output .= "
-									<script>
-										jQuery('.pf-dash-purchaselink').click(function() {
-											window.location = '".$setup4_membersettings_dashboard_link.$pfmenu_perout."ua=purchaseplan';
-										});
-									</script>
-								";
-							
-							}else{
-								
-								$pfmenu_output .= '<div class="pf-dash-packageinfo"><span class="pf-dash-packageinfo-title">'.esc_html__('Package','pointfindert2d').' : </span>'.$membership_user_package.'<br/>';
-								
-								if ($membership_user_recurring == false || $membership_user_recurring == 0) {
-									$pfmenu_output .= '<button class="pf-dash-renewlink" title="'.esc_html__('This option for extend expire date of this package.','pointfindert2d').'">'.esc_html__('Renew','pointfindert2d').'</button>
-									<button class="pf-dash-changelink" title="'.esc_html__('This option for upgrade this package.','pointfindert2d').'">'.esc_html__('Upgrade','pointfindert2d').'</button>';
-
-									$pfmenu_output .= "
-										<script>
-											jQuery('.pf-dash-renewlink').click(function() {
-												window.location = '".$setup4_membersettings_dashboard_link.$pfmenu_perout."ua=renewplan';
-											});
-											jQuery('.pf-dash-changelink').click(function() {
-												window.location = '".$setup4_membersettings_dashboard_link.$pfmenu_perout."ua=upgradeplan';
-											});
-										</script>
-									";
-								}
-
-							}
-							$pfmenu_output .= '
-							</div>
-							</li>';
-
-							if (!empty($pointfinder_order_bankcheck)) {
-								$pfmenu_output .= '<li class="pf-dash-userprof">';
-									
-										$pfmenu_output .= '<div class="pf-dash-packageinfo">
-										<strong>'.esc_html__('Bank Transfer : ','pointfindert2d').'</strong>'. get_the_title($membership_user_package_id_ex).'<br/>
-										<strong>'.esc_html__('Status : ','pointfindert2d').'</strong>'. esc_html__('Pending Bank Payment','pointfindert2d').'
-										<button class="pf-dash-cancelbanklink" title="'.esc_html__('Click here for cancel transfer.','pointfindert2d').'">'.esc_html__('Cancel Transfer','pointfindert2d').'</button>';
-										$pfmenu_output .= "
-											<script>
-												jQuery('.pf-dash-cancelbanklink').click(function() {
-													window.location = '".$setup4_membersettings_dashboard_link.$pfmenu_perout."ua=myitems&action=cancelbankm';
-												});
-											</script>
-										";
-									
-								$pfmenu_output .= '
-								</div>
-								</li>';
-							}
-							if (!empty($membership_user_package_id)) {
-								if ($membership_user_item_limit < 0) {
-									$package_itemlimit_text = esc_html__('Unlimited','pointfindert2d');
-								} else {
-									$package_itemlimit_text = $package_itemlimit.'/'.$membership_user_item_limit;
-								}
-								if (!empty($membership_user_expiredate)) {
-									if (pf_membership_expire_check($membership_user_expiredate) == false) {
-										$expire_date_text = PFU_DateformatS($membership_user_expiredate);
-									}else{
-										$expire_date_text = '<span style="color:red;">'.__("EXPIRED","pointfindert2d").'</span>';
-									}
-								}else{
-									$expire_date_text = '<span style="color:red;">'.__("ERROR!","pointfindert2d").'</span>';
-								}
-
-								$pfmenu_output .= '<li class="pf-dash-userprof">
-								<div class="pf-dash-packageinfo pf-dash-package-infoex">
-									<div class="pf-dash-pinfo-col"><span class="pf-dash-packageinfo-tableex" title="'.esc_html__('Included/Remaining','pointfindert2d').'">'.$package_itemlimit_text.'</span><span class="pf-dash-packageinfo-table">'.esc_html__('Listings','pointfindert2d').'</span></div>
-									<div class="pf-dash-pinfo-col"><span class="pf-dash-packageinfo-tableex" title="'.esc_html__('Included/Remaining','pointfindert2d').'">'.$package_fitemlimit.'/'.$membership_user_featureditem_limit.'</span><span class="pf-dash-packageinfo-table">'.esc_html__('Featured','pointfindert2d').'</span></div>
-									<div class="pf-dash-pinfo-col"><span class="pf-dash-packageinfo-tableex" title="'.esc_html__('You can renew your package before this date.','pointfindert2d').'">'.$expire_date_text.'</span><span class="pf-dash-packageinfo-table">'.esc_html__('Expire Date','pointfindert2d').'</span></div>
-								</div>
-								</li>';
-							}
-						}else{
-							$name_photo = get_user_meta($user_id, "name_photo", true);
-                            if( $name_photo == "" ){ $name_photo = "0"; }
-							if( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-								$user_photo_field_output = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-							}elseif( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
-								$user_photo_field_output = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
-							}else{
-								$user_photo_field_output = get_template_directory_uri().'/images/noimg.png';
-							}
-							// if( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-							// 	$user_photo_field_output = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-							// }else{
-							// 	$user_photo_field_output = get_template_directory_uri().'/images/noimg.png';
-							// }
-							$pfmenu_output .= '<li class="pf-dash-userprof"><img src="'.$user_photo_field_output.'" class="pf-dash-userphoto" style="width: 70px; height: 70px;"/><span class="pf-dash-usernamef">'.$user_name_field.'</span></li>';
-						}
+						$user_photo_field_output = kmimos_get_foto($user_id);
+						$pfmenu_output .= '<li class="pf-dash-userprof"><img src="'.$user_photo_field_output.'" class="pf-dash-userphoto" style="width: 70px; height: 70px;"/><span class="pf-dash-usernamef">'.$user_name_field.'</span></li>';
+                        
                         /*
                         *   Muestra botón para ver el perfíl del usuario
                         */
@@ -319,22 +156,13 @@ if(isset($ua_action)){
                             *   Muestra la portada de la tienda del cuidador
                             */
                             $pfmenu_output .= '<li class="negative">CUIDADOR</li>';
+                            
                             if ($_GET['ua']=='myshop'){
                                 $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-664"></i> '.$setup29_dashboard_contents_shop_menuname.'</li>';
-                            }
-                            else {
+                            } else {
                                 $pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myshop"><i class="pfadmicon-glyph-664"></i> '. $setup29_dashboard_contents_shop_menuname.'</a></li>';
                             }
-                            /*
-                            *   Muestra los asuntos pendientes del cuidador
-                            */
-                            // $color = ( $issues['count'] > 0 ) ? ' red': '';
-                            // if ($_GET['ua']=='myissues'){
-                            //     $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-403'.$color.'"></i> '. $setup29_dashboard_contents_issues_menuname.'<span class="pfbadge'.$color.'">'.$issues['count'].'</span></li>';
-                            // } else {
-                            //     $class = ($_GET['ua']=='myissue')? ' class="selected_option"':'';
-                            //     $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myissues"><i class="pfadmicon-glyph-403'.$color.'"></i> '. $setup29_dashboard_contents_issues_menuname.'<span class="pfbadge'.$color.'">'.$issues['count'].'</span></a></li>';
-                            // }
+                           
                             /*
                             *   Muestra los servicios ofrecidos por el cuidador
                             */
