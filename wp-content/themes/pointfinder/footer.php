@@ -406,70 +406,6 @@
                 ";
             }
 
-            if( $post->post_name == "finalizar-comprar" && $_GET['key'] == "" ){
-                /*echo '
-                    <div id="vlz_modal_popup" class="vlz_modal">
-                        <div class="vlz_modal_interno">
-                            <div class="vlz_modal_fondo" onclick="jQuery(\'#vlz_modal_popup\').css(\'display\', \'none\');"></div>
-                            <div class="vlz_modal_ventana">
-                                <div class="vlz_modal_titulo">Importante</div>
-                                <div class="vlz_modal_contenido" style="height: auto;">
-                                    <p align="justify">
-                                        Hola!
-                                    </p>
-                                    <p align="justify">
-                                        Por favor llena los datos requeridos, correspondientes a los datos de facturación de tu Tarjeta de Débito o Crédito. 
-                                    </p>
-                                    <p align="justify">
-                                        El llenar estos campos no te generará una factura, si requieres que el servicio sea facturado por favor escríbenos a contactomex@kmimos.la o llamanos al (55) 1791.4931/ (55) 66319264 
-                                    </p>
-                                </div>
-                                <div class="vlz_modal_pie" style="border-radius: 0px 0px 5px 5px!important; height: 70px;">
-                                    <input type="button" class="vlz_boton_cerrar_modal" value="Cerrar" onclick="jQuery(\'#vlz_modal_popup\').css(\'display\', \'none\');" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <script>
-                        jQuery(\'#vlz_modal_popup\').css(\'display\', \'table\');
-                    </script>
-                ';*/
-
-                // echo '
-                //     <div id="vlz_modal_popup_2" class="vlz_modal">
-                //         <div class="vlz_modal_interno">
-                //             <div class="vlz_modal_fondo" onclick="jQuery(\'#vlz_modal_popup_2\').css(\'display\', \'none\');"></div>
-                //             <div class="vlz_modal_ventana">
-                //                 <div class="vlz_modal_titulo">Importante</div>
-                //                 <div class="vlz_modal_contenido" style="height: auto;">
-                //                     <p align="justify">
-                //                         Oups, Disculpa las molestias!
-                //                     </p>
-                //                     <p align="justify">
-                //                         Nuestro módulo de pagos estará 100% activo el día lunes 13 de Febrero.
-                //                     </p>
-                //                     <p align="justify">
-                //                         Mientras tanto, te pedimos que solo escribas tu nombre completo como tarjetahabiente (Ej. Juan Gomez) y dejes los valores predeterminados de los otros campos.
-                //                     </p>
-                //                     <p align="justify">
-                //                         Esta información no generan cargo a ninguna tarjeta, sino que te permitirán avanzar con la reserva.  Es por ello que te pedimos que el pago completo de tu reservación lo hagas EN EFECTIVO a tu cuidador cuando le entregues a tu peludo(s).  
-                //                     </p>
-                //                     <p align="justify">
-                //                         Si tienes dudas, puedes escribirnos en nuestro chat en línea, o por correo a contactomex@kmimos.la. Puedes marcarnos también a los teléfonos (55) 1791.4931/ (55) 66319264     
-                //                     </p>
-                //                 </div>
-                //                 <div class="vlz_modal_pie" style="border-radius: 0px 0px 5px 5px!important; height: 70px;">
-                //                     <input type="button" class="vlz_boton_cerrar_modal" value="Cerrar" onclick="jQuery(\'#vlz_modal_popup_2\').css(\'display\', \'none\'); abrir = false;" />
-                //                 </div>
-                //             </div>
-                //         </div>
-                //     </div>
-                //     <script>
-                //         jQuery(\'#vlz_modal_popup\').css(\'display\', \'table\');
-                //     </script>
-                // ';
-            }
-
         ?>
 
         <script type="text/javascript">
@@ -500,7 +436,29 @@
 
                 });
             <?php } ?>
-
+            
         </script>
+
+        <?php
+            if(  $_SESSION['admin_sub_login'] == 'YES' ){
+                echo "
+                    <a href='".get_home_url()."/?i=".md5($_SESSION['id_admin'])."&admin=YES' style='
+                        position: fixed;
+                        display: inline-block;
+                        left: 50px;
+                        bottom: 50px;
+                        padding: 20px;
+                        font-size: 48px;
+                        font-family: Roboto;
+                        background: #CCC;
+                        border: solid 2px #BBB;
+                        z-index: 999999999999999999;
+                    '>
+                        X
+                    </a>
+                ";
+            }
+        ?>
+
     </body>
 </html>

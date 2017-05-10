@@ -2,107 +2,27 @@
 	/*
 		Template Name: vlz quiero ser cuidador
 	*/
-	get_header();
+		get_header();
 
 
-//***************************************************
-// BEGIN Configuracion de mensajes de alertas en precios	
-//***************************************************
-$mensajes_alerta =	
-	'<div class="alertas alertas-info">
-		<small> 
-			<strong>ATENCI&Oacute;N:</strong> Recuerda completar con ceros (0) los Miles. 
-			<strong>Ejemplo:</strong> 1 Peso no es igual a 1000 Pesos
-		</small> 
-	</div>';
-//***************************************************
-// END Configuracion de mensajes de alertas en precios	
-//***************************************************
+		//***************************************************
+		// BEGIN Configuracion de mensajes de alertas en precios	
+		//***************************************************
+		$mensajes_alerta =	
+			'<div class="alertas alertas-info">
+				<small> 
+					<strong>ATENCI&Oacute;N:</strong> Recuerda completar con ceros (0) los Miles. 
+					<strong>Ejemplo:</strong> 1 Peso no es igual a 1000 Pesos
+				</small> 
+			</div>';
+		//***************************************************
+		// END Configuracion de mensajes de alertas en precios	
+		//***************************************************
 
 		$keyApi = 'AIzaSyD-xrN3-wUMmJ6u2pY_QEQtpMYquGc70F8';
         wp_enqueue_script( 'kmimos_gmap', 'https://maps.googleapis.com/maps/api/js?key='.$keyApi.'&callback=initMap');
 	
 		if(function_exists('PFGetHeaderBar')){PFGetHeaderBar();} ?>
-
-		<style type="text/css">
-			.vlz_titulo_interno span {
-			    color: #d80606;
-			    font-size: 11px; 
-			    vertical-align: middle;
-			    float: none;
-			    display: block;
-			    line-height: 1.2;
-			    margin-top: 0px;
-			}
-
-			label{
-			    display: block;
-			}
-
-			.no_error{
-				display: none;
-			}
-
-			.error{
-				display: block;
-			    font-size: 10px;
-			    border: solid 1px #CCC;
-			    padding: 3px;
-			    border-radius: 0px 0px 3px 3px;
-			    background: #ffdcdc;
-			    line-height: 1.2;
-			    font-weight: 600;
-			}
-
-			.vlz_input_error{
-			    border-radius: 3px 3px 0px 0px !important;
-    			border-bottom: 0px !important;
-			}
-
-			.vlz_contenedor_listados {
-			    width: calc( 50% - 2px );
-			    display: inline-block;
-			    margin-bottom: 5px;
-			}
-
-			@media screen and (max-width: 750px){
-				.vlz_modal_ventana{
-					width: 90% !important;
-				}
-			}
-
-			@media screen and (max-width: 568px){
-				#vlz_mapa {
-				    height: 250px !important;
-				}
-				#vlz_boton_dir, #vlz_campo_dir{
-				    width: calc(100% - 9px) !important;
-				}
-				#vlz_boton_dir{
-				    margin-top: 5px !important;
-				}
-				#check_term{
-				    display: block;
-				    padding-right: 30px;
-				    font-size: 12px !important;
-				    height: auto !important;
-				}
-				#boton_registrar_modal{
-			        display: inline-block;
-				    font-size: 13px;
-				    margin-top: 5px;
-				}
-				.vlz_modal_contenido {
-				    height: 320px !important;
-				}
-
-				.vlz_contenedor_listados, .vlz_contenedor_dir{
-			        width: calc( 100% - 9px ) !important;
-    				margin-bottom: 5px;
-				}
-
-			}	
-		</style>
 
 		<div class="pf-blogpage-spacing pfb-top"></div>
 		<section role="main" class="blog-full-width">
