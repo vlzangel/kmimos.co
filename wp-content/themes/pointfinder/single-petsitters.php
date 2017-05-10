@@ -144,21 +144,9 @@
 
 			</div>
 		</div>
-
-		<div class="vlz_separador"></div>
-
-		<?php
-			$carousel = $meta['carousel_petsitter'][0];
-			if($carousel != ''){
-				echo '<h3 class="vlz_titulo">Galería de Fotos del Cuidador</h3>';
-				echo '<div class="vlz_seccion">';
-					$comando = '[vc_images_carousel images="'.$carousel.'" speed="300" autoplay="yes" hide_pagination_control="yes"]';
-					echo do_shortcode($comando);
-				echo '</div><div class="vlz_separador"></div>';
-			}
-		?>
 		
 		<?php if( $cuidador->descripcion != "" ){ ?>
+			<div class="vlz_separador"></div>
 			<h3 class="vlz_titulo">Descripción del Cuidador</h3>
 			<div class="vlz_seccion vlz_descripcion">
 				<p>
@@ -168,7 +156,7 @@
 		<?php } ?>
 
 		<?php if( $galeria != "" ){ ?>
-
+			<div class="vlz_separador"></div>
 			<h3 class="vlz_titulo">Mi Galería</h3>
 			<div class="vlz_seccion vlz_descripcion">
 				<?php echo $galeria; ?>
