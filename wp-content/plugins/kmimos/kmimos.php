@@ -359,6 +359,7 @@ if(!function_exists('servicios_adicionales')){
 if(!function_exists('kmimos_get_foto')){
     function kmimos_get_foto($user_id){
         global $wpdb;
+        echo $user_id;
         $name_photo = get_user_meta($user_id, "name_photo", true);
         if( empty($name_photo)  ){ $name_photo = "0"; }
         $path_avatar = "avatares";
