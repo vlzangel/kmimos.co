@@ -16,23 +16,8 @@
 	$longitud = $cuidador->longitud;
 
 	$user_id = $cuidador->user_id;
-	$name_photo = get_user_meta($user_id, "name_photo", true);
-    if( $name_photo == "" ){ $name_photo = "0"; }
-	if( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-		$foto = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-	}elseif( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
-		$foto = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
-	}else{
-		$foto = get_template_directory_uri().'/images/noimg.png';
-	}
 
-	// $name_photo = get_user_meta($user_id, "name_photo", true);
-	// if( $name_photo == "" ){ $name_photo = "0"; }
-	// if( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-	// 	$foto = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-	// }else{
-	// 	$foto = get_template_directory_uri().'/images/noimg.png';
-	// }
+	$foto = kmimos_get_foto($user_id);
 
 	$tama_aceptados = unserialize( $cuidador->tamanos_aceptados );
 	$tamanos = array(
@@ -159,29 +144,19 @@
 
 			</div>
 		</div>
-
-		<div class="vlz_separador"></div>
-
-		<?php
-			$carousel = $meta['carousel_petsitter'][0];
-			if($carousel != ''){
-				echo '<h3 class="vlz_titulo">Galería de Fotos del Cuidador</h3>';
-				echo '<div class="vlz_seccion">';
-					$comando = '[vc_images_carousel images="'.$carousel.'" speed="300" autoplay="yes" hide_pagination_control="yes"]';
-					echo do_shortcode($comando);
-				echo '</div><div class="vlz_separador"></div>';
-			}
-		?>
 		
-		<h3 class="vlz_titulo">Descripción del Cuidador</h3>
-		<div class="vlz_seccion vlz_descripcion">
-			<p>
-				<?php echo $cuidador->descripcion; ?>
-			</p>
-		</div>
+		<?php if( $cuidador->descripcion != "" ){ ?>
+			<div class="vlz_separador"></div>
+			<h3 class="vlz_titulo">Descripción del Cuidador</h3>
+			<div class="vlz_seccion vlz_descripcion">
+				<p>
+					<?php echo $cuidador->descripcion; ?>
+				</p>
+			</div>
+		<?php } ?>
 
 		<?php if( $galeria != "" ){ ?>
-
+			<div class="vlz_separador"></div>
 			<h3 class="vlz_titulo">Mi Galería</h3>
 			<div class="vlz_seccion vlz_descripcion">
 				<?php echo $galeria; ?>

@@ -25,11 +25,7 @@ if(!function_exists('get_estados_municipios')){
 if(!function_exists('kmimos_mails_administradores')){
     function kmimos_mails_administradores(){
 
-        $headers[] = 'BCC: e.celli@kmimos.la';
-        $headers[] = 'BCC: r.cuevas@kmimos.la';
-        $headers[] = 'BCC: r.gonzalez@kmimos.la';
-        $headers[] = 'BCC: m.castellon@kmimos.la';
-        $headers[] = 'BCC: a.veloz@kmimos.la';
+        $headers[] = 'BCC: n.deligny@kmimos.la';
         $headers[] = 'BCC: a.pedroza@kmimos.la';
 
         /*        
@@ -150,7 +146,7 @@ if(!function_exists('vlz_sql_busqueda')){
 
         // Ordenamiento
 
-        $orderby = (isset($param['orderby'])) ? "" : "" ;
+        $orderby = $param['orderby'];
 
         if( $orderby == "rating_desc" ){
             $orderby = "rating DESC, valoraciones DESC";
@@ -360,26 +356,32 @@ if(!function_exists('servicios_adicionales')){
     }
 }
 
-// 
-
-if(!function_exists('kmimos_get_foto_cuidador')){
-    function kmimos_get_foto_cuidador($id){
+if(!function_exists('kmimos_get_foto')){
+    function kmimos_get_foto($user_id){
         global $wpdb;
-        $cuidador = $wpdb->get_row("SELECT * FROM cuidadores WHERE id = ".$id);
-        $cuidador_id = $cuidador->id;
-        $xx = $name_photo;
-        $name_photo = get_user_meta($cuidador->user_id, "name_photo", true);
+        $name_photo = get_user_meta($user_id, "name_photo", true);
         if( empty($name_photo)  ){ $name_photo = "0"; }
-        if( file_exists("wp-content/uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}") ){
-            $img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}";
+        $path_avatar = "avatares";
+        if( file_exists("wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
+            $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
         }else{
-            if( file_exists("wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg") ){
-                $img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg";
+            if( file_exists("wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
+                $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
             }else{
-                $img = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
+                if( file_exists("wp-content/uploads/avatares/".$user_id."/0.jpg") ){
+                    $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/0.jpg";
+                }else{
+                    $img = get_home_url().'/wp-content/themes/pointfinder/images/noimg.png';
+                }
             }
         }
         return $img;
+    }
+}
+
+if(!function_exists('kmimos_get_foto_cuidador')){
+    function kmimos_get_foto_cuidador($id){
+        return kmimos_get_foto($id);
     }
 }
 
@@ -1148,6 +1150,72 @@ if(!function_exists('kmimos_user_info_ready')){
         }
         $ready = ($nombre!='' && $apellido!='' && $telefono==true );
         return $ready;
+    }
+}
+
+/**
+
+ *  Devuelve la cantidad y la lista de mascotas que posee el usuario.
+
+ * */
+
+if(!function_exists('kmimos_get_my_pets')){
+
+    function kmimos_get_my_pets($user_id){
+        global $wpdb;
+
+        $sql  = "SELECT COUNT(*) AS count, GROUP_CONCAT(p.ID SEPARATOR ',') AS list, ";
+        $sql .= "GROUP_CONCAT(pn.meta_value SEPARATOR ',') AS names, ";
+        $sql .= "pr.nombre AS breed_name ";
+        $sql .= "FROM $wpdb->posts AS p  ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS pm ON (p.ID=pm.post_id AND pm.meta_key='owner_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS pn ON (p.ID=pn.post_id AND pn.meta_key='name_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS pb ON (p.ID=pb.post_id AND pb.meta_key='breed_pet') ";
+        $sql .= "LEFT JOIN razas AS pr ON pr.id=pb.meta_value ";
+        $sql .= "WHERE p.post_type = 'pets' AND p.post_status = 'publish' ";
+        $sql .= "AND pm.meta_value = ".$user_id;
+        return $wpdb->get_row($sql, ARRAY_A);
+    }
+}
+
+if(!function_exists('kmimos_upload_photo')){
+    function kmimos_upload_photo( $name, $pathDestino, $fieldName, $file, $width=800, $heigth=600 ) {
+
+        $file = $_FILES;
+        $ext = pathinfo($file[$fieldName]['name'], PATHINFO_EXTENSION);
+        $size = $file[$fieldName]['size'];
+        $fullpath = "{$pathDestino}{$name}.{$ext}";
+
+        if( move_uploaded_file($file[$fieldName]['tmp_name'], $fullpath) ) { 
+
+            $gis = getimagesize( $fullpath );
+            $type = $gis[2];              
+            switch($type){
+                case "1": $imorig = @imagecreatefromgif($fullpath); break;
+                case "2": $imorig = @imagecreatefromjpeg($fullpath);break;
+                case "3": $imorig = @imagecreatefrompng($fullpath); break;   
+                default:  $imorig = @imagecreatefromjpeg($fullpath);
+            }
+
+            $x = imagesx($imorig);
+            $y = imagesy($imorig);
+
+            $aw = $width;
+            $ah = $heigth;
+            $im = imagecreatetruecolor($aw,$ah);
+
+            if (imagecopyresampled($im, $imorig, 0, 0, 0, 0, $aw, $ah, $x, $y)){
+                imagejpeg($im, $fullpath);
+            }
+
+            return [
+                'path'=>$fullpath, 
+                'name'=>"{$name}.{$ext}", 
+                'sts'=>true
+            ];
+        }else{
+            return ['sts'=>false];
+        }
     }
 }
 

@@ -1,5 +1,82 @@
 <style type="text/css">
+	.vlz_titulo_interno span {
+	    color: #d80606;
+	    font-size: 11px; 
+	    vertical-align: middle;
+	    float: none;
+	    display: block;
+	    line-height: 1.2;
+	    margin-top: 0px;
+	}
 
+	label{
+	    display: block;
+	}
+
+	.no_error{
+		display: none;
+	}
+
+	.error{
+		display: block;
+	    font-size: 10px;
+	    border: solid 1px #CCC;
+	    padding: 3px;
+	    border-radius: 0px 0px 3px 3px;
+	    background: #ffdcdc;
+	    line-height: 1.2;
+	    font-weight: 600;
+	}
+
+	.vlz_input_error{
+	    border-radius: 3px 3px 0px 0px !important;
+		border-bottom: 0px !important;
+	}
+
+	.vlz_contenedor_listados {
+	    width: calc( 50% - 2px );
+	    display: inline-block;
+	    margin-bottom: 5px;
+	}
+
+	@media screen and (max-width: 750px){
+		.vlz_modal_ventana{
+			width: 90% !important;
+		}
+	}
+
+	@media screen and (max-width: 568px){
+		#vlz_mapa {
+		    height: 250px !important;
+		}
+		#vlz_boton_dir, #vlz_campo_dir{
+		    width: calc(100% - 9px) !important;
+		}
+		#vlz_boton_dir{
+		    margin-top: 5px !important;
+		}
+		#check_term{
+		    display: block;
+		    padding-right: 30px;
+		    font-size: 12px !important;
+		    height: auto !important;
+		}
+		#boton_registrar_modal{
+	        display: inline-block;
+		    font-size: 13px;
+		    margin-top: 5px;
+		}
+		.vlz_modal_contenido {
+		    height: 320px !important;
+		}
+
+		.vlz_contenedor_listados, .vlz_contenedor_dir{
+	        width: calc( 100% - 9px ) !important;
+			margin-bottom: 5px;
+		}
+
+	}	
+			
 	.vlz_parte{
 	    position: relative;
 	    padding: 0px 10px;

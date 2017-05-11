@@ -47,6 +47,10 @@
 		$adicionales['transportacion_sencilla'][$key] = $_POST["transportacion_sencilla_".$key]+0;
 	}
 
+    if( !$transportacion_sencilla ){
+        unset($adicionales['transportacion_sencilla']);
+    }
+
 	$transportacion_redonda = false;
     $adicionales['transportacion_redonda'] = array(
         "corto" => "Cortas",
@@ -54,12 +58,15 @@
         "largo" => "Largas"
     );
 	foreach ($adicionales['transportacion_redonda'] as $key => $value) {
-		if( $_POST["transportacion_sencilla_".$key]+0 > 0 ){
+		if( $_POST["transportacion_redonda_".$key]+0 > 0 ){
 			$transportacion_redonda = true;
 		}
 		$adicionales['transportacion_redonda'][$key] = $_POST["transportacion_redonda_".$key]+0;
 	}
 
+    if( !$transportacion_redonda ){
+        unset($adicionales['transportacion_redonda']);
+    }
 
     $adicionales_extra = array(
         "bano"                      => $_POST["adicional_bano"]+0,
@@ -70,15 +77,10 @@
     );
 
     foreach ($adicionales_extra as $key => $value) {
-    	if( $value+0 > 0 ){
-    		$adicionales[$key] = $value+0;
-    	}
+        if( $value+0 > 0 ){
+            $adicionales[$key] = $value+0;
+        }
     }
-	
-	$adicionales['corte'] 					= $_POST["adicional_corte"]+0;
-	$adicionales['limpieza_dental'] 		= $_POST["adicional_limpieza_dental"]+0;
-	$adicionales['acupuntura'] 				= $_POST["adicional_acupuntura"]+0;
-	$adicionales['visita_al_veterinario'] 	= $_POST["adicional_visita_al_veterinario"]+0;
 
   	$servicios_extras = array(
     	"guarderia"						=> "Precios de Guardería",
@@ -111,14 +113,6 @@
 		}
 
     }
-
-    echo "
-    	<style>
-    		body{
-    			font-size: 12px;
-    		}
-    	</style>
-    ";
 
     $imgs_product = array(
         "hospedaje"                 => "8370",
@@ -187,9 +181,6 @@
   	}else{
   		echo "Crear el hospedaje";
   	}
-
-
-
 
     $servicios_extras_titulos = array(
         "guarderia"                     => "Guardería",
@@ -343,5 +334,5 @@
 
     // k_log($_POST);
     
-   header("location: ".$_SERVER["HTTP_REFERER"]);
+    header("location: ".$_SERVER["HTTP_REFERER"]);
 ?>
