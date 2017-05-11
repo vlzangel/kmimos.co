@@ -1219,6 +1219,39 @@ if(!function_exists('kmimos_upload_photo')){
     }
 }
 
+/**
+ *  Devuelve la información de la mascota seleccionada.
+ * */
+
+if(!function_exists('kmimos_get_pet_info')){
+    function kmimos_get_pet_info($pet_id){
+        global $wpdb;
+        $sql = "SELECT 
+        pt.ID AS pet_id, GROUP_CONCAT(ty.term_taxonomy_id SEPARATOR ',') AS type, br.meta_value AS breed, ";
+        $sql .= "ph.meta_value as photo, nm.meta_value AS name, gr.meta_value AS gender, co.meta_value AS colors, bd.meta_value AS birthdate, ";
+        $sql .= "sz.meta_value AS size, st.meta_value AS strerilized, ps.meta_value AS sociable, ";
+        $sql .= "ah.meta_value AS aggresive_humans, ap.meta_value AS aggresive_pets, ob.meta_value AS observations, ";
+        $sql .= "ow.meta_value AS owner_id ";
+        $sql .= "FROM $wpdb->posts AS pt ";
+        $sql .= "LEFT JOIN $wpdb->term_relationships AS ty ON pt.ID =ty.object_id ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS br ON (pt.ID =br.post_id AND br.meta_key='breed_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS ph ON (pt.ID =ph.post_id AND ph.meta_key='photo_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS nm ON (pt.ID =nm.post_id AND nm.meta_key='name_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS gr ON (pt.ID =gr.post_id AND gr.meta_key='gender_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS co ON (pt.ID =co.post_id AND co.meta_key='colors_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS bd ON (pt.ID =bd.post_id AND bd.meta_key='birthdate_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS sz ON (pt.ID =sz.post_id AND sz.meta_key='size_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS ob ON (pt.ID =ob.post_id AND ob.meta_key='about_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS ow ON (pt.ID =ow.post_id AND ow.meta_key='owner_pet') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS st ON (pt.ID =st.post_id AND st.meta_key='pet_sterilized') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS ps ON (pt.ID =ps.post_id AND ps.meta_key='pet_sociable') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS ah ON (pt.ID =ah.post_id AND ah.meta_key='aggressive_with_humans') ";
+        $sql .= "LEFT JOIN $wpdb->postmeta AS ap ON (pt.ID =ap.post_id AND ap.meta_key='aggressive_with_pets') ";
+        $sql .= "WHERE pt.post_type='pets' AND post_status='publish' AND pt.ID = ".$pet_id;
+        return $wpdb->get_row($sql, ARRAY_A);
+    }
+}
+
 include_once('kmimos-email.php');
 
 ?>
