@@ -356,6 +356,7 @@
                         (NULL, ".$user_id.", 'first_name',          '".$nombres."'),
                         (NULL, ".$user_id.", 'last_name',           '".$apellidos."'),
                         (NULL, ".$user_id.", 'user_referred',       '".$referido."'),
+                        (NULL, ".$user_id.", 'description',         '".$descripcion."'),
                         (NULL, ".$user_id.", 'description',         ''),
                         (NULL, ".$user_id.", 'rich_editing',        'true'),
                         (NULL, ".$user_id.", 'comment_shortcuts',   'false'),
