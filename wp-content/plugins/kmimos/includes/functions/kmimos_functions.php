@@ -1,11 +1,10 @@
 <?php
 	function get_estados_municipios(){
 		require_once('vlz_config.php');
-		global $host, $user, $pass, $db;
-		$conn_my = new mysqli($host, $user, $pass, $db);
-		if (!$conn_my) {
-		  	exit;
+		if( $host == "" ){
+			global $host, $user, $pass, $db;
 		}
+		$conn_my = new mysqli($host, $user, $pass, $db);
 		$result = $conn_my->query("
 			SELECT 
 				s.id AS id,
