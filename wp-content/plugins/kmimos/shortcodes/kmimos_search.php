@@ -240,7 +240,7 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div id="selector_coordenadas_x" class="hide">
 
                         <input type="text" id="latitud" name="latitud">
                         <input type="text" id="longitud" name="longitud">
