@@ -40,10 +40,12 @@
 
 				if( $result2->num_rows > 0  ){
 					while ($row2 = $result2->fetch_assoc()){
+						$coordenadas = unserialize( $row2['coord'] );
+						$coordenadas["referencia"]->lng = trim($coordenadas["referencia"]->lng)+0;
 						$municipios[] = array(
 							"id" => $row2['id'],
 							"nombre" => ($row2['muni']),
-							"coordenadas" => unserialize( str_replace("\r", "", $row2['coord']) )
+							"coordenadas" => $coordenadas
 						);
 					}
 				}
@@ -56,7 +58,6 @@
 
 			}
 		}
-		// print_r($datos);
 		$datos_json = json_encode($datos );
 		return "<script>
 				var objectEstados = jQuery.makeArray(
