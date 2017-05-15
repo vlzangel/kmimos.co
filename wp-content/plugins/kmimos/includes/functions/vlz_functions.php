@@ -226,7 +226,10 @@
                     "orden"   => $ID_ORDEN,
 
                     "nombre_cuidador" => $cuidador_post->post_title,
-                    "nombre_cliente"  => $nom
+                    "nombre_cliente"  => $nom,
+
+                    "tipo_servicio"   => $tipo_servicio,
+                    "producto_name"   => $producto->post_title
                 );
         }
 
