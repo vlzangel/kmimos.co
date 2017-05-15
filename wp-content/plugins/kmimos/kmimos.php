@@ -18,9 +18,7 @@ include_once('includes/class/class_kmimos_map.php');
 include_once('includes/functions/kmimos_functions.php');
 include_once('plugins/woocommerce.php');
 
-if(!function_exists('get_estados_municipios')){
-    return get_estados_municipios();
-}
+include_once('includes/functions/vlz_functions.php');
 
 if(!function_exists('kmimos_mails_administradores')){
     function kmimos_mails_administradores(){
@@ -34,6 +32,21 @@ if(!function_exists('kmimos_mails_administradores')){
         */
 
         return $headers;
+    }
+}
+
+if(!function_exists('kmimos_get_info_syte')){
+    function kmimos_get_info_syte(){
+
+        $data["pais"] = "Colombia";
+        $data["titulo"] = "Kmimos Colombia";
+        $data["email"] = "contactoco@kmimos.la";
+        $data["telefono"] = "(+57) 315 849.2186";
+        $data["twitter"] = "kmimosco";
+        $data["facebook"] = "KmimosCo";
+        $data["instagram"] = "kmimosco";
+
+        return $data;
     }
 }
 
@@ -361,17 +374,18 @@ if(!function_exists('kmimos_get_foto')){
         global $wpdb;
         $name_photo = get_user_meta($user_id, "name_photo", true);
         if( empty($name_photo)  ){ $name_photo = "0"; }
+        $ruta = dirname(dirname(dirname(__FILE__)));
         $path_avatar = "avatares";
-        if( file_exists("wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-            $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
+        if( file_exists($ruta."/uploads/avatares/".$user_id."/{$name_photo}") ){
+            $img = $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
         }else{
-            if( file_exists("wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
-                $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
+            if( file_exists($ruta."/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
+                $img = $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
             }else{
-                if( file_exists("wp-content/uploads/avatares/".$user_id."/0.jpg") ){
-                    $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/0.jpg";
+                if( file_exists($ruta."/uploads/avatares/".$user_id."/0.jpg") ){
+                    $img = $img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/0.jpg";
                 }else{
-                    $img = get_home_url().'/wp-content/themes/pointfinder/images/noimg.png';
+                    $img = get_home_url()."/wp-content/themes/pointfinder/images/noimg.png";
                 }
             }
         }
