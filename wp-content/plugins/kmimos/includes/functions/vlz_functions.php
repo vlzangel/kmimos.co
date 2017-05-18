@@ -344,6 +344,7 @@
                         $data[5] = str_replace("(", "", $data[5]);
                         $data[5] = str_replace(")", "", $data[5]);
                         $data[5] = substr($data[5], 5);
+                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
                         $adicionales_array[] = array(
                             'Baño',
                             $data[5]+0
@@ -354,7 +355,7 @@
                         $data = explode(" ", $value->meta_key);
                         $data[5] = str_replace("(", "", $data[5]);
                         $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = substr($data[5], 5);
+                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
                         $adicionales_array[] = array(
                             'Baño',
                             $data[5]+0
@@ -365,7 +366,7 @@
                         $data = explode(" ", $value->meta_key);
                         $data[5] = str_replace("(", "", $data[5]);
                         $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = substr($data[5], 5);
+                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
                         $adicionales_array[] = array(
                             'Corte de Pelo y Uñas',
                             $data[5]+0
@@ -376,7 +377,7 @@
                         $data = explode(" ", $value->meta_key);
                         $data[5] = str_replace("(", "", $data[5]);
                         $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = substr($data[5], 5);
+                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
                         $adicionales_array[] = array(
                             'Corte de Pelo y Uñas',
                             $data[5]+0
@@ -387,7 +388,7 @@
                         $data = explode(" ", $value->meta_key);
                         $data[5] = str_replace("(", "", $data[5]);
                         $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = substr($data[5], 5);
+                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
                         $adicionales_array[] = array(
                             'Visita al Veterinario',
                             $data[5]+0
@@ -398,7 +399,7 @@
                         $data = explode(" ", $value->meta_key);
                         $data[5] = str_replace("(", "", $data[5]);
                         $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = substr($data[5], 5);
+                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
                         $adicionales_array[] = array(
                             'Limpieza Dental',
                             $data[5]+0
@@ -409,7 +410,7 @@
                         $data = explode(" ", $value->meta_key);
                         $data[5] = str_replace("(", "", $data[5]);
                         $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = substr($data[5], 5);
+                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
                         $adicionales_array[] = array(
                             'Acupuntura',
                             $data[5]+0
