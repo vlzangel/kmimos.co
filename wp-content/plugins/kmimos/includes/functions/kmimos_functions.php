@@ -1,14 +1,10 @@
 <?php
-
-
 	function get_estados_municipios(){
 		require_once('vlz_config.php');
-		global $host, $user, $pass, $db;
-		$conn_my = new mysqli($host, $user, $pass, $db);
-		if (!$conn_my) {
-		  	exit;
+		if( $host == "" ){
+			global $host, $user, $pass, $db;
 		}
-
+		$conn_my = new mysqli($host, $user, $pass, $db);
 		$result = $conn_my->query("
 			SELECT 
 				s.id AS id,
@@ -44,23 +40,25 @@
 
 				if( $result2->num_rows > 0  ){
 					while ($row2 = $result2->fetch_assoc()){
+						$coordenadas = unserialize( $row2['coord'] );
+						$coordenadas["referencia"]->lng = trim($coordenadas["referencia"]->lng)+0;
 						$municipios[] = array(
 							"id" => $row2['id'],
-							"nombre" => $row2['muni'],
-							"coordenadas" => unserialize($row2['coord'])
+							"nombre" => ($row2['muni']),
+							"coordenadas" => $coordenadas
 						);
 					}
 				}
 
 				$datos[$id] = array(
-					"nombre" => $esta,
-					"coordenadas" => unserialize($coord),
+					"nombre" => ($esta),
+					"coordenadas" => unserialize( str_replace("\r", "", $coord) ),
 					"municipios" => $municipios
 				);
 
 			}
 		}
-		$datos_json = json_encode($datos, JSON_UNESCAPED_UNICODE );
+		$datos_json = json_encode($datos );
 		return "<script>
 				var objectEstados = jQuery.makeArray(
 					eval(

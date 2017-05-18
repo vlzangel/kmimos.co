@@ -100,6 +100,7 @@ if(isset($ua_action)){
                         /*
                         *   Muestra botón para ver las mascotas del usuario
                         */
+                        $pets = kmimos_get_my_pets($current_user->ID);
                         if ($_GET['ua']=='mypets'){
                             $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-871"></i> '. $setup29_dashboard_contents_pets_list_menuname.'</li>';
                         }
