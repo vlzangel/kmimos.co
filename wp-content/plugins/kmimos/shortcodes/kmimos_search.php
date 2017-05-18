@@ -236,6 +236,7 @@
                                 <select id="municipio_cuidador" name="municipios">
                                     <option value="">Seleccione primero un municipio</option>
                                 </select>
+                                <input type="hidden" id="municipio_cache" name="municipio_cache">
                             </div>
                         </div>
                     </div>
