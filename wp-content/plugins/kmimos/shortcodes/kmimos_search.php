@@ -4,37 +4,14 @@
 
     $pais = (isset($args["pais"]))?$args["pais"]:"mx";
 
-    $vacios = (isset($args["vacios"]))?$args["vacios"]:1;
-
-    $taxonomy = 'pointfinderlocations';
-    $parent = get_term_by('slug', $pais, $taxonomy);
-    $distdef = 20;
-
     global $wpdb;
     
     $estados = $wpdb->get_results("SELECT * FROM states WHERE country_id = 1 ORDER BY name ASC");
-
     $str_estados = "";
     foreach($estados as $estado) { 
         $str_estados .= "<option value='".$estado->id."'>".$estado->name."</option>";
     }
     $str_estados = utf8_decode($str_estados);
-
-    $json = array();
-    foreach ($estados as $estado) {
-        
-        $municipios = $wpdb->get_results("SELECT * FROM locations WHERE state_id = {$estado->id} ORDER BY name ASC");
-
-        foreach ($municipios as $municipio) {
-            $json[$estado->id][] = array(
-                "id" => $municipio->id,
-                "name" => $municipio->name
-            );
-        }
-
-    }
-
-    echo "<script> var temp = eval( '(".json_encode($json).")' ); var locaciones = jQuery.makeArray( temp ); </script>"; 
 ?>
 
     <style>
