@@ -337,7 +337,7 @@
 			</button>
 		</div>
 		<div class="col-sm-12 margin-top-20">
-			<a href="http://www.kmimos.co/">¿Quieres Conocer Kmimos?</a>
+			<a href="/">¿Quieres Conocer Kmimos?</a>
 		</div>
 
 		<aside class="text-center col-sm-12">
@@ -424,7 +424,7 @@
 				</div>
 	      		<br>
       		</form>
-			<form id="frm-redirect" action="http://www.kmimos.co/quiero-ser-cuidador-certificado-de-perros/"  method="post" >
+			<form id="frm-redirect" action="/quiero-ser-cuidador-certificado-de-perros/"  method="post" >
       		</form>
 	      </div>
 	    </div><!-- /.modal-content -->
