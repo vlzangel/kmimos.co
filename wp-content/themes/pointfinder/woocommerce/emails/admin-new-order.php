@@ -11,7 +11,7 @@
 
 	add_filter( 'wp_mail_from_name', function( $name ) {
         $info = kmimos_get_info_syte();
-        return $info["titulo"];
+        return "Kmimos Colombia ".$info["titulo"];
     });
     add_filter( 'wp_mail_from', function( $email ) {
         $info = kmimos_get_info_syte();
