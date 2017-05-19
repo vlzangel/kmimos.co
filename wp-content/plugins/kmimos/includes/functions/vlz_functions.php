@@ -238,43 +238,17 @@
     if(!function_exists('kmimos_desglose_reserva')){
 
         function kmimos_borrar_formato_numerico($valor){
-            return number_format ( $valor, 2, ",", "." );
+            $valor = str_replace(",", "", $valor);
+            $valor = str_replace(".", ",", $valor);
+            return $valor+0;
         }
 
-        function kmimos_transporte_sencillo($valor){
-            $data = explode(" ", $valor);
-            $data[6] = str_replace("(", "", $data[6]);
-            $data[6] = str_replace(")", "", $data[6]);
-            $data[6] = kmimos_borrar_formato_numerico( substr($data[6], 5) );
-            $transporte[] = array(
-                $value->meta_value,
-                $data[6]+0
+        function kmimos_format_adicionales($valor, $txt){
+            preg_match_all("#;(.*?)\)#", $valor, $matches);
+            return array(
+                $txt,
+                kmimos_borrar_formato_numerico( $matches[1][0] )
             );
-            return $transporte;
-        }
-
-        function kmimos_transporte_format($valor){
-            $data = explode(" ", $valor);
-            $data[6] = str_replace("(", "", $data[6]);
-            $data[6] = str_replace(")", "", $data[6]);
-            $data[6] = kmimos_borrar_formato_numerico( substr($data[6], 5) );
-            $transporte[] = array(
-                $value->meta_value,
-                $data[6]+0
-            );
-            return $transporte;
-        }
-
-        function kmimos_adicionales_format($valor){
-            $data = explode(" ", $valor);
-            $data[6] = str_replace("(", "", $data[6]);
-            $data[6] = str_replace(")", "", $data[6]);
-            $data[6] = kmimos_borrar_formato_numerico( substr($data[6], 5) );
-            $transporte[] = array(
-                $value->meta_value,
-                $data[6]+0
-            );
-            return $transporte;
         }
 
         function kmimos_desglose_reserva($id, $is_mail = false){
@@ -316,105 +290,55 @@
                 switch ($value->meta_value) {
 
                     case 'Transp. Sencillo - Rutas Cortas':
-                        kmimos_transporte($value->meta_key);
+                        $transporte[] = kmimos_format_adicionales($value->meta_key, $value->meta_value);
                     break;
 
                     case 'Transp. Sencillo - Rutas Medias':
-                        kmimos_transporte($value->meta_key);
+                        $transporte[] = kmimos_format_adicionales($value->meta_key, $value->meta_value);
                     break;
 
                     case 'Transp. Sencillo - Rutas Largas':
-                        kmimos_transporte($value->meta_key);
+                        $transporte[] = kmimos_format_adicionales($value->meta_key, $value->meta_value);
                     break;
 
                     case 'Transp. Redondo - Rutas Cortas':
-                        kmimos_transporte($value->meta_key);
+                        $transporte[] = kmimos_format_adicionales($value->meta_key, $value->meta_value);
                     break;
 
                     case 'Transp. Redondo - Rutas Medias':
-                        kmimos_transporte($value->meta_key);
+                        $transporte[] = kmimos_format_adicionales($value->meta_key, $value->meta_value);
                     break;
 
                     case 'Transp. Redondo - Rutas Largas':
-                        kmimos_transporte($value->meta_key);
+                        $transporte[] = kmimos_format_adicionales($value->meta_key, $value->meta_value);
                     break;
 
                     case 'Baño (precio por mascota)':
-                        $data = explode(" ", $value->meta_key);
-                        $data[5] = str_replace("(", "", $data[5]);
-                        $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = substr($data[5], 5);
-                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
-                        $adicionales_array[] = array(
-                            'Baño',
-                            $data[5]+0
-                        );
+                        $adicionales_array[] = kmimos_format_adicionales($value->meta_key, 'Baño');
                     break;
 
                     case 'Ba&ntilde;o (precio por mascota)':
-                        $data = explode(" ", $value->meta_key);
-                        $data[5] = str_replace("(", "", $data[5]);
-                        $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
-                        $adicionales_array[] = array(
-                            'Baño',
-                            $data[5]+0
-                        );
+                        $adicionales_array[] = kmimos_format_adicionales($value->meta_key, 'Baño');
                     break;
                     
                     case 'Corte de Pelo y U&ntilde;as (precio por mascota)':
-                        $data = explode(" ", $value->meta_key);
-                        $data[5] = str_replace("(", "", $data[5]);
-                        $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
-                        $adicionales_array[] = array(
-                            'Corte de Pelo y Uñas',
-                            $data[5]+0
-                        );
+                        $adicionales_array[] = kmimos_format_adicionales($value->meta_key, 'Corte de Pelo y Uñas');
                     break;
                     
                     case 'Corte de Pelo y Uñas (precio por mascota)':
-                        $data = explode(" ", $value->meta_key);
-                        $data[5] = str_replace("(", "", $data[5]);
-                        $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
-                        $adicionales_array[] = array(
-                            'Corte de Pelo y Uñas',
-                            $data[5]+0
-                        );
+                        $adicionales_array[] = kmimos_format_adicionales($value->meta_key, 'Corte de Pelo y Uñas');
                     break;
                     
                     case 'Visita al Veterinario (precio por mascota)':
-                        $data = explode(" ", $value->meta_key);
-                        $data[5] = str_replace("(", "", $data[5]);
-                        $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
-                        $adicionales_array[] = array(
-                            'Visita al Veterinario',
-                            $data[5]+0
-                        );
+                        $adicionales_array[] = kmimos_format_adicionales($value->meta_key, 'Visita al Veterinario');
                     break;
                     
                     case 'Limpieza Dental (precio por mascota)':
-                        $data = explode(" ", $value->meta_key);
-                        $data[5] = str_replace("(", "", $data[5]);
-                        $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
-                        $adicionales_array[] = array(
-                            'Limpieza Dental',
-                            $data[5]+0
-                        );
+                        $adicionales_array[] = kmimos_format_adicionales($value->meta_key, 'Limpieza Dental');
                     break;
                     
                     case 'Acupuntura (precio por mascota)':
-                        $data = explode(" ", $value->meta_key);
-                        $data[5] = str_replace("(", "", $data[5]);
-                        $data[5] = str_replace(")", "", $data[5]);
-                        $data[5] = kmimos_borrar_formato_numerico( substr($data[5], 5) );
-                        $adicionales_array[] = array(
-                            'Acupuntura',
-                            $data[5]+0
-                        );
+                        $adicionales_array[] = kmimos_format_adicionales($value->meta_key, 'Acupuntura');
                     break;
 
                 }
