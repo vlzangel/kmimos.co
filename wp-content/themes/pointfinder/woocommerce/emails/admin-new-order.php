@@ -10,11 +10,11 @@
 	$info = kmimos_get_info_syte();
 
 	add_filter( 'wp_mail_from_name', function( $name ) {
-        global $info;
+        $info = kmimos_get_info_syte();
         return $info["titulo"];
     });
     add_filter( 'wp_mail_from', function( $email ) {
-        global $info;
+        $info = kmimos_get_info_syte();
         return $info["email"]; 
     });
 
