@@ -23,7 +23,7 @@
                         <li><a href="#">Preguntas y Respuestas</a></li>
                         <li><a href="#">Cobertura Veterinaria</a></li>
                         <li><a href="#">Comunicados de prensa</a></li>
-                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="<?php echo get_home_url(); ?>/terminos-y-condiciones/">Términos y Condiciones</a></li>
                         <li><a href="#">Nuestros Aliados</a></li>
                         <li><a href="<?php echo get_home_url();?>/contacto/">Contáctanos</a></li>
                     </ul>
