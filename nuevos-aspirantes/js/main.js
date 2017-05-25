@@ -5,6 +5,12 @@ $(window).load(function() {
 	
 });
 
+//$(window).resize(function(){
+//	$('iframe').width( ($(window).width() * 97) / 100 );
+//	$('iframe').height( ($(window).height() * 97) / 100 );
+// $('iframe').contentDocument.location.reload(true);
+//});
+
 
 $('#subscribe').on('click', function(){
   _subscribe();
@@ -17,15 +23,27 @@ $('#frm-temp').on('submit', function(e){
 
 function _subscribe(){
 
-//  if( $('#email').val().match(emailRegex) ) {
+    if( !$('#terminos').prop('checked') || $('#email').val() == "" ){
+
+      if( !$('#terminos').prop('checked') ){
+        $('#msg').html('Debe aceptar los terminos y condiciones');
+      }
+      if( $('#email').val() == "" ){
+        $('#msg').html('Debe completar los campos');
+      }
+      return;
+    }
+
     $('#loading').removeClass('hidden');
-    $('#msg').html('Enviando...');
-    $.ajax( "/landing/list-subscriber.php?source=kmimos-co-cuidadores&email="+$('#email').val()+"&phone="+$('#phone').val() )
-    .done(function(data) {
+    $('#msg').html('Validando datos...');
+    $.ajax( "/landing/list-subscriber.php?source=kmimos-mx-cuidadores&email="+$('#email').val()+"&phone="+$('#phone').val() )
+    .done(function(data) { 
       if(data == 1){ 
         $('#loading').addClass('hidden');
         $('#msg').html('Gracias por ser parte de Kmimos, completa tu registro.');
         $('#frm-redirect').submit();
+      }else if(data == 2){
+        $('#msg').html('Formato de email incorrecto.');
       }else{
         $('#msg').html('No pudimos completar su solicitud, intente nuevamente');
       }
@@ -34,5 +52,5 @@ function _subscribe(){
       $('#msg').html('No pudimos completar su solicitud, intente nuevamente');
       $('#loading').addClass('hidden');
     });  
-//  }
+
 }
