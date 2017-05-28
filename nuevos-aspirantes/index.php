@@ -414,15 +414,32 @@
 					    <input type="text" class="form-control" name="phone" id="phone" placeholder="Escribe tu Tel&eacute;fono">
 					</div><!-- /input-group -->
 				</div>
-				<div class="form-group">
-			    	<button class="btn btn-success" type="button" id="subscribe">Continuar</button>
-			    </div>
-	      		<br>
-				<div>
+	      		<div class="form-group">
+					<div class="col-xs-7" style="padding-left:21px;" >
+						<label class="checkbox">
+							<input type="checkbox" id="terminos" name="terminos" required value="0">
+							<span>Acepto los 
+							<a role="button" data-toggle="collapse" href="#terminos_condiciones" aria-expanded="false" aria-controls="terminos_condiciones">t&eacute;rminos y condiciones</a>
+							</span>
+						</label>
+				    </div>
+					<div class="col-xs-4 pull-right text-right">
+				    	<button class="btn btn-success" type="button" id="subscribe">Continuar</button>
+				    </div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12">
 					<i id="loading" class="hidden" style="font-size:12px;" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
 					<span id="msg"></span>
+					<br>
 				</div>
 	      		<br>
+  				<div class="collapse" id="terminos_condiciones" style="width: 100%!important;">
+				  <div class="well" style="width: 100%!important; text-align:justify; height: 200px; overflow: auto;">
+				    <?php include_once('terminos.php'); ?>
+	  				<div class="clearfix"></div>
+				  </div>
+				</div>
+  				<div class="clearfix"></div>
       		</form>
 			<form id="frm-redirect" action="/quiero-ser-cuidador-certificado-de-perros/"  method="post" >
       		</form>
