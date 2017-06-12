@@ -1,15 +1,8 @@
 <?php
 
 	$user_id = $cuidador->user_id;
-	$name_photo = get_user_meta($user_id, "name_photo", true);
-    if( $name_photo == "" ){ $name_photo = "0"; }
-	if( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}") ){
-		$img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}";
-	}elseif( file_exists("./wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg") ){
-		$img = get_home_url()."/wp-content/uploads/avatares/".$user_id."/{$name_photo}.jpg";
-	}else{
-		$img = get_template_directory_uri().'/images/noimg.png';
-	}
+
+	$img = kmimos_get_foto($user_id);
 
 	$anios_exp = $cuidador->experiencia;
 	if( $anios_exp > 1900 ){
@@ -43,16 +36,6 @@
 	$distancia = $cuidador->DISTANCIA;
 
 	$distancia = 'A '.floor($distancia).' km de tu busqueda';
-
-	//echo "Estado: ".$_POST['estados'];
-
-	// if( $_POST['estados'] == "" ){
-	// 	$distancia = "";
-	// }else{
-	// 	if( $_POST['orderby'] != "distance_asc" && $_POST['orderby'] != "distance_desc" ){
-	// 		$distancia = "";
-	// 	}
-	// }
 
 	if( $_POST['tipo_busqueda'] == "otra-localidad" ){
 		if( $_POST['estados'] == "" ){

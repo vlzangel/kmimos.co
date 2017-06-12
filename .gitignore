@@ -21,7 +21,7 @@ Respaldo*
 
 .htaccess
 favicon.ico
-index.php
+/wp-content/index.php
 wp-activate.php
 wp-blog-header.php
 wp-comments-post.php

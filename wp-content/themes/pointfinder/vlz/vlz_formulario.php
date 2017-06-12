@@ -128,12 +128,12 @@
 
 	$selects_estados = "
 		<div class='vlz_sub_seccion'>
-			<SELECT class='vlz_input' id='estados' name='estados' onchange='vlz_ver_municipios()' style='border: solid 1px #CCC;'>
+			<SELECT class='vlz_input' id='estados' name='estados' style='border: solid 1px #CCC;'>
 				{$estados}
 			</SELECT>
 		</div>
 		<div class='vlz_sub_seccion'>
-			<SELECT class='vlz_input' id='municipios' name='municipios' onchange='vlz_coordenadas()' style='border: solid 1px #CCC;'>
+			<SELECT class='vlz_input' id='municipios' name='municipios' style='border: solid 1px #CCC;'>
 				{$muni}
 			</SELECT>
 		</div>

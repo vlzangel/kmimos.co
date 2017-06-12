@@ -58,7 +58,7 @@ function listar_usuarios(){
 	for (var i = 0; i < kmimos_usuarios.registros[fil].length; i++) {
 		if( buscar(txt, kmimos_usuarios.registros[fil][i][1]) || buscar(txt, kmimos_usuarios.registros[fil][i][2]) ){
 			HTML += "<tr class='kmimos_usuario' data-id='"+i+"'>";
-				HTML += "<td style='width: 50%;'> <a href='"+URL_HOME+"?i="+kmimos_usuarios.registros[fil][i][3]+"' target='_blank' id='kmimos_usuario_"+i+"'> "+kmimos_usuarios.registros[fil][i][1]+" </a> </td>";
+				HTML += "<td style='width: 50%;'> <a href='"+URL_HOME+"?i="+kmimos_usuarios.registros[fil][i][3]+"' id='kmimos_usuario_"+i+"'> "+kmimos_usuarios.registros[fil][i][1]+" </a> </td>";
 				HTML += "<td style='width: 50%;'> "+kmimos_usuarios.registros[fil][i][2]+" </td>";
 			HTML += "</tr>";
 		}
