@@ -38,6 +38,23 @@
 
 	$dudas = '<p align="justify">Para cualquier duda y/o comentario puedes contactar al Staff Kmimos a los teléfonos '.$info["telefono"].', o al correo '.$info["email"].'</p>';
 
-	include("otro.php");
+	$metodo = get_post_meta($order->id, "Metodo de Pago Usado", true);
+
+	$tipo = "Pago con Tarjeta";
+	switch ($metodo) {
+		case 'CASH':
+			$tipo = "Efectivo";
+		break;
+		case 'BANK_REFERENCED':
+			$tipo = "Banco";
+		break;
+	}
+
+	if( $metodo == "CASH" || $metodo == "BANK_REFERENCED" ){
+		include("tienda.php");
+	}else{
+		include("otro.php");
+	}
+	
 
 ?>
