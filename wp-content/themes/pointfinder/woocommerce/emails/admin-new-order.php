@@ -10,11 +10,13 @@
 	$info = kmimos_get_info_syte();
 
 	add_filter( 'wp_mail_from_name', function( $name ) {
-		return $info["titulo"];
-	});
-	add_filter( 'wp_mail_from', function( $email ) {
-		return $info["email"]; 
-	});
+        $info = kmimos_get_info_syte();
+        return $info["titulo"];
+    });
+    add_filter( 'wp_mail_from', function( $email ) {
+        $info = kmimos_get_info_syte();
+        return $info["email"]; 
+    });
 
 	include("vlz_data_orden.php");
 
@@ -36,6 +38,23 @@
 
 	$dudas = '<p align="justify">Para cualquier duda y/o comentario puedes contactar al Staff Kmimos a los teléfonos '.$info["telefono"].', o al correo '.$info["email"].'</p>';
 
-	include("otro.php");
+	$metodo = get_post_meta($order->id, "Metodo de Pago Usado", true);
+
+	$tipo = "Pago con Tarjeta";
+	switch ($metodo) {
+		case 'CASH':
+			$tipo = "Efectivo";
+		break;
+		case 'BANK_REFERENCED':
+			$tipo = "Banco";
+		break;
+	}
+
+	if( $metodo == "CASH" || $metodo == "BANK_REFERENCED" ){
+		include("tienda.php");
+	}else{
+		include("otro.php");
+	}
+	
 
 ?>
