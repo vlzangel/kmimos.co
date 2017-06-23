@@ -1,0 +1,43 @@
+html, body{position:relative; width:100%; height:100%; margin:0; padding:0; font-family: arial, sans-serif;  background:#DDD;}
+img{max-width:100%;}
+
+#panel{position:relative; width:100%; height:100%;}
+#panel .contain{position:relative; width:100%; max-width:900px; height:100%; margin:0 auto;}
+#panel .message{position:relative; padding:10px; color:#fff; font-size:15px; border:1px solid #FFF; border-radius:5px; box-shadow:0 0 5px #CCC; background:#59c9a8; opacity:0; visibility:hidden; display:none; transition:all .5s;}
+#panel .message.show{opacity:1; visibility:visible;}
+#panel .logout{position:relative; padding:20px; color:#fff; font-size:15px; text-align:right; cursor:pointer; background:#555;}
+
+#panel .section{position:relative; height:calc(100% - 60px);}
+#panel .modules{position:relative; width:calc(100% - 245px); height:calc(100% - 40px); padding:20px; overflow:hidden; overflow-y:auto; vertical-align:top; display:inline-block;}
+#panel .modules .module_title{margin:20px 0;  font-size:30px;  text-align:center;}
+#panel .module_data{}
+#panel .module_data .item{position: relative; padding: 10px 0;}
+#panel .menu{position:relative; width:200px; height:100%; background:#555; overflow:hidden; overflow-y:auto; vertical-align:top; display:inline-block;}
+#panel .menu .item{position:relative; padding:20px 10px; color:#FFF; border-bottom:1px solid rgba(200,200,200,0.5); cursor:pointer;}
+
+
+form{position:relative;}
+form.login{position:relative; max-width:300px; margin:200px auto;}
+form input{position:relative; width:calc(100% - 20px); margin:5px 0; padding:10px; font-size:15px; border:0; border-radius:5px; background:#FFF;}
+form input[type="submit"]{width:100%; color:#FFF; background:#59c9a8;}
+
+
+.tables{ position: relative; overflow: auto;}
+.filter{ position: relative; padding: 5px;}
+.filter .line{padding:5px 11px; border:1px solid #EEE; vertical-align: middle; display: inline-block;}
+.filter label{font-size:20px;}
+.filter select{padding:10px;  background:#ddd;}
+.filter input[type="checkbox"]{width:20px; height:20px;}
+
+table{position:relative; border-radius:5px; background:#FFF;}
+table thead{color:#FFF; background:#555;}
+table thead th{padding:15px !important;}
+table .title{text-align:left; min-width: 250px;}
+table .number{text-align:right;}
+table th,
+table td{padding:5px; border:1px solid #555;}
+table .noshow,
+table .noshow_select,
+table .noshow_check{ display: none;}
+table tfoot{ font-weight: bold;}
+
