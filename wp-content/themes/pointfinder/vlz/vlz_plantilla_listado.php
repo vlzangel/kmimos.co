@@ -93,9 +93,8 @@
 						</div>
 						<div class="pflisting-itemband">
 							<div class="pflist-pricecontainer">
-								
 								<div class="pflistingitem-subelement pf-price"> 
-									<sub style="bottom: 0px;">Hospedaje desde</sub><br>MXN $'.$cuidador->hospedaje_desde.'
+									<sub style="bottom: 0px;">Hospedaje desde</sub><br>'.$info["mon_let"].$cuidador->hospedaje_desde.'
 								</div>
 							</div>
 						</div>
@@ -114,10 +113,7 @@
 							</li>
 							<li>
 								<div class="text-center rating" style="float: none;">
-									<div id="rating">';
-										echo kmimos_petsitter_rating($cuidador->id_post);
-									echo '</div>';
-									echo '
+									<div id="rating">'.kmimos_petsitter_rating($cuidador->id_post).'</div>
 								</div>
 							</li>
 						</ul>

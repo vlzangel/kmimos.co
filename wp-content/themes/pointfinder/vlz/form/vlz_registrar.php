@@ -2,7 +2,7 @@
 
     include("../../../../../vlz_config.php");
 
-    date_default_timezone_set('America/Mexico_City');
+    date_default_timezone_set('America/Bogota');
 
 	$conn = new mysqli($host, $user, $pass, $db);
 

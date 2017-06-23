@@ -2,7 +2,7 @@
 
 require_once("../vlz_config.php");
 global $host, $user, $db, $pass;
-date_default_timezone_set('America/Mexico_City');
+date_default_timezone_set('America/Bogota');
 
 // Validar si existe referencia de usuario
 $hidden = "";

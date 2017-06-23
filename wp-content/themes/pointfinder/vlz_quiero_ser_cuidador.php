@@ -9,6 +9,20 @@
 
 	get_header();
 
+	//***************************************************
+	// BEGIN Configuracion de mensajes de alertas en precios	
+	//***************************************************
+	$mensajes_alerta =	
+		'<div class="alertas alertas-info">
+			<small> 
+				<strong>ATENCI&Oacute;N:</strong> Recuerda completar con ceros (0) los Miles. 
+				<strong>Ejemplo:</strong> 1 Peso no es igual a 1000 Pesos
+			</small> 
+		</div>';
+	//***************************************************
+	// END Configuracion de mensajes de alertas en precios	
+	//***************************************************
+
 	if(function_exists('PFGetHeaderBar')){PFGetHeaderBar();} 
 
 	wp_enqueue_script(
@@ -31,12 +45,9 @@
 					<article style='position: relative'>
 
 						<div class="vlz_seccion">
-							<div class="vlz_cell75 vlz_titulo_contenedor">
+							<div class="vlz_cell100 vlz_titulo_contenedor">
 								<h1 class="vlz_titulo">Sé parte de Kmimos</h1>
 								<div class="vlz_sub_titulo">Para registrarte como cuidador de Kmimos, llena este formulario y nos pondremos en contacto contigo.</div>
-							</div>
-							<div class="vlz_cell25 vlz_banner_cuidador_contenedor">
-								<img class="vlz_banner_cuidador" src="<?php echo get_home_url(); ?>/wp-content/themes/pointfinder/images/banner_cuidador.jpeg">
 							</div>
 						</div>
 
@@ -72,7 +83,7 @@
 
 										<div class="vlz_sub_seccion">
 											<div class="vlz_cell50">
-												<input data-title="El IFE debe ser de 13 dígitos." data-help="Coloca los 13 Números que se encuentran en la parte trasera de tu IFE o INE" type='number' id='ife' name='ife' class='vlz_input' placeholder='IFE' min=13 pattern="^\d{13}$" >
+												<input data-title="La Cedula de Ciudadania debe ser de entre 7 y 10 dígitos." type='number' id='ife' name='ife' class='vlz_input' min="0" placeholder='Cedula de Ciudadania' minlenght="7" maxlength="10" required pattern="[0-9]{10}" >
 											</div>
 											
 											<div class="vlz_cell50">
@@ -401,12 +412,26 @@
 													<p align="justify">
 														Kmimos no te obliga a fijar un precio, sin embargo quisiéramos sugerir que sigas la siguiente tabla, la cual está creada en base a las tendencias de mercado actuales
 													</p>
-													<ul style="margin-left: -10px;">
-														<li style="font-size: 12px;">Tamaño pequeño: 120 pesos por noche</li>
-														<li style="font-size: 12px;">Tamaño mediano: 180 <span>pesos por noche</span></li>
-														<li style="font-size: 12px;">Tamaño grande: 220 <span>pesos por noche</span></li>
-														<li style="font-size: 12px;">Tamaño gigante: 250 <span>pesos por noche</span></li>
-													</ul>
+													<br>
+													<table style="border-radius: 2px">
+														<tr>
+															<td>Tamaño pequeño:</td>
+															<td>$20,000 a $30,000 COP Por noche</td>
+														</tr>
+														<tr>
+															<td>Tamaño mediano:</td>
+															<td>$25,000 a $35,000 COP Por noche</td>
+														</tr>
+														<tr>
+															<td>Tamaño grande</td>
+															<td>$35,000 a $40,000 COP Por noche</td>
+														</tr>
+														<tr>
+															<td>Tamaño gigante:</td>
+															<td>$35,000 a $50,000 COP Por noche</td>
+														</tr>
+													</table>
+													<br>
 													<p align="justify">
 														<strong>IMPORTANTE:</strong> recuerda que siempre podrás colocar el precio que a ti mejor se te acomode
 													</p>
@@ -443,6 +468,8 @@
 									?>
 
 									<div class='no_error' id='error_hospedaje' style="margin: 3px 6px 0px;">Debe llenar al menos uno de los campos</div>
+
+									<?php echo $mensajes_alerta; ?>
 																		
 								</div>
 
@@ -528,6 +555,8 @@
 									<div class="vlz_boton_agregar">Agregar Servicio Adicional</div>
 								</div>
 
+								<?php echo $mensajes_alerta; ?>
+
 								<div id="cargar_imagen_2" style="display: none;"></div>
 
 								<?php include("vlz_terminos_cuidador.php"); ?>
@@ -537,18 +566,6 @@
 									<input type='button' id="vlz_boton_modal_terminos" class="vlz_boton_siguiente" value='Registrarme' onclick="vlz_validar()" />
 								</div>
 
-							</div>
-
-							<div class="vlz_banner_footer">
-								<div class="vlz_cell25">
-									<img src="<?php echo get_home_url(); ?>/wp-content/themes/pointfinder/images/hombre.png">
-								</div>
-								<div class="vlz_cell75">
-									<span class='vlz_verde'>Tienes dudas sobre el registro? Tienes poco tiempo para registrarte?</span> Kmimos te ayuda!
-									Ponte en contacto con nosotros. Mándanos un mail a <span class='vlz_naranja'>a.vera@kmimos.la</span> o por Teléfono o Whatsapp al <span class='vlz_naranja'>(55) 6178 0320</span>.
-
-									<span class='vlz_gris_footer'>La familia Kmimos te espera!!</span>
-								</div>
 							</div>
 
 						</form>

@@ -13,7 +13,7 @@ global $current_user;
 global $wpdb;
 global $redirect_to;
 
-date_default_timezone_set('America/Mexico_City');
+date_default_timezone_set('America/Bogota');
 
 $user_id = $current_user->ID;
 

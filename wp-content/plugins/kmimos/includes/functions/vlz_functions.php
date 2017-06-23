@@ -96,7 +96,7 @@
                 global $current_user;
                 $id_cupon = $wpdb->get_var("SELECT ID FROM wp_posts WHERE post_name='saldo-{$current_user->ID}'");
                 if( $id_cupon == NULL ){
-                    date_default_timezone_set('America/Mexico_City');
+                    date_default_timezone_set('America/Bogota');
                     $hoy = date("Y-m-d H:i:s");
                     $id_cupon = $wpdb->insert('wp_posts', array(
                         "ID" => NULL,

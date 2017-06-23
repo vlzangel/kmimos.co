@@ -6,7 +6,7 @@
     require('./cron_sqls.php');
     require('./cron_funciones.php');
 
-    date_default_timezone_set('America/Mexico_City');
+    date_default_timezone_set('America/Bogota');
 
     global $wpdb;
 
@@ -70,7 +70,7 @@
                 $cliente = $cliente['first_name'][0]." ".$cliente['last_name'][0];
             }else{
                 $id_orden = $request->ID;
-                $id_reserva = $id_orden-1;
+                $id_reserva   = $wpdb->get_var("SELECT ID FROM wp_posts WHERE post_parent = {$id_orden} AND post_type = 'wc_booking'");
                 $cliente_id = $wpdb->get_var( "SELECT post_author FROM wp_posts WHERE ID = '".($id_reserva)."'" );
                 $cliente_id_reserva = $cliente_id;
                 $email_cliente = $wpdb->get_var( "SELECT user_email FROM wp_users WHERE ID = '".$cliente_id."'" );

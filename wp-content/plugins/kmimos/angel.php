@@ -68,6 +68,7 @@
 	            "instagram" => "kmimosco",
 	            "mon_izq"   => "",
 	            "mon_der"   => "$",
+                "mon_let"   => "COP $",
 
                 "estado"    => "Ciudad",
                 "municipio" => "Localidad"
