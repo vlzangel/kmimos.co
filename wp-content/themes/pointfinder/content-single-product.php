@@ -39,11 +39,6 @@
 		}
     }
 
-	// Modificacion Ángel Veloz
-	// echo "<pre>";
-	// 	print_r($_SESSION);
-	// echo "</pre>";
-
 	echo "
 	<style>
 		.vlz_modal{ position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; display: table; z-index: 10000; background: rgba(0, 0, 0, 0.8); vertical-align: middle !important; display: none; }
@@ -172,12 +167,12 @@
 					                    ROUND ( ( 6371 * acos( cos( radians({$lat}) ) * cos( radians(latitud) ) * cos( radians(longitud) - radians({$lon}) ) + sin( radians({$lat}) ) * sin( radians(latitud) ) ) ), 2 ) as DISTANCIA,
 					                    id_post,
 					                    hospedaje_desde,
-					                    adicionales
+					                    adicionales,
+					                    user_id
 					                FROM 
 					                    cuidadores
 					                WHERE
 					                    user_id != {$propietario} AND
-					                    portada = 1 AND
 					                    activo = 1
 					                ORDER BY DISTANCIA ASC
 					                LIMIT 0, 4
@@ -189,7 +184,7 @@
     							foreach ($sugeridos as $key => $cuidador) {
 									$data = $wpdb->get_row("SELECT post_title AS nom, post_name AS url FROM wp_posts WHERE ID = {$cuidador->id_post}");
 									$nombre = $data->nom;
-									$img_url = kmimos_get_foto_cuidador($cuidador->id);
+									$img_url = kmimos_get_foto_cuidador($cuidador->user_id);
 									$url = get_home_url() . "/petsitters/" . $data->url;
 									$top_destacados .= "
 										<a class='vlz_destacados_contenedor' href='{$url}'>

@@ -322,7 +322,7 @@
                 $conn->query( "UPDATE cuidadores SET user_id = '".$user_id."' WHERE id = ".$cuidador_id);
 
                 if($vlz_img_perfil != ""){
-                    $dir = "../../../../uploads/cuidadores/avatares/".$cuidador_id."/";
+                    $dir = "../../../../uploads/avatares/".$user_id."/";
 
                     @mkdir($dir);
 
@@ -355,7 +355,7 @@
                         '".$hoy."',
                         '',
                         '0',
-                        'http://qa.kmimos.la/kmimos/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg',
+                        'http://qa.kmimos.la/kmimos/wp-content/uploads/avatares/".$user_id."/0.jpg',
                         '0',
                         'attachment',
                         'image/jpeg',
@@ -365,7 +365,7 @@
                 $conn->query( utf8_decode( $sql ) );
                 $img_id = $conn->insert_id;
 
-                $sql = "INSERT INTO wp_postmeta VALUES (NULL, ".$img_id.", '_wp_attached_file', 'cuidadores/avatares/".$cuidador_id."/0.jpg');";
+                $sql = "INSERT INTO wp_postmeta VALUES (NULL, ".$img_id.", '_wp_attached_file', 'avatares/".$user_id."/0.jpg');";
                 $conn->query( utf8_decode( $sql ) );
 
                 $sql = "

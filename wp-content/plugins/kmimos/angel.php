@@ -77,6 +77,7 @@
 
 	if(!function_exists('kmimos_mails_administradores')){
 	    function kmimos_mails_administradores(){
+            $headers[] = 'BCC: n.deligny@kmimos.la ';
 	        $headers[] = 'BCC: r.cuevas@kmimos.la';
 	        $headers[] = 'BCC: r.gonzalez@kmimos.la';
 	        $headers[] = 'BCC: a.veloz@kmimos.la';
@@ -466,6 +467,8 @@ if(!function_exists('vlz_servicios')){
             $name_photo = get_user_meta($user_id, "name_photo", true);
 
             if( empty($name_photo)  ){ $name_photo = "0"; }
+            if( count( explode(".", $name_photo)) == 1 ){ $name_photo .= ".jpg"; }
+
             if( file_exists("wp-content/uploads/{$path}/".$usuario."/{$name_photo}") ){
                 $img = get_home_url()."/wp-content/uploads/{$path}/".$usuario."/{$name_photo}";
             }else{
