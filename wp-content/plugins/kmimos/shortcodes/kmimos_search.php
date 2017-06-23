@@ -1,18 +1,18 @@
-<?php
+﻿<?php
 
     //[kmimos_search]
 
     $pais = (isset($args["pais"]))?$args["pais"]:"mx";
 
-    global $wpdb;
-    
-    $estados = $wpdb->get_results("SELECT * FROM states WHERE country_id = 1 ORDER BY name ASC");
-    $str_estados = "";
-    foreach($estados as $estado) { 
-        $str_estados .= "<option value='".$estado->id."'>".$estado->name."</option>";
-    }
+    $vacios = (isset($args["vacios"]))?$args["vacios"]:1;
+
+    $taxonomy = 'pointfinderlocations';
+    $parent = get_term_by('slug', $pais, $taxonomy);
+    $distdef = 20;
+
+    $str_estados = '';
     $str_estados = utf8_decode($str_estados);
-?>
+    ?>
 
     <style>
         #estado_cuidador_main {
@@ -100,7 +100,7 @@
                         <label id="estoy_buscando"><strong>ESTOY BUSCANDO</strong></label>
                     </div>
                     <div class="mt10 derecha">
-                        <a href="#mas_servicios" class="prettyphoto" rel="more_services" id="ver_mas_servicios">Servicios adicionales...</a>
+                        <a href="#mas_servicios" class="theme_button prettyphoto" rel="more_services" id="ver_mas_servicios">Servicios adicionales...</a>
                     </div>
                 </div>
 
@@ -129,37 +129,7 @@
                 <div id="popup_mas_servicios" style="display:none; width: 300px; overflow: hidden;">
                     <div id="mas_servicios">
                         <?php
-                            $extras = array(
-                                'corte' => array( 
-                                    'label'=>'Corte de Pelo y Uñas',
-                                    'icon' => 'peluqueria'
-                                ),
-                                'bano' => array( 
-                                    'label'=>'Baño y Secado',
-                                    'icon' => 'bano'
-                                ),
-                                'transportacion_sencilla' => array( 
-                                    'label'=>'Transporte Sencillo',
-                                    'icon' => 'transporte'
-                                ),
-                                'transportacion_redonda' => array( 
-                                    'label'=>'Transporte Redondo',
-                                    'icon' => 'transporte2'
-                                ),
-                                'visita_al_veterinario' => array( 
-                                    'label'=>'Visita al Veterinario',
-                                    'icon' => 'veterinario'
-                                ),
-                                'limpieza_dental' => array( 
-                                    'label'=>'Limpieza Dental',
-                                    'icon' => 'limpieza'
-                                ),
-                                'acupuntura' => array( 
-                                    'label'=>'Acupuntura',
-                                    'icon' => 'acupuntura'
-                                )
-                            );
-
+                            $extras = servicios_adicionales();
                             foreach($extras as $key => $value){ ?>
                                 <div class="w96pc boton_extra text-center">
                                     <div class="boton_portada boton_servicio">
@@ -196,10 +166,41 @@
                                 <div class="icono">
                                     <i class="icon-mapa embebed"></i>
                                 </div>
-                                <sub>Municipio:</sub><br>
-                                <select id="estado_cuidador" name="estados" data-location="co">
-                                    <option value="">Seleccione un municipio</option>
-                                    <?php echo $str_estados; ?>
+                                <sub>Estado:</sub><br>
+                                <select id="estado_cuidador" name="estados" data-location="mx">
+                                    <option value="">Seleccione un estado</option>
+                                    <option value="7">Aguascalientes</option>
+                                    <option value="8">Baja California</option>
+                                    <option value="9">Baja California Sur</option>
+                                    <option value="10">Campeche</option>
+                                    <option value="13">Chiapas</option>
+                                    <option value="14">Chihuahua</option>
+                                    <option value="1">Ciudad de México</option>
+                                    <option value="11">Coahuila de Zaragoza</option>
+                                    <option value="12">Colima</option>
+                                    <option value="15">Durango</option>
+                                    <option value="2">Estado de México</option>
+                                    <option value="16">Guanajuato</option>
+                                    <option value="17">Guerrero</option>
+                                    <option value="18">Hidalgo</option>
+                                    <option value="3">Jalisco</option>
+                                    <option value="19">Michoac&aacute;n de Ocampo</option>
+                                    <option value="20">Morelos</option>
+                                    <option value="21">Nayarit</option>
+                                    <option value="4">Nuevo León</option>
+                                    <option value="22">Oaxaca</option>
+                                    <option value="23">Puebla</option>
+                                    <option value="24">Queretaro</option>
+                                    <option value="25">Quintana Roo</option>
+                                    <option value="26">San Luis Potosi</option>
+                                    <option value="27">Sinaloa</option>
+                                    <option value="28">Sonora</option>
+                                    <option value="29">Tabasco</option>
+                                    <option value="30">Tamaulipas</option>
+                                    <option value="31">Tlaxcala</option>
+                                    <option value="32">Veracruz de Ignacio de la Llave</option>
+                                    <option value="33">Yucatan</option>
+                                    <option value="34">Zacatecas</option> 
                                 </select>
                             </div>
                         </div>
@@ -209,9 +210,9 @@
                                 <div class="icono">
                                     <i class="icon-mapa embebed"></i>
                                 </div>
-                                <sub>Localidad:</sub><br>
+                                <sub>Municipio:</sub><br>
                                 <select id="municipio_cuidador" name="municipios">
-                                    <option value="">Seleccione primero un municipio</option>
+                                    <option value="">Seleccione primero un estado</option>
                                 </select>
                                 <input type="hidden" id="municipio_cache" name="municipio_cache">
                             </div>
@@ -251,8 +252,8 @@
                         foreach($tamanos as $key=>$value){ ?>
                             <div class="jj_btn_tamanos" style="float: left; box-sizing: border-box; padding: 0px 1px; margin-bottom: 2px !important;">
                                 <div class="boton_portada boton_servicio" style="margin: 0px !important;">
-                                    <input type="checkbox" name="tamanos[]" id="tamano_mascota_<?php echo $key;?>" value="<?php echo $key;?>"  class="servicio_cuidador_<?php echo $key;?>" data-key="<?php echo $key;?>">
-                                    <label style="line-height: 14px;" for="tamano_mascota_<?php echo $key;?>"><i class="icon-<?php echo $key;?>"></i>
+                                    <input type="checkbox" name="tamanos[]" id="tamano_mascota_<?php echo $key;?>" value="<?php echo $key;?>" class="servicio_cuidador_<?php echo $key;?>" data-key="<?php echo $key;?>">
+                                    <label for="tamano_mascota_<?php echo $key;?>" style="line-height: 12px; padding: 5px;"><i class="icon-<?php echo $key;?>"></i>
                                         <?php echo $value;?>
                                     </label>
                                 </div>
@@ -263,7 +264,7 @@
 
                 <div class="w100pc text-center">
                     <div class="boton_buscar">
-                        <a class="button pfsearch" id="pf-search-button-manual"><i class="pfadmicon-glyph-627"></i> Buscar Cuidador</a>
+                        <a class="theme_button button pfsearch" id="pf-search-button-manual"><i class="pfadmicon-glyph-627"></i> Buscar Cuidador</a>
                     </div>
                 </div>
                 
@@ -273,8 +274,6 @@
 
         </form>
     </div>
-
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <?php echo get_estados_municipios(); ?>
 <script type="text/javascript">
     var hasGPS=false;
@@ -322,28 +321,32 @@
             };
 
             function cargar_municipios(CB){
-                var estado_id = jQuery("#estado_cuidador").val();   
+
+                var estado_id = jQuery("#estado_cuidador").val();
+                
                 if( estado_id != "" ){
+
                     var html = "<option value=''>Seleccione un municipio</option>";
-                    if( estados_municipios[estado_id]['municipios'].length > 0 ){
-                        jQuery.each(estados_municipios[estado_id]['municipios'], function(i, val) {
-                            html += "<option value="+val.id+" data-id='"+i+"'>"+val.nombre+"</option>";
-                        });
-                    }else{
-                        html += "<option value=''>"+jQuery("#estado_cuidador option:selected").text()+"</option>";
-                    }
+                    jQuery.each(estados_municipios[estado_id]['municipios'], function(i, val) {
+                        html += "<option value="+val.id+" data-id='"+i+"'>"+val.nombre+"</option>";
+                    });
+
                     jQuery("#municipio_cuidador").html(html);
-                    var location    = estados_municipios[estado_id]['coordenadas']['referencia'];
+
+                    /*var location    = estados_municipios[estado_id]['coordenadas']['referencia'];
                     var norte       = estados_municipios[estado_id]['coordenadas']['norte'];
                     var sur         = estados_municipios[estado_id]['coordenadas']['sur'];
+
                     var distancia = calcular_rango_de_busqueda(norte, sur);
+
                     jQuery("#otra_latitud").attr("value", location.lat);
                     jQuery("#otra_longitud").attr("value", location.lng);
                     jQuery("#otra_distancia").attr("value", distancia);
+*/
                     if( CB != undefined) {
                         CB();
                     }
-                }
+		        }
             }
 
             jQuery("#estado_cuidador").on("change", function(e){
@@ -360,10 +363,12 @@
             });
 
             function vlz_coordenadas(){
-                var estado_id = jQuery("#estado_cuidador").val();            
-                var municipio_id = jQuery('#municipio_cuidador > option[value="'+jQuery("#municipio_cuidador").val()+'"]').attr('data-id');      
+                var estado_id = jQuery("#estado_cuidador").val();
+                var municipio_id = jQuery('#municipio_cuidador > option[value="'+jQuery("#municipio_cache").val()+'"]').attr('data-id');
                 
-                if( estado_id != "" && municipio_id != undefined ){
+                /*console.log(jQuery("#municipio_cache").val());
+                
+                if( estado_id != "" ){
 
                     var location    = estados_municipios[estado_id]['municipios'][municipio_id]['coordenadas']['referencia'];
                     var norte       = estados_municipios[estado_id]['municipios'][municipio_id]['coordenadas']['norte'];
@@ -375,7 +380,7 @@
                     jQuery("#otra_longitud").attr("value", location.lng);
                     jQuery("#otra_distancia").attr("value", distancia);
 
-                }
+                }*/
             }
 
             function calcular_rango_de_busqueda(norte, sur){

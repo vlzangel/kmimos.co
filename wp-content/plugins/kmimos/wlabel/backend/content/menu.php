@@ -5,7 +5,7 @@
 ?>
 <div class="menu" style="background-color:<?php echo $color; ?>;" data-url="<?php echo plugin_dir_url(__DIR__); ?>">
     <?php
-        if($image!=''){
+        if($image!=''){//
             echo '<img class="image" src="'.$image.'" alt='.$title.';>';
         }
 

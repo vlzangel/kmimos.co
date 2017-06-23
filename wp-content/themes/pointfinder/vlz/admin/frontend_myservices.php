@@ -12,6 +12,7 @@
     $this->ScriptOutput .= "
         jQuery('#pf-ajax-add-service-button').on('click',function(e){
             e.preventDefault();
+            // jQuery('#pfuaprofileform').attr('action','?ua=updateservices');
             jQuery('#pfuaprofileform').attr('action','".get_home_url()."/wp-content/themes/pointfinder/vlz/admin/procesar_mis_servicios.php');
             jQuery('#pfuaprofileform').submit();
         });

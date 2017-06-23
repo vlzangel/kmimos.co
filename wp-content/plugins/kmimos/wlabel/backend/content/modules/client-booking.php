@@ -8,6 +8,8 @@ global $wpdb;
 $wlabel=$_wlabel_user->wlabel;
 $WLresult=$_wlabel_user->wlabel_result;
 $_wlabel_user->wLabel_Filter(array('tddate','tdcheck'));
+$_wlabel_user->wlabel_Export('RESERVAS POR CLIENTE','title','table');
+//
 ?>
 
 
@@ -20,7 +22,8 @@ $_wlabel_user->wLabel_Filter(array('tddate','tdcheck'));
     <table cellspacing="0" cellpadding="0">
         <thead>
         <tr>
-            <th>Titulo</th>
+            <th>Cliente</th>
+            <td>Label</td>
             <?php
                 $day_init=strtotime(date('m/d/Y',$WLresult->time));
                 $day_last=strtotime(date('m/d/Y',time()));
@@ -162,7 +165,8 @@ foreach($users as $key => $user){
 //CANTIDAD DE RESERVAS POR USUARIO
 foreach($BUILDusers as $user){
     echo '<tr>';
-     echo '<th class="title">'.$user['name'].'</th>';//.' '.$user['label']
+    echo '<th class="title">'.$user['name'].'</th>';
+    echo '<td>'.$user['label'].'</td>';
         $day_init=strtotime(date('m/d/Y',$WLresult->time));
         $day_last=strtotime(date('m/d/Y',time()));
         $day_more=(24*60*60);

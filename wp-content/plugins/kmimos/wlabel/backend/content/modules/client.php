@@ -271,6 +271,7 @@ for($day=$day_init; $day<=$day_last ; $day=$day+$day_more){
 }
 echo '<th class="total tdshow" data-check="total">'.$amount_total.'</th>';
 echo '</tr>';
+//
 
 
 

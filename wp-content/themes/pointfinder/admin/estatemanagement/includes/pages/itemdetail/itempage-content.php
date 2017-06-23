@@ -491,7 +491,7 @@ function PFGetItemPageCol1(){
 							                            	<input type="hidden" name="gdlocationend" id="gdlocationend" value="'.esc_html(get_post_meta( get_the_id(), 'webbupointfinder_items_address', true )).'">
 							                            	<input type="text" name="gdlocations" id="gdlocations" class="input" placeholder="'.esc_html__('Enter Location','pointfindert2d').'">
 							                            	<a class="button" id="pf_gdirections_geolocateme">
-															<img src="'.get_template_directory_uri().'/images/geoicon.svg" width="16px" height="16px" class="pf-gdirections-locatemebut" alt="'.esc_html__('Locate me!','pointfindert2d').'">
+															<img src="'.get_home_url()."/wp-content/themes/pointfinder".'/images/geoicon.svg" width="16px" height="16px" class="pf-gdirections-locatemebut" alt="'.esc_html__('Locate me!','pointfindert2d').'">
 															<div class="pf-search-locatemebutloading"></div>
 															</a>
 							                            </label>                            
@@ -667,7 +667,7 @@ function PFGetItemPageCol1(){
 									$user_photo =  wp_get_attachment_image(get_user_meta( $user->ID, 'user_photo', true ),'medium');
 
 									if (empty($user_photo)) {
-										$user_photo = '<img src="'.get_template_directory_uri().'/images/empty_avatar.jpg"/>';
+										$user_photo = '<img src="'.get_home_url()."/wp-content/themes/pointfinder".'/images/empty_avatar.jpg"/>';
 									}
 									$user_description = get_user_meta( $user->ID, 'description', true );
 									$user_phone = get_user_meta( $user->ID, 'user_phone', true );
@@ -847,7 +847,7 @@ function PFGetItemPageCol1(){
 											$agent_featured_image =  wp_get_attachment_image_src( get_post_thumbnail_id( $item_agent ), 'full' );
 
 											if (empty($agent_featured_image)) {
-												$user_photo = '<img src="'.get_template_directory_uri().'/images/empty_avatar.jpg"/>';
+												$user_photo = '<img src="'.get_home_url()."/wp-content/themes/pointfinder".'/images/empty_avatar.jpg"/>';
 											}else{
 												$user_photo = '<img src="'.$agent_featured_image[0].'" width="'.$agent_featured_image[1].'" height="'.$agent_featured_image[2].'" alt="" />';
 											}

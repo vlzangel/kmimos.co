@@ -34,7 +34,7 @@ function WhiteLabel_panel_export(element){
     if(type=='table'){
         jQuery('table').each(function(e){
             jQuery(this).find('tr:not(.noshow)').each(function(e){
-                jQuery(this).find('th, td').each(function(e){
+                jQuery(this).find('th, td').each(function(e){//
                     if(!jQuery(this).hasClass('noshow') && !jQuery(this).hasClass('noshow_check') && !jQuery(this).hasClass('noshow_select')){
                         data+=jQuery(this).html()+';';
                     }

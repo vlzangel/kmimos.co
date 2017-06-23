@@ -19,26 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-
-<style>
-	.variation-Duracin,
-	.variation-Ofrecidopor{
-		display: none !important;
-	}
-
-	#add_payment_method #payment ul.payment_methods,
-	.woocommerce-checkout #payment ul.payment_methods>li>label {
-		color: #54c8a7;
-		font-size: large;
-		font-weight: bold;
-		text-shadow: 3px 2px 12px rgba(255, 255, 255, 0.57);
-	}
-</style>
-
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
 		<tr>
-			<th class="product-name"><?php _e( 'Servicio', 'woocommerce' ); ?></th>
+			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
@@ -71,25 +55,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<tfoot>
 
 		<tr class="cart-subtotal">
-			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
+			<th><?php _e( 'Total', 'woocommerce' ); ?></th>
 			<td><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
-		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-				<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
-			</tr>
-		<?php endforeach; ?>
+		<?php kmimos_vista_cupones(); ?>
 
 		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
-
 			<?php do_action( 'woocommerce_review_order_before_shipping' ); ?>
-
 			<?php wc_cart_totals_shipping_html(); ?>
-
 			<?php do_action( 'woocommerce_review_order_after_shipping' ); ?>
-
 		<?php endif; ?>
 
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
@@ -117,10 +92,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
-		<tr class="order-total">
+<!-- 		<tr class="order-total">
 			<th><?php _e( 'Total', 'woocommerce' ); ?></th>
 			<td><?php wc_cart_totals_order_total_html(); ?></td>
-		</tr>
+		</tr> -->
 
 		<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
 

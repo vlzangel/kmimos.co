@@ -15,7 +15,7 @@ $setup4_membersettings_paymentsystem = PFSAIssetControl('setup4_membersettings_p
 function pointfinder_orders_styles(){
 	$screen = get_current_screen();
 	if ($screen->post_type == 'pointfinderorders' || $screen->post_type == 'pointfindermorders') {
-		wp_register_style('metabox-custom1', get_template_directory_uri() . '/admin/core/css/metabox-custom.css', array(), '1.0', 'all');
+		wp_register_style('metabox-custom1', get_home_url()."/wp-content/themes/pointfinder" . '/admin/core/css/metabox-custom.css', array(), '1.0', 'all');
 		wp_enqueue_style('metabox-custom1'); 
 	}
 }

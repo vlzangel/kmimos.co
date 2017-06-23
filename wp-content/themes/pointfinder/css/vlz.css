@@ -36,3 +36,12 @@ p.myaccount_user a{
 p.myaccount_user a:hover{
 	color: #59c9a8!important;
 }
+
+/*THEME*/
+.theme_title{}
+.theme_content{}
+.theme_button{
+	color: #FFF;
+	background-color: #00d2b7;
+	border-color: #00d2b7;
+}

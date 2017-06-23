@@ -2301,8 +2301,80 @@ if(!function_exists('kmimos_upload_and_process_image')){
 
 }
 
+
+
+        /******************************************* JAUREGUI **********************************************************************
+        *Se comento esta seccion para poder generar la carga de las imagenes en las fotos cargadas para la portada 
+        ****************************************************************************************************************************/
+        // $radio = 15;
+        // $sigma = 20;
+        //        // $imagen = new Imagick($name);   // Crea la imagen para ser procesada /*Jauregui*/
+        //         $w=$imagen->getImageWidth();    // Obtiene el ancho original de la imagen
+        //         $h=$imagen->getImageHeight();   // Obtiene el alto original de la imagen
+        //         $fondo = $imagen->clone();      // Crea una copia como lienzo 
+        //         // Compara el aspecto original de la imagen con el aspecto deseado
+        //         $aspecto_final =$ancho/$alto;
+        //         $aspecto_original = $w/$h;
+        // //die("Aspactos: final=".$aspecto_final.", original=".$aspecto_original);
+        //         if( $aspecto_final > $aspecto_original ){ 
+        //             // el aspecto deseado es mayor que el de la imagen, por tanto expande la imagen hacia los lados
+        //             $fondo->adaptiveResizeImage($ancho,$ancho/$aspecto_original);
+        // //die('Origen:w='.$ancho.', h='.$alto.'<br>Fondo: w='.$fondo->getImageWidth().', h='.$fondo->getImageHeight().'<br>Imagen:w='.$imagen->getImageWidth().', h='.$imagen->getImageHeight());
+        //             $fondo->cropImage($ancho,$alto,0,($ancho/$aspecto_original-$alto)/2);
+        //             $fondo->gaussianBlurImage($radio,$sigma); // Distorsiona la imagen para crear el fondo
+        //             $imagen->adaptiveResizeImage($alto*$aspecto_original,$alto);
+        // //die('Origen:w='.$ancho.', h='.$alto.'<br>Fondo: w='.$fondo->getImageWidth().', h='.$fondo->getImageHeight().'<br>Imagen:w='.$imagen->getImageWidth().', h='.$imagen->getImageHeight());
+        //             $fondo->compositeImage( $imagen, Imagick::COMPOSITE_OVER, ($ancho-$alto*$aspecto_original)/2, 0 );
+        //         }
+        //         else if( $aspecto_final < $aspecto_original ){ 
+        // //echo("Aspactos: final=".$aspecto_final.", original=".$aspecto_original);
+        //         // el aspecto deseado es menor que el de la imagen, por tanto expande la imagen hacia arriba y abajo
+        //         if( $imagen->getImageHeight()/$alto < $imagen->getImageWidth()/$ancho ) {
+        //             $fondo->adaptiveResizeImage($alto*$aspecto_original,$alto);
+        //             $fondo->cropImage($ancho,$alto,($alto*$aspecto_original-$ancho)/2,0);
+        //         }
+        //         else {
+        //             $fondo->adaptiveResizeImage($alto*$aspecto_original,$alto);
+        //             $fondo->cropImage($ancho,$alto,($alto*$aspecto_original-$alto)/2,0);
+        //         }
+        // //die('<br>Origen:w='.$ancho.', h='.$alto.'<br>Fondo: w='.$fondo->getImageWidth().', h='.$fondo->getImageHeight().'<br>Imagen:w='.$imagen->getImageWidth().', h='.$imagen->getImageHeight());
+        //             $fondo->gaussianBlurImage($radio,$sigma); // Distorsiona la imagen para crear el fondo
+        //             $imagen->adaptiveResizeImage($ancho,$ancho/$aspecto_original);
+        //             $fondo->compositeImage( $imagen, Imagick::COMPOSITE_OVER, 0, ($alto-$ancho/$aspecto_original)/2 );
+        //         }
+        //         else $fondo->adaptiveResizeImage($ancho,$alto);
+        //         // verifica si existe la imágen de salida
+        //         $filename = $root.'petsitters/'.$photo_name.'.jpg';
+        //         $fondo->writeImage ($filename);
+        /******************************************* /JAUREGUI ***********************************************************************/
+
+        /*
+        $url = 'https://kmimos.com.mx/wp-content/plugins/kmimos/assets/images/petsitters/'.$name.'.jpg';
+
+        $tmp = download_url( $url );                           
+
+        if ( !function_exists('media_handle_upload') ) {
+            require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+            require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+            require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+        } 
+
+        // $file_array = array('name'=>$photo_name,'type'=>$args['type'],'tmp_name'=>$tmp,'error'=>0,'size'=>$args['size']);
+        $file_array = array('name'=>$photo_name,'type'=>$args['type'],'tmp_name'=>$name,'error'=>0,'size'=>$args['size']);      
+
+        $newuploadphoto = media_handle_sideload( $file_array, $petsitter_id );
+
+        if ( is_wp_error( $newuploadphoto ) ) {
+            @unlink( $file_array['tmp_name'] );
+            return $newuploadphoto;
+        }
+        return $newuploadphoto;
+        */
+
 /**
+
  *  Devuelve la lista de asuntos pendientes del usuario.
+
  * */
 
 if(!function_exists('kmimos_get_next_petsitter_code')){
@@ -2310,6 +2382,8 @@ if(!function_exists('kmimos_get_next_petsitter_code')){
     function kmimos_get_next_petsitter_code(){
 
         global $wpdb;
+
+        
 
         $sql = "SELECT IFNULL( (SELECT pm.meta_value+1 FROM $wpdb->posts AS p LEFT JOIN $wpdb->postmeta AS pm ON (p.ID =pm.post_id AND pm.meta_key='code_petsitter') WHERE p.post_status = 'publish' ORDER BY CAST(pm.meta_value AS SIGNED) DESC LIMIT 1),1) as next_code";
 

@@ -1,6 +1,7 @@
 <?php
 
 	include_once('wlabel/wlabel.php');
+	include_once('subscribe/subscribe.php');
 
 	include_once('includes/class/class_kmimos_booking.php');
 	include_once('includes/class/class_kmimos_tables.php');
@@ -38,5 +39,26 @@
 	    //Prevent Cache-control http
 	    //header('Access-Control-Allow-Origin: *', false);
 	}
+
+
+
+//add_action( 'plugins_loaded', 'carlosloadhhtp' );
+function carlosloadhhtp(){
+
+	//var_dump($_COOKIE);
+	foreach($_COOKIE as $key=>$value){
+		setcookie($key, $value , 0, "" , "" , true, true);
+		//setcookie($key, $value, null, '/;HttpOnly');
+		//setcookie($key, $value, null, '/;Secure;HttpOnly');
+		//setcookie($key, '' );
+	}
+}
+
+
+
+
+
+
+
 
 ?>

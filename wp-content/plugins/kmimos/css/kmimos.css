@@ -1,7 +1,42 @@
 /*
+*   Estilos Generales
+*/
 
+.texto_kmimos{
+    color: #3dad8c;
+}
+
+.fondo_kmimos{
+    background: #60cbac;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 *   Configuraciones globales del portal WEB de kmimos
-
 */
 
 body, html {
@@ -11,27 +46,8 @@ body, html {
 
 
 /*
-
 *    Configuración de barra de menú pegajosa (sticky) en vesión para móviles
-
 */
-
-
-/*
-
-.wpf-navwrapper {
-
-    margin-top: 0 !important;
-
-    position: fixed;
-
-    top: 0;
-
-    z-index: 10000;
-
-    display: block;
-
-}*/
 
 div#sticky {
     display: none; // Oculta barra superior de menú
@@ -428,7 +444,7 @@ header.pfshrink #pfpostitemlink {
     }
 
     .wpf-container, #pfuaprofileform div.mce-fullscreen {
-        margin: 48px 0 0 0 !important;
+        margin: 0px 0 0 0 !important;
     }
 
     #sticky{

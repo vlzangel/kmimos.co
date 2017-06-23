@@ -1,6 +1,16 @@
 <?php
-	
-	$img = kmimos_get_foto_cuidador($cuidador->user_id);
+
+	$name_photo = get_user_meta($cuidador->user_id, "name_photo", true);
+	$cuidador_id = $cuidador->id;
+
+	if( empty($name_photo)  ){ $name_photo = "0"; }
+	if( file_exists("wp-content/uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}") ){
+		$img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}";
+	}elseif( file_exists("wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg") ){
+		$img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg";
+	}else{
+		$img = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
+	}
 
 	$anios_exp = $cuidador->experiencia;
 	if( $anios_exp > 1900 ){
@@ -22,9 +32,29 @@
 		$nombre_cuidador = $data->post_title;
 	}
 
+	// $coordenadas_all_2[] = array(
+	// 	"ID" 		=> $cuidador->id,
+	// 	"USER" 		=> $cuidador->user_id,
+	// 	"lat" 		=> $cuidador->latitud,
+	// 	"lng" 		=> $cuidador->longitud,
+	// 	"nombre" 	=> $cuidador->nombre,
+	// 	"url" 		=> $url,
+	// 	"portada" 	=> $cuidador->portada
+	// );
+
 	$distancia = $cuidador->DISTANCIA;
 
 	$distancia = 'A '.floor($distancia).' km de tu busqueda';
+
+	//echo "Estado: ".$_POST['estados'];
+
+	// if( $_POST['estados'] == "" ){
+	// 	$distancia = "";
+	// }else{
+	// 	if( $_POST['orderby'] != "distance_asc" && $_POST['orderby'] != "distance_desc" ){
+	// 		$distancia = "";
+	// 	}
+	// }
 
 	if( $_POST['tipo_busqueda'] == "otra-localidad" ){
 		if( $_POST['municipios'] == "" ){
@@ -36,24 +66,24 @@
 		}
 	}
 
-	/* Start: Favorites */
-	if (is_user_logged_in()) {
-		$user_favorites_arr = get_user_meta( get_current_user_id(), 'user_favorites', true );
-		if (!empty($user_favorites_arr)) {
-			$user_favorites_arr = json_decode($user_favorites_arr,true);
-		}else{
-			$user_favorites_arr = array();
-		}
+/* Start: Favorites */
+if (is_user_logged_in()) {
+	$user_favorites_arr = get_user_meta( get_current_user_id(), 'user_favorites', true );
+	if (!empty($user_favorites_arr)) {
+		$user_favorites_arr = json_decode($user_favorites_arr,true);
+	}else{
+		$user_favorites_arr = array();
 	}
+}
 
-	$fav_check = 'false';
-	if (is_user_logged_in() && count($user_favorites_arr)>0) {
-		if (in_array($cuidador->id_post, $user_favorites_arr)) {
-			$fav_check = 'true';
-			$favtitle_text = esc_html__('Remove from Favorites','pointfindert2d');
-		}
+$fav_check = 'false';
+if (is_user_logged_in() && count($user_favorites_arr)>0) {
+	if (in_array($cuidador->id_post, $user_favorites_arr)) {
+		$fav_check = 'true';
+		$favtitle_text = esc_html__('Remove from Favorites','pointfindert2d');
 	}
-	/* End: Favorites */
+}
+/* End: Favorites */
 
 
 	echo '

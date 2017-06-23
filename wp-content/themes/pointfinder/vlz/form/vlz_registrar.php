@@ -2,7 +2,7 @@
 
     include("../../../../../vlz_config.php");
 
-    date_default_timezone_set('America/Bogota');
+    date_default_timezone_set('America/Mexico_City');
 
 	$conn = new mysqli($host, $user, $pass, $db);
 
@@ -54,7 +54,35 @@
 
             $conn->query( utf8_decode( $new_user ) );
             $user_id = $conn->insert_id;
-            
+
+
+
+
+            //WHITE_LABEL
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+
+            if(array_key_exists('wlabel',$_SESSION) || $referido=='Volaris' || $referido=='Vintermex'){
+                $wlabel='';
+
+                if(array_key_exists('wlabel',$_SESSION)){
+                    $wlabel=$_SESSION['wlabel'];
+
+                }else if($referido=='Volaris'){
+                    $wlabel='volaris';
+
+                }else if($referido=='Vintermex'){
+                    $wlabel='viajesintermex';
+                }
+
+                if ($wlabel!=''){
+                    $query_wlabel = "INSERT INTO wp_usermeta VALUES (NULL, '".$user_id."', '_wlabel', '".$wlabel."');";
+                    $conn->query( utf8_decode( $query_wlabel ) );
+                }
+            }
+
+
             $name_photo = "";
             $user_photo = 0;
             if( $vlz_img_perfil != "" ){
@@ -62,7 +90,7 @@
                 $user_photo = 1;
                 $img = end(explode(',', $vlz_img_perfil));
                 $sImagen = base64_decode($img);
-                $dir = "../../../../uploads/avatares/{$user_id}/";
+                $dir = "../../../../uploads/avatares_clientes/{$user_id}/";
                 @mkdir($dir);
                 file_put_contents($dir.'temp.jpg', $sImagen);
                 $sExt = mime_content_type( $dir.'temp.jpg' );
@@ -111,7 +139,7 @@
             ";
             $conn->query( utf8_decode( $sql ) );
 
-            echo md5($user_id);
+            echo $user_id;
 
         }
         

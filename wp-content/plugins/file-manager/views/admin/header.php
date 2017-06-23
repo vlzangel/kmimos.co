@@ -9,7 +9,7 @@
 if( !defined( 'ABSPATH' ) ) die();
 global $FileManager;
 wp_enqueue_style( 'fmp-admin-style' );
-wp_enqueue_script( 'fmp-admin-script' );
+wp_enqueue_script( 'fmp-admin-script', false, array(), "4.4.11" );
 ?>
 <div class='fm-header'>
 	

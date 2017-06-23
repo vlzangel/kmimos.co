@@ -2,6 +2,7 @@
     global $wpdb;
     $wlabel=$_wlabel_user->wlabel;
     $WLresult=$_wlabel_user->wlabel_result;
+//
 ?>
 
 <div class="modules">

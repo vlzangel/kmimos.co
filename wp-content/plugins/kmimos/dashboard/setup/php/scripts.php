@@ -95,24 +95,22 @@
 				if( $tipo[1] == "vendor" ){
 					$sql = "
 					SELECT 
-						CONCAT(N.meta_value, ' ', A.meta_value, '(', P.post_title, ')') As nombre
+						CONCAT(C.nombre, ' ', C.apellido, ' (', P.post_title, ')') As nombre
 					FROM 
 						wp_posts AS P 
-					INNER JOIN cuidadores  AS C ON ( P.ID = C.id_post ) 
-					INNER JOIN wp_usermeta AS N ON ( P.post_author = N.user_id AND N.meta_key = 'first_name' ) 
-					INNER JOIN wp_usermeta AS A ON ( P.post_author = A.user_id AND A.meta_key = 'last_name'  ) 
+					INNER JOIN cuidadores AS C ON ( P.ID = C.id_post ) 
 					WHERE 
 						1=1 AND 
 						P.post_author = '{$admin->id}' AND
-						P.post_type   = 'petsitters'
+						P.post_type='petsitters'
 					GROUP BY 
 						P.ID;";
-					$admin->nombre = $wpdb->get_var($sql);
+					$admin->nombre = "".$wpdb->get_var($sql);
 				}
 
 				$resultados["registros"][$tipo[1]][] = [
 					$admin->id,
-					$admin->id." - ".$admin->nombre,
+					$admin->nombre,
 					$admin->email,
 					md5($admin->id)
 				];
@@ -120,14 +118,13 @@
 		}
 		
 		$json = json_encode($resultados);
-		echo ("
+		echo ( "
 			<script> 
 				var kmimos_usuarios = jQuery.parseJSON( '".$json."' ); 
 				var kmimos_tipos_usuarios = [];
 				jQuery.each( kmimos_usuarios.registros, function( key, value ) {
 				  	kmimos_tipos_usuarios.push(key);
 				});
-			</script>
-		");
+			</script>" );
 	}
 ?>

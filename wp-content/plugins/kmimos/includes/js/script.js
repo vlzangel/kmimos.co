@@ -9,13 +9,12 @@ jQuery(document).ready(function(e){
     filejs.push('image/image-load.js');
     filejs.push('image/image-easyload.js');
     //filejs.push();
-    filejs_import(filejs,0);
-
+    //filejs_import(filejs,0);
 
     var filecss=[];
     filecss.push('scroll/scroll_efecto/scroll-efecto.css');
     filecss.push('image/image-easyload.css');
-    filecss_import(filecss,0);
+    //filecss_import(filecss,0);
 
 });
 
