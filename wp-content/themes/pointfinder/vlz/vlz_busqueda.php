@@ -158,8 +158,6 @@
 		$ID = $cuidador->id;
 
 		$data2 = get_post($cuidador->id_post);
-		$cuidador->nombre = explode(" ", $cuidador->nombre);
-		$cuidador->nombre = $cuidador->nombre[0];
 		$url = get_home_url() . "/petsitters/" . $data2->post_name;		
 		
 		$coordenadas_all_2[] = array(
@@ -167,7 +165,7 @@
 			"USER" 		=> $cuidador->user_id,
 			"lat" 		=> $cuidador->latitud,
 			"lng" 		=> $cuidador->longitud,
-			"nombre" 	=> $cuidador->nombre,
+			"nombre" 	=> $data2->post_title,
 			"url" 		=> $url,
 			"portada" 	=> $cuidador->portada
 		);
