@@ -15,6 +15,9 @@
 /wp-content/upgrade/
 /wp-content/uploads/
 
+/.tmb/
+/wp-content/plugins/file-manager/
+
 Respaldo*
 
 # Archivos
