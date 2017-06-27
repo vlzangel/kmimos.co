@@ -11,7 +11,12 @@
     $distdef = 20;
 
     $str_estados = '';
-    $str_estados = utf8_decode($str_estados);
+    global $wpdb;
+    $estados = $wpdb->get_results("SELECT * FROM states ORDER BY name ASC");
+    foreach ($estados as $estado) {
+       $str_estados .= '<option value="'.$estado->id.'">'.$estado->name.'</option>';
+    }
+
     ?>
 
     <style>
@@ -169,38 +174,7 @@
                                 <sub>Estado:</sub><br>
                                 <select id="estado_cuidador" name="estados" data-location="mx">
                                     <option value="">Seleccione un estado</option>
-                                    <option value="7">Aguascalientes</option>
-                                    <option value="8">Baja California</option>
-                                    <option value="9">Baja California Sur</option>
-                                    <option value="10">Campeche</option>
-                                    <option value="13">Chiapas</option>
-                                    <option value="14">Chihuahua</option>
-                                    <option value="1">Ciudad de México</option>
-                                    <option value="11">Coahuila de Zaragoza</option>
-                                    <option value="12">Colima</option>
-                                    <option value="15">Durango</option>
-                                    <option value="2">Estado de México</option>
-                                    <option value="16">Guanajuato</option>
-                                    <option value="17">Guerrero</option>
-                                    <option value="18">Hidalgo</option>
-                                    <option value="3">Jalisco</option>
-                                    <option value="19">Michoac&aacute;n de Ocampo</option>
-                                    <option value="20">Morelos</option>
-                                    <option value="21">Nayarit</option>
-                                    <option value="4">Nuevo León</option>
-                                    <option value="22">Oaxaca</option>
-                                    <option value="23">Puebla</option>
-                                    <option value="24">Queretaro</option>
-                                    <option value="25">Quintana Roo</option>
-                                    <option value="26">San Luis Potosi</option>
-                                    <option value="27">Sinaloa</option>
-                                    <option value="28">Sonora</option>
-                                    <option value="29">Tabasco</option>
-                                    <option value="30">Tamaulipas</option>
-                                    <option value="31">Tlaxcala</option>
-                                    <option value="32">Veracruz de Ignacio de la Llave</option>
-                                    <option value="33">Yucatan</option>
-                                    <option value="34">Zacatecas</option> 
+                                    <?php echo $str_estados; ?>
                                 </select>
                             </div>
                         </div>
