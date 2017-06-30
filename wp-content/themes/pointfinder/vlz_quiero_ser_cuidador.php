@@ -87,7 +87,7 @@
 											</div>
 											
 											<div class="vlz_cell50">
-												<input data-title="Debes ingresar tu número telefónico<br>Este debe tener al menos 10 dígitos." type='number' id='telefono' name='telefono' min="7" class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]">
+												<input data-title="Debes ingresar tu número telefónico<br>Este debe tener al menos 7 dígitos." type='number' id='telefono' name='telefono' min="7" class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]">
 											</div>
 										</div>
 

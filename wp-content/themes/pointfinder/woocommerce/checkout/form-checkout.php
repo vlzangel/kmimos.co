@@ -80,7 +80,7 @@ if( !$DS ){
 
 	    	echo "jQuery('#billing_first_name').attr('value', '{$cu->user_firstname}');";
 	    	echo "jQuery('#billing_last_name').attr('value', '{$cu->user_lastname}');";
-	    	echo "jQuery('#billing_phone').attr('value', '+52{$metas_cliente["user_mobile"][0]}');";
+	    	echo "jQuery('#billing_phone').attr('value', '+57{$metas_cliente["user_mobile"][0]}');";
 	    ?>
 
 	    jQuery('#billing_postcode').attr('value', '10110');
