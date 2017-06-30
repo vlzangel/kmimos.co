@@ -72,7 +72,7 @@
 					<div class='vlz_modal_titulo'>¡Oops!</div>
 					<div class='vlz_modal_contenido' style='height: auto;'>
 						<h1 align='justify'>Debes iniciar sesión para poder realizar reservas.</h1>
-						<h2 align='justify'>Pícale <span id='cerrarModal' onclick=\"jQuery('#pf-login-trigger-button').click();\" style='color: #00b69d; font-weight: 600; cursor: pointer;'>Aquí</span> para acceder a kmimos.<h2>
+						<h2 align='justify'>Has click <span id='cerrarModal' onclick=\"jQuery('#pf-login-trigger-button').click();\" style='color: #00b69d; font-weight: 600; cursor: pointer;'>Aquí</span> para acceder a kmimos.<h2>
 					</div>
 					<div class='vlz_modal_pie' style='border-radius: 0px 0px 5px 5px!important; height: 70px;'>
 						<a href='".$referencia."' ><input type='button' style='text-align: center;' class='vlz_boton_siguiente' value='Volver'/></a>
@@ -93,7 +93,7 @@
 							<div class='vlz_modal_titulo'>¡Oops!</div>
 							<div class='vlz_modal_contenido' style='height: auto;'>
 								<h1 align='justify'>No puedes realizarte reservas a tí mismo.</h1>
-								<h2 align='justify'>Pícale <a href='".get_home_url()."/busqueda/' style='color: #00b69d; font-weight: 600;'>Aquí</a> para buscar entre cientos de cuidadores certificados kmimos.<h2>
+								<h2 align='justify'>Has click <a href='".get_home_url()."/busqueda/' style='color: #00b69d; font-weight: 600;'>Aquí</a> para buscar entre cientos de cuidadores certificados kmimos.<h2>
 							</div>
 							<div class='vlz_modal_pie' style='border-radius: 0px 0px 5px 5px!important; height: 70px;'>
 								<a href='".$referencia."' ><input type='button' style='text-align: center;' class='vlz_boton_siguiente' value='Volver'/></a>
@@ -116,7 +116,7 @@
 								<div class='vlz_modal_titulo'>¡Oops!</div>
 								<div class='vlz_modal_contenido' style='height: auto;'>
 									<h1 align='justify'>Kmiusuario, para continuar con tu reserva debes ir a tu perfil para completar algunos datos de contacto.</h1>
-									<h2 align='justify'>Pícale <a href='".get_home_url()."/perfil-usuario/?ua=profile' target='_blank' style='color: #00b69d; font-weight: 600;'>Aquí</a> para cargar tu información.<h2>
+									<h2 align='justify'>Has click <a href='".get_home_url()."/perfil-usuario/?ua=profile' target='_blank' style='color: #00b69d; font-weight: 600;'>Aquí</a> para cargar tu información.<h2>
 								</div>
 								<div class='vlz_modal_pie' style='border-radius: 0px 0px 5px 5px!important; height: 70px;'>
 									<a href='".$referencia."' ><input type='button' style='text-align: center;' class='vlz_boton_siguiente' value='Volver'/></a>
@@ -140,7 +140,7 @@
 									<div class='vlz_modal_titulo'>¡Oops!</div>
 									<div class='vlz_modal_contenido' style='height: auto;'>
 										<h1 align='justify'>Debes cargar por lo menos una mascota para poder realizar una reserva.</h1>
-										<h2 align='justify'>Pícale <a href='".get_home_url()."/perfil-usuario/?ua=mypets' style='color: #00b69d; font-weight: 600;'>Aquí</a> para agregarlas.<h2>
+										<h2 align='justify'>Has click <a href='".get_home_url()."/perfil-usuario/?ua=mypets' style='color: #00b69d; font-weight: 600;'>Aquí</a> para agregarlas.<h2>
 									</div>
 									<div class='vlz_modal_pie' style='border-radius: 0px 0px 5px 5px!important; height: 70px;'>
 										<a href='".$referencia."' ><input type='button' style='text-align: center;' class='vlz_boton_siguiente' value='Volver'/></a>
