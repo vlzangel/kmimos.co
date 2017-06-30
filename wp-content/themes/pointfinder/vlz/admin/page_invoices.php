@@ -1,5 +1,5 @@
 <div class="theme_button" style="padding: 10px; font-size: 14px;">
-	<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> MXN $<?php echo kmimos_get_kmisaldo(); ?>
+	<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> COP $<?php echo kmimos_get_kmisaldo(); ?>
 </div>
 
 <?php
@@ -73,7 +73,7 @@ $items = WC()->cart->get_cart();
 
 if(count($items) > 0){
 	?>
-	<h1 class='vlz_h1 jj_h1'>Reservas Por Completar</h1>
+	<h1 class='vlz_h1 jj_h1 theme_tite theme_table_title'>Reservas Por Completar</h1>
 	<table class='vlz_tabla jj_tabla table table-striped table-responsive'>
 		<tr>
 			<th class="product-name"><?php _e( 'SERVICIO', 'woocommerce' ); ?></th>

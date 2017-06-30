@@ -32,9 +32,9 @@ $DS = kmimos_session();
 if( $DS["saldo"] > 0 ){ ?>
 	<div class="theme_button" style="padding: 10px; margin-bottom: 20px;">
 		<?php if( $DS["saldo"] > 0 ){ ?>
-			<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> MXN $<?php echo $DS["saldo"]; ?>
+			<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> COP $<?php echo $DS["saldo"]; ?>
 		<?php }else{ ?>
-			<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> MXN $<?php echo kmimos_get_kmisaldo(); ?>
+			<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> COP $<?php echo kmimos_get_kmisaldo(); ?>
 		<?php } ?>
 	</div> <?php
 }

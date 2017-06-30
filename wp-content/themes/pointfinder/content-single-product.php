@@ -22,11 +22,11 @@
     if( $DS ){ ?>
 		<div class="theme_button" style="padding: 10px; margin-bottom: 20px;">
 			<?php if( $DS["saldo_temporal"] > 0 ){ ?>
-				<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> MXN $<?php echo $DS["saldo"]; ?>
+				<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> COP $<?php echo $DS["saldo"]; ?>
 			<?php }else{ 
 					$kmisaldo = kmimos_get_kmisaldo();
 					if( $kmisaldo > 0 ){ ?>
-						<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> MXN $<?php echo $kmisaldo; ?><br>
+						<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> COP $<?php echo $kmisaldo; ?><br>
 			<?php 	}
 				  } ?>
 		</div> <?php
@@ -37,6 +37,13 @@
 				<span style="font-weight: 600;">Importante:</span> Confirme previamente con el cuidador la disponibilidad del ajuste que usted desea realizar.
 			</div> <?php 
 		}
+    }else{
+    	$kmisaldo = kmimos_get_kmisaldo();
+    	if( $kmisaldo > 0 ){ ?>
+    		<div class="theme_button" style="padding: 10px; margin-bottom: 20px;">
+    			<strong><?php echo kmimos_saldo_titulo(); ?>:</strong> COP $<?php echo $kmisaldo; ?><br>
+    		</div>
+    	<?php }
     }
 
 	echo "
