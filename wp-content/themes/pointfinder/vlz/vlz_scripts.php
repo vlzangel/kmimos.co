@@ -4,7 +4,6 @@
 	$N = geo("N");
 	$S = geo("S");
 
-	echo "<!-- Hola -->";
 	echo get_estados_municipios();
 ?>
 <script type="text/javascript">
