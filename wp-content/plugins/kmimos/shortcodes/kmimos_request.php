@@ -232,7 +232,7 @@ if($_SESSION['token_mail'] != "" ){
                     },
                     meeting_where: {
                         required: true,
-                        minlength: 5,
+                        minlength: 2,
                     },
                     type_service: {
                         required: true,
