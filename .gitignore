@@ -100,6 +100,7 @@ vlz_config.php
 /wp-content/plugins/woocommerce-bookings/.tx/
 
 /wp-content/plugins/woocommerce-gateway-stripe/
+/wp-content/plugins/woocommerce-payu-latam-gateway/
 
 /wp-content/plugins/kmimos/wlabel/backend/content/export/csv/
 
