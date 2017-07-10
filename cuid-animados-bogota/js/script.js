@@ -53,7 +53,8 @@ function testimonials_select(element){
         jQuery(element).animate({opacity:1},200).css({display:'block'});
 
         var img = jQuery(element).data('img');
-        jQuery(element).closest('#testimony').css({'background-image':'url('+img+')'});
+        var height = jQuery(element).closest('.content').height()+130;
+        jQuery(element).closest('#testimony').find('.image').css({'background-image':'url('+img+')', 'height':'calc(100% - '+height+'px)'});
     });
 
 }
