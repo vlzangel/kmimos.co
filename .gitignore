@@ -21,7 +21,7 @@ Respaldo*
 
 .htaccess
 favicon.ico
-index.php
+/wp-content/index.php
 wp-activate.php
 wp-blog-header.php
 wp-comments-post.php
@@ -40,6 +40,9 @@ vlz_config.php
 # Plugins
 
 /wp-content/plugins/admin-custom-login/
+
+/wp-content/plugins/woocommerce-payu-latam-gateway
+
 /wp-content/plugins/adminer/
 /wp-content/plugins/admin-post-navigation/
 /wp-content/plugins/aryo-activity-log/
