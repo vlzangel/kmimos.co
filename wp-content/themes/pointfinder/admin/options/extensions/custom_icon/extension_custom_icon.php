@@ -363,10 +363,10 @@
 
 
             public function enqueue() {
-                wp_register_style('extension_flaticons', get_template_directory_uri() . '/css/flaticon.css', array(), '1.0', 'all');
+                wp_register_style('extension_flaticons', get_home_url()."/wp-content/themes/pointfinder" . '/css/flaticon.css', array(), '1.0', 'all');
                 wp_enqueue_style( 'extension_flaticons' );
 
-                wp_enqueue_style('extension_custom_icon',get_template_directory_uri().'/admin/options/extensions/custom_icon/extension_custom_icon.css',time(),true);
+                wp_enqueue_style('extension_custom_icon',get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/custom_icon/extension_custom_icon.css',time(),true);
             }
          
 

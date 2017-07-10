@@ -8,7 +8,7 @@ global $redirect_to;
 
 
 
-date_default_timezone_set('America/Mexico_City');
+date_default_timezone_set('America/Bogota');
 
 $user_id = $current_user->ID;
     if($user_id==0) {

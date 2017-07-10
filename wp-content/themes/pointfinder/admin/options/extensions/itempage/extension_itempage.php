@@ -338,7 +338,7 @@ if ( !class_exists ( 'ReduxFramework_extension_itempage' ) ) {
                 wp_enqueue_script('jquery-ui-sortable');
                 wp_enqueue_script (
                     'redux-field-itempage-js', 
-                    get_template_directory_uri().'/admin/options/extensions/itempage/field_itempage.js', 
+                    get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/itempage/field_itempage.js', 
                     array( 'jquery', 'jquery-ui-core', 'jquery-ui-accordion'), 
                     time(), 
                     true
@@ -346,7 +346,7 @@ if ( !class_exists ( 'ReduxFramework_extension_itempage' ) ) {
 
                 wp_enqueue_style(
                     'redux-field-itempage-css',
-                    get_template_directory_uri().'/admin/options/extensions/itempage/field_itempage.css',
+                    get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/itempage/field_itempage.css',
                     time(),
                     false
                 );      

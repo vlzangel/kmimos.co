@@ -1,7 +1,6 @@
 <?php
     
-    define('WP_USE_THEMES', false);
-    require('../wp-blog-header.php');
+    require('../wp-load.php');
     require('../wp-content/themes/pointfinder/vlz/vlz_funciones.php');
 
     require('./cron_sqls.php');
@@ -53,6 +52,7 @@
                 post_status IN (
                     'pending',
                     'wc-completed',
+                    'wc-processing',
                     'wc-partially-paid'
                 ) AND 
                 post_date < '".date("Y-m-d H:i:s", $fecha_cancelacion)."'
@@ -62,16 +62,17 @@
         foreach ($r as $request) {
             $metadata = get_post_meta( $request->ID );
 
+            $cliente_id_reserva = 0;
             if( $request->post_type == "request" ){
                 $id_cuidador_post = $metadata['requested_petsitter'][0];
                 $email_cliente = $wpdb->get_var( "SELECT user_email FROM wp_users WHERE ID = '".$request->post_author."'" );
                 $cliente = get_user_meta( $request->post_author );
                 $cliente = $cliente['first_name'][0]." ".$cliente['last_name'][0];
             }else{
-
                 $id_orden = $request->ID;
-                $id_reserva = $id_orden-1;
+                $id_reserva   = $wpdb->get_var("SELECT ID FROM wp_posts WHERE post_parent = {$id_orden} AND post_type = 'wc_booking'");
                 $cliente_id = $wpdb->get_var( "SELECT post_author FROM wp_posts WHERE ID = '".($id_reserva)."'" );
+                $cliente_id_reserva = $cliente_id;
                 $email_cliente = $wpdb->get_var( "SELECT user_email FROM wp_users WHERE ID = '".$cliente_id."'" );
                 $cliente = get_user_meta( $cliente_id );
                 $cliente = $cliente['first_name'][0]." ".$cliente['last_name'][0];
@@ -79,7 +80,6 @@
                 $metadata = get_post_meta( $id_orden-1 );
                 $user_id_cuidador = $wpdb->get_var( "SELECT post_author FROM wp_posts WHERE ID = '".($metadata['_booking_product_id'][0])."'" );
                 $id_cuidador_post = $wpdb->get_var( "SELECT id_post FROM cuidadores WHERE user_id = '".($user_id_cuidador)."'" );
-
             }
 
             $cuidador = $wpdb->get_row( "SELECT * FROM cuidadores WHERE id_post = '".$id_cuidador_post."'" );
@@ -131,16 +131,18 @@
 
             foreach ($sugeridos as $key => $cuidador) {
 
-                if( $cuidador->portada != '0' ){
-                    if( file_exists("../wp-content/uploads/cuidadores/avatares/".$cuidador->id."/0.jpg") ){
-                        $img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador->id."/0.jpg";
-                    }else{
-                        $img = get_template_directory_uri().'/images/noimg.png';
-                    }
+                $name_photo = get_user_meta($author_post_id, "name_photo", true);
+                $cuidador_id = $cuidador->id;
+
+                if( empty($name_photo)  ){ $name_photo = "0"; }
+                if( file_exists("wp-content/uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}") ){
+                    $img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}";
+                }elseif( file_exists("wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg") ){
+                    $img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg";
                 }else{
                     $img = get_template_directory_uri().'/images/noimg.png';
                 }
-
+                
                 $post = get_post($cuidador->id_post);
 
                 $str_sugeridos_img .= '
@@ -182,26 +184,29 @@
                         Revisa estas recomendaciones y pícale a cualquiera de ellas para ver más detalles sobre su perfil.
                         <div style="overflow: hidden; text-align: center; margin: 0px auto; max-width: 600px;">'.$str_sugeridos_img.'</div>
                     </li>
-                    <li align="justify" style="padding-bottom: 10px; font-size: 12px;">En caso de que alguna de estas opciones no se adecúe a tus necesidades, por favor ingresa a <strong><a style="text-decoration: none; color: #3d68b9;" href="'.get_home_url().'/busqueda">Kmimos Colombia</a></strong> en donde podrás encontrar cientos de cuidadores que seguro te encantarán.</li>
-                    <li align="justify" style="font-size: 12px;">Para asistencia personalizada por favor márcanos a nuestros números. (+57) 315 849.2186</li>
+                    <li align="justify" style="padding-bottom: 10px; font-size: 12px;">En caso de que alguna de estas opciones no se adecúe a tus necesidades, por favor ingresa a <strong><a style="text-decoration: none; color: #3d68b9;" href="'.get_home_url().'/busqueda">Kmimos México</a></strong> en donde podrás encontrar cientos de cuidadores que seguro te encantarán.</li>
+                    <li align="justify" style="font-size: 12px;">Para asistencia personalizada por favor márcanos a nuestros números. +52 (55) 1791.4931.</li>
                 </ol>
             ';
 
             require('./cron_plantilla.php'); 
-            echo $message = kmimos_get_email_html($title, $message, '', true, true);
+            $msg_cliente = kmimos_get_email_html($title, $message, '', true, true);
 
+            $info = kmimos_get_info_syte();
             add_filter( 'wp_mail_from_name', function( $name ) {
-                return 'Kmimos Colombia';
+                global $info;
+                return $info["titulo"];
             });
             add_filter( 'wp_mail_from', function( $email ) {
-                return 'contactoco@kmimos.la';
+                global $info;
+                return $info["email"]; 
             });
 
-            $email_admin = "contactoco@kmimos.la";
+            $email_admin = $info["email"];
 
             if( $request->post_type == "request" ){
                 
-                wp_mail($email_cliente, $title, $message);
+                wp_mail($email_cliente, $title, $msg_cliente);
 
                 $sql = "UPDATE wp_postmeta SET meta_value='4' WHERE post_id='".$request->ID."' AND meta_key = 'request_status';";
                 $wpdb->query( $sql );
@@ -211,7 +216,13 @@
                 $msg = $styles.'
                     <p><strong>Cancelación de Solicitud para Conocer Cuidador (N°. '.$request->ID.')</strong></p>
                     <p>Hola <strong>Administrador</strong>,</p>
-                    <p align="justify">Te notificamos que el sistema ha cancelado la Solicitud para Conocer Cuidador N° <strong>'.$request->ID.'</strong> por inactividad.</p>';
+                    <p align="justify">Te notificamos que el sistema ha cancelado la Solicitud para Conocer Cuidador N° <strong>'.$request->ID.'</strong> por inactividad.</p>'
+                    .'
+                        <p align="justify">
+                            Esta son las sugerencias que se le enviaron al cliente:
+                        </p>
+                    '
+                    .$str_sugeridos;
                 
                 $msg_admin = kmimos_get_email_html("Solicitud para Conocer Cuidador Cancelada por el Sistema", $msg, "", true, true);
                 wp_mail( $email_admin, "Solicitud para Conocer Cuidador Cancelada por el Sistema", $msg_admin, kmimos_mails_administradores());
@@ -226,7 +237,7 @@
 
             }else{
 
-                wp_mail($email_cliente, $title, $message);
+                wp_mail($email_cliente, $title, $msg_cliente);
 
                 $order = new WC_Order($id_orden);
                 $booking = new WC_Booking($id_reserva);
@@ -234,10 +245,18 @@
                 $order->update_status('wc-cancelled');
                 $booking->update_status('cancelled');
 
+                kmimos_set_kmisaldo($cliente_id_reserva, $id_orden, $id_reserva);
+
                 $msg = $styles.'
                     <p><strong>Cancelación de Reserva (N°. '.$id_reserva.')</strong></p>
                     <p>Hola <strong>Administrador</strong>,</p>
-                    <p align="justify">Te notificamos que el sistema ha cancelado la reserva N° <strong>'.$id_reserva.'</strong> por inactividad.</p>';
+                    <p align="justify">Te notificamos que el sistema ha cancelado la reserva N° <strong>'.$id_reserva.'</strong> por inactividad.</p>'
+                    .'
+                        <p align="justify">
+                            Esta son las sugerencias que se le enviaron al cliente:
+                        </p>
+                    '
+                    .$str_sugeridos;
                 
                 $msg_admin = kmimos_get_email_html("Reserva Cancelada por el Sistema", $msg, "", true, true);
                 wp_mail( $email_admin, "Reserva Cancelada por el Sistema", $msg_admin, kmimos_mails_administradores());

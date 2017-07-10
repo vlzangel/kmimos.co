@@ -108,8 +108,8 @@ $output_text = '
                         $post_thumbnail = wp_get_attachment_image_src( $attach_id, 'full' );
                     }
                     else {
-                        $thumbnail = get_template_directory_uri().'/images/noimg.png';
-        				$p_img_large = get_template_directory_uri().'/images/noimg.png';
+                        $thumbnail = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
+        				$p_img_large = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
                     }
 				   if($featured_image_width > 0){
 					   

@@ -17,7 +17,7 @@ define( 'RWMB_VER', '4.3.9' );
 
 // Define plugin URLs, for fast enqueuing scripts and styles
 if ( ! defined( 'RWMB_URL' ) )
-	define( 'RWMB_URL', get_template_directory_uri() . '/admin/estatemanagement/metabox/' );
+	define( 'RWMB_URL', get_home_url()."/wp-content/themes/pointfinder" . '/admin/estatemanagement/metabox/' );
 define( 'RWMB_JS_URL', trailingslashit( RWMB_URL . 'js' ) );
 define( 'RWMB_CSS_URL', trailingslashit( RWMB_URL . 'css' ) );
 

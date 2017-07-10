@@ -150,7 +150,7 @@ if (!class_exists('ReduxFramework_extension_sidebar_slides')) {
             if ($pagenow == 'admin.php' && $pagename == '_pfsidebaroptions') {
                 wp_enqueue_script(
                     'redux-field-sidebarslides-js',
-                    get_template_directory_uri().'/admin/options/extensions/sidebar_slides/field_custom_slides.js',
+                    get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/sidebar_slides/field_custom_slides.js',
                     array('jquery', 'jquery-ui-core', 'jquery-ui-accordion','jquery-ui-sortable'),
                     time(),
                     true
@@ -158,7 +158,7 @@ if (!class_exists('ReduxFramework_extension_sidebar_slides')) {
                 
                 wp_enqueue_style(
                     'redux-field-sidebarslides-css',
-                    get_template_directory_uri().'/admin/options/extensions/sidebar_slides/field_custom_slides.css',
+                    get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/sidebar_slides/field_custom_slides.css',
                     time(),
                     true
                 );

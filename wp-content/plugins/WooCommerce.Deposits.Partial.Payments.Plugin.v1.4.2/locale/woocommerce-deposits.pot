@@ -1,0 +1,288 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-03-01 00:21+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /includes/class-wc-deposits-add-to-cart.php:117
+msgid "per person"
+msgstr ""
+
+#: /includes/class-wc-deposits-add-to-cart.php:119
+msgid "per booking"
+msgstr ""
+
+#: /includes/class-wc-deposits-add-to-cart.php:121;141
+msgid "per item"
+msgstr ""
+
+#: /includes/class-wc-deposits-add-to-cart.php:128
+msgid "of total value"
+msgstr ""
+
+#: /includes/class-wc-deposits-add-to-cart.php:151
+#: /includes/admin/class-wc-deposits-admin-settings.php:62
+msgid "Pay Deposit"
+msgstr ""
+
+#: /includes/class-wc-deposits-add-to-cart.php:152
+#: /includes/admin/class-wc-deposits-admin-settings.php:63
+msgid "Full Amount"
+msgstr ""
+
+#: /includes/class-wc-deposits-add-to-cart.php:159
+msgid "Deposit Option:"
+msgstr ""
+
+#: /includes/class-wc-deposits-cart.php:128
+#: /includes/class-wc-deposits-orders.php:203
+msgid "Deposit"
+msgstr ""
+
+#: /includes/class-wc-deposits-cart.php:129
+#: /includes/class-wc-deposits-orders.php:204
+msgid "Remaining"
+msgstr ""
+
+#: /includes/class-wc-deposits-orders.php:170
+msgid "To Pay:"
+msgstr ""
+
+#: /includes/class-wc-deposits-orders.php:170
+msgid "Amount Paid:"
+msgstr ""
+
+#: /includes/class-wc-deposits-orders.php:173
+msgid "Order Total:"
+msgstr ""
+
+#: /includes/class-wc-deposits-orders.php:183
+msgid "Remaining Amount:"
+msgstr ""
+
+#: /includes/class-wc-deposits-orders.php:218
+msgid "%s (%s unpaid)"
+msgstr ""
+
+#: /includes/class-wc-deposits-orders.php:220
+msgid "%s"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:52
+msgid "Enable deposit"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:53
+msgid "Enable this to require a deposit for this item."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:58
+msgid "Force deposit"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:59
+msgid "If you enable this, the customer will not be allowed to make a full payment."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:70
+msgid "Specify the type of deposit:"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:72
+msgid "Fixed value"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:73
+msgid "Percentage of price"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:79
+msgid "Despoit amount"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:80
+msgid "This is the minimum deposited amount.<br/>Note: Tax will be added to the deposit amount you specify here."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:97
+msgid "Multiply by persons"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-product.php:98
+msgid "Enable this to multiply the deposit by person count. (Only works when Fixed Value is active)"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:26
+msgid "Deposits"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:45
+msgid "Site-wide Settings"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:51
+msgid "Disable Deposits"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:53
+msgid "Check this to disable all deposit functionality with one click."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:57
+msgid "Default Selection"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:58
+msgid "radio"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:59
+msgid "Select the default deposit option."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:68
+msgid "Display Taxes"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:70
+msgid "Check this to count taxes as part of deposits for purposes of display to the customer. (Taxes are always collected upfront)"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:83
+msgid "Buttons"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:85
+msgid "No HTML allowed. Text will be translated to the user if a translation is available.<br/>Please note that any overflow will be hidden, since button width is theme-dependent."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:89
+msgid "Deposit Button Text"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:91
+msgid "Text displayed in the 'Pay Deposit' button."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:96
+msgid "Full Amount Button Text"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:98
+msgid "Text displayed in the 'Full Amount' button."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:112
+msgid "Messages"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:114
+msgid "Please check the documentation for allowed HTML tags."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:118
+msgid "Deposit Message"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:120
+msgid "Message to show when 'Pay Deposit' is selected on the product's page."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:124
+msgid "Full Amount Message"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:126
+msgid "Message to show when 'Full Amount' is selected on the product's page."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:144
+msgid "Disallowed Gateways"
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:146
+msgid "Disallow the following gateways when there is a deposit in the cart."
+msgstr ""
+
+#: /includes/admin/class-wc-deposits-admin-settings.php:159
+msgid "Disallowed For Deposits"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:23
+msgid "Full Payment"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:24
+msgid "Full payment emails are sent when an order is full paid."
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:26
+msgid "Order fully paid"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:27
+msgid "[{site_title}] Order fully paid ({order_number}) - {order_date}"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:115
+msgid "Enable/Disable"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:117
+msgid "Enable this email notification"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:121
+msgid "Recipient(s)"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:123
+msgid "Enter recipients (comma separated) for this email. Defaults to <code>%s</code>."
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:128
+msgid "Subject"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:130
+msgid "This controls the email subject line. Leave blank to use the default subject: <code>%s</code>."
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:135
+msgid "Email Heading"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:137
+msgid "This controls the main heading contained within the email notification. Leave blank to use the default heading: <code>%s</code>."
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:142
+msgid "Email type"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:144
+msgid "Choose which format of email to send."
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:148
+msgid "Plain text"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:149
+msgid "HTML"
+msgstr ""
+
+#: /includes/emails/class-wc-deposits-email-full-payment.php:150
+msgid "Multipart"
+msgstr ""
+

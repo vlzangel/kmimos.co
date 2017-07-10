@@ -90,7 +90,7 @@ function pf_get_review_user_avatar($rid){
 	if (!empty($review_user_ID)) {
 		return get_avatar( $review_user_ID ,128 );
 	}else{
-		return get_template_directory_uri().'/images/empty_avatar.jpg';
+		return get_home_url()."/wp-content/themes/pointfinder".'/images/empty_avatar.jpg';
 	}
 
 	

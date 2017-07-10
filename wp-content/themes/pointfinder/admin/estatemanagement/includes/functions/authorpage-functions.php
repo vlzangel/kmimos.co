@@ -29,7 +29,7 @@ function PFGetAuthorPageCol1($author_id){
 	$user_photo =  wp_get_attachment_image(get_user_meta( $user->ID, 'user_photo', true ),'medium');
 
 	if (empty($user_photo)) {
-		$user_photo = '<img src="'.get_template_directory_uri().'/images/empty_avatar.jpg"/>';
+		$user_photo = '<img src="'.get_home_url()."/wp-content/themes/pointfinder".'/images/empty_avatar.jpg"/>';
 	}
 
 	$user_description = get_user_meta( $user->ID, 'description', true );
