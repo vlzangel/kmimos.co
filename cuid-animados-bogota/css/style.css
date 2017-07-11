@@ -19,18 +19,18 @@ section.red .images{position:absolute; width: 100%; bottom:20px; text-align:cent
 section.red .image{position:absolute; bottom:0;}
 
 section.red .group{position:absolute; bottom: 20px;}
-section.red .group1{width: 200px; left:10%; bottom: 115px;}
-section.red #img1{height:200px; left: 0;}
-section.red #img4{height:70px; left:60px; bottom:10px;}
+section.red .group1{width: 200px; height:200px; left:10%; bottom: 115px;}
+section.red #img1{height:100%; left: 0;}
+section.red #img4{height:40%; left:60px; bottom:10px;}
 
-section.red .group2{width: 150px; left: 30%;}
-section.red #img2{height:140px; left:0;}
-section.red #img5{height:70px; left:-10px;}
+section.red .group2{width: 150px; height:140px; left: 30%;}
+section.red #img2{height:100%; left:0;}
+section.red #img5{height:50%; left:-10px;}
 
-section.red .group3{width: 250px; right: 0;}
-section.red #img3{height:200px; left:0;}
-section.red #img7{height:20px; left:90px; }
-section.red #img6{height:70px; left:125px;}
+section.red .group3{width: 250px; height:200px; right: 0;}
+section.red #img3{height:100%; left:0;}
+section.red #img7{height:10%; left:90px; }
+section.red #img6{height:40%; left:125px;}
 
 
 
@@ -61,8 +61,22 @@ section.red #img6{height:70px; left:125px;}
     section.red .group3{display: none;}
     section.red .group2{bottom:60px;}
 */
+    section.red .group3{ width: 220px; height:150px;}
+    section.red .group1{ height:150px; bottom: 70px;}
+    section.red .group2{ height:130px;}
 
     #testimony .content{font-size: 15px;}
 }
 
+@media screen and (max-width:360px), screen and (max-device-width:360px){
+    section .content{font-size:15px;}
+    section .content strong{font-size: 20px;}
+    section .button{font-size: 12px;}
+
+    section.red .content,
+    section.red .content strong{font-size: 20px;}
+    section.red .group3{ width: 190px; height:100px;}
+    section.red .group1{ height:100px; bottom: 70px;}
+    section.red .group2{ height:80px;}
+}
 
