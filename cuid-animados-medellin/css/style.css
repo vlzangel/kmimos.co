@@ -59,6 +59,10 @@ section.red #img6{height:40%; left:125px;}
     section.red .group3{display: none;}
     section.red .group2{bottom:60px;}
 */
+    section.red .group3{ width: 220px; height:150px;}
+    section.red .group1{ height:150px; bottom: 70px;}
+    section.red .group2{ height:130px;}
+
     #testimony .content{font-size: 15px;}
 }
 
