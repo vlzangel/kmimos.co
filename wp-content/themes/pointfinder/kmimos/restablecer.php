@@ -4,11 +4,15 @@
 
     extract($_POST);
 
+    $info = kmimos_get_info_syte();
+
     add_filter( 'wp_mail_from_name', function( $name ) {
-        return 'Kmimos Colombia';
+        global $info;
+        return $info["titulo"];
     });
     add_filter( 'wp_mail_from', function( $email ) {
-        return 'contactoco@kmimos.la';
+        global $info;
+        return $info["email"]; 
     });
 
     global $wpdb;
@@ -59,7 +63,7 @@
 
         $send = kmimos_get_email_html("", $mensaje, '', true, true);
 
-        wp_mail( $user->user_email, "Kmimos Colombia – Restablecimiento de Contraseña! Kmimos la NUEVA forma de cuidar a tu perro!", $send);
+        wp_mail( $user->user_email, "Kmimos ".$info["pais"]." – Restablecimiento de Contraseña! Kmimos la NUEVA forma de cuidar a tu perro!", $send);
 
         $respuesta = array(
 	    	"code" => 1,
