@@ -154,11 +154,11 @@ $setup13_mapcontrols_barhovercolor = PFSAIssetControl('setup13_mapcontrols_barho
 		$csstext .= '#pfsearch-draggable.pfshowmobile,#pfsearch-draggable.pfshowmobile .pfsearch-content,#pfsearch-draggable.pfshowmobile .pfitemlist-content,#pfsearch-draggable.pfshowmobile .pfmapopt-content,#pfsearch-draggable.pfshowmobile .pfuser-content{background-color:'.$setup12_searchwindow_background_mobile.'}';
 		$csstext .= '.wpfarrow{border-color:'.$setup10_infowindow_background.' transparent transparent transparent;}';
 		if (PointFindergetContrast($setup10_infowindow_background) == 'white') {
-			$csstext .= '.wpfinfowindow .pfloadingimg{background-image: url('.get_template_directory_uri().'/images/info-loading-bl.gif)!important;background-size: 24px 24px;background-repeat: no-repeat;background-position: center;}';	
+			$csstext .= '.wpfinfowindow .pfloadingimg{background-image: url('.get_home_url()."/wp-content/themes/pointfinder".'/images/info-loading-bl.gif)!important;background-size: 24px 24px;background-repeat: no-repeat;background-position: center;}';	
 		}
 
 		if (PointFindergetContrast($tcustomizer_typographyh_main_bg) == 'white') {
-			$csstext .= '.pfsearchresults-loading .pfloadingimg{background-image: url('.get_template_directory_uri().'/images/info-loading-bl.gif)!important;background-size: 24px 24px;background-repeat: no-repeat;background-position: center;}';	
+			$csstext .= '.pfsearchresults-loading .pfloadingimg{background-image: url('.get_home_url()."/wp-content/themes/pointfinder".'/images/info-loading-bl.gif)!important;background-size: 24px 24px;background-repeat: no-repeat;background-position: center;}';	
 		}
 
 		if($setup10_infowindow_width != 350){ $csstext .= '#wpf-map .wpfarrow,#item-map-page .wpfarrow{left:'.(($setup10_infowindow_width/2)-8).'px!important;}';}

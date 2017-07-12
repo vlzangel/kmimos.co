@@ -1,20 +1,15 @@
 <?php
 
 /**********************************************************************************************************************************
-
 *
-
 * PointFinder Functions
-
 * 
-
 * Author: Webbu Design
-
 *
 
 ***********************************************************************************************************************************/
 
-add_filter( 'woocommerce_checkout_fields' , 'set_input_attrs' );
+/*add_filter( 'woocommerce_checkout_fields' , 'set_input_attrs' );
 function set_input_attrs( $fields ) {
 	$fields['billing']['billing_first_name'] = array('required'  => false);
 	$fields['billing']['billing_last_name'] = array('required'  => false);
@@ -26,7 +21,74 @@ function set_input_attrs( $fields ) {
 	$fields['billing']['billing_state'] = array('required'  => false);
 	$fields['billing']['billing_postcode'] = array('required'  => false);
    	return $fields;
+}*/
+
+// add_filter( 'show_admin_bar', '__return_false' );
+
+add_filter( 'woocommerce_checkout_fields' , 'set_input_attrs' );
+function set_input_attrs( $fields ) {
+	$fields['billing']['billing_address_2']['maxlength'] = 50;
+
+	$fields['billing']['billing_postcode']['maxlength'] = 12;
+
+	$fields['billing']['billing_country']['class'][] = "hide";
+/*
+	echo "<pre>";
+		print_r($fields);
+	echo "</pre>";*/
+
+   	return $fields;
 }
+
+// function wpdm_filter_siteurl($content) {
+// 	$current_server = $_SERVER['SERVER_NAME'];
+//    	return "http://".$current_server."/";
+// }
+
+// function wpdm_filter_home($content) {
+// 	$current_server = $_SERVER['SERVER_NAME'];
+//    	return "http://".$current_server."/";
+// }
+
+// function wpdm_conv_tag($content) {
+// 	$search = "/\[dmWpAddr\]/";
+// 	if (preg_match($search, $content)){
+// 		$replace = get_option('siteurl');
+// 		$content = preg_replace ($search, $replace, $content);
+// 	}
+// 	$search = "/\[dmBlogAddr\]/";
+// 	if (preg_match($search, $content)){
+// 		$replace = get_option('home');
+// 		$content = preg_replace ($search, $replace, $content);
+// 	}
+// 	$search = "/\[dmBlogTitle\]/";
+// 	if (preg_match($search, $content)){
+// 		$replace = get_option('blogname');
+// 		$content = preg_replace ($search, $replace, $content);
+// 	}
+// 	$search = "/\[dmTagLine\]/";
+// 	if (preg_match($search, $content)){
+// 		$replace = get_option('blogdescription');
+// 		$content = preg_replace ($search, $replace, $content);
+// 	}
+// 	return $content;
+// }
+
+// // Add the hooks:
+// add_filter('option_siteurl', 'wpdm_filter_siteurl', 1);
+// add_filter('option_home', 'wpdm_filter_home', 1);
+
+
+// function vlz_plugins_url($path = '', $plugin = '') {
+// 	$new_path = explode("/", $path);
+// 	$new_path[2] = $_SERVER['SERVER_NAME'];
+// 	return implode("/", $new_path);
+// }
+// add_filter('plugins_url', 'vlz_plugins_url', -10);
+
+
+// add_filter('the_content', 'wpdm_conv_tag'); 
+// add_filter('the_excerpt', 'wpdm_conv_tag'); 
 
 
 load_theme_textdomain( 'pointfindert2d',get_template_directory() . '/languages');
@@ -58,6 +120,9 @@ function mycode_more_info_button() {
 add_filter( 'woocommerce_add_cart_item_data', '_empty_cart' );
 function _empty_cart( $cart_item_data ){
 	WC()->cart->empty_cart();
+	echo "<pre>";
+		print_r($cart_item_data);
+	echo "</pre>";
 	return $cart_item_data;
 }
 
@@ -73,7 +138,6 @@ function is_cuidador(){
 	if( $user->roles[0] == 'vendor' ){
 		return 1;
 	}
-
 	$user_id = $user->ID;
 	if( $user_id != 0 ){
 		$query_postulaciones = new WP_Query( 
@@ -90,7 +154,6 @@ function is_cuidador(){
 	}else{
 		return 0;
 	}
-
 	/*
 		0: No esta logeado
 		1: Es cuidador
@@ -896,7 +959,5 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10);
 
 
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
-
-
 
 ?>

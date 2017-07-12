@@ -1948,7 +1948,8 @@ function pointfinder_get_vc_version(){
 
 function pe_theme_render_title() {
     ?>
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <!-- <title><?php wp_title( '|', true, 'left' ); ?></title> -->
+    <title>Hola</title>
     <?php
 }
 

@@ -19,20 +19,20 @@ function pointfinder_orders_styles_ex(){
 		wp_enqueue_script('jquery-ui-core');
 		wp_enqueue_script('jquery-ui-datepicker');	
 
-		wp_register_style( 'jquery-ui-core', get_template_directory_uri() ."/admin/estatemanagement/metabox/css/jqueryui/jquery.ui.core.css", array(), '1.8.17' );
-		wp_register_style( 'jquery-ui-theme', get_template_directory_uri() ."/admin/estatemanagement/metabox/css/jqueryui/jquery.ui.theme.css", array(), '1.8.17' );
-		wp_enqueue_style( 'jquery-ui-datepicker', get_template_directory_uri() ."/admin/estatemanagement/metabox/css/jqueryui/jquery.ui.datepicker.css", array( 'jquery-ui-core', 'jquery-ui-theme' ), '1.8.17' );
+		wp_register_style( 'jquery-ui-core', get_home_url()."/wp-content/themes/pointfinder" ."/admin/estatemanagement/metabox/css/jqueryui/jquery.ui.core.css", array(), '1.8.17' );
+		wp_register_style( 'jquery-ui-theme', get_home_url()."/wp-content/themes/pointfinder" ."/admin/estatemanagement/metabox/css/jqueryui/jquery.ui.theme.css", array(), '1.8.17' );
+		wp_enqueue_style( 'jquery-ui-datepicker', get_home_url()."/wp-content/themes/pointfinder" ."/admin/estatemanagement/metabox/css/jqueryui/jquery.ui.datepicker.css", array( 'jquery-ui-core', 'jquery-ui-theme' ), '1.8.17' );
 
 		wp_register_script(
 			'metabox-custom-cf-scriptspf', 
-			get_template_directory_uri() . '/admin/core/js/metabox-scripts.js', 
+			get_home_url()."/wp-content/themes/pointfinder" . '/admin/core/js/metabox-scripts.js', 
 			array('jquery'),
 			'1.0.0',
 			true
 		); 
         wp_enqueue_script('metabox-custom-cf-scriptspf'); 
 
-        wp_register_style('pfsearch-goldenforms-css', get_template_directory_uri() . '/css/golden-forms.css', array(), '1.0', 'all');
+        wp_register_style('pfsearch-goldenforms-css', get_home_url()."/wp-content/themes/pointfinder" . '/css/golden-forms.css', array(), '1.0', 'all');
 		wp_enqueue_style('pfsearch-goldenforms-css');
 
 
@@ -244,7 +244,7 @@ function pointfinder_itemdetailcf_process_lt_function( $post ) {
 		    	beforeSend:function(){
 		    		$('#pointfinder_itemdetailcf_process_lt .inside').pfLoadingOverlay({action:'show',message: '".esc_html__('Loading fields...','pointfindert2d')."'});
 		    	},
-				url: '".get_template_directory_uri()."/admin/core/pfajaxhandler.php',
+				url: '".get_home_url()."/wp-content/themes/pointfinder"."/admin/core/pfajaxhandler.php',
 				type: 'POST',
 				dataType: 'html',
 				data: {
@@ -337,7 +337,7 @@ function pointfinder_itemdetailcf_process_lt_function( $post ) {
 		    	beforeSend:function(){
 		    		$('#pointfinder_itemdetailcf_process_lt .inside').pfLoadingOverlay({action:'show',message: '".esc_html__('Loading fields ...','pointfindert2d')."'});
 		    	},
-				url: '".get_template_directory_uri()."/admin/core/pfajaxhandler.php',
+				url: '".get_home_url()."/wp-content/themes/pointfinder"."/admin/core/pfajaxhandler.php',
 				type: 'POST',
 				dataType: 'html',
 				data: {
@@ -451,7 +451,7 @@ function pointfinder_itemdetailcf_process_lt_function( $post ) {
 	echo "
 	$.pf_get_checklimits = function(itemid,limitvalue){
 		$.ajax({
-			url: '".get_template_directory_uri()."/admin/core/pfajaxhandler.php',
+			url: '".get_home_url()."/wp-content/themes/pointfinder"."/admin/core/pfajaxhandler.php',
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -759,7 +759,7 @@ function pointfinder_itemdetailcf_process_function( $post ) {
 			    	beforeSend:function(){
 			    		$('.pfsubmit-inner-customfields').pfLoadingOverlay({action:'show'});
 			    	},
-					url: '".get_template_directory_uri()."/admin/core/pfajaxhandler.php',
+					url: '".get_home_url()."/wp-content/themes/pointfinder"."/admin/core/pfajaxhandler.php',
 					type: 'POST',
 					dataType: 'html',
 					data: {
@@ -830,7 +830,7 @@ function pointfinder_itemdetailcf_process_fe_function( $post ) {
 				    	beforeSend:function(){
 				    		$('.pfsubmit-inner-features').pfLoadingOverlay({action:'show'});
 				    	},
-						url: '".get_template_directory_uri()."/admin/core/pfajaxhandler.php',
+						url: '".get_home_url()."/wp-content/themes/pointfinder"."/admin/core/pfajaxhandler.php',
 						type: 'POST',
 						dataType: 'html',
 						data: {
@@ -915,11 +915,11 @@ function pointfinder_itemdetailoh_process_fe_function( $post ) {
 	wp_enqueue_script('jquery-ui-core');
 	wp_enqueue_script('jquery-ui-datepicker');
 	wp_enqueue_script('jquery-ui-slider');
-	wp_register_script('theme-timepicker', get_template_directory_uri() . '/js/jquery-ui-timepicker-addon.js', array('jquery','jquery-ui-datepicker'), '4.0',true); 
+	wp_register_script('theme-timepicker', get_home_url()."/wp-content/themes/pointfinder" . '/js/jquery-ui-timepicker-addon.js', array('jquery','jquery-ui-datepicker'), '4.0',true); 
 	wp_enqueue_script('theme-timepicker');
-	wp_enqueue_style('jquery-ui-smoothnesspf3', get_template_directory_uri() . "/css/jquery-ui.min.css", false, null);
-	wp_enqueue_style('jquery-ui-smoothnesspf2', get_template_directory_uri() . "/css/jquery-ui.structure.min.css", false, null);
-	wp_enqueue_style('jquery-ui-smoothnesspf', get_template_directory_uri() . "/css/jquery-ui.theme.min.css", false, null);
+	wp_enqueue_style('jquery-ui-smoothnesspf3', get_home_url()."/wp-content/themes/pointfinder" . "/css/jquery-ui.min.css", false, null);
+	wp_enqueue_style('jquery-ui-smoothnesspf2', get_home_url()."/wp-content/themes/pointfinder" . "/css/jquery-ui.structure.min.css", false, null);
+	wp_enqueue_style('jquery-ui-smoothnesspf', get_home_url()."/wp-content/themes/pointfinder" . "/css/jquery-ui.theme.min.css", false, null);
 
 	
 	if ($setup3_modulessetup_openinghours_ex2 == 1) {

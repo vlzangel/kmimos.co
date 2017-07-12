@@ -1,13 +1,13 @@
-<?php
+<?php 
 
-/*
-    Template Name: vlz detalle Solicitud de conocer a cuidador
-*/
+	/*
+		Template Name: vlz detalle Solicitud de conocer a cuidador
+	*/
 
-get_header();
+	get_header();
 
-$valores = explode("/", $_SERVER['REDIRECT_URL']);
-$orden = $valores[ count($valores)-2 ];
+		$valores = explode("/", $_SERVER['REDIRECT_URL']);
+		$orden = $valores[ count($valores)-2 ];
 
 
 
@@ -50,133 +50,133 @@ $result = $wpdb->get_results($sql);
 
 ?>
 
-	<section role="main">
-		<div class="pf-container clearfix">
-			<div class="pf-row clearfix">
-				<div style="padding: 20px 0px">
+		<section role="main">
+			<div class="pf-container clearfix">
+				<div class="pf-row clearfix">
+					<div style="padding: 20px 0px">
 
 
-					<section>
-						<div class="vlz_titulos_superior">
-							<a href="<?php echo get_home_url()."/perfil-usuario/?ua=caregiver"; ?>" style="color: #00d2b7; border: solid 1px; padding: 3px 10px; margin: 0px; display: inline-block;">
-								Volver
-							</a> - Detalles de la Solicitud - <?php echo $orden; ?>
-						</div>
-					</section>
+						<section>
+							<div class="vlz_titulos_superior">
+								<a href="<?php echo get_home_url()."/perfil-usuario/?ua=caregiver"; ?>" style="color: #00d2b7; border: solid 1px; padding: 3px 10px; margin: 0px; display: inline-block;">
+									Volver
+								</a> - Detalles de la Solicitud - <?php echo $orden; ?>
+							</div>
+						</section>
 
-					<section>
+						<section>
 
-						<?php
-						if(count($result) > 0){
-							foreach($result as $solicitud){
+								<?php
+									if(count($result) > 0){
+										foreach($result as $solicitud){
 
 
-								$cuidador_meta = get_user_meta($solicitud->Cuidador_id);
-								$cuidador_data = get_userdata($solicitud->Cuidador_id);
+										$cuidador_meta = get_user_meta($solicitud->Cuidador_id);
+										$cuidador_data = get_userdata($solicitud->Cuidador_id);
 
-								$cliente_meta = get_user_meta($solicitud->Cliente_id);
-								$cliente_data = get_userdata($solicitud->Cliente_id);
-								//var_dump($cuidador_meta);
-								//var_dump($cuidador_data);
+										$cliente_meta = get_user_meta($solicitud->Cliente_id);
+										$cliente_data = get_userdata($solicitud->Cliente_id);
+										//var_dump($cuidador_meta);
+										//var_dump($cuidador_data);
 
 								?>
 
-								<div style="padding:10px 0; ">
-									<strong># Solicitud</strong>:
-									<?php echo $solicitud->Nro_solicitud; ?>
-								</div>
-								<div style="padding:10px;">
-									<h3>Detalle de la Solicitud</h3>
-									<div>
-										<strong>Fecha</strong>:
-										<?php echo $solicitud->Fecha_solicitud; ?>
-									</div>
-									<div>
-										<strong>Desde</strong>:
-										<?php echo $solicitud->Servicio_desde; ?>
-									</div>
-									<div>
-										<strong>Hasta</strong>:
-										<?php echo $solicitud->Servicio_hasta; ?>
-									</div>
-								</div>
+											<div style="padding:10px 0; ">
+												<strong># Solicitud</strong>:
+												<?php echo $solicitud->Nro_solicitud; ?>
+											</div>
+											<div style="padding:10px;">
+												<h3>Detalle de la Solicitud</h3>
+												<div>
+													<strong>Fecha</strong>:
+													<?php echo $solicitud->Fecha_solicitud; ?>
+												</div>
+												<div>
+													<strong>Desde</strong>:
+													<?php echo $solicitud->Servicio_desde; ?>
+												</div>
+												<div>
+													<strong>Hasta</strong>:
+													<?php echo $solicitud->Servicio_hasta; ?>
+												</div>
+											</div>
 
-								<div style="padding:10px;">
-									<div>
-										<strong>Lugar</strong>:
-										<?php echo utf8_encode($solicitud->Donde); ?>
-									</div>
-									<div>
-										<strong>Cuando</strong>:
-										<?php echo $solicitud->Cuando.' '.$solicitud->Hora; ?>
-									</div>
-								</div>
+											<div style="padding:10px;">
+												<div>
+													<strong>Lugar</strong>:
+													<?php echo utf8_encode($solicitud->Donde); ?>
+												</div>
+												<div>
+													<strong>Cuando</strong>:
+													<?php echo $solicitud->Cuando.' '.$solicitud->Hora; ?>
+												</div>
+											</div>
 
-								<!-- nombre de la(s) mascota -->
-								<!-- tamaño -->
-								<div style="padding:10px;">
-									<h3>Detalle del Cliente</h3>
-									<div>
-										<strong>Nombre del cliente</strong>:
-										<?php echo $cliente_meta['first_name'][0].' '. $cliente_meta['last_name'][0]; ?>
-									</div>
-									<div>
-										<strong>Teléfono del cliente</strong>:
-										<?php echo $cliente_meta['user_phone'][0];?>
-									</div>
-									<div>
-										<strong>Correo del cliente</strong>:
-										<?php echo $cliente_data->user_email;?>
-									</div>
-								</div>
+											<!-- nombre de la(s) mascota -->
+											<!-- tamaño -->
+											<div style="padding:10px;">
+												<h3>Detalle del Cliente</h3>
+												<div>
+													<strong>Nombre del cliente</strong>:
+													<?php echo $cliente_meta['first_name'][0].' '. $cliente_meta['last_name'][0]; ?>
+												</div>
+												<div>
+													<strong>Teléfono del cliente</strong>:
+													<?php echo $cliente_meta['user_phone'][0];?>
+												</div>
+												<div>
+													<strong>Correo del cliente</strong>:
+													<?php echo $cliente_data->user_email;?>
+												</div>
+											</div>
 
-								<div style="padding:10px;">
-									<h3>Detalle del Cuidador</h3>
-									<div>
-										<strong>Nombre del cuidador</strong>:
-										<?php echo $cuidador_meta['first_name'][0].' '. $cuidador_meta['last_name'][0]; ?>
-									</div>
-									<div>
-										<strong>Teléfono del cuidador</strong>:
-										<?php echo $cuidador_meta['user_phone'][0];?>
-									</div>
-									<div>
-										<strong>Correo del cuidador</strong>:
-										<?php echo $cuidador_data->user_email;?>
-									</div>
-								</div>
+											<div style="padding:10px;">
+												<h3>Detalle del Cuidador</h3>
+												<div>
+													<strong>Nombre del cuidador</strong>:
+													<?php echo $cuidador_meta['first_name'][0].' '. $cuidador_meta['last_name'][0]; ?>
+												</div>
+												<div>
+													<strong>Teléfono del cuidador</strong>:
+													<?php echo $cuidador_meta['user_phone'][0];?>
+												</div>
+												<div>
+													<strong>Correo del cuidador</strong>:
+													<?php echo $cuidador_data->user_email;?>
+												</div>
+											</div>
 
-								<div style="padding:10px;">
-									<div>
-										<strong>Estatus</strong>:
-										<?php
-										if($solicitud->Estatus=='draft'){
-											echo 'Cancelado';
+											<div style="padding:10px;">
+												<div>
+													<strong>Estatus</strong>:
+													<?php
+														if($solicitud->Estatus=='draft'){
+															echo 'Cancelado';
 
-										}else if($solicitud->Estatus=='publish'){
-											echo 'Confirmado';
+														}else if($solicitud->Estatus=='publish'){
+															echo 'Confirmado';
 
-										}else{
-											echo 'Pendiente';
-											//echo $solicitud->Estatus;
-										}
-										?>
-									</div>
-								</div>
+														}else{
+															echo 'Pendiente';
+															//echo $solicitud->Estatus;
+														}
+													?>
+												</div>
+											</div>
 
 								<?php
-							}
-						}
-						?>
-						</tbody>
-						</table>
-					</section>
+										}
+									}
+								?>
+								</tbody>
+							</table>
+						</section>
 
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
 <?php
-get_footer();
+	get_footer(); 
 ?>

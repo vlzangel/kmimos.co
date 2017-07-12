@@ -11,23 +11,6 @@
 add_action( 'PF_AJAX_HANDLER_pfget_usersystemhandler', 'pf_ajax_usersystemhandler' );
 add_action( 'PF_AJAX_HANDLER_nopriv_pfget_usersystemhandler', 'pf_ajax_usersystemhandler' );
 
-function generarClave($lenght=8){
-    $lenght = ($lenght<8)? 8 : $lenght;
-    $char = strRand(1, "abcdefghijklmnopqrstuvwxyz");
-    $char .= strRand(1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    $char .= strRand(1, "0123456789");
-    $char .= strRand(1, "#");
-    $char .= strRand($lenght-4);
-    return str_shuffle($char);
-}
-
-function strRand($lenght=8, $char = ""){
-    if($char == ""){
-        $char = "#0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    }
-    return substr(str_shuffle($char), 0, $lenght);
-}
-
 function pf_ajax_usersystemhandler(){
 	//Security
   check_ajax_referer( 'pfget_usersystemhandler', 'security' );
@@ -71,8 +54,18 @@ function pf_ajax_usersystemhandler(){
         }else{
           $rememberme = false;
         }
-        $info = array();
-            $info['user_login'] = sanitize_user($vars['username'],true);
+            $info = array();
+
+            $username = sanitize_user($vars['username'], true);
+
+            $user = get_user_by( 'email', $username );
+            if ( isset( $user, $user->user_login, $user->user_status ) && 0 == (int) $user->user_status ){
+                $username = $user->user_login;
+            }else{
+                $username = sanitize_user($vars['username'], true);
+            }
+
+            $info['user_login'] = $username;
             $info['user_password'] = sanitize_text_field($vars['password']);
             $info['remember'] = $rememberme;
 
@@ -169,19 +162,16 @@ function pf_ajax_usersystemhandler(){
         } else {
 
             
-            // $password = wp_generate_password( 12, false );
-
-            $password = generarClave();
-
+            $password = wp_generate_password( 12, false );
             $user_id = wp_create_user( $username, $password, $email );
 
             wp_update_user( array( 'ID' => $user_id ));
 
             $user = new WP_User( $user_id );
-            $user->set_role( 'subscriber' );
+            $user->set_role( '_subscriber' );
 
            
-            /*$message_reply = pointfinder_mailsystem_mailsender(
+            $message_reply = pointfinder_mailsystem_mailsender(
     					array(
     						'toemail' => $email,
     				        'predefined' => 'registration',
@@ -196,60 +186,30 @@ function pf_ajax_usersystemhandler(){
                     'predefined' => 'registrationadmin',
                     'data' => array('username'=>$username),
               )
-            );*/
+            );
 
-            $mensaje_mail = '
-                <h1>¡Gracias por unirte a nuestra familia Kmimos!</h1>
-                <p>Hola <strong>'.$username.'</strong>,</p>
-                <p style="text-align: justify;">
-                    Abajo encontrarás tus credenciales para que tengas acceso a Kmimos.
-                </p>
-                <p>
-                    <table>
-                        <tr> <td> <strong>Usuario:</strong> </td><td>'.$username.'</td> </tr>
-                        <tr> <td> <strong>Contraseña:</strong> </td><td>'.$password.'</td> </tr>
-                    </table>
-                </p>
-                <p style="text-align: center;">
-                    <a 
-                        href="'.get_home_url().'/?a=inicio"
-                        style="
-                            padding: 10px;
-                            background: #59c9a8;
-                            color: #fff;
-                            font-weight: 400;
-                            font-size: 17px;
-                            font-family: Roboto;
-                            border-radius: 3px;
-                            border: solid 1px #1f906e;
-                            display: block;
-                            max-width: 300px;
-                            margin: 0px auto;
-                            text-align: center;
-                            text-decoration: none;
-                        "
-                    >Iniciar Sesión</a>
-                </p>
-            ';
-
-            add_filter( 'wp_mail_from_name', function( $name ) {
-                return 'Kmimos Colombia';
-            });
-            add_filter( 'wp_mail_from', function( $email ) {
-                return 'kmimos@kmimos.la';
-            });
-
-            $mail_msg = kmimos_get_email_html("Registro de Nuevo Usuario.", $mensaje_mail, '', true, true);
-
-            if ( wp_mail( $email, "Kmimos Colombia– Gracias por registrarte! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg) ) {
+            if ( $message_reply) {
 
                 $message = esc_html__("Success! Check your email for your password!","pointfindert2d");
 
-                echo json_encode( array( 'status'=>0 , 'mes'=>$message));
+                /*
+                // Changed with v1.5.9
+                $message = esc_html__("Success! Check your email for your password! You will be auto login in 3sec.","pointfindert2d");
+
+                
+                $user = get_user_by( 'id', $user_id ); 
+                if( $user ) {
+                    wp_set_current_user( $user_id, $user->user_login );
+                    wp_set_auth_cookie( $user_id );
+                    do_action( 'wp_login', $user->user_login );
+                }
+                */
+                
+                echo json_encode( array( 'status'=>0, 'mes'=>$message));
 
             } else {
 
-                $message = esc_html__("No hemos podido enviar el E-mail.","pointfindert2d");
+                $message = esc_html__("Looks like your Mail Configuration not completed. Please check Mail Config Panel > Email Settings under PF Settings","pointfindert2d");
                 echo json_encode( array( 'status'=>03, 'mes'=>$message));
             }
         }

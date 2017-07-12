@@ -14,7 +14,7 @@ if (is_user_logged_in()) {
 		function pf_dashboard_widget_scripts() {
 			$screen = get_current_screen();
 			if ($screen->id == 'dashboard') {
-				wp_register_style( 'dashboard-widget-style', get_template_directory_uri() . '/admin/core/css/dashboard-custom.css', false, '1.0.0' );
+				wp_register_style( 'dashboard-widget-style', get_home_url()."/wp-content/themes/pointfinder" . '/admin/core/css/dashboard-custom.css', false, '1.0.0' );
 		        wp_enqueue_style( 'dashboard-widget-style' );
 			}     
 		}

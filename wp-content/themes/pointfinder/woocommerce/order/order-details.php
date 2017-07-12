@@ -24,11 +24,11 @@ $order = wc_get_order( $order_id );
 $show_purchase_note    = $order->has_status( apply_filters( 'woocommerce_purchase_note_order_statuses', array( 'completed', 'processing' ) ) );
 $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_current_user_id();
 ?>
-<h2><?php _e( 'Detalles de la reserva', 'woocommerce' ); ?></h2>
+<h2><?php _e( 'Order Details', 'woocommerce' ); ?></h2>
 <table class="shop_table order_details">
 	<thead>
 		<tr>
-			<th class="product-name"><?php _e( 'Servicio', 'woocommerce' ); ?></th>
+			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
@@ -53,12 +53,30 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	<tfoot>
 		<?php
 			foreach ( $order->get_order_item_totals() as $key => $total ) {
-				?>
-				<tr>
-					<th scope="row"><?php echo $total['label']; ?></th>
-					<td><?php echo $total['value']; ?></td>
-				</tr>
-				<?php
+
+				// echo $total['label']." == ".$total['value']."<br>";
+
+				if( $total['label'] == "Total:" ){ $total['label'] = ""; }
+				if( $total['label'] == "Pague hoy" && $total['value'] == "0"  ){ $total['label'] = ""; }
+				if( $total['label'] == "Subtotal:" ){ $total['label'] = "Total"; }
+
+
+				if( $total['label'] != ""  ){
+					if( 
+						$total['label'] == "Descuento:" ||
+						$total['label'] == "Pague hoy"
+					){ ?>
+						<tr>
+							<th scope="row" class='texto_kmimos'><?php echo $total['label']; ?></th>
+							<td class='texto_kmimos'><?php echo $total['value']; ?></td>
+						</tr> <?php
+					}else{ ?>
+						<tr>
+							<th scope="row"><?php echo $total['label']; ?></th>
+							<td><?php echo $total['value']; ?></td>
+						</tr> <?php
+					}
+				}
 			}
 		?>
 	</tfoot>
@@ -69,10 +87,3 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 <?php if ( $show_customer_details ) : ?>
 	<?php //wc_get_template( 'order/order-details-customer.php', array( 'order' =>  $order ) ); ?>
 <?php endif; ?>
-<style>
-	.variation-Duracin,
-	.variation-Ofrecidopor,
-	.variation-ReservaID{
-		display: none !important;
-	}
-</style>
