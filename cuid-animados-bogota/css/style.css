@@ -50,7 +50,6 @@ section.red #img6{height:40%; left:125px;}
 /*NEW*/
 #testimony .image{background:#000 center top/contain no-repeat;}
 
-
 @media screen and (max-width:768px), screen and (max-device-width:768px){}
 @media screen and (max-width:480px), screen and (max-device-width:480px){
     section .content{font-size:25px;}
