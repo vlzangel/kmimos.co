@@ -67,7 +67,7 @@
 	function pointfinder_items_manage_columns( $column, $post_id ) {
 		
 		global $post;
-		$noimg_url = get_template_directory_uri().'/images/noimg.png';
+		$noimg_url = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
 
 		switch( $column ) {
 			case 'estatephoto' :

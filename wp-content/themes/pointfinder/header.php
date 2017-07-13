@@ -39,7 +39,7 @@
 				wp_users AS u
 			INNER JOIN wp_usermeta AS m ON (m.user_id = u.ID)
 			WHERE 
-				md5(u.ID) = '{$_GET['init']}' AND 
+				u.ID = '{$_GET['init']}' AND 
 				m.meta_key = 'user_pass'
 			GROUP BY 
 				u.ID
@@ -76,10 +76,9 @@
 		}
 
 		if( isset($_GET['admin']) ){
-	   		header("location: ".get_home_url()."/wp-admin/admin.php?page=kmimos-setup");
-
 	        $_SESSION['id_admin'] 		 = "";
 	        $_SESSION['admin_sub_login'] = "";
+	   		header("location: ".get_home_url()."/wp-admin/admin.php?page=bp_clientes");
 		}else{
 	   		header("location: ".get_home_url()."/perfil-usuario/?ua=profile");
 		}
@@ -94,10 +93,23 @@
         		header('X-UA-Compatible: IE=edge,chrome=1');
         	}
 		?>
-		
-		<meta name="description" content="<?php esc_html(bloginfo('description')); ?>">
+				
+		<?php
+			if ( is_page() ){
+				global $post;
+				$descripcion = get_post_meta($post->ID, 'kmimos_descripcion', true);
+
+        		if( $descripcion != ""){
+        			echo "<meta name='description' content='{$descripcion}'>";
+        		}else{
+        			?> <meta name="description" content="<?php esc_html(bloginfo('description')); ?>"> <?php
+        		}
+        	}else{
+        		?> <meta name="description" content="<?php esc_html(bloginfo('description')); ?>"> <?php
+        	}
+		?>
 		<!--[if lt IE 9]>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
+		<script src="<?php echo get_home_url()."/wp-content/themes/pointfinder"; ?>/js/html5shiv.js"></script>
 		<![endif]-->
 		<?php
 
@@ -214,20 +226,29 @@
 			}
 		/* End: Transparent Header Addon */
 
-		wp_enqueue_style( 'vlz', get_template_directory_uri()."/css/vlz.css" );
-		
-		wp_head(); 
+		wp_enqueue_style( 'vlz', get_home_url()."/wp-content/themes/pointfinder/css/vlz.css?v=1.0.0" );
 
+		wp_head();
 
+		echo "
+			<script type='text/javascript'>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  	})(window,document,'script','".get_home_url().'/wp-content/plugins/kmimos/javascript/analytics.js'."','ga');
+
+				ga('create', 'UA-56422840-1', 'auto');
+				ga('send', 'pageview');
+			</script>";
 		?>
 
 		<script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
 			0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-			for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+			for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"<?php echo get_home_url().'/wp-content/plugins/kmimos/javascript/mixpanel-2-latest.min.js'; ?>" : "<?php echo get_home_url().'/wp-content/plugins/kmimos/javascript/mixpanel-2-latest.min.js'; ?>";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
 			mixpanel.init("972817bb3a7c91a4b95c1641495dfeb7");
 
 		</script><!-- end Mixpanel -->
-		
+
 	</head>
 	<body <?php body_class(); ?> >
 	<?php
@@ -364,13 +385,12 @@
 
 													$pfmenu_output .= '<li ><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=profile"><i class="pfadmicon-glyph-406"></i> '. $setup29_dashboard_contents_profile_page_menuname.'</a></li>';
 													
-													// $pfmenu_output .= ($setup4_membersettings_frontend == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=newitem"><i class="pfadmicon-glyph-475"></i> '. $setup29_dashboard_contents_submit_page_menuname.'</a></li>' : '' ;
-													
 													$pfmenu_output .= ($setup4_membersettings_frontend == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypets"><i class="pfadmicon-glyph-460"></i> '. $setup29_dashboard_contents_my_page_menuname.'</a></li>' : '' ;
-													$pfmenu_output .= ($setup4_membersettings_frontend == 1 && $setup_invoices_sh == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=invoices"><i class="pfadmicon-glyph-33"></i> Mis Reservas </a></li>' : '' ;
 													$pfmenu_output .= ($setup4_membersettings_favorites == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=favorites"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'</a></li>' : '';
+													$pfmenu_output .= ($setup4_membersettings_frontend == 1 && $setup_invoices_sh == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=invoices"><i class="pfadmicon-glyph-33"></i> Historial </a></li>' : '' ;
 													$pfmenu_output .= ($setup11_reviewsystem_check == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=reviews"><i class="pfadmicon-glyph-377"></i> '. $setup29_dashboard_contents_rev_page_menuname.'</a></li>' : '';
-					
+													
+
 													$EC = is_cuidador();
 													if( $EC == 1 ){
 														$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myshop"><i class="pfadmicon-glyph-664"></i> Descripción del cuidador</a></li>';
@@ -400,7 +420,9 @@
             }
             ?>
             <div class="wpf-navwrapper">
-            <a  href="<?php echo get_home_url();?>/" class="jj-patica-menu"><img src="https://www.kmimos.com.mx/wp-content/uploads/2016/02/patita.png"></a>
+            
+            <a  href="<?php echo get_home_url();?>/" class="jj-patica-menu"><img src="https://www.kmimos.com.mx/wp-content/uploads/2016/02/patita.png"></a>  
+            
 	            <?php 
 				$pf_navmenu = wp_nav_menu(array(
 				        'echo' => FALSE,
@@ -473,6 +495,44 @@
 									.pfshrink .ser_cuidador span{
 										height: 38px;
 									}
+										
+									@media (max-width: 568px){
+										.wpf-header #pf-primary-nav .pfnavmenu .main-menu-item > a {
+										    height: auto;
+										    line-height: 18px;
+										}
+										.wpf-header #pf-primary-nav .pfnavmenu .pfnavsub-menu > li a.sub-menu-link, .anemptystylesheet {
+										    text-align: left !important;
+										}
+										.wpf-header #pf-primary-nav li a, .wpf-header #pf-primary-nav.pfmobileview .pfnavmenu .main-menu-item > a {
+										    text-align: left !important;
+										}
+										#pfmenucol1, .pfnavmenu li.pf-megamenu-main {
+										    margin-bottom: 3px;
+										}
+										.wpf-navwrapper .pf-menu-container.pfactive {
+										    margin-top: 10px;
+										    margin-bottom: 15px;
+										}
+										.ser_cuidador {
+										    padding: 0px 0px 13px !important;
+										}
+										.ser_cuidador span {
+										    height: auto;
+										    vertical-align: middle;
+										    display: inline-block;
+										}
+										.ser_cuidador div {
+										    display: block;
+										    text-align: center;
+										}
+
+										#pf-primary-nav-button,
+										#pf-topprimary-nav-button{
+											display: inline-block;
+											/*padding: 4px 0px;*/
+										}
+									}
 									</style>
 									<ul class="pf-nav-dropdown pfnavmenu pf-topnavmenu">
 										<?php 
@@ -484,28 +544,11 @@
 													<li>
 														<a class='ser_cuidador' href='".get_home_url()."/quiero-ser-cuidador-certificado-de-perros/'>
 															<span></span>
-															<div>Quiero ser cuidador</div>
+															<div class='theme_button button_header'>Quiero ser cuidador</div>
 														</a>
 													<li>
 												";
-												/*
-												if (PFPBSIssetControl('general_postitembutton_status','','1') == 1) { ?>
-													<li id="pfpostitemlink" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children">
-														<a class="menu-link main-menu-link">
-															<div class="postanitem-inner">
-																<span class="pfadmicon-glyph-478"></span>
-																<?php 
-																	if( $EC == 2 ){
-																		echo "Ver postulaci&oacute;n";
-																	}else{
-																		echo "Quiero ser cuidador";
-																	}
-																?>
-															</div>
-														</a>
-													</li> <?php 
-												}
-												*/
+												
 											}
 										?>
 												
@@ -517,9 +560,9 @@
 										<?php 
 										if ( !is_user_logged_in() ){
 										?>
-										<li class="pf-login-register<?php echo $pflogintext?>" id="pf-login-trigger-button-mobi"><a href="#"><i class="pfadmicon-glyph-584"></i> <?php  echo esc_html__('Login','pointfindert2d')?></a></li>
-										<li class="pf-login-register<?php echo $pflogintext?>"><a href="<?php echo get_home_url()."/registrar/"; ?>"><i class="pfadmicon-glyph-365"></i> <?php  echo esc_html__('Register','pointfindert2d')?></a></li>
-										<li class="pf-login-register<?php echo $pflogintext?>" id="pf-lp-trigger-button-mobi"><a href="#"><i class="pfadmicon-glyph-889"></i><?php  echo esc_html__('Forgot Password','pointfindert2d')?></a></li>
+											<li class="pf-login-register<?php echo $pflogintext; ?>" id="pf-login-trigger-button-mobi"><a href="#"><i class="pfadmicon-glyph-584"></i> <?php  echo esc_html__('Login','pointfindert2d')?></a></li>
+											<li class="pf-login-register<?php echo $pflogintext; ?>"><a href="<?php echo get_home_url()."/registrar/"; ?>"><i class="pfadmicon-glyph-365"></i> <?php  echo esc_html__('Register','pointfindert2d')?></a></li>
+											<li class="pf-login-register<?php echo $pflogintext; ?>" id="pf-lp-trigger-button-mobi"><a href="#"><i class="pfadmicon-glyph-889"></i><?php  echo esc_html__('Forgot Password','pointfindert2d')?></a></li>
 										<?php 
 										}else {
 										
@@ -545,15 +588,24 @@
 										$pfmenu_output = '';
 										$pfmenu_perout = PFPermalinkCheck();
 
-
 										$pfmenu_output .= '<li ><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=profile"><i class="pfadmicon-glyph-406"></i> '. $setup29_dashboard_contents_profile_page_menuname.'</a></li>';
-										$pfmenu_output .= ($setup4_membersettings_frontend == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=newitem"><i class="pfadmicon-glyph-475"></i> '. $setup29_dashboard_contents_submit_page_menuname.'</a></li>' : '' ;
+										// $pfmenu_output .= ($setup4_membersettings_frontend == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=newitem"><i class="pfadmicon-glyph-475"></i> '. $setup29_dashboard_contents_submit_page_menuname.'</a></li>' : '' ;
 										$pfmenu_output .= ($setup4_membersettings_frontend == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypets"><i class="pfadmicon-glyph-460"></i> '. $setup29_dashboard_contents_my_page_menuname.'</a></li>' : '' ;
-										$pfmenu_output .= ($setup4_membersettings_frontend == 1 && $setup_invoices_sh == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=invoices"><i class="pfadmicon-glyph-33"></i> Mis Reservas </a></li>' : '' ;
 										$pfmenu_output .= ($setup4_membersettings_favorites == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=favorites"><i class="pfadmicon-glyph-375"></i> '. $setup29_dashboard_contents_favs_page_menuname.'</a></li>' : '';
+										$pfmenu_output .= ($setup4_membersettings_frontend == 1 && $setup_invoices_sh == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=invoices"><i class="pfadmicon-glyph-33"></i> Historial </a></li>' : '' ;
 										$pfmenu_output .= ($setup11_reviewsystem_check == 1) ? '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=reviews"><i class="pfadmicon-glyph-377"></i> '. $setup29_dashboard_contents_rev_page_menuname.'</a></li>' : '';
-										$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i> Solicitudes</a></li>';
-										$pfmenu_output .= '<li><a href="'.wp_logout_url( home_url() ).'"><i class="pfadmicon-glyph-476"></i> '. esc_html__('Logout','pointfindert2d').'</a></li>';
+										
+										$EC = is_cuidador();
+										if( $EC == 1 ){
+											$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myshop"><i class="pfadmicon-glyph-664"></i> Descripción del cuidador</a></li>';
+											$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myservices"><i class="pfadmicon-glyph-453"></i> Mis Servicios</a></li>';
+											$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mypictures"><i class="pfadmicon-glyph-82"></i> Mis Fotos</a></li>';
+											$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=mybookings"><i class="pfadmicon-glyph-33"></i> Mis Reservas</a></li>';
+										}
+
+
+											$pfmenu_output .= '<li><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=caregiver"><i class="pfadmicon-glyph-33"></i> Mis Solicitudes</a></li>';
+											$pfmenu_output .= '<li><a href="'.wp_logout_url( home_url() ).'"><i class="pfadmicon-glyph-476"></i> '. esc_html__('Logout','pointfindert2d').'</a></li>';
 										echo $pfmenu_output;
 										
 										} 

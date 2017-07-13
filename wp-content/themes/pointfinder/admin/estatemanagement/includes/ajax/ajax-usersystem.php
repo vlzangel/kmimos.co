@@ -127,7 +127,7 @@ function pf_ajax_usersystem(){
           jQuery( document ).ready(function() {
             jQuery('#pf-ajax-vlz_recuperar-form').submit(function(e){
                 jQuery('#pf-membersystem-dialog').pfLoadingOverlay({action:'show'});
-                jQuery.post( '<?php echo get_template_directory_uri()."/kmimos/restablecer.php"; ?>', {email:  jQuery("#pf-ajax-vlz_recuperar-form #email").attr("value")}, 
+                jQuery.post( '<?php echo get_home_url()."/wp-content/themes/pointfinder"."/kmimos/restablecer.php"; ?>', {email:  jQuery("#pf-ajax-vlz_recuperar-form #email").attr("value")}, 
                     function( data ) {
                       var data = eval(data);
                       jQuery('#pf-membersystem-dialog').pfLoadingOverlay({action:'hide'});

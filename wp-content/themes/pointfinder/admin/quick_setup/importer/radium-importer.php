@@ -194,15 +194,15 @@ class PointFinder_Theme_Importer {
             $pagename = (isset($_GET['page']))?$_GET['page']:'';
 
             if ($pagenow == 'admin.php' && $pagename == 'pointfinder_demo_installer') {
-                wp_register_script( 'pfcp-quickjs', get_template_directory_uri() . '/admin/quick_setup/js/script.js',  array('jquery'),true, '1.0.0' );
+                wp_register_script( 'pfcp-quickjs', get_home_url()."/wp-content/themes/pointfinder" . '/admin/quick_setup/js/script.js',  array('jquery'),true, '1.0.0' );
                 wp_enqueue_script( 'pfcp-quickjs' );
                 wp_localize_script( 'pfcp-quickjs', 'theme_quickjs', array( 
-                  'ajaxurl' => get_template_directory_uri().'/admin/core/pfajaxhandler.php',
+                  'ajaxurl' => get_home_url()."/wp-content/themes/pointfinder".'/admin/core/pfajaxhandler.php',
                   'pfget_quicksetupprocess' => wp_create_nonce('pfget_quicksetupprocess'),
                   'buttonwait' => esc_html__('Please wait...','pointfindert2d'),
                   'buttonok' => esc_html__('Run Quick Setup','pointfindert2d'),
                   'buttonerror' => esc_html__('An error occured.','pointfindert2d'),
-                  'loadingimg' => get_template_directory_uri().'/images/info-loading.gif'
+                  'loadingimg' => get_home_url()."/wp-content/themes/pointfinder".'/images/info-loading.gif'
                 ));
             }
         }

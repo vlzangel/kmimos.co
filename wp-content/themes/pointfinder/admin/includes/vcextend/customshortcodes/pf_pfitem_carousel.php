@@ -435,20 +435,20 @@ $wpflistdata .= '
 									if($ItemDetailArr['featured_image'] === false) {
 										$ItemDetailArr['featured_image'] = $ItemDetailArr['featured_image_org'];
 										if($ItemDetailArr['featured_image'] == '') {
-											$ItemDetailArr['featured_image'] = get_template_directory_uri().'/images/noimg.png';
+											$ItemDetailArr['featured_image'] = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
 										}
 									}
 								}else{
 									$ItemDetailArr['featured_image'] = $ItemDetailArr['featured_image_org'];
 									if($ItemDetailArr['featured_image'] == '') {
-										$ItemDetailArr['featured_image'] = get_template_directory_uri().'/images/noimg.png';
+										$ItemDetailArr['featured_image'] = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
 									}
 								}
 								
 							}
 				
 						}else{
-							$ItemDetailArr['featured_image'] = get_template_directory_uri().'/images/noimg.png';
+							$ItemDetailArr['featured_image'] = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
 						}
 						//Title
 						$ItemDetailArr['if_title'] = get_the_title($pfitemid);

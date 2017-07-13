@@ -11,6 +11,13 @@ function getUserByEmail($user_email=""){
 	return $result;	
 }
 
+function dias_transcurridos($fecha_i,$fecha_f)
+{
+	$dias	= (strtotime($fecha_i)-strtotime($fecha_f))/86400;
+	$dias 	= abs($dias); $dias = floor($dias);		
+	return $dias;
+}
+
 function get_metaUser($user_id=0, $condicion=''){
 	$sql = "
 		SELECT u.user_email, m.*
@@ -24,13 +31,22 @@ function get_metaUser($user_id=0, $condicion=''){
 	return $result;	
 }
 
-function date_convert( $str_date, $format = 'd-m-Y H:i:s' ){
-	return date($format,strtotime($str_date));
+function date_convert( $str_date, $format = 'd-m-Y H:i:s', $totime=true ){
+	$fecha = $str_date;
+	if(!empty($str_date)){
+		if($totime){
+			$time = strtotime($str_date);
+		}
+		$fecha = date($format,$time);
+	}
+	return $fecha;
 }
 
 function currency_format( $str, $signo="$ " ){
 	if(!empty($str)){
 		$str = $signo.number_format($str, 2, ',', '.');
+	}else{
+		$str = $signo."0";
 	}
 	return $str;
 }
@@ -42,7 +58,7 @@ function get_metaPost($post_id=0, $condicion=''){
 		WHERE 
 			u.post_id = {$post_id} 
 			{$condicion}
-	";
+	";	
 	$result = get_fetch_assoc($sql);
 	return $result;	
 }

@@ -53,9 +53,9 @@ if (!defined('ABSPATH')) die('-1');
 		
 		function fontelloie7_pfa () {
 			echo '<!--[if IE 7]>
-			<link rel="stylesheet" href="'.get_template_directory_uri() . '/css/fontello-ie7.css">
+			<link rel="stylesheet" href="'.get_home_url()."/wp-content/themes/pointfinder" . '/css/fontello-ie7.css">
 			<![endif]-->
-			<script type="text/javascript" src="'.get_template_directory_uri() . '/admin/includes/vcextend/assets/jquery.qtip-1.0.0-rc3.js"></script>
+			<script type="text/javascript" src="'.get_home_url()."/wp-content/themes/pointfinder" . '/admin/includes/vcextend/assets/jquery.qtip-1.0.0-rc3.js"></script>
 			';
 		}
 		add_action('admin_head', 'fontelloie7_pfa',200);
