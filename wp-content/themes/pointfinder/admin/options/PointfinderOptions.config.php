@@ -271,7 +271,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 					'id' => 'setup27_socialiconsbarstyles',
 					'subsection' => true,
 					'title' => esc_html__('Top Line: Layout', 'pointfindert2d'),
-					'desc' => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to top page line.<br /> You can change styles of this area by using below options.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_topline.png" class="description-img" />'),
+					'desc' => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to top page line.<br /> You can change styles of this area by using below options.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_topline.png" class="description-img" />'),
 					'fields' => array(
 							array(
 								'id' => 'setup19_socialiconsbarsettings_phoneemail_typo',
@@ -371,7 +371,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 					'id' => 'setup19_socialiconsbarsettings',
 					'subsection' => true,
 					'title' => esc_html__('Top Line: Social Links', 'pointfindert2d'),
-					'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to social links.', 'pointfindert2d').'<br />'.esc_html__('You can change styles of this area by using below options. You can add 8 socials links at most simultaneously.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_toplinesc.png" class="description-img" />'),
+					'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to social links.', 'pointfindert2d').'<br />'.esc_html__('You can change styles of this area by using below options. You can add 8 socials links at most simultaneously.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_toplinesc.png" class="description-img" />'),
 					'fields' => array(
 							
 							array(
@@ -517,7 +517,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 								'type' => 'info',
 								'notice' => true,
 								'style' => 'info',
-								'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to Menu Bar.<br /> You can change styles of this area by using below options. You can also change styles of sticky menu.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_menubar.png" class="description-img" />'),
+								'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to Menu Bar.<br /> You can change styles of this area by using below options. You can also change styles of sticky menu.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_menubar.png" class="description-img" />'),
 							) ,
 							array(
 		                        'id'        => 'setup18_headerbarsettings_bgcolor',
@@ -567,7 +567,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 								'type' => 'info',
 								'notice' => true,
 								'style' => 'info',
-								'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to Dropdown Menu.<br /> You can change styles of this area by using below options. ', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_menustyles.png" class="description-img" />'),
+								'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to Dropdown Menu.<br /> You can change styles of this area by using below options. ', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_menustyles.png" class="description-img" />'),
 							) ,
 							
 							array(
@@ -723,7 +723,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 					'title' => esc_html__('Header Bar', 'pointfindert2d'),
 					'subsection' => true,
 					'heading'     => esc_html__('Default Page Header Bar', 'pointfindert2d'),
-	                'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to Default Header Bar.<br /> You can define a default header bar when header bar could not be created by user. Ex:bbPress inner pages, DSI IDX inner pages, 404 page, category page, archive page etc..', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_forheader.png" class="description-img" />'),
+	                'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to Default Header Bar.<br /> You can define a default header bar when header bar could not be created by user. Ex:bbPress inner pages, DSI IDX inner pages, 404 page, category page, archive page etc..', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_forheader.png" class="description-img" />'),
 					'fields' => array(
 							array(
 								'id' => 'setup43_themecustomizer_headerbar_shadowopt',
@@ -807,7 +807,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 							'type' => 'info',
 							'notice' => true,
 							'style' => 'info',
-							'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to Page Body.<br /> You can change styles of this area by using below options.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_formainbody.png" class="description-img" />'),
+							'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to Page Body.<br /> You can change styles of this area by using below options.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_formainbody.png" class="description-img" />'),
 						) ,
 						array(
 							'id' => 'tcustomizer_colors_linkcolor',
@@ -4196,7 +4196,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 					'id' => 'setup15_mapnotifications',
 					'title' => esc_html__('Map Notifications', 'pointfindert2d') ,
 					'subsection' => true,
-	                'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Map Notifications: This notification will create a toggle window on the top of the map and show number of found items after search and site entrance.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_formapnotify.png" class="description-img" />'),
+	                'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Map Notifications: This notification will create a toggle window on the top of the map and show number of found items after search and site entrance.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_formapnotify.png" class="description-img" />'),
 					'fields' => array(
 						
 						array(
@@ -4380,7 +4380,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 					'title' => esc_html__('Map Control Settings', 'pointfindert2d') ,
 					'subsection' => true,
 					'heading'   => esc_html__('Map Control Buttons', 'pointfindert2d'),
-	                'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Below settings will affect map zoom, geolocate, home button controls.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_formapcontrols.png" class="description-img" />'),
+	                'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Below settings will affect map zoom, geolocate, home button controls.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_formapcontrols.png" class="description-img" />'),
 					'fields' => array(
 						array(
 							'id' => 'setup13_mapcontrols_buttonconfig',
@@ -4479,7 +4479,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 					'id' => 'setup12_searchwindowpf',
 					'title' => esc_html__('Map Search Window', 'pointfindert2d') ,
 					'heading'   => esc_html__('Draggable Search Tab Window Settings', 'pointfindert2d'),
-	                'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Below settings will affect draggable search tab window on the map.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_formapsearch.png" class="description-img" />'),
+	                'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Below settings will affect draggable search tab window on the map.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_formapsearch.png" class="description-img" />'),
 	                'subsection' => true,
 					'fields' => array(						
 						array(
@@ -4595,7 +4595,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 					'id' => 'setup12_searchwindowpf_1',
 					'subsection' => true,
 					'title' => esc_html__('Map Search Window Styles', 'pointfindert2d') ,
-					'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Below settings will affect draggable search window on the map.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_formapsearch.png" class="description-img" />'),
+					'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Below settings will affect draggable search window on the map.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_formapsearch.png" class="description-img" />'),
 					'fields' => array(
 							array(
 								'id' => 'setup12_searchwindow_background',
@@ -5073,7 +5073,7 @@ if (!class_exists("Redux_Framework_PF_Theme_Config")) {
 							'type' => 'info',
 							'notice' => true,
 							'style' => 'info',
-							'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Below settings will affect all info windows on the map.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_infowindow.png" class="description-img" />'),
+							'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Below settings will affect all info windows on the map.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_infowindow.png" class="description-img" />'),
 						) ,
 						array(
 							'id' => 'setup10_infowindow_width',

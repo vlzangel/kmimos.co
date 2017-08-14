@@ -90,6 +90,8 @@ if(!function_exists('kmimos_box_details_of_customer')){
 
     function kmimos_box_details_of_customer() {
 
+        $values = kmimos_get_fields_values(array());
+
         add_meta_box('details_of_customer','Detalles del Cliente','kmimos_details_of_customer','customers','normal','high',$values);
 
         add_meta_box('details_of_pets','Mascotas del Cliente','kmimos_details_of_pets','pets','normal','low',$values);

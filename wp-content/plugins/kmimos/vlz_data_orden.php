@@ -1,12 +1,14 @@
 <?php
 	
+
+	
 	extract($_GET);
 
     $email_admin = $info["email"];
 
     global $wpdb;
 
-	$datos_generales = kmimos_datos_generales_desglose($o, true);
+	$datos_generales = kmimos_datos_generales_desglose($o, true, $mostrar_direccion);
 
 	$detalles_cliente = $datos_generales["cliente"];
 	$detalles_cuidador = $datos_generales["cuidador"];
@@ -19,9 +21,12 @@
     $order = new WC_Order($datos_generales["orden"]);
 
     $reserva_id = $datos_generales["booking"];
+    $orden_id = $datos_generales["orden"];
 
     $nom_cliente  = $datos_generales["nombre_cliente"];
     $nom_cuidador = $datos_generales["nombre_cuidador"];
+
+    $cliente_id = $datos_generales["cliente_id"];
 
 	/* Sugeridos */
 
@@ -69,7 +74,7 @@
 	    foreach ($sugeridos as $key => $cuidador) {
 	        $name_photo = get_user_meta($cuidador->user_id, "name_photo", true);
 			$cuidador_id = $cuidador->id;
-			$img = kmimos_get_foto($cuidador->user_id);
+			$img = kmimos_get_foto_cuidador($cuidador->user_id);
 	        $post = get_post($cuidador->id_post);
 	        $str_sugeridos_img .= '
 	        	<div style="display: inline-block; width: 49%; text-align: center; min-width: 239px;">

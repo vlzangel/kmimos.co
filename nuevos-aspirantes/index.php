@@ -14,25 +14,21 @@
         <link rel="stylesheet" href="css/kmimos.css">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-		<script>
+	    <script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-93578532-1', 'auto');
+		  ga('create', 'UA-56422840-1', 'auto');
 		  ga('send', 'pageview');
-
 		</script>
  
-
     </head>
     <body>
        
        	<div class="container-fluid">
 
-		<section class="row " id="section-1">
+		<section class="row " id="section-1" style="padding-bottom:20px;">
 			<header class="text-center">
 	       	 	<img src="img/LogoKmimos.png" class="logo">
 	       	</header>
@@ -42,19 +38,28 @@
 	       	</article>
        	 	<article class="col-sm-7">
 				<h1>Kmimos es un servicio digital que 
-				<strong>conecta Doglovers como t&uacute;</strong>, con dueños de perros que necesitan que les cuiden a sus peludos mientras no est&aacute;n en casa
+					<strong>conecta Doglovers como t&uacute;</strong>, con dueños de perros que necesitan que les cuiden a sus peludos mientras no est&aacute;n en casa
 				</h1>
+
 				<div class="text-center">				
 		       	 	<button type="button" class="btn btn-lg btn-kmimos" data-toggle="modal" 
 		       	 			data-target="#list-subscribe">
 						Quiero ser un Cuidador Certificado Kmimos
 					</button>
 				</div>
+
        	 	</article>
 	       	<article class="img-section-1 col-sm-5 pull-left  hidden-md hidden-sm hidden-lg">
-	       		<img src="img/Character_section1.png" class="img-kmimos img-responsive" width="60%">
+	       		<img src="img/Character_section1.png" class="img-kmimos img-responsive">
 	       	</article>
 
+       	 	<article class="col-xs-12 hidden text-center" style="z-index:999!important;">
+	       	 	<button type="button" class="btn btn-lg btn-kmimos" data-toggle="modal" 
+	       	 			data-target="#list-subscribe">
+					Quiero ser un Cuidador Certificado Kmimos
+				</button>
+	       	 	<!-- a href="https://www.kmimos.com.mx/quiero-ser-cuidador/" class="btn btn-kmimos">Quiero ser un Cuidador Certificado Kmimos</a -->
+       	 	</article>
        	 	<article class="col-sm-12 text-center">
 				<a  href="#section-2" 
 					class="controll-pagination back-white">
@@ -68,13 +73,19 @@
 		<aside class="row" id="section-2-1">
 			<div class="container">
 				<article class="col-md-12">
-					<div class="col-sm-offset-4 col-sm-2 col-xs-6 col-md-2">
-						<img src="img/rcn.jpg" class="img-responsive"></div>
+					<div class="col-sm-offset-1 col-sm-2 col-xs-6 col-md-2">
+						<img src="/wp-content/uploads/2017/02/expansion-360x150.png" class="img-responsive"></div>
 					<div class="col-sm-2 col-xs-6 col-md-2">
-						<img src="img/unocanal.jpg" class="img-responsive"></div>
+						<img src="/wp-content/uploads/2017/02/reforma-360x150-360x150.png" class="img-responsive"></div>
+					<div class="col-sm-2 col-xs-6 col-md-2">
+						<img src="/wp-content/uploads/2017/02/entrepreneur-360x150.png" class="img-responsive"></div>
+					<div class="col-sm-2 col-xs-6 col-md-2">
+						<img src="/wp-content/uploads/2017/02/el-universal-360x150-360x150.png" class="img-responsive"></div>
+					<div class="col-sm-2 col-xs-6 col-md-2">
+						<img src="/wp-content/uploads/2017/02/el-financiero-360x150-360x150.png" class="img-responsive"></div>
 				</article>
 				<article class="col-md-6 col-lg-6">
-					<img src="img/mapa-co.jpg" class="img-responsive">
+					<img src="img/mapa.jpg" class="img-responsive">
 				</article>
 				<article class="col-md-6 col-lg-6 text-center">
 					<h2 class="title">En tres años estamos ubicados en México, Panamá, Colombia, Perú y Argentina.</h2>
@@ -131,7 +142,7 @@
 		       	 			<img src="img/icon 2.png">
 		       	 		</div>
 		       	 		<div class="col-sm-10 col-sm-offset-1">
-			       	 		<h2>Podrás ganarte hasta $4 millones de pesos al mes (dependiendo de la demanda)</h2>
+			       	 		<h2>Podrás ganarte hasta $30 mil pesos de manera mensual (Depende de la demanda)</h2>
 			       	 	</div>
 		       	 	</article>
 		       	 	<hr>
@@ -225,7 +236,7 @@
 			
    	 			<div class="col-sm-4 center-subtitle">
    	 				<img src="img/icon 5.png">
-   	 				<h2>Llena el formulario y envíanos un recibo con tu dirección y tu Cédula por Mensaje Directo a nuestro Facebook<br>@KmimosCo</h2>
+   	 				<h2>Llena el formulario y env&iacute;anos tu comprobante de domicilio e IFE por Mensaje Directo a nuestro Facebook<br>@Kmimosmx</h2>
    	 			</div>
 
 <div style="position:absolute;left:0px;"class="col-sm-5 hidden-xs hidden-sm arrow-left"><img src="img/Arrow 1.png"></div>
@@ -317,7 +328,8 @@
 				</aside>
 				<div class="col-sm-7 text-center container-iframe">
 					<article class="video video-container">
-						<iframe src="https://www.youtube.com/embed/ZWIRhPjkRG0" frameborder="0" allowfullscreen></iframe>
+						<iframe src="https://www.youtube.com/embed/1rOwCw9L9qY" frameborder="0" allowfullscreen></iframe>
+						<!-- iframe src="https://www.youtube.com/embed/_08UJ0aYDCk" frameborder="0" allowfullscreen></iframe-->
 					</article>
 				</div>
 				<aside class="col-sm-2">
@@ -337,7 +349,7 @@
 			</button>
 		</div>
 		<div class="col-sm-12 margin-top-20">
-			<a href="/">¿Quieres Conocer Kmimos?</a>
+			<a href="https://www.kmimos.com.mx/">¿Quieres Conocer Kmimos?</a>
 		</div>
 
 		<aside class="text-center col-sm-12">
@@ -358,9 +370,9 @@
 				</span>
 				<p class="help-subtitle">
 					Ponte en contacto con nosotros. Mándanos un email a 
-					<span class="resaltar"> contactoco@kmimos.la </span> 
+					<span class="resaltar"> a.vera@kmimos.la </span> 
 					o por Teléfono o Whatsapp al 
-					<span class="resaltar"> (57) 315 849 2186 </span>
+					<span class="resaltar"> (55)61780320 </span>
 				</p>
 				<span class="help-title font-gris">La familia Kmimos te espera!!</span>
 			</article>
@@ -380,16 +392,15 @@
 			<article class="col-xs-12">
 				<p class="help-subtitle">
 					Ponte en contacto con nosotros. 
-					<span class="resaltar"> contactoco@kmimos.la </span> 
+					<span class="resaltar"> a.vera@kmimos.la </span> 
 					ó   
-					<span class="resaltar"> (57) 315 849 2186  </span>
+					<span class="resaltar"> (55)61780320 </span>
 				</p>
 			</article>
 		</div>
 		<!-- END col-xs  and col-sm -->
 
 	</section>
-
 
 	<!-- Registro de Email -->
 	<div class="modal" id="list-subscribe" role="dialog">
@@ -414,7 +425,7 @@
 					    <input type="text" class="form-control" name="phone" id="phone" placeholder="Escribe tu Tel&eacute;fono">
 					</div><!-- /input-group -->
 				</div>
-	      		<div class="form-group">
+				<div class="form-group">
 					<div class="col-xs-7" style="padding-left:21px;" >
 						<label class="checkbox">
 							<input type="checkbox" id="terminos" name="terminos" required value="0">
@@ -426,12 +437,13 @@
 					<div class="col-xs-4 pull-right text-right">
 				    	<button class="btn btn-success" type="button" id="subscribe">Continuar</button>
 				    </div>
+					
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					<i id="loading" class="hidden" style="font-size:12px;" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
 					<span id="msg"></span>
-					<br>
 				</div>
+	      		<br>
 	      		<br>
   				<div class="collapse" id="terminos_condiciones" style="width: 100%!important;">
 				  <div class="well" style="width: 100%!important; text-align:justify; height: 200px; overflow: auto;">
@@ -440,8 +452,9 @@
 				  </div>
 				</div>
   				<div class="clearfix"></div>
+				
       		</form>
-			<form id="frm-redirect" action="/quiero-ser-cuidador-certificado-de-perros/"  method="post" >
+			<form id="frm-redirect" action="https://www.kmimos.com.mx/quiero-ser-cuidador-certificado-de-perros/"  method="post" >
       		</form>
 	      </div>
 	    </div><!-- /.modal-content -->
@@ -454,7 +467,6 @@
 	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 	  crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
-    <script src="js/main.js"></script>
-    
-    </body>
+    <script src="js/main_.js"></script>
+   </body>
 </html>

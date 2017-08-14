@@ -127,38 +127,38 @@
                 
                 if ($setup3_pointposttype_pt1 == $post_type) {
                 
-                 wp_enqueue_script(
-                    'admin-google-api', 
-                    'http://www.google.com/jsapi?autoload={"modules":[{name:"maps",version:3.15}]}',
-                     array('jquery'),
-                      '1.0.0',
-                      true
-                 ); 
-                 wp_enqueue_script( 
-                    'admin-gmap3', 
-                    get_template_directory_uri() . '/js/gmap3.js',
-                    array( 'jquery', 'redux-js','admin-google-api' ),
-                    time(),
-                    true
-                );
+                //  wp_enqueue_script(
+                //     'admin-google-api', 
+                //     'http://www.google.com/jsapi?autoload={"modules":[{name:"maps",version:3.15}]}',
+                //      array('jquery'),
+                //       '1.0.0',
+                //       true
+                //  ); 
+                //  wp_enqueue_script( 
+                //     'admin-gmap3', 
+                //     get_home_url()."/wp-content/themes/pointfinder" . '/js/gmap3.js',
+                //     array( 'jquery', 'redux-js','admin-google-api' ),
+                //     time(),
+                //     true
+                // );
 
-                 wp_enqueue_script(
-                    'redux-field-streetview-js',
-                    get_template_directory_uri().'/admin/options/extensions/streetview/field_streetview.js',
-                    array( 'jquery', 'redux-js','admin-gmap3'),
-                    time(),
-                    true
-                );
-                 wp_localize_script( 'redux-field-streetview-js', 'theme_quickjs2', array( 
-                  'msg' => esc_html__('Please select a point from location map','pointfindert2d')
-                ));
+                //  wp_enqueue_script(
+                //     'redux-field-streetview-js',
+                //     get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/streetview/field_streetview.js',
+                //     array( 'jquery', 'redux-js','admin-gmap3'),
+                //     time(),
+                //     true
+                // );
+                //  wp_localize_script( 'redux-field-streetview-js', 'theme_quickjs2', array( 
+                //   'msg' => esc_html__('Please select a point from location map','pointfindert2d')
+                // ));
 
-                wp_enqueue_style(
-                    'redux-field-streetview-css',
-                    get_template_directory_uri().'/admin/options/extensions/streetview/field_streetview.css',
-                    time(),
-                    true
-                );
+                // wp_enqueue_style(
+                //     'redux-field-streetview-css',
+                //     get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/streetview/field_streetview.css',
+                //     time(),
+                //     true
+                // );
                }
             }
 

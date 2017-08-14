@@ -21,7 +21,7 @@ function PFGetAgentPageCol1($author_id){
 	$agent_featured_image =  wp_get_attachment_image_src( get_post_thumbnail_id( $author_id ), 'full' );
 
 	if (empty($agent_featured_image)) {
-		$user_photo = '<img src="'.get_template_directory_uri().'/images/empty_avatar.jpg"/>';
+		$user_photo = '<img src="'.get_home_url()."/wp-content/themes/pointfinder".'/images/empty_avatar.jpg"/>';
 	}else{
 		$user_photo = '<img src="'.$agent_featured_image[0].'" width="'.$agent_featured_image[1].'" height="'.$agent_featured_image[2].'" alt="" />';
 	}
