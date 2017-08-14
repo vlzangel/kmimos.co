@@ -100,6 +100,7 @@ if(isset($ua_action)){
                         /*
                         *   Muestra botón para ver las mascotas del usuario
                         */
+                        $pets = kmimos_get_my_pets($current_user->ID);
                         if ($_GET['ua']=='mypets'){
                             $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-871"></i> '. $setup29_dashboard_contents_pets_list_menuname.'</li>';
                         }
@@ -539,6 +540,17 @@ if(isset($ua_action)){
 								  				cuidador = {$id}";
 
 						  				$wpdb->query($sql);
+
+                                        //UPDATE WC_META
+                                        $query="SELECT * FROM wp_posts WHERE post_author='{$user_id}' AND post_type='product'";
+                                        $result=$wpdb->get_results($query);
+                                        //var_dump($result);
+
+                                        foreach($result as $product){
+                                            $product_id=$product->ID;
+                                            update_post_meta($product_id, '_wc_booking_qty', $acepto_hasta);
+                                            update_post_meta($product_id, '_wc_booking_max_persons_group', $acepto_hasta);
+                                        }
                                     }
                                 }
                             }
