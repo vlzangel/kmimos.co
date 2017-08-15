@@ -12,7 +12,6 @@
     $this->ScriptOutput .= "
         jQuery('#pf-ajax-add-service-button').on('click',function(e){
             e.preventDefault();
-            // jQuery('#pfuaprofileform').attr('action','?ua=updateservices');
             jQuery('#pfuaprofileform').attr('action','".get_home_url()."/wp-content/themes/pointfinder/vlz/admin/procesar_mis_servicios.php');
             jQuery('#pfuaprofileform').submit();
         });
@@ -222,10 +221,9 @@
 	    	";
     	}
 
-    	//if( $status_servicios[ $key ] == 'publish' ){
-		if(isset($precios_adicionales_cuidador['status_'.$key]) && $precios_adicionales_cuidador['status_'.$key]==1){
+    	if( $status_servicios[ $key ] == 'publish' ){
     		$boton = "<input type='button' value='Activado' class='vlz_activador vlz_activado' id='status_{$key}' > <input type='hidden' id='oculto_status_{$key}' name='status_{$key}' value='1' >";
-		}else{
+    	}else{
     		$boton = "<input type='button' value='Desactivado' class='vlz_activador vlz_desactivado' id='status_{$key}' > <input type='hidden' id='oculto_status_{$key}' name='status_{$key}' value='0' >";
     	}
 

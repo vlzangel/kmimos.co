@@ -6,8 +6,7 @@
 
 	get_header();
 
-		$valores = explode("/", $_SERVER['REDIRECT_URL']);
-		$orden = $valores[ count($valores)-2 ]; ?>
+		$orden = $page; ?>
 
 		<section role="main">
 			<div class="pf-container clearfix">
@@ -54,7 +53,7 @@
 
 								<div class="vlz_titulos_tablas">Detalles de facturación</div>
 								<div class="vlz_contenido_tablas">
-									<?php echo $detalles["detalles_factura_cuidador"];; ?>
+									<?php echo $detalles_factura; ?>
 								</div>
 
 							</div>

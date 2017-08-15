@@ -6,8 +6,7 @@
 
 	get_header();
 
-		$valores = explode("/", $_SERVER['REDIRECT_URL']);
-		$orden = $valores[ count($valores)-2 ]; ?>
+		$orden = $page; ?>
 
 		<section role="main">
 			<div class="pf-container clearfix">

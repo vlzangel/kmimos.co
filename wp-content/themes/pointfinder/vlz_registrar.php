@@ -9,6 +9,7 @@
 
 		<?php 
 			include("vlz/form/vlz_styles.php"); 
+			include("vlz/form/vlz_scripts.php"); 
 		?>
 
 		<style type="text/css">
@@ -176,17 +177,17 @@
 												</div>
 												
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu apellido<br>Este debe tener mínimo 2 caracteres." type='text' id='apellidos' name='apellidos' class='vlz_input' placeholder='Apellidos' required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ]{2,25}" >
+													<input data-title="Debes ingresar tu apellido<br>Este debe tener mínimo 3 caracteres." type='text' id='apellidos' name='apellidos' class='vlz_input' placeholder='Apellidos' required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ]{2,25}" >
 												</div>
 											</div>
 
 											<div class="vlz_sub_seccion">
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu número móvil<br>Este debe tener entre 7 y 11 dígitos." type='number' id='movil' maxlength="11" name='movil' class='vlz_input' placeholder='M&oacute;vil' required pattern="[0-9]{7}">
+													<input data-title="Debes ingresar tu número móvil<br>Este debe tener entre 7 y 11 dígitos." type='number' id='movil' maxlength="11" name='movil' class='vlz_input' placeholder='M&oacute;vil' required>
 												</div>
 												
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 7 y 11 dígitos." type='number' id='telefono' maxlength="11" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]{7}">
+													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 7 y 11 dígitos." type='number' id='telefono' maxlength="11" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required>
 												</div>
 											</div>
 
@@ -198,19 +199,7 @@
 													<?php
 														$referidos = get_referred_list_options();
 														foreach ($referidos as $key => $value) {
-															$selected='';
-															if(array_key_exists('wlabel',$_SESSION)){
-																$wlabel=$_SESSION['wlabel'];
-
-																if($key=='Volaris' && $wlabel=='volaris'){
-																	$selected='selected';
-
-																}else if($key=='Vintermex' && $wlabel=='viajesintermex'){
-																	$selected='selected';
-																}
-															}
-
-															echo "<option value='{$key}' $selected>{$value}</option>";
+															echo "<option value='{$key}'>{$value}</option>";
 														}
 													?>
                                                 </select>
@@ -220,11 +209,13 @@
 
 											<div class="vlz_sub_seccion">
 												<div class="vlz_cell50">
-													<input data-title="Formato Invalido<br>Ej: xxxx@mail.com" onpaste="return false;" autocomplete="off" type='text' id='email_1' name='email_1' class='vlz_input' placeholder='Ingresa tu e-mail' required pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" title="Ej. xxxx@xxxxx.xx">
+													<!-- <input data-title="Formato Invalido<br>Ej: xxxx@mail.com" onpaste="return false;" autocomplete="off" type='text' id='email_1' name='email_1' class='vlz_input' placeholder='Ingresa tu e-mail' required pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" title="Ej. xxxx@xxxxx.xx"> -->
+													<input data-title="Formato Invalido<br>Ej: xxxx@mail.com" autocomplete="off" type='text' id='email_1' name='email_1' class='vlz_input' placeholder='Ingresa tu e-mail' required pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" title="Ej. xxxx@xxxxx.xx">
 												</div>
 
 												<div class="vlz_cell50">
-													<input data-title="Formato Invalido<br>Ej: xxxx@mail.com" onpaste="return false;" autocomplete="off" type='text' id='email_2' name='email_2' class='vlz_input' placeholder='Vuelve a ingresa tu e-mail' required pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" title="Ej. xxxx@xxxxx.xx">
+													<!-- <input data-title="Formato Invalido<br>Ej: xxxx@mail.com" onpaste="return false;" autocomplete="off" type='text' id='email_2' name='email_2' class='vlz_input' placeholder='Vuelve a ingresa tu e-mail' required pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" title="Ej. xxxx@xxxxx.xx"> -->
+													<input data-title="Formato Invalido<br>Ej: xxxx@mail.com" autocomplete="off" type='text' id='email_2' name='email_2' class='vlz_input' placeholder='Vuelve a ingresa tu e-mail' required pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" title="Ej. xxxx@xxxxx.xx">
 												</div>
 											</div>
 														
@@ -249,7 +240,7 @@
 														name='clave2' 
 														data-title="<strong>Las contraseñas son requeridas y deben ser iguales</strong>" 
 														class='vlz_input'
-														placeholder='Contraseña' 
+														placeholder='Repetir Contraseña' 
 														required 
 														autocomplete="off"
 													>
@@ -261,8 +252,8 @@
 
 											<div class="vlz_seccion">
 												<div class="vlz_img_portada">
-					                                <div class="vlz_img_portada_fondo" style="background-image: url(<?php echo get_home_url()."/wp-content/themes/pointfinder"."/images/noimg.png"; ?>);"></div>
-					                                <div class="vlz_img_portada_normal" style="background-image: url(<?php echo get_home_url()."/wp-content/themes/pointfinder"."/images/noimg.png"; ?>);"></div>
+					                                <div class="vlz_img_portada_fondo" style="background-image: url(<?php echo get_template_directory_uri()."/images/noimg.png"; ?>);"></div>
+					                                <div class="vlz_img_portada_normal" style="background-image: url(<?php echo get_template_directory_uri()."/images/noimg.png"; ?>);"></div>
 					                                <div class="vlz_cambiar_portada">
 					                                	Subir Foto
 					                                	<input type="file" id="portada" name="portada" accept="image/*" />
@@ -300,7 +291,6 @@
 								form.addEventListener( 'invalid', function(event){
 							        event.preventDefault();
 							        jQuery("#error_"+event.target.id).html( jQuery("#error_"+event.target.id).attr("data-title") );
-
 							        jQuery("#error_"+event.target.id).removeClass("no_error");
 							        jQuery("#error_"+event.target.id).addClass("error");
 							        jQuery("#"+event.target.id).addClass("vlz_input_error");
@@ -310,7 +300,6 @@
 									switch(id){
 										case "movil":
 								      		var telefono = jQuery( "#movil" ).val();
-
 								      		if( telefono.length >= 7 && telefono.length <= 11 ){
 								      			return true;
 								      		}else{
@@ -319,7 +308,6 @@
 										break;
 										case "telefono":
 								      		var telefono = jQuery( "#telefono" ).val();
-
 								      		if( telefono.length >= 7 && telefono.length <= 11 ){
 								      			return true;
 								      		}else{
@@ -349,7 +337,7 @@
 									}
 								}
 
-								form.addEventListener( 'keypress', function(event){
+								form.addEventListener( 'keyup', function(event){
 							        if ( event.target.validity.valid && especiales(event.target.id) ) {
 							        	if( jQuery("#error_"+event.target.id).hasClass( "error" ) ){
 							        		jQuery("#error_"+event.target.id).removeClass("error");
@@ -429,10 +417,8 @@
 						      		jQuery(".vlz_modal_contenido").css("display", "none");
 						      		jQuery("#vlz_cargando").css("display", "block");
 
-						      		// jQuery("#vlz_cargando").html("<h2>Enviando Informaci&oacute;n al correo...</h2>");
-
 						      		jQuery.ajax({
-									    url: '<?php echo get_home_url()."/wp-content/themes/pointfinder"."/vlz/form/vlz_mail_cliente.php"; ?>',
+									    url: '<?php echo get_template_directory_uri()."/vlz/form/vlz_mail_cliente.php"; ?>',
 									    type: "post",
 									    data: {
 											nombre: jQuery("#nombres").attr("value")+" "+jQuery("#apellidos").attr("value"),
@@ -461,7 +447,7 @@
 							            var terminos = jQuery("#terminos").attr("value");
 							      		if( terminos == 1){
 
-							      			var a = "<?php echo get_home_url()."/wp-content/themes/pointfinder"."/vlz/form/vlz_registrar.php"; ?>";
+							      			var a = "<?php echo get_template_directory_uri()."/vlz/form/vlz_registrar.php"; ?>";
 
 								      		jQuery("#vlz_contenedor_botones").css("display", "none");
 								      		jQuery(".vlz_modal_contenido").css("display", "none");
@@ -472,7 +458,6 @@
 								      		jQuery("#vlz_titulo_registro").html("Registrando, por favor espere...");
 							             	
 								      		jQuery.post( a, jQuery("#vlz_form_nuevo_cliente").serialize(), function( data ) {
-								      			// console.log(data);
 									      		mail_ext_temp(data);
 											});
 
@@ -484,8 +469,6 @@
 						      		}
 
 						      	});
-
-						      	
 
 						      	function mails_iguales(e){
 						      		if( e.currentTarget.name == 'email_1' || e.currentTarget.name == 'email_2' ){
@@ -537,8 +520,9 @@
 						      	jQuery( "#clave" ).keyup(clvs_iguales);
 						      	jQuery( "#clave2" ).keyup(clvs_iguales);
 
+
 						      	jQuery( "#email_1" ).blur(function(){
-						      		var a = "<?php echo get_home_url()."/wp-content/themes/pointfinder"."/vlz/form/vlz_verificar_email.php"; ?>";
+						      		var a = "<?php echo get_template_directory_uri()."/vlz/form/vlz_verificar_email.php"; ?>";
 					      			jQuery.post( a, {email: jQuery("#email_1").attr("value")}, function( data ) {
 							      		data = eval(data);
 							      		if( data.error == "SI" ){
@@ -558,7 +542,6 @@
 						      		var campos = ["movil", "telefono", "email_1", "email_2", "clave", "clave2"];
 						      		campos.forEach(function(item, index){
 						      			if( !especiales(item) ){
-						      				console.log(item);
 						      				error++;
 						      			}
 						      		});
@@ -574,7 +557,7 @@
 										});
 						      			jQuery('html, body').animate({ scrollTop: jQuery(primer_error).offset().top-75 }, 2000);
 						      		}else{
-							      		var a = "<?php echo get_home_url()."/wp-content/themes/pointfinder"."/vlz/form/vlz_verificar_email.php"; ?>";
+							      		var a = "<?php echo get_template_directory_uri()."/vlz/form/vlz_verificar_email.php"; ?>";
 						      			jQuery.post( a, {email: jQuery("#email_1").attr("value")}, function( data ) {
 								      		data = eval(data);
 								      		if( data.error == "SI" ){

@@ -24,7 +24,11 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300i,400,400i');
-@import url('css/font-awesome.min.css');
+
+
+
+
+
 
 /*------------------------------------*\
 
@@ -607,7 +611,7 @@ a.btn-green:hover, input[type=submit].btn-green:hover{
 
 	.wpf-footer{
 		background-color: #208c72 !important;
-		background-image:url("images/footerBg768.png") !important;
+		background-image:url("images/footerBg.png") !important;
 		background-repeat: no-repeat !important;
 		padding-top: 100px !important;
 		padding-bottom: 20px !important;
@@ -3118,9 +3122,11 @@ input#place_order{
 
 	.pflist-imagecontainer .RibbonCTR .Sign a {color: #666666;}
 
-	.pflist-imagecontainer .RibbonCTR {-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;}
+	.pflist-imagecontainer .RibbonCTR {opacity: 0;visibility: hidden;-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-ms-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;}
 
-	.pflist-imagecontainer .RibbonCTR .Sign i { color:#aaa; font-size: 16px;-webkit-transition:all 0.3s ease-in-out; -moz-transition:all 0.3s ease-in-out; -ms-transition:all 0.3s ease-in-out; -o-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out;}
+	.pflist-imagecontainer:hover .RibbonCTR {opacity: 1;visibility: visible;}
+
+	.pflist-imagecontainer .RibbonCTR .Sign i {font-size: 16px;-webkit-transition:all 0.3s ease-in-out; -moz-transition:all 0.3s ease-in-out; -ms-transition:all 0.3s ease-in-out; -o-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out;}
 
 	.pflist-imagecontainer .RibbonCTR .Sign i:hover {-webkit-transition:all 0.3s ease-in-out; -moz-transition:all 0.3s ease-in-out; -ms-transition:all 0.3s ease-in-out; -o-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out;}
 
@@ -5327,13 +5333,14 @@ input#place_order{
 
 	@media (max-width: 533px) and (min-width: 481px){.vlz_titulo_interno {font-size: 16px!important;}}
 
-	   		@media (min-width: 994px){
+	   @media (min-width: 994px){
                 .jj-patica-menu{
                     display: none;
                 }
             }
 
-			.jj-patica-menu{
+
+                        .jj-patica-menu{
                 background-color: transparent;
                 position: absolute;
                 z-index: 1;
@@ -5341,21 +5348,14 @@ input#place_order{
             }
             @media (max-width: 993px){
                 .jj-patica-menu{
-	                right: 93px;  
-	                width: 30px; 
-	                height: 30px;     
-	                top: 12px; 
-	            }
-	            .jj-patica-menu img{
-	            	height: 30px;
-				    border: solid 1px #FFF;
-				    border-radius: 50%;
-				    padding: 5px;
-	            }
+                    right: 100px;  
+                    width: 30px; 
+                    height: 30px;     
+                    top: 12px; 
+                }
             }  
             @media (max-width: 568px){
                 .jj-patica-menu{
-					padding: 2px;
                     right: 100px;  
                     width: 30px; 
                     height: 30px;     
@@ -5404,7 +5404,7 @@ input#place_order{
 
 		.wpf-container .wpf-noheader-container{height:0;}
 
-		#pfheadernav{/*position:relative;*/}
+		#pfheadernav{position:relative;}
 
 		#pfheadernav .wpf-navwrapper{height:auto;}
 
@@ -5438,14 +5438,7 @@ input#place_order{
 
 		#pf-primary-nav .pfnavmenu li a{ margin:0 10px 0 15px;padding:13px 0;}
 
-		#pf-primary-nav .pfnavmenu .pfnavsub-menu{
-			position: relative;
-			min-width: 100% !important;
-		}
-
-		.ser_cuidador span{
-			height: auto !important;
-		}
+		#pf-primary-nav .pfnavmenu .pfnavsub-menu{position:relative;}
 
 		#pf-primary-nav .pfnavmenu .pfnavsub-menu li a{ margin-left:5%}
 
@@ -5962,7 +5955,7 @@ input#place_order{
 
 					.wpf-footer{
 						background-image: url("images/footerBg768.png") !important;
-						background-position-x: -205px !important;
+						background-position-x: -289px !important;
 					}
 
 
@@ -6743,6 +6736,51 @@ input#place_order{
 	}
 
 
+/*************************************************************************************
+ BEGIN Alertas
+**************************************************************************************/
+.alertas{
+	padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+ 	border-radius: 4px;
+}
+.alertas-info{
+	color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.alertas-success{
+	color: #468847;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alertas-warning{
+    color: #c09853;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+.alertas-error{
+	color: #b94a48;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.newcuidador-error{	
+	color: #b94a48!important;
+    background-color: #f2dede!important;
+    border-color: #ebccd1!important;
+
+}
+/*************************************************************************************
+ END Alertas
+**************************************************************************************/
+
+
+
+
+
+
 
 
 
@@ -6800,67 +6838,3 @@ input#place_order{
 	}
 }
 
-
-
-
-
-.btn-instrucciones-header{
-	background: transparent;
-	border-radius: 40px;
-	border: 1px solid #fff;
-	color: #fff;
-	font-size: 16px;
-	font-weight: normal;
-	padding: 4px 12px 4px 12px;
-	margin-left: 20px;
-	margin-top: 8px!important;
-	z-index:9999;
-	margin-bottom:12px;
-}
-
-.instrucciones-items{
-	max-width: 700px; 
-}
-.instrucciones-items li{
-	width: 150px;
-	padding:0px!important;
-}
-
-
-
-/*NEW CSS*/
-.wpf-container {
-	margin: 104px 0 0 0 !important;
-	overflow: hidden;
-}
-#jj-landing-page {
-	display: none;
-}
-
-.wpf-header .pf-logo-container {
-	display: block !important;
-}
-
-@media (max-width: 992px) {
-	.wpf-container {margin: 104px 0 0 0 !important;}
-	.instrucciones-items{
-		max-width: 100%;
-	}
-	.instrucciones-items li{
-		width: 100%!important;
-	}
-}
-
-@media (max-width: 768px){
-	.wpf-container { margin: 78px 0 0 0 !important;}
-	.wpf-container-inner {
-		top: 0 !important;
-	}
-	.vc_row-fluid .pf-container {
-		margin-top: 0 !important;
-	}
-}
-
-@media (max-width: 569px){
-	.wpf-container { margin: 45px 0 0 0 !important;}
-}
