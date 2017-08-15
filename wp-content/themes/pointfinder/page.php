@@ -71,7 +71,9 @@ get_header();
                         echo '<section role="main">';
                             echo '<div class="pf-container">';
                                 echo '<div class="pf-row">';
-                                    echo '<div class="col-lg-12">';
+                                    echo '<div class="col-lg-12"> 
+                                        
+                                    ';
                                         the_content();
                                       
                                     echo '</div>';
@@ -96,3 +98,5 @@ get_header();
 
 get_footer(); 
 ?>
+
+

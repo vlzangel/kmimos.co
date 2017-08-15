@@ -95,7 +95,6 @@ if(!function_exists('kmimos_get_email_banners')){
 
     function kmimos_get_email_banners(){
 
-        $html  = '';
         $html .= '
         <div>
             <div style="font-size:0.7em; color:#cccccc;">Publicidad</div>
@@ -109,16 +108,10 @@ if(!function_exists('kmimos_get_email_banners')){
                         <img style="width: 100%;" src="'.get_home_url().'/wp-content/uploads/2016/03/Banner-accesorios300x100.png" alt="Accesorios-Mascotas">                    
                 </li>
                 <li style="float:left; margin: 5px; width: 48%; list-style: none;">
-                    <a style="display: block;" href="https://www.volaris.com/">
                         <img style="width: 100%;" src="'.get_home_url().'/wp-content/uploads/2016/03/Banner-boletos-aereos300x100.png" alt="Boletos-aereos">
-                    </a>
-                    
-                </li>
+               </li>
                 <li style="float:left; margin: 5px; width: 48%; list-style: none;">
-                    <a style="display: block;" href="https://cabify.com/mexico/mexico-city">
                         <img style="width: 100%;" src="'.get_home_url().'/wp-content/uploads/2016/03/Banner-transporte-mascotas300x100.png" alt="Transporte-Mascotas">
-                    </a>
-                    
                 </li>
             </ul>
         </div>';
@@ -134,9 +127,9 @@ if(!function_exists('kmimos_get_email_banners')){
 
 if(!function_exists('kmimos_get_email_footer')){
     function kmimos_get_email_footer(){
-        $info = kmimos_get_info_syte();
+        $datos = kmimos_get_info_syte();
         $html  = '<style> .footer {border-bottom: 3px solid #f25555; background-color: #00d2b7; font-size: 14px;font-family: HelveticaNeue, sans-serif; color: #494949; padding: 30px;} </style>';
-        $html .= '<div class="footer"><span>Más información en <a href="'.get_home_url().'">'.$_SERVER['HTTP_HOST'].'</a> o por nuestros teléfonos </span><span><strong>'.$info["telefono"].'</strong><span></div></div></div>';
+        $html .= '<div class="footer"><span>Más información en <a href="'.get_home_url().'">'.$_SERVER['HTTP_HOST'].'</a> o por nuestros teléfonos </span><span>'.$datos['telefono'].'<span></div></div></div>';
         return $html;
     }
 

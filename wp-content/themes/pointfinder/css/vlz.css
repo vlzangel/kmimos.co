@@ -36,3 +36,25 @@ p.myaccount_user a{
 p.myaccount_user a:hover{
 	color: #59c9a8!important;
 }
+
+/*THEME*/
+.theme_title{}
+.theme_content{}
+.theme_button{
+	color: #FFF;
+	background-color: #00d2b7;
+	border-color: #00d2b7;
+}
+
+.wpf-header, #pf-topprimary-navmobi, #pf-topprimary-navmobi2 {
+    background: #59c9a8 !important;
+}
+.wpf-header #pf-primary-nav .pfnavmenu .main-menu-item>a {
+    color: #FFF !important;
+}
+.wpf-header {
+    border-bottom: 1px solid #456675 !important;
+}
+.wpf-header .pftopline {
+    background: #23475e !important;
+}

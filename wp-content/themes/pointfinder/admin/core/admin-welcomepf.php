@@ -33,7 +33,7 @@ function pointfinder_tools_content(){
       <div class="changelog headline-feature">
         <h2><?php echo esc_html__('Introducing Point Finder','pointfindert2d');?></h2>
         <div class="featured-image">
-          <img src="<?php echo get_template_directory_uri();?>/images/pointfinder.png">
+          <img src="<?php echo get_home_url()."/wp-content/themes/pointfinder";?>/images/pointfinder.png">
         </div>
         <div class="clear"></div>
       </div>

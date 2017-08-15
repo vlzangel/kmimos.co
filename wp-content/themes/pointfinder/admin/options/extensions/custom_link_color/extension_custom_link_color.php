@@ -114,7 +114,7 @@
 
                  wp_enqueue_script(
                     'redux-field-custom_link-color-js',
-                    get_template_directory_uri().'/admin/options/extensions/custom_link_color/field_custom_link_color.js',
+                    get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/custom_link_color/field_custom_link_color.js',
                     array( 'jquery', 'wp-color-picker', 'redux-js' ),
                     time(),
                     true
@@ -122,7 +122,7 @@
 
                 wp_enqueue_style(
                     'redux-field-custom_link_color-js',
-                    get_template_directory_uri().'/admin/options/extensions/custom_link_color/field_custom_link_color.css',
+                    get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/custom_link_color/field_custom_link_color.css',
                     time(),
                     true
                 );

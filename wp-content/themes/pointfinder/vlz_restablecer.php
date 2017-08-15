@@ -3,8 +3,6 @@
 		Template Name: vlz restablecer
 	*/
 
-	session_start();
-
 	$id_user = get_current_user_id();
 	if( $id_user != "" ){
 		header("location: ".get_home_url()."/perfil-usuario/?ua=profile");
@@ -20,12 +18,11 @@
 		}
 
         $_SESSION['kmimos_recuperar'] = array( $xuser->ID, $xuser->user_email, $tipo);
-
         header("location: ".get_home_url()."/restablecer/");
     }
 
     if( $_SESSION['kmimos_recuperar'] == "" ){
-    	header("location: ".get_home_url());
+        header("location: ".get_home_url());
     }
 
 	get_header();
@@ -207,7 +204,7 @@
 									      		e.preventDefault();
 							      				jQuery("#terminos_y_condiciones").css("display", "table");
 							      				jQuery("#boton_registrar_modal").css("display", "inline-block");
-								      			var a = "<?php echo get_template_directory_uri()."/kmimos/proceso_restablecer.php"; ?>";
+								      			var a = "<?php echo get_home_url()."/wp-content/themes/pointfinder"."/kmimos/proceso_restablecer.php"; ?>";
 								             	jQuery.post( a, jQuery("#vlz_form_recuperar").serialize(), function( data ) {
 										      		location.href = "<?php echo get_home_url()."/perfil-usuario/?ua=profile"; ?>";
 												});
@@ -385,7 +382,7 @@
 																}elseif( file_exists("/wp-content/uploads/cuidadores/avatares/".$cuidador->id."/0.jpg") ){
 																	$imagen = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador->id."/0.jpg";
 																}else{
-																	$imagen = get_template_directory_uri().'/images/noimg.png';
+																	$imagen = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
 																}
 												            }else{
 																if( empty($name_photo)  ){ $name_photo = "0"; }
@@ -394,7 +391,7 @@
 																}elseif( file_exists("wp-content/uploads/avatares_clientes/".$user_id."/0.jpg") ){
 																	$imagen = get_home_url()."/wp-content/uploads/avatares_clientes/".$user_id."/0.jpg";
 																}else{
-																	$imagen = get_template_directory_uri().'/images/noimg.png';
+																	$imagen = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
 																}
 												            }
 												        ?>
@@ -513,6 +510,8 @@
 												</div>
 
 												<script>
+
+													jQuery("#boton_registrar_modal").attr("value", "Actualizar");
 
 													var form = document.getElementById('vlz_form_recuperar');
 													form.addEventListener( 'invalid', function(event){
@@ -635,7 +634,7 @@
 											      		e.preventDefault();
 											      		jQuery("#vlz_modal_cerrar_registrar").attr("onclick", "");
 											      		if( form.checkValidity() ){
-											      			var a = "<?php echo get_template_directory_uri()."/kmimos/actualizar_perfil.php"; ?>";
+											      			var a = "<?php echo get_home_url()."/wp-content/themes/pointfinder"."/kmimos/actualizar_perfil.php"; ?>";
 												      		jQuery("#vlz_contenedor_botones").css("display", "none");
 												      		jQuery(".vlz_modal_contenido").css("display", "none");
 												      		jQuery("#vlz_cargando").css("display", "block");

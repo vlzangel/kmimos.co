@@ -1,6 +1,7 @@
 <?php
 
-    require('../../../../../wp-load.php');
+    define('WP_USE_THEMES', false);
+    require('../../../../../wp-blog-header.php');
 
     extract($_POST);
 
@@ -38,20 +39,16 @@
         </p>
     ';
 
-    $info = kmimos_get_info_syte();
-
     add_filter( 'wp_mail_from_name', function( $name ) {
-        global $info;
-        return $info["titulo"];
+        return 'Kmimos Perú';
     });
     add_filter( 'wp_mail_from', function( $email ) {
-        global $info;
-        return $info["email"]; 
+        return 'contactope@kmimos.la';
     });
 
     $mail_msg = kmimos_get_email_html("Registro de Nuevo Usuario.", $mensaje_mail, '', true, true);
 
-    if ( wp_mail( $email, "Kmimos ".$info["pais"]." Gracias por registrarte! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg) ) {
+    if ( wp_mail( $email, "Kmimos Perú Gracias por registrarte! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg) ) {
 
         $error = array(
             "error" => "NO",

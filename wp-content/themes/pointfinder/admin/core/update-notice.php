@@ -51,7 +51,7 @@ if (current_user_can( 'activate_plugins' )) {
 
                 $.ajax({
                     beforeSend:function(){},
-                    url: '".get_template_directory_uri()."/admin/core/pfajaxhandler.php',
+                    url: '".get_home_url()."/wp-content/themes/pointfinder"."/admin/core/pfajaxhandler.php',
                     type: 'POST',
                     dataType: 'json',
                     data: {
@@ -120,7 +120,7 @@ if (current_user_can( 'activate_plugins' )) {
 
                 $.ajax({
                     beforeSend:function(){},
-                    url: '".get_template_directory_uri()."/admin/core/pfajaxhandler.php',
+                    url: '".get_home_url()."/wp-content/themes/pointfinder"."/admin/core/pfajaxhandler.php',
                     type: 'POST',
                     dataType: 'json',
                     data: {

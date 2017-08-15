@@ -25,7 +25,7 @@
 			$user_id_tipo = $cuidador->id;
         	$dir = "../../../uploads/cuidadores/avatares/{$user_id_tipo}/";
     	}else{
-        	$dir = "../../../uploads/avatares/{$user_id}/";
+        	$dir = "../../../uploads/avatares_clientes/{$user_id}/";
     	}
 		
 		echo $dir;
@@ -73,5 +73,5 @@
 	    wp_set_auth_cookie( $user_id );
 	}
 
-	header("location: ".get_home_url()."/perfil-usuario/?ua=profile");
+	//header("location: ".get_home_url()."/perfil-usuario/?ua=profile");
 ?>

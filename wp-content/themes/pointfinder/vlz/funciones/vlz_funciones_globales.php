@@ -1,6 +1,7 @@
 <?php
 
     $cats = array(
+        "paseos"                    => 2601,
         "adiestramiento_basico"     => 2602,
         "adiestramiento_intermedio" => 2606,
         "adiestramiento_avanzado"   => 2607,
@@ -27,8 +28,7 @@
         "guarderia"                 => "Guardería",
         "adiestramiento_basico"     => "Adiestramiento Básico",
         "adiestramiento_intermedio" => "Adiestramiento Intermedio",
-        "adiestramiento_avanzado"   => "Adiestramiento Avanzado",
-        "paseos"   => "Paseos"
+        "adiestramiento_avanzado"   => "Adiestramiento Avanzado"
     );
     
     $adicionales_extra = array(
@@ -62,7 +62,7 @@
                 '".$data['hoy']."',
                 '',
                 '".$data['cuidador']."',
-                '/producto/".$data['slug']."/',
+                'http://kmimos.com.mx/producto/".$data['slug']."/',
                 '0',
                 'product',
                 '',
@@ -72,6 +72,8 @@
     }
 
     function sql_meta_producto($data){
+
+        // $sku = strtoupper( substr($data['slug'], 0, 4) );
 
         switch ($data['slug']) {
             case 'hospedaje':
@@ -91,12 +93,12 @@
             break;
         }
 
-        if($sku != 'HOSP' ){
+        if( $data['slug'] == 'hospedaje' ){
+            $_wc_booking_min_duration = 2;
+            $_wc_booking_count_nights = "yes";
+        }else{
             $_wc_booking_min_duration = 1;
             $_wc_booking_count_nights = "no";
-        }else{
-            $_wc_booking_min_duration = 2;
-            $_wc_booking_count_nights = "si";
         }
 
         return utf8_decode("
@@ -104,8 +106,8 @@
                 (NULL, '".$data['id_servicio']."', '_price', '".$data['precio']."'), 
                 (NULL, '".$data['id_servicio']."', '_wc_booking_buffer_period', ''), 
                 (NULL, '".$data['id_servicio']."', '_wc_booking_count_nights', '".$_wc_booking_count_nights."'), 
-                (NULL, '".$data['id_servicio']."', '_resource_block_costs', 'a:0:{}'), 
-                (NULL, '".$data['id_servicio']."', '_resource_base_costs', 'a:0:{}'), 
+                (NULL, '".$data['id_servicio']."', '_resource_block_costs', 'a:1:{i:1371;s:0:\"\";}'), 
+                (NULL, '".$data['id_servicio']."', '_resource_base_costs', 'a:1:{i:1371;s:2:\"60\";}'), 
                 (NULL, '".$data['id_servicio']."', '_has_additional_costs', 'no'), 
                 (NULL, '".$data['id_servicio']."', '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}'), 
                 (NULL, '".$data['id_servicio']."', '_edit_lock', '1471267584:1'), 
@@ -122,7 +124,7 @@
                 (NULL, '".$data['id_servicio']."', '_length', ''), 
                 (NULL, '".$data['id_servicio']."', '_width', ''), 
                 (NULL, '".$data['id_servicio']."', '_height', ''), 
-                (NULL, '".$data['id_servicio']."', '_sku', '".$sku."-CO-".$data['cuidador_post']."'),
+                (NULL, '".$data['id_servicio']."', '_sku', '".$sku."-MX-".$data['cuidador_post']."'),
                 (NULL, '".$data['id_servicio']."', '_product_attributes', 'a:0:{}'), 
                 (NULL, '".$data['id_servicio']."', '_regular_price', ''), 
                 (NULL, '".$data['id_servicio']."', '_sale_price', ''), 
@@ -215,7 +217,7 @@
                 '".$data['hoy']."',
                 '',
                 '".$data['servicio']."',
-                '/bookable_person/".$data['slug']."/',
+                'http://kmimos.com.mx/bookable_person/".$data['slug']."/',
                 '".$data['menu']."',
                 'bookable_person',
                 '',
@@ -315,11 +317,6 @@
                 return "Cuidado día y noche de tu mascota.<br><br>
                 <small>* Precio final (incluye cobertura veterinaria y gastos administrativos; no incluye servicios adicionales)</small>";
             break;
-            
-            case 'paseos':
-                return "Paseos de tu mascota.<br><br>
-                <small>* Precio final (incluye cobertura veterinaria y gastos administrativos; no incluye servicios adicionales)</small>";
-            break;
         }
         
     }
@@ -414,7 +411,7 @@
                 )
             ),
             'required' => 0,
-            'wc_booking_person_qty_multiplier' => 0,
+            'wc_booking_person_qty_multiplier' => 1,
             'wc_booking_block_qty_multiplier' => 0
         );
 
@@ -467,14 +464,14 @@
             }
         }
 
-        if( count($addons[0]['options']) == 0 ){
+        if( !isset($data["transportacion_sencilla"]) && !isset($data["transportacion_redonda"]) ){
             $addons[0] = array();
         }
 
         $i=0; $x=0;
         foreach ($adicionales_extra as $servicio => $precio) {
 
-            if( $data[$servicio]+0 > 0 ){
+            if( isset($data[$servicio]) ){
                 $addons[1]['options'][$i]['price'] = ($data[$servicio]*$comision);
                 $x++;
             }else{
@@ -488,15 +485,7 @@
             $addons[1] = array();
         }
 
-        // echo "<pre>";
-        //     print_r($addons[0]['options']);
-        //     print_r($addons);
-        // echo "</pre>";
-
-        // return utf8_decode( serialize($addons) );
-
         return "UPDATE wp_postmeta SET meta_value = '".utf8_decode( serialize($addons) )."' WHERE post_id = '".$data['id']."' AND meta_key='_product_addons';";
-
 
     }
 

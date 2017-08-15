@@ -12,13 +12,21 @@
   			$detalles_cliente.
 	  		$detalles_cuidador.
 	  		$detalles_mascotas.
-	  		$detalles_servicio.
+	  		$detalles_servicio_cuidador.
 	  		"<br>".$aceptar_rechazar
 		;
 
-		$mensaje_admin = kmimos_get_email_html('Nueva Reserva - '.$producto, $mensaje_admin, 'Nueva Reserva - '.$producto, true, true);
+		if( $modificacion == "" ){
+			$titulo_mail = 'Nueva Reserva - '.$producto;
+		}else{
+			$titulo_mail = $modificacion;
+		}
 
-		wp_mail( $email_admin, "Solicitud de reserva #".$reserva_id, $mensaje_admin, kmimos_mails_administradores() );
+		$mensaje_admin = kmimos_get_email_html($titulo_mail, $mensaje_admin, 'Nueva Reserva - '.$producto, true, true);
+
+		//wp_mail( $email_admin, "Solicitud de reserva #".$reserva_id, $mensaje_admin);
+
+		kmimos_mails_administradores_new("Solicitud de reserva #".$reserva_id, $mensaje_admin);
 
 	/* Correo Cliente */
 
@@ -26,23 +34,18 @@
 
 		$saludo = '
 			<center style="font-size: 16px; font-weight: 600;">¡Gracias '.$nom_cliente.'!</center>
-
 			<p>Recibimos tu solicitud de reserva de <strong>'.$tipo_servicio.'</strong>, para que <strong>'.$nom_cuidador.'</strong> atienda a tu(s) peludo(s).</p>
-
 			<p align="justify">
 				Dentro de las próximas 12 horas el cuidador confirmará la disponibilidad para tu solicitud. 
 				Posterior a que el cuidador confirme, te llegará un correo indicando que está <u>confirmada</u> tu reserva (el período de 12 horas es referencial, 
 				normalmente los cuidadores contactan al clientes con mucha anterioridad).
 			</p>
-
 			<p align="justify">
 				Si no puedes o decides no esperar las 12 horas no te preocupes, puedes contactar directamente al cuidador a través del teléfono o correo mostrados más abajo.
 			</p>
-
 			<p align="justify">
 				En caso de que el cuidador no esté disponible, recibirás un correo de notificación con instrucciones para que puedas solicitar el reembolso del importe realizado.
 			</p>
-
 			<h2>Detalles de tu reservación pendiente a confirmar:</h2>
 		';
 
@@ -55,7 +58,13 @@
 	  		$dudas
 		;
 
-		$mensaje_cliente = kmimos_get_email_html('Solicitud de reserva', $mensaje_cliente, 'Solicitud de reserva', true, true);
+		if( $modificacion == "" ){
+			$titulo_mail = 'Solicitud de reserva';
+		}else{
+			$titulo_mail = $modificacion;
+		}
+		
+		$mensaje_cliente = kmimos_get_email_html($titulo_mail, $mensaje_cliente, 'Solicitud de reserva', true, true);
 
 		wp_mail( $cliente_email, "Solicitud de reserva", $mensaje_cliente);
 
@@ -111,14 +120,22 @@
 	  		$detalles_cuidador.
 	  		$detalles_cliente.
 	  		$detalles_mascotas.
-	  		$detalles_servicio.
+	  		$detalles_servicio_cuidador.
 	  		"<br>".$aceptar_rechazar.
 	  		$siguientes_pasos.
 	  		$dudas
 		;
 
-		$mensaje_cuidador = kmimos_get_email_html('Nueva Reserva - '.$tipo_servicio.' por: '.$nom_cliente, $mensaje_cuidador, 'Nueva Reserva - '.$tipo_servicio.' por: '.$nom_cliente, true, true);
+		if( $modificacion == "" ){
+			$titulo_mail = 'Nueva Reserva - '.$tipo_servicio.' por: '.$nom_cliente;
+		}else{
+			$titulo_mail = $modificacion;
+		}
+		
+		$mensaje_cuidador = kmimos_get_email_html($titulo_mail, $mensaje_cuidador, 'Nueva Reserva - '.$tipo_servicio.' por: '.$nom_cliente, true, true);
 
-		wp_mail( $cuidador_email, 'Nueva Reserva - '.$tipo_servicio.' por: '.$nom_cliente, $mensaje_cuidador, kmimos_mails_administradores());
+		wp_mail( $cuidador_email, 'Nueva Reserva - '.$tipo_servicio.' por: '.$nom_cliente, $mensaje_cuidador);
+
+		//kmimos_mails_administradores_new('Nueva Reserva - '.$tipo_servicio.' por: '.$nom_cliente, $mensaje_cuidador);
 
 ?>
