@@ -805,16 +805,6 @@ if(!function_exists('kmimos_admin_menu')){
                 'icon'=>'',
             ),
 
-            array(
-                'title'=>'Newsletter',
-                'short-title'=>'Newsletter',
-                'parent'=>'kmimos',
-                'slug'=>'bp_newsletter',
-                'access'=>'manage_options',
-                'page'=>'backpanel_newsletter',
-                'icon'=>plugins_url('/assets/images/icon.png', __FILE__)
-            ),
-
         );
 
         // Crea los links en el menú del panel de control
@@ -858,13 +848,6 @@ if(!function_exists('kmimos_panel')){
         include_once('dashboard/kmimos_panel.php');
     }
 
-}
-
-
-if(!function_exists('backpanel_newsletter')){
-    function backpanel_newsletter(){
-        include_once('dashboard/backpanel_newsletter.php');
-    }
 }
 
 if(!function_exists('backpanel_conocer_cuidador')){
