@@ -17,7 +17,6 @@
 include_once('includes/class/class_kmimos_map.php');
 include_once('includes/functions/kmimos_functions.php');
 include_once('plugins/woocommerce.php');
-include_once('subscribe/subscribe.php');
 
 include_once('includes/functions/vlz_functions.php');
 
