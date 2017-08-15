@@ -1,0 +1,29 @@
+div#map-canvas {
+    width: 480px;
+    height: 480px;
+    border: 1px solid #ccc;
+}
+
+.img_gallery {
+    float: left;
+    height: 90px;
+    width: 120px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.gallery_container {
+    display: inline-block;
+}
+
+.thickbox-loading {
+    width: 832px !important; 
+    height: 632px !important; 
+    margin-left: -416px !important;
+    margin-top: -316px !important;
+    top: 50% !important;
+    left: 50% !important;
+}
+.row-title {
+    color: #d54e20;
+}
