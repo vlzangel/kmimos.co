@@ -68,7 +68,7 @@ if (!class_exists("Redux_Framework_PF_PBcontrol_Config")) {
                     'id' => 'setup21_widgetsettings_4',
                     'subsection' => true,
                     'title' => esc_html__('Page Builder: Info Boxes', 'pointfindert2d'),
-                    'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s You can change PF Info Box Typography.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_infobox.png" class="description-img" />'),
+                    'desc'      => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s You can change PF Info Box Typography.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_infobox.png" class="description-img" />'),
                     'fields' => array(
                             array(
                                 'id' => 'setup21_iconboxsettings_title_typo',
@@ -124,7 +124,7 @@ if (!class_exists("Redux_Framework_PF_PBcontrol_Config")) {
                     'id' => 'setup21_widgetsettings_3',
                     'subsection' => true,
                     'title' => esc_html__('Page Builder: Item Slider', 'pointfindert2d'),
-                    'desc' => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to PF Items Slider.','pointfindert2d').'<br/>'.esc_html__('You can change styles of this area by using below options.', 'pointfindert2d').'</p>','<img src="'.get_template_directory_uri(). '/admin/options/images/image_itemslider.png" class="description-img" />'),
+                    'desc' => sprintf('<p class="description descriptionpf descriptionpfimg">'.esc_html__('%s Blue area on the image refers to PF Items Slider.','pointfindert2d').'<br/>'.esc_html__('You can change styles of this area by using below options.', 'pointfindert2d').'</p>','<img src="'.get_home_url()."/wp-content/themes/pointfinder". '/admin/options/images/image_itemslider.png" class="description-img" />'),
                     'fields' => array(
                             array(
                                 'id'        => 'setup21_widgetsettings_3_slider_capt',

@@ -36,29 +36,29 @@ function pf_styleandscripts()
 		wp_enqueue_script('jquery-ui-dialog');
 		wp_enqueue_script('jquery-ui-autocomplete');
 		wp_deregister_script('wpb_composer_front_js');
-		wp_register_script( 'wpb_composer_front_js', get_template_directory_uri() .'/js/js_composer_front.min.js', array( 'jquery' ), '4.9.1.1', true );
+		wp_register_script( 'wpb_composer_front_js', get_home_url()."/wp-content/themes/pointfinder" .'/js/js_composer_front.min.js', array( 'jquery' ), '4.9.1.1', true );
 
 		/*------------------------------------*\
 			Special Styles
 		\*------------------------------------*/
 		
-		wp_register_script('pfsearch-select2-js', get_template_directory_uri() . '/js/select2.min.js', array('jquery'), '3.5.4',true); 
-		wp_register_style('pfsearch-select2-css', get_template_directory_uri() . '/css/select2.css', array(), '3.5.4', 'all');
+		wp_register_script('pfsearch-select2-js', get_home_url()."/wp-content/themes/pointfinder" . '/js/select2.min.js', array('jquery'), '3.5.4',true); 
+		wp_register_style('pfsearch-select2-css', get_home_url()."/wp-content/themes/pointfinder" . '/css/select2.css', array(), '3.5.4', 'all');
 
         /* All Scripts Packaged */
-		wp_register_script('pftheme-minified-package', get_template_directory_uri() . '/js/pointfinder.min.package.js', array('jquery'), '1.0',true); 
+		wp_register_script('pftheme-minified-package', get_home_url()."/wp-content/themes/pointfinder" . '/js/pointfinder.min.package.js', array('jquery'), '1.0',true); 
         wp_enqueue_script('pftheme-minified-package'); 
 
 
         /* Dropzone */
-		wp_register_script('theme-dropzone', get_template_directory_uri() . '/js/dropzone.min.js', array('jquery'), '4.0',true); 
+		wp_register_script('theme-dropzone', get_home_url()."/wp-content/themes/pointfinder" . '/js/dropzone.min.js', array('jquery'), '4.0',true); 
  
 		
 		/* Owl Carousel */
 		if ($general_rtlsupport == 1) {
-			wp_register_script('theme-OwlCarousel', get_template_directory_uri() . '/js/owl.carousel.min.rtl.js', array('jquery'), '1.3.1',true); 
+			wp_register_script('theme-OwlCarousel', get_home_url()."/wp-content/themes/pointfinder" . '/js/owl.carousel.min.rtl.js', array('jquery'), '1.3.1',true); 
 		}else{
-			wp_register_script('theme-OwlCarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '1.3.2',true); 
+			wp_register_script('theme-OwlCarousel', get_home_url()."/wp-content/themes/pointfinder" . '/js/owl.carousel.min.js', array('jquery'), '1.3.2',true); 
 		}
 		
         wp_enqueue_script('theme-OwlCarousel'); 
@@ -68,15 +68,15 @@ function pf_styleandscripts()
 		if ($usemin == 1) {$script_file_3n = "responsive_menu.min.js";}else{$script_file_3n = "responsive_menu.js";}
 
 		if ($general_rtlsupport == 1) {
-			wp_register_script('theme-menunav', get_template_directory_uri() . '/js/responsive_menu_rtl.js', array('jquery','jquery-ui-core','jquery-ui-draggable','jquery-ui-tooltip','jquery-effects-core','pftheme-minified-package','jquery-ui-slider','jquery-effects-fade','jquery-effects-slide','jquery-ui-dialog'), '1.0.0',true); 
+			wp_register_script('theme-menunav', get_home_url()."/wp-content/themes/pointfinder" . '/js/responsive_menu_rtl.js', array('jquery','jquery-ui-core','jquery-ui-draggable','jquery-ui-tooltip','jquery-effects-core','pftheme-minified-package','jquery-ui-slider','jquery-effects-fade','jquery-effects-slide','jquery-ui-dialog'), '1.0.0',true); 
 		}else{
-			wp_register_script('theme-menunav', get_template_directory_uri() . '/js/'.$script_file_3n, array('jquery','jquery-ui-core','jquery-ui-draggable','jquery-ui-tooltip','jquery-effects-core','pftheme-minified-package','jquery-ui-slider','jquery-effects-fade','jquery-effects-slide','jquery-ui-dialog'), '1.0.0',true); 
+			wp_register_script('theme-menunav', get_home_url()."/wp-content/themes/pointfinder" . '/js/'.$script_file_3n, array('jquery','jquery-ui-core','jquery-ui-draggable','jquery-ui-tooltip','jquery-effects-core','pftheme-minified-package','jquery-ui-slider','jquery-effects-fade','jquery-effects-slide','jquery-ui-dialog'), '1.0.0',true); 
 		}
         wp_enqueue_script('theme-menunav'); 
 
         if(is_user_logged_in()){
         	$login_register_system = PFSAIssetControl('setup4_membersettings_loginregister','','1');
-        	wp_register_script('theme-upload-map-functions', get_template_directory_uri() . '/js/theme-upload-map-functions.js', array('theme-gmap3'), '1.0',true); 
+        	wp_register_script('theme-upload-map-functions', get_home_url()."/wp-content/themes/pointfinder" . '/js/theme-upload-map-functions.js', array('theme-gmap3'), '1.0',true); 
 
         	if( $login_register_system == 1){
 	        	if(!wp_style_is('pfsearch-select2-css', 'enqueued')){wp_enqueue_style('pfsearch-select2-css');}
@@ -85,7 +85,7 @@ function pf_styleandscripts()
    	 	}
 
    	 	if ($usemin == 1) {$script_file_4n = "theme-scripts-header.min.js";}else{$script_file_4n = "theme-scripts-header.js";}
-   	 	wp_register_script('theme-scriptsheader', get_template_directory_uri() . '/js/'.$script_file_4n, array('jquery'), '1.0.0'); 
+   	 	wp_register_script('theme-scriptsheader', get_home_url()."/wp-content/themes/pointfinder" . '/js/'.$script_file_4n, array('jquery'), '1.0.0'); 
         wp_enqueue_script('theme-scriptsheader'); 
 
         $setup4_membersettings_dashboard = PFSAIssetControl('setup4_membersettings_dashboard','','');
@@ -95,10 +95,10 @@ function pf_styleandscripts()
 		// if ($usemin == 1) {$script_file_1n = "theme-scripts.min.js";}else{$script_file_1n = "theme-scripts.js";}
 		if ($usemin == 1) {$script_file_1n = "theme-scripts-jauregui.js";}else{$script_file_1n = "theme-scripts-jauregui.js";}
 
-		wp_register_script('theme-scriptspf', get_template_directory_uri() . '/js/'.$script_file_1n, array('jquery','jquery-ui-core','jquery-ui-draggable','jquery-ui-tooltip','jquery-effects-core','pftheme-minified-package','jquery-ui-slider','jquery-effects-fade','jquery-effects-slide','jquery-ui-dialog','pftheme-minified-package'), '1.0.0',true); 
+		wp_register_script('theme-scriptspf', get_home_url()."/wp-content/themes/pointfinder" . '/js/'.$script_file_1n, array('jquery','jquery-ui-core','jquery-ui-draggable','jquery-ui-tooltip','jquery-effects-core','pftheme-minified-package','jquery-ui-slider','jquery-effects-fade','jquery-effects-slide','jquery-ui-dialog','pftheme-minified-package'), '1.0.2', true); 
         wp_enqueue_script('theme-scriptspf'); 
         wp_localize_script( 'theme-scriptspf', 'theme_scriptspf', array( 
-			'ajaxurl' => get_template_directory_uri().'/admin/core/pfajaxhandler.php',
+			'ajaxurl' => get_home_url()."/wp-content/themes/pointfinder".'/admin/core/pfajaxhandler.php',
 			'homeurl' => esc_url(home_url()),
 			'pfget_usersystem' => wp_create_nonce('pfget_usersystem'),
 			'pfget_modalsystem' => wp_create_nonce('pfget_modalsystem'),
@@ -126,10 +126,10 @@ function pf_styleandscripts()
 		
         /*Jauregui*/
 		// if ($usemin == 1) {$script_file_member = "theme-scripts-dash.min.js";}else{$script_file_member = "theme-scripts-dash.js";}
-		if ($usemin == 1) {$script_file_member = "theme-scripts-dash-jauregui-16_03.js";}else{$script_file_member = "theme-scripts-dash-jauregui-16_03.js";}
+		if ($usemin == 1) {$script_file_member = "theme-scripts-dash-jauregui.js";}else{$script_file_member = "theme-scripts-dash-jauregui.js";}
 		if (is_page($setup4_membersettings_dashboard)) {
 			$as_mobile_dropdowns = PFASSIssetControl('as_mobile_dropdowns','','0');
-			wp_register_script('theme-scriptspfm', get_template_directory_uri() . '/js/'.$script_file_member, array('jquery','jquery-ui-core','jquery-ui-draggable','jquery-ui-tooltip','jquery-effects-core','pftheme-minified-package','jquery-ui-slider','jquery-effects-fade','jquery-effects-slide','jquery-ui-dialog','theme-scriptspf'), '1.0.0',true); 
+			wp_register_script('theme-scriptspfm', get_home_url()."/wp-content/themes/pointfinder" . '/js/'.$script_file_member, array('jquery','jquery-ui-core','jquery-ui-draggable','jquery-ui-tooltip','jquery-effects-core','pftheme-minified-package','jquery-ui-slider','jquery-effects-fade','jquery-effects-slide','jquery-ui-dialog','theme-scriptspf'), '1.0.1',true); 
 	        wp_enqueue_script('theme-scriptspfm'); 
 	        wp_localize_script( 'theme-scriptspfm', 'theme_scriptspfm', array( 
 				'delmsg' => esc_html__('Are you sure that you want to delete this? (This action cannot rollback.)','pointfindert2d'),
@@ -163,9 +163,9 @@ function pf_styleandscripts()
 
 		if ($usemin == 1) {$script_file_2n = "theme-map-functions.min.js";}else{$script_file_2n = "theme-map-functions.js";}
 
-		wp_register_script('theme-google-api', 'https://maps.googleapis.com/maps/api/js?v=3.18&libraries=places&language='.$maplanguage, array('jquery'), '',true); 
-		wp_register_script('theme-gmap3', get_template_directory_uri() . '/js/gmap3.js', array('theme-google-api'), '6.1',true); 
-		wp_register_script('theme-map-functionspf', get_template_directory_uri() . '/js/'.$script_file_2n, array('theme-gmap3','pftheme-minified-package','theme-scriptspf'), '1.0.0',true); 
+		// wp_register_script('theme-google-api', 'https://maps.googleapis.com/maps/api/js?v=3.18&libraries=places&language='.$maplanguage, array('jquery'), '',true); 
+		// wp_register_script('theme-gmap3', get_home_url()."/wp-content/themes/pointfinder" . '/js/gmap3.js', array('theme-google-api'), '6.1',true); 
+		// wp_register_script('theme-map-functionspf', get_home_url()."/wp-content/themes/pointfinder" . '/js/'.$script_file_2n, array('theme-gmap3','pftheme-minified-package','theme-scriptspf'), '1.0.0',true); 
 		
 		global $post;
 
@@ -190,8 +190,8 @@ function pf_styleandscripts()
 				/* Map Functions */
 				wp_enqueue_script('theme-map-functionspf');
 				wp_localize_script( 'theme-map-functionspf', 'theme_map_functionspf', array( 
-					'ajaxurl' => get_template_directory_uri().'/admin/core/pfajaxhandler.php',
-					'template_directory' => get_template_directory_uri(),
+					'ajaxurl' => get_home_url()."/wp-content/themes/pointfinder".'/admin/core/pfajaxhandler.php',
+					'template_directory' => get_home_url()."/wp-content/themes/pointfinder",
 					'pfget_infowindow' => wp_create_nonce('pfget_infowindow'),
 					'pfget_markers' => wp_create_nonce('pfget_markers'),
 					'pfget_taxpoint' => wp_create_nonce('pfget_taxpoint'),
@@ -205,10 +205,10 @@ function pf_styleandscripts()
 
 
 		if ( is_active_widget( false, '', 'pf_twitter_w', true ) ) {
-			wp_register_script('pointfinder-twitterspf', get_template_directory_uri() . '/js/twitterwebbu.js', array('jquery'), '1.0.0',true); 
+			wp_register_script('pointfinder-twitterspf', get_home_url()."/wp-content/themes/pointfinder" . '/js/twitterwebbu.js', array('jquery'), '1.0.0',true); 
 	        wp_enqueue_script('pointfinder-twitterspf'); 
 	        wp_localize_script( 'pointfinder-twitterspf', 'pointfinder_twitterspf', array( 
-				'ajaxurl' => get_template_directory_uri().'/admin/core/pfajaxhandler.php',
+				'ajaxurl' => get_home_url()."/wp-content/themes/pointfinder".'/admin/core/pfajaxhandler.php',
 				'pfget_grabtweets' => wp_create_nonce('pfget_grabtweets'),
 				'grabtweettext' => esc_html__('Please control secret keys!','pointfindert2d')
 			));
@@ -221,15 +221,15 @@ function pf_styleandscripts()
 			Styles
 		\*------------------------------------*/
 		
-		wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.2', 'all');
+		wp_register_style('bootstrap', get_home_url()."/wp-content/themes/pointfinder". '/css/bootstrap.min.css', array(), '3.2', 'all');
 		wp_enqueue_style('bootstrap'); 
 
-	    wp_register_style('fontellopf', get_template_directory_uri() . '/css/fontello.min.css', array(), '1.0', 'all');
+	    wp_register_style('fontellopf', get_home_url()."/wp-content/themes/pointfinder" . '/css/fontello.min.css', array(), '1.0', 'all');
 	    wp_enqueue_style( 'fontellopf' );
 	    
-	    wp_register_style('flaticons', get_template_directory_uri() . '/css/flaticon.css', array(), '1.0', 'all');
+	    wp_register_style('flaticons', get_home_url()."/wp-content/themes/pointfinder" . '/css/flaticon.css', array(), '1.0', 'all');
 
-	    wp_register_style('theme-dropzone', get_template_directory_uri() . '/css/dropzone.min.css', array(), '1.0', 'all');
+	    wp_register_style('theme-dropzone', get_home_url()."/wp-content/themes/pointfinder" . '/css/dropzone.min.css', array(), '1.0', 'all');
 
 	    if (isset($post)) {
 		    if( (has_shortcode( $post->post_content, 'pf_directory_map')) || $pfpage_post_type == $setup3_pointposttype_pt1 || (isset($_GET['action']) && $_GET['action'] == 'pfs')) {
@@ -238,31 +238,31 @@ function pf_styleandscripts()
 		}
 
 	    global $wp_styles;
-	    $wp_styles->add('fontello-pf-ie7', get_template_directory_uri() . '/css/fontello-ie7.css');
+	    $wp_styles->add('fontello-pf-ie7', get_home_url()."/wp-content/themes/pointfinder" . '/css/fontello-ie7.css');
 	    $wp_styles->add_data('fontello-pf-ie7', 'conditional', 'IE 7');
 	    $wp_styles->add('fontello-pf-ie8x', 'http://html5shim.googlecode.com/svn/trunk/html5.js');
 	    $wp_styles->add_data('fontello-pf-ie8x', 'conditional', 'lte IE 8');
 
 
 				
-		wp_register_style('theme-prettyphotocss', get_template_directory_uri() . '/css/prettyPhoto.css', array(), '1.0', 'all',true);
+		wp_register_style('theme-prettyphotocss', get_home_url()."/wp-content/themes/pointfinder" . '/css/prettyPhoto.css', array(), '1.0', 'all',true);
 		wp_enqueue_style('theme-prettyphotocss'); 
 		
-		wp_register_style('theme-style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+		wp_register_style('theme-style', get_home_url()."/wp-content/themes/pointfinder" . '/style.css', array(), '1.0', 'all');
 		wp_enqueue_style('theme-style');
 
 		if ($general_rtlsupport == 1) {
-			wp_register_style('theme-owlcarousel', get_template_directory_uri() . '/css/owl.carousel.min.rtl.css', array(), '1.0', 'all');
+			wp_register_style('theme-owlcarousel', get_home_url()."/wp-content/themes/pointfinder" . '/css/owl.carousel.min.rtl.css', array(), '1.0', 'all');
 		}else{
-			wp_register_style('theme-owlcarousel', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.0', 'all');
+			wp_register_style('theme-owlcarousel', get_home_url()."/wp-content/themes/pointfinder" . '/css/owl.carousel.min.css', array(), '1.0', 'all');
 		}
 		wp_enqueue_style('theme-owlcarousel');	
 		
-		wp_register_style('pfcss-animations', get_template_directory_uri() . '/css/animate.min.css', array(), '1.0', 'all');
+		wp_register_style('pfcss-animations', get_home_url()."/wp-content/themes/pointfinder" . '/css/animate.min.css', array(), '1.0', 'all');
 		wp_enqueue_style('pfcss-animations'); 	
 		
 		if ($usemin == 1) {$script_file_4n = "golden-forms.min.css";}else{$script_file_4n = "golden-forms.css";}
-		wp_register_style('pfsearch-goldenforms-css', get_template_directory_uri() . '/css/'.$script_file_4n, array(), '1.0', 'all');
+		wp_register_style('pfsearch-goldenforms-css', get_home_url()."/wp-content/themes/pointfinder" . '/css/'.$script_file_4n, array(), '1.0', 'all');
 		wp_enqueue_style('pfsearch-goldenforms-css');
 		
 
@@ -280,19 +280,19 @@ function pf_styleandscripts()
 			wp_enqueue_style('pf-frontend-compiler');
 		}else{
 			if($pfcssstyle == 'realestate' || empty($pfcssstyle)){
-				wp_register_style('pf-frontend-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/pf-style-frontend.css', array(), '', 'all');
+				wp_register_style('pf-frontend-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/pf-style-frontend.css', array(), '', 'all');
 				wp_enqueue_style('pf-frontend-compiler-local');
 			}elseif ($pfcssstyle == 'directory') {
-				wp_register_style('pf-frontend-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/directory/pf-style-frontend.css', array(), '', 'all');
+				wp_register_style('pf-frontend-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/directory/pf-style-frontend.css', array(), '', 'all');
 				wp_enqueue_style('pf-frontend-compiler-local');
 			}elseif ($pfcssstyle == 'multidirectory') {
-				wp_register_style('pf-frontend-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/multidirectory/pf-style-frontend.css', array(), '', 'all');
+				wp_register_style('pf-frontend-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/multidirectory/pf-style-frontend.css', array(), '', 'all');
 				wp_enqueue_style('pf-frontend-compiler-local');
 			}elseif ($pfcssstyle == 'cardealer') {
-				wp_register_style('pf-frontend-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/cardealer/pf-style-frontend.css', array(), '', 'all');
+				wp_register_style('pf-frontend-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/cardealer/pf-style-frontend.css', array(), '', 'all');
 				wp_enqueue_style('pf-frontend-compiler-local');
 			}elseif ($pfcssstyle == 'construction') {
-				wp_register_style('pf-frontend-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/construction/pf-style-frontend.css', array(), '', 'all');
+				wp_register_style('pf-frontend-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/construction/pf-style-frontend.css', array(), '', 'all');
 				wp_enqueue_style('pf-frontend-compiler-local');
 			}
 		}
@@ -306,19 +306,19 @@ function pf_styleandscripts()
 			wp_enqueue_style('pf-opensn');
 
 			if($pfcssstyle == 'realestate'){
-				wp_register_style('pf-main-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/pf-style-main.css', array(), '', 'all');
+				wp_register_style('pf-main-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/pf-style-main.css', array(), '', 'all');
 				wp_enqueue_style('pf-main-compiler-local');
 			}elseif ($pfcssstyle == 'directory') {
-				wp_register_style('pf-main-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/directory/pf-style-main.css', array(), '', 'all');
+				wp_register_style('pf-main-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/directory/pf-style-main.css', array(), '', 'all');
 				wp_enqueue_style('pf-main-compiler-local');
 			}elseif ($pfcssstyle == 'multidirectory') {
-				wp_register_style('pf-main-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/multidirectory/pf-style-main.css', array(), '', 'all');
+				wp_register_style('pf-main-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/multidirectory/pf-style-main.css', array(), '', 'all');
 				wp_enqueue_style('pf-main-compiler-local');
 			}elseif ($pfcssstyle == 'cardealer') {
-				wp_register_style('pf-main-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/cardealer/pf-style-main.css', array(), '', 'all');
+				wp_register_style('pf-main-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/cardealer/pf-style-main.css', array(), '', 'all');
 				wp_enqueue_style('pf-main-compiler-local');
 			}elseif ($pfcssstyle == 'construction') {
-				wp_register_style('pf-main-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/construction/pf-style-main.css', array(), '', 'all');
+				wp_register_style('pf-main-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/construction/pf-style-main.css', array(), '', 'all');
 				wp_enqueue_style('pf-main-compiler-local');
 			}
 		}
@@ -328,19 +328,19 @@ function pf_styleandscripts()
 			wp_enqueue_style('pf-customp-compiler');
 		}else{
 			if($pfcssstyle == 'realestate'){
-				wp_register_style('pf-customp-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/pf-style-custompoints.css', array(), '', 'all');
+				wp_register_style('pf-customp-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/pf-style-custompoints.css', array(), '', 'all');
 				wp_enqueue_style('pf-customp-compiler-local');
 			}elseif ($pfcssstyle == 'directory') {
-				wp_register_style('pf-customp-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/directory/pf-style-custompoints.css', array(), '', 'all');
+				wp_register_style('pf-customp-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/directory/pf-style-custompoints.css', array(), '', 'all');
 				wp_enqueue_style('pf-customp-compiler-local');
 			}elseif ($pfcssstyle == 'multidirectory') {
-				wp_register_style('pf-customp-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/multidirectory/pf-style-custompoints.css', array(), '', 'all');
+				wp_register_style('pf-customp-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/multidirectory/pf-style-custompoints.css', array(), '', 'all');
 				wp_enqueue_style('pf-customp-compiler-local');
 			}elseif ($pfcssstyle == 'cardealer') {
-				wp_register_style('pf-customp-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/cardealer/pf-style-custompoints.css', array(), '', 'all');
+				wp_register_style('pf-customp-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/cardealer/pf-style-custompoints.css', array(), '', 'all');
 				wp_enqueue_style('pf-customp-compiler-local');
 			}elseif ($pfcssstyle == 'construction') {
-				wp_register_style('pf-customp-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/construction/pf-style-custompoints.css', array(), '', 'all');
+				wp_register_style('pf-customp-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/construction/pf-style-custompoints.css', array(), '', 'all');
 				wp_enqueue_style('pf-customp-compiler-local');
 			}
 		}
@@ -349,7 +349,7 @@ function pf_styleandscripts()
 			wp_register_style('pf-pbstyles-compiler', $uploads['baseurl'] . '/pfstyles/pf-style-pbstyles.css', array(), time(), 'all');
 			wp_enqueue_style('pf-pbstyles-compiler');
 		}else{
-			wp_register_style('pf-pbstyles-compiler-local', get_template_directory_uri() . '/admin/options/pfstyles/pf-style-pbstyles.css', array(), '', 'all');
+			wp_register_style('pf-pbstyles-compiler-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/pf-style-pbstyles.css', array(), '', 'all');
 			wp_enqueue_style('pf-pbstyles-compiler-local');
 		}
 
@@ -363,7 +363,7 @@ function pf_styleandscripts()
 			wp_enqueue_style('pf-search-compiler');
 		}else{
 			if ($pfcssstyle == 'cardealer') {
-				wp_register_style('pf-customp-search-local', get_template_directory_uri() . '/admin/options/pfstyles/cardealer/pf-style-search.css', array(), '', 'all');
+				wp_register_style('pf-customp-search-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/cardealer/pf-style-search.css', array(), '', 'all');
 				wp_enqueue_style('pf-customp-search-local');
 			}
 		}
@@ -373,7 +373,7 @@ function pf_styleandscripts()
 			wp_enqueue_style('pf-review-compiler');
 		}else{
 			if ($pfcssstyle == 'directory') {
-				wp_register_style('pf-main-review-local', get_template_directory_uri() . '/admin/options/pfstyles/directory/pf-style-review.css', array(), '', 'all');
+				wp_register_style('pf-main-review-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/directory/pf-style-review.css', array(), '', 'all');
 				wp_enqueue_style('pf-main-review-local');
 			}
 		}
@@ -384,7 +384,7 @@ function pf_styleandscripts()
 			wp_enqueue_style('pf-review-compiler');
 		}else{
 			if ($pfcssstyle == 'multidirectory') {
-				wp_register_style('pf-main-review-local', get_template_directory_uri() . '/admin/options/pfstyles/multidirectory/pf-style-review.css', array(), '', 'all');
+				wp_register_style('pf-main-review-local', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/pfstyles/multidirectory/pf-style-review.css', array(), '', 'all');
 				wp_enqueue_style('pf-main-review-local');
 			}
 		}
@@ -414,8 +414,8 @@ function pf_admin_styleandscripts(){
 	$setup3_pointposttype_pt1 = PFSAIssetControl('setup3_pointposttype_pt1','','pfitemfinder');
 	
 	//Script and styles
-    wp_register_style('pfadminstyles', get_template_directory_uri() . '/admin/core/css/style.css', array(), '1.0', 'all');
-    wp_register_style('redux-custompf-css', get_template_directory_uri() . '/admin/options/custom/custom.css', array() , '','all');
+    wp_register_style('pfadminstyles', get_home_url()."/wp-content/themes/pointfinder" . '/admin/core/css/style.css', array(), '1.0', 'all');
+    wp_register_style('redux-custompf-css', get_home_url()."/wp-content/themes/pointfinder" . '/admin/options/custom/custom.css', array() , '','all');
    
 	global $pagenow; global $post_type;
 	
@@ -431,7 +431,7 @@ function pf_admin_styleandscripts(){
 	}
 
 	if(($pagenow == 'post.php' || $pagenow == 'post-new.php') && in_array($post_type, array('pointfinderreviews')) ){
-		wp_register_style('fontellopf', get_template_directory_uri() . '/css/fontello.min.css', array(), '1.0', 'all');
+		wp_register_style('fontellopf', get_home_url()."/wp-content/themes/pointfinder" . '/css/fontello.min.css', array(), '1.0', 'all');
 		wp_enqueue_style('fontellopf');
 		wp_enqueue_style('pfadminstyles');
 	}
@@ -439,14 +439,14 @@ function pf_admin_styleandscripts(){
 	$setup3_pointposttype_pt1 = PFSAIssetControl('setup3_pointposttype_pt1','','pfitemfinder');
 
 	//Script and styles
-	wp_register_script('pfa-select2-js', get_template_directory_uri() . '/admin/includes/vcextend/assets/js/select2.min.js', array('jquery'), '3.5.4',true); 
-	wp_register_style('pfa-select2-css', get_template_directory_uri() . '/admin/includes/vcextend/assets/css/select2.css', array(), '3.5.4', 'all');
-	wp_register_style('pfa-vcextend-css', get_template_directory_uri() . '/admin/includes/vcextend/assets/css/vc_extend.css', array(), '1.0.0', 'all');
-	wp_register_script('pfa-scripts-js', get_template_directory_uri() . '/admin/includes/vcextend/assets/js/scripts.js', array('jquery'), '1.0',true); 
-    wp_register_style('fontellopf', get_template_directory_uri() . '/css/fontello.min.css', array(), '1.0', 'all');
+	wp_register_script('pfa-select2-js', get_home_url()."/wp-content/themes/pointfinder" . '/admin/includes/vcextend/assets/js/select2.min.js', array('jquery'), '3.5.4',true); 
+	wp_register_style('pfa-select2-css', get_home_url()."/wp-content/themes/pointfinder" . '/admin/includes/vcextend/assets/css/select2.css', array(), '3.5.4', 'all');
+	wp_register_style('pfa-vcextend-css', get_home_url()."/wp-content/themes/pointfinder" . '/admin/includes/vcextend/assets/css/vc_extend.css', array(), '1.0.0', 'all');
+	wp_register_script('pfa-scripts-js', get_home_url()."/wp-content/themes/pointfinder" . '/admin/includes/vcextend/assets/js/scripts.js', array('jquery'), '1.0',true); 
+    wp_register_style('fontellopf', get_home_url()."/wp-content/themes/pointfinder" . '/css/fontello.min.css', array(), '1.0', 'all');
 
-    wp_register_script('pfa-contactmap-js', get_template_directory_uri() . '/admin/includes/vcextend/assets/js/contactmap.js', array('jquery'), '1.0',true); 
-    wp_register_style('pfa-contactmap-css', get_template_directory_uri() . '/admin/includes/vcextend/assets/css/contactmap.css', array(), '1.0', 'all');
+    wp_register_script('pfa-contactmap-js', get_home_url()."/wp-content/themes/pointfinder" . '/admin/includes/vcextend/assets/js/contactmap.js', array('jquery'), '1.0',true); 
+    wp_register_style('pfa-contactmap-css', get_home_url()."/wp-content/themes/pointfinder" . '/admin/includes/vcextend/assets/css/contactmap.css', array(), '1.0', 'all');
    
 	global $pagenow; global $post_type;
 	
@@ -462,17 +462,17 @@ function pf_admin_styleandscripts(){
 
 
 		global $wp_styles;
-	    $wp_styles->add('fontello-pf-ie7', get_template_directory_uri() . '/css/fontello-ie7.css');
+	    $wp_styles->add('fontello-pf-ie7', get_home_url()."/wp-content/themes/pointfinder" . '/css/fontello-ie7.css');
 	    $wp_styles->add_data('fontello-pf-ie7', 'conditional', 'IE 7');
 	}
 
 
 	if ($post_type == $setup3_pointposttype_pt1) {
-		wp_register_style('itempage-custom.', get_template_directory_uri() . '/admin/core/css/itempage-custom.css', array(), '1.0', 'all');
+		wp_register_style('itempage-custom.', get_home_url()."/wp-content/themes/pointfinder" . '/admin/core/css/itempage-custom.css', array(), '1.0', 'all');
 		wp_enqueue_style('itempage-custom.'); 
 	}
 	if ($post_type == $setup3_pointposttype_pt1 && PFSAIssetControl('general_rtlsupport','','0') == 1) {
-		wp_register_style('itempage-custom-rtl.', get_template_directory_uri() . '/admin/core/css/itempage-custom-rtl.css', array(), '1.0', 'all');
+		wp_register_style('itempage-custom-rtl.', get_home_url()."/wp-content/themes/pointfinder" . '/admin/core/css/itempage-custom-rtl.css', array(), '1.0', 'all');
 		wp_enqueue_style('itempage-custom-rtl.'); 
 	}
 

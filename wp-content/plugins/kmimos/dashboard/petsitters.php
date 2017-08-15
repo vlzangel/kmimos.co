@@ -41,7 +41,7 @@
 
     if(!function_exists('kmimos_box_details_of_petsitter')){
         function kmimos_box_details_of_petsitter() {
-            
+            $values = kmimos_get_fields_values(array());
             add_meta_box(
                 'active_petsitter',
                 'Datos Cuidador',

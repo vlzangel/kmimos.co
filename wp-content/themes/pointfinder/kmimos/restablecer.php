@@ -4,15 +4,11 @@
 
     extract($_POST);
 
-    $info = kmimos_get_info_syte();
-
     add_filter( 'wp_mail_from_name', function( $name ) {
-        global $info;
-        return $info["titulo"];
+        return 'Kmimos México';
     });
     add_filter( 'wp_mail_from', function( $email ) {
-        global $info;
-        return $info["email"]; 
+        return 'contactomx@kmimos.la';
     });
 
     global $wpdb;
@@ -28,13 +24,16 @@
         update_user_meta( $user->ID, 'clave_temp', $clave );
 
         $mensaje = '
-            <h1>¡Nueva Contraseña Temporal!</h1>
+            <h1>¡Recuperación de Contraseña!</h1>
             <p style="text-align: justify;">Hola <strong>'.$user->display_name.'</strong>,</p>
             <p style="text-align: justify;">
                 Hemos recibido tu solicitud para restablecer tu contraseña en Kmimos.
             </p>
             <p style="text-align: justify;">
-                Para restablecer tu contraseña por favor haz click en el botón de abajo.
+                Como parte del proceso de mejoras que tenemos en Kmimos, hemos hecho un cambio en la plataforma con una serie de beneficios que fueron compartidos en un email aparte.
+            </p>
+            <p style="text-align: justify;">
+                Para restablecer tu contraseña por favor pícale al botón de abajo.
             </p>
             <p style="text-align: center;">
                 <a  target="_blank"
@@ -54,7 +53,7 @@
                         text-align: center;
                         text-decoration: none;
                     "
-                >Click para restablecer la contraseña</a>
+                >Pícale para restablecer la contraseña</a>
             </p>
             <p style="text-align: justify;">
                 <strong>Si no has solicitado cambiar tu contraseña, no te preocupes, solo ignora este correo y tu actual contraseña permanecerá activa.</strong>
@@ -63,7 +62,7 @@
 
         $send = kmimos_get_email_html("", $mensaje, '', true, true);
 
-        wp_mail( $user->user_email, "Kmimos ".$info["pais"]." – Restablecimiento de Contraseña! Kmimos la NUEVA forma de cuidar a tu perro!", $send);
+        wp_mail( $user->user_email, "Kmimos México – Restablecimiento de Contraseña! Kmimos la NUEVA forma de cuidar a tu perro!", $send);
 
         $respuesta = array(
 	    	"code" => 1,

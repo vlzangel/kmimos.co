@@ -181,7 +181,7 @@ if (!class_exists('ReduxFramework_extension_custom_slides')) {
             if ($pagenow == 'admin.php' && $pagename == '_pointfinderoptions') {
                 wp_enqueue_script(
                     'redux-field-custom_slides-js',
-                    get_template_directory_uri().'/admin/options/extensions/custom_slides/field_custom_slides.js',
+                    get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/custom_slides/field_custom_slides.js',
                     array('jquery', 'jquery-ui-core', 'jquery-ui-accordion'),
                     time(),
                     true
@@ -189,7 +189,7 @@ if (!class_exists('ReduxFramework_extension_custom_slides')) {
                 
                 wp_enqueue_style(
                     'redux-field-custom_slides-css',
-                    get_template_directory_uri().'/admin/options/extensions/custom_slides/field_custom_slides.css',
+                    get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/custom_slides/field_custom_slides.css',
                     time(),
                     true
                 );

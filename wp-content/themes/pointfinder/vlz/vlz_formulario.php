@@ -81,7 +81,7 @@
 	global $wpdb;
 	$estados_array = $wpdb->get_results("SELECT * FROM states WHERE country_id = 1 ORDER BY name ASC");
 
-    $estados = "<option value=''>Seleccione una ciudad</option>";
+    $estados = "<option value=''>Seleccione un estado</option>";
     foreach($estados_array as $estado) { 
     	if( $_POST['estados'] == $estado->id ){ 
 			$sel = "selected"; 
@@ -91,39 +91,19 @@
 
 	$estados = utf8_decode($estados);
 
-	$json = array();
-    foreach ($estados_array as $estado) {
-        
-        $municipios = $wpdb->get_results("SELECT * FROM locations WHERE state_id = {$estado->id} ORDER BY name ASC");
-
-        foreach ($municipios as $municipio) {
-            $json[$estado->id][] = array(
-                "id" => $municipio->id,
-                "name" => $municipio->name
-            );
-        }
-
-    }
-
-    echo "<script> var temp = eval( '(".json_encode($json).")' ); var locaciones = jQuery.makeArray( temp ); </script>"; 
-
-
-	if($_POST['municipios'] != ""){
-
+	if($_POST['estados'] != ""){
 		$municipios_array = $wpdb->get_results("SELECT * FROM locations WHERE state_id = {$_POST['estados']} ORDER BY name ASC");
-
-	    $muni = "<option value=''>Seleccione una localidad</option>";
+	    $muni = "<option value=''>Seleccione un municipio</option>"; $xxx = 0;
 	    foreach($municipios_array as $municipio) { 
 	    	if( $_POST['municipios'] == $municipio->id ){
 				$sel = "selected"; 
 			}else{ $sel = ""; }
-	        $muni .= "<option value='".$municipio->id."' $sel>".$municipio->name."</option>";
+	        $muni .= "<option value='".$municipio->id."' data-id='".$xxx."' $sel>".$municipio->name."</option>";
+	        $xxx++;
 	    } 
-
 		$muni = utf8_decode($muni);
-
     }else{
-    	$mun = "<option value='' selected>Seleccione un municipio primero</option>";
+    	$mun = "<option value='' selected>Seleccione un estado primero</option>";
     }
 
 	$selects_estados = "
@@ -146,12 +126,13 @@
 		$valoraciones_rangos_2 .= "<option value='$i' ".selected($i, $_POST['rangos'][5], false).">$i</option>";
 	}
 
+	$token = md5(rand());
 	echo "
 	<div id='filtros'></div>
 	<form action='".get_home_url()."/busqueda' method='POST' class='vlz_form' id='vlz_form_buscar' style='margin-top: 20px;'>
 
-		<input type='submit' value='Aplicar Filtros' class='vlz_boton'>
-		
+		<input type='submit' value='Aplicar Filtros' class='theme_button vlz_boton'>
+
 		<div class='vlz_sub_seccion'>
 			<div class='vlz_sub_seccion_titulo'>Ordenar por:</div>
 			<div class='vlz_sub_seccion_interno'>
@@ -167,8 +148,8 @@
 					    <option value='price_desc'>Precio del Servicio de mayor a menor</option>
 					    <option value='experience_asc'>Experiencia de menos a más años</option>
 					    <option value='experience_desc'>Experiencia de más a menos años</option>
-					    <option value='name_asc'>Nombre del Cuidador de la A a la Z</option>
-					    <option value='name_desc'>Nombre del Cuidador de la Z a la A</option>
+					    <!-- option value='name_asc'>Nombre del Cuidador de la A a la Z</option -->
+					    <!-- option value='name_desc'>Nombre del Cuidador de la Z a la A</option -->
 				    </select>
 				</div>
 
@@ -268,7 +249,7 @@
 			</div>
 		</div>
 
-		<input type='submit' value='Aplicar Filtros' class='vlz_boton'>
+		<input type='submit' value='Aplicar Filtros' class='theme_button vlz_boton'>
 	</form>";
 
 	/*

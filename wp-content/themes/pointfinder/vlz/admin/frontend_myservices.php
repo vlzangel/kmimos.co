@@ -12,6 +12,7 @@
     $this->ScriptOutput .= "
         jQuery('#pf-ajax-add-service-button').on('click',function(e){
             e.preventDefault();
+            // jQuery('#pfuaprofileform').attr('action','?ua=updateservices');
             jQuery('#pfuaprofileform').attr('action','".get_home_url()."/wp-content/themes/pointfinder/vlz/admin/procesar_mis_servicios.php');
             jQuery('#pfuaprofileform').submit();
         });
@@ -361,6 +362,12 @@
 	    			</div>
     			</div>
     		</div>
+			<div class=\"alertas alertas-info\" id=\"hospedaje-error\" >
+    			<small> 
+					<strong>ATENCI&Oacute;N:</strong> Recuerda completar con ceros (0) los Miles. 
+					<strong>Ejemplo:</strong> 1 Peso no es igual a 1000 Pesos
+				</small> 
+			</div>
     		<div class='vlz_seccion'>
     			<div class='vlz_titulo_seccion'>Hospedaje <!-- {$boton} --> </div>
     			<div class='vlz_seccion_interna' id='precios_hospedaje'>

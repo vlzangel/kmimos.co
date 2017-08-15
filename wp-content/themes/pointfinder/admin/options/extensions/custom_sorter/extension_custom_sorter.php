@@ -231,7 +231,7 @@
                 if ($pagenow == 'admin.php' && $_GET['page'] == '_pointfinderoptions') {
                     wp_enqueue_style(
                         'redux-field-sorder-css-custom',
-                        get_template_directory_uri().'/admin/options/extensions/custom_sorter/field_sorter.css',
+                        get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/custom_sorter/field_sorter.css',
                         time(),
                         false
                     ); 
@@ -239,7 +239,7 @@
 
                     wp_enqueue_script(
                         'redux-field-sorter-js-custom',
-                        get_template_directory_uri().'/admin/options/extensions/custom_sorter/field_sorter.js',
+                        get_home_url()."/wp-content/themes/pointfinder".'/admin/options/extensions/custom_sorter/field_sorter.js',
                         array( 'jquery', 'redux-js' ),
                         time(),
                         true

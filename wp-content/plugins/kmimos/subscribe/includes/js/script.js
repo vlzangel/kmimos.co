@@ -1,4 +1,5 @@
 //FORM
+
 var vsetTime=0;
 
 function form_subscribe(element){
@@ -70,4 +71,13 @@ function SubscribePopUp_Close(element){
             jQuery(element).remove();
         });
     }
+
+function form_subscribe(element){
+    var base = jQuery(element).closest('.subscribe').data('subscribe');
+    var url = base+'/subscribe/subscription.php';
+    jQuery.post(url, jQuery(element).serialize(),function(data){
+        console.log(data);
+    });
+    return false;
+
 }

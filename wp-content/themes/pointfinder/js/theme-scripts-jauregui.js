@@ -30,7 +30,7 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
   	$.fn.reverse = [].reverse;
 
 	function pfOrientResizeFunction(){
-		window.location.reload();
+		// window.location.reload();
 	}
 	if (window.DeviceOrientationEvent) {
 		window.addEventListener('orientationchange', pfOrientResizeFunction, false);
@@ -2032,8 +2032,6 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 			  }
 		});
 		
-		
-		
 		if(form.valid()){
 			var pfreviewoverlay = $("#pfmdcontainer-overlay");
 			pfreviewoverlay.pfLoadingOverlay({action:'show'});
@@ -2048,15 +2046,12 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 
 	$('#pf-enquiry-trigger-button-author').click(function(){$.pfOpenModal('open','enquiryformauthor','','','',$('#pf-enquiry-trigger-button-author').attr('data-pf-user'))});
 
-
-
 	// MANUAL SEARCH BUTTON STARTED --------------------------------------------------------------------------------------------
 	$('#pf-search-button-manual').live('click',function(){
 		var form = $('#pointfinder-search-form-manual');
 		form.validate();
 
 		var temp = ['input[name=pointfinder_radius_search]', 'input[name=ne]', 'input[name=ne2]', 'input[name=sw]', 'input[name=sw2]']
-
 		form.find("div:hidden[id$='_main']").each(function(){
 			$(this).find('input[type=hidden]').not(temp.join(',')).val(""); 
 			$(this).find('input[type=text]').val($.pfsliderdefaults.fields[$(this).attr('id')]);
@@ -2065,7 +2060,6 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 			$(this).find('.slider-wrapper a:nth-child(3)').css('left','100%');
 		});
 		
-
 		if(form.valid()){
 			form.submit();
 		};
@@ -2073,46 +2067,10 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 	});
 	// MANUAL SEARCH BUTTON END --------------------------------------------------------------------------------------------
 	
-	//MODAL PRECIOS SUGERIDOS-----------------------------------------------------------------------------------------------
-		var modalOpend= false;
-		function modalPrecios(){
-			$(window).scroll(function() {
-			    if ($(document).scrollTop() > 1800) {
-				    if (modalOpend != true) {
-				    	$('#jj_modal').fadeIn();
-				       	modalOpend= true;
-				      	//console.log('Modal abre')
-				    }  
-			      
-			     } else {
-			      $('#jj_modal').fadeOut();
-			      //console.log('Modal cierra')
-			     }
-			});
-		}
-
-		function ocultarModal(){
-			$('#jj_modal').fadeOut();
-			jQuery('#jj_modal').css('display', 'none');
-			modalOpend= true;
-		}
-	//MODAL PRECIOS SUGERIDOS END-----------------------------------------------------------------------------------------------
 	$( window ).resize(function() {
 		if ($(window).width() < 550) {
-			console.log('pantalla a 550');
-			$('tr.order-remaining>td').attr('data-title', 'Monto a pagar al cuidador');
-			$('tr.order-remaining>th').attr('data-title', 'Monto a pagar al cuidador');
 			$('div.vlz_bloquear_map>p').text('Toca la pantalla para ver en el mapa');
-
-		}else{
-			$('tr.order-remaining>td').attr('data-title', 'Monto a pagar al cuidador en efectivo al entregar el perrito');
-			$('tr.order-remaining>th').attr('data-title', 'Monto a pagar al cuidador en efectivo al entregar el perrito');
-
 		}
-		if ($(window).width() > 769) {
-			$('tr.order-remaining>th').text('Monto a pagar al cuidador en efectivo al entregar el perrito');
-		}
-
 
 	});
 
@@ -2121,129 +2079,16 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 		$(".pointfinderexfooterclassx").appendTo(".wpf-footer-row-move");
 		 /*Jaurgeui*/
 		$('a.edit').addClass('button');
-		$('a.checkout-button.button.alt.wc-forward').text('Pague Ahora');
-		$('a.checkout-button.button.alt.wc-forward').css({'color': '#fff', 'background-color': '#5ec9aa'});
+		// $('a.checkout-button.button.alt.wc-forward').text('Pague Ahora');
+		// $('a.checkout-button.button.alt.wc-forward').css({'color': '#fff', 'background-color': '#5ec9aa'});
 		$('p.return-to-shop>a.button.alt.wc-backward').hide();
 		$('p.return-to-shop>a.button.wc-backward').hide();
-		$('tr.order-remaining').css('color', '#FF0000');
-		$('tr.order-remaining>td').attr('data-title', 'Monto a pagar al cuidador en efectivo al entregar el perrito');
-		$('tr.order-paid').css('color', '#60cbac');
-		//$('#payment').append('echo "<pre>"; print_r($post); echo "</pre>";');
-		setTimeout(function(){
-			$('input[name="woocommerce_checkout_place_order"]').addClass('btn_reserva');
-			$('input[name="woocommerce_checkout_place_order"]').attr('style', '"color= #fff!important; background-color= #5ec9aa!important;"');
-			// $('input[name="woocommerce_checkout_place_order"]').css({'color': '#fff!important', 'background-color': '#5ec9aa'});
-		}, 1000);
 		$('button.wc-bookings-booking-form-button.single_add_to_cart_button.button.alt').css('text-transform', 'uppercase');
 		$('[data-toggle="tooltip"]').tooltip();
-		modalPrecios();	
 
 		if ($(window).width() < 550) {
-			console.log('pantalla a 550');
-			$('tr.order-remaining>td').attr('data-title', 'Monto a pagar al cuidador');
-			$('tr.order-remaining>th').attr('data-title', 'Monto a pagar al cuidador');
 			$('div.vlz_bloquear_map>p').text('Toca la pantalla para ver en el mapa');
-		}else{
-			$('tr.order-remaining>td').attr('data-title', 'Monto a pagar al cuidador en efectivo al entregar el perrito');
-			$('tr.order-remaining>th').attr('data-title', 'Monto a pagar al cuidador en efectivo al entregar el perrito');
-
-		}
-		if ($(window).width() > 769) {
-			$('tr.order-remaining>th').text('Monto a pagar al cuidador en efectivo al entregar el perrito');
-		}
-
-	});
-
-	//  ********************************************
-	//  Validar si existe un numero inferior a mil
-	//  ********************************************
-	// $('[data-charset]').on({
-	// 	keypress : function(e){
-	// 		var tipo= $(this).attr('data-charset');
-	// 		if(tipo!='undefined' || tipo!=''){
-	// 			var cadena = "";
-	// 			if(tipo.indexOf('alf')>-1 ){ cadena = cadena + "abcdefghijklmnopqrstuvwxyzáéíóúñüÁÉÍÓÚÑÜ"; }
-	// 			if(tipo.indexOf('xlf')>-1 ){ cadena = cadena + "abcdefghijklmnopqrstuvwxyzáéíóúñüÁÉÍÓÚÑÜ "; }
-	// 			if(tipo.indexOf('num')>-1 ){ cadena = cadena + "1234567890"; }
-	// 			if(tipo.indexOf('cur')>-1 ){ cadena = cadena + "1234567890,."; }
-	// 			if(tipo.indexOf('esp')>-1 ){ cadena = cadena + "-_.$%&@,/()"; }
-	// 			if(tipo.indexOf('cor')>-1 ){ cadena = cadena + "@"; }
-	// 			if(tipo.indexOf('rif')>-1 ){ cadena = cadena + "vjegi"; }
-	// 			var key = e.which,
-	// 				keye = e.keyCode,
-	// 				tecla = String.fromCharCode(key).toLowerCase(),
-	// 				letras = cadena;
-	// 		    if(letras.indexOf(tecla)==-1 && keye!=9&& (key==37 || keye!=37)&& (keye!=39 || key==39) && keye!=8 && (keye!=46 || key==46) || key==161){
-	// 		    	e.preventDefault();
-	// 		    }
-	// 		}
-	// 	}
-	// });
-
-
-	$('.vlz_seccion_interna').on('keypress', '[data-charset]', function(e){
-		var tipo= $(this).attr('data-charset');
-		if(tipo!='undefined' || tipo!=''){
-			var cadena = "";
-			if(tipo.indexOf('alf')>-1 ){ cadena = cadena + "abcdefghijklmnopqrstuvwxyzáéíóúñüÁÉÍÓÚÑÜ"; }
-			if(tipo.indexOf('xlf')>-1 ){ cadena = cadena + "abcdefghijklmnopqrstuvwxyzáéíóúñüÁÉÍÓÚÑÜ "; }
-			if(tipo.indexOf('num')>-1 ){ cadena = cadena + "1234567890"; }
-			if(tipo.indexOf('cur')>-1 ){ cadena = cadena + "1234567890,."; }
-			if(tipo.indexOf('esp')>-1 ){ cadena = cadena + "-_.$%&@,/()"; }
-			if(tipo.indexOf('cor')>-1 ){ cadena = cadena + "@"; }
-			if(tipo.indexOf('rif')>-1 ){ cadena = cadena + "vjegi"; }
-			var key = e.which,
-				keye = e.keyCode,
-				tecla = String.fromCharCode(key).toLowerCase(),
-				letras = cadena;
-		    if(letras.indexOf(tecla)==-1 && keye!=9&& (key==37 || keye!=37)&& (keye!=39 || key==39) && keye!=8 && (keye!=46 || key==46) || key==161){
-		    	e.preventDefault();
-		    }
 		}
 	});
-
-	var form_myservices = document.getElementById("pfuaprofileform");
-	if(form_myservices != null){
-		form_myservices.addEventListener( 'change', function(event){
-			event.target.classList.remove('error');
-			$('#hospedaje-error').addClass('hidden');
-			if( event.target.value < 1000 ){
-				var obj = $('#hospedaje-error');
-				obj.removeClass('hidden');
-				event.target.classList.add('error');
-			}
-		});
-	}
-
-
-	$('#vlz_form_nuevo_cuidador').on('change', '[data-minvalue]', function(e){
-		$(this).removeClass('newcuidador-error');
-		if($(this).val() <= 999){
-			$(this).addClass('newcuidador-error');
-		}
-	});
-
-	$('#vlz_form_nuevo_cuidador').on('keypress', '[data-charset]', function(e){
-		var tipo= $(this).attr('data-charset');
-		if(tipo!='undefined' || tipo!=''){
-			var cadena = "";
-			if(tipo.indexOf('alf')>-1 ){ cadena = cadena + "abcdefghijklmnopqrstuvwxyzáéíóúñüÁÉÍÓÚÑÜ"; }
-			if(tipo.indexOf('xlf')>-1 ){ cadena = cadena + "abcdefghijklmnopqrstuvwxyzáéíóúñüÁÉÍÓÚÑÜ "; }
-			if(tipo.indexOf('num')>-1 ){ cadena = cadena + "1234567890"; }
-			if(tipo.indexOf('cur')>-1 ){ cadena = cadena + "1234567890,."; }
-			if(tipo.indexOf('esp')>-1 ){ cadena = cadena + "-_.$%&@,/()"; }
-			if(tipo.indexOf('cor')>-1 ){ cadena = cadena + "@"; }
-			if(tipo.indexOf('rif')>-1 ){ cadena = cadena + "vjegi"; }
-			var key = e.which,
-				keye = e.keyCode,
-				tecla = String.fromCharCode(key).toLowerCase(),
-				letras = cadena;
-		    if(letras.indexOf(tecla)==-1 && keye!=9&& (key==37 || keye!=37)&& (keye!=39 || key==39) && keye!=8 && (keye!=46 || key==46) || key==161){
-		    	e.preventDefault();
-		    }
-		}
-	});
-
-
 
 })(jQuery);

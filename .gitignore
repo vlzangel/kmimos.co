@@ -2,9 +2,6 @@
 
 # Carpetas
 
-/Migracion/
-/Cambios/
-/.idea/
 /Pruebas/
 /wp-admin/
 /wp-includes/
@@ -13,7 +10,13 @@
 /wp-content/ngg/
 /wp-content/ngg_styles/
 /wp-content/upgrade/
-/wp-content/uploads/
+/wp-content/uploads*
+/git/
+
+/kmibox/*
+
+/.tmb/
+/wp-content/plugins/file-manager/
 
 Respaldo*
 
@@ -21,10 +24,10 @@ Respaldo*
 
 .htaccess
 favicon.ico
-/wp-content/index.php
+/index.php
 wp-activate.php
 wp-blog-header.php
-wp-comments-post.php
+#wp-comments-post.php
 wp-config.php
 wp-cron.php
 wp-links-opml.php
@@ -40,9 +43,6 @@ vlz_config.php
 # Plugins
 
 /wp-content/plugins/admin-custom-login/
-
-/wp-content/plugins/woocommerce-payu-latam-gateway
-
 /wp-content/plugins/adminer/
 /wp-content/plugins/admin-post-navigation/
 /wp-content/plugins/aryo-activity-log/
@@ -70,9 +70,9 @@ vlz_config.php
 /wp-content/plugins/wc-vendors/
 /wp-content/plugins/widget-shortcode/
 /wp-content/plugins/woocommerce/
-/wp-content/plugins/WooCommerce.Deposits.Partial.Payments.Plugin.v1.4.2/
+# /wp-content/plugins/WooCommerce.Deposits.Partial.Payments.Plugin.v1.4.2/
 /wp-content/plugins/woocommerce-accommodation-bookings/
-/wp-content/plugins/woocommerce-bookings/
+# /wp-content/plugins/woocommerce-bookings/
 /wp-content/plugins/woocommerce-menu-bar-cart/
 /wp-content/plugins/woocommerce-product-addons/
 /wp-content/plugins/woocommerce-product-csv-import-suite/
@@ -89,15 +89,36 @@ vlz_config.php
 /wp-content/plugins/yith-woocommerce-badge-management-premium/
 /wp-content/plugins/yith-woocommerce-dynamic-pricing-and-discounts-premium/
 /wp-content/plugins/yith-woocommerce-product-slider-carousel-premium/
+/wp-content/plugins/woocommerce-gateway-stripe/
 /wp-content/plugins/zopim-live-chat/
-
+/wp-content/plugins/wp-wolivestats/
+/wp-content/plugins/file-manager/
+/wp-content/plugins/domain-mirror/
+/wp-content/plugins/domain-mirror2/
 /wp-content/plugins/wpmandrill/
-
-
+/wp-content/plugins/bwp-minify/
+/wp-content/plugins/WooCommerce.Deposits.Partial.Payments.Plugin.v1.4.2/changelog.txt
+/wp-content/plugins/WooCommerce.Deposits.Partial.Payments.Plugin.v1.4.2/Licensing/GPL.txt
+/wp-content/plugins/WooCommerce.Deposits.Partial.Payments.Plugin.v1.4.2/Licensing/README_License.txt
 /wp-content/plugins/woocommerce-bookings/.tx/
-licencia.txt
-*.txt
-logo-kmimos210x120.png
-readme.html
+
+/wp-content/plugins/woocommerce-gateway-stripe/
+/wp-content/plugins/woocommerce-payu-latam-gateway/
+
+/wp-content/plugins/kmimos/wlabel/backend/content/export/csv/
+
+/wp-content/w3tc-config/ 
+/wp-content/cache/
+
 .idea/workspace.xml
+.idea/kmimos.mx.iml
+.idea/misc.xml
+.idea/vcs.xml
 .idea/modules.xml
+
+/wp-content/index.php
+/imgs/Temp/
+
+.tmb/
+
+/QA/

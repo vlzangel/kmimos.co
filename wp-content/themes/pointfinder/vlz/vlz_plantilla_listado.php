@@ -1,8 +1,6 @@
 <?php
-
-	$user_id = $cuidador->user_id;
-
-	$img = kmimos_get_foto($user_id);
+	
+	$img = kmimos_get_foto_cuidador($cuidador->user_id);
 
 	$anios_exp = $cuidador->experiencia;
 	if( $anios_exp > 1900 ){
@@ -14,7 +12,7 @@
 	$cuidador->nombre = explode(" ", $cuidador->nombre);
 	$cuidador->nombre = $cuidador->nombre[0];
 
-	$url = get_home_url() . "/petsitters/" . $data->post_name;
+	$url = get_home_url()."/petsitters/".$data->post_name;
 
 	$cuidador->hospedaje_desde = $cuidador->hospedaje_desde*1.2;
 
@@ -24,21 +22,12 @@
 		$nombre_cuidador = $data->post_title;
 	}
 
-	$coordenadas_all_2[] = array(
-		"ID" 		=> $cuidador->id,
-		"lat" 		=> $cuidador->latitud,
-		"lng" 		=> $cuidador->longitud,
-		"nombre" 	=> $cuidador->nombre,
-		"url" 		=> $url,
-		"portada" 	=> $cuidador->portada
-	);
-
 	$distancia = $cuidador->DISTANCIA;
 
 	$distancia = 'A '.floor($distancia).' km de tu busqueda';
 
 	if( $_POST['tipo_busqueda'] == "otra-localidad" ){
-		if( $_POST['estados'] == "" ){
+		if( $_POST['municipios'] == "" ){
 			$distancia = "";
 		}else{
 			if( $_POST['orderby'] != "" && $_POST['orderby'] != "distance_asc" && $_POST['orderby'] != "distance_desc" ){
@@ -47,34 +36,34 @@
 		}
 	}
 
-/* Start: Favorites */
-if (is_user_logged_in()) {
-	$user_favorites_arr = get_user_meta( get_current_user_id(), 'user_favorites', true );
-	if (!empty($user_favorites_arr)) {
-		$user_favorites_arr = json_decode($user_favorites_arr,true);
-	}else{
-		$user_favorites_arr = array();
+	/* Start: Favorites */
+	if (is_user_logged_in()) {
+		$user_favorites_arr = get_user_meta( get_current_user_id(), 'user_favorites', true );
+		if (!empty($user_favorites_arr)) {
+			$user_favorites_arr = json_decode($user_favorites_arr,true);
+		}else{
+			$user_favorites_arr = array();
+		}
 	}
-}
 
-$fav_check = 'false';
-if (is_user_logged_in() && count($user_favorites_arr)>0) {
-	if (in_array($cuidador->id_post, $user_favorites_arr)) {
-		$fav_check = 'true';
-		$favtitle_text = esc_html__('Remove from Favorites','pointfindert2d');
+	$fav_check = 'false';
+	if (is_user_logged_in() && count($user_favorites_arr)>0) {
+		if (in_array($cuidador->id_post, $user_favorites_arr)) {
+			$fav_check = 'true';
+			$favtitle_text = esc_html__('Remove from Favorites','pointfindert2d');
+		}
 	}
-}
-/* End: Favorites */
+	/* End: Favorites */
 
 
 	echo '
 		<li class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wpfitemlistdata isotope-item">
 			<div class="pflist-item" style="background-color:#ffffff;">  
 				<div class="pflist-item-inner">
-					<div class="pflist-imagecontainer pflist-subitem">
+					<div class="pflist-imagecontainer pflist-subitem" >
 						<div class="vlz_postada_cuidador">
-							<a class="vlz_img_cuidador" href="'.$url.'" style="background-image: url('.$img.');"></a>
-							<span class="vlz_img_cuidador_interno" style="background-image: url('.$img.');"></span>
+							<a class="vlz_img_cuidador easyload" data-original="'.$img.'" href="'.$url.'" style="background-image: url(); filter:blur(2px);"></a>
+							<span class="vlz_img_cuidador_interno easyload" data-original="'.$img.'" data-href="'.$url.'" style="background-image: url();"></span>
 						</div>
 						<div class="RibbonCTR">
 					        <span class="Sign">
@@ -104,9 +93,8 @@ if (is_user_logged_in() && count($user_favorites_arr)>0) {
 						</div>
 						<div class="pflisting-itemband">
 							<div class="pflist-pricecontainer">
-								
 								<div class="pflistingitem-subelement pf-price"> 
-									<sub style="bottom: 0px;">Hospedaje desde</sub><br>COP $'.$cuidador->hospedaje_desde.'
+									<sub style="bottom: 0px;">Hospedaje desde</sub><br>'.$info["mon_let"].$cuidador->hospedaje_desde.'
 								</div>
 							</div>
 						</div>
@@ -125,10 +113,7 @@ if (is_user_logged_in() && count($user_favorites_arr)>0) {
 							</li>
 							<li>
 								<div class="text-center rating" style="float: none;">
-									<div id="rating">';
-										echo kmimos_petsitter_rating($cuidador->id_post);
-									echo '</div>';
-									echo '
+									<div id="rating">'.kmimos_petsitter_rating($cuidador->id_post).'</div>
 								</div>
 							</li>
 						</ul>
@@ -148,3 +133,12 @@ if (is_user_logged_in() && count($user_favorites_arr)>0) {
 		</li>
 	';
 ?>
+<script>
+	jQuery('.vlz_img_cuidador_interno').hover(function(){
+		jQuery(this).css('cursor', 'pointer');	
+	})
+	jQuery('.vlz_postada_cuidador').on('click', '[data-href]', function(){
+		var j_url= jQuery(this).attr('data-href');
+		location.href = j_url;
+	});
+</script>

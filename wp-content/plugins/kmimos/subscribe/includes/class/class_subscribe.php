@@ -4,6 +4,7 @@ class Class_Subscribe{
     var $args;
 
     function __construct($args=array()){
+
         global $wpdb, $_GET, $_SESSION, $_COOKIE;
         if (!isset($_SESSION)) {
             session_start();
@@ -42,3 +43,4 @@ class Class_Subscribe{
 
 
 ?>
+

@@ -40,7 +40,7 @@ function pf_agentlist_func( $atts ) {
 			$agent_featured_image =  wp_get_attachment_image_src( get_post_thumbnail_id( $author_id ), 'full' );
 
 			if (empty($agent_featured_image)) {
-				$user_photo = '<img src="'.get_template_directory_uri().'/images/empty_avatar.jpg"/>';
+				$user_photo = '<img src="'.get_home_url()."/wp-content/themes/pointfinder".'/images/empty_avatar.jpg"/>';
 			}else{
 				if ($agent_featured_image[2] >= 280) {
 					$agent_featured_image[0] = aq_resize($agent_featured_image[0],300,280,true);
