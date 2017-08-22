@@ -62,7 +62,7 @@
 	            "pais_min"  => "co",
 	            "titulo"    => "Kmimos Colombia",
 	            "email"     => "contactoco@kmimos.la",
-	            "telefono"  => "+57 315 849.2186",
+	            "telefono"  => "+57 315 849.2186 <br> Bogota: +57 (1) 593 8719 <br> Celular (WhatsApp): +57 318 350 2391",
 	            "twitter"   => "kmimosco",
 	            "facebook"  => "Kmimosco",
 	            "instagram" => "kmimosco",

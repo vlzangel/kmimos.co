@@ -81,7 +81,7 @@ if(!function_exists('kmimos_get_info_syte')){
         $data["pais"] = "Colombia";
         $data["titulo"] = "Kmimos Colombia";
         $data["email"] = "contactoco@kmimos.la";
-        $data["telefono"] = "(+57) 315 849.2186";
+        $data["telefono"] = "Bogota: +57 (1) 593 8719 Celular (WhatsApp): +57 318 350 2391";
         $data["twitter"] = "kmimosco";
         $data["facebook"] = "KmimosCo";
         $data["instagram"] = "kmimosco";
