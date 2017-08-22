@@ -59,10 +59,15 @@ $users = getUsers($desde, $hasta);
 					cellspacing="0" width="100%">
 			  <thead>
 			    <tr>
-			      <th>#</th>
+			      <th>ID</th>
 			      <th>Fecha Registro</th>
 			      <th>Nombre y Apellido</th>
+			      <th>Nombre</th>
+			      <th>Apellido</th>
 			      <th>Email</th>
+			      <th>Estado</th>
+			      <th>Municipio</th>
+			      <th>Direcci&oacute;n</th>
 			      <th>Teléfono</th>
 			      <th>Donde nos conocio?</th>
 			      <th>Estatus</th>
@@ -80,16 +85,23 @@ $users = getUsers($desde, $hasta);
 			  			if(empty($name)){
 			  				$name = $usermeta['nickname'];
 			  			}
+
+			  			$ubicacion = getEstadoMunicipio($row['estado'], $row['municipios']);
 			  		?>
 				    <tr>
 				    	<th class="text-center"><?php echo $row['ID']; ?></th>
 						<th><?php echo date_convert($row['user_registered'], 'd-m-Y') ; ?></th>
 						<th><?php echo $name; ?></th>
+						<th><?php echo $usermeta["first_name"]; ?></th>
+						<th><?php echo $usermeta["last_name"]; ?></th>
 						<th>
 					  		<a href="<?php echo $link_login; ?>">
 								<?php echo $row['user_email']; ?>
 							</a>
 						</th>
+						<th><?php echo $ubicacion['estado']; ?></th>
+						<th><?php echo $ubicacion['municipio']; ?></th>						
+						<th><?php echo utf8_encode($row['direccion']); ?></th>						
 						<th><?php echo $usermeta['phone']; ?></th>
 						<th><?php echo (!empty($usermeta['user_referred']))? $usermeta['user_referred'] : 'Otros' ; ?></th>
 						<th><?php echo ($row['estatus']==1)? 'Activo' : 'Inactivo' ; ?></th>

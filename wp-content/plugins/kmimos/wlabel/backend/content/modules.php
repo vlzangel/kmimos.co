@@ -8,7 +8,7 @@
 <div class="modules">
 
 <?php
-include_once(dirname(__FILE__).'/modules/booking.php');
+//include_once(dirname(__FILE__).'/modules/booking.php');
 //include_once(dirname(__FILE__).'/modules/detail.php');
 //include_once(dirname(__FILE__).'/modules/client.php');
 ?>
@@ -16,6 +16,7 @@ include_once(dirname(__FILE__).'/modules/booking.php');
 </div>
 
 <script type="text/javascript">
+    WhiteLabel_panel_menu(jQuery('#panel .menu .item[data-module="booking"]'));
     jQuery(document).ready(function(e){
         jQuery('body>div:not(#panel)').each(function(e){
             //console.log(this);

@@ -5,7 +5,7 @@
     include("../../../../../vlz_config.php");
 	include("../funciones/vlz_funciones_globales.php");
 
-    date_default_timezone_set('America/Bogota');
+    date_default_timezone_set('America/Mexico_City');
 
 	$conn = new mysqli($host, $user, $pass, $db);
 
@@ -110,7 +110,8 @@
 	        "guarderia",
 	        "adiestramiento_basico",
 	        "adiestramiento_intermedio",	        
-	        "adiestramiento_avanzado"
+	        "adiestramiento_avanzado",
+            "paseos"
 	    );
 
         $adicionales = array();
@@ -123,8 +124,11 @@
 		        	"grandes"  => $adicional_grandes[$key]+0,
 		        	"gigantes" => $adicional_gigantes[$key]+0
 		        );
-		        $adicionales[ $slugs_adicionales[$value] ] = $temp;
+		        $adicionales[$slugs_adicionales[$value]] = $temp;
 		        $temp = NULL;
+
+                //ADDITIONAL STATUS
+                $adicionales['status_'.$slugs_adicionales[$value]] = "1";
         	}
         }
 
@@ -157,11 +161,12 @@
                 }
             }
         }
-
+        
         $adicionales = serialize($adicionales);
 
         $coordenadas = unserialize( $wpdb->get_var("SELECT valor FROM kmimos_opciones WHERE clave = 'municipio_{$param['municipios']}' ") );
 
+        /*NEW COORD MAP act CG
         $latitud  = "";
         $longitud = "";
 
@@ -173,14 +178,20 @@
                 $longitud = $coordenadas["referencia"]->lng;
             }
         }
+        */
 
         $sql = "
         	INSERT INTO cuidadores VALUES (
         		NULL,
         		'0',
         		'0',
+        		'$nombres',
+        		'$apellidos',
         		'$ife',
         		'$email',
+        		'$telefono',
+        		'$descripcion',
+        		'$foto',
         		'$experiencia',
         		'0',
         		'$latitud',
@@ -228,7 +239,7 @@
 
             $temp = array( "token" => $token );
 
-            /*include('Requests.php');
+            include('Requests.php');
 
             Requests::register_autoloader();
 
@@ -259,7 +270,7 @@
                 )
             );
 
-            $request = Requests::post('http://kmimos.ilernus.com/webservice/rest/server.php', array(), $options );*/
+            $request = Requests::post('http://kmimos.ilernus.com/webservice/rest/server.php', array(), $options );
 
             if( $conn->query( utf8_decode( $sql ) ) ){
 
@@ -317,6 +328,7 @@
                 $conn->query( "UPDATE cuidadores SET user_id = '".$user_id."' WHERE id = ".$cuidador_id);
 
                 if($vlz_img_perfil != ""){
+                    //$dir = "../../../../uploads/cuidadores/avatares/".$cuidador_id."/";
                     $dir = "../../../../uploads/avatares/".$user_id."/";
 
                     @mkdir($dir);
@@ -350,7 +362,7 @@
                         '".$hoy."',
                         '',
                         '0',
-                        'http://qa.kmimos.la/kmimos/wp-content/uploads/avatares/".$user_id."/0.jpg',
+                        'http://qa.kmimos.la/kmimos/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg',
                         '0',
                         'attachment',
                         'image/jpeg',
@@ -360,7 +372,7 @@
                 $conn->query( utf8_decode( $sql ) );
                 $img_id = $conn->insert_id;
 
-                $sql = "INSERT INTO wp_postmeta VALUES (NULL, ".$img_id.", '_wp_attached_file', 'avatares/".$user_id."/0.jpg');";
+                $sql = "INSERT INTO wp_postmeta VALUES (NULL, ".$img_id.", '_wp_attached_file', 'cuidadores/avatares/".$cuidador_id."/0.jpg');";
                 $conn->query( utf8_decode( $sql ) );
 
                 $sql = "
@@ -370,7 +382,7 @@
                         (NULL, ".$user_id.", 'user_address',        '".$direccion."'),
                         (NULL, ".$user_id.", 'user_phone',          '".$telefono."'),
                         (NULL, ".$user_id.", 'user_mobile',         '".$telefono."'),
-                        (NULL, ".$user_id.", 'user_country',        'México'),
+                        (NULL, ".$user_id.", 'user_country',        'Colombia'),
                         (NULL, ".$user_id.", 'nickname',            '".$username."'),
                         (NULL, ".$user_id.", 'first_name',          '".$nombres."'),
                         (NULL, ".$user_id.", 'last_name',           '".$apellidos."'),
@@ -458,7 +470,7 @@
                                     "hoy"           => $hoy,
                                     "titulo"        => $adicionales_principales[$key]." - ".$nom,
                                     "descripcion"   => descripciones($key),
-                                    "slug"          =>  $user_id."-".$key,
+                                    "slug"          => $key."-".$user_id,
                                     "cuidador"      => $id_post,
                                     "status"        => $status
                                 ));
@@ -548,248 +560,13 @@
                     $user_signon = wp_signon( $info, true );
                     wp_set_auth_cookie($user_signon->ID);
 
-                    $mensaje_mail = '
-                        <style>
-                            p{
-                                text-align: justify;
-                            }
-                            a:hover{
-                                background: #038063;
-                            }
-                        </style>
-                        <h1>¡Gracias por unirte a nuestra familia Kmimos!</h1>
-                        <p>Hola <strong>'.$nombres.' '.$apellidos.'</strong>,</p>
+                    include( 'mensaje_web_registro_cuidador_viejo.php' );
 
-                        <p style="text-align: justify;">
-                            Estimado Kmiamigo, tu perfil ha sido creado con éxito.  El mismo permanecerá inactivo en la página hasta que completes los siguientes pasos listados abajo"
-                        </p>
-                        <p style="text-align: justify;">
-                            "Dichos pasos han sido diseñados para cumplir con un estricto perfil de seguridad, que garantice que cualquier persona que se convierta en Cuidador asociado Kmimos presente un perfil apto para cuidar y apapachar a nuestros peludos amigos"
-                        </p>
-                        <p style="text-align: justify;">
-                            <strong>Siguientes Pasos para activar tu perfil</strong>
-                        </p>
-                        <p style="text-align: justify;">
-                            <ul>
-                                <li>Compártenos por Mensaje Directo a nuestro Facebook @Kmimosmx tu nombre y apellido completo, email, teléfono de casa y celular</li>
-                                <li>Una vez que nos envíes dichos datos, en menos de 24 horas recibirás en el correo que registraste las Pruebas Psicométricas y Pruebas de Conceptos Veterinarios básicos.  Por favor respóndelas, y nos llegará a nosotros un mensaje de completadas.</li>
-                                <li>En menos de 24 horas después de completadas las pruebas recibirás un correo por parte de Certificación Kmimos, notificando tus resultados.  NO TE OLVIDES DE CHECAR SIEMPRE LA BANDEJA DE ENTRADA O EL CORREO NO DESEADO, ya que a veces llegan allí los correos.</li>
-                                <li>En caso de haber aprobado, lee el archivo adjunto al correo que te muestra las políticas operativas.</li>
-                                <li>Por último, recibirás una llamada para entrevista telefónica y notificación para la auditoría a tu hogar.</li>
-                            </ul>
-                        </p>
-                        <p style="text-align: justify;">
-                            <strong>Abajo encontrarás tus credenciales para que tengas acceso como cuidador a Kmimos, estos mismos los deberás usar en la plataforma de certificación.</strong>
-                        </p>
-                        <p>
-                            <table>
-                                <tr> <td> <strong>Usuario:</strong> </td><td>'.$username.'</td> </tr>
-                                <tr> <td> <strong>Contraseña:</strong> </td><td>La clave que ingresaste</td> </tr>
-                            </table>
-                        </p>
-                        <p style="text-align: center;">
-                            <a 
-                                href="'.get_home_url().'/?a=inicio"
-                                style="
-                                    padding: 10px;
-                                    background: #59c9a8;
-                                    color: #fff;
-                                    font-weight: 400;
-                                    font-size: 17px;
-                                    font-family: Roboto;
-                                    border-radius: 3px;
-                                    border: solid 1px #1f906e;
-                                    display: block;
-                                    max-width: 300px;
-                                    margin: 0px auto;
-                                    text-align: center;
-                                    text-decoration: none;
-                                "
-                            >Iniciar Sesión</a>
-                        </p>
-                    ';
-
-/*                $mensaje_mail = '
-                        <style>
-                            p{
-                                text-align: justify;
-                            }
-                            a:hover{
-                                background: #038063;
-                            }
-                        </style>
-                        <h1>¡Gracias por unirte a nuestra familia Kmimos!</h1>
-                        <p>Hola <strong>'.$nombres.' '.$apellidos.'</strong>,</p>
-                        <p style="text-align: justify;">
-                           Estimado Kmiamigo, tu perfil ha sido creado con éxito. El mismo permanecerá INACTIVO en la página hasta que completes tu proceso de certificación que consta:
-                        </p>
-                        <p style="text-align: justify;  text-align: left;">
-                            <ul style="text-align: justify;  text-align: left;">
-                                <li>Pruebas de conocimiento veterinario.</li>
-                                <li>Pruebas Psicométricas.</li>
-                                <li>Documentación (IFE, Comprobante de domicilio y Datos Bancarios.</li>
-                             </ul>
-                        </p>
-
-                        <p style="text-align: justify;">
-                            Dicho proceso ha sido diseñado por expertos veterinario para escoger a las personas más adecuadas para recibir, cuidar y apapachar a nuestros peludos amigos.
-                        </p>
-
-                        <p style="text-align: justify;">
-                            Ahora serás dirigido a hacia el paso 1, <strong>PRUEBAS DE CONOCIMIENTO VETERINARIO</strong>.
-                        </p>
-                        <p style="text-align: justify;">
-                            Guarda el siguiente link, ahí puedes continuar con las pruebas en caso de no terminarlas por algún imprevisto y/o para cargar documento.
-                        </p>
-                        <p style="text-align: justify;">
-                            <strong>Link para continuar es:</strong> http://kmimos.ilernus.com
-                        </p>
-                        <p style="text-align: justify; color: #f00;">
-                            <strong>INGRESA CON EL NOMBRE DE USUARIO Y CONTRASEÑA:</strong>
-                        </p>
-                        <p style="text-align: justify;">
-                            <ul style="text-align: justify;  text-align: left;">
-                                <li><strong>Usuario: </strong> '.$username.'</li>
-                                <li><strong>Contraseña:</strong> '.$clave.'</li>
-                            </ul>
-                        </p>
-                        <p style="text-align: justify;">
-                           ¡EXITO!
-                        </p>
-                        <p style="text-align: center;">
-                            <a class="theme_button"
-                                href="http://kmimos.ilernus.com"
-                                style="
-                                    padding: 10px;
-                                    background: #59c9a8;
-                                    color: #fff;
-                                    font-weight: 400;
-                                    font-size: 17px;
-                                    font-family: Roboto;
-                                    border-radius: 3px;
-                                    border: solid 1px #1f906e;
-                                    display: block;
-                                    max-width: 300px;
-                                    margin: 0px auto;
-                                    text-align: center;
-                                    text-decoration: none;
-                                "
-                            >Continuar</a>
-                        </p>
-                    ';*/
-
-                    $mensaje_web = '
-                        <style>
-                            p{
-                                text-align: justify;
-                            }
-                            a:hover{
-                                background: #038063;
-                            }
-                        </style>
-                        <h1>¡Gracias por unirte a nuestra familia Kmimos!</h1>
-                        <p>Hola <strong>'.$nombres.' '.$apellidos.'</strong>,</p>
-                        <p><strong>Usuario: </strong>'.$username.'</p>
-                        <p><strong>Contraseña: </strong>'.$clave.'</p>
-                        <p style="text-align: justify;">
-                            Estimado Kmiamigo, tu perfil ha sido creado con éxito.  El mismo permanecerá inactivo en la página hasta que completes los siguientes pasos listados abajo
-                        </p>
-                        <p style="text-align: justify;">
-                            "Dichos pasos han sido diseñados para cumplir con un estricto perfil de seguridad, que garantice que cualquier persona que se convierta en Cuidador asociado Kmimos presente un perfil apto para cuidar y apapachar a nuestros peludos amigos"
-                        </p>
-                        <p style="text-align: justify;">
-                            <strong>Siguientes Pasos para activar tu perfil</strong>
-                        </p>
-                        <p style="text-align: justify;">
-                            <ul>
-                                <li style="text-align: justify;">Compártenos por Mensaje Directo a nuestro Facebook @Kmimosmx tu nombre y apellido completo, email, teléfono de casa y celular</li>
-                                <li style="text-align: justify;">Una vez que nos envíes dichos datos, en menos de 24 horas recibirás en el correo que registraste las Pruebas Psicométricas y Pruebas de Conceptos Veterinarios básicos.  Por favor respóndelas, y nos llegará a nosotros un mensaje de completadas.</li>
-                                <li style="text-align: justify;">En menos de 24 horas después de completadas las pruebas recibirás un correo por parte de Certificación Kmimos, notificando tus resultados.  NO TE OLVIDES DE CHECAR SIEMPRE LA BANDEJA DE ENTRADA O EL CORREO NO DESEADO, ya que a veces llegan allí los correos.</li>
-                                <li style="text-align: justify;">En caso de haber aprobado, lee el archivo adjunto al correo que te muestra las políticas operativas.</li>
-                                <li style="text-align: justify;">Por último, recibirás una llamada para entrevista telefónica y notificación para la auditoría a tu hogar.</li>
-                            </ul>
-                        </p>
-                    ';
-
-/*                $mensaje_web = '
-                        <style>
-                            p{
-                                text-align: justify;
-                            }
-                            a:hover{
-                                background: #038063;
-                            }
-                            #vlz_cargando {
-                                max-height: 100% !important;
-                            }
-                            .vlz_modal_ventana {
-                                width:auto;
-                                max-width: 80%;
-                            }
-                        </style>
-                        <h1>¡Gracias por unirte a nuestra familia Kmimos!</h1>
-                        <p>Hola <strong>'.$nombres.' '.$apellidos.'</strong>,</p>
-                        <p style="text-align: justify;">
-                           Estimado Kmiamigo, tu perfil ha sido creado con éxito. El mismo permanecerá INACTIVO en la página hasta que completes tu proceso de certificación que consta:
-                        </p>
-                        <p style="text-align: justify;  text-align: left;">
-                            <ul style="text-align: justify;  text-align: left;">
-                                <li>Pruebas de conocimiento veterinario.</li>
-                                <li>Pruebas Psicométricas.</li>
-                                <li>Documentación (IFE, Comprobante de domicilio y Datos Bancarios.</li>
-                             </ul>
-                        </p>
-
-                        <p style="text-align: justify;">
-                            Dicho proceso ha sido diseñado por expertos veterinario para escoger a las personas más adecuadas para recibir, cuidar y apapachar a nuestros peludos amigos.
-                        </p>
-
-                        <p style="text-align: justify;">
-                            Ahora serás dirigido a hacia el paso 1, <strong>PRUEBAS DE CONOCIMIENTO VETERINARIO</strong>.
-                        </p>
-                        <p style="text-align: justify;">
-                            Guarda el siguiente link, ahí puedes continuar con las pruebas en caso de no terminarlas por algún imprevisto y/o para cargar documento.
-                        </p>
-                        <p style="text-align: justify;">
-                            <strong>Link para continuar es:</strong> http://kmimos.ilernus.com
-                        </p>
-                        <p style="text-align: justify; color: #f00;">
-                            <strong>INGRESA CON EL NOMBRE DE USUARIO Y CONTRASEÑA:</strong>
-                        </p>
-                        <p style="text-align: justify;">
-                            <ul style="text-align: justify;  text-align: left;">
-                                <li><strong>Usuario: </strong> '.$username.'</li>
-                                <li><strong>Contraseña:</strong> '.$clave.'</li>
-                            </ul>
-                        </p>
-                        <p style="text-align: justify;">
-                            ¡EXITO!
-                        </p>
-                        <p style="text-align: center;">
-                            <a class="theme_button"
-                                href="http://kmimos.ilernus.com"
-                                style="
-                                    padding: 10px;
-                                    background: #59c9a8;
-                                    color: #fff;
-                                    font-weight: 400;
-                                    font-size: 17px;
-                                    font-family: Roboto;
-                                    border-radius: 3px;
-                                    border: solid 1px #1f906e;
-                                    display: block;
-                                    max-width: 300px;
-                                    margin: 0px auto;
-                                    text-align: center;
-                                    text-decoration: none;
-                                "
-                            >Continuar</a>
-                        </p>
-                    ';*/
+                    include( 'mensaje_email_registro_cuidador.php' );
 
 
                     $mail_msg = kmimos_get_email_html("Gracias por registrarte como cuidador.", $mensaje_mail, 'Registro de Nuevo Cuidador.', true, true);
-                    wp_mail( $email, "Kmimos México – Gracias por registrarte como cuidador! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg);
+                    wp_mail( $email, "Kmimos Colombia - Gracias por registrarte como cuidador! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg);
 
                     $error = array(
                         "error"         => "NO",

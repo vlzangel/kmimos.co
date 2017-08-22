@@ -1,6 +1,6 @@
 <?php
 
-$WP_path_load =dirname(dirname(dirname(dirname(dirname(__FILE__))))).'/wp-load.php';
+$WP_path_load =dirname(dirname(dirname(dirname(__DIR__)))).'/wp-load.php';
 if(file_exists($WP_path_load)){
     include_once($WP_path_load);
 }
@@ -47,7 +47,26 @@ function WhiteLabel_custom_processing($order){
         update_post_meta($order, '_wlabel', $wlabel);
     }
 
-    //kmimos modified
+
+    //WLABEL DEL USUARIO REGISTRADO
+    if ($_wlabel->wlabel_active){
+        $booking = new WP_Query(array('post_parent' => $order, 'post_type' => 'wc_booking'));
+        if ( $booking->have_posts()){
+            while($booking->have_posts()){
+                $booking->the_post();
+                $booking_id=get_the_id();
+                $booking_author=get_post_field( 'post_author', $booking_id );
+
+                $wlabel_user = get_user_meta($booking_author,'_wlabel', true);
+                if(!empty($wlabel_user)){
+                    update_post_meta($order, '_wlabel', $wlabel_user);
+                }
+            }
+        }
+    }
+
+
+    /*//kmimos modified
     //$order_post = get_post($order);
     //$order_post_parent = $order_post->post_parent;//alrevves
     //$order_post_parent = get_post_ancestors($order);
@@ -57,6 +76,7 @@ function WhiteLabel_custom_processing($order){
         while($order_post->have_posts()){
             $order_post->the_post();
             $order_post_parent=$order_post->ID;
+            var_dump();
 
             $modified_order = get_post_meta($order_post_parent,'modificacion_de', true);//reserva_modificada
             if(!empty($modified_order)){
@@ -71,7 +91,7 @@ function WhiteLabel_custom_processing($order){
             break;
 
         }
-    }
+    }*/
 
 }
 

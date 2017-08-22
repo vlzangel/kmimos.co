@@ -16,24 +16,24 @@
 
             $photo = (!empty($pet_detail['photo']))? get_option('siteurl').'/'.$pet_detail['photo'] : get_option('siteurl').'/wp-content/themes/pointfinder/images/default.jpg';
             $this->FieldOutput .= '
-                <li class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wpfitemlistdata isotope-item text-center">
-                    <div class="pflist-item" style="background-color:#ffffff;">
-                        <div class="pflist-item-inners">
-                            <div class="pflist-imagecontainer pflist-subitem" style="
-                                background-image: url('.$photo.')!important;
-                                background-size:contain;
-                                background-repeat:no-repeat;
-                                background-position:center;">
-                            <a href="'.$params['detail_url'].$pet.'">
-                                <div class="vlz_postada_cuidador" style="height:160px;width:100%;background-color:transparent;"></div>
-                                </div>
-                                <h3 class="kmi_link">'. get_the_title($pet).'</h3>
-                            </a>
-                            <br>
-                            <img src="'.get_home_url().'/wp-content/plugins/kmimos/assets/rating/100.png" width="50px">
-                        </div>
-                    </div>
-                </li>';
+                                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wpfitemlistdata isotope-item text-center">
+                                        <div class="pflist-item" style="background-color:#ffffff;">
+                                            <div class="pflist-item-inners">
+                                                <div class="pflist-imagecontainer pflist-subitem" style="
+                                                    background-image: url('.$photo.')!important;
+                                                    background-size:contain;
+                                                    background-repeat:no-repeat;
+                                                    background-position:center;">
+                                                <a href="'.$params['detail_url'].$pet.'">
+                                                    <div class="vlz_postada_cuidador" style="height:160px;width:100%;background-color:transparent;"></div>
+                                                    </div>
+                                                    <h3 class="kmi_link">'. get_the_title($pet).'</h3>
+                                                </a>
+                                                <br>
+                                                <img src="'.get_home_url().'/wp-content/plugins/kmimos/assets/rating/100.png" width="50px">
+                                            </div>
+                                        </div>
+                                    </li>';
         }
         $this->FieldOutput .= '</ul>';
     }else{

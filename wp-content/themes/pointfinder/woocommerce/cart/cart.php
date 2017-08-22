@@ -213,4 +213,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	{
 	    background-color: #59c9a8;
 	}
+	.woocommerce-message a{
+		display: none;
+	}
 </style>

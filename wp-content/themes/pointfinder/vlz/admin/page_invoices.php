@@ -73,7 +73,7 @@ $items = WC()->cart->get_cart();
 
 if(count($items) > 0){
 	?>
-	<h1 class='vlz_h1 jj_h1 theme_tite theme_table_title'>Reservas Por Completar</h1>
+	<h1 class='vlz_h1 jj_h1'>Reservas Por Completar</h1>
 	<table class='vlz_tabla jj_tabla table table-striped table-responsive'>
 		<tr>
 			<th class="product-name"><?php _e( 'SERVICIO', 'woocommerce' ); ?></th>
@@ -202,6 +202,7 @@ if( count($reservas) > 0 ){
 
 			$pedido = $wpdb->get_row("SELECT * FROM $wpdb->posts WHERE ID = ".$_metas_reserva['_booking_product_id'][0]);
 
+			$reserva_status = $reserva->post_status;
 			$orden_status = $wpdb->get_var("SELECT post_status FROM $wpdb->posts WHERE ID = ".$reserva->post_parent);
 
 			$creada =  strtotime( $reserva->post_date );
@@ -214,7 +215,10 @@ if( count($reservas) > 0 ){
 			//RESERVAS PENDIENTES POR ERROR DE PAGOS DE TARJETAS
 			if($orden_status=='wc-pending') {
 
-			}else if($orden_status == 'wc-on-hold' && $_metas['_payment_method'][0] == 'openpay_stores'){
+
+				//RESERVAS PENDIENTES POR TIENDA DE CONVENIENCIA
+			//}else if($orden_status == 'wc-on-hold' && $_metas['_payment_method'][0] == 'openpay_stores'){
+			}else if($reserva_status == 'unpaid' && $_metas['_payment_method'][0] == 'openpay_stores'){
 
 				$pdf = array();
 
@@ -266,6 +270,8 @@ if( count($reservas) > 0 ){
 				$booking_td[]=array('class'=>'td_responsive','data'=>date_boooking($_metas_reserva['_booking_end'][0]));
 				$booking_td[]=array('class'=>'','data'=>$options);
 				$booking_coming['openpay_unpaid']['tr'][]=$booking_td;
+
+
 
 				//RESERVAS CONFIRMADAS
 			}else if($reserva->post_status=='confirmed' && strtotime($_metas_reserva['_booking_end'][0])>time()){

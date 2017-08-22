@@ -242,6 +242,8 @@
 				Cuidador
 			*/
 
+			$info = kmimos_get_info_syte();
+
 			$mensaje_cuidador = $estilos.'
 				<h2 style="color: #557da1; font-size: 16px;">Hola '.$nombre_cuidador.'</h2>
 				<p>Recibimos una solicitud del cliente <strong>'.$cliente.'</strong> para conocerte.</p>
@@ -313,7 +315,7 @@
 					<li style="text-align: justify;">Verifica que el perro del dueño tenga sus vacunas y te compartan su cartilla de vacunación.</li>
 					<li style="text-align: justify;"><strong>IMPORTANTE:</strong> Sin cartilla de vacunación, no estarán amparados ni tú ni el perro ante los beneficios veterinarios de Kmimos</li>
 					<li style="text-align: justify;">En caso de no conocerse personalmente, asegúrate de que te envíen fotos del perro que llegará a tu casa para confirmar que se observa un tamaño acorde a lo descrito por su dueño.</li>
-					<li style="text-align: justify;">Por favor revisa físicamente al perrito antes de recibirlo.  Apapáchalo y recorre su piel de ser posible, para detectar de ser posible cualquier rasguño, golpe, etc. que pueda traer antes de tu que lo hubieres recibido (si detectas algo por favor menciónaselo de manera muy educada y cordial al cliente, y posteriormente envíanos fotos vía whatsapp o correo al equipo de atención al cliente de Kmimos)  Whatsapp: +52 (55) 1791.4931, o al correo contactomex@kmimos.la</li>
+					<li style="text-align: justify;">Por favor revisa físicamente al perrito antes de recibirlo.  Apapáchalo y recorre su piel de ser posible, para detectar de ser posible cualquier rasguño, golpe, etc. que pueda traer antes de tu que lo hubieres recibido (si detectas algo por favor menciónaselo de manera muy educada y cordial al cliente, y posteriormente envíanos fotos vía whatsapp o correo al equipo de atención al cliente de Kmimos)  Whatsapp: '.$info["telefono"].', o al correo '.$info["email"].'</li>
 				</ul>
 				<p style="text-align: justify;">Recuerda que cada perro tiene un comportamiento diferente, por lo que deberás tener la mayor información posible sobre sus comportamientos:</p>
 				<ul>
@@ -355,7 +357,7 @@
 						</tr>
 					</table>
 				</center>
-				<p style="text-align: justify;">Para cualquier apoyo que necesites, o si es la primera vez que atiendes a un Kmiamigo, por favor contacta a la brevedad al equipo de Kmimos vía telefónica al +52 (55) 1791.4931, o al correo contactomex@kmimos.la</p>
+				<p style="text-align: justify;">Para cualquier apoyo que necesites, o si es la primera vez que atiendes a un Kmiamigo, por favor contacta a la brevedad al equipo de Kmimos vía telefónica al '.$info["telefono"].', o al correo '.$info["email"].'</p>
 			';
 
 			//$xmensaje_cuidador = $mensaje_cuidador;
@@ -419,7 +421,7 @@
 				<ul>
 					<li style="text-align: justify;">Dentro de las siguientes 12 horas recibirás una llamada o correo electrónico  por parte del Cuidador y/o de un asesor Kmimos para confirmar tu cita o brindarte soporte con este proceso.</li>
 					<li style="text-align: justify;">También podrás contactar al cuidador a partir de este momento, a los teléfonos y/o correos mostrados arriba para acelerar el proceso si así lo deseas.</li>
-					<li style="text-align: justify;">Para cualquier duda y/o comentario puedes contactar al Staff Kmimos a los teléfonos +52 (55) 1791.4931, o al correo contactomex@kmimos.la</li>
+					<li style="text-align: justify;">Para cualquier duda y/o comentario puedes contactar al Staff Kmimos a los teléfonos '.$info["telefono"].', o al correo '.$info["email"].'</li>
 				</ul>
 			';
 
@@ -528,19 +530,18 @@
 		*/
 
 			add_filter( 'wp_mail_from_name', function( $name ) {
-				return 'Kmimos México';
+				$info = kmimos_get_info_syte();
+				return $info["titulo"];
 			});
 			add_filter( 'wp_mail_from', function( $email ) {
-				return 'kmimos@kmimos.la';
+				$info = kmimos_get_info_syte();
+				return $info["email"];
 			});
 
 			wp_mail( $email_cuidador, $asunto, $mensaje_cuidador);
 			wp_mail( $email_cliente,  $asunto, $mensaje_cliente);
-			wp_mail( $email_admin,    $asunto, $mensaje_admin, kmimos_mails_administradores());
 
-			wp_mail( "e.celli@kmimos.la",       $asunto, $mensaje_admin);
-			wp_mail( "m.castellon@kmimos.la",   $asunto, $mensaje_admin);
-			wp_mail( "a.pedroza@kmimos.la",     $asunto, $mensaje_admin);
+			kmimos_mails_administradores_new($asunto, $mensaje_admin);
 
 			$_SESSION['token_mail'] = $xmensaje_cliente;
 

@@ -1,0 +1,126 @@
+/* Custom indentations are needed because the length of custom labels differs from
+   the length of the standard labels */
+/*
+span.select2.select2-container {
+    background-color: #fff;
+    border: 1px solid #888;
+}
+
+li.select2-selection__choice {
+    background-color: #ccc;
+    float: left;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 2px;
+}
+*/
+.custom-size-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
+	text-indent: -2.5em;
+	margin-left: -1.5em;
+	width: 3.25em;
+}
+.custom-size-flipswitch.ui-flipswitch .ui-flipswitch-off {
+	text-indent: 1em;
+}
+/* Custom widths are needed because the length of custom labels differs from
+   the length of the standard labels */
+.custom-size-flipswitch.ui-flipswitch {
+	width: 6.875em;
+}
+.custom-size-flipswitch.ui-flipswitch.ui-flipswitch-active {
+	padding-left: 5.5em;
+	width: 1.875em;
+}
+.selector-filtro {
+	margin-top: 2px;
+	width: 80px;
+    float: right;
+}
+.selector-filtro:parent {
+	padding: 8px;
+}
+.filter_css > h2.widgettitle {
+	display: none;
+}
+
+.filter_css .ui-collapsible-content {
+	margin-top: -10px;
+}
+/*
+section[role=main] {
+	background-color: #01b79e;
+}
+*/
+.filter_css .ui-checkbox input[type=checkbox] {
+	margin-top: -15px;
+	width: 20px;
+}
+.ui-grid-col-1 {
+	width: 8.33%;
+}
+.ui-grid-col-2 {
+	width: 16.67%;
+}
+.ui-grid-col-3 {
+	width: 25%;
+}
+.ui-grid-col-4 {
+	width: 33.33%;
+}
+.ui-grid-col-5 {
+	width: 41.67%;
+}
+.ui-grid-col-6 {
+	width: 50%;
+}
+.ui-grid-col-7 {
+	width: 58.33%;
+}
+.ui-grid-col-8 {
+	width: 66.67%;
+}
+.ui-grid-col-9 {
+	width: 75%;
+}
+.ui-grid-col-10 {
+	width: 83.33%;
+}
+.ui-grid-col-11 {
+	width: 91.67%;
+}
+.ui-grid {
+	width: 100%;
+}
+.ui-left {
+	float: left;
+}
+.ui-right {
+	float: right;
+}
+.clr {
+	clear: both;
+}
+/*.selector-filtro > div {
+	width: 74px;
+}*/
+
+.ui-accordion .ui-accordion-content {
+    padding: 1em !important;
+}
+.ui-accordion-header-active .ui-state-hover {
+	border: 1px solid #cccccc;
+}
+#contenedor-filtros p {
+	padding-top: 15px;
+}
+#contenedor-ubicacion-cuidador li, #contenedor-filtros p {
+	color:	#333333 !important;
+}
+
+.habilitar-filtro {
+	width: 20px !important;
+	float: left;
+}
+.fecha-desde, .fecha-hasta {
+	line-height: 26px !important;
+}

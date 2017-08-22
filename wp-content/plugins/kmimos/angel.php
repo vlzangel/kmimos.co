@@ -1,6 +1,7 @@
 <?php
 	
-	include_once('includes/functions/vlz_functions.php');
+    include_once('includes/functions/vlz_functions.php');
+	include_once('angel/funciones.php');
 	
 	if(!function_exists('angel_include_script')){
 	    function angel_include_script(){
@@ -17,32 +18,58 @@
 	        switch ($tipo) {
 	            case 'Customer Service':
 	                global $post;
-	                $types = array(
-	                    'petsitters',
-	                    'pets',
-	                    'request',
-	                    'wc_booking',
-	                    'shop_order'
-	                );
-	                $pages = array(
-	                    'kmimos',
-	                    'create_booking'
-	                );
-	                if( count($_GET) == 0 || (!in_array($post->post_type, $types) && !in_array($_GET['page'], $pages)) ){
-	                    header("location: edit.php?post_type=petsitters");
-	                }
 	                echo kmimos_style(array(
 	                    "quitar_edicion",
 	                    "menu_kmimos",
 	                    "menu_reservas"
 	                ));
-	                if( $post->post_type == 'shop_order' || $post->post_type == 'wc_booking' ){
-	                    echo kmimos_style(array(
-	                        'habilitar_edicion_reservas'
-	                    )); 
-	                }
+                    echo kmimos_style($styles = array("customer_services"));
+                    echo "<script> window.onload = function(){ jQuery('#toplevel_page_kmimos > a').attr('href', 'admin.php?page=bp_reservas'); }; </script>";
 	            break;
+
+                case 'Teleoperador':
+                    echo kmimos_style($styles = array("teleoperadores"));
+                    echo "
+                        <script>
+                            window.onload = function(){
+                                jQuery('#toplevel_page_kmimos > a').attr('href', 'admin.php?page=bp_reservas');
+                            };
+                        </script>
+                    ";
+                break;
+
+                case 'Auditores':
+                    echo kmimos_style($styles = array("auditores"));
+                break;
+
+                case 'Supervisor':
+                    echo kmimos_style($styles = array("supervisores"));
+                    echo "
+                        <script>
+                            window.onload = function(){
+                                jQuery('#toplevel_page_woocommerce > a').attr('href', 'edit.php?post_type=shop_coupon');
+                                jQuery('#toplevel_page_kmimos > a').attr('href', 'admin.php?page=bp_reservas');
+                            };
+                        </script>
+                    ";
+                break;
 	        }
+
+            $current_user = wp_get_current_user();
+            if( $current_user->ID != 367 ){
+                echo kmimos_style( array("ocultar_updates_wordpress") );
+                echo kmimos_style( array("ocultar_administracion_web_master") );
+                if( $_SERVER["REQUEST_URI"] == "/wp-admin/" ){
+                    echo "
+                        <script>
+                            window.onload = function(){
+                                location.href = jQuery('#toplevel_page_kmimos > a').attr('href');
+                            };
+                        </script>
+                    ";
+                }
+            }
+                
 	    }
 	}
 
@@ -55,40 +82,58 @@
 	    }
 	}
 
-	if(!function_exists('kmimos_get_info_syte')){
-	    function kmimos_get_info_syte(){
-	        return array(
+    if(!function_exists('kmimos_get_info_syte')){
+        function kmimos_get_info_syte(){
+            return array(
                 "pais"      => "Colombia",
-	            "pais_min"  => "co",
-	            "titulo"    => "Kmimos Colombia",
-	            "email"     => "contactoco@kmimos.la",
-	            "telefono"  => "+57 315 849.2186",
-	            "twitter"   => "kmimosco",
-	            "facebook"  => "Kmimosco",
-	            "instagram" => "kmimosco",
-	            "mon_izq"   => "",
-	            "mon_der"   => "$",
-                "mon_let"   => "COP $",
+                "titulo"    => "Kmimos Colombia",
+                "email"     => "contactoco@kmimos.la",
+                "telefono"  => "(+57) 315 849.2186",
+                "telefono_solo"  => "(+57) 315 849.2186",
+                "whatsApp"  => "(+57) 315 849.2186",
+                "twitter"   => "kmimosco",
+                "facebook"  => "Kmimosco",
+                "instagram" => "kmimosco",
+                "mon_izq" => "COP",
+                "mon_der" => ""
+            );
+        }
+    }
 
-                "estado"    => "Ciudad",
-                "municipio" => "Localidad"
-	        );
-	    }
-	}
+if(!function_exists('kmimos_mails_administradores_new')){
+    function kmimos_mails_administradores_new($titulo, $mensaje){
 
-	if(!function_exists('kmimos_mails_administradores')){
-	    function kmimos_mails_administradores(){
-            $headers[] = 'BCC: n.deligny@kmimos.la ';
-	        $headers[] = 'BCC: r.cuevas@kmimos.la';
-	        $headers[] = 'BCC: r.gonzalez@kmimos.la';
-	        $headers[] = 'BCC: a.veloz@kmimos.la';
-	        $headers[] = 'BCC: a.pedroza@kmimos.la';
+        // $info = kmimos_get_info_syte();
+        // $email_admin = $info["email"];
 
-	        return $headers;
-	    }
-	}
+        // $headers_admins = array(
+        //     'BCC: e.celli@kmimos.la',
+        //     'BCC: a.lazaro@kmimos.la',
+        //     'BCC: r.cuevas@kmimos.la',
+        //     'BCC: r.gonzalez@kmimos.la',
+        //     'BCC: m.castellon@kmimos.la',
+        //     'BCC: a.pedroza@kmimos.la'
+        // );
 
-if(!function_exists('vlz_servicios')){
+        // wp_mail( $email_admin, $titulo, $mensaje, $headers_admins);
+
+        // $headers_call_center = array(
+        //     'BCC: operador01sincola@gmail.com',
+        //     'BCC: operador04sincola@gmail.com',
+        //     'BCC: Operador05sincola@gmail.com',
+        //     'BCC: Operador06sincola@gmail.com',
+        //     'BCC: robertomadridcisneros@gmail.com',
+        //     'BCC: jordiballarin@gmail.com',
+        //     'BCC: supervisor01sincola@gmail.com',
+        //     'BCC: supervisor02sincola@gmail.com'
+        // );
+
+        // wp_mail( "a.veloz@kmimos.la", $titulo, $mensaje, $headers_call_center);
+
+    }
+}
+
+    if(!function_exists('vlz_servicios')){
         function vlz_servicios($adicionales){
             $r = ""; $adiestramiento = false;
 
@@ -144,267 +189,6 @@ if(!function_exists('vlz_servicios')){
         }
     }
 
-    if(!function_exists('toRadian')){
-
-        function toRadian($deg) {
-            return $deg * pi() / 180;
-        };
-
-    }
-
-    if( !function_exists('calcular_rango_de_busqueda') ){
-
-        function calcular_rango_de_busqueda($norte, $sur){
-            return ( 6371 * 
-                acos(
-                    cos(
-                        toRadian($norte->lat)
-                    ) * 
-                    cos(
-                        toRadian($sur->lat)
-                    ) * 
-                    cos(
-                        toRadian($sur->lng) - 
-                        toRadian($norte->lng)
-                    ) + 
-                    sin(
-                        toRadian($norte->lat)
-                    ) * 
-                    sin(
-                        toRadian($sur->lat)
-                    )
-                )
-            );
-        }
-
-    }
-
-    if(!function_exists('vlz_sql_busqueda')){
-        function vlz_sql_busqueda($param, $pagina, $actual = false){
-
-            $condiciones = "";
-            if( isset($param["servicios"]) ){
-                foreach ($param["servicios"] as $key => $value) {
-                    if( $value != "hospedaje" ){
-                        $condiciones .= " AND adicionales LIKE '%".$value."%'";
-                    }
-                }
-            }
-
-            if( isset($param['tamanos']) ){
-                foreach ($param['tamanos'] as $key => $value) {
-                    $condiciones .= " AND ( tamanos_aceptados LIKE '%\"".$value."\";i:1%' || tamanos_aceptados LIKE '%\"".$value."\";s:1:\"1\"%' ) ";
-                }
-            }
-
-            if( isset($param['n']) ){
-                if( $param['n'] != "" ){
-                    $name_inner = "INNER JOIN wp_posts AS cuidador ON ( cuidadores.id_post = cuidador.ID )";
-                    $condiciones .= " AND cuidador.post_title LIKE '%".$param['n']."%' ";
-                }
-            }else{
-                $name_inner = "";
-            }
-
-            if( $param['rangos'][0] != "" ){
-                $condiciones .= " AND (hospedaje_desde*1.2) >= '".$param['rangos'][0]."' ";
-            }
-
-            if( $param['rangos'][1] != "" ){
-                $condiciones .= " AND (hospedaje_desde*1.2) <= '".$param['rangos'][1]."' ";
-            }
-
-            if( $param['rangos'][2] != "" ){
-                $anio_1 = date("Y")-$param['rangos'][2];
-                $condiciones .= " AND experiencia <= '".$anio_1."' ";
-            }
-
-            if( $param['rangos'][3] != "" ){
-                $anio_2 = date("Y")-$param['rangos'][3];
-                $condiciones .= " AND experiencia >= '".$anio_2."' ";
-            }
-
-            if( $param['rangos'][4] != "" ){
-                $condiciones .= " AND rating >= '".$param['rangos'][4]."' ";
-            }
-
-            if( $param['rangos'][5] != "" ){
-                $condiciones .= " AND rating <= '".$param['rangos'][5]."' ";
-            }
-
-            // Ordenamiento
-
-            $orderby = (isset($param['orderby'])) ? "" : "" ;
-
-            if( $orderby == "rating_desc" ){
-                $orderby = "rating DESC, valoraciones DESC";
-            }
-
-            if( $orderby == "rating_asc" ){
-                $orderby = "rating ASC, valoraciones ASC";
-            }
-
-            if( $orderby == "distance_asc" ){
-                $orderby = "DISTANCIA ASC";
-            }
-
-            if( $orderby == "distance_desc" ){
-                $orderby = "DISTANCIA DESC";
-            }
-
-            if( $orderby == "price_asc" ){
-                $orderby = "hospedaje_desde ASC";
-            }
-
-            if( $orderby == "price_desc" ){
-                $orderby = "hospedaje_desde DESC";
-            }
-
-            if( $orderby == "experience_asc" ){
-                $orderby = "experiencia ASC";
-            }
-
-            if( $orderby == "experience_desc" ){
-                $orderby = "experiencia DESC";
-            }
-
-            if( $param['tipo_busqueda'] == "otra-localidad" && $param['estados'] != "" && $param['municipios'] != "" ){
-
-                global $wpdb;
-
-                $coordenadas = unserialize( $wpdb->get_var("SELECT valor FROM kmimos_opciones WHERE clave = 'municipio_{$param['municipios']}' ") );
-
-                $latitud  = $coordenadas["referencia"]->lat;
-                $longitud = $coordenadas["referencia"]->lng;
-                $distancia = calcular_rango_de_busqueda($coordenadas["norte"], $coordenadas["sur"]);
-
-                $ubicacion = " ubi.estado LIKE '%=".$param['estados']."=%' AND ubi.municipios LIKE '%=".$param['municipios']."=%' ";
-
-                $DISTANCIA = ",
-                    ( 6371 * 
-                        acos(
-                            cos(
-                                radians({$latitud})
-                            ) * 
-                            cos(
-                                radians(latitud)
-                            ) * 
-                            cos(
-                                radians(longitud) - 
-                                radians({$longitud})
-                            ) + 
-                            sin(
-                                radians({$latitud})
-                            ) * 
-                            sin(
-                                radians(latitud)
-                            )
-                        )
-                    ) as DISTANCIA 
-                ";
-
-                $FILTRO_UBICACION = "HAVING DISTANCIA < ".($distancia+0);
-
-                $ubicaciones_inner = "INNER JOIN ubicaciones AS ubi ON ( cuidadores.id = ubi.cuidador )";
-                $ubicaciones_filtro = "
-                    AND (
-                        ( $ubicacion ) OR (
-                            ( 6371 * 
-                                acos(
-                                    cos(
-                                        radians({$latitud})
-                                    ) * 
-                                    cos(
-                                        radians(latitud)
-                                    ) * 
-                                    cos(
-                                        radians(longitud) - 
-                                        radians({$longitud})
-                                    ) + 
-                                    sin(
-                                        radians({$latitud})
-                                    ) * 
-                                    sin(
-                                        radians(latitud)
-                                    )
-                                )
-                            ) <= ".($distancia+0)."
-                        )
-                    )";
-
-                if( $orderby == "" ){
-                    $orderby = "DISTANCIA ASC";
-                }
-
-            }else{ 
-
-                if(  $param['tipo_busqueda'] == "otra-localidad" && $param['estados'] != "" ){
-                    $ubicaciones_inner = "INNER JOIN ubicaciones AS ubi ON ( cuidadores.id = ubi.cuidador )";
-                    $ubicaciones_filtro = "AND ( ubi.estado LIKE '%=".$param['estados']."=%' )";
-                }else{
-
-                    // Filtro desde mi ubicación
-                    if( $param['tipo_busqueda'] == "mi-ubicacion" && $param['latitud'] != "" && $param['longitud'] != "" ){
-
-                        $DISTANCIA = ",
-                            ( 6371 * 
-                                acos(
-                                    cos(
-                                        radians({$param['latitud']})
-                                    ) * 
-                                    cos(
-                                        radians(latitud)
-                                    ) * 
-                                    cos(
-                                        radians(longitud) - 
-                                        radians({$param['longitud']})
-                                    ) + 
-                                    sin(
-                                        radians({$param['latitud']})
-                                    ) * 
-                                    sin(
-                                        radians(latitud)
-                                    )
-                                )
-                            ) as DISTANCIA 
-                        ";
-
-                        $FILTRO_UBICACION = "HAVING DISTANCIA < 500";
-
-                        if( $orderby == "" ){
-                            $orderby = "DISTANCIA ASC";
-                        }
-
-                    }else{
-                        $DISTANCIA = "";
-                        $FILTRO_UBICACION = "";
-                    }
-                }
-            }
-
-            if( $orderby == "" ){
-                $orderby = "rating DESC, valoraciones DESC";
-            }
-
-            $sql = "
-                SELECT 
-                    SQL_CALC_FOUND_ROWS  
-                    cuidadores.*
-                    {$DISTANCIA}
-                FROM 
-                    cuidadores 
-                    {$ubicaciones_inner}
-                    {$name_inner}
-                WHERE 
-                    activo = '1' {$condiciones} {$ubicaciones_filtro} {$FILTRO_UBICACION}
-                ORDER BY {$orderby}
-                LIMIT {$pagina}, 15
-            ";
-
-            return $sql;
-        }
-    }
-
     if(!function_exists('servicios_adicionales')){
         function servicios_adicionales(){
 
@@ -443,57 +227,32 @@ if(!function_exists('vlz_servicios')){
         }
     }
 
-    if(!function_exists('kmimos_get_foto')){
-        function kmimos_get_foto($user_id, $tipo = ""){
+    if(!function_exists('path_base')){
+        function path_base(){
+            return dirname(dirname(dirname(__DIR__)));
+        }
+    }
 
-            $path = ""; $usuario = "";
-            switch ($tipo) {
-                case 'cliente':
-                    $path = "avatares_clientes";
-                    $usuario = "";
-                break;
-
-                case 'cuidador':
-                    $path = "cuidadores/avatares";
-                    global $wpdb;
-                    $usuario = $wpdb->get_var("SELECT id FROM cuidadores WHERE user_id = {$user_id}");
-                break;
-                
-                default:
-                    $path = "avatares";
-                    $usuario = $user_id;
-                break;
-            }
-
-            $name_photo = get_user_meta($user_id, "name_photo", true);
-
-            if( empty($name_photo)  ){ $name_photo = "0"; }
-            if( count( explode(".", $name_photo)) == 1 ){ $name_photo .= ".jpg"; }
-
-            if( file_exists("wp-content/uploads/{$path}/".$usuario."/{$name_photo}") ){
-                $img = get_home_url()."/wp-content/uploads/{$path}/".$usuario."/{$name_photo}";
-            }else{
-                if( file_exists("wp-content/uploads/{$path}/".$usuario."/0.jpg") ){
-                    $img = get_home_url()."/wp-content/uploads/{$path}/".$usuario."/0.jpg";
-                }else{
-                    $img = get_home_url().'/wp-content/themes/pointfinder/images/noimg.png';
-                }
+    if(!function_exists('kmimos_get_foto_cuidador')){
+        function kmimos_get_foto_cuidador($id){
+            global $wpdb;
+            $cuidador = $wpdb->get_row("SELECT * FROM cuidadores WHERE id = ".$id);
+            $name_photo = $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = {$cuidador->user_id} AND meta_key = 'name_photo'");
+            if( !empty($name_photo)  ){ 
+                $img = $home."/wp-content/uploads/cuidadores/avatares/{$cuidador->user_id}/{$name_photo}"; 
             }
             return $img;
         }
     }
 
-    if(!function_exists('kmimos_get_foto_cuidador')){
-        function kmimos_get_foto_cuidador($user_id){
-            return kmimos_get_foto($user_id);
-        }
-    }
-
-
-
-    if(!function_exists('kmimos_get_foto_cliente')){
-        function kmimos_get_foto_cliente($user_id){
-            return kmimos_get_foto($user_id);
+    if(!function_exists('kmimos_get_foto')){
+        function kmimos_get_foto($user_id){
+            global $wpdb;
+            $name_photo = $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = {$user_id} AND meta_key = 'name_photo'");
+            if( !empty($name_photo)  ){ 
+                $img = $home."/wp-content/uploads/avatares/{$user_id}/{$name_photo}"; 
+            }
+            return $img;
         }
     }
 
@@ -727,11 +486,198 @@ if(!function_exists('vlz_servicios')){
                     ";
                 }
 
+                if( in_array("teleoperadores", $styles) ){
+                    $salida .= "
+                        .menu-top,
+                        #toplevel_page_kmimos li{
+                            display: none;
+                        }
+
+                        #toplevel_page_kmimos
+                        {
+                            display: block;
+                        }
+                        #adminmenu li.wp-menu-separator {
+                            display: none;
+                        }
+
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(6),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(7),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(9),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(10)
+                        {
+                            display: block !important;
+                        }
+
+                        table.dataTable thead *{
+                            font-size: 12px !important;
+                        }
+                        table.dataTable tbody *{
+                            font-weight: 600 !important;
+                            font-size: 10px !important;
+                        }
+                    ";
+                }
+
+                if( in_array("supervisores", $styles) ){
+                    $salida .= "
+                        .menu-top,
+                        #toplevel_page_kmimos li,
+                        #toplevel_page_woocommerce li{
+                            display: none;
+                        }
+
+                        #toplevel_page_kmimos,
+                        #toplevel_page_woocommerce
+                        {
+                            display: block;
+                        }
+                        #adminmenu li.wp-menu-separator {
+                            display: none;
+                        }
+
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(6),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(7),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(9),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(10),
+
+                        #toplevel_page_woocommerce ul.wp-submenu li:nth-child(3)
+                        {
+                            display: block !important;
+                        }
+
+                        table.dataTable thead *{
+                            font-size: 12px !important;
+                        }
+                        table.dataTable tbody *{
+                            font-weight: 600 !important;
+                            font-size: 10px !important;
+                        }                     
+                    ";
+                }
+
+                if( in_array("auditores", $styles) ){
+                    $salida .= "
+                        .menu-top,
+                        #toplevel_page_kmimos li{
+                            display: none;
+                        }
+
+                        #toplevel_page_kmimos
+                        {
+                            display: block;
+                        }
+                        #adminmenu li.wp-menu-separator {
+                            display: none;
+                        }
+
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(6),
+                        /*
+                            #toplevel_page_kmimos ul.wp-submenu li:nth-child(7),
+                            #toplevel_page_kmimos ul.wp-submenu li:nth-child(9),
+                        */
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(10)
+                        {
+                            display: block !important;
+                        }
+
+                        table.dataTable thead *{
+                            font-size: 12px !important;
+                        }
+                        table.dataTable tbody *{
+                            font-weight: 600 !important;
+                            font-size: 10px !important;
+                        }
+                    ";
+                }
+
+                if( in_array("customer_services", $styles) ){
+                    $salida .= "
+                        .menu-top,
+                        #toplevel_page_kmimos li{
+                            display: none;
+                        }
+
+                        #toplevel_page_kmimos
+                        {
+                            display: block;
+                        }
+                        #adminmenu li.wp-menu-separator {
+                            display: none;
+                        }
+
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(6),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(7),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(9),
+                        #toplevel_page_kmimos ul.wp-submenu li:nth-child(10)
+                        {
+                            display: block !important;
+                        }
+
+                        table.dataTable thead *{
+                            font-size: 12px !important;
+                        }
+                        table.dataTable tbody *{
+                            font-weight: 600 !important;
+                            font-size: 10px !important;
+                        }                    
+                    ";
+                }
+
+                if( in_array("ocultar_updates_wordpress", $styles) ){
+                    $salida .= "
+                        div.updated,
+                        #menu-dashboard,
+                        #dashboard-widgets-wrap,
+                        .wp-menu-separator,
+                        #wpfooter,
+                        #wp-admin-bar-updates,
+                        .plugin-update-tr{
+                            display: none;
+                        }
+                    ";
+                }
+
+                if( in_array("ocultar_updates_wordpress", $styles) ){
+                    $salida .= "
+                        #menu-posts-testimonials,
+                        #menu-appearance,
+                        #menu-plugins,
+                        #menu-tools,
+                        #toplevel_page_vc-general,
+                        #menu-settings,
+                        #menu-posts-petsitter,
+                        #menu-posts-anunciantes,
+                        #menu-posts-testimoniales,
+                        #menu-posts-pointfinderorders,
+                        #menu-posts-pointfinderinvoices,
+                        #toplevel_page_pointfinder_tools,
+                        #toplevel_page_layerslider,
+                        #toplevel_page_zopim_account_config,
+                        #toplevel_page_wpcf7,
+                        #menu-pages,
+                        #wp-admin-bar-wp-logo
+                        {
+                            display: none;
+                        }
+
+                        body #wpcontent *{
+                            font-size: 13px ;
+                        }
+                        table.dataTable tbody *{
+                            font-weight: 600 !important;
+                            font-size: 10px !important;
+                        } 
+                    ";
+                }
+
+
             $salida .= "</style>";
 
             return $salida;
             
         }
+
     }
 
 ?>

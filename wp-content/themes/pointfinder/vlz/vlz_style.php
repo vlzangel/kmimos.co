@@ -1,3 +1,4 @@
+<?php $styles = "
 <style>
 	.depuracion{
 	    position: fixed;
@@ -19,10 +20,6 @@
 	    color: #333;
 	    border-radius: 4px;
 	    box-sizing: border-box;
-	}
-
-	.vlz_form{
-		
 	}
 
 	.vlz_form label{
@@ -277,6 +274,7 @@
 	    height: 200px;
 	    overflow: hidden;
 	    z-index: 0;
+        background: #AAA;
 	}
 
 	.vlz_img_cuidador{
@@ -413,51 +411,44 @@
 		    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0,0,0,0.75) 100%);
 		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#4d000000',GradientType=0 );
 		}
-
 		.pflist-item {
 		    overflow: visible;
 		}
-
 		.pflist-item-inner {
 		    padding-bottom: 0px;
 		    box-shadow: 1px 1px 1px #CCC;
 		    border: solid 1px #CCC !important;
 		    border-radius: 0px;
 		}
-
+		.pflist-item .pfHoverButtonStyle > a{line-height: 1px;}
 		@media (max-width: 992px){
 			.wpf-container {
 			    margin: 0px !important;
 			}
 		}
-	
 		@media (max-width: 650px){
-
 			.vlz_destacados_contenedor {
 			    width: 50%;
 			}
-
 		}
-
-		
 		@media (max-width: 500px){
-
 			.vlz_nav_cont {
 			    overflow: auto;
 	        	margin: 0px 0px 25px;
 			}
-
 			.vlz_nav_cont_interno{
 				width: 1000px;
 			}
-			.ocultarMapa{display: none;}
+			.vlz_bloquear_map{
+				display: block;
+			}
 		}
-		
-		@media (max-width: 400px){
 
+		@media (max-width: 400px){
 			.vlz_destacados_contenedor {
 			    width: 100%;
 			}
-
 		}
-</style>
+</style>";
+
+echo comprimir_styles($styles);

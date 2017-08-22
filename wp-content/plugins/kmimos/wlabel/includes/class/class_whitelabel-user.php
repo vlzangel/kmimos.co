@@ -135,6 +135,14 @@ class Class_WhiteLabel_User{
     }
 
 
+    function wlabel_Options($module=''){
+        $html='<div class="options" data-module="'.$module.'">';
+        $html.='<div class="button update" onclick="WhiteLabel_panel_update()">Actualizar</div>';
+        $html.='</div>';
+        echo $html;
+    }
+
+
     function wlabel_Export($module='',$title='',$type=''){
         $html='<div class="export" data-module="'.$module.'" data-title="'.$title.'" data-type="'.$type.'" data-urlbase="'.plugin_dir_url(dirname(dirname(__FILE__))).'backend/content/export/" data-file="export.php">';
         $html.='<div class="action" onclick="WhiteLabel_panel_export(this)">Exportar</div>';

@@ -1,0 +1,921 @@
+@font-face {
+
+	font-family: 'kmimos';
+
+	src:url('fonts/kmimos.eot');
+
+	src:url('fonts/kmimos.eot?#iefix') format('embedded-opentype'),
+
+	url('fonts/kmimos.woff') format('woff'),
+
+	url('fonts/kmimos.ttf') format('truetype'),
+
+	url('fonts/kmimos.svg#icomoon') format('svg');
+
+	font-weight: normal;
+
+	font-style: normal;
+
+}
+
+[class^="icon-"], [class*=" icon-"] {
+
+    /* use !important to prevent issues with browser extensions that change fonts */
+
+    font-family: 'kmimos' !important;
+
+    speak: none;
+
+    font-style: normal;
+
+    font-weight: normal;
+
+    font-variant: normal;
+
+    text-transform: none;
+
+    line-height: 1;
+
+
+
+    /* Better Font Rendering =========== */
+
+    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+
+.icon-sentado:before {
+
+    content: "\e900";
+
+}
+
+.icon-parado:before {
+
+    content: "\e901";
+
+}
+
+.icon-paseos:before {
+
+    content: "\e902";
+
+}
+
+.icon-entrenamiento:before {
+
+    content: "\e903";
+
+}
+
+.icon-hospedaje:before {
+
+    content: "\e904";
+
+}
+
+.icon-guarderia:before {
+
+    content: "\e905";
+
+}
+
+.icon-mapa:before {
+
+    content: "\e906";
+
+}
+
+.icon-calendario:before {
+
+    content: "\e907";
+
+}
+
+
+
+.icon-acupuntura:before {
+
+    content: "\e908";
+
+}
+
+
+
+.icon-baño:before {
+
+    content: "\e909";
+
+}
+
+
+
+.icon-limpieza:before {
+
+    content: "\e90a";
+
+}
+
+
+
+.icon-peluqueria:before {
+
+    content: "\e90b";
+
+}
+
+
+
+.icon-transporte:before {
+
+    content: "\e954";
+
+}
+
+
+
+.icon-transporte2:before {
+
+    content: "\e955";
+
+}
+
+
+
+.icon-veterinario:before {
+
+    content: "\e956";
+
+}
+
+
+
+
+
+
+
+div#map-canvas {
+
+	width: 100%;
+
+	height: 380px;
+
+}
+
+.center-white {
+
+	color: #fff;
+
+	text-align: center;
+
+}
+
+h1.center-white {
+
+	font-size: 36px !important;
+
+}
+
+h4.center-white {
+
+	font-size: 18px !important;
+
+}
+
+div#user-avatar {
+
+	text-align: center;
+
+	margin-top: 20px;
+
+}
+
+div#user-avatar > img {
+
+	border-radius: 30px;
+
+	border: 2px solid #fff;
+
+	box-shadow: 2px 2px 6px black;
+
+	margin-top: -15px;
+
+}
+
+div#user-container {
+
+	max-width: 1020px;
+
+	margin: 10px auto; 
+
+	min-height: 140px;
+
+}
+
+div#horizontalTab, div#user-rating {
+
+	margin-bottom: 20px;
+
+}
+
+div#rating {
+
+	width: 160px;
+
+    margin: 0px auto;
+
+}
+
+div#rating > img {
+
+	width: 28px;
+
+}
+
+
+
+.text-gray {
+
+    color: #555555 !important;
+
+}
+
+.separador {
+
+	border-bottom: 1px solid #ddd;
+
+	height: 15px;
+
+	clear: both;
+
+}
+
+#servicio_cuidador_main, #estado_cuidador_main, #tamano_mascota_main {
+
+	clear: both;
+
+}
+
+.reservar {
+
+	background-color: #ff436b;
+
+	color: #ffffff;
+
+}
+
+.conocer-cuidador, .boton-siguiente {
+
+	background-color: #fefe78;
+
+	color: #515151;
+
+}
+
+.conocer-cuidador:hover, .boton-siguiente:hover {
+
+	background-color: #dff58b
+
+}
+
+.conocer-cuidador, .boton-siguiente, .reservar {
+
+	margin-top: 20px;
+
+	width: 160px;
+
+	border-radius: 18px;
+
+	padding: 10px;
+
+}
+
+#reserve-petsitter {
+
+	min-height: 150px;
+
+}
+
+.boton-siguiente {
+
+	height: 40px;
+
+	margin: 10px auto 40px auto;
+
+}
+
+.derecha {
+
+	float: right;
+
+}
+
+.izquierda {
+
+	float: left;
+
+}
+
+.w25pc {
+
+	width: 25% !important;
+
+}
+
+.w50pc {
+
+	width: 50% !important;
+
+}
+
+.w100pc {
+
+	width: 100% !important;
+
+}
+
+.w98pc {
+
+	width: 98% !important;
+
+}
+
+.w96pc {
+
+	width: 96% !important;
+
+}
+
+.w60 {
+
+	width: 60px !important;
+
+}
+
+.w120 {
+
+	width: 120px !important;
+
+}
+
+.w180 {
+
+	width: 180px !important;
+
+}
+
+.lh22 {
+
+	line-height: 22px !important;
+
+}
+
+.lh24 {
+
+	line-height: 24px !important;
+
+}
+
+.lh26 {
+
+	line-height: 26px !important;
+
+}
+
+.lh28 {
+
+	line-height: 28px !important;
+
+}
+
+.lh36 {
+
+    line-height: 36px!important;
+
+}
+
+.pt12 {
+
+    padding-top: 12px!important;
+
+}
+
+.ml8 {
+
+    margin-left: 8px !important;
+
+}
+
+.ml-2 {
+
+    margin-left: -2px !important;
+
+}
+
+.mt10 {
+
+    margin-top: 10px !important;
+
+}
+
+.r-tabs-anchor {
+
+	padding-left: 40px !important;
+
+}
+
+
+
+.r-tabs-accordion-title > a.r-tabs-anchor, .r-tabs-tab > a.r-tabs-anchor {
+
+    background-image: url(https://kmimos.com.mx/wp-content/plugins/kmimos/assets/images/close.png);
+
+    background-repeat: no-repeat;
+
+    background-size: 24px;
+
+    background-position: 10px 6px;
+
+}
+
+
+
+.r-tabs-accordion-title.r-tabs-state-active > a.r-tabs-anchor, .r-tabs-tab.r-tabs-state-active  > a.r-tabs-anchor {
+
+    background-image: url(https://kmimos.com.mx/wp-content/plugins/kmimos/assets/images/open.png);
+
+    background-repeat: no-repeat;
+
+    background-size: 24px;
+
+    background-position: 10px 6px;
+
+}
+
+#estoy_buscando {
+
+    margin-bottom: 0px !important;
+
+}
+
+.buscador_portada {
+
+	max-width: 680px;
+
+	min-width: 320px;
+
+	margin-top: -5px;
+
+}
+
+.boton_buscar > a {
+
+	border: 1px solid;
+
+	padding: 10px;
+
+	margin-top: 20px !important;
+
+/*    border-radius: 18px;*/
+
+    background-color: #00d2b7;
+
+    color: #fff;
+
+}
+
+.fancybox-skin {
+
+	background-color: #fff !important;
+
+	border-radius: 10px !important;
+
+}
+
+.boton_extra {
+
+	float: left;
+
+	margin-left: 3px;
+
+	width: 400px;
+
+}
+
+.boton_buscar {
+
+    clear: both;
+
+    padding-top: 20px;
+
+}
+
+.boton_portada.activo {
+
+	background-color: rgba(255,255,255,0.9) !important;
+
+	color: #00d2b7 !important;
+
+}
+
+.boton_portada > a {
+
+	color: #7f7f7f;
+
+}
+
+.boton_portada > label {
+
+    border: 1px solid;
+
+	height: 40px;
+
+	width: 100%;
+
+    margin-bottom: 0px;
+
+}
+
+.boton_portada {
+
+	margin: 2px;
+
+    padding: 1px;
+
+	width: 100%;
+
+    height: 40px;
+
+	background-color: rgba(255,255,255,0.5);
+
+	color: #7f7f7f;
+
+	float: left;
+
+	background-repeat: no-repeat;
+
+	background-size: 28px;
+
+	background-position: 50% 2px;
+
+}
+
+.boton_portada i {
+
+	font-size: 30px;
+
+}
+
+.boton_portada p {
+
+	margin-top: -3px;
+
+    padding-top: 5px;
+
+}
+
+.boton_portada > label {
+
+    width: 100%;
+
+}
+
+.contenedor_servicio, .contenedor_fecha {
+
+    width: 50%;
+
+}
+
+.contenedor_fecha {
+
+    margin-top: -20px;
+
+}
+
+.contenedor_ubicacion {
+
+    width: 100%;    
+
+}
+
+/*
+
+#boton_ubicacion {
+
+	background-image: url(https://kmimos.com.mx/wp-content/plugins/kmimos/assets/images/mapa_g.png);
+
+}
+
+#boton_fechas {
+
+	background-image: url(https://kmimos.com.mx/wp-content/plugins/kmimos/assets/images/calendario_g.png);
+
+}*/
+
+#ubicacion_cuidador {
+
+    width: 326px;
+
+    height: 36px;
+
+    padding-left: 36px;
+
+    float: left;
+
+    margin-left: -28px;
+
+}
+
+#contenedor_ubicacion > i {
+
+    float: left;
+
+    position: relative;
+
+    font-size: 20px;
+
+    margin: 5px 0px 5px 10px;
+
+    color: #888;
+
+}
+
+.edo {
+
+    font-weight: bold !important;
+
+}
+
+.mpo {
+
+    font-style: italic !important;
+
+}
+
+.rango_fecha {
+
+    margin-left: -6px;
+
+}
+
+.rango_fecha > i {
+
+    float: left;
+
+    position: relative;
+
+    font-size: 22px;
+
+    color: #888;
+
+    left: 5px;
+
+    margin-top: -5px;
+
+}
+
+.campo_rango {
+
+    margin-top: -5px;
+
+    height: 36px;
+
+    width: 160px;
+
+    padding-left: 35px;
+
+    float: left;
+
+    margin-left: -24px;
+
+}
+
+.etiqueta_fecha {
+
+    margin-left: 2px;
+
+    position: relative;
+
+    top: 30px;
+
+    font-size: smaller;}
+
+#selector_inicio {
+
+    margin-right: 0px;
+
+    margin-left: 0px;
+
+}
+
+#selector_final {
+
+    margin-right: -4px !important;
+
+    margin-left: 4px !important;
+
+}
+
+.boton_portada > input[type='checkbox'] {
+
+	display: none;
+
+}
+
+.boton_servicio > label > i {
+
+    float: left;
+
+    padding-left: 3px;
+
+    padding-top: 2px;
+
+}
+
+.pf-toplinks-left {
+
+	margin-left: 30px !important;
+
+}
+
+.oculto {
+
+	display:none;
+
+}
+
+#pf_featured_items_w-2, #pf_search_items_w-3 {
+
+    display: none !important;    /* Oculta barra lateral en vista de movil */
+
+}
+
+
+
+@media screen and (min-width: 786px) {
+
+	div#user-avatar {
+
+		float: left;
+
+		width: 20%;
+
+	}
+
+	div#user-avatar > img {
+
+		margin: 0px auto;
+
+	}
+
+	div#user-info{
+
+		float: left;
+
+		width: 60%;
+
+	}
+
+	h1.title-white {
+
+		float: left;
+
+	}
+
+	.boton_portada {
+
+		width: 100% !important;
+
+	}
+
+    .contenedor_servicio, .contenedor_fecha {
+
+        width: 25% !important;
+
+    }
+
+    .contenedor_fecha {
+
+        margin-top: -14px;
+
+    }
+
+    .contenedor_ubicacion {
+
+        width: 50% !important;
+
+    }
+
+    .campo_rango {
+
+        width: 168px;
+
+    }
+
+    #ubicacion_cuidador {
+
+        width: 338px;
+
+    }
+
+    #selector_inicio {
+
+        margin-left: 0px;
+
+    }
+
+    #selector_final {
+
+        margin-right: 0px;
+
+    }
+
+    #pf_featured_items_w-2, #pf_search_items_w-3 {
+
+        display: block !important;    /* Muestra barra lateral en vista de PC */
+
+    }
+
+/*    #tamano_mascota_main {
+
+        width: 290px !important;
+
+    }*/
+
+}
+
+.fancybox-close:before {
+
+	content: "x";
+
+}
+
+.fancybox-close {
+
+	border-radius: 18px;
+
+	background-color: #f00;
+
+	float: right;
+
+	color: #fff;
+
+	border: 2px solid;
+
+	padding-top: 5px;
+
+	text-align: center;
+
+	font-weight: bolder;
+
+    font-size: 1.5em;
+
+    cursor: pointer !important;
+
+}
+
+#ver_mas_servicios.activo {
+
+	color: #fff;
+
+	font-weight: bold;
+
+}
+
+#boton_ubicacion p, #boton_fechas p {
+
+	margin-top: -22px;
+
+}
+
+.product-addon-totals {
+
+	display: none;
+
+}
+
+.woocommerce-tabs.wc-tabs-wrapper > ul.tabs.wc-tabs {
+
+	margin: 0px 5px !important;
+
+}
+
+.woocommerce-tabs.wc-tabs-wrapper > div.panel.entry-content.wc-tab {
+
+	background-color: #fff;
+
+    padding: 20px;
+
+    border-radius: 5px;
+
+}
+
+.show_if_booking tips {
+
+	display: block;
+
+}

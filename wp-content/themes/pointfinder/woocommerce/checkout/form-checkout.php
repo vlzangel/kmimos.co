@@ -78,12 +78,25 @@ if( !$DS ){
 	    	echo "jQuery('#billing_email').attr('value', '{$cu->user_email}');";
 	    	$metas_cliente = get_user_meta($cu->ID);
 
+	    	if($cu->user_firstname == ""){ $cu->user_firstname = "_"; }
+	    	if($cu->user_lastname == ""){ $cu->user_lastname = "_"; }
+
 	    	echo "jQuery('#billing_first_name').attr('value', '{$cu->user_firstname}');";
 	    	echo "jQuery('#billing_last_name').attr('value', '{$cu->user_lastname}');";
-	    	echo "jQuery('#billing_phone').attr('value', '+57{$metas_cliente["user_mobile"][0]}');";
+	    	echo "jQuery('#billing_phone').attr('value', '+52{$metas_cliente["user_mobile"][0]}');";
 	    ?>
 
-	    jQuery('#billing_postcode').attr('value', '10110');
+	    jQuery('#billing_state > option[value="Distrito Federal"]').attr('selected', 'selected');
+	    jQuery('#billing_address_1').attr('value', 'Colombia');
+	    jQuery('#billing_address_2').attr('value', 'Colombia');
+	    jQuery('#billing_city').attr('value', '');
+	    jQuery('#billing_postcode').attr('value', '');
+
+	    <?php if(  $_SESSION['admin_sub_login'] == 'YES' ){ ?>
+		    jQuery("#payment_method_wcvendors_test_gateway").attr("checked", "checked");
+			jQuery(".payment_method_wcvendors_test_gateway").css("display", "block");
+			jQuery("div.payment_method_openpay_cards").css("display", "none");
+	    <?php } ?>
 	});
 </script>
 

@@ -182,11 +182,11 @@
 
 											<div class="vlz_sub_seccion">
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu número móvil<br>Este debe tener entre 10 y 11 dígitos." type='number' id='movil' maxlength="11" name='movil' class='vlz_input' placeholder='M&oacute;vil' required pattern="[0-9]{11}">
+													<input data-title="Debes ingresar tu número móvil<br>Este debe tener entre 7 y 11 dígitos." type='number' id='movil' maxlength="11" name='movil' class='vlz_input' placeholder='M&oacute;vil' required pattern="[0-9]{7}">
 												</div>
 												
 												<div class="vlz_cell50">
-													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 10 y 11 dígitos." type='number' id='telefono' maxlength="11" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]{11}">
+													<input data-title="Debes ingresar tu número telefónico<br>Este debe tener entre 7 y 11 dígitos." type='number' id='telefono' maxlength="11" name='telefono' class='vlz_input' placeholder='Tel&eacute;fono' required pattern="[0-9]{7}">
 												</div>
 											</div>
 
@@ -311,7 +311,7 @@
 										case "movil":
 								      		var telefono = jQuery( "#movil" ).val();
 
-								      		if( telefono.length >= 10 && telefono.length <= 11 ){
+								      		if( telefono.length >= 7 && telefono.length <= 11 ){
 								      			return true;
 								      		}else{
 								      			return false;
@@ -320,7 +320,7 @@
 										case "telefono":
 								      		var telefono = jQuery( "#telefono" ).val();
 
-								      		if( telefono.length >= 10 && telefono.length <= 11 ){
+								      		if( telefono.length >= 7 && telefono.length <= 11 ){
 								      			return true;
 								      		}else{
 								      			return false;

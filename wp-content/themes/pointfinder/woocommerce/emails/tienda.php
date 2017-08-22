@@ -34,7 +34,9 @@
 		
 		$mensaje_cliente = kmimos_get_email_html($titulo_mail, $mensaje_cliente, 'Solicitud de Reserva Recibida Exitosamente!', true, true);
 
-		wp_mail( $cliente_email, "Solicitud de Reserva Recibida Exitosamente!", $mensaje_cliente, kmimos_mails_administradores());
+		wp_mail( $cliente_email, "Solicitud de Reserva Recibida Exitosamente!", $mensaje_cliente);
+
+		//kmimos_mails_administradores_new("Solicitud de Reserva Recibida Exitosamente!", $mensaje_cliente);
 
 	/* Administrador */
 
@@ -63,6 +65,6 @@
 		
 		$mensaje_admin = kmimos_get_email_html($titulo_mail, $mensaje_admin, 'Nueva Reserva - '.$producto, true, true);
 
-		wp_mail( $email_admin, "Solicitud de reserva #".$reserva_id, $mensaje_admin, kmimos_mails_administradores());
+		kmimos_mails_administradores_new("Solicitud de reserva #".$reserva_id, $mensaje_admin);
 
 ?>

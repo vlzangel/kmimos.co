@@ -1,7 +1,9 @@
-<style type="text/css">
+<?php 
+$HTML = "
+<style type='text/css'>
 	.vlz_contenedor{
 	    max-width: 1140px;
-	    margin: 0px auto 20px;
+	    margin: 20px auto 20px;
 	    border: solid 2px #59c9a8;
 	    border-radius: 5px;
 	    border-top: solid 35px #59c9a8;
@@ -299,4 +301,5 @@
 		    margin: 10px 10px 10px;
 		}
 	}
-</style>
+</style>";
+?>

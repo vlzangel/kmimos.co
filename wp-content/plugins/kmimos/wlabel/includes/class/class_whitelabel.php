@@ -1,7 +1,6 @@
 <?php
 
 class Class_WhiteLabel{
-//
     var $args;
 
     function __construct($args=array()){

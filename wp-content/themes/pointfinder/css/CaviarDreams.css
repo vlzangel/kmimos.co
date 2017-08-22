@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'caviar_dreamsregular';
+    src: url('../font/CaviarDreams-webfont.eot');
+    src: url('../font/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/CaviarDreams-webfont.woff') format('woff'),
+         url('../font/CaviarDreams-webfont.ttf') format('truetype'),
+         url('../font/CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

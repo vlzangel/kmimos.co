@@ -6,6 +6,7 @@ if(file_exists($kmimos_load)){
 
 function number_round($number){
     $number=(round($number*100))/100;
+    $number=number_format($number, 2, ',', '.');
     return $number;
 }
 
@@ -13,8 +14,9 @@ global $wpdb;
 $wlabel=$_wlabel_user->wlabel;
 $WLresult=$_wlabel_user->wlabel_result;
 $WLcommission=$_wlabel_user->wlabel_Commission();
+$_wlabel_user->wlabel_Options('detail');
 $_wlabel_user->wLabel_Filter(array('tddate','tdcheck'));
-$_wlabel_user->wlabel_Export('DETALLE DE MONTOS','title','table');
+$_wlabel_user->wlabel_Export('detail','DETALLE DE MONTOS','table');
 ?>
 <div class="module_title">
     RESERVAS POR DIA

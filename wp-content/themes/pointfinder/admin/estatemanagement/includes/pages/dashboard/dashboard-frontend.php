@@ -1,24 +1,3 @@
-<script type="text/javascript">
-    function jau_ver_municipios(CB){
-		var id =  jQuery("#estados").val();
-		var txt = jQuery("#estados option:selected").text();
-        jQuery.ajax( {
-            method: "POST",
-                data: { estado: id },
-            url: "<?php echo get_home_url()."/wp-content/themes/pointfinder"; ?>/vlz/ajax_municipios.php",
-            beforeSend: function( xhr ) {
-		    	jQuery("#municipios").html("<option value=''>Cargando Localidades</option>");
-		    	console.log(jQuery('#municipios'))
-            }
-        }).done(function(data){
-			jQuery("#municipios").html("<option value=''>Seleccione una Localidad</option>"+data);
-            if( CB != undefined) {
-                CB();
-            }
-        });
-    }
-</script>
-
 <?php
 /**********************************************************************************************************************************
 *
@@ -71,98 +50,104 @@ if ( ! class_exists( 'PF_Frontend_Fields' ) ){
 				$lang_custom = PF_current_language();
 			}
 
-				$this->FieldOutput = '<div class="golden-forms">';
-				$this->FieldOutput .= '<form id="pfuaprofileform" enctype="multipart/form-data" name="pfuaprofileform" method="POST" action="">';
-				$this->FieldOutput .= '<div class="pfsearchformerrors"><ul></ul><a class="button pfsearch-err-button">'.esc_html__('CERRAR','pointfindert2d').'</a></div>';
-				if($params['sccval'] != ''){
-					$this->FieldOutput .= '<div class="notification success" id="pfuaprofileform-notify"><div class="row"><p>'.$params['sccval'].'<br>'.$params['sheadermes'].'</p></div></div>';
-					$this->ScriptOutput .= '$(document).ready(function(){$.pfmessagehide();});';
-				}
-				if($params['errorval'] != ''){
-					$this->FieldOutput .= '<div class="notification error" id="pfuaprofileform-notify"><p>'.$params['errorval'].'</p></div>';
-					$this->ScriptOutput .= '$(document).ready(function(){$.pfmessagehide();});';
-				}
-				$this->FieldOutput .= '<div class="">';
-				$this->FieldOutput .= '<div class="">';
-				$this->FieldOutput .= '<div class="row">';
+			$this->FieldOutput = '<div class="golden-forms">';
+			$this->FieldOutput .= '<form id="pfuaprofileform" enctype="multipart/form-data" name="pfuaprofileform" method="POST" action="">';
+			$this->FieldOutput .= '<div class="pfsearchformerrors"><ul></ul><a class="button pfsearch-err-button">'.esc_html__('CERRAR','pointfindert2d').'</a></div>';
+			if($params['sccval'] != ''){
+				$this->FieldOutput .= '<div class="notification success" id="pfuaprofileform-notify"><div class="row"><p>'.$params['sccval'].'<br>'.$params['sheadermes'].'</p></div></div>';
+				$this->ScriptOutput .= '$(document).ready(function(){$.pfmessagehide();});';
+			}
+			if($params['errorval'] != ''){
+				$this->FieldOutput .= '<div class="notification error" id="pfuaprofileform-notify"><p>'.$params['errorval'].'</p></div>';
+				$this->ScriptOutput .= '$(document).ready(function(){$.pfmessagehide();});';
+			}
+			$this->FieldOutput .= '<div class="">';
+			$this->FieldOutput .= '<div class="">';
+			$this->FieldOutput .= '<div class="row">';
 
-				$main_submit_permission = true;
-				$main_package_purchase_permission = false;
-				$main_package_renew_permission = false;
-				$main_package_limit_permission = false;
-				$main_package_upgrade_permission = false;
-				$main_package_expire_problem = false;
+			$main_submit_permission = true;
+			$main_package_purchase_permission = false;
+			$main_package_renew_permission = false;
+			$main_package_limit_permission = false;
+			$main_package_upgrade_permission = false;
+			$main_package_expire_problem = false;
 
-				$hide_button = false;
+			$hide_button = false;
 
-				switch ($params['formtype']) {
-					
-					case 'myshop':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_myshop.php");
-					break;
+			switch ($params['formtype']) {
+				
+				case 'myshop':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_myshop.php");
+				break;
 
-					case 'mypets':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_mypets.php");
-					break;
-    
-					case 'mypet':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_mypet.php");
-					break;
-                        
-					case 'dirpets':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_dirpets.php");
-					break;
-                        
-					case 'delpet':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_delpet.php");
-					break;
+				case 'mypets':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_mypets.php");
+				break;
 
-					case 'myissues':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_myissues.php");
-					break;
+				case 'mypet':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_mypet.php");
+				break;
+                    
+				case 'dirpets':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_dirpets.php");
+				break;
+                    
+				case 'delpet':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_delpet.php");
+				break;
 
-					case 'myservices':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_myservices.php");
-					break;
+				case 'myissues':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_myissues.php");
+				break;
 
-					case 'mypictures':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_mypictures.php");
-					break;
-    
-					case 'mypicture':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_mypicture.php");
-					break;
-  
-					case 'cancelreq':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_cancelreq.php");
-					break;
+				case 'myservices':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_myservices.php");
+				break;
 
-					case 'profile':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_profile.php");
-					break;
+				case 'disponibilidad':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_disponibilidad.php");
+				break;
 
-					case 'mybookings':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_bookings.php");
-					break;
+				case 'mypictures':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_mypictures.php");
+				break;
 
-					case 'favorites':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_favorites.php");
-					break;
+				case 'mypicture':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_mypicture.php");
+				break;
 
-					case 'invoices':
-						include("./wp-content/themes/pointfinder/vlz/admin/frontend_invoices.php");
-					break;
+				case 'cancelreq':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_cancelreq.php");
+				break;
 
-					case 'caregiver':
-						//include("./wp-content/themes/pointfinder/vlz/admin/frontend/caregiver.php");
-					break;
+				case 'profile':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_profile.php");
+				break;
 
-				}
+				case 'mybookings':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_bookings.php");
+				break;
 
-				$this->FieldOutput .= '</div>';/*row*/
-				$this->FieldOutput .= '</div>';/*form-section*/
-				$this->FieldOutput .= '</div>';/*form-enclose*/
+				case 'favorites':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_favorites.php");
+				break;
 
+				case 'invoices':
+					include("./wp-content/themes/pointfinder/vlz/admin/frontend_invoices.php");
+				break;
+
+				case 'caregiver':
+					//include("./wp-content/themes/pointfinder/vlz/admin/frontend/caregiver.php");
+				break;
+
+			}
+
+			$this->FieldOutput .= '</div>';/*row*/
+			$this->FieldOutput .= '</div>';/*form-section*/
+			$this->FieldOutput .= '</div>';/*form-enclose*/
+
+			if( $params['formtype'] != 'disponibilidad' ){
+				
 				if($params['formtype'] != 'myitems' && $params['formtype'] != 'myissues' && $params['formtype'] != 'mybookings' && $params['formtype'] != 'favorites' && $params['formtype'] != 'reviews'){$xtext = '';}else{$xtext = 'style="background:transparent;background-color:transparent;display:none!important"';}
 				 
 				$this->FieldOutput .= '<div class="pfalign-right" '.$xtext.' style="text-align: right !important;">';
@@ -203,7 +188,7 @@ if ( ! class_exists( 'PF_Frontend_Fields' ) ){
 		                }
 
 		                $this->FieldOutput .= '</section>';
- 
+
 		         	}else{
 		       			$this->FieldOutput .='    
 			                <section  '.$xtext.'> 
@@ -213,10 +198,12 @@ if ( ! class_exists( 'PF_Frontend_Fields' ) ){
 			            ';
 		       		}
 		       	}
-	        
-	            $this->FieldOutput.='</div>';
-				$this->FieldOutput .= '</form>';
-				$this->FieldOutput .= '</div>';
+
+	       	}
+        
+            $this->FieldOutput.='</div>';
+			$this->FieldOutput .= '</form>';
+			$this->FieldOutput .= '</div>';
 		}
 
 		/**
@@ -247,8 +234,6 @@ if ( ! class_exists( 'PF_Frontend_Fields' ) ){
 			    		$fieldvalues = get_terms($params['listsubtype'],array('hide_empty'=>false));
 			    	}
 					 
-
-					
 					if($params['listgroup'] == 1){
 						foreach( $fieldvalues as $parentfieldvalue){
 							if($parentfieldvalue->parent == 0){

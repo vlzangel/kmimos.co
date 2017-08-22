@@ -139,7 +139,9 @@
 			        			jQuery("#vlz_img_perfil").attr("value", url);
 			        			jQuery("#error_vlz_img_perfil").css("display", "none");
 			           			jQuery(".kmimos_cargando").css("display", "none");
+
 			           			set_cookie("vlz_img_perfil", jQuery("#vlz_img_perfil").attr("value") );
+
 			           			jQuery("#portada").val("");
 					      	});
 		    			});
@@ -156,9 +158,10 @@
 			switch(id){
 				case "ife":
 		      		var ife = jQuery( "#ife" ).val();
-		      		if( ife.length >= 7 && ife.length <= 10 ){
+		      		if( ife.length == 7 ){
 		      			return true;
 		      		}else{
+		      			ver_error(id);
 		      			return false;
 		      		}
 				break;
@@ -276,7 +279,7 @@
 		    jQuery("#error_"+event.target.id).removeClass("no_error");
 		    jQuery("#error_"+event.target.id).addClass("error");
 		    jQuery("#"+event.target.id).addClass("vlz_input_error");
-		    console.log(event.target.id);
+		    //console.log(event.target.id);
 		}, true);
 
 		form.addEventListener( 'keyup', function(event){
@@ -444,7 +447,7 @@
 	/* DIRECCIONES */
 
 		jQuery("#estado").on("change", function(e){
-			var estado_id = jQuery("#estado").val(); 
+			var estado_id = jQuery("#estado").val();
 		    if( estado_id != "" ){
 		        var html = "<option value=''>Seleccione un municipio</option>";
 		        jQuery.each(estados_municipios[estado_id]['municipios'], function(i, val) {
@@ -476,10 +479,10 @@
 		}
 
 	// Generales
+
 		function GoToHomePage(){
-			// location = 'http://kmimos.ilernus.com';  
-			// location = "<?php echo get_home_url().'/perfil-usuario/?ua=profile'; ?>";  
-			location = location.protocol+"//"+location.host+"/perfil-usuario/?ua=profile";
+			// location = 'http://kmimos.ilernus.com';
+			location = "<?php echo get_home_url().'/perfil-usuario/?ua=profile'; ?>";
 		}
 			
 		function vlz_modal(tipo, titulo, contenido){
@@ -520,10 +523,13 @@
 	// Envio de formulario
 
 		jQuery("#vlz_form_nuevo_cuidador").submit(function(e){
+
 			jQuery("#vlz_modal_cerrar_registrar").attr("onclick", "");
+
 			if( form.checkValidity() ){
 		    	var terminos = jQuery("#terminos").attr("value");
 				if( terminos == 1){
+
 					var a = "<?php echo get_home_url()."/wp-content/themes/pointfinder/kmimos/registro_cuidador/vlz_procesar.php"; ?>";
 			  		jQuery("#vlz_contenedor_botones").css("display", "none");
 			  		jQuery(".vlz_modal_contenido").css("display", "none");
@@ -534,7 +540,9 @@
 			  		jQuery("#vlz_titulo_registro").html("Registrando, por favor espere...");
 			     	
 					jQuery.post( a, jQuery("#vlz_form_nuevo_cuidador").serialize(), function( data ) {
+						//console.log(data);
 			      		data = eval(data);
+
 			      		if( data.error == "SI" ){
 			      			jQuery('html, body').animate({ scrollTop: jQuery("#email").offset().top-75 }, 2000);
 			      			alert(data.msg);
@@ -548,9 +556,26 @@
 				      		jQuery("#vlz_titulo_registro").html('Términos y Condiciones');
 			  				jQuery("#boton_registrar_modal").css("display", "inline-block");
 			      		}else{
-			      			jQuery("#vlz_titulo_registro").html("Registro Completado!");
-						  	jQuery("#vlz_cargando").html(data.msg);
-				      		jQuery("#vlz_registro_cuidador_cerrar").css("display", "inline-block");
+							//	jQuery("#vlz_titulo_registro").html("Registro Completado!");
+							//	jQuery("#vlz_cargando").html(data.msg);
+							//	jQuery("#vlz_registro_cuidador_cerrar").css("display", "inline-block");
+							//console.log('registro compeltado2');
+						  	jQuery("#vlz_cargando")
+						  		.html(data.msg);
+						  	jQuery("#vlz_cargando")
+						  		.css('padding', '0px')
+						  		.css('padding-top', '10px');
+			      			jQuery("#vlz_titulo_registro")
+			      				.html("Registro completado!");
+			      			jQuery("#vlz_titulo_registro")
+			      				.css('font-size', '15px');
+			      			jQuery("#vlz_titulo_registro")
+			      				.css('background', '#fff')
+			      				.css('color','#52c8b6');
+ 			      			jQuery(".vlz_modal_ventana")
+ 			      				.css('width', 'auto');
+
+							jQuery("#vlz_registro_cuidador_cerrar").css("display", "inline-block");
 				      		<?php
 				      			if( substr($_SERVER["HTTP_REFERER"], -18) == "nuevos-aspirantes/" ){
 				      				$_SESSION['nuevosAspirantes'] = "SI";
@@ -560,16 +585,20 @@
 				      				echo "_gaq.push(['_trackEvent','registro_cuidador','click','aspirantes','1']);";
 				      			}
 				      		?>
+
 			  				jQuery.each(campos_form, function( id, tipo ) {
 			  					borrar_cookie(id);
 			  				});
 			      		}
 			      	});
+
 				}else{
 			  		alert("Debe aceptar los términos y condiciones.");
 					vlz_modal('terminos', 'Términos y Condiciones');
 				}
+
 			}
+
 			e.preventDefault();
 		});
 

@@ -38,7 +38,6 @@ function getListsuscribe($landing="", $desde="", $hasta=""){
 	$result = execute($sql);
 	return $result;
 }
-
 function getListlanding(){
 	$sql = "SELECT DISTINCT source FROM list_subscribe";
 	$result = execute($sql);

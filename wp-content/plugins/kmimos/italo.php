@@ -107,9 +107,83 @@
 	                'icon'=>plugins_url('/assets/images/icon.png', __FILE__)
 	        );
 
+	        $menus[] = array(
+	                'title'=>'Pago Cuidador',
+	                'short-title'=>'Pago Cuidador',
+	                'parent'=>'kmimos',
+	                'slug'=>'bp_saldo_cuidadores',
+	                'access'=>'manage_options',
+	                'page'=>'backpanel_saldo_cuidador',
+	                'icon'=>plugins_url('/assets/images/icon.png', __FILE__)
+	        );
+	        $menus[] = array(
+	                'title'=>'Pago Cuidador Detalle',
+	                'short-title'=>'Pago Cuidador Detalle',
+	                'parent'=>'kmimos',
+	                'slug'=>'bp_saldo_cuidadores_detalle',
+	                'access'=>'manage_options',
+	                'page'=>'backpanel_saldo_cuidador_detalle',
+	                'icon'=>plugins_url('/assets/images/icon.png', __FILE__)
+	        );
+	        $menus[] = array(
+	                'title'=>'Listado Mascotas',
+	                'short-title'=>'Listado Mascotas',
+	                'parent'=>'kmimos',
+	                'slug'=>'bp_mascotas',
+	                'access'=>'manage_options',
+	                'page'=>'backpanel_mascotas',
+	                'icon'=>plugins_url('/assets/images/icon.png', __FILE__)
+	        );
+/*
+          $menus[] = array(
+            'title'=>'Subscriptores',
+            'short-title'=>'Subscriptores',
+            'parent'=>'kmimos',
+            'slug'=>'subscribe',
+            'access'=>'manage_options',
+            'page'=>'subscribe_download',
+            'icon'=>plugins_url('/assets/images/icon.png', __FILE__)
+          );
+*/
+        
+	        $menus[] = array(
+	                'title'=>'Newsletter',
+	                'short-title'=>'Newsletter',
+	                'parent'=>'kmimos',
+	                'slug'=>'bp_newsletter',
+	                'access'=>'manage_options',
+	                'page'=>'backpanel_newsletter',
+	                'icon'=>plugins_url('/assets/images/icon.png', __FILE__)
+	        );
+
 	        return $menus;
+
 	    }
 	}
+
+	if(!function_exists('backpanel_saldo_cuidador')){
+	        function backpanel_saldo_cuidador(){
+	            include_once('dashboard/backpanel_saldo_cuidador.php');
+	        }
+	}
+
+	if(!function_exists('backpanel_mascotas')){
+	        function backpanel_mascotas(){
+	            include_once('dashboard/backpanel_mascotas.php');
+		}
+	}
+
+	if(!function_exists('backpanel_saldo_cuidador_detalle')){
+        function backpanel_saldo_cuidador_detalle(){
+            include_once('dashboard/backpanel_saldo_cuidador_detalle.php');
+        }
+    }
+
+	if(!function_exists('backpanel_newsletter')){
+        function backpanel_newsletter(){
+            include_once('dashboard/backpanel_newsletter.php');
+        }
+    }
 
 	if(!function_exists('backpanel_ctr_participantes')){
         function backpanel_ctr_participantes(){
@@ -164,5 +238,6 @@
             include_once('wlabel/admin/backpanel.php');
         }
     }
+
 
 ?>

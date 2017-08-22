@@ -1,0 +1,24 @@
+/* SCROLL ANIMACION */
+.scroll_animate{position:relative; opacity:0; transition:all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);}   
+
+/* SCROLL ANIMACION INICIAL */
+.scroll_animate[data-position="self"]{} 
+.scroll_animate[data-position="left"]{left:-10%;}
+.scroll_animate[data-position="right"]{right:-10%;}
+.scroll_animate[data-position="top"]{top:50px;}
+.scroll_animate[data-position="bottom"]{bottom:50px;}
+
+.scroll_animate[data-scale="small"]{transform:scale(.7);}
+.scroll_animate[data-scale="large"]{transform:scale(1.3);}
+
+/* SCROLL ANIMACION FINAL */
+.scroll_animate.scroll_visible{opacity:1;} 
+.scroll_animate[data-position="self"].scroll_visible{}
+.scroll_animate[data-position="left"].scroll_visible{left:0%;} 
+.scroll_animate[data-position="right"].scroll_visible{right:0%;}
+.scroll_animate[data-position="top"].scroll_visible{top:0;}
+.scroll_animate[data-position="bottom"].scroll_visible{bottom:0;}
+
+.scroll_animate[data-scale="small"].scroll_visible{transform:scale(1);}
+.scroll_animate[data-scale="large"].scroll_visible{transform:scale(1);}
+

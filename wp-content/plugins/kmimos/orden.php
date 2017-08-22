@@ -108,7 +108,7 @@
 			.$detalles_servicio;
 	    
    		$msg_admin = kmimos_get_email_html("Reserva Cancelada por Cliente - ".$nom_cliente, $msg, "", true, true);
-		wp_mail( $email_admin, "Cancelación de Reserva", $msg_admin, kmimos_mails_administradores());
+		kmimos_mails_administradores_new("Cancelación de Reserva", $msg_admin);
 
    		$msg_cuidador = $styles.'
 	    	<p><strong>Cancelación de Reserva (N°. '.$reserva_id.')</strong></p>
