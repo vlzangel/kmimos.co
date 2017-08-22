@@ -15,6 +15,9 @@
 
 /kmibox/*
 
+/.tmb/
+/wp-content/plugins/file-manager/
+
 Respaldo*
 
 # Archivos
