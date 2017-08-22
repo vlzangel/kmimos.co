@@ -114,7 +114,7 @@
 	    //$message = kmimos_get_email_html("Registro de Nuevo Usuario.", $mensaje_mail, '', true, true);
 	    wp_mail( 
 	    	$email, 
-	    	"Kmimos Mexico – Gracias por registrarte! Kmimos la NUEVA forma de cuidar a tu perro!", 
+	    	"Kmimos Colombia – Gracias por registrarte! Kmimos la NUEVA forma de cuidar a tu perro!", 
 	    	$html
 	    );
 

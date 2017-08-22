@@ -3,10 +3,10 @@
 	echo "<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto' media='all' />";
 
 	if($request->post_type == 'request'){
-        $title = 'Kmimos México - Cancelación de Solicitud de Conocer Cuidador.';
+        $title = 'Kmimos Colombia - Cancelación de Solicitud de Conocer Cuidador.';
         $tipo = 'conocerle';
     }else {
-        $title = 'Kmimos México - Cancelación de Solicitud de Reserva.';
+        $title = 'Kmimos Colombia - Cancelación de Solicitud de Reserva.';
         $tipo = 'confirmación de reserva';
     }
 

@@ -184,8 +184,8 @@
                         Revisa estas recomendaciones y pícale a cualquiera de ellas para ver más detalles sobre su perfil.
                         <div style="overflow: hidden; text-align: center; margin: 0px auto; max-width: 600px;">'.$str_sugeridos_img.'</div>
                     </li>
-                    <li align="justify" style="padding-bottom: 10px; font-size: 12px;">En caso de que alguna de estas opciones no se adecúe a tus necesidades, por favor ingresa a <strong><a style="text-decoration: none; color: #3d68b9;" href="'.get_home_url().'/busqueda">Kmimos México</a></strong> en donde podrás encontrar cientos de cuidadores que seguro te encantarán.</li>
-                    <li align="justify" style="font-size: 12px;">Para asistencia personalizada por favor márcanos a nuestros números. +52 (55) 1791.4931.</li>
+                    <li align="justify" style="padding-bottom: 10px; font-size: 12px;">En caso de que alguna de estas opciones no se adecúe a tus necesidades, por favor ingresa a <strong><a style="text-decoration: none; color: #3d68b9;" href="'.get_home_url().'/busqueda">Kmimos Colombia</a></strong> en donde podrás encontrar cientos de cuidadores que seguro te encantarán.</li>
+                    <li align="justify" style="font-size: 12px;">Para asistencia personalizada por favor márcanos a nuestros números. (+57) 315 849 2186.</li>
                 </ol>
             ';
 
