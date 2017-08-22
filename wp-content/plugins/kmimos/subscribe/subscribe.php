@@ -54,26 +54,26 @@ function subscribe_input($section='any'){
 }
 
 
-function subscribe_input(){
+// function subscribe_input(){
 
-    global $_subscribe;
+//     global $_subscribe;
 
-    $html='<div class="subscribe" data-subscribe="'.plugin_dir_url(__DIR__).'">';
-    $html.='<form onsubmit="form_subscribe(this); return false;">';
+//     $html='<div class="subscribe" data-subscribe="'.plugin_dir_url(__DIR__).'">';
+//     $html.='<form onsubmit="form_subscribe(this); return false;">';
 
-    $html.='<input type="hidden" name="section" value="'.$section.'"/>';
-    $html.='<input type="mail" name="mail" value="" placeholder="Introduce tu correo aqu&iacute" required/>';
-    $html.='<button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
-    $html.='</form>';
-    $html.='<div class="message"></div>';
-    $html.='</div>';
-    return $html;
+//     $html.='<input type="hidden" name="section" value="'.$section.'"/>';
+//     $html.='<input type="mail" name="mail" value="" placeholder="Introduce tu correo aqu&iacute" required/>';
+//     $html.='<button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
+//     $html.='</form>';
+//     $html.='<div class="message"></div>';
+//     $html.='</div>';
+//     return $html;
 
-    $html.='<input type="mail" name="mail" value="" placeholder="" required/>';
-    $html.='<button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
-    $html.='</form>';
-    $html.='</div>';
-    return $html;
+//     $html.='<input type="mail" name="mail" value="" placeholder="" required/>';
+//     $html.='<button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>';
+//     $html.='</form>';
+//     $html.='</div>';
+//     return $html;
 
-}
+// }
 ?>

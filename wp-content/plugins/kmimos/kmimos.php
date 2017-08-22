@@ -834,7 +834,9 @@ if(!function_exists('kmimos_admin_menu')){
                 'icon'=>plugins_url('/assets/images/icon.png', __FILE__),
             ),
 
-            array(
+        );
+    }
+}
 
 
     /** Define la estructura de los menúes en el área administrativa **/
