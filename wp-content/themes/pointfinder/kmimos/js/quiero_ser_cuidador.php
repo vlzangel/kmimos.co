@@ -158,7 +158,7 @@
 			switch(id){
 				case "ife":
 		      		var ife = jQuery( "#ife" ).val();
-		      		if( ife.length == 7 ){
+					if( ife.length >= 7 && ife.length <= 10 ){
 		      			return true;
 		      		}else{
 		      			ver_error(id);

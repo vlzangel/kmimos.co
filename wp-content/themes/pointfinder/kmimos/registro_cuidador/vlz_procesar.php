@@ -187,11 +187,11 @@
         		'0',
         		'$nombres',
         		'$apellidos',
-        		'$ife',
-        		'$email',
         		'$telefono',
         		'$descripcion',
         		'$foto',
+        		'$ife',
+        		'$email',
         		'$experiencia',
         		'0',
         		'$latitud',
@@ -566,7 +566,7 @@
 
 
                     $mail_msg = kmimos_get_email_html("Gracias por registrarte como cuidador.", $mensaje_mail, 'Registro de Nuevo Cuidador.', true, true);
-                    wp_mail( $email, "Kmimos Colombia - Gracias por registrarte como cuidador! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg);
+                    wp_mail( $email, "Kmimos Colombia – Gracias por registrarte como cuidador! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg);
 
                     $error = array(
                         "error"         => "NO",

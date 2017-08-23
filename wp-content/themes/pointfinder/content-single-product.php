@@ -184,6 +184,7 @@
 					                    cuidadores
 					                WHERE
 					                    user_id != {$propietario} AND
+					                    portada = 1 AND
 					                    activo = 1
 					                ORDER BY DISTANCIA ASC
 					                LIMIT 0, 4
