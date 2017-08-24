@@ -54,7 +54,7 @@ $mensaje_web = '
 			<strong>Enviar la documentación a cualquiera de las siguientes opciones:</strong>
 			<br>
 			<i class="fa fa-envelope-o" style="margin:5px;background: #5a5a5a;color: #fff;padding: 7px 6px 7px 7px;border-radius: 50px;margin-bottom: 5px;"></i>certificacion@kmimos.la<br>
-			<i class="fa fa-facebook" style="margin:5px;background: #5a5a5a;color: #fff;padding: 7px 10px 6px 10px;border-radius: 50px;"></i>Kmimosmx<br>
+			<i class="fa fa-facebook" style="margin:5px;background: #5a5a5a;color: #fff;padding: 7px 10px 6px 10px;border-radius: 50px;"></i>Kmimosco<br>
 		</div>	
 	</div>
 	<div style="height: auto; background: #fdfdaa; padding: 20px;">

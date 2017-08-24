@@ -25,7 +25,7 @@ $mensaje_mail = '<style>
                         </p>		
                         <p style="text-align: justify;">		
                             <ul style="text-align: justify;">
-                                <li>Compártenos por Mensaje Directo a nuestro Facebook @Kmimosmx tu nombre y apellido completo, email, teléfono de casa y celular</li>		
+                                <li>Compártenos por Mensaje Directo a nuestro Facebook @Kmimosco tu nombre y apellido completo, email, teléfono de casa y celular</li>
                                 <li>Una vez que nos envíes dichos datos, en menos de 24 horas recibirás en el correo que registraste las Pruebas Psicométricas y Pruebas de Conceptos Veterinarios básicos.  Por favor respóndelas, y nos llegará a nosotros un mensaje de completadas.</li>		
                                 <li>En menos de 24 horas después de completadas las pruebas recibirás un correo por parte de Certificación Kmimos, notificando tus resultados.  NO TE OLVIDES DE CHECAR SIEMPRE LA BANDEJA DE ENTRADA O EL CORREO NO DESEADO, ya que a veces llegan allí los correos.</li>		
                                 <li>En caso de haber aprobado, lee el archivo adjunto al correo que te muestra las políticas operativas.</li>		

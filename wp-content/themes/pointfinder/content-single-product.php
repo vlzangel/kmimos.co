@@ -184,7 +184,7 @@
 					                    cuidadores
 					                WHERE
 					                    user_id != {$propietario} AND
-					                    portada = 1 AND
+					                    /*portada = 1 AND*/
 					                    activo = 1
 					                ORDER BY DISTANCIA ASC
 					                LIMIT 0, 4
@@ -216,11 +216,13 @@
 									$cont++;
 								}
 
+							if($cont>0){
 								echo '
 									<div class="pfwidgettitle"> 
 										<div class="widgetheader">Otros cuidadores recomendados</div> 
 									</div> 
 									<div class="row" style="margin: 10px auto 20px;">'.$top_destacados;
+							}
 							?>
 						</div>
 

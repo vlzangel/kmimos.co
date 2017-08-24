@@ -526,10 +526,12 @@
         }
 
         function kmimos_format_adicionales($valor, $txt){
-            preg_match_all("#;(.*?)\)#", $valor, $matches);
+            //preg_match_all("#;(.*?)\)#", $valor, $matches);
+            preg_match_all("/\((.*?)\)/i", $valor, $matches);
+            $value = str_replace("$","",$matches[1][1]);
             return array(
                 $txt,
-                kmimos_borrar_formato_numerico( $matches[1][0] )
+                kmimos_borrar_formato_numerico( $value )
             );
         }
 
