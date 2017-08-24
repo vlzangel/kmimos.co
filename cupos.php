@@ -105,10 +105,11 @@
 
 	$resultados = $db->get_results($sql);
 
-	  echo "<pre>";
+	/*  echo "<pre>";
 			echo $sql."<br><br>";
+			print_r($resultados);
 		echo "</pre>";
-	
+	*/
 	
 	foreach ($resultados as $reserva) {
 		update_cupos($reserva);
