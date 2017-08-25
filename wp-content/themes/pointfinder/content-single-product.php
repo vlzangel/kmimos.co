@@ -133,7 +133,7 @@
 
 			 }else{
 
-				$mascotas = $D->get_var("SELECT count(*) FROM wp_posts WHERE post_type = 'pets' AND post_author = ".$id_user );
+				$mascotas = $D->get_var("SELECT count(*) FROM wp_posts WHERE post_type = 'pets' AND post_status = 'publish' AND post_author = ".$id_user );
 
 				if( $mascotas == 0 ){
 

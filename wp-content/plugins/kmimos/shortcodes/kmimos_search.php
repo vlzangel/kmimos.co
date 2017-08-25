@@ -408,18 +408,25 @@ $servicios = array(
                 });
                 function cargar_municipios(CB){
                     var estado_id = jQuery('#estado_cuidador').val();
+                    var estado_text = jQuery('#estado_cuidador').find('option:selected').text();
+
+                    //var html = '<option value=\"\">Seleccione un distrito</option>';
+                    var html = '<option value=\"\">'+estado_text+'</option>';
+                    jQuery('#municipio_cuidador').html(html);
+
                     if( estado_id != '' ){
                         jQuery.getJSON( 
                             '".get_bloginfo( 'template_directory', 'display' )."/vlz/ajax_municipios.php', 
                             {estado: estado_id} 
                         ).done(
                             function( data, textStatus, jqXHR ) {
-                                var html = \"<option value=''>Seleccione un distrito</option>\";
-                                jQuery.each(data, function(i, val) {
-                                    html += '<option value='+val.id+'>'+val.name+'</option>';
-                                });
-                                jQuery('#municipio_cuidador').html(html);
-
+                                if(data!=''){
+                                    var html = \"<option value=''>Seleccione un distrito</option>\";
+                                    jQuery.each(data, function(i, val) {
+                                        html += '<option value='+val.id+'>'+val.name+'</option>';
+                                    });
+                                    jQuery('#municipio_cuidador').html(html);
+                                }
                                 if( CB != undefined) {
                                     CB();
                                 }
@@ -430,8 +437,6 @@ $servicios = array(
                             }
                         );
                     }else{
-                        var html = \"<option value=''>Seleccione un distrito</option>\";
-                        jQuery('#municipio_cuidador').html(html);
                     }
                 }
                 jQuery('#estado_cuidador').on('change', function(e){
