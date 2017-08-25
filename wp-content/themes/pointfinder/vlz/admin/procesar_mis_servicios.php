@@ -126,12 +126,12 @@
     ";
 
     $imgs_product = array(
-        "hospedaje"         => "137215",
-        "guarderia"         => "137216",
-        "adiestramiento_basico"     => "137217",
-        "adiestramiento_intermedio" => "137217",
-        "adiestramiento_avanzado"   => "137217",
-        "paseos"                    => "137217"
+        "hospedaje"         => "8370",
+        "guarderia"         => "8371",
+        "adiestramiento_basico"     => "8372",
+        "adiestramiento_intermedio" => "8372",
+        "adiestramiento_avanzado"   => "8372",
+        "paseos"                    => "8372"
     );
 
     $db = new db($conn);
