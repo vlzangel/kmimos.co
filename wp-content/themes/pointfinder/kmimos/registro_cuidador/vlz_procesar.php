@@ -67,11 +67,11 @@
         );
 
         $imgs_product = array(
-            "hospedaje"         => "55477",
-            "guarderia"         => "55478",
-            "adiestramiento_basico"     => "55479",
-            "adiestramiento_intermedio" => "55479",
-            "adiestramiento_avanzado"   => "55479"
+            "hospedaje"         => "137215",
+            "guarderia"         => "137216",
+            "adiestramiento_basico"     => "137217",
+            "adiestramiento_intermedio" => "137217",
+            "adiestramiento_avanzado"   => "137217"
         );
 
         $temp = array();
