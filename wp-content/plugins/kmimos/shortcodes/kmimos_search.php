@@ -410,7 +410,7 @@ $servicios = array(
                     var estado_id = jQuery('#estado_cuidador').val();
                     var estado_text = jQuery('#estado_cuidador').find('option:selected').text();
 
-                    //var html = '<option value=\"\">Seleccione un distrito</option>';
+                    /*var html = '<option value=\"\">Seleccione un distrito</option>';*/
                     var html = '<option value=\"\">'+estado_text+'</option>';
                     jQuery('#municipio_cuidador').html(html);
 
