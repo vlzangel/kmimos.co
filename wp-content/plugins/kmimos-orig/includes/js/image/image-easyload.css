@@ -1,3 +1,0 @@
-/* EASYLOAD */
-.easyload{-webkit-filter:blur(10px); -moz-filter:blur(10px); -o-filter:blur(10px); -ms-filter:blur(10px); filter:blur(10px); transition:all .5s;}
-.easyload.easyloaded{-webkit-filter: blur(0); -moz-filter:blur(0); -o-filter:blur(0); -ms-filter:blur(0); filter:blur(0);}

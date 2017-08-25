@@ -1,200 +1,1782 @@
-<h4>Política De Privacidad</h4>
-<p>Kmimos. (en adelante denominado "Kmimos" o "kmimos.mx" o "kmimos.com.mx" o "kmimos.la") respeta su privacidad. Debido a que reunimos información importante de nuestros usuarios, visitantes, suscriptores y clientes (colectivamente "usted" o "su"), hemos establecido esta Política de privacidad como un medio para comunicar nuestra información de recopilación y difusión prácticas. Al acceder o utilizar kmimos.la (el "Sitio") o cualquiera de nuestras aplicaciones móviles o servicios (el Sitio, y este tipo de aplicaciones y servicios, colectivamente, "Servicios"), usted reconoce y acepta que esta Política de Privacidad y también de acuerdo a los Términos de Servicio. Podemos compartir información con o entre nuestros afiliados o de los sitios de nuestra propiedad o de control, pero tal intercambio de información es siempre regido bajo los términos de esta Política de Privacidad.</p>
-<p>Nuestros objetivos principales en la recopilación de información son para proporcionar y mejorar nuestros servicios, y para que los usuarios puedan disfrutar de los Servicios. Al crear una cuenta vamos a configurar un perfil Kmimos para usted. El perfil generalmente contendrá su nombre completo, ubicación y detalles del servicio de cuidado y puede incluir otro contenido o información que usted proporciona para los propósitos de tu perfil. Estos perfiles se pondrán a disposición del público en todo el sitio.</p>
-<h4>Visitante del Sitio / datos de usuario</h4>
-<p>a) Recopilamos información personal (como su nombre, dirección física, número de teléfono y dirección de correo electrónico) y otra información que proporcione en relación con la prestación o la mejora de los Servicios (incluyendo para procesar su inscripción o responder a una solicitud). Además, si usted proporciona información personal por una cierta razón, podemos usar la información personal en relación con la razón por la cual fue proporcionada. Cuando usted utilice los Servicios, también recopilamos información de pago que es necesario para cumplir con sus números de identificación de orden y de los contribuyentes (incluyendo en algunos casos, números de seguridad social en su caso) de las obligaciones derivadas del estado aplicable o leyes o regulaciones federales. Toda la información de identificación personal que se denominan colectivamente en lo sucesivo como "Información Personal". Si usted llena un formulario de contacto o envíenos un correo electrónico, usaremos esa información para responder a su solicitud.</p>
-<p>Su información personal no será distribuida o compartida con terceros a menos que sea (a) Decidir sobre cualesquiera de negocios a medida que nos han contratado para hacer (por ejemplo, si usted es un cuidador, vamos a compartir su información personal con los usuarios que reservan una servicio de cuidado con usted o de otra manera para proporcionar los servicios (por ejemplo, podemos compartir su información personal con nuestros proveedores de servicios, consultores, agentes y representantes, a fin de realizar ciertas funciones en nuestro nombre ), (b) para cumplir con las leyes estatales o federales aplicables o regulaciones, procesos legales u obligaciones y / o solicitudes de aplicación de la ley, proteger y defender los derechos o la propiedad del Kmimos, actuar en circunstancias urgentes para proteger la seguridad personal de los usuarios de los Servicios o el público, o para proteger contra la responsabilidad legal, (c) con el fin de llevar a cabo cualquier tipo de negocio, ya que, a nuestro exclusivo criterio subjetivo, considere razonable, o (d) en relación con una venta, fusión, reorganización, disolución o caso similar en el que la información personal es parte de los activos transferidos. Además, como se señaló anteriormente, cualquier información personal incluido en su perfil estará disponible al público y que puede compartir su información personal con nuestros afiliados.</p>
-<p>También podemos utilizar su información personal u otra información para comunicarnos con usted en el futuro para informarle sobre productos o servicios que creemos serán de interés para usted.</p>
-<p>Usted voluntariamente nos proporcione información personal, usted está consintiendo a nuestro uso de la misma de acuerdo con esta Política de Privacidad. Si usted proporciona información personal a nosotros, usted reconoce y acepta que dicha información personal puede ser transferida desde su ubicación actual a las oficinas y servidores de Kmimos y los terceros autorizados a que se refiere el presente documento se encuentra en los Estados Unidos Mexicanos.</p>
-<p>b) Reunimos y guardamos información personal de forma automática y en el agregado. Utilizamos la información que recopilamos para proporcionar y mantener los servicios que consideremos apropiadas en nuestra discreción. Al visitar o utilizar los servicios, podemos almacenar algunos o todos de los siguientes: la dirección IP desde la que se accede a los servicios, la fecha y la hora, la dirección IP del sitio web desde el que se conectó a los Servicios, el nombre del archivo o palabras que ha buscado en nuestro Sitio, artículos hace clic en una página y el navegador y sistema operativo utilizado. Esta información se utiliza para medir el número de visitantes a las drentes secciones de nuestro sitio e identificar el rendimiento del sistema.</p>
-<p>
-c) Utilizamos cookies persistentes para ganar las estadísticas totales sobre el uso del sitio para entender cómo las personas usan el sitio y cómo podemos hacerlo mejor. Usted puede tener el software en su computadora que le permitirá rechazar o desactivar las cookies de Internet, pero si lo hace, algunas de las características de los servicios no puede funcionar adecuadamente para usted. Para obtener instrucciones sobre cómo eliminar las cookies de su disco duro, vaya a las opciones del navegador.
+
+<p><b><u><span>I. Términos
+y Condiciones Kmimos.<o:p></o:p></span></u></b></p>
+
+<p><b><span>1.
+Utilización de este Sitio. <o:p></o:p></span></b></p>
+
+<p>1.1. La utilización de este
+sitio en la red de <i>Kmimos</i> (el
+“Sitio”) se rige por el siguiente contrato en el cual se describen los términos
+y condiciones generales aplicables al uso de los servicios ofrecidos por Kmimos
+Colombia S.A.S. , Sitio que incluye todos los recursos disponibles contenidos
+en el nombre de dominio </span><span>&quot;kmimos.co&quot;</span><span> Por el sólo hecho de ingresar a, o utilizar este Sitio, usted (el
+&quot;Usuario&quot;), (i) manifiesta haber leído, entendido y aceptado
+incondicionalmente los términos y condiciones de uso (los &quot;Términos&quot;)
+del Sitio que a continuación se detallan; y (ii) se compromete a hacer uso del
+mismo estrictamente bajo los Términos aquí expresados, aceptando que dicha
+utilización le atribuye la calidad de usuario del Sitio e implica la adhesión
+plena y sin reservas a todos y cada uno de los Términos. En caso de que usted
+no esté de acuerdo con los Términos, por favor absténgase de utilizar este
+Sitio. <o:p></o:p></span></p>
+
+<p><b><span>2.
+Condiciones de Utilización. <o:p></o:p></span></b></p>
+
+<p>2.1. El Usuario se compromete
+a utilizar el Sitio de acuerdo con estos Términos y las normas jurídicas
+vigentes en la República de Colombia, así como se obliga a no usar el Sitio con
+fines ilícitos, contrarios a estos Términos, lesivos a los intereses de
+terceros, o de tal manera que puedan dañar, sobrecargar, deteriorar o
+inutilizar el Sitio.<o:p></o:p></span></p>
+
+<p>2.2. Los servicios ofrecidos
+por <i>kmimos </i>solo son susceptibles de
+ser contratados por personas, naturales o jurídicas, que tengan capacidad legal
+para ello, por tanto, los menores de edad o incapaces, no podrán ser usuarios
+de este sitio. <o:p></o:p></span></p>
+
+<p>2.3. El Usuario manifiesta
+saber y entender que el uso que haga del Sitio, así como cualquier negociación
+o acto jurídico relacionado con el Sitio, lo hace con la intención de integrar
+los bienes y/o servicios en su caso involucrados a una o varias cadenas
+productivas, por lo que el Usuario en ningún momento será un consumidor en
+relación directa con <i>Kmimos</i>, ni este
+último su proveedor, para los efectos del Estatuto del Consumidor vigente en
+Colombia (Ley 1480 de 2011). <o:p></o:p></span></p>
+
+<p>2.4. El Usuario se obliga a
+abstenerse de obtener o intentar obtener, publicar o distribuir por cualquier
+medio todo tipo de informaciones, sellos, mensajes, imágenes, software o
+cualquier clase de material contenido en el Sitio, sirviéndose de medios
+distintos a los señalados en el Sitio. <o:p></o:p></span></p>
+
+<p>2.5. El Usuario deberá cumplir
+estrictamente con cualquier instrucción o indicación contenida en el Sitio o
+proporcionada por personal autorizado de <b><i>Kmimos</i></b> relativa a la utilización del
+Sitio. <o:p></o:p></span></p>
+
+<p>2.6. El Usuario es responsable
+de la veracidad, exactitud, vigencia y autenticidad de la Información
+proporcionada a <b><i>Kmimos</i></b> y, asimismo se compromete a mantenerla actualizada. Al
+agregar el Usuario contenido al Sitio como comentarios, propiedades,
+aplicaciones, preguntas, respuestas e incluso contenido protegido por derechos
+de propiedad intelectual como fotografías y vídeos, lo hace otorgando a <b><i>Kmimos</i></b>
+una licencia indefinida, no exclusiva, transferible, con posibilidad de ser
+sub-otorgada, sin royalties, aplicable globalmente, para utilizar cualquier
+contenido que el usuario publique en el Portal.<br>
 <br>
-Utilizamos los servicios de métricas web para rastrear la actividad en los Servicios. Utilizamos esta información para ayudarnos a desarrollar los Servicios, analizamos los patrones de uso, y para que los servicios más útiles. Esta información no se utiliza para asociar los términos de búsqueda o patrones de navegación del sitio con los usuarios individuales.
-</p>
-<h4>Niños</h4>
-<p>No permitimos a sabiendas cualquier visitante o usuarios menores de dieciocho (18) para utilizar o no el acceso a los Servicios. No deseamos para recoger cualquier información personal (o cualquier información en absoluto) de cualquier persona menor de 18 años de edad. Si eres menor de 18 años de edad, es posible que no utilices los Servicios.</p>
-<h4>Seguridad</h4>
-<p>Tenga en cuenta que los datos que se transporta a través de una red abierta, como Internet o el correo electrónico, puede ser accesible a cualquier persona. No podemos garantizar la confidencialidad de cualquier comunicación o material transmitido a través de este tipo de redes abiertas. Al revelar cualquier información personal a través de una red abierta, debe seguir siendo conscientes del hecho de que es potencialmente accesible a los demás, y por lo tanto, puede ser recogida y utilizada por otras personas sin su consentimiento. Sus datos pueden perderse durante la transmisión o pueden ser accedidos por terceros no autorizados. No aceptamos responsabilidad alguna por pérdidas directas o indirectas en cuanto a la seguridad de su información personal o datos durante su transferencia a través de Internet. Por favor, utilice otro medio de comunicación si usted piensa que esto es necesario o prudente por razones de seguridad.</p>
-<p>Por razones de seguridad de red y para asegurar que nuestros servicios se mantienen a disposición de todos los usuarios, que emplean programas de software comercial para controlar el tráfico de red y tratar de identificar intentos no autorizados de cargar o cambiar información o causar daños. Toda la información de pago se transmite a través de la tecnología Secure Socket Layer (SSL), encripta en nuestra pasarela de pago, y sólo accesible por las personas autorizadas con los derechos especiales de acceso a dichos sistemas que están obligados a mantener la información confidencial.</p>
-<h4>Enlaces externos Sitio</h4>
-<p>Kmimos puede enlazar a sitios web o servicios de terceros que pueden incluir o ofrecer productos o servicios de terceros. Cuando acceda a un sitio vinculado es posible que la divulgación de información privada. Es su responsabilidad mantener la información privada y confidencial. Estos sitios de terceros tienen políticas de privacidad separadas e independientes. Kmimos no controla ni garantiza la exactitud, relevancia, puntualidad o integridad de la información contenida en un sitio web de terceros o servicio y no tiene responsabilidad alguna por los contenidos y actividades de estos sitios web o servicios. Si hace clic en un enlace a un sitio web de terceros o servicio, se le deja los servicios y está sujeto a las políticas de privacidad y seguridad de los propietarios / patrocinadores del sitio web de terceros o servicio y no a esta Política de Privacidad. Kmimos no puede autorizar el uso de materiales con derechos de autor contenidos en los sitios web o servicios vinculados. Los usuarios deben solicitar la autorización del patrocinador del sitio web o servicio vinculado. Kmimos no es responsable de las transmisiones de los usuarios reciben de sitios web o servicios vinculados.</p>
-<h4>Prohibiciones</h4>
-<p>Kmimos no voluntariamente o intencionalmente enlazar a cualquier sitio web que exhibe el odio, prejuicio o discriminación. Kmimos se reserva el derecho a denegar o retirar cualquier enlace por cualquier razón. Nosotros buscamos proteger la integridad de nuestros servicios en todo momento y agradecemos cualquier comentario.</p>
-<h4>Exclusiones</h4>
-<p>Esta política de privacidad no se aplica a cualquier información personal recopilada por Kmimos que no sea información personal recopilada a través de los Servicios. Esta política de privacidad no se aplicará a cualquier información no solicitada que usted proporciona a Kmimos través de los Servicios a través de cualquier otro medio. Esto incluye, pero no se limita a, la información publicada en las áreas públicas de los servicios, tales como los comentarios, ideas para nuevos productos o servicios o modificaciones en los productos o servicios existentes y otras comunicaciones no solicitadas (colectivamente, "la información no solicitada") . Toda la información no solicitada se considerará como no confidencial y Kmimos será libre de reproducir, usar, revelar y distribuir la información no solicitada a otros sin limitación o atribución.</p>
-<h4>Cambios a nuestra Política de Privacidad</h4>
-<p>Podemos revisar esta Política de Privacidad de vez en cuando. Cuando hacemos cambios a esta Política de Privacidad, que se reflejan en esta página. Cualquier política de privacidad revisada se aplicará tanto a la información que ya tenemos sobre usted en el momento del cambio, y cualquier información generada o recibida después de que el cambio entre en vigencia. Le recomendamos encarecidamente que vuelva a leer periódicamente esta Política de Privacidad, para ver si ha habido algún cambio en nuestras políticas que pueden afectarle. El uso continuado de los Servicios después de cualquier cambio o revisión de esta Política de Privacidad deberá indicar su acuerdo con los términos de dicha Política de privacidad actualizada.</p>
-<p>Por lo consiguiente acepto la Política de Privacidad dispuesta en este documento.</p>
-<h3>
-Kmimos
+Valoramos todas las aportaciones de nuestros usuarios al Sitio, pero debemos
+ser claros que <b><i>Kmimos</i></b> podría utilizarlas en cualquier momento sin obligación
+de compensar al usuario por ello (del mismo modo que el usuario no tiene
+obligación de aportar).<o:p></o:p></span></p>
+
+<p>2.7 La Información que sea
+incluida en catálogos, directorios o cualquier otro instrumento análogo será
+únicamente aquella que permita establecer una adecuada relación entre
+compradores y proveedores o viceversa. <o:p></o:p></span></p>
+
+<p>2.8. La Información
+proporcionada por los Usuarios podrá ser utilizada por <b><i>Kmimos</i></b> para el logro de
+los fines del Sitio, incluso después de que haya concluido el uso por el
+Usuario, o la prestación de servicios por parte de <b><i>Kmimos</i></b>. <o:p></o:p></span></p>
+
+<p>2.9. El Usuario se compromete
+a hacer un uso diligente del registro (&quot;Registro&quot;) que le sea
+otorgado para hacer uso de los servicios ofrecidos en el Sitio. El Registro
+será otorgado discrecionalmente por <b><i>Kmimos</i></b> y se compondrá de dos partes:
+un nombre de identificación para efectos del Sitio (Nombre), y una contraseña
+confidencial (Contraseña) para poder ingresar a las páginas restringidas del
+Sitio, así como publicar información en el mismo. El Nombre y Contraseña serán
+elegidos por el Usuario; en caso de que el Nombre no esté disponible, el
+Usuario deberá elegir otro, hasta elegir uno disponible. Tanto el Nombre como
+la Contraseña respectiva son INTRANSFERIBLES, por lo que el Usuario será el
+único responsable del uso que se haga tanto de su nombre como de su Contraseña,
+y se compromete a responder incondicionalmente de cualquier obligación,
+responsabilidad o compromiso que resulten de, o se relacionen con, el uso de su
+Nombre y/o Contraseña. El Usuario será responsable de mantener en confidencialidad
+y a su vez será responsable absoluto por todas las actividades que ocurran bajo
+su nombre o Contraseña. En virtud de lo anterior el usuario deberá: (a)
+notificar inmediatamente a <b><i>Kmimos</i></b> de cualquier uso no
+autorizado de su nombre o Contraseña o de cualquier otra falla de seguridad, y
+(b) asegurarse de que su cuenta sea cerrada al final de cada sesión. <b><i>Kmimos</i></b>
+no será responsable por ninguna pérdida o daño que resulte como consecuencia de
+su incumplimiento a estas disposiciones. <o:p></o:p></span></p>
+
+<p>2.10. El Registro puede ser
+suspendido o cancelado por el Usuario o por <b><i>Kmimos</i></b> en cualquier
+tiempo, previa notificación a la otra parte y en el entendido de que hayan
+concluido todos los compromisos generados por la prestación del servicio. Sin
+perjuicio de lo anterior, <b><i>Kmimos</i></b> podrá cancelar
+unilateralmente el registro del Usuario. <o:p></o:p></span></p>
+
+<p><span>2.11.</span><span> <b><i>Kmimos</i></b> se reserva el derecho de prestación de los servicios
+ofrecidos en el Sitio. <b><i>Kmimos</i></b> no tiene control sobre la
+conducta de los usuarios, perros, dueños del perro, o cualesquiera otros
+usuarios del sitio o servicios proporcionados, y <b><i>Kmimos</i></b> quedará exento de toda
+responsabilidad al respecto.2.12. Cualquier persona que pretenda incluir en su
+sitio o portal un hipervínculo al Sitio, deberá cumplir con los siguientes
+requisitos:<o:p></o:p></span></p>
+
+<p>El hipervínculo sólo permitirá
+el acceso al Sitio, pero no podrá reproducir en forma alguna sus contenidos; <o:p></o:p></span></p>
+
+<p>No se harán declaraciones o
+manifestaciones falsas, inexactas o incorrectas sobre el Sitio, ni se dará a
+entender que <b><i>Kmimos</i></b> ha asumido de cualquier forma los contenidos o servicios
+que se hayan ofrecido en el sitio o portal en el que se encuentre el
+hipervínculo;<o:p></o:p></span></p>
+
+<p>El sitio o portal en el que se
+establezca el hipervínculo no contendrá ninguna marca, nombre comercial,
+denominación, logotipo, eslogan o cualquier otro signo distintivo respecto de
+los cuales <b><i>Kmimos</i></b> sea titular o tenga una licencia exclusiva de uso, con
+excepción del nombre de dominio que forme parte del hipervínculo o bien bajo
+autorización escrita de <b><i>Kmimos</i></b>. <br>
 <br>
-Términos de Servicio
+El sitio o portal en el que se establezca el hipervínculo no deberá tener
+contenidos ilícitos o que violen derechos de terceros;<o:p></o:p></span></p>
+
+<p>El hecho de que en un sitio o
+portal haya un hipervínculo al Sitio, no implica la existencia de relaciones de
+cualquier tipo entre <b><i>Kmimos</i></b> y el titular del sitio o
+portal que contenga el hipervínculo. <o:p></o:p></span></p>
+
+<p>2.13. El Sitio, a su vez,
+puede contener hipervínculos a otros sitios o portales. <b><i>Kmimos</i></b> no hace
+declaración alguna respecto de cualquier sitio o portal al que se pueda acceder
+desde este Sitio. <b><i>Kmimos</i></b> no tiene ningún tipo de relación con dichos sitios o
+portales y, por lo tanto, no se responsabiliza de los productos y/o servicios
+adquiridos en esos sitios o portales, ni tampoco se responsabiliza de su
+contenido. <o:p></o:p></span></p>
+
+<p>2.14. El Usuario será
+responsable de cualquier daño y/o perjuicio que <b><i>Kmimos</i></b> sufra como
+consecuencia del incumplimiento de los términos por parte del Usuario.<o:p></o:p></span></p>
+
+<p><span>2.15.</span><span> El Usuario será responsable de los servicios que ofrezca a través del
+sitio de <b><i>Kmimos</i></b>, así como de los bienes, inmuebles, u objetos propios o
+de algún tercer usuario que le haya contratado algún servicio. <b><i>Kmimos</i></b><span
+style='mso-bidi-font-weight:bold;mso-bidi-font-style:italic'> no es responsable
+ni está sujeto a pagar ninguna indemnización a los usuarios por los daños o
+perjuicios que se puedan generar a estos </span>bienes, inmuebles, u objetos.<o:p></o:p></span></p>
+
+<p><o:p>&nbsp;</o:p></span></p>
+
+<p><b><span>3.
+Garantías. <o:p></o:p></span></b></p>
+
+<p>3.1. Este Sitio y todos los
+datos, información, documentos, programas, materiales de mercadeo y
+declaraciones técnicas contenidas en el mismo, se proporcionan sin garantías de
+ningún tipo, tácitas o expresas, incluyendo sin limitación alguna, garantías de
+comerciabilidad o idoneidad para cualquier propósito. <o:p></o:p></span></p>
+
+<p>3.2. En el entendido de que <i>Kmimos proporciona un espacio virtual entre
+los distintos usuarios, <b>Kmimos</b></i>
+no se hace responsable del desarrollo y conclusión de las operaciones que se
+realicen en el Sitio ni de la documentación comprobatoria de éstas. De igual
+forma, <b><i>Kmimos</i></b> no responde de la calidad, cantidad o cualquiera otra
+característica de los productos y/o servicios ofertados en el Sitio ya que
+éstas son responsabilidad de los Usuarios. <o:p></o:p></span></p>
+
+<p>3.3. <b><i>Kmimos</i></b> no ha intervenido
+ni se hace responsable de ningún acuerdo o contrato celebrado entre los
+usuarios antes o después de hacer uso de los servicios ofrecidos en el Sitio.<o:p></o:p></span></p>
+
+<p><span>3.4.</span><span> <b><i>Kmimos</i></b> se encarga de poner en contacto a los distintos Usuarios
+del Sitio, pero de ninguna manera se hace responsable de los daños o perjuicios
+que se ocasionen por las operaciones realizadas en él o entre ellos, o por los
+daños o perjuicios que se ocasionen a los bienes, inmuebles, u objetos de
+alguno de los usuarios. <o:p></o:p></span></p>
+
+<p>3.5. <b><i>Kmimos</i></b> no garantiza la
+ausencia de virus en el Sitio, así como no se garantiza la ausencia de otros
+elementos que puedan producir alteraciones en el Software o Hardware del
+sistema informático del Usuario, o en los documentos electrónicos y ficheros
+almacenados en su sistema informático. <o:p></o:p></span></p>
+
+<p><br>
+<b><i>EL
+USUARIO EXPRESAMENTE COMPRENDE Y CONVIENE EN QUE:</i></b><br>
 <br>
-Última actualización: 08 de Abril del 2015
-</h3>
-<p>
-Kmimos, (en adelante denominado "Kmimos", "kmimos.mx", "kmimos.com.mx", "kmimos.la", "nosotros", "nos" o "nuestro") proporciona una plataforma en línea que conecta a los dueños de perros con amantes y/o dueños del perros que desean alojar perros en su hogar y / u ofrecer otros servicios relacionados con el perro a través de la página web kmimos.la (como plataforma en línea, junto con cualquier software, aplicaciones relacionadas o funcionalidad, y dicho sitio web, colectivamente, el "Sitio"). Al utilizar el Sitio, usted acepta cumplir y estar legalmente obligado por los términos y condiciones de estos Términos de Servicio ("Términos"), independientemente de si usted se convierte en un usuario registrado del sitio. Estas Condiciones regulan el acceso y uso del Sitio y todo el contenido (que se define más adelante), y constituyen un acuerdo legal vinculante entre usted y Kmimos. Si usted no está de acuerdo con estos términos, usted no tiene derecho a obtener información o de lo contrario continuar utilizando el Sitio y no debe utilizar el Sitio.
-</p>
-<p>El sitio está destinado únicamente a personas que tienen 18 años o más. Cualquier acceso o uso del Sitio por cualquier persona menor de 18 años está expresamente prohibido. Al acceder o utilizar el Sitio, usted representa y garantiza que usted tiene 18 años o más.</p>
-<p>El sitio incluye una plataforma en línea TRAVÉS QUE ACOGE (definido más adelante) PUEDEN CREAR EL LISTADO DE SERVICIOS DE CUIDADO PROPORCIONADO (definido más adelante) y clientes (definido más adelante) PUEDEN RESERVAR Y ENTENDER mas de los servicios que el CUIDADOR ofrezca. KMIMOS no es un asegurador ni ajustador de servicios de seguro veterinario, así mismo KMIMOS solo es el vínculo de comunicación para celebrar acuerdos entre el CUIDADOR y el CLIENTE. KMIMOS NO TIENE CONTROL SOBRE LA CONDUCTA DE LOS CLIENTES, CUIDADORES, PERROS, DUEÑOS DEL PERRO, O CUALESQUIERA OTROS USUARIOS DEL SITIO O SERVICIOS DE ESTADÍA-PROPORCIONADA Y KMIMOS RENUNCIA A TODA RESPONSABILIDAD AL RESPECTO. DISTINTOS APARTADOS DEL SITIO Y CONDICIONES AFECTAN CUIDADORES Y CLIENTES drente, así que por favor asegúrese de leer ATENTAMENTE ESTAS CONDICIONES.</p>
-<h4>Términos clave</h4>
-<p>"Contenido" significa el texto, gráficos, imágenes, música, software, audio, vídeo, información, documentos, recopilaciones, datos u otros materiales.</p>
-<p>"CUIDADOR" o “Cuidador" significa una persona que complete el proceso de registro de cuenta de Kmimos y crea un perfil a través del Sitio para brindar un servicio de cuidado de perros de clientes que reserven en el Sitio de Kmimos o kmimos.la</p>
-<p>"SERVICIOS DE CUIDADO PROPORCIONADO", los servicios relacionados con el perro proporcionados por los clientes.</p>
-<p>"SERVICIOS DE ESTADÍA-PROPORCIONADA", los servicios relacionados de estadía, estadía, reservación u hospedaje de mascotas a cargo de un cuidador registrado en Kmimos.</p>
-<p>" LISTADO DE SERVICIOS DE CUIDADO PROPORCIONADO", refiere a todos los servicios que un cuidador puede ofrecer a los amantes o dueños de perros para beneficio de su mascota en su estadía  fuera de ella, en donde Kmimos solo es intermediario de la comunicación pero no es responsable de estos servicios.</p>
-<p>"PROVEEDORES tercero", tercera parte representante de marcas, contratistas, distribuidores, comerciantes o patrocinadores de Kmimos.</p>
-<p>"CLIENTE"  significa una persona que esta interesa en dejar a su perro a cargo de un cuidador por el tiempo estipulado por la misma persona y que esta sujeto a los requerimientos y registros que Kmimos requiere para continuar con la reservación. Si alguno de los requerimientos no se ven completados Kmimos se reserva el derecho a negar la reservación. De igual manera, es cualquier persona que entre al Sitio y este interesada en el servicio pero no haga ninguna reservación.</p>
-<h4>I.  Acceso y Cumplimiento</h4>
-<p>Al acceder al Sitio, usted acepta que quedará vinculado por los términos de todas las leyes y regulaciones aplicables y que usted manifiesta y garantiza que tiene el derecho legal de hacerlo y está cumpliendo con todas las leyes y regulaciones aplicables en la jurisdicción donde usted reside. Usted acepta que podemos modificar este Acuerdo y las modificaciones entrarán en vigor inmediatamente después de su publicación. Usted acepta revisar estos Términos cada vez que utilice el Sitio para estar al tanto de las modificaciones. Acceso o uso del Sitio Continuación Se considerará una prueba concluyente de su aceptación del acuerdo modificado.</p>
-<h4>II. Cómo funciona el sitio</h4>
-<p>El sitio se puede utilizar para facilitar la cotización y reserva el servicio de un Cuidador. Los servicios de los Cuidadores se incluyen en el listado de cuidadores del sitio. Usted puede ver el listado de servicios como un visitante no registrado en el Sitio; Sin embargo, si desea reservar cualquiera de los Servicios de algún Cuidador deberá llenar los datos correspondientes en la parte reservación y acceder a compartir sus datos con el o los Representantes de reservación de Kmimos. De ser el caso para ser un Cuidador, primero debe registrarse para crear una cuenta y posteriormente pasar por el procesos que se a diseñado por Kmimos para certificar a los Cuidadores. Este proceso esta sujeto a cambios y actualización según la necesidad que Kmimos determine.</p>
-<p>Como se indicó anteriormente, Kmimos hace una plataforma o mercado disponible con la tecnología relacionada para los clientes y sus cuidadores a conocerse en línea y los arreglos para la reserva de un Cuidador. Kmimos no ofrece servicios relacionados con el perro. Las responsabilidades de Kmimos se limitan a: (i) facilitar la disponibilidad del Sitio y (ii) que sirve como agente limitado de cada cuidador con el propósito de aceptar pagos de los Clientes en nombre del Cuidador en el que el caso lo amerite.</p>
-<p>KMIMOS NO ES RESPONSABLE DE Y NIEGA TODA RESPONSABILIDAD RELACIONADA CON TODAS Y TODOS LOS CUIDADORES Y SERVICIOS DE CUIDADO PROPORCIONADO. POR CONSIGUIENTE, CUALQUIER RESERVA DE SERVICIOS DE CUIDADO-PROPORCIONADO SE HARÁN EN RIESGO PROPIO DE CADA CLIENTE.</p>
-<h4>III.  Registro</h4>
-<p>Con el fin de ser un cuidador o cliente, se le pide que se registre con Kmimos. Si decide registrarse como Cuidador, usted se compromete a proporcionar y mantener información veraz, precisa, actualizada y completa sobre usted según lo solicitado por el proceso de registro del Cuidador. Datos de registro y cierta otra información sobre usted se rigen por nuestra política de privacidad. Si alguno de sus datos de registro es inexacta, incompleta o no actualizada, podremos finalizar su cuenta inmediatamente. Podemos rechazar una solicitud de registro si determinamos a nuestra sola discreción, que el solicitante no es un huésped adecuado o Cuidador que pueda proporcionar el Servicio de cuidado a mascotas. No tenemos ninguna obligación de revelar la razón de nuestra decisión de rechazar una solicitud. Usted no puede registrarse en el servicio si es menor de 18 años de edad.</p>
-<h4>IV. Servicio de Cuidado o listado de servicios de cuidado proporcionado</h4>
-<p>Como cuidador de la mascota "Cuidadores", puede crear una descripción de los servicios. Con este fin, se le pedirá una serie de preguntas acerca de los servicios de cuidado proporcionado, incluyendo, pero no limitado a, el lugar y las mascotas (si procede), el tipo y la disponibilidad de los servicios de cuidado-disponibles, la fijación de precios y relacionados con las reglas y las condiciones financieras. El repertorio que va a poner a disposición del público a través del Sitio. Otros clientes podrán reservar sus servicios como CUIDADOR a través del sitio en base a la información proporcionada en su perfil. Usted entiende y acepta que una vez que se asigna el precio de este tipo de servicio de cuidado proporcionado no puede ser alterado. Kmimos se reserva el derecho, en cualquier momento y sin previo aviso, para quitar o deshabilitar el acceso a cualquier perfil por cualquier razón, a su sola discreción, considere objetable por cualquier motivo, en violación de estas Condiciones o de otra manera perjudicial para el sitio.</p>
-<p>Usted reconoce y acepta que, como cuidador, usted es responsable por cualquier y todos los objetos que publique. En consecuencia, usted representa y garantiza que cualquier anuncio que publique y de la prestación de cualquier servicio de estadía que proporcionen en un perfil que publique (i) no violar los acuerdos que ha firmado con ningún tercero y (ii) (a) ser en cumplimiento con todas las leyes aplicables, incluyendo, pero no limitado a, las leyes que rigen el tratamiento de los animales y cualquier permisos o licencias de los requisitos federales, estatales o locales, y (b) no entrar en conflicto con los derechos de terceros.</p>
-<p>Cada Cuidador ES EL ÚNICO RESPONSABLE DE OBTENER TODOS LOS PERMISOS, LICENCIAS Y OTROS permisos necesarios para ofrecer o facilitar los servicios del transporte de perros u otros servicios de Cuidador Y KMIMOS NO ASUME NINGUNA RESPONSABILIDAD POR FALTA DE UN CUIDADOR para obtener permisos TALES, LICENCIAS O PERMISOS O DE OTRA MANERA CUMPLIR CON cualquier ley, regla o reglamento.</p>
-<p>Además, usted como cuidador también reconoce y acepta que ni Kmimos ni propietario (s) de un perro de los clientes tienen ninguna responsabilidad de reembolsar o cubrir cualquier daño material que puede ser causada por un perro de los clientes de otro modo, y por la presente que no está de acuerdo buscar cualquier reembolso u otros daños de Kmimos o propietario (s) de un perro de clientes en el caso de cualquier daño a la propiedad.</p>
-<h4>V.  Proceso de Certificación y registro como Cuidador</h4>
-<p>Kmimos se limita a reservarse el derecho a definir, actualizar o modificar el proceso de certificación según sean las necesidades que Kmimos manifieste. De igual forma el cuidador deberá aprobar este proceso para que su perfil este dado de alta exitosamente. Por lo que Kmimos notificara y se pondrá en contacto con un plazo de 72 horas a partir de que el interesado a ser cuidador decida iniciar su tramite como registro y cuidador certificado.</p>
-<p>
-De igual manera, si Kmimos ve necesario la actualización de los cuidadores, Kmimos deberá notificar a los CUIDADORES de esta actualización para que procedan a llevar acabo el proceso correspondiente en un plazo de 14 días naturales. De lo contrario se bloqueara el registro del sistema bajo el concepto de "FALTA DE ACTUALIZACION" en el que se podrá volver a activar una vez llevada la re-certificación.
-</p>
-<h4>VI. No aprobación</h4>
-<p>Al utilizar el Sitio, usted acepta que cualquier recurso legal o responsabilidad que busque obtener por acciones u omisiones de otros clientes o terceros estarán limitados a una reclamación contra los clientes particulares u otras terceras partes que causaron que el daño (o cuyo perro le causó daño) y que se compromete a no intentar imponer responsabilidad, o recurrir a los recursos legales de Kmimos con respecto a tales acciones u omisiones. De acuerdo con ello, los animamos a comunicarse directamente con otros clientes en el sitio con respecto a cualquier solicitud de Cuidador.</p>
-<p>Kmimos sirve como el agente autorizado limitado de los cuidadores a fin de aceptar pagos de los Clientes en nombre de los Cuidadores y se encarga de transmitir dichos pagos al Cuidador. Usted reconoce y acepta que, como cuidador, usted es responsable de sus propios actos y omisiones.</p>
-<p>Usted entiende y acepta que Kmimos no actúa como asegurador o como agente de contratación de seguros para usted como anfitrión o cliente. Si un miembro compra cualquiera de sus SERVICIOS DE ESTADÍA O ESTADÍA, cualquier acuerdo entre el cuidador y usted, y Kmimos no es parte en el mismo, Kmimos no se hace responsable de los daños o perjuicios que este acuerdo genere. No obstante lo anterior, Kmimos sirve como el agente autorizado limitado de los Cuidadores, a fin de aceptar pagos de los Cuidadores en nombre del Servicio de Estadía y se encarga de transmitir dichos pagos al Cuidador. Usted reconoce y acepta que, como Cuidador, usted es responsable de sus propios actos y omisiones.</p>
-<p>Si usted, como cliente, haga una reserva de un servicio de cuidado proporcionado y no puede recoger a su perro dentro de los siete (7) días (o el período de tiempo establecido en las leyes de abandono de los animales o la crueldad de la jurisdicción aplicable, si es anterior) después del final fecha de su reserva, usted acepta que Kmimos puede (pero no tiene obligación), a su sola discreción, poner a su perro en hogares de adopción y notificar a las autoridades. Usted acepta que usted será responsable y reembolsará Kmimos todos los costos y gastos de dicha acción, y usted acepta que no podrá estar sujeta a las leyes vigentes que pueden regir su fracaso para recuperar a su perro, incluyendo todo el abandono de animales aplicable o la crueldad leyes.</p>
-<h4>VII.  Información sobre el sitio web</h4>
-<p>Aunque Kmimos intenta mantener la integridad y exactitud de la información en el Sitio, no hacemos ninguna garantía en cuanto a su exactitud, integridad o veracidad. El Sitio puede contener errores tipográficos, inexactitudes u otros errores u omisiones. Así mismo, las adiciones no autorizadas, supresiones o modificaciones podrían hacerse al Sitio por terceros sin nuestro conocimiento o consentimiento. Si usted cree que la información contenida en el sitio es incorrecto o no autorizado, por favor infórmenos comunicándose con nosotros a través de la información proporcionada en el enlace "Contáctenos".</p>
-VIII. Tu información, fotos y videos
-<p>"Su Información" se define como cualquier información y materiales, incluyendo, sin limitación, fotografías, videos, entrevistas o información que usted proporciona a Kmimos u otros usuarios en relación con su registro y el uso de los Servicios. Usted es el único responsable de su información, y que actúa simplemente como un conducto pasivo para la distribución y publicación en línea de su información. Únicamente para permitir Kmimos utilizar su información, por lo que no estamos violando ningún derecho que pueda tener en esa información, este medio nos concede una licencia no exclusiva, mundial, perpetua, irrevocable, libre de regalías, sublicenciable (a través de múltiples niveles) derecho a ejercer todos los derechos de autor, derechos de publicidad, y cualquier otro derecho que usted tiene en su información, en cualquier medio conocido o no conocido actualmente. Kmimos tendrá discreción completa en la forma en que elige mostrar o usar su información en relación con el Sitio, sujeto a las restricciones establecidas en nuestra Política de Privacidad.</p>
-<p>
-Como parte del Sitio, Kmimos ocasionalmente comparte actualizaciones de fotos de perros de clientes  siendo cuidados por Cuidadores, con los usuarios del sitio y el público. Usted acepta que Kmimos puede, a su discreción, publicar estas fotos en el sitio ya través de los medios sociales como Facebook, Twitter, Pinterest, y sitios similares. Los cuidadores de proporcionar actualizaciones de fotos periódicas a los clientes y Kmimos a través de mensaje de texto o correo electrónico o mensajes por algún otro medio.
-</p>
-<p>Usted declara y garantiza a Kmimos que su información (a) no será falsa, inexacta, incompleta o engañosa; (B) no será fraudulenta o involucrar a la venta de artículos falsificados o robados; (C) no infringe los derechos de autor, patentes, marcas, secretos comerciales de terceros o cualquier otro derecho o derechos de publicidad o privacidad de propiedad; (D) no violará ninguna ley, estatuto, ordenanza o reglamento (incluyendo sin limitación, las que rigen el control de las exportaciones, la protección del consumidor, la competencia desleal, antidiscriminación o la publicidad engañosa); (E) no será difamatorio, calumnioso, ilegal amenazar o acosar ilegalmente; (F) No será obsceno o contienen pornografía infantil o ser perjudicial para los menores; (G) no contiene ningún virus, caballos de Troya, gusanos, bombas de tiempo, u otras rutinas de programación informática que tengan por objeto perjudicar, interferir perjudicialmente, interceptar subrepticiamente o expropiar cualquier sistema, datos o información personal; y (h) no creará responsabilidad por Kmimos o causar Kmimos perder (en su totalidad o en parte) los servicios de sus socios o proveedores.</p>
-<h4>IX. Cuidador con Seguro veterinario</h4>
-<p>Sujeto a las limitaciones, en la medida permitida por la ley aplicable en su jurisdicción, Kmimos se reserva el derecho de modificar o cancelar la póliza de seguro, en cualquier momento, a su sola discreción y sin previo aviso. Si Kmimos termina la póliza de seguro de conformidad con lo anterior, Kmimos le proporcionará la notificación de dicha resolución y Kmimos continuará procesando reclamaciones en virtud de la póliza de seguro presentada antes de la fecha efectiva de terminación. Si Kmimos modifica la Póliza de Seguro, publicaremos las modificaciones en el Sitio o llegar una notificación de la modificación y Kmimos a seguir para procesar todas las solicitudes presentadas con anterioridad a la fecha de vigencia de la modificación. Al continuar accediendo o usar el sitio como cuidador después de haber publicado una modificación en el Sitio o le proporcionamos un aviso de modificación, usted está indicando que usted acepta que quedará vinculado por la póliza de seguro modificado. Si la póliza de seguro modificado no es aceptable para usted, su único recurso es dejar de utilizar el sitio como cuidador. Obligaciones de Kmimos bajo la póliza de seguro están supeditadas a la disponibilidad de fondos del seguro bajo la póliza de seguro.</p>
-<p>Además, sin limitar las otras limitaciones, exclusiones y condiciones de la póliza de seguro, usted reconoce y acepta que todos los derechos o beneficios relacionados con la póliza de seguro (o no devengados), y todos los reclamos hechos por usted en relación con la misma , terminará automáticamente si en cualquier instituto tiempo cualquier reclamación, demanda, procedimiento u otra acción contra Kmimos o cualquier Exonerados.</p>
-<p>Tenga en cuenta que, sin limitación, la póliza de seguro no cubre los problemas que puedan surgir con respecto a los perros con condiciones pre-existentes o de cualquiera de las siguientes condiciones:</p>
-<p>Si una mascota o ha tenido alguna afección, ya sea diagnosticado por su veterinario o no, antes de llegar con alguno de los servicios de Kmimos, se considera pre-existente. Esto puede incluir: infecciones respiratorias, del tracto urinario / infecciones de la vejiga, trastornos de la sangre, vómitos, diarrea y otros trastornos gastrointestinales.</p>
-<p>Si una mascota ha sido diagnosticado con una enfermedad de un área anatómica donde la causa subyacente fue indeterminado cualquier diagnóstico de la misma zona no estarían cubiertos. Por ejemplo, gastritis y colitis son ambos diagnósticos generales de la inflamación, pero no llegan a la causa del trastorno.</p>
-<p>Si su  perro ha tenido alguna de las siguientes condiciones antes de ir en un servicio de Kmimos nuestra cobertura del seguro no será de aplicación:</p>
-<p>Cualquier condición ortopédica incluyendo pero no limitado a rótulas luxantes, la displasia de cadera, displasia de codo, y el TOC, enfermedades ortopédicas o lesiones en el lado opuesto de una lesión previa, alergias, cáncer, diabetes, lipomas o tumores de la piel, el hipertiroidismo o hipotiroidismo, urinario o cristales de la vejiga o la obstrucción, otras condiciones crónicas.</p>
-<p>Condiciones específicas de la raza: Una condición genética es causada por un defecto en los genes subyacentes que se transmiten a un perrito o un gatito de sus padres. Estos defectos genéticos se ejecutan en las familias y algunas razas tienen muchos más de ellos que otras razas, por lo tanto, la condición específica de la raza plazo.</p>
-<p>El tratamiento para muchas condiciones específicas de la raza requiere una cirugía correctiva y algunos son también condiciones crónicas que requieren atención continua. Entre las enfermedades más comunes de razas específicas son: displasia de cadera y codo (común en los pastores alemanes, Golden Retriever, Labrador Retriever, el Gran Danés y otros perros de razas grandes / gigantes), luxación de la rótula (común en los caniches, Yorkshire Terriers, Pomeranians chihuahuas, , Boston Terriers, Cavalier King Charles y otros temas del disco juguete / perros de razas pequeñas), la enfermedad de disco interverterbral (IVDD) espinal (roto, hernia) (común en Dachshunds, Bassett Hounds, dogos franceses, Pomeranians, corgis, barros y otras razas acondroplásicas ), cáncer, alergias.</p>
-<p>Las condiciones crónicas: Las condiciones crónicas persisten o durar varios meses (a menudo durante años). Por lo general, no se pueden prevenir con vacunas o curarse con medicamentos, ni tampoco simplemente desaparecen. Condiciones comunes incluyen: alergias, el cáncer, la diabetes, la EII (enfermedad inflamatoria intestinal), enfermedad de Addison, enfermedad de Cushing, ojos secos (KCS), epilepsia, glaucoma, hipotiroidismo, problemas ortopédicos, como artritis, IVDD y desgarros del ligamento cruzado. El tratamiento no médico relacionado (formación profesional, etc.) no es elegible para la cobertura.</p>
-<p>Es la responsabilidad del cuidador y de clientes determinar si su perro tiene alguna de las condiciones anteriores, y Kmimos no tendrá ningún tipo de responsabilidad por cualquier problema que pueda surgir de las condiciones anteriores. Si se requiere cualquier tipo de atención médica que debe proporcionarse a los perros de los clientes y tal atención está cubierta por la póliza de seguro, el cliente o cuidador, en su caso, será responsable de pagar el deducible aplicable. Si usted cree que cualquier incidente está cubierto por la póliza de seguro, debe proporcionarnos una notificación por escrito del incidente y su creencia de que está cubierto por la póliza de seguro, junto con toda la documentación de los materiales disponibles para usted acredite lo anterior (por ejemplo, facturas y veterinaria (DVM) notas del examen veterinario inicial), dentro de los treinta (30) días después de la fecha de finalización de la correspondiente del servicio de cuidado.</p>
-<p>X. Para Situaciones de Emergencia Médica Involucrar perro de un Cliente:</p>
-<p>Los clientes deben asegurarse de que el cuidador se proporciona información de contacto para llegar al cliente en caso de una situación de emergencia médica se plantea la participación de un perro de clientes. Los clientes y los ejércitos reconocen y aceptan que, en la medida de surgir una situación en la que se requiere perro del cliente para recibir atención veterinaria de emergencia, mientras que en el cuidado o la custodia del cuidador, el cuidador hará los esfuerzos razonables para comunicarse con el cliente y le notifiquen de la situación. En el caso de que el cuidador notifica Kmimos de la situación, el cuidador debe contactar a Kmimos al 5534-550138 y Kmimos hará esfuerzos razonables durante el horario normal de Kmimos para contactar al Cliente para notificarles de la situación. Si el Cliente no se puede llegar después de un esfuerzo razonable, cliente autorice cuidador y Kmimos para autorizar la atención en su nombre / el fin de tratar con prontitud el perro de cliente. Clientes reconocen y aceptan que los costos de cualquier tratamiento para situaciones de emergencia médica es la única y exclusiva responsabilidad del socio y tarjeta de crédito de ese Cliente pueda ser facturado por cualquier cantidad a reembolsar gastos efectuados por el cuidador o Kmimos asistente al mismo. En ciertas circunstancias, clientes podrán solicitar el reembolso de estos gastos o una parte del mismo a través de la póliza de seguro. Información adicional sobre estos planes se puede encontrar en nuestra página de información del seguro. La determinación de lo que constituye una situación médica de emergencia en relación con la póliza de seguro es a discreción única y exclusiva de nuestros suscriptores. Para mayor claridad, Kmimos no está actuando como una compañía de seguros con respecto a la póliza de seguro.</p>
-<h4>XI. Cuidados generales de la mascota</h4>
-<p>El CUIDADOR se compromete a mantener a los perros de los clientes bajo un ambiente de una residencia, casa o habitación según sea el caso y no en una perrera o transportadora, o corral . Por lo que las mascota se mantendrá bajo el cuidado y revisión de el CUIDADOR todo el tiempo, si así mismo el cuidador sede los derechos a un tercer ajeno a Kmimos, el cuidador es responsable de estas acciones así como de los daños o perjuicios que tenga la mascota del cliente que es determinada como una propiedad activa.</p>
-<p>El CUIDADOR deberá mantener un continuo vinculo de comunicación con Kmimos al respecto del estado de la mascota, así como la captura de evidencia fotográfica o de video diaria del estado de la mascota, que a su vez se compartirá con Kmimos quien podrá hacer uso de este material para compartir al cliente o uso pasivo de la información. El envió por parte del CUIDADOR deberá de ser en un horario de 01:00hrs a 20:00 horas  tiempo de Ciudad de México del día en transito y será evidencia recopilada actual a ese periodo de tiempo que se estipula.</p>
-<p>El CUIDADOR se compromete a notificar cualquier enfermedad o condición poco saludable a Kmimos para proceder con el tratamiento adecuado que dicta el apartado de Póliza de Segura (definido posteriormente) Si por alguna circunstancia no aplica la Póliza de seguro según la estipulación anterior, se le notificara al cliente para proceder con las instrucciones que nos manifieste, sin embargo Kmimos y el cuidador no se hacen responsables de enfermedades previamente adquiridas  de igual .</p>
-<h4>XII.  Para Situaciones de pulgas Involucrar perro de un Cliente:</h4>
-<p>Es responsabilidad de cada cliente que es cuidado y tienen sus / sus mascotas al día en una forma de control de pulgas. Tanto los clientes como cuidadores reconocen y aceptan que, en la medida de surgir una situación en la que o bien introduce la mascota del Cliente o pulgas, el guardián de dicha mascota se hace responsable de todos los costos asociados con las pulgas y / o prevención de la pulga. Es responsabilidad de todos los Clientes de revelar cualquier conocimiento de los problemas de pulgas asociados a sus mascotas a todos los Cuidadores antes de efectuar cualquier servicio.</p>
-<h4>XIII. Términos financieros</h4>
-<p>Kmimos, a través de su red propia de cuidadores, se encarga de la prestación de los Servicios de estadía-proporcionada a los clientes, incluyendo, pero no limitado a transportación de perros, guardería para perros, corte de pelo de los perros y los servicios relacionados a la comodidad de las mascotas en las residencias privadas de los cuidadores. Como cuidador, puede crear un listado de servicio, y se le pedirá información detallada sobre el servicio y las mascotas (si procede) a que recibirán este servicio. Usted como cuidador puede establecer el precio y los términos de sus servicios dentro de los parámetros permitidos por el Sitio, sin embargo Kmimos se reserva el derecho de cancelar cualquier reserva que no cumpla con nuestros estándares de servicios o tarifas mínimas, según lo determinado en nuestra única discreción. En el caso de que Kmimos hace cancelar una reserva, por estas razones, el cliente recibirá un reembolso completo, incluyendo las tarifas de servicio. En cuanto a kmimos.com.mx , cobrara una tarifa de servicio del 20% para cubrir los costos de procesamiento de pagos y la administración del sitio sobre todas las operaciones y  transacciones generadas en la plataforma o servicio de atención para la contratación de servicios. Como cuidador, que contractualmente de acuerdo en que la primera y todas las futuras reservas con un cliente desde Kmimos se pueden reservar a través del Sitio o llamando al número de teléfono . El incumplimiento de esta política puede resultar en la suspensión dela cuenta en el  Sitio.</p>
-<p>Cada cuidador presente designa Kmimos como agente limitado del cuidador con el único fin de recoger los pagos realizados por los Clientes en nombre del cuidador. Cada cuidador esta de acuerdo en que el pago hecho por un Cliente a Kmimos se considerará como lo mismo que un pago hecho directamente en la el cuidador que esta dando los servicios de estadía u otros previamente contratados únicamente por la plataforma de www.kmimos.com.mx . Cada cuidador esta de acuerdo en que, Kmimos podrá, de conformidad con las condiciones de cancelación seleccionado por el cuidador y se refleja en el perfil relevante, (i) permitir que el cliente cancele la reserva y (ii) el reembolso al Cuidador de que parte de los honorarios especificados en las condiciones de cancelación aplicable. Al aceptar el nombramiento como agente autorizado limitado de la estadía, Kmimos asume ninguna responsabilidad por los actos u omisiones de la estadía.</p>
-<h4>XIV.  Cancelaciones y devoluciones</h4>
-<p>Como cliente, se le da la flexibilidad de elegir entre anuncios con drentes políticas de cancelación, a saber: (a) Flexible - reembolso del 100% con la cancelación de al menos 4 días antes de la fecha de entrega programada mascota, y 50% de reembolso en caso de cancelación después de esto; (B) Moderado - reembolso del 100% con la cancelación al menos 7 días antes de la fecha de entrega programada mascota, y 50% de reembolso si la cancelación se produce después de que; o (c) Estricta - Ningún reembolso después de la reserva, salvo en los casos determinados por Kmimos en circunstancias inusuales. Cancelación bajo una política flexible de cancelación o moderado debe hacerse antes de las 11:59, hora del Pacífico con el fin de calificar para haber ocurrido en un día particular. En el caso de que usted, como cliente de reserva, hay que cambiar las fechas de una reserva ya reservado a través Kmimos, estará sujeta a la política de cancelación seleccionado del cuidador por los días cancelados. Cada cliente acepta que quedará vinculado por la opción seleccionada por Cuidador y acordado como parte del proceso de reserva. Además, independientemente de la política de cancelación del cuidador o cuando se cancela una reserva, Kmimos puede cobrar una tasa de cancelación (determinado a nuestra discreción) que será presentado al Cliente durante el proceso de reserva.</p>
-<p>Después de una reserva por primera vez entre los clientes y cuidador, según su propio criterio, los arreglos para una reunión en directo para introducir perro para los clientes sobre el lugar y las mascotas. Si el resultado de esta reunión es la determinación de que una estancia de cuidado perro u otro servicio de Cuidador proporcionado no sería en el mejor interés de los animales de compañía, cualquiera de las partes puede cancelar la reserva y todo el dinero será reembolsado con la reserva cliente.</p>
-<h4>XV. El uso del sitio</h4>
-<p>Cualquier información personal que usted envíe al Sitio se rige por la política de privacidad. Esta política de privacidad abarca toda la información que usted pueda suministrar al Sitio, ya sea para fines de registrarse en el sitio como un Cuidador o cliente o para recibir información adicional, actualizaciones y promociones sobre o en relación con el Sitio. En consideración de tener permiso para utilizar el Sitio, usted acepta que las siguientes acciones constituyen una violación del contenido de las presentes Condiciones:</p>
-<p>
-La recopilación de información sobre el sitio o los usuarios del sitio sin el consentimiento por escrito de Kmimos;
-La modificación, el encuadre, lo que hace (o re-representación), lo que refleja, truncando, inyectar, filtrado o cambiar cualquier contenido o información contenida en el Sitio, sin el consentimiento por escrito de Kmimos;
-El uso de cualquier enlace profundo, página-raspa, robot, gatear, index, spider, haga clic en el spam, programas macro, agente de Internet, u otro dispositivo, programa, algoritmo o metodología que hace las mismas cosas, por usar automática, acceder, copiar, adquirir información, generar impresiones o clics, información de entrada, almacenar información, buscar, generar búsquedas, o monitorear el Sitio o cualquier parte o contenido de los mismos; El acceso o uso del sitio con fines comerciales o de competencia; Encubrir el origen de la información transmitida hacia, desde o/a través del Sitio; Hacerse pasar por otra persona o entidad; Distribuir virus u otros códigos informáticos dañinos; Permitir que cualquier otra persona o entidad a la que suplantar a acceder, usar o registrarse en el sitio; Utilizando el sitio para cualquier propósito en violación de, estatales, nacionales e internacionales, las leyes locales, incluyendo pero no limitado a, cualquier uso no autorizado de cualquier contenido o información contenida en el Sitio puede violar las leyes de derechos de autor, las marcas comerciales, las leyes de privacidad y publicidad, y / o los reglamentos y estatutos de comunicaciones; Utilizando el sitio de una manera que se pretende hacer daño, o que una persona razonable entendería probablemente resultaría en un daño, al usuario o a otras personas; Recibir una o críticas más negativas previstas para Kmimos los Clientes o no clientes; Actualizar un perfil público con información de contacto errónea o eliminar la información de contacto; El no poder responder a los mensajes / consultas de otros Clientes Kmimos o no responder a los mensajes / consultas de otros Clientes Kmimos dentro de una manera oportuna, que se determinará a la entera discreción de Kmimos; Comportarse o actuar de cualquier manera que crea una experiencia negativa para un cliente Kmimos, que se determinará a la sola discreción de Kmimos; Comportarse o actuar de cualquier manera que demuestra una falta de cortesía o profesionalidad con cualquier Kmimos cliente del personal que pueda causar alguna dificultad proporcionar el mejor servicio posible al cliente para un cliente Kmimos, que se determinará a la sola discreción de Kmimos; Sorteando las medidas aplicadas por nosotros destinada a prevenir violaciones de los Términos;
-</p>
-<p>Kmimos se reserva expresamente el derecho, a su sola discreción, de cancelar el acceso de un usuario a cualquiera de los servicios interactivos y / o a cualquiera o todas las demás áreas del sitio debido a cualquier acto que constituya una violación de los Términos. Además de violar las condiciones, ninguna de las acciones anteriores de su parte o en nombre de cualquier entidad está empleado o no actuar como un agente para el que constituye el acceso intencionado, sin autorización de un ordenador protegido, puede constituir una violación de la ley estatal y federal , y puede potencialmente sujetos a usted ya cualquier partes afiliadas a la responsabilidad civil y enjuiciamiento penal.</p>
-<p>Kmimos también se reserva expresamente el derecho, a su sola discreción, de cancelar el acceso de un usuario a cualquiera de los servicios interactivos y / o a cualquiera o todas las demás áreas del sitio debido a una o críticas más negativas proporcionan a Kmimos todos los clientes y no clientes. Estas revisiones son típicamente, pero no están obligados a ser, asociado a un servicio en Cuidador proporcionados por un Cuidador a través Kmimos.</p>
-<p>Usted reconoce que Kmimos no contenido pre-pantalla subido por los usuarios (incluyendo comentarios), pero que Kmimos y sus designados tendrán el derecho (pero no la obligación) a su entera discreción, de rechazar o eliminar cualquier contenido que está disponible a través del Sitio . Sin perjuicio de lo anterior, la empresa y sus designados tendrán el derecho de eliminar cualquier revisión u otro contenido que viole estos Términos o se entienda por Kmimos, a su sola discreción, a ser de otra manera objetable, incluyendo cualquier comentarios que violen cualquiera de las siguientes pautas :</p>
-<ol>
-<li>Comentarios no relacionados con la propia Reserva (por ejemplo, religioso, político o comentario social).</li>
-<li>Comentarios que no son representativos de la propia experiencia personal del Cliente.</li>
-<li>Opiniones en las que el contenido autorizare y promueve la actividad o la violencia ilegal o perjudicial.</li>
-<li>Opiniones en las que el contenido es profano, discriminatorio, o vulgar.</li>
-<li>Opiniones en las que el contenido infringe la privacidad de otra persona, como por ejemplo la publicación de nombre completo de la persona, número de teléfono, dirección, u otra información de identificación.</li>
-<li>Opiniones en las que el contenido se refiere a una investigación Kmimos.</li>
-<li>Opiniones en las que ha sido demostrada, el contenido que se utilizarán como extorsión.</li>
-</ol>
-<p>Con respecto a los exámenes, contenido u otro material que subas a través del Sitio o comparta con otros usuarios o destinatarios (colectivamente, "Contenido de Usuario"), usted representa y garantiza que posee todos los derechos, títulos e intereses sobre y para dicho Contenido de Usuario , incluyendo, sin limitación, todos los derechos de autor y derechos de publicidad contenidas en él. Al cargar cualquier  Contenido de Usuario usted otorga y otorgará Kmimos y sus empresas afiliadas una licencia mundial, libre de regalías, totalmente desembolsadas, intransferible, licencia perpetua, no exclusiva, irrevocable para copiar, mostrar, cargar, ejecutar, distribuir, almacenar, modificar y de otra manera utilizar su contenido de usuario en relación con la operación del Sitio o la promoción, la publicidad o la comercialización de los mismos, en cualquier forma, medio o tecnología conocida ahora o desarrollada más tarde.</p>
-<p>Es su obligación de cumplir con todas las leyes estatales, federales e internacionales aplicables. También es su obligación de cumplir con todas las leyes fiscales aplicables y regulaciones que se aplican a su actividad en el Sitio. Usted es responsable de mantener la confidencialidad de su información de cuenta y contraseña y de restringir el acceso a dicha información y al ordenador. Usted se compromete a aceptar la responsabilidad de todas las actividades que ocurran bajo su cuenta o contraseña.</p>
-<h3>XVI.  Contacto de Emergencia</h3>
-<p>Clientes reconocen y aceptan que Kmimos hará los esfuerzos razonables para comunicarse con el cliente en caso surge una situación que requiere o puede requerir el consentimiento del cliente. En caso Kmimos no puede alcanzar el cliente después de un esfuerzo razonable, proporcionado Contacto de Emergencia del Cliente (s) está autorizada a actuar en nombre del perro de invitados.</p>
-<h3>XVII. Los enlaces a sitios web de terceros</h3>
-<p>El Sitio puede contener enlaces o tiene referencias a sitios web controlados por terceros ajenos a Kmimos. Kmimos no se hace responsable y no aprueba ni acepta ninguna responsabilidad por el contenido o uso de estos sitios web de terceros. Kmimos provee estos vínculos solamente para su conveniencia, y la inclusión de estos vínculos no implica o no constituye una aprobación por Kmimos del sitio web vinculado y / o de los contenidos y materiales que se encuentran en el sitio web vinculado, salvo que expresamente se establezca lo contrario Kmimos. Es su responsabilidad tomar precauciones para asegurarse de que lo que seleccione para su uso esté libre de virus u otros elementos de carácter intrusivo.</p>
-<h3>XVIII.  Limitación de Responsabilidad y Divulgación</h3>
-<p>Al estar de acuerdo para servir como cuidador o proporcionar otros servicios de Cuidador que se haya transmitido a un cliente, usted asume expresamente el riesgo de cualquier daño, incluyendo daños a la propiedad o lesiones personales, que usted o cualquier otra persona presente en su residencia pueda sufrir. Es de la exclusiva responsabilidad de los ejércitos para tomar decisiones que son en el mejor interés de ellos y sus animales domésticos.</p>
-<p>Si está de acuerdo para servir como cuidador (incluyendo, sin limitación, si usted tiene hijos menores de 18 años en su casa), usted acepta y reconoce de la siguiente manera:</p>
-<p>Usted acepta que es usted y su niños / niño / pupilo está aceptando voluntariamente a abordar o manejar un perro que pertenece a otro dueño, en su casa o en algún otro lugar de lo contrario. Usted está asumiendo, en nombre de usted y / o su niños / niño / pupilo, todo el riesgo de lesiones personales, muerte o incapacidad para usted y / o su hijo / pupilo que pudiera derivarse o surgir del embarque o manejo de este perro, o cualquier daño, pérdida o daño a su razón o bienes personales que usted o sus hijos / niño / pupilo pueda incurrir. Usted entiende que los riesgos que vienen con el embarque o el manejo de un perro que no está acostumbrado a usted, a su niños / niño / pupilo, y su casa o en otro lugar y que no tiene riesgos inherentes; y Usted está de acuerdo en nombre de usted y / o su niños / niño / barrio y sus / sus representantes personales, sucesores, herederos y cesionarios para mantener Kmimos, sus afiliados, funcionarios, directores, agentes, empleados y clientes (colectivamente, el " Exonerados ") de cualquier y todos los reclamos o causas de acción que surja del embarque o la manipulación de este perro. Usted expresamente eximir y liberar Exonerados de cualquier y toda responsabilidad, reclamo, demanda o causa de acción que surja de cualquier daño, pérdida, lesiones o la muerte a usted y / o su niños / niño / pupilo, mientras el perro está internado en su casa o le proporciona de manera alguna Cuidador. Este comunicado es válido y efectivp si el daño, la pérdida o la muerte es el resultado de cualquier acto u omisión por parte de cualquiera de los Exonerados o por cualquier otra causa. Esta renuncia y la liberación de toda responsabilidad incluye, sin limitación, cualquier lesión, enfermedad o accidentes que se pueden producir como consecuencia de la subida a bordo perro en su casa o cualquier otro servicio de Cuidador-Siempre. Al continuar con la transacción o el uso del Sitio de otra manera, usted entiende que voluntariamente renuncia a su derecho de demandar a las partes antes mencionadas.</p>
-<p>Si usted es un cliente o un CUIDADOR, SE COMPROMETE A NO MANTENER KMIMOS O SUS AFILIADOS, OFICIALES, DIRECTORES, EMPLEADOS, AGENTES O PROVEEDORES SERÁN RESPONSABLES POR NINGÚN DAÑO, los juicios, reclamos, y / o controversias (colectivamente, "pasivos") que han surgido o puedan surgir, sean conocidos o desconocidos, EN RELACIÓN CON EL USO O LA IMPOSIBILIDAD DE USO DE LOS SERVICIOS O SITIO, INCLUYENDO SIN LIMITACIÓN CUALQUIER RESPONSABILIDAD SE PLANTEAN EN RELACIÓN CON (A) CUALQUIER instrucción, asesoramiento, ACT o servicio proporcionado por KMIMOS O SUS AFILIADOS, OFICIALES, DIRECTORES, EMPLEADOS, AGENTES O PROVEEDORES DE TERCEROS, (B) CUALQUIER DESTRUCCIÓN DE SU INFORMACIÓN, (C) CUALQUIER DISPUTA CON CUALQUIER OTRO USUARIO DEL SITIO, FALLA (D) CUIDADORES 'prestación de servicios o suministro de INCOMPLETA O SERVICIOS POBRES, (E) cualquier lesión o daño sufrido por usted o por cualquier tercero (incluyendo sin limitación SUS FAMILIARES, AMIGOS O OTRAS PARTES RELACIONADAS), (F) cualquier lesión o daño sufrido por cualquier perro u otros animales domésticos, (G ) NINGÚN DAÑO O DAÑO A LA PROPIEDAD reales o personales, o (h) cualquier otra conducta, acto u omisión de cualquier otra parte, incluyendo sin limitación ACECHO, ACOSO SEXUAL QUE ES O NO, actos de violencia física, o destrucción de bienes.</p>
-<p>BAJO NINGUNA CIRCUNSTANCIA KMIMOS O SUS AFILIADOS, OFICIALES, DIRECTORES, EMPLEADOS, AGENTES O PROVEEDORES SERÁN RESPONSABLES POR DAÑOS INCIDENTALES, DIRECTOS, INDIRECTOS, ESPECIALES O INDIRECTOS QUE RESULTEN DE SU USO O IMPOSIBILIDAD DE USAR ESTE SITIO O EL CUIDADOR-PROPORCIONADA SERVICIOS, INCLUYENDO SU CONFIANZA EN CUALQUIER INFORMACIÓN OBTENIDA DE ESTE SITIO QUE ocasione errores, omisiones, interrupciones, eliminación o corrupción DE ARCHIVOS, VIRUS, DEMORAS EN LA OPERACIÓN O TRANSMISIONES, O CUALQUIER FALLO DE FUNCIONAMIENTO. LA LIMITACIÓN DE RESPONSABILIDAD SE APLICARÁ EN CUALQUIER ACCIÓN, YA SEA EN CONTRATO, AGRAVIO O DE CUALQUIER OTRO TIPO, INCLUSO SI UN REPRESENTANTE AUTORIZADO DE KMIMOS HA SIDO ADVERTIDO O DEBERÍA TENER CONOCIMIENTO DE LA POSIBILIDAD DE TALES DAÑOS. POR EL USO DE ESTE SITIO, USTED RECONOCE QUE ESTE PÁRRAFO SE APLICARÁ A TODO EL CONTENIDO, PRODUCTOS Y SERVICIOS DISPONIBLES A TRAVÉS DE ESTE SITIO, SALVO QUE LA EXCLUSIÓN O LIMITACIÓN DE DAÑOS DIRECTOS O INDIRECTOS está prohibido por ley. CIERTAS JURISDICCIONES NO PERMITEN LA EXCLUSIÓN O LIMITACIÓN DE CIERTAS GARANTÍAS O LIMITACIÓN DE DAÑOS DIRECTOS O INDIRECTOS, POR LO QUE LAS LIMITACIONES ANTERIORES NO SE APLIQUEN EN SU CASO. SI, A PESAR DE LO ANTERIOR EXCLUSIONES, se determina que KMIMOS O SUS AFILIADOS, OFICIALES, DIRECTORES, EMPLEADOS, AGENTES O PROVEEDORES SERÁN RESPONSABLES POR DAÑOS, EN NINGÚN CASO LA RESPONSABILIDAD TOTAL, YA SEA POR CONTRATO, AGRAVIO, ESTRICTA RESPONSABILIDAD, O DE OTRA MANERA, SUPERARÁ LOS CIEN DÓLARES ($ 100.00), con exclusión de cualquier OBLIGACIONES A PAGAR LAS CANTIDADES DE CUIDADORES O REEMBOLSOS A LOS CLIENTES DE CONFORMIDAD CON ESTOS TÉRMINOS.</p>
-<p>Usted acepta que las limitaciones especificadas en esta sección sobrevivirán y aplicará incluso si no se encuentra ninguna solución limitada especificada en estas Condiciones de haber fracasado en su propósito esencial. Usted también reconoce y acepta expresamente que Kmimos ha fijado sus precios y entró en estas Condiciones en confianza sobre las limitaciones de responsabilidad en él detalladas, que asignan el riesgo entre usted y Kmimos y constituyen la base de la negociación entre las partes.</p>
-<h4>XIX.  EXCLUSIÓN DE GARANTÍAS</h4>
-<p>EL SITIO Y CONTENIDO OFRECIDO EN EL SITIO SE PROPORCIONAN "TAL CUAL", Y SON PARA USO COMO CONTRATADO EN ESTE DOCUMENTO. EXCEPTO POR LAS GARANTÍAS EXPRESAS ESTABLECIDAS EN LA PRESENTE, KMIMOS Y SUS AFILIADOS, OFICIALES, DIRECTORES, EMPLEADOS, AGENTES, ASÍ COMO SUS PROVEEDORES DE TERCEROS, POR ESTE MEDIO SE HACE EXPRESA O IMPLÍCITAS DECLARACIONES, GARANTIAS, GARANTÍAS Y CONDICIONES EN RELACIÓN CON EL SITIO, Los cuidadores, LOS SERVICIOS DE ESTADÍA-PROPORCIONADA, EL CONTENIDO Y LOS PRODUCTOS Y SERVICIOS asociado con el mismo INCLUYENDO PERO NO LIMITADO A CUALQUIER IMPLÍCITAS representaciones, garantías, garantías, Y CONDICIONES DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR, TÍTULO Y NO INFRACCIÓN, Y CALIDAD DE BIENES Y SERVICIOS EXCEPTO EN LA MEDIDA EN QUE DICHA RENUNCIA NO FUERA LEGALMENTE VÁLIDA. KMIMOS Y SUS PROVEEDORES, NO SON DECLARACIONES, GARANTIAS NI GARANTIZA LA FIABILIDAD, DISPONIBILIDAD, ACTUALIDAD, CALIDAD, IDONEIDAD, VERACIDAD, EXACTITUD O INTEGRIDAD DEL SITIO O CONTENIDO RELACIONADO CON EL SITIO, O LOS RESULTADOS QUE OBTENGA ACCESO O USO EL SITIO Y / O LOS CONTENIDOS RELACIONADOS CON LA MISMA. SIN PERJUICIO DE LO ANTERIOR, KMIMOS Y SUS PROVEEDORES DE TERCEROS NO REPRESENTAN NI GARANTIZA QUE (A) EL FUNCIONAMIENTO O USO DEL SITIO SERÁ OPORTUNO, SEGURO, ININTERRUMPIDO O LIBRE DE ERRORES; (B) LA CALIDAD DE LOS SERVICIOS DE ESTADÍA-PROPORCIONADA, INFORMACIÓN U OTRO MATERIAL QUE USTED COMPRA, SEGURO O DE OTRA MANERA OBTENER A TRAVÉS DEL SITIO CUMPLIRÁ SUS REQUISITOS; O (C) CUALQUIER SOFTWARE ofrecidos a través del sitio esté disponible estén libres de virus u otros componentes dañinos. USTED RECONOCE QUE NI KMIMOS NI SUS PROVEEDORES DE TERCEROS controlar la transferencia de DATOS SOBRE COMUNICACIONES INSTALACIONES, INCLUYENDO LA INTERNET, Y QUE EL SITIO Y / O CONTENIDO RELACIONADO CON EL MISMO PUEDE ESTAR SUJETA A LIMITACIONES, RETRASOS Y OTROS PROBLEMAS INHERENTES AL USO DE DICHO COMUNICACIONES INSTALACIONES. KMIMOS NO ES RESPONSABLE DE LOS RETRASOS, FALLOS DE ENTREGA, O CUALQUIER OTRO DAÑO QUE RESULTE DE DICHOS PROBLEMAS, salvo que se expresa en otro sentido POR KMIMOS. KMIMOS EXPRESAMENTE RECHAZA CUALQUIER GARANTÍA EN RELACIÓN CON LA CALIDAD DE LOS SERVICIOS DE ESTADÍA-proporcionada y las personas o empresas MENCIONADOS EN EL SITIO. USAR LOS SERVICIOS DE ESTADÍA-PROPORCIONADA a su propio riesgo y asume todos los riesgos relacionados con el uso de dichos servicios CUIDADOR-PROPORCIONADA. Licencias y Certificados REQUISITOS (o la ausencia de) para algunos o todos los Servicios de CUIDADOR-proporcionada ofrecida por los cuidadores AMPLIAMENTE varían según el estado, condado, ciudad, municipio o municipio. KMIMOS HACE NINGUNA REPRESENTACIÓN O GARANTÍA DE QUE CUALQUIERA DE LOS CUIDADORES QUE OFRECEN SERVICIOS DE ESTADÍA-PROPORCIONADA A TRAVÉS DEL SITIO ha respetado cualquier ESTADO VIGENTE, CONDADO O LEY MUNICIPAL, estatuto, ordenanza o reglamentos. A PESAR DE LA CITA DE KMIMOS como agente LIMITADO DE LOS CUIDADORES PARA EL PROPÓSITO DE LA ACEPTACIÓN DE PAGOS DE LOS CLIENTES EN NOMBRE DE LOS CUIDADORES, KMIMOS RENUNCIA EXPRESAMENTE A TODA RESPONSABILIDAD POR CUALQUIER ACTO U OMISIÓN DE CUALQUIER CUIDADOR, CLIENTE O TERCEROS.</p>
-<h4>XX. Indemnización</h4>
-<p>Usted defenderá indemnizar y mantener indemne a Kmimos y sus afiliadas, directores, funcionarios, empleados, agentes y proveedores terceros (colectivamente, las "Partes indemnizadas") contra cualquier y todo reclamo, costos, daños, pérdidas, responsabilidades y gastos (incluyendo los honorarios y gastos de abogados) incurridos por las Partes indemnizadas en relación con una reclamación de un tercero relacionada con usted o su uso del Sitio o los Servicios de Cuidador-provisto. Las Partes indemnizadas se reservan el derecho, a su propio costo, de asumir la defensa exclusiva y control de cualquier asunto sujeto a su indemnización. Usted no tendrá, en todo caso, resolver cualquier reclamación o asunto sin el consentimiento por escrito de las partes indemnizadas pertinentes. Kmimos y sus afiliadas, directores, funcionarios, empleados, agentes y proveedores terceros no tendrá ninguna obligación de indemnización o cualquier otra responsabilidad por cualquier reclamación de infracción derivada de (a) el uso del Sitio y / o el contenido asociado con el Sitio que no sea de conformidad con estas Condiciones; (B) la combinación del Sitio y / o contenido asociado con el Sitio Web con otros productos, servicios o materiales; o (c) cualquier tercero productos, servicios o materiales.</p>
-<h4>XXI.  Terminación y Cancelación de la cuenta</h4>
-<p>Kmimos puede, a su entera discreción y sin responsabilidad hacia usted, con o sin causa, con o sin previo aviso y en cualquier momento: (a) poner fin a estos Términos y Condiciones o su acceso a nuestro sitio, y (b) desactivar o cancelar su Kmimos Cuenta o el registro o usos similares del Sitio. Derechos de propiedad de Kmimos, renuncia de garantías, indemnizaciones, limitaciones de responsabilidad y disposiciones varias sobrevivirán a la terminación. Kmimos puede dar aviso de terminación por correo postal o correo electrónico. Usted puede cancelar su cuenta Kmimos en cualquier momento mediante el envío de un correo electrónico a Sin embargo, usted es personalmente responsable de los pedidos, listados o transacciones pendientes que realice o de los cargos en que incurra antes de su terminación / cancelación. Tenga en cuenta que si su Cuenta Kmimos se cancela, no tenemos la obligación de borrar o volver a cualquier Contenido que usted haya publicado en el Sitio.</p>
-<h4>XXII. Derechos de Propiedad Intelectual</h4>
-<p>Todos los materiales proporcionados en el Sitio, incluyendo pero no limitado a los contenidos, información, documentos, productos, logotipos, gráficos, sonidos, imágenes, recopilaciones y otros materiales están protegidos por leyes internacionales de copyright y marcas registradas. El propietario de los derechos de autor y marcas, nombres, logotipos y marcas de servicio es Kmimos , sus filiales o sus respectivos autores, de terceros, los desarrolladores o proveedores ("Proveedores de terceros"). Excepto como se indica en este documento, ninguno de los materiales puede ser modificado, copiado, impreso, reproducido, distribuido, republicado, realizado, descargar, mostrar, publicar, transmitir y / o utilizado en cualquier forma o por cualquier medio, incluyendo, pero no limitado a, electrónico, mecánico, fotocopia, grabación, o cualquier otro medio, sin la previa autorización expresa por escrito de Kmimos y / o un proveedor de terceros. Además, no se puede "espejo" o "archivo" cualquier Contenido que aparece en o de otra manera accesible desde el Sitio en cualquier otro servidor sin la previa autorización expresa por escrito de Kmimos.</p>
-<h3>COBERTURA SEGURO VETERINARIO</h3>
-<p>
-Kmimos te ofrece un seguro veterinario sobre aquellos eventos que sufra tu(s) mascota(s), siempre y
-cuando se encuentre(n) bajo el cuidado de un cuidador Kmimos.  El nombre y apellido de  este cuidador
-Kmimos debe ser el mismo que se encuentra en el correo de confirmación que recibió el cliente al
-momento de completar la reserva de estadía a través de la página web www.kmimos.com.mx;
-www.kmimos.la ó www.kmimos.la.
-</p>
-<p>
-Para garantizar la cobertura por parte de Kmimos, el evento que ocurra con la mascota durante la
-permanencia en manos del cuidador Kmimos debe estar incluido en el LISTADO DE EVENTOS mostrado
-abajo. Todos aquellos padecimientos o enfermedades no listadas en el LISTADO DE EVENTOS no serán
-amparados por el seguro que ofrece Kmimos.
-</p>
-<br>
-<h4>LISTADO DE EVENTOS</h4>
-<ul>
-<li>Lesiones generadas por caídas</li>
-<li>Atropellamiento</li>
-<li>Envenenamiento accidental</li>
-<li>Ingesta de cuerpos extraños</li>
-<li>Lesiones por ataques de otros animales</li>
-<li>Traumatismos</li>
+El uso del servicio es bajo su propio riesgo. El servicio es provisto y según
+se encuentre &quot;disponible&quot;. <b><i>Kmimos</i></b> no garantiza que (i) el
+servicio se ajustará a sus requisitos, (ii) el servicio será ininterrumpido,
+puntual, seguro, o libre de error, (iii) los resultados que puedan ser
+obtenidos del uso del servicio sean veraces o confiables, (iv) la calidad de
+cualquier producto, servicio, información, u otro material comprado u obtenido
+por usted por medio del servicio se ajustará a sus expectativas y (v) cualquier
+error en el software será corregido. Cualquier material descargado o de
+cualquier otra forma obtenido por medio del uso del servicio es hecho bajo su
+propia discreción y riesgo y usted será absolutamente responsable por cualquier
+daño al sistema de su computadora o pérdida de datos que resulte de la descarga
+de cualquiera de estos materiales. Ningún consejo o información, ya sea oral o
+escrito, obtenido de <b><i>Kmimos</i></b> por usted, o por medio del
+servicio constituirá garantía alguna, a no ser que se encuentre expresamente
+establecido.<o:p></o:p></span></p>
+
+<p><b><span>4.
+Excluyentes de Responsabilidad. <o:p></o:p></span></b></p>
+
+<p>4.1. Este Sitio incluye
+información, documentos y gráficos que pueden contener inexactitudes técnicas o
+errores tipográficos. Parte del contenido del sitio ha sido aportado por
+usuarios, por lo que pueden contener inexactitudes técnicas o ser falsos. <b><i>Kmimos</i></b>
+no se responsabiliza por la exactitud de la información y se reserva el derecho
+de mejorar o cambiar en cualquier momento cualquier contenido del Sitio. Si
+usted detecta alguna inexactitud o error, háganoslo saber de inmediato a </span><span
+lang=ES-MX><a href="mailto:certificacion.kmimos@desdigitec.com"><span>certificacion.kmimos@desdigitec.com</span></a></span><span> y </span><span><span>contactoco@kmimos.la</span></a></span><span><o:p></o:p></span></p>
+
+<p>Mal Uso de Información: <b><i>Kmimos</i></b>
+ha tomado medidas para detectar usos no adecuados de la información del sitio,
+sea para utilizar, reproducir, subir o modificar información de forma maliciosa
+o no autorizada. En estos casos se procederá legalmente contra quien sea
+responsable de acuerdo a las leyes aplicables en Colombia e internacionales.<o:p></o:p></span></p>
+
+<p><span>4.2</span><span>. En ningún caso <b><i>Kmimos</i></b> será responsable frente al
+Usuario o frente a algún tercero por cualquier daño y/o perjuicio directo,
+indirecto, incidental, o de cualquier tipo que haya sufrido el Usuario o el
+tercero por el acceso o el uso del Sitio o la contratación de un servicio a un
+tercer usuario del Sitio o de cualquier otro portal o sitio al que se haya tenido
+acceso por medio del Sitio <o:p></o:p></span></p>
+
+<p>4.3. <b><i>Kmimos</i></b> ofrece asesoría
+técnica en línea para los Usuarios registrados en el Sitio. El tiempo estimado
+de respuesta indicado en el Sitio para este servicio, no es bajo ninguna
+circunstancia obligatorio para <b><i>Kmimos</i></b>, por lo que <b><i>Kmimos</i></b>
+se reserva el derecho de responder al Usuario en menor o mayor tiempo que el
+indicado, o bien de no hacerlo del todo sin necesidad de explicaciones o
+aclaraciones y sin responsabilidad alguna para <b><i>Kmimos</i></b> frente al Usuario
+o frente a algún tercero. Las recomendaciones que haga <b><i>Kmimos</i></b> serán hechas de
+buena fe, pero <b><i>Kmimos</i></b> no garantiza que éstas sean correctas, viables o
+adecuadas para resolver el problema planteado por el Usuario, por lo que en
+ningún caso será <b><i>Kmimos</i></b> responsable frente al Usuario o frente a algún tercero
+por cualquier daño y/o perjuicio directo, indirecto, incidental, o de cualquier
+tipo que haya sufrido el Usuario o un tercero por seguir las recomendaciones de
+<b><i>Kmimos</i></b>,
+independientemente de cuáles hayan sido éstas y de cómo hayan sido comunicadas
+al Usuario. <o:p></o:p></span></p>
+
+<p>4.4. El usuario se compromete
+a indemnizar y sacar en paz y a salvo, libre de daños a <b><i>Kmimos</i></b> y a sus agentes,
+subsidiarias, afiliados, oficiales, asociados u otros socios y empleados de
+cualquier reclamo o demanda, incluyendo honorarios razonables de los abogados,
+hecha por una tercera parte debido a la información, o información surgida del
+contenido que el usuario incluya, presente, anuncie o transmita por medio del
+servicio, su uso del servicio, su violación a estas políticas, o la violación a
+los derechos de un tercero . <o:p></o:p></span></p>
+
+<p>4.5. La correspondencia o
+tratos del usuario con anunciantes, o su participación en promociones de
+anunciantes encontrados en el portal o por medio del portal, incluyendo el pago
+y la entrega de los bienes o servicios relacionados, y cualesquiera otros
+términos y condiciones, garantías o representaciones asociadas con dichos
+tratos, serán únicamente entre usted y dicho anunciante. Usted reconoce y
+conviene en que <b><i>Kmimos</i></b> no será responsable o tendrá obligación legal por
+pérdida o daño de ningún tipo que resulte de dichos tratos, o que sea el
+resultado de la presencia de dichos anunciantes en el portal.<o:p></o:p></span></p>
+
+<p>4.6. <i>Kmimos no tiene participación directa en el proceso de negociación y
+perfeccionamiento del contrato definitivo entre los usuarios (cuidador y
+cliente) y en tal sentido no es responsable del cumplimiento de las
+obligaciones fiscales, cambiarias, civiles comerciales o laborales que se
+generen entre las mencionadas partes.</i><o:p></o:p></span></p>
+
+<p><b><span><o:p>&nbsp;</o:p></span></b></p>
+
+<p><b><span>5. Derechos
+de Autor. <o:p></o:p></span></b></p>
+
+<p>5.1. Todas las obras
+artísticas y literarias contenidas en el Sitio se encuentran protegidas por la legislación
+nacional en materia de Derecho de Autor, son de la titularidad de <b><i>Kmimos</i></b>,
+han sido licenciadas a <b><i>Kmimos</i></b>, o bien se utilizan conforme con
+la Ley 23 de 1982 y demás normas concordantes de Colombia, a solicitud de los
+clientes de <b><i>Kmimos</i></b>. <o:p></o:p></span></p>
+
+<p>5.2. Debido a lo anterior, se
+prohíbe la reproducción total o parcial de los datos e información contenidos
+en el Sitio, por cualquier medio y por cualquier forma; también se prohíbe la
+modificación, mutilación, deformación o transformación del contenido del Sitio,
+así como la copia o reproducción de las bases de datos. <o:p></o:p></span></p>
+
+<p>5.3. El acceso al Sitio y el
+uso de los servicios proporcionados en el mismo no confieren ningún derecho
+sobre la titularidad de las obras contenidas en el Sitio, ni la adquisición de
+ninguna licencia sobre los derechos de autor. <o:p></o:p></span></p>
+
+<p><b><span>6. Derechos
+de Propiedad Industrial. <o:p></o:p></span></b></p>
+
+<p>6.1. <b><i>Kmimos</i></b> es una marca
+registrada, por lo que no podrá utilizarse sin la previa autorización por
+escrito de su titular.<o:p></o:p></span></p>
+
+<p>6.2. Todos los elementos de
+Propiedad Industrial que aparecen en el Sitio son titularidad de <b><i>Kmimos</i></b>
+o de sus clientes, o bien han sido licenciados por sus titulares a <b><i>Kmimos</i></b>
+o a sus clientes, por lo que tampoco podrán ser usados sin la autorización
+respectiva. Si usted considera que algún elemento infringe sus derechos o los
+de su representado háganoslo saber de inmediato a través de la sección de
+Protección de Derechos (</span><span><a
+href="http://www.quiminet.com/puso/copyright.php"><span>Copyright</span></a></span><span>).<o:p></o:p></span></p>
+
+<p>6.3. El acceso al Sitio y el
+uso de los servicios proporcionados en el mismo no confieren ningún derecho
+sobre la titularidad de las marcas, nombres comerciales, eslóganes, logotipos y
+demás signos distintivos, así como otros derechos de propiedad industrial
+relativos al contenido del Sitio, ni la adquisición de ninguna licencia sobre
+tales derechos. <o:p></o:p></span></p>
+
+<p>6.4. Para lo relativo a este
+inciso y sus sub incisos, se entiende por &quot;Expresión&quot; a una palabra o
+conjunto de palabras que escribe un Usuario en la funcionalidad de
+&quot;búsqueda por producto&quot; que ofrece el Sitio. A través de dicha
+Expresión, un Usuario puede referirse a un producto, a un servicio, a una línea
+de productos o servicios y/o a una marca registrada. <o:p></o:p></span></p>
+
+<p>6.4.1. Al buscar una Expresión
+en el Sitio, los resultados de la búsqueda pueden mostrar lo siguiente: a)
+compañías (&quot;Empresas&quot;) que dicen poder ofrecer productos/servicios a
+los que se refiere la Expresión y/o b) compañías (&quot;Otras Empresas&quot;)
+que sin poder ofrecer productos/servicios a los que se refiere la Expresión,
+creen (más de ninguna manera garantizan) poder ofrecer productos/servicios
+relacionados con alguna de las industrias a las que se destina el
+producto/servicio al que se refiere la Expresión. <o:p></o:p></span></p>
+
+<p>6.4.2. Lo anterior significa
+que las Otras Empresas podrían potencialmente ofrecer a dicha industria,
+productos o servicios de cualquier tipo, por ejemplo: servicio técnico,
+servicios logísticos, servicios financieros, consultoría ambiental o de otra
+índole, maquinaria y/o equipo, estudios de mercado, productos/servicios
+sustitutos, alternativos, complementarios o reciclaje de los
+productos/servicios amparados por la Expresión. <o:p></o:p></span></p>
+
+<p>6.4.3. Dado que sería
+sumamente difícil verificar los productos, servicios y/o marcas registradas que
+una compañía puede ofrecer, y en vista de que <b><i>Kmimos</i></b> no tiene interés
+ni obtiene beneficio alguno al publicar información poco precisa, inexacta,
+desactualizada o errónea, <b><i>Kmimos</i></b> no garantiza que una compañía
+pueda efectivamente ofrecer los productos/servicios, familias de
+productos/servicios y/o marcas registradas mostrados en el Sitio o almacenados
+en las bases de datos de <b><i>Kmimos</i></b>. <b><i>Kmimos</i></b> obtiene esa
+información de las compañías y la proporciona de buena fe a sus Usuarios, sin embargo,
+tampoco ofrece garantía de que dicha información sea exacta, actual o correcta
+y por lo tanto no asume ni acepta responsabilidad alguna por errores u
+omisiones en la misma o por daños de cualquier índole que se deriven de su uso,
+cualquiera que éste sea.<o:p></o:p></span></p>
+
+<p>En caso de que se observe
+información publicada que infrinja derechos de autor, patentes, marcas
+registradas o derechos de propiedad intelectual o industrial, el propietario de
+estos derechos podrá dar aviso siguiendo el procedimiento definido en la
+sección de Protección de Derechos (</span><span><a
+href="http://www.quiminet.com/puso/copyright.php"><span>Copyright</span></a></span><span>).<o:p></o:p></span></p>
+
+<p>6.4.4. Ni <b><i>Kmimos</i></b> ni las Otras
+Empresas sugieren, dan por hecho, ni aseguran que: <o:p></o:p></span></p>
+
+<p>6.4.4.1. Los productos y/o
+servicios que las Otras Empresas pueden ofrecer, sean iguales, similares,
+contratipos, equivalentes ni intercambiables con los productos/servicios
+amparados por la Expresión buscada, independientemente de que dicha Expresión
+incluya o coincida total o parcialmente con un nombre de producto/servicio, una
+familia de productos/servicios o una marca registrada. <o:p></o:p></span></p>
+
+<p>6.4.4.2. Los productos
+amparados bajo una marca registrada sean iguales, similares ni equivalentes a
+los que ampara otra marca registrada, ni que dos marcas registradas ni los
+productos que éstas amparan, sean intercambiables entre sí. <o:p></o:p></span></p>
+
+<p><b><span>7.
+Información Confidencial.<o:p></o:p></span></b></p>
+
+<p>7.1. La información que los
+Usuarios nos proporcionan se utiliza con el único fin de prestar un mejor
+servicio, por lo que no se transmitirán a terceros sin la previa autorización
+del Usuario. <b><i>Kmimos</i></b> garantiza la confidencialidad de los datos personales
+del Usuario.<o:p></o:p></span></p>
+
+<p><span lang=ES-MX>Dando cumplimiento a la
+Ley 1581 de 2012 “por la cual se dictan disposiciones generales para la
+protección de datos personales” y su Decreto Reglamentario 1377 de 2013, <i>Kmimos</i> informa a sus usuarios que al
+hacer su registro, está autorizando a almacenar sus datos y a conservarlos bajo
+su operación, control o supervisión con el fin de utilizarlos en el desarrollo
+de procesos tales como información de servicios, productos, certificaciones,
+actividades, evaluaciones, encuestas, facturación, peticiones&nbsp;y demás conceptos
+del giro ordinario. Así mismo, será utilizada para comunicarle a través de
+correo electrónico, mensajes de texto o vía web la utilización de los servicios
+y productos que son ofrecidos a través de <i>Kmimos</i>
+en Colombia.</span><span> </span><span><o:p></o:p></span></p>
+
+<p>7.2. <b><i>Kmimos</i></b> garantiza que se
+han adoptado las medidas oportunas de seguridad en sus instalaciones, sistemas
+y ficheros. <o:p></o:p></span></p>
+
+<p>7.3. <b><i>Kmimos</i></b> no será
+responsable cuando la información confidencial se proporcione a autoridades
+públicas competentes, cuando así lo dispongan las normas jurídicas aplicables o
+por solicitud explícita de las autoridades. <o:p></o:p></span></p>
+
+<p>7.4. El Usuario garantiza y
+responde por la veracidad, exactitud, vigencia y autenticidad de cualquier
+información proporcionada a <b><i>Kmimos</i></b> y asimismo se compromete a
+mantenerla actualizada. <o:p></o:p></span></p>
+
+<p>7.5. Con el fin de
+proporcionar un mejor servicio, <b><i>Kmimos</i></b> puede llegar a usar cookies
+para una mejor identificación del Usuario, mismo que autoriza la realización de
+esta práctica. <o:p></o:p></span></p>
+
+<p><b><span>8. Autonomía
+de disposiciones. <o:p></o:p></span></b></p>
+
+<p>8.1. La nulidad, invalidez,
+ilegalidad o cualquier vicio en cualquiera de las disposiciones de los
+presentes Términos, sólo afectará a dicha disposición, y por lo tanto no
+afectará a las demás disposiciones aquí pactadas, las cuales conservarán por
+entero su fuerza obligatoria. <o:p></o:p></span></p>
+
+<p><b><span>9.
+Encabezados y Definiciones.<o:p></o:p></span></b></p>
+
+<p>9.1. Los encabezados o títulos
+de estos Términos se incluyen únicamente para facilitar la referencia, y no
+limitan o afectan de otra manera los términos y las condiciones de estos
+Términos. <o:p></o:p></span></p>
+
+<p><b><span>10. Derecho
+Aplicable y Jurisdicción. <o:p></o:p></span></b></p>
+
+<p>10.1. <b><i>Kmimos</i></b> presta sus
+servicios en el territorio de la República de Colombia, por lo que <b><i>Kmimos</i></b>
+no declara que el contenido del Sitio sea apropiado o disponible para su uso en
+otros lugares, ni será responsable por el acceso que al Sitio hagan personas
+que se encuentren en lugares donde el contenido del Sitio pudiera ser ilícito.
+Aquellos que accedan al Sitio lo harán por su propia iniciativa y serán
+responsables para los efectos de las leyes locales que les sean aplicables. Este
+sitio, así como cualquier asunto o cuestión relacionada con el mismo o su uso
+se rigen por lo aquí dispuesto y de forma supletiva, cuando sea del caso, por las
+leyes mercantiles de la República de Colombia. <o:p></o:p></span></p>
+
+<p>10.2. En caso de cualquier
+disputa, controversia, reclamación o diferencia que surja de, o se relacione
+con la utilización de este Sitio, incluidas las políticas de privacidad de <b><i>Kmimos</i></b>,
+será resuelta definitivamente mediante decisión de un árbitro elegido por las
+partes, o a falta de acuerdo por aquel que designe la Cámara de Comercio de
+Bogotá, el cual fallará en derecho, según lo dispuesto por las normas
+pertinentes y lo establecido por el Centro de Arbitraje y Conciliación de la
+Cámara de Comercio de Bogotá. El idioma a utilizarse en el arbitraje será
+español. El lugar del arbitraje será la Ciudad de Bogotá D. C., sin perjuicio
+de que se puedan practicar diligencias y llevar a cabo audiencias en cualquier
+parte. En caso de que por cualquier motivo la Cámara de Comercio de Bogotá estuviera
+en imposibilidad de administrar el arbitraje, las partes acuerdan que la
+Asociación Americana de Arbitraje (American Arbitration Association) de Nueva
+York administrará dicho arbitraje, y las reglas de arbitraje comercial
+internacional de la misma serán aplicables. <o:p></o:p></span></p>
+
+<h3 style='text-align:justify;background:white'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt'>11. </span><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-weight:normal'>Compensación
+en caso de accidente. (Cobertura de servicios veterinarios)</span><span
+lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-weight:normal'><o:p></o:p></span></h3>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+text-align:justify;line-height:16.65pt;background:white'><span lang=ES-MX
+style='mso-bidi-font-size:11.0pt'>Sólo en <b><i>Kmimos</i></b> te ofrecemos una compensación
+económica sobre aquellos eventos que sufra(n) tu(s) mascota(s), que se menciona
+bajo el nombre de Cobertura de servicios veterinarios, siempre y cuando se
+encuentre(n) bajo el cuidado de un cuidador <b><i>Kmimos</i></b>. El nombre y
+apellido de este cuidador <b><i>Kmimos</i></b> debe ser el mismo que se
+encuentra en el correo de confirmación que recibió el cliente al momento de
+completar la reserva de estadía a través de la página web<span
+class=apple-converted-space>&nbsp;</span></span><span lang=ES-MX><a
+href="http://www.kmimos.co/"><span style='mso-bidi-font-size:11.0pt'>www.kmimos.co</span></a></span><span
+lang=ES-MX style='mso-bidi-font-size:11.0pt'>;</span><span lang=ES-MX> </span><span
+lang=ES-MX style='mso-bidi-font-size:11.0pt'>www.kmimos.com.mx<span
+class=apple-converted-space>&nbsp;</span></span><span lang=ES-MX><a
+href="http://www.cani.mx/" target="_blank"><span style='mso-bidi-font-size:
+11.0pt;color:windowtext'>www.cani.mx</span></a></span><span
+class=apple-converted-space><span lang=ES-MX style='mso-bidi-font-size:11.0pt'>&nbsp;</span></span><span
+lang=ES-MX style='mso-bidi-font-size:11.0pt'>ó<span
+class=apple-converted-space>&nbsp;</span></span><span lang=ES-MX><a
+href="http://www.kmimos.la/" target="_blank"><span style='mso-bidi-font-size:
+11.0pt;color:windowtext'>www.kmimos.la</span></a></span><span lang=ES-MX
+style='mso-bidi-font-size:11.0pt'>.<o:p></o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+text-align:justify;line-height:16.65pt;background:white'><span lang=ES-MX
+style='mso-bidi-font-size:11.0pt'>Para garantizar la compensación por parte de <b><i>Kmimos</i></b>,
+debe darse uno de los supuestos de los detallados en el LISTADO DE EVENTOS
+mostrado abajo con la mascota durante la permanencia en manos del cuidador <b><i>Kmimos</i></b>.
+Todos aquellos padecimientos o enfermedad no enlistada en el LISTADO DE EVENTOS
+no serán amparado por la compensación económica que ofrece <b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:107%;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'><br>
+<b>LISTADO DE EVENTOS</b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:47.25pt;text-align:justify;text-indent:-18.0pt;line-height:16.65pt;
+mso-list:l4 level1 lfo17;tab-stops:list 36.0pt;background:white'><![if !supportLists]><span
+lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Lesiones generadas por caídas<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:47.25pt;text-align:justify;text-indent:-18.0pt;line-height:16.65pt;
+mso-list:l4 level1 lfo17;tab-stops:list 36.0pt;background:white'><![if !supportLists]><span
+lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Atropellamiento<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:47.25pt;text-align:justify;text-indent:-18.0pt;line-height:16.65pt;
+mso-list:l4 level1 lfo17;tab-stops:list 36.0pt;background:white'><![if !supportLists]><span
+lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Envenenamiento accidental<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:47.25pt;text-align:justify;text-indent:-18.0pt;line-height:16.65pt;
+mso-list:l4 level1 lfo17;tab-stops:list 36.0pt;background:white'><![if !supportLists]><span
+lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Ingesta de cuerpos extraños<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:47.25pt;text-align:justify;text-indent:-18.0pt;line-height:16.65pt;
+mso-list:l4 level1 lfo17;tab-stops:list 36.0pt;background:white'><![if !supportLists]><span
+lang=ES-MX style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Lesiones por ataques de otros
+animales<o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     text-align:justify;line-height:16.65pt;mso-list:l4 level1 lfo17;
+     tab-stops:list 36.0pt;background:white'><span lang=ES-MX style='font-size:
+     12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+     mso-fareast-font-family:"Times New Roman"'>Traumatismos (Heridas Cortantes
+     o Punzantes, Abrasiones, Laceraciones, Contusiones, Quemaduras de Primer,
+     Segundo o Tercer Grado) no intencionales (accidentes) ocasionados por: <o:p></o:p></span></li>
+ <ul type=circle>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;text-align:justify;line-height:16.65pt;mso-list:l4 level2 lfo17;
+      tab-stops:list 72.0pt;background:white'><span lang=ES-MX
+      style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+      mso-fareast-font-family:"Times New Roman"'>- Objetos Corto punzante<o:p></o:p></span></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;text-align:justify;line-height:16.65pt;mso-list:l4 level2 lfo17;
+      tab-stops:list 72.0pt;background:white'><span lang=ES-MX
+      style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+      mso-fareast-font-family:"Times New Roman"'>- Objetos Contundentes <o:p></o:p></span></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;text-align:justify;line-height:16.65pt;mso-list:l4 level2 lfo17;
+      tab-stops:list 72.0pt;background:white'><span lang=ES-MX
+      style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+      mso-fareast-font-family:"Times New Roman"'>- Quemaduras Químicas (ej.
+      detergentes, disolventes, ácidos, etcétera.)<o:p></o:p></span></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;text-align:justify;line-height:16.65pt;mso-list:l4 level2 lfo17;
+      tab-stops:list 72.0pt;background:white'><span lang=ES-MX
+      style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+      mso-fareast-font-family:"Times New Roman"'>- Quemaduras Eléctricas<o:p></o:p></span></li>
+ </ul>
 </ul>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+text-align:justify;line-height:16.65pt;background:white'><span lang=ES-MX>-
+Quemaduras Térmicas </span><span lang=ES-MX style='mso-bidi-font-size:11.0pt'>La
+compensación ampara el pago hasta por un monto de COP $700,000.00 (SETECIENTOS
+MIL 00/100 PESOS COLOMBIANOS) sobre aquellos eventos incluidos en el LISTADO DE
+EVENTOS, vía reembolso al cliente por parte de <b><i>Kmimos</i></b>. Para ello, <b><i>Kmimos</i></b>
+deberá recibir por parte del cliente una comprobación del pago realizado al
+veterinario, clínica u hospital veterinario en el que se detalle las causas que
+generaron dicho pago. Esta comprobación de pago será válida únicamente mediante
+Factura Cambiaria emitida a nombre de:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-MX
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:107%;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'><br>
+</span><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:107%;font-family:"Times New Roman","serif"'>RAZON SOCIAL: KMIMOS
+COLOMBIA SAS</span><span lang=ES-MX style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:107%;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"MS Mincho"'><o:p></o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+text-align:justify;line-height:16.65pt;background:white'><span lang=ES-MX
+style='mso-bidi-font-size:11.0pt'>NIT: 9010422659-1<o:p></o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+text-align:justify;line-height:16.65pt;background:white'><span lang=ES-MX
+style='mso-bidi-font-size:11.0pt'>DIRECCION COMERCIAL: CL 86 #11-63 </span><span
+lang=ES-MX style='mso-bidi-font-size:11.0pt;mso-fareast-font-family:"MS Mincho"'><o:p></o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+text-align:justify;line-height:16.65pt;background:white'><span lang=ES-MX
+style='mso-bidi-font-size:11.0pt'>En caso de fallecimiento de la mascota
+mientras esté bajo el cuidado de un cuidador <b><i>Kmimos</i></b>, se brinda una
+compensación económica para gastos funerarios hasta por un monto de COP $1,500,000.00
+(UN MILLON QUINIENTOS MIL 00/100 PESOS COLOMBIANOS), vía reembolso al cliente
+por parte de <b><i>Kmimos</i></b>. Para ello, <b><i>Kmimos</i></b> deberá recibir por parte del
+cliente una comprobación del pago realizado al veterinario, clínica u hospital
+veterinario. Esta comprobación de pago será válida únicamente mediante Factura Cambiaria
+(datos fiscales y comerciales compartidos en los párrafos anteriores)</span><span
+lang=ES-MX style='mso-bidi-font-size:11.0pt;mso-fareast-font-family:"MS Mincho"'><o:p></o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;
+text-align:justify;line-height:16.65pt;background:white'><span lang=ES-MX
+style='mso-bidi-font-size:11.0pt'>Cualquier reembolso se realiza dentro de los
+30 días hábiles continuos posteriores a: 1) fecha del pago hecho por parte del
+cliente al veterinario, clínica u hospital veterinario y entregado, y b) Fecha
+de entrega del documento físico de la Factura Cambiaria por parte del cliente a
+<b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p><span lang=ES style='font-size:14.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES;mso-fareast-language:ES-MX'><o:p>&nbsp;</o:p></span></p>
+
+<p><b><span>12.
+Domicilio. <o:p></o:p></span></b></p>
+
+<p>12.1. Cualquier notificación o
+comunicación dirigida a <b><i>Kmimos</i></b> deberá enviarse a Calle 86
+#11-63, Bogotá, Colombia. Tel. (+57) 315 849.2186 Correo Electrónico: n.deligny@kmimos.la<o:p></o:p></span></p>
+
+<p><b><u><span><o:p><span>&nbsp;</span></o:p></span></u></b></p>
+
+<p><b><u><span>II. Políticas
+de Privacidad.<o:p></o:p></span></u></b></p>
+
+<p>Su privacidad es muy
+importante para nosotros. Deseamos que la siguiente declaración le ayude a
+comprender como recolectamos, utilizamos y salvaguardamos su información
+personal. Esta política de privacidad abarca la obtención y el uso de
+información para el sitio de internet <b><i>Kmimos</i></b> y demás sitios propiedad de Kmimos
+Colombia SAS<br>
 <br>
-<p>
-La cobertura ampara el pago hasta por un monto de 5,000 pesos mexicanos  (CINCO MIL con 00/100),
-sobre aquellos eventos incluidos en el LISTADO DE EVENTOS, vía reembolso al cliente por parte de
-Kmimos.  Kmimos deberá recibir por parte del cliente una comprobación del pago realizado al
-veterinario, clínica u hospital veterinario.  Esta comprobación de pago será válida únicamente mediante
-Factura Fiscal emitida a nombre de:
-</p>
+¿Qué datos personales recabamos y para qué? <o:p></o:p></span></p>
+
+<p>La información que recabamos
+será empleada únicamente para la comunicación entre <b><i>Kmimos</i></b> y sus usuarios,
+mismos que aceptan ser contactados por <b><i>Kmimos</i></b> por medios electrónicos,
+telefónicos o cualquier otro al proporcionar sus datos en el sitio. <br>
 <br>
-<p>RAZON SOCIAL: DESDIGITEC SAPI DE CV</p>
-<p>RFC: DES140825LX0</p>
+La Información proporcionada por el usuario al solicitar información de
+productos/servicios se utilizará específicamente para ayudarle a conseguir
+proveedores del producto/servicio de su interés enviando potencialmente su
+información a algunos proveedores.<o:p></o:p></span></p>
+
+<p>Para las finalidades señaladas
+en el presente aviso de privacidad, podemos recabar sus datos personales de
+distintas formas: cuando usted nos los proporciona directamente; cuando visita
+nuestro sitio de Internet o utiliza nuestros servicios en línea, y cuando
+obtenemos información a través de otras fuentes que están permitidas por la
+ley.<o:p></o:p></span></p>
+
+<p>Datos personales que recabamos
+de forma directa: Recabamos sus datos personales de forma directa cuando usted
+mismo nos los proporciona por diversos medios, como a través de citas,
+encuentros en exposiciones, reuniones de negocios o entrevistas. Los datos que
+obtenemos por este medio pueden ser, entre otros: Nombre Completo, Puesto,
+Empresa en la que labora, Dirección, Teléfono, Email.<o:p></o:p></span></p>
+
+<p>Datos personales que recabamos
+cuando visita nuestro sitio de Internet o utiliza nuestros servicios en línea:
+Nombre, Puesto, Empresa en la que labora, Dirección, Teléfono, Email.<br>
 <br>
-<p>
-DIRECCION FISCAL: BOSQUES DE DURAZNOS 65, INTERIOR 211.  BOSQUES DE LAS LOMAS, MIGUEL
-HIDALGO, D.F. CP 11700
-</p>
+Datos personales que recabamos a través de otras fuentes: Podemos obtener
+información de usted de otras fuentes permitidas por la ley, tales como por
+ejemplo: directorios telefónicos, páginas del gobierno, IFAI, etc. Los datos
+que obtenemos por estos medios pueden ser, entre otros: Nombre, Puesto, Empresa
+en la que labora, Dirección, Teléfono, Email.<o:p></o:p></span></p>
+
+<p>A través de cualquier medio
+para recabar información, siempre se respetarán las disposiciones que en
+materia de habeas data están consagradas en la legislación colombiana (Ley 1581
+de 2012 y Decreto 1377 de 2013).<br>
 <br>
-<p>
-En caso de fallecimiento de la mascota mientras esté bajo el cuidado de un cuidador Kmimos, se brinda
-cobertura para gastos funerarios hasta por un monto de 10,000.00 pesos mexicanos (DIEZ MIL con
-00/100),  vía reembolso al cliente por parte de Kmimos.  Kmimos deberá recibir por parte del cliente una
-comprobación del pago realizado al veterinario, clínica u hospital veterinario.  Esta comprobación de
-pago será válida únicamente mediante Factura Fiscal (datos fiscales compartidos en los párrafos
-anteriores)
-</p>
-<p>
-Cualquier reembolso se realiza dentro de los 30 días continuos posteriores a 1) fecha del pago hecho por
-parte del cliente al veterinario, clínica u hospital veterinario y entregado, y b) Fecha de entrega del
-documento físico de la Factura Fiscal por parte del cliente a Kmimos.
-</p>
+Uso de cookies y web beacons: <o:p></o:p></span></p>
+
+<p>Las cookies son archivos de
+texto que son descargados automáticamente y almacenados en el disco duro del
+equipo de cómputo del usuario al navegar en una página de Internet específica,
+que permiten recordar al servidor de Internet algunos datos sobre este usuario,
+entre ellos, sus preferencias para la visualización de las páginas en ese
+servidor, nombre y contraseña. <br>
+<br>
+Por su parte, las web beacons son imágenes insertadas en una página de Internet
+o correo electrónico, que puede ser utilizado para monitorear el comportamiento
+de un visitante, como almacenar información sobre la dirección IP del usuario,
+duración del tiempo de interacción en dicha página y el tipo de navegador
+utilizado, entre otros.<o:p></o:p></span></p>
+
+<p>Le informamos que utilizamos
+cookies y web beacons para obtener información personal de usted, como la
+siguiente: Su tipo de navegador, versión y sistema operativo; las páginas de
+Internet que visita en nuestro sitio; fecha y hora de la visita; los vínculos
+que sigue; su dirección IP; el sitio que visitó antes de entrar al nuestro.<o:p></o:p></span></p>
+
+<p>Si usted inicia sesión en el
+sitio, la información de su visita podrá ser relacionada personalmente con
+usted. Al hacerlo, usted autoriza a <b><i>Kmimos</i></b> a registrar esta información.<br>
+<br>
+¿Para qué fines utilizamos sus datos personales?<o:p></o:p></span></p>
+
+<p>Sus datos personales serán
+utilizados para las siguientes finalidades:<o:p></o:p></span></p>
+
+<p>Proveer servicios y productos
+requeridos; Contactarlo con potenciales proveedores de los productos/servicios
+que usted solicita; Informar sobre nuevos productos o servicios relacionados;
+Dar cumplimiento a obligaciones contraídas con nuestros clientes; Informar
+sobre cambios de nuestros productos o servicios; Evaluar la calidad del
+servicio; y Realizar estudios internos.<o:p></o:p></span></p>
+
+<p>Responsable del tratamiento de
+sus datos personales.<o:p></o:p></span></p>
+
+<p><span
+style='mso-spacerun:yes'> </span>Kmimos Colombia SAS es responsable del
+tratamiento de sus datos personales.<br>
+<br>
+Cómo contactarnos:<o:p></o:p></span></p>
+
+<p>Calle 86 #11-63, Bogotá,
+Colombia Correo Tel. (+57) 315 849.2186 Electrónico: n.deligny@kmimos.la</span><span
+lang=ES style='font-size:12.0pt;mso-bidi-font-size:11.0pt'> </span><span><o:p></o:p></span></p>
+
+<p>¿Cómo puede limitar el uso o
+divulgación de sus datos personales?<o:p></o:p></span></p>
+
+<p>En todo momento usted podrá
+revocar el consentimiento que nos ha otorgado para el tratamiento de sus datos
+personales, a fin de que dejemos de hacer uso de los mismos. En caso de desear
+modificar o corregir sus datos podrá hacerlo por medio de la sección específica
+para ello dentro del portal denominada &quot;Mi&quot; a la cual puede acceder
+una vez firmado a través de la opción &quot;Entrar a mi cuenta&quot; en la
+parte superior de la página.<o:p></o:p></span></p>
+
+<p>Adicionalmente y para otros
+datos no disponibles a través del “Mi” puede hacer uso de sus derechos de
+acceso, rectificación, cancelación y oposición descargando su formato de
+petición a través de este vínculo electrónico </span><span lang=ES-MX><a
+href="http://www.quiminet.com/puso/privacy_pdf.php"><span lang=ES
+style='font-size:12.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:windowtext;mso-ansi-language:ES;mso-fareast-language:
+ES-MX'>/kmimos/privacy_pdf.php</span></a></span><span lang=ES style='font-size:
+12.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:ES;mso-fareast-language:ES-MX'> y enviándolo por email
+debidamente llenado a</span><span lang=ES> </span><span class=SpellE><span>n.deligny@kmimos.la</span></span><span lang=ES style='font-size:12.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:ES;mso-fareast-language:ES-MX'> </span><span lang=ES-MX><a
+href="mailto:"></a></span><span lang=ES style='font-size:12.0pt;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";mso-ansi-language:
+ES;mso-fareast-language:ES-MX'>o bien puede entregarlo personalmente a Kmimos
+Colombia SAS. en el domicilio indicado más arriba. Su petición deberá ir
+acompañada de documentos que acrediten su identidad o, en su caso, la
+representación legal del titular. (Cédula de Ciudadanía, Certificado de
+Existencia y Representación Legal para personas jurídicas, Cédula de
+Extranjería, Pasaporte, Tarjeta Profesional).<o:p></o:p></span></p>
+
+<p>Las cookies que utilizamos
+para obtener su información personal se pueden deshabilitar o borrar
+directamente en su navegador. Los webs beacons se pueden evitar no descargando
+imágenes en los correos electrónicos que reciba.<o:p></o:p></span></p>
+
+<p><b><i><span lang=ES style='font-size:12.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:ES;mso-fareast-language:ES-MX'>Kmimos</span></i></b><span> NO comparte su información personal con terceros a menos de que usted
+lo haya autorizado al solicitar ser contactado con proveedores de productos o
+servicios.<br>
+<br>
+Tendremos un plazo máximo de 30 días hábiles para atender su petición y le
+informaremos sobre la procedencia de la misma a través del correo electrónico o
+dirección física que nos indique en su solicitud.<o:p></o:p></span></p>
+
+<p>Modificaciones al aviso de
+privacidad:<o:p></o:p></span></p>
+
+<p>Nos reservamos el derecho de
+efectuar en cualquier momento modificaciones o actualizaciones al presente
+aviso de privacidad, para la atención de novedades legislativas o
+jurisprudenciales, políticas internas, nuevos requerimientos para la prestación
+u ofrecimiento de nuestros servicios o productos y prácticas del mercado.<o:p></o:p></span></p>
+
+<p>Estas modificaciones estarán
+disponibles al público a través de esta página de Internet (</span><span
+lang=ES-MX><a href="http://www.kmimos.com.mx"><span lang=ES style='font-size:
+12.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:ES;mso-fareast-language:ES-MX'>http://www.</span><span
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>kmimos.co</span></a></span><span>)<o:p></o:p></span></p>
+
+<p><o:p>&nbsp;</o:p></span></p>
+
+<p><b><u><span
+lang=ES style='font-size:16.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES;mso-fareast-language:
+ES-MX'>III. Guía del Servicio.<o:p></o:p></span></u></b></p>
+
+<p><b><span>1.
+Certificación.<o:p></o:p></span></b></p>
+
+<p><span>1.1. Certificación <o:p></o:p></span></p>
+
+<p><span>a. Se hace una prueba de conocimiento vía
+telefónica o electrónicamente haciendo un cuestionario desarrollado por el
+equipo de <b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p><span>b. Para que se considere que el
+resultado de la encuesta es positiva, se debe aprobar el 80% de las preguntas
+hechas en el mismo.<span style='mso-spacerun:yes'>  </span>En caso de aprobar
+se procede al paso para registrar los campos en la página web.<span
+style='mso-spacerun:yes'>  </span>En caso de no aprobar debe esperar hasta 10
+días hábiles para nuevamente tomar la encuesta y se le notifica al aspirante a
+cuidador asociado que no se ha cumplido con el mínimo conocimiento para
+cuidados de perros definidos en el proceso de certificación. Si el aspirante ya
+se registró en la página web, se le colocará en estatus inactivo, hasta que <b><i>Kmimos</i></b>
+lo contacte y lleve a cabo el proceso de certificación y el potencial cuidador
+lo apruebe.<o:p></o:p></span></p>
+
+<p><span>c. Después de ser aprobada la
+certificación se notifica al candidato para solicitarle comprobante de
+domicilio, identificación oficial y cuenta interbancaria.<o:p></o:p></span></p>
+
+<p><span>d. Se registran los datos del cuidador
+en un control interno para tener toda la información integrada.<o:p></o:p></span></p>
+
+<p><span>e. Una vez registrada la información se
+continúa con el siguiente paso.<o:p></o:p></span></p>
+
+<p class=MsoListParagraph style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;
+mso-list:l10 level2 lfo16'><![if !supportLists]><span lang=ES-TRAD
+style='font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>1.2.</span></span><![endif]><span lang=ES-TRAD
+style='font-family:"Times New Roman","serif"'> Examen Psicométrico.<o:p></o:p></span></p>
+
+<p><span lang=ES-TRAD style='font-size:
+12.0pt;font-family:"Times New Roman","serif";mso-ansi-language:ES-TRAD'>a. </span><span>El
+candidato recibe vía correo electrónico un examen psicométrico, el cual debe
+ser aprobado por parte del cuidador.<o:p></o:p></span></p>
+
+<p><span>b. Después de terminar esta encuesta el
+candidato espera la notificación de su aprobación.<span
+style='mso-spacerun:yes'>  </span>En caso de ser positiva continua el proceso
+de certificación.<span style='mso-spacerun:yes'>  </span>En caso de ser
+negativa no podrá darse de alta como cuidador <b><i>Kmimos</i></b> y el cuidador
+podrá nuevamente tomar la prueba luego de transcurridos 30 días continuos desde
+el día que la tomó la primera vez <o:p></o:p></span></p>
+
+<p><span>1.3. Activación de perfil.<o:p></o:p></span></p>
+
+<p><span>a. Una vez que se aprueba el perfil, se
+activa el perfil por parte del equipo de <b><i>Kmimos</i></b> y se le notifica al cuidador.<o:p></o:p></span></p>
+
+<p><b><span>2.
+Plataforma.<o:p></o:p></span></b></p>
+
+<p><span>Acceso a página web.<o:p></o:p></span></p>
+
+<p><span>El usuario accede a la plataforma a
+través del dominio </span><span lang=ES-MX><a href="http://www.kmimos.co/">www.kmimos.co</a>;
+www.kmimos.com.mx<span class=apple-converted-space>&nbsp;</span><a
+href="http://www.cani.mx/" target="_blank"><span style='color:windowtext'>www.cani.mx</span></a><span
+class=apple-converted-space>&nbsp;</span>ó<span class=apple-converted-space>&nbsp;</span><a
+href="http://www.kmimos.la/" target="_blank"><span style='color:windowtext'>www.kmimos.la</span></a>.
+</span><span lang=ES-MX style='font-size:12.0pt;font-family:"Times New Roman","serif"'><o:p></o:p></span></p>
+
+<p><span>En la página de inicio puede tomar cinco
+decisiones:<o:p></o:p></span></p>
+
+<p><span>2.1. Dar clic en el botón de registrarse
+como cuidador que llevara el siguiente proceso:<o:p></o:p></span></p>
+
+<p><span>a. Registrar sus datos personales,
+información de su domicilio, servicios a ofrecer, precios y aceptar los
+términos y condiciones de uso de la plataforma.<o:p></o:p></span></p>
+
+<p><span>b. Seguir el proceso de certificación de
+<b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p><span>c. Buscar cuidadores ingresando fechas
+de algún viaje y su ubicación para que le desplieguen los cuidadores
+disponibles en área y fechas, que a más detalle seguirán estos pasos:<o:p></o:p></span></p>
+
+<p><span>i. Se desplegará una lista de cuidadores
+que dan el servicio.<o:p></o:p></span></p>
+
+<p><span>ii. Seleccionará el cuidador que guste
+ver su perfil.<o:p></o:p></span></p>
+
+<p><span>iii. Aparecerá la información del perfil
+y opciones para contactar o contratar un servicio por parte del cuidador.<o:p></o:p></span></p>
+
+<p><span>2.2. Si escoge la opción de
+&quot;cita&quot; llenará un formulario para dejar sus datos y agendar una cita,
+convirtiéndose en un cliente.<o:p></o:p></span></p>
+
+<p><span>2.3. Posteriormente le aparecerá una
+pantalla notificando que se realizó su registro exitosamente de la cita y le llegará
+un correo a la dirección de email registrada por el cuidador, así como también
+llegará un correo electrónico de notificación a los administradores de <b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p><span>2.4. Si escoge la opción de
+&quot;reserva&quot; llenará un formulario para dejar sus datos, agendar su
+reservación y escoger la manera de pago, convirtiéndose en un cliente.<o:p></o:p></span></p>
+
+<p><span>Posteriormente le aparecerá una pantalla
+notificando de que se realizó su registro exitosamente de la reserva y le
+llegará un email a la dirección de correo electrónico registrada por el
+cuidador, así como también llegará un correo de notificación a los
+administradores de <b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p><span>2.5. Si escoge la opción de
+&quot;servicio adicional&quot; llenará un formulario para dejar sus datos,
+contratar el servicio y escoger la manera de pago, convirtiéndose en un cliente.<o:p></o:p></span></p>
+
+<p><span>Posteriormente le aparecerá una pantalla
+notificando que se realizó exitosamente el registro del servicio y le llegará
+un email a la dirección de correo electrónico registrada por el cuidador, así
+como también llegará un correo de notificación a los administradores de <b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p><span>2.6. Dar clic en el botón de registrarse
+como cliente que llevara el siguiente proceso:<o:p></o:p></span></p>
+
+<p><span>a. Registrar sus datos personales, datos
+de su mascota, forma de pago y aceptar los términos y condiciones de uso de la
+plataforma.<o:p></o:p></span></p>
+
+<p><span>b. Se saldrá del sitio<o:p></o:p></span></p>
+
+<p><span>c. Nos escribirá por medio del chat de
+la página.<o:p></o:p></span></p>
+
+<p><b><span>3. Logística
+de plataforma y servicios.<o:p></o:p></span></b></p>
+
+<p><span>3.1. Una vez que el cliente registró una
+cita suceden los siguientes pasos:<o:p></o:p></span></p>
+
+<p><span>a. La plataforma web genera un correo
+dirigido al cliente con la información registrada y mencionando que nos
+contactaremos con el cliente en menos de 24 horas, así como también llegará un
+correo de notificación a los administradores de <b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p><span>b. La plataforma y/o el personal de <b><i>Kmimos</i></b>
+emite un mensaje hacia el cuidador para saber si acepta la cita para conocer al
+cliente con la información que registro, solamente contemplando el nombre del
+cliente y la información de la mascota o mascotas a cuidar, y existen dos
+posibles opciones. (En el caso de que sea la plataforma, se enviará sobre el
+correo con la información registrada y dos botones preguntando si acepta la
+cita, si es el caso del personal <b><i>Kmimos</i></b>, se contactarán por algún
+medio de comunicación con el cuidador para saber su decisión):<o:p></o:p></span></p>
+
+<p><span>i. Que acepte la cita del cliente: Una
+vez que acepta se envía toda la información registrada anexando todos los datos
+de contacto del cliente para que el cuidador pueda confirmar la cita y acudir a
+ella <o:p></o:p></span></p>
+
+<p><span>ii. Que no acepte la cita y el personal
+de <b><i>Kmimos</i></b>
+deba recomendar otro cuidador al cliente: El personal de <b><i>Kmimos</i></b> buscará recomendar
+a un cuidador que sea del agrado del cliente para que escoja alguna opción y se
+puede realizar la cita.<o:p></o:p></span></p>
+
+<p><span>Una vez que el cliente registró una reserva suceden los siguientes
+pasos:<o:p></o:p></span></p>
+
+<p><span>i. La plataforma web genera un correo dirigido al cliente con la
+información registrada y mencionando que nos contactaremos con el cliente en
+menos de 24 horas, así como también llegará un correo de notificación a los
+administradores de <b><i>Kmimos</i></b>.<o:p></o:p></span></p>
+
+<p><span>ii. La plataforma y/o el personal de <b><i>Kmimos</i></b> emite un mensaje
+hacia el cuidador para saber si acepta la reserva del cliente con la
+información que registro, solamente contemplando el nombre del cliente y la
+información de la mascota o mascotas a cuidar, y existen dos posibles opciones.
+<o:p></o:p></span></p>
+
+<p><span>Que acepte la reserva del cliente: <o:p></o:p></span></p>
+
+<p><span>a. Una vez que acepta, se envía toda la información anexando todos
+los datos de contacto del cliente para que el cuidador pueda confirmar la
+reserva y realizar el servicio.<o:p></o:p></span></p>
+
+<p><span>b. Se enviará la confirmación de la reserva y el cargo con copia al
+cuidador y cliente.<o:p></o:p></span></p>
+
+<p><span>4. Se iniciará el proceso de la estadía.<o:p></o:p></span></p>
+
+<p><span>Que no acepte el servicio
+y el personal de <b><i>Kmimos</i></b> deba recomendar otro cuidador al cliente<o:p></o:p></span></p>
+
+<p><span>b. El personal de <b><i>Kmimos</i></b>
+buscara recomendar a un cuidador que sea del agrado del cliente para que escoja
+alguna opción y se puede realizar la reservación<o:p></o:p></span></p>
+
+<p><span>4. Una vez que el
+cliente registró un servicio adicional suceden los siguientes pasos:<o:p></o:p></span></p>
+
+<p><span>a. La plataforma web
+genera un correo dirigido al cliente con la información registrada y
+mencionando que nos contactaremos con el cliente en menos de 24 horas.<o:p></o:p></span></p>
+
+<p><span>b. La plataforma y/o
+el personal de <b><i>Kmimos</i></b> emite un mensaje hacia el cuidador para saber si acepta
+el servicio adicional que quiere el cliente con la información que registro,
+solamente contemplando el nombre del cliente y la información del servicio a
+realizar para la mascota, y existen dos posibles opciones. (En el caso de que
+sea la plataforma, se enviara sobre el correo con la información registrada y
+dos botones preguntando si acepta el servicio, si es el caso del personal <b><i>Kmimos</i></b>,
+se contactaran por algún medio de comunicación con el cuidador para saber su
+decisión).<o:p></o:p></span></p>
+
+<p><span>Que acepte el
+servicio para la mascota del cliente. <o:p></o:p></span></p>
+
+<p><span>a. Una vez que
+acepta, se envía toda la información anexando todos los datos de contacto del
+cliente para que el cuidador pueda confirmar el servicio.<o:p></o:p></span></p>
+
+<p><span>b. Se enviará la
+confirmación del servicio adicional y el cargo con copia al cuidador y cliente.<o:p></o:p></span></p>
+
+<p><span>d. Posteriormente se
+iniciará el proceso del servicio adicional.<o:p></o:p></span></p>
+
+<p><span>Que no acepte el
+servicio y el personal de <b><i>Kmimos</i></b> deba recomendar otro cuidador
+al cliente.<o:p></o:p></span></p>
+
+<p><span>a. El personal de <b><i>Kmimos</i></b>
+buscará recomendar a un cuidador que sea del agrado del cliente para que escoja
+alguna opción y se puede realizar el servicio adicional<o:p></o:p></span></p>
+
+<p><b><span>4. Estadía.<o:p></o:p></span></b></p>
+
+<p><span>El cuidador procede a cuidar a la
+mascota con la que fue reservado su servicio a través de </span><b><i><span
+lang=ES-MX style='font-family:"Times New Roman","serif";mso-bidi-font-family:
+Arial;mso-bidi-theme-font:minor-bidi'>Kmimos</span></i></b><span lang=ES-MX
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>, con lo que
+llevará a cabo la recolección y entrega (puede incluir o no la búsqueda a
+domicilio), toma de fotografías y cuidado de la mascota de manera diaria
+durante el tiempo que fue reservado el servicio.<span
+style='mso-spacerun:yes'>  </span>La recolección y entrega puede ocurrir a
+domicilio o en casa del cuidador dependiendo del tipo de servicio que declara
+el cuidador en su perfil </span><b><i><span>Kmimos</span></i></b><span>.<o:p></o:p></span></p>
+
+<p><span><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><b><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>4.1&nbsp;Descripción del Servicio Básico de Cuidador<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><b><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=ES-TRAD style='color:black;background:white;mso-ansi-language:
+ES-TRAD'>“E</span><span lang=ES-MX style='color:black;background:white'>l
+servicio del cuidador” consiste en el acuerdo establecido entre el cuidador y
+el cliente, dueño de la mascota en la cual el cuidador se compromete a
+brindarle hospedaje, manutención y cuidado personal a dicha mascota en el
+espacio que los cuidadores designaron con este propósito.</span><b><span
+lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><b><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'><br>
+</span></b><span lang=es-419 style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:#580A;mso-fareast-language:
+FR'>Por lo cual el cuidador entiende que el cliente espera se cumplan en el
+transcurso del hospedaje con los siguientes requisitos durante el desarrollo de
+su estadía:<br>
+&nbsp;<br>
+4.1.1 Personas autorizadas a dar el cuidado<br>
+&nbsp;<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>·</span><span lang=ES-TRAD
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solo
+la persona cuyo nombre aparece, asociado como cuidador dentro de la reserva
+está autorizada a ser el principal cuidador.<br>
+</span><span lang=es-419 style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:#580A;mso-fareast-language:
+FR'>&nbsp;</span><span lang=es-419 style='font-size:12.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:#580A;mso-fareast-language:
+FR'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>o</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>&nbsp;&nbsp;&nbsp;Un cuidador no puede dejar un huésped solo durante su
+estadía, tampoco deberá dejarlo bajo el cuidado de un miembro de la familia a
+menos que este haya recibido la certificación de Kmimos Colombia SAS</span><span
+lang=es-419 style='font-size:12.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:#580A;mso-fareast-language:
+FR'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:normal'><span
+lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'><br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>·</span><span lang=ES-TRAD
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Durante
+la estadía ninguna mascota que este siendo hospedada por un cuidador puede ser
+transportada o paseada por otra persona que no sea el cuidador principal,
+cualquier persona por fuera del cuidador tiene que haber sido autorizada de
+forma previa a la estadía por el Cliente.<br>
+<br>
+</span><span lang=es-419 style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:#580A;mso-fareast-language:
+FR'>4.1.2 Supervisión dentro y fuera de Casa<br>
+<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>·</span><span lang=ES-TRAD
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El
+cuidador se asegura de que su hogar se mantenga lo suficientemente seguro para
+recibir mascotas<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>·</span><span lang=ES-TRAD
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El
+cuidador se asegurara de haber interrogado al cliente sobre cualquier
+comportamiento potencialmente destructivo o agresivos, también es recomendado
+preguntar si la mascota sufre de ansiedad.<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>·</span><span lang=ES-TRAD
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El
+cuidador se asegurara que las puertas y ventanas que te den acceso al exterior
+se mantendrán cerradas y monitoreadas durante la estadía.<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>·</span><span lang=ES-TRAD
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los
+clientes deben estar al tanto del número de mascotas que estén siendo acogidas,
+huéspedes y(o) residentes antes de empezar la reserva.<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>·</span><span lang=ES-TRAD
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Las
+mascotas que estén siendo hospedadas por el Cuidador tienen que estar bien
+supervisadas, no deben ser dejadas solas con otras mascotas o infantes.<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>·</span><span lang=ES-TRAD
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Las
+mascotas no podrán ser encerradas en guacales o kennels, sin el permiso
+explícito del Cliente.</span><span lang=es-419 style='font-size:12.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#580A;mso-fareast-language:FR'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;line-height:normal'><span
+lang=ES-TRAD style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>o</span><span
+lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>&nbsp;&nbsp;&nbsp;La frecuencia y duración de los encierros también tienen
+que ser discutido con los Clientes antes de empezar la estadía.</span><span
+lang=es-419 style='font-size:12.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:#580A;mso-fareast-language:
+FR'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Las
+mascotas que sean hospedadas deberán pasar la mayoría del tiempo de la estadía
+en interiores, y todo juego en espacio exterior tiene que ser supervisado.<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nado
+bajo la supervisión del Cuidador debe tener explicita autorización por parte
+del cliente. Las mascotas huéspedes nunca deben estar sin supervisión cerca de
+piscinas o lagos.<br>
+<br>
+</span><span lang=es-419 style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:#580A;mso-fareast-language:FR'>4.1.3 Salidas a Pasear y
+Parques para Perros<br>
+<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los
+perros nunca deberán estar sin correas en espacios que no sean cerrados<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Las
+únicas veces que un perro huésped puede estar sin la correa es en interiores o
+en espacios de juego/patios cercados<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El
+cuidador deberá estar atentos de los otros perros que se acerquen, perros
+pueden seguir siendo agresivos aunque estén con correas.<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se
+le recomienda al cuidador que le pregunte al dueño como interactúa su mascota
+con otros animales, y que tanto responde a su nombre.<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El
+cuidador sacara a pasear los perritos que reciba por lo menos 2 (DOS) veces al día<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El
+cuidador inspeccionara a la mascota después del paseo, y verificara que no
+tenga heridas, pulgas o garrapatas.<br>
+<br>
+</span><span lang=es-419 style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:#580A;mso-fareast-language:FR'>4.1.4 Obligaciones y
+Sugerencias Adicionales<br>
+<br>
+</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>El
+cuidador deberá contactar a Kmimos Colombia SAS inmediatamente después de que
+se presente un incidente con su huésped mascota que el cuidador considere
+ameritar una atención veterinaria o cualquier otra emergencia<br>
+</b></span><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;<b>&nbsp;Nuestro servicio te atención está disponible 24/7&nbsp;Podrán
+contactarnos al&nbsp;</b></span><b><span lang=ES style='font-size:10.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES;mso-fareast-language:FR'>Tel.
+(+57) 315 849.2186<br>
+</span></b><span lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-ansi-language:ES-TRAD;mso-fareast-language:
+FR'>·</span><span lang=ES-TRAD style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";color:black;background:white;
+mso-ansi-language:ES-TRAD;mso-fareast-language:FR'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El
+Cuidador le preguntará al Cliente los horarios alimenticios a los cuales están
+acostumbradas las mascotas. El Cuidador deberá intentar mantener dichos
+horarios, y solo podrá alimentar su huésped a deshoras con explicita
+autorización del Cliente.<o:p></o:p></span></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;mso-add-space:auto;
+text-indent:-18.0pt;mso-list:l17 level1 lfo18'><![if !supportLists]><span
+lang=ES-TRAD style='font-size:10.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black;mso-fareast-language:FR;
+mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-size:10.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+color:black;background:white;mso-fareast-language:FR'><span
+style='mso-spacerun:yes'>    </span>El Cuidador esta consiente<span
+style='mso-spacerun:yes'>  </span>que a partir del 30 de enero de 2017 entrara
+en vigencia el nuevo Código Nacional de Policía<span style='mso-spacerun:yes'> 
+</span>y Convivencia expedido por medio de la Ley 1801 de 2016 y que este
+deberá acatar la normativa que en él se establece, sobre todo en lo
+concerniente a la tenencia de mascotas y los caninos potencialmente peligrosos.</span><b><span
+lang=es-419 style='font-size:7.5pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-ansi-language:#580A;
+mso-fareast-language:FR'><br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></span></b><b><span lang=ES-TRAD style='font-size:10.0pt;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";color:black;
+background:white;mso-fareast-language:FR'><o:p></o:p></span></b></p>
+
+<p><span lang=es-419 style='font-size:12.0pt;
+font-family:"Times New Roman","serif";mso-ansi-language:#580A'><o:p>&nbsp;</o:p></span></p>
+
+<p><b><span>5. Recolección
+y entrega de mascotas.<o:p></o:p></span></b></p>
+
+<p><span>5.1. El cuidador
+sabrá por medio del comprobante de la reserva si esperará la llegada de la
+mascota a cuidar a su domicilio o en su caso deberá ir a recoger la mascota al
+domicilio del cliente. Aplicará el mismo caso para ir a dejar a la mascota una
+vez finalizada la estadía, suponiendo que el cliente lo recoja o el cuidador la
+vaya a entregar.<o:p></o:p></span></p>
+
+<p><span>5.2. Se recomienda
+que adicional a la entrega de la mascota del cliente al cuidador, también se
+entregue el alimento por los días necesarios, plato de la mascota, correa,
+cama, juguetes y/o accesorios.<o:p></o:p></span></p>
+
+<p><u><span lang=ES-MX style='font-size:
+12.0pt;font-family:"Times New Roman","serif"'>Nota:</span></u><span lang=ES-MX
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'> </span><b><i><span
+lang=ES-MX style='font-family:"Times New Roman","serif";mso-bidi-font-family:
+Arial;mso-bidi-theme-font:minor-bidi'>Kmimos</span></i></b><span lang=ES-MX
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'> queda exento de
+responsabilidad respecto de cualquier daño, pérdida o mal uso de estos objetos
+que el cliente entregue al cuidador, así como también el hecho del cobro por el
+alimento que sea necesario extra para la estadía de la mascota. Igualmente, <i>Kmimos queda exento</i> de responsabilidad
+respecto de cualquier daño que la mascota del cliente ocasione a la propiedad
+del cuidador.<o:p></o:p></span></p>
+
+<p><b><span>6. Fotografías
+y videos. <o:p></o:p></span></b></p>
+
+<p><span>6.1. El cuidador
+tomará fotografías o videos desde el primer instante que recibe a la mascota, y
+las enviará según sea el caso que haya recibido a la mascota, fotografías en un
+horario de la mañana (8am a 10am), y de noche (8pm a 10pm). Esto será de manera
+diaria mientras la mascota este bajo su cargo.<o:p></o:p></span></p>
+
+<p><span>6.2. Las fotografías
+o videos se compartirán al cliente por medio de la plataforma o vía WhatsApp
+dependiendo sea el caso en el momento. Si se envía el material vía WhatsApp se
+enviará una copia de esto a <b><i>Kmimos</i></b> para su revisión.<o:p></o:p></span></p>
+
+<p><span>6.3.<o:p></o:p></span></p>
+
+<p><b><span>7. Servicios
+adicionales.<o:p></o:p></span></b></p>
+
+<p><span>Los cuidadores podrán ofrecer, según
+términos y condiciones de cada cuidador, servicios adicionales a la estadía con
+la finalidad de que sean contratados adicionalmente o independientemente a una
+estadía.<o:p></o:p></span></p>
+
+<p><span>Estos servicios son:<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Baño
+<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Corte
+de pelo y uñas<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Paseos<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Guardería<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Visita
+al veterinario<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Consulta
+veterinaria<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Acupuntura<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Terapia
+de sanación<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Adiestramiento
+canino<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-align:justify;text-indent:-18.0pt;mso-list:l3 level1 lfo14'><![if !supportLists]><span
+lang=ES-TRAD style='font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=ES-TRAD style='font-family:"Times New Roman","serif"'>Limpieza
+dental<o:p></o:p></span></p>
+
+<p><span>Su ejecución dependerá de cada cuidador
+según sea el servicio y situación que se presente. <o:p></o:p></span></p>
+
+<p><b><span>8. Cancelación
+o cambio a las citas, reservaciones o servicios adicionales.<u><o:p></o:p></u></span></b></p>
+
+<p><span>Existen cuatro tipos de opciones para los
+cambios o cancelaciones:<o:p></o:p></span></p>
+
+<p><span>8.1. Cancelación de
+una cita:<o:p></o:p></span></p>
+
+<p><span>a. Si el cliente
+cancela la cita, se enviará una notificación al cuidador y a <b><i>Kmimos</i></b><o:p></o:p></span></p>
+
+<p><span>b. Si el cuidador
+cancela la cita, se enviará una notificación al cliente y a <b><i>Kmimos</i></b><o:p></o:p></span></p>
+
+<p><span>8.2. Cancelación de reservación:<span
+style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></span></p>
+
+<p><span>a. Si el cliente
+cancela la reservación, con menos de 48 horas a la fecha y hora de entrada o
+check-in, se enviara una notificación al cuidador y a <b><i>Kmimos</i></b>, y se hará el
+cargo equivalente al 20% de la reservación. <o:p></o:p></span></p>
+
+<p><span>b. Si el cuidador
+cancela la reservación con menos de 48 horas a la fecha y hora de entrada o
+check-in, se enviara una notificación al cliente y a <b><i>Kmimos</i></b>, y se hará el
+cargo equivalente al 20% de la reservación. <o:p></o:p></span></p>
+
+<p><span>8.3. Cancelación de
+servicio adicional:<o:p></o:p></span></p>
+
+<p><span>a. Si el cliente
+cancela la reservación, se enviará una notificación al cuidador y a <b><i>Kmimos</i></b>,
+y se hará el cargo de un 20% por el costo del servicio.<o:p></o:p></span></p>
+
+<p><span>b. Si el cuidador
+cancela la reservación, se enviará una notificación al cliente y a <b><i>Kmimos</i></b>,
+y se hará el cargo de un 20% por el costo del servicio.<o:p></o:p></span></p>
+
+<p><span>8.4. Cambio de
+información de una cita:<o:p></o:p></span></p>
+
+<p><span>a. Si el cliente
+cambio la información de la cita, se enviará una notificación al cuidador y a <b><i>Kmimos</i></b>,
+para esperar la aprobación del cuidador y proceder con la cita.<o:p></o:p></span></p>
+
+<p><span>b. Si el cuidador
+cambio la información de la cita, se enviará una notificación al cliente y a <b><i>Kmimos</i></b>,
+para esperar la aprobación del cliente y proceder con la cita.<o:p></o:p></span></p>
+
+<p><span>8.5. Cambio de
+información de una reservación:<o:p></o:p></span></p>
+
+<p><span>a. Si el cliente
+cambio la información de la reservación, se enviará una notificación al
+cuidador y a <b><i>Kmimos</i></b>, para esperar la aprobación del cuidador y proceder con
+los cambios, cargos o devoluciones de la reservación.<o:p></o:p></span></p>
+
+<p><span>b. Si el cuidador
+cambio la información de la reservación, se enviará una notificación al cliente
+y a <b><i>Kmimos</i></b>,
+para esperar la aprobación del cliente y proceder con los cambios, cargos o
+devoluciones de la reservación.<o:p></o:p></span></p>
+
+<p><span>8.6. Cambio de
+información de un servicio adicional<o:p></o:p></span></p>
+
+<p><span>a. Si el cliente
+cambio la información de un servicio adicional, se enviará una notificación al
+cuidador y a <b><i>Kmimos</i></b>, para esperar la aprobación del cuidador y proceder con
+los cambios, cargos o devoluciones de la reservación del servicio adicional.<o:p></o:p></span></p>
+
+<p><span>b. Si el cuidador
+cambio la información de un servicio adicional, se enviará una notificación al
+cliente y a <b><i>Kmimos</i></b>, para esperar la aprobación del cliente y proceder con
+los cambios, cargos o devoluciones de la reservación del servicio adicional.<o:p></o:p></span></p>
+
+<p><b><span>9. Cargos
+adicionales y comisiones.<o:p></o:p></span></b></p>
+
+<p><b><i><span>Kmimos</span></i></b><span>
+podrá generar cargos adicionales y/o comisiones según las condiciones de los
+servicios contratados a través de la plataforma que se enlistan en el siguiente
+apartado.<o:p></o:p></span></p>
+
+<p><span>9.1. Reservación exprés:
+Se cobra un monto del 50% de una noche de la estadía escogida si la reservación
+contratada se agenda con menos de 24 hrs. a la ejecución del servicio.<o:p></o:p></span></p>
+
+<p><span>9.2. Servicio
+adicional exprés: Se cobra un monto del 50% del servicio adicional contratado
+si se agenda con menos de 24 hrs. a la ejecución del servicio.<o:p></o:p></span></p>
+
+<p><span>9.3. Comisión por
+uso de plataforma al cliente: <o:p></o:p></span></p>
+
+<p><span>a.<b><i> Kmimos</i></b>
+hará un cargo de 20% sobre el monto a pagar por cada noche reservada,
+contratadas por la plataforma, por concepto de gastos administrativos.<o:p></o:p></span></p>
+
+<p><span>b.<b><i> Kmimos</i></b>
+hará un cargo de 20% sobre el monto de cada servicio adicional contratado por
+la plataforma, por concepto de gastos administrativos.<o:p></o:p></span></p>
+
+<p><b><span>10. Encuesta
+de satisfacción y evaluación del servicio.<o:p></o:p></span></b></p>
+
+<p><b><i><span>Kmimos</span></i></b><span> para
+garantizar un servicio de calidad podrá contactar a los clientes que hayan
+tenido alguna cita, reservación o servicio adicional contratado por la
+plataforma. Se contactará por vía telefónica, correo electrónico, o medios web
+(WhatsApp, plataforma, etc.) En esta encuesta se llevará a cabo un cuestionario
+realizado por el personal de </span><b><i><span>Kmimos</span></i></b><span>
+enfocado a mejorar el servicio de la plataforma web y experiencia vivida por el
+servicio obtenido.<o:p></o:p></span></p>
+
+<p><span>De igual manera, Kmimos permitirá la
+evaluación de los cuidadores y clientes, por medio de un modelo de ponderación,
+evaluando los siguientes puntos para cualquiera de los dos casos:<o:p></o:p></span></p>
+
+<p><span>10.1. Cuidador:<o:p></o:p></span></p>
+
+<p><span>a. Limpieza<o:p></o:p></span></p>
+
+<p><span>b. Confianza<o:p></o:p></span></p>
+
+<p><span>c. Puntualidad<o:p></o:p></span></p>
+
+<p><span>d, Cuidado<o:p></o:p></span></p>
+
+<p><span>10.2. Cliente:<o:p></o:p></span></p>
+
+<p><span>a. Puntualidad en
+pago;<o:p></o:p></span></p>
+
+<p><span>b. Certeza de
+información proporcionada. <o:p></o:p></span></p>
+
+<p><b><u><span><o:p><span>&nbsp;</span></o:p></span></u></b></p>
+
+<p><b><span>11. Donaciones.<o:p></o:p></span></b></p>
+
+<p><b><i><span>Kmimos</span></i></b><span> podrá
+ser un conducto por el cual algunas Fundaciones puedan obtener donaciones en
+dinero o a través de insumos por parte de los clientes, que pueden ser
+traducidas en transferencias electrónicas o entrega de los insumos, dependiendo
+la elección de la fundación.<o:p></o:p></span></p>
+
+<p><b><span>12. Newsletter.<o:p></o:p></span></b></p>
+
+<p><b><i><span>Kmimos</span></i></b><span> podrá emitir información como
+considere, vía correo electrónico, telefónica o medios web a los usuarios que
+estén inscritos o registrados en la plataforma, con la opción de que estos usuarios
+puedan cancelar la subscripción a este newsletter.<o:p></o:p></span></p>
+
+<p><span><o:p>&nbsp;</o:p></span></p>
+
+<p><b><u><span>IV. Productos Prohibidos.<o:p></o:p></span></u></b></p>
+
+<p>Restricciones y prohibiciones:<o:p></o:p></span></p>
+
+<p>Al usar el sitio, usted presta
+su consentimiento a las restricciones y prohibiciones para la publicación de
+productos que aquí se detallan.<o:p></o:p></span></p>
+
+<p>Esta lista no debe
+considerarse taxativa y se actualizará de forma continua. Si no está seguro
+respecto de la legalidad o conveniencia de la publicación del producto que Ud.
+desea ofertar en el sitio, por favor contáctese con nosotros.<o:p></o:p></span></p>
+
+<p>Prohibiciones Generales:<o:p></o:p></span></p>
+
+<p>Se prohíbe publicar cualquier
+producto, servicio o equipo que este restringido o prohibido por una autoridad
+territorial o gobierno nacional de Colombia, o por la legislación internacional.
+Tome en cuenta que algunos productos pueden estar prohibidos por leyes de una
+jurisdicción distinta a la cual usted reside. Al colocar un anuncio en <b><i>Kmimos</i></b>,
+usted confirma que su anuncio cumple con todas las reglamentaciones aplicables
+en los países a los cuales está dirigido el anuncio.<br>
+<br>
+A continuación se detalla una lista de algunas categorías de artículos cuya
+publicación en el Sitio está prohibida o restringida. Esta enumeración es
+enunciativa y no incluye todas las posibilidades existentes, por lo que usted
+como vendedor es responsable de garantizar que no publicará un producto que se
+encuentre prohibido por la ley o que sea similar en uso u objetivo a los
+listados a continuación. <b><i>Kmimos</i></b> se reserva el derecho de
+imponer nuevas restricciones y prohibiciones a su sola discreción.<o:p></o:p></span></p>
+
+<p>Se prohíbe explícitamente la
+publicación de los siguientes artículos:<o:p></o:p></span></p>
+
+<ol>
+ <li><span>Material pornográfico, servicios de acompañantes, prostitución o
+     contenido relacionado con estos servicios. Pornografía infantil, pornografía
+     que describa modelos menores de edad y prácticas sexuales ilegales. <o:p></o:p></span></li>
+ <li><span>Anuncios que promuevan la violencia o pronunciarse en contra de un
+     grupo definido por raza u origen étnico, color, nacionalidad, religión,
+     discapacidad, sexo, edad, orientación sexual o identidad sexual. Los
+     usuarios del sitio deben utilizar textos que guarden la sensibilidad
+     adecuada para aquellos que puedan leerlos. También se prohíben materiales
+     nazis, de la KKK, de organizaciones que inciten al odio y de
+     organizaciones terroristas.<o:p></o:p></span></li>
+ <li><span>Anuncios que promocionen técnicas de marketing masivo como listas
+     de correos, software de correos electrónicos masivos, mensajes masivos.<o:p></o:p></span></li>
+ <li><span>Promoción de la copia o distribución de contenido protegido con
+     derechos de autor sin consentimiento de su propietario y que de otra
+     manera no esté permitido por la ley. Falsificaciones, réplicas no
+     autorizadas o artículos no autorizados como prendas de vestir, relojes,
+     bolsos, anteojos de sol u otros accesorios de marca.<o:p></o:p></span></li>
+ <li><span>Promoción de imitaciones o productos falsificados. Artículos que
+     contengan la imagen, nombre o firma de otra persona, a menos que los
+     productos fueran realizados o autorizados por la persona cuya semejanza,
+     imagen, nombre o firma se ha utilizado. Copias no autorizadas (piratas,
+     duplicados, copias de seguridad, etc.) de programas de software,
+     videojuegos, discos musicales, películas, programas de televisión,
+     fotografías u otras obras protegidas.<o:p></o:p></span></li>
+ <li><span>Productos que sean o se asemejen a identificaciones oficiales del
+     gobierno, como certificados de nacimiento, licencias de conducir, visas o
+     pasaportes, tarjetas de seguro social, documentos de inmigración, diplomas
+     y títulos profesionales.<o:p></o:p></span></li>
+ <li><span>Identificaciones o artículos de uniforme que aparenten ser o sean
+     similares a uniformes militares oficiales. Insignias de las fuerzas de
+     seguridad o insignias oficiales de cualquier autoridad pública<o:p></o:p></span></li>
+ <li><span>Drogas, artículos relacionados y ayudas para superar controles de
+     drogas. Esto incluye drogas ilegales, drogas herbales y drogas respecto de
+     las cuales es necesaria prescripción médica para su compra. También
+     incluye las materias primas, precursores u objetos destinados a la
+     producción o consumo de drogas.<o:p></o:p></span></li>
+ <li><span>Promoción de productos que se obtienen a partir de especies en vías
+     de extinción o amenazadas. Esto incluye, pero no se limita a, la venta de
+     productos derivados de elefantes, tiburones, tigres, ballenas,
+     rinocerontes y delfines o animales vivos o partes de animales que se
+     encuentren protegidos por la Convención sobre el Comercio Internacional de
+     Especies Amenazadas de Fauna y Flora Silvestres ('CITES').<o:p></o:p></span></li>
+ <li><span>Promoción de fuegos artificiales y dispositivos pirotécnicos. <o:p></o:p></span></li>
+ <li><span>Promoción de la piratería y de las herramientas que ayudan a
+     infringir los derechos de autor.<o:p></o:p></span></li>
+ <li><span>Hormona de crecimiento humana (HGH) inyectable.<o:p></o:p></span></li>
+ <li><span>DHEA y melatonina.<o:p></o:p></span></li>
+ <li><span>Esteroides anabolizantes, anabólicos para aumentar los músculos,
+     suplementos de esteroides para el culturismo y contenido relacionado.<o:p></o:p></span></li>
+ <li><span>Efedra y efedrina (incluidos los productos que contienen efedra o
+     efedrina). <o:p></o:p></span></li>
+ <li><span>Curas milagrosas para enfermedades de personas o animales.
+     Afirmaciones de cualidades terapéuticas falsas o no probadas
+     científicamente.<o:p></o:p></span></li>
+ <li><span>Promoción de contenido para celulares que no muestre la estructura
+     de precios de manera clara y precisa.<o:p></o:p></span></li>
+ <li><span>Servicios de redacción de ensayos o de realización de exámenes.<o:p></o:p></span></li>
+ <li><span>Nombres propios para promocionar sitios de búsqueda de personas,
+     sitios de investigación de médicos y abogados, y sitios de detectives.<o:p></o:p></span></li>
+ <li><span>Solicitudes de donaciones que no estén exentas de impuestos.<o:p></o:p></span></li>
+ <li><span>Tabaco y de productos relacionados con el tabaco.<o:p></o:p></span></li>
+ <li><span>Productos que se diseñaron principalmente para evadir las leyes de
+     tránsito.<o:p></o:p></span></li>
+ <li><span>Armas de cualquier tipo, como por ejemplo armas de fuego,
+     componentes de armas de fuego, municiones, navajas plegables, navajas
+     automáticas y navajas de mariposa, así como municiones, artillería
+     militar, armas de asalto, y sus repuestos o accesorios. Incluye también
+     las réplicas, o artículos de aspecto similar o las imitaciones de armas de
+     fuego. <o:p></o:p></span></li>
+ <li><span>Artículos arqueológicos, reliquias culturales y artículos que estén
+     protegidos bajo las leyes internacionales.<o:p></o:p></span></li>
+ <li><span>Billetes, monedas, sellos, bonos, giros postales, y cualquier otro
+     valor, así como cualquier equipo o elemento para la producción de dichos
+     artículos.<o:p></o:p></span></li>
+ <li><span>Boletos para espectáculos y eventos (a menos de que usted pueda asegurar
+     que su transacción no viole cualquier ley aplicable o las condiciones
+     indicadas en el propio boleto).<o:p></o:p></span></li>
+ <li><span>Personas, cuerpos humanos, órganos humanos o cualquier parte del
+     cuerpo humano.<o:p></o:p></span></li>
+ <li><span>Artículos robados.<o:p></o:p></span></li>
+</ol>
+
+<p><span>Antes de
+publicar un producto en el Sitio, usted deberá estar seguro que conoce las
+limitaciones legales que podría tener para realizar la publicación y se debe
+garantizar que la transacción que busca realizar es legal y que no viola
+ninguna obligación contractual.<br>
+<br>
+Los siguientes productos, aunque no están prohibidos, su publicación se rige
+por leyes específicas que pueden variar de país en país o que requieren
+permisos especiales específicos por cada país. Por favor consulte con <b><i>Kmimos</i></b>
+antes de publicar algún producto que entre dentro de estas categorías para
+asegurarse que cumple con la normatividad específica.<o:p></o:p></span></p>
+
+<ol>
+ <li><span>Promoción de bebidas de alta graduación alcohólica y bebidas
+     espirituosas.<o:p></o:p></span></li>
+ <li><span>Promoción de sitios web de juegos de apuestas en línea.<o:p></o:p></span></li>
+ <li><span>Farmacias en línea y de medicamentos con receta.<o:p></o:p></span></li>
+</ol>
+
 </div>
+
+</body>
+
+</html>

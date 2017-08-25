@@ -9,10 +9,11 @@
 /*	session_destroy();
 
 	session_start();*/
+	include("../../../../../../wp-load.php");
+	include("../../../../../../vlz_config.php");
+	$conn = new mysqli($host, $user, $pass, $db);
 
 	if( isset($a) ){
-		include("../../../../../../vlz_config.php");
-		$conn = new mysqli($host, $user, $pass, $db);
 
 		$param = explode("_", $a);
 
@@ -163,10 +164,6 @@
 
 	if( isset($b) ){
 
-		include("../../../../../../wp-load.php");
-
-		$conn = new mysqli($host, $user, $pass, $db);
-
 		global $wpdb;
 		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 			$wpdb->query( "DELETE FROM wp_posts WHERE ID = ".$cart_item["booking"]["_booking_id"] );
@@ -185,20 +182,26 @@
 
 		$sql = "SELECT * FROM wp_woocommerce_order_items WHERE order_id = '{$orden_id}' AND order_item_type = 'coupon' AND order_item_name NOT LIKE '%saldo-%'";
         $otros_cupones = $conn->query($sql);
-    	while ( $cupon = $otros_cupones->fetch_assoc() ) {
-            $cupon_id = $conn->query("SELECT ID FROM wp_posts WHERE post_title = '{$cupon['order_item_name']}'");
-            $cupon_id = $cupon_id->fetch_assoc();
-            $cupon_id = $cupon_id["ID"];
 
-            $conn->query("INSERT INTO wp_postmeta VALUES (NULL, '{$cupon_id}', '_used_by', '{$user_id}' )");
-        }
+		while ( $cupon = $otros_cupones->fetch_assoc() ) {
 
-		$home = $conn->query("SELECT option_value AS server FROM wp_options WHERE option_name = 'siteurl'"); $home = $home->fetch_assoc();
+			$cupon_id = $conn->query("SELECT ID FROM wp_posts WHERE post_title = '{$cupon['order_item_name']}'");
+			$cupon_id = $cupon_id->fetch_assoc();
+			$cupon_id = $cupon_id["ID"];
+
+			$conn->query("INSERT INTO wp_postmeta VALUES (NULL, '{$cupon_id}', '_used_by', '{$user_id}' )");
+		}
+
+
+
+		$home = $conn->query("SELECT option_value AS server FROM wp_options WHERE option_name = 'siteurl'");
+		$home = $home->fetch_array();
 		foreach ($_SESSION as $key => $value) {
 			if(	substr($key, 0, 3) == "MR_" ){
 				unset($_SESSION[$key]);
 			}
 		}
+
 
 		header("location: ".$home['server']."perfil-usuario/?ua=invoices");
 	}

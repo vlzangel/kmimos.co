@@ -82,13 +82,14 @@
 									    font-size: 20px;
 									    font-weight: bold;
 									    padding: 9px 30px 9px 30px;
-									    margin-top: 20px;"
+									    margin-top: 20px;
+									    display:none;"
 		    							onclick="jQuery('#modal_instrucciones').css('display', 'block');">
 		    							 Instrucciones </a>
     							</h1>
 								<div class="vlz_sub_titulo">Para registrarte como cuidador de Kmimos, llena este formulario y nos pondremos en contacto contigo.</div>
 							</div>
-							<div class="vlz_cell25 vlz_banner_cuidador_contenedor">
+							<div class="vlz_cell25 vlz_banner_cuidador_contenedor" style="display: none">
 								<img class="vlz_banner_cuidador" src="<?php echo get_home_url(); ?>/wp-content/themes/pointfinder/images/banner_cuidador.png">
 							</div>
 						</div>
@@ -449,20 +450,20 @@
 													<br>
 													<table style="border-radius: 2px">
 														<tbody><tr>
-															<td>Tallas pequeñas:</td>
-															<td>(0 a 25 cm de alto) 20 a 30 Pesos</td>
+															<td>Tamaño pequeño:</td>
+															<td>$20,000 a $30,000 COP Por noche</td>
 														</tr>
 														<tr>
-															<td>Tallas medianas:</td>
-															<td>(25 a 50 cm de alto) 25 a 35 Pesos</td>
+															<td>Tamaño mediano:</td>
+															<td>$25,000 a $35,000 COP Por noche</td>
 														</tr>
 														<tr>
-															<td>Tallas grandes</td>
-															<td>(50 a 80 cm de alto) 30 a 40 Pesos</td>
+															<td>Tamaño grande:</td>
+															<td>$35,000 a $40,000 COP Por noche</td>
 														</tr>
 														<tr>
-															<td>Tallas gigantes:</td>
-															<td>(80cm en adelante de alto) 35 a 50 Pesos</td>
+															<td>Tamaño gigante:</td>
+															<td>$35,000 a $50,000 COP Por noche</td>
 														</tr>
 													</tbody></table>
 													<br>
@@ -484,10 +485,10 @@
 								<div class="vlz_seccion">
 									<?php
 										$txts = array(
-											"pequenos" => "Te sugerimos un precio entre 20 a 30 Pesos.",
-											"medianos" => "Te sugerimos un precio entre 25 a 35 Pesos.",
-											"grandes"  => "Te sugerimos un precio entre 30 a 40 Pesos.",
-											"gigantes" => "Te sugerimos un precio entre 35 a 50 Pesos"
+											"pequenos" => "Te sugerimos un precio entre $20,000 a $30,000 COP Por noche.",
+											"medianos" => "Te sugerimos un precio entre $25,000 a $35,000 COP Por noche.",
+											"grandes"  => "Te sugerimos un precio entre $35,000 a $40,000 COP Por noche.",
+											"gigantes" => "Te sugerimos un precio entre $35,000 a $50,000 COP Por noche."
 										);
 										foreach ($tam as $key => $value) {
 											echo '
@@ -593,7 +594,7 @@
 
 							</div>
 
-							<div class="vlz_banner_footer">
+							<div class="vlz_banner_footer" style="display: none;">
 								<div class="vlz_cell25">
 									<img src="<?php echo get_home_url(); ?>/wp-content/themes/pointfinder/images/hombre.png">
 								</div>
