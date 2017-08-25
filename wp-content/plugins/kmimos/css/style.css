@@ -1,4 +1,7 @@
 #message,
 .message{color: #fff; font-size: 20px; line-height: 1.2; background: #5e1775; display:none;}
-#message{position: fixed; width: 100%; bottom: 0; padding: 20px; text-align: center; box-shadow: 0 0 3px #CCC; visibility: hidden; display:none;}
+#message{position: fixed; width: 100%; bottom: 0; padding: 20px; text-align: center; box-shadow: 0 0 3px #CCC;}
 .message{position: relative; padding: 10px !important; margin: 10px 0; border: 1px solid #CCC; border-radius: 5px;}
+
+#message.PopUp{position: fixed; width: 100%; height: 100%; top: 0;  left: 0; color: #FFF; background: rgba(0,0,0,0.6); display: none; z-index: 1000;}
+#message.PopUp .contain{ position: relative; width: 95%; max-width: 100%; margin: 0 auto;}

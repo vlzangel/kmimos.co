@@ -47,7 +47,7 @@ function message_subscribe(element){
 
 
 
-function SubscribePopUp_Create(html){console.log(html);
+function SubscribePopUp_Create(html){
     var element = '#message.Msubscribe';
     if(jQuery(element).length==0){
         jQuery('body').append('<div id="message" class="Msubscribe"></div>');

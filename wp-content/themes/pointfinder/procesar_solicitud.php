@@ -149,7 +149,7 @@
 			}
 
 			$asunto     = 'Solicitud para conocer a cuidador';
-			$headers[]  = 'From: Kmimos México <kmimos@kmimos.la>';
+			$headers[]  = 'From: Kmimos Colombia <kmimos@kmimos.la>';
 
 			$saludo_admin   = '<p><strong>Hola,</strong></p>';
 			$service_id     = $_POST['type_service'];

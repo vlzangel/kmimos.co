@@ -148,6 +148,9 @@ if(!function_exists('kmimos_mails_administradores_new')){
                             case 'guarderia':
                                 $r .= '<span class="tooltip icono-servicios"><span class="tooltiptext">Guardería</span><i class="icon-guarderia"></i></span>';
                             break;
+                            case 'paseos':
+                                $r .= '<span class="tooltip icono-servicios"><span class="tooltiptext">Paseos</span><i class="icon-paseos"></i></span>';
+                                break;
                             case 'adiestramiento_basico':
                                 $adiestramiento = true;
                             break;
@@ -235,11 +238,12 @@ if(!function_exists('kmimos_mails_administradores_new')){
 
     if(!function_exists('kmimos_get_foto_cuidador')){
         function kmimos_get_foto_cuidador($id){
-            global $wpdb;
+            global $wpdb, $home;
             $cuidador = $wpdb->get_row("SELECT * FROM cuidadores WHERE id = ".$id);
             $name_photo = $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = {$cuidador->user_id} AND meta_key = 'name_photo'");
-            if( !empty($name_photo)  ){ 
-                $img = $home."/wp-content/uploads/cuidadores/avatares/{$cuidador->user_id}/{$name_photo}"; 
+            if( !empty($name_photo)  ){
+                $name_photo = str_replace('.jpg','',$name_photo);
+                $img = $home."/wp-content/uploads/avatares/{$cuidador->user_id}/{$name_photo}.jpg";
             }
             return $img;
         }

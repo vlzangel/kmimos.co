@@ -51,9 +51,9 @@
             <div class="contact">
                 <div class="group contain">
                     <div class="section redes">
-                        <a href="https://www.facebook.com/Kmimosmx/" target="_blank"><i class="icon phone fa fa-facebook"></i></a>
-                        <a href="https://twitter.com/kmimosmx/" target="_blank"><i class="icon phone fa fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/kmimosmx/" target="_blank"><i class="icon phone fa fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Kmimosco/" target="_blank"><i class="icon phone fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/Kmimosco/" target="_blank"><i class="icon phone fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/Kmimosco/" target="_blank"><i class="icon phone fa fa-instagram"></i></a>
                     </div>
                     <div class="section menu">
                         <div class="item title">Acerca De Nosotros</div>

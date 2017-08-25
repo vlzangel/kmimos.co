@@ -99,7 +99,7 @@ $HTML = "</div></div>
                     <div class='socialBtns'>
                         <a href='https://www.facebook.com/".$datos['facebook']."/' target='_blank' class='facebookBtn socialBtn' title='".$datos['facebook']."'></a>
                         <a href='https://twitter.com/".$datos['twitter']."/' target='_blank' class='twitterBtn socialBtn' title='@".$datos['twitter']."'></a>
-                        <a href='#' target='_blank' class='instagramBtn socialBtn' title='@".$datos['instagram']."'></a>
+                        <a href='https://www.instagram.com/".$datos['instagram']."/' target='_blank' class='instagramBtn socialBtn' title='@".$datos['instagram']."'></a>
                         <img src='".get_bloginfo( 'template_directory', 'display' )."/images/dog.png' alt=''>
                     </div>
                 </div>

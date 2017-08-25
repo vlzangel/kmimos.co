@@ -131,7 +131,7 @@ if(array_key_exists('search',$_POST)){
                     <span>Habla con nosotros</span>
                     <span>
                     <i class="icon phone fa fa-phone"></i>
-                    01 800 056 4667 <strong>WhatsApp:</strong>  +52 (55) 6892 2182
+                    +57 (1) 593 8719 <strong>WhatsApp:</strong> +57 318 350 2391
                     </span>
                     <div id="pf-login-trigger-button" class="session">Inicia Sesión</div>
                     <i class="icon help fa fa-question"></i>
@@ -161,7 +161,7 @@ if(array_key_exists('search',$_POST)){
                 </div>
 
                 <div class="phone section">
-                    01 800 056 4667<br><strong>WhatsApp:</strong>  +52 (55) 6892 2182
+                    +57 (1) 593 8719 <br><strong>WhatsApp:</strong> +57 318 350 2391
                 </div>
 
                 <div class="search section">
@@ -175,9 +175,9 @@ if(array_key_exists('search',$_POST)){
             <div class="header contain">
                 <div class="logo"></div>
                 <div class="redes">
-                    <a href="https://www.facebook.com/Kmimosmx/"><i class="icon phone fa fa-facebook"></i></a>
-                    <a href="https://twitter.com/kmimosmx/"><i class="icon phone fa fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/kmimosmx/"><i class="icon phone fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/Kmimosco/"><i class="icon phone fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/Kmimosco/"><i class="icon phone fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/Kmimosco/"><i class="icon phone fa fa-instagram"></i></a>
                     <i class="icon bolsa"></i>
                 </div>
 
