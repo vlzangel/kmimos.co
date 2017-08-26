@@ -131,7 +131,7 @@
         "adiestramiento_basico"     => "8372",
         "adiestramiento_intermedio" => "8372",
         "adiestramiento_avanzado"   => "8372",
-        "paseos"                    => "8372"
+        "paseos"                    => "11009"
     );
 
     $db = new db($conn);
