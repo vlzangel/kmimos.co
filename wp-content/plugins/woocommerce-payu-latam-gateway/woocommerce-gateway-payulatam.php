@@ -198,7 +198,7 @@ function woocommerce_payulatam_init(){
       			'description' => array(
 					'title' 		=> __('Description:', 'payu-latam-woocommerce'),
 					'type' 			=> 'textarea',
-					'default' 		=> __('Pay securely by Credit or Debit Card or Internet Banking through PayU Latam Secure Servers.','payu-latam-woocommerce'),
+					'default' 		=> "Pague con tarjeta de crédito, debito o transacción bancaria de forma segura a través de los servidores seguros de PayU Latinoamérica. xxx",
 					'description' 	=> __('This controls the description which the user sees during checkout.', 'payu-latam-woocommerce'),
 					'desc_tip' 		=> true
 				),
@@ -325,7 +325,13 @@ function woocommerce_payulatam_init(){
 	     * @return string
 	     */
 		function payment_fields(){
-			if($this->description) echo wpautop(wptexturize($this->description));
+			 echo "
+			<div style='font-size: 16px; margin-bottom: 5px;'>
+				Pague con tarjeta de crédito, debito o transacción bancaria de forma segura a través de los servidores seguros de PayU Latinoamérica.
+			</div>
+			<div style='font-size: 16px;'>
+				<span style='color: red; font-weight: 600;'>Importante:</span> Para finalizar con éxito el proceso de reserva, es necesario pulsar el enlace <span style='color: red; font-weight: 600;'>Regresar al sitio de la tienda</span> que se encuentra al final del comprobante de pago.
+			</div>";
 		}
 		/**
 		 * Generate the PayU Latam Form for checkout
