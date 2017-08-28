@@ -465,6 +465,11 @@ function woocommerce_payulatam_init(){
 	     */
 		function process_payment( $order_id ) {
 			$order = new WC_Order( $order_id );
+
+			if( !isset($_SESION) ){ session_start(); }
+
+			$_SESION["orden_actual"] = $order_id;
+
 			if ( $this->form_method == 'GET' ) {
 				$payulatam_args = $this->get_payulatam_args( $order_id );
 				$payulatam_args = http_build_query( $payulatam_args, '', '&' );
@@ -558,6 +563,10 @@ function woocommerce_payulatam_init(){
 	        
 
 	        	$state=$posted['transactionState'];
+
+				if( !isset($_SESSION) ){ session_start(); }
+				$_SESSION["orden_actual"] = $order->id;
+
 	        	// We are here so lets check status and do actions
 		        switch ( $codes[$state] ) {
 		            case 'APPROVED' :
@@ -641,6 +650,7 @@ function woocommerce_payulatam_init(){
 		* 
 		 */
 		function payulatam_confirmation_process($posted){
+
 			global $woocommerce;
 			    $order = $this->get_payulatam_order( $posted );
 

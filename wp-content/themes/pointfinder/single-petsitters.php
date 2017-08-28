@@ -285,22 +285,13 @@
 		<div class="vlz_separador"></div>
 		<h3 class="vlz_titulo">Estos son mis servicios</h3>
 		<div class="vlz_seccion">';
-			$args = array(
-				"post_type" => "product",
-		        "post_status" => "publish",
-		        "author" => $cuidador->user_id
-		    );
-
-		    $products = get_posts( $args );
-
-		    $ids = "";
-		    foreach($products as $product){
-		        if( $ids != "") $ids .= ",";
-		        $ids .= $product->ID;
+			$productos = $wpdb->get_results("SELECT ID FROM wp_posts WHERE post_author = {$cuidador->user_id} AND post_type = 'product' AND post_status = 'publish' ");
+			$xids = array();
+		    foreach ($productos as $key => $value) {
+		    	$xids[] = $value->ID;
 		    }
-
-		    if($ids != ""){
-		        $comando = "[products ids='".$ids."']";
+		    if( count($xids) > 0 ){
+		        $comando = "[products ids='". implode(",", $xids) ."'] ";
 		        $HTML .= do_shortcode($comando);
 		    } $HTML .= "
 		</div>";
