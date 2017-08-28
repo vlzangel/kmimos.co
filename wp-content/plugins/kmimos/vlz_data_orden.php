@@ -74,7 +74,7 @@
 	    foreach ($sugeridos as $key => $cuidador) {
 	        $name_photo = get_user_meta($cuidador->user_id, "name_photo", true);
 			$cuidador_id = $cuidador->id;
-			$img = kmimos_get_foto_cuidador($cuidador->user_id);
+			$img = kmimos_get_foto_cuidador($cuidador->id);
 	        $post = get_post($cuidador->id_post);
 	        $str_sugeridos_img .= '
 	        	<div style="display: inline-block; width: 49%; text-align: center; min-width: 239px;">
