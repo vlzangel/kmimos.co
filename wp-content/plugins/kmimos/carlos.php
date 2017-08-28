@@ -145,4 +145,33 @@ function update_additional_service_postname(){
 	}
 }
 
+
+
+//UPDATE Image Services
+function update_image_service(){
+	$imgs_product = array(
+		"paseos"   => array("1111x","11009"),
+		"hospedaje"         => array("55477","8370"),
+		"guarderia"         => array("55478","8371"),
+		"adiestramiento_basico"     => array("55479","8372"),
+		"adiestramiento_intermedio" => array("55479","8372"),
+		"adiestramiento_avanzado"   => array("55479","8372"),
+	);
+
+	global $wpdb;
+	foreach($imgs_product as $service => $imag){
+		$img_old=$imag[0];
+		$img_new=$imag[1];
+
+		$sql = "SELECT * FROM wp_postmeta WHERE meta_key = '_thumbnail_id' AND meta_value = '$img_old'";
+		$result = $wpdb->get_results($sql);
+		foreach ($result as $row){
+			$ID =  $row->meta_id;
+			$sql = "UPDATE wp_postmeta SET meta_value = '$img_new' WHERE meta_id = '$ID';";
+			$wpdb->query($sql);
+			//var_dump($sql);
+		}
+	}
+}
+
 ?>

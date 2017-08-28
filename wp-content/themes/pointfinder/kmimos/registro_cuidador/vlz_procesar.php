@@ -71,7 +71,8 @@
             "guarderia"         => "8371",
             "adiestramiento_basico"     => "8372",
             "adiestramiento_intermedio" => "8372",
-            "adiestramiento_avanzado"   => "8372"
+            "adiestramiento_avanzado"   => "8372",
+            "paseos"         => "11009"
         );
 
         $temp = array();

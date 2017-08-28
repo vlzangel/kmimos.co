@@ -46,7 +46,14 @@
     /* Fin Filtros por servicios y tamaños */
 
     /* Filtros por fechas */
-	    if( isset($checkin)  && $checkin  != '' && isset($checkout) && $checkout != '' ){ 
+	    if( isset($checkin)  && $checkin  != '' && isset($checkout) && $checkout != '' ){
+
+			$checkin = DateTime::createFromFormat('d/m/Y', $checkin);
+			$checkin = $checkin->format('Y-m-d');
+
+			$checkout = DateTime::createFromFormat('d/m/Y', $checkout);
+			$checkout = $checkout->format('Y-m-d');
+
 	    	$condiciones .= "
 	    		AND ( 
 	    			SELECT 
@@ -56,7 +63,7 @@
 	    			WHERE 
 	    				cupos.cuidador = cuidadores.user_id AND 
 	    				{$servicios_buscados} 
-	    				cupos.fecha >= '{$checkin}' AND 
+	    				cupos.fecha >= '{$checkin}' AND
 	    				cupos.fecha <= '{$checkout}' AND (
 	    					cupos.full = 1 OR 
 	    					cupos.no_disponible = 1
