@@ -585,7 +585,7 @@ function woocommerce_payulatam_init(){
 		            	if ( $order->status == 'completed' ) {
 		            		 if ( 'yes' == $this->debug )
 		            		 	$this->log->add( 'payulatam', __('Aborting, Order #' . $order->id . ' is already complete.', 'payu-latam-woocommerce') );
-		            		 exit;
+		            		//exit;
 		            	}
 
 						// Validate Amount
