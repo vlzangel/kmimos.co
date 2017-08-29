@@ -45,6 +45,13 @@
         function kmimos_set_kmisaldo($id_cliente, $id_orden, $id_reserva){
             global $wpdb;
 
+            $metodo_card = array(
+                "CREDIT_CARD",
+                "2",
+                "DEBIT_CARD",
+                "6"
+            );
+
             $status = $wpdb->get_var("SELECT post_status FROM wp_posts WHERE ID = {$id_orden}");
 
             $metas_orden = get_post_meta($id_orden);
@@ -61,10 +68,12 @@
 
             $saldo = 0;
 
-            if( $deposito['enable'] == 'yes' ){
-                $saldo = $deposito['deposit'];
-            }else{
-                $saldo = $items['_line_total'];
+            if( in_array($metodo, $metodo_card)){
+                if( $deposito['enable'] == 'yes' ){
+                    $saldo = $deposito['deposit'];
+                }else{
+                    $saldo = $items['_line_total'];
+                }
             }
 
             $descuento = 0;
@@ -72,21 +81,12 @@
             if( $order_item_id != '' ){
                 $descuento = $wpdb->get_var("SELECT meta_value FROM wp_woocommerce_order_itemmeta WHERE order_item_id = '{$order_item_id}' AND meta_key = 'discount_amount' ");
             }
+            $saldo = $descuento;
 
             $otros_cupones = $wpdb->get_results("SELECT * FROM wp_woocommerce_order_items WHERE order_id = '{$id_orden}' AND order_item_type = 'coupon' AND order_item_name NOT LIKE '%saldo-%'");
             foreach ($otros_cupones as $key => $value) {
                 $cupon_id = $wpdb->get_var("SELECT ID FROM wp_posts WHERE post_title = '{$value->order_item_name}'");
                 $wpdb->query("DELETE FROM wp_postmeta WHERE post_id = '{$cupon_id}' AND meta_key = '_used_by' AND meta_value = '{$id_cliente}'");
-            }
-
-            // En pago en tienda pasa de wc-on-hold a: wc-partially-paid OR wc-completed
-            if(
-                $metas_orden['Metodo de Pago Usado'][0] != 'CREDIT_CARD' && $metas_orden['Metodo de Pago Usado'][0] != '2' && 
-                $metas_orden['Metodo de Pago Usado'][0] != 'DEBIT_CARD'  && $metas_orden['Metodo de Pago Usado'][0] != '6'
-            ){
-                $saldo = $descuento;  
-            }else{
-                $saldo += $descuento;                
             }
 
             $saldo_persistente = get_user_meta($id_cliente, "kmisaldo", true)+0;

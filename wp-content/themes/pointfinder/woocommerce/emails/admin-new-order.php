@@ -61,9 +61,9 @@
 		"6"
 	);
 
-	angel_log("Envio de correo [Metodo]: ".$metas_orden['Metodo de Pago Usado'][0]);
+	angel_log("Envio de correo [Metodo]: ".$metodo);
 
-	if( in_array($metas_orden['Metodo de Pago Usado'][0], $metodo_card)){
+	if( in_array($metodo, $metodo_card)){
 
 		angel_log("Envio de correo Tarjeta");
 
