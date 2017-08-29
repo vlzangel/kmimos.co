@@ -643,15 +643,15 @@ function woocommerce_payulatam_init(){
 		            break;
 		        }
 
-			/*$redirect_url = ($this->redirect_page_id=='default' || $this->redirect_page_id==""  || $this->redirect_page_id==0)?$order->get_checkout_order_received_url():get_permalink($this->redirect_page_id);
+			$redirect_url = ($this->redirect_page_id=='default' || $this->redirect_page_id==""  || $this->redirect_page_id==0)?$order->get_checkout_order_received_url():get_permalink($this->redirect_page_id);
             //For wooCoomerce 2.0
             $redirect_url = add_query_arg( array('msg'=> urlencode($this->msg['message']), 'type'=>$this->msg['class']), $redirect_url );
-
+            /*
             wp_redirect( $redirect_url );*/
 
             //wp_redirect( $redirect_url );
 
-            echo $redirect_url;
+            echo "redirect_url: ".$redirect_url;
             exit;
 		}
 
