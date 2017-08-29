@@ -343,39 +343,6 @@
                     }
                 }
                 
-                $sql = ("
-                    INSERT INTO wp_posts VALUES (
-                        NULL,
-                        '".$user_id."',
-                        '".$hoy."',
-                        '".$hoy."',
-                        '',
-                        '',
-                        '',
-                        'inherit',
-                        'closed',
-                        'closed',
-                        '',
-                        '',
-                        '',
-                        '',
-                        '".$hoy."',
-                        '".$hoy."',
-                        '',
-                        '0',
-                        'http://qa.kmimos.la/kmimos/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg',
-                        '0',
-                        'attachment',
-                        'image/jpeg',
-                        '0'
-                    );
-                ");
-                $conn->query( utf8_decode( $sql ) );
-                $img_id = $conn->insert_id;
-
-                $sql = "INSERT INTO wp_postmeta VALUES (NULL, ".$img_id.", '_wp_attached_file', 'cuidadores/avatares/".$cuidador_id."/0.jpg');";
-                $conn->query( utf8_decode( $sql ) );
-
                 $sql = "
                     INSERT INTO wp_usermeta VALUES
                         (NULL, ".$user_id.", 'user_favorites',      ''),
