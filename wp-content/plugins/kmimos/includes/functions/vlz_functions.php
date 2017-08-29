@@ -68,8 +68,6 @@
                 "6"
             );
 
-            angel_log("Entro 2: Metodo: ".$metas_orden["Metodo de Pago Usado"][0]);
-
             if( in_array( $metas_orden["Metodo de Pago Usado"][0] , $metodo_card)){
                 if( $deposito['enable'] == 'yes' ){
                     $saldo = $deposito['deposit'];
@@ -83,7 +81,7 @@
             if( $order_item_id != '' ){
                 $descuento = $wpdb->get_var("SELECT meta_value FROM wp_woocommerce_order_itemmeta WHERE order_item_id = '{$order_item_id}' AND meta_key = 'discount_amount' ");
             }
-            $saldo = $descuento;
+            $saldo += $descuento;
 
             $otros_cupones = $wpdb->get_results("SELECT * FROM wp_woocommerce_order_items WHERE order_id = '{$id_orden}' AND order_item_type = 'coupon' AND order_item_name NOT LIKE '%saldo-%'");
             foreach ($otros_cupones as $key => $value) {

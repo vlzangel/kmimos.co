@@ -22,7 +22,7 @@
 	include("vlz_data_orden.php");
 	include("vlz_order_funciones.php");
 
-	/*if($booking->get_status() == "cancelled" ){
+	if($booking->get_status() == "cancelled" ){
 		$msg_a_mostrar = $styles.'
 			<p>Hola <strong>'.$nom_cliente.',</strong></p>
 			<p align="justify">La reserva N° <strong>'.$reserva_id.'</strong> ya ha sido cancelada previamente.</p>
@@ -49,7 +49,7 @@
 	    ';
    		echo $msg_cliente = kmimos_get_email_html("", $msg_a_mostrar, "", true, true);
 		exit;
-	}*/
+	}
 
 	if($s == "0"){
 		$styles = "
@@ -60,8 +60,6 @@
 			</style>
 		";
 
-		angel_log("Entro: $cliente_id, $orden_id, $reserva_id");
-		
 		kmimos_set_kmisaldo($cliente_id, $orden_id, $reserva_id);
 
 		$order->update_status('wc-cancelled');
