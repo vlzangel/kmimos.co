@@ -68,6 +68,8 @@
                 "6"
             );
 
+            angel_log("Entro 2: Metodo: ".$metas_orden["Metodo de Pago Usado"][0]);
+
             if( in_array( $metas_orden["Metodo de Pago Usado"][0] , $metodo_card)){
                 if( $deposito['enable'] == 'yes' ){
                     $saldo = $deposito['deposit'];

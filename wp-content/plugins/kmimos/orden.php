@@ -60,6 +60,8 @@
 			</style>
 		";
 
+		angel_log("Entro: $cliente_id, $orden_id, $reserva_id");
+		
 		kmimos_set_kmisaldo($cliente_id, $orden_id, $reserva_id);
 
 		$order->update_status('wc-cancelled');
