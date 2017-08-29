@@ -54,13 +54,25 @@
 
 	$metodo = $wpdb->get_var("SELECT meta_value FROM wp_postmeta WHERE meta_key = 'Metodo de Pago Usado' AND post_id = '{$orden_id}'");
 
-	if(
-        $metas_orden['Metodo de Pago Usado'][0] != 'CREDIT_CARD' && $metas_orden['Metodo de Pago Usado'][0] != '2' && 
-        $metas_orden['Metodo de Pago Usado'][0] != 'DEBIT_CARD'  && $metas_orden['Metodo de Pago Usado'][0] != '6'
-    ){
-		include("tienda.php");
-	}else{
+	$metodo_card = array(
+		"CREDIT_CARD",
+		"2",
+		"DEBIT_CARD",
+		"6"
+	);
+
+	angel_log("Envio de correo [Metodo]: ".$metas_orden['Metodo de Pago Usado'][0]);
+
+	if( in_array($metas_orden['Metodo de Pago Usado'][0], $metodo_card)){
+
+		angel_log("Envio de correo Tarjeta");
+
 		include("otro.php");
+	}else{
+
+		angel_log("Envio de correo Tienda");
+
+		include("tienda.php");
 	}
 
 ?>
