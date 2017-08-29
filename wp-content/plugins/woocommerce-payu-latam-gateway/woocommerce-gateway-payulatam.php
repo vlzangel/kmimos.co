@@ -573,9 +573,6 @@ function woocommerce_payulatam_init(){
 				if( !isset($_SESSION) ){ session_start(); }
 				$_SESSION["orden_actual"] = $order->id;
 
-				echo "orden_actual: ".$_SESSION["orden_actual"]."<br>";
-				echo "order->status: ".$order->status."<br>";
-
 	        	// We are here so lets check status and do actions
 		        switch ( $codes[$state] ) {
 		            case 'APPROVED' :
@@ -650,9 +647,10 @@ function woocommerce_payulatam_init(){
             /*
             wp_redirect( $redirect_url );*/
 
-            //wp_redirect( $redirect_url );
+            $redirect_url = get_home_url()."retorno/";
 
-            echo "redirect_url: ".$redirect_url;
+            wp_redirect( $redirect_url );
+
             exit;
 		}
 
