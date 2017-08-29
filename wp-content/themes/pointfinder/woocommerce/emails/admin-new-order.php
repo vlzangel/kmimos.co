@@ -61,17 +61,9 @@
 		"6"
 	);
 
-	angel_log("Envio de correo [Metodo]: ".$metodo);
-
 	if( in_array($metodo, $metodo_card)){
-
-		angel_log("Envio de correo Tarjeta");
-
 		include("otro.php");
 	}else{
-
-		angel_log("Envio de correo Tienda");
-
 		include("tienda.php");
 	}
 
