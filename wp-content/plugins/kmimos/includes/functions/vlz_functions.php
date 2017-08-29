@@ -80,7 +80,10 @@
             }
 
             // En pago en tienda pasa de wc-on-hold a: wc-partially-paid OR wc-completed
-            if($status == 'wc-on-hold' && $metas_orden['_payment_method'][0] == 'openpay_stores'){
+            if(
+                $metas_orden['Metodo de Pago Usado'][0] != 'CREDIT_CARD' && $metas_orden['Metodo de Pago Usado'][0] != '2' && 
+                $metas_orden['Metodo de Pago Usado'][0] != 'DEBIT_CARD'  && $metas_orden['Metodo de Pago Usado'][0] != '6'
+            ){
                 $saldo = $descuento;  
             }else{
                 $saldo += $descuento;                

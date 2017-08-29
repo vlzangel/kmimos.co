@@ -89,7 +89,12 @@
 			$items[ $f['meta_key'] ] = $f['meta_value'];
 		}
 
-		if( $orden['post_status'] == 'unpaid' && $order['post_status'] != 'wc-partially-paid' && $metas_orden['_payment_method'] == 'openpay_stores'){ }else{
+		if(
+            $metas_orden['Metodo de Pago Usado'][0] != 'CREDIT_CARD' && $metas_orden['Metodo de Pago Usado'][0] != '2' && 
+            $metas_orden['Metodo de Pago Usado'][0] != 'DEBIT_CARD'  && $metas_orden['Metodo de Pago Usado'][0] != '6'
+        ){
+			
+        }else{
 			$deposito = unserialize( $items['_wc_deposit_meta'] );
 			$saldo = 0;
 			if( $deposito['enable'] == 'yes' ){
@@ -98,7 +103,7 @@
 				$saldo = $items['_line_total'];
 			}
 		}
-
+		
 		$variaciones = unserialize( $metas_reserva['_booking_persons'] );
 
 		$fechas = array(
