@@ -647,7 +647,7 @@ function woocommerce_payulatam_init(){
             /*
             wp_redirect( $redirect_url );*/
 
-            $redirect_url = get_home_url()."retorno/";
+            $redirect_url = get_home_url()."/retorno/";
 
             wp_redirect( $redirect_url );
 
