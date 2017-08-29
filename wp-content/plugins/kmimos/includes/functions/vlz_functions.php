@@ -45,13 +45,6 @@
         function kmimos_set_kmisaldo($id_cliente, $id_orden, $id_reserva){
             global $wpdb;
 
-            $metodo_card = array(
-                "CREDIT_CARD",
-                "2",
-                "DEBIT_CARD",
-                "6"
-            );
-
             $status = $wpdb->get_var("SELECT post_status FROM wp_posts WHERE ID = {$id_orden}");
 
             $metas_orden = get_post_meta($id_orden);
@@ -68,7 +61,14 @@
 
             $saldo = 0;
 
-            if( in_array($metodo, $metodo_card)){
+            $metodo_card = array(
+                "CREDIT_CARD",
+                "2",
+                "DEBIT_CARD",
+                "6"
+            );
+
+            if( in_array( $metas_orden["Metodo de Pago Usado"][0] , $metodo_card)){
                 if( $deposito['enable'] == 'yes' ){
                     $saldo = $deposito['deposit'];
                 }else{
