@@ -4,8 +4,8 @@
 	*/
 
 	//CG only unique use!!!!!!!!!
-	//update_additional_service();
-	//update_additional_service_postname();
+	update_additional_service();
+	update_additional_service_postname();
 	update_image_service();
 
 	session_start();

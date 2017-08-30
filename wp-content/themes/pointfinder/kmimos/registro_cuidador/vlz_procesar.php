@@ -143,6 +143,9 @@
         foreach ($adicionales_extra as $value) {
             if( $_POST['adicional_'.$value] > 0 ){
                 $adicionales[ $value ] = $_POST['adicional_'.$value]+0;
+
+                //ADDITIONAL STATUS
+                $adicionales['status_'.$value] = "1";
             }
         }
 
@@ -159,6 +162,9 @@
             foreach ($rutas as $ruta) {
                 if( $_POST[$pre.$ruta]+0 > 0 ){
                     $adicionales[ $slug_tranportacion ][$ruta] = $_POST[$pre.$ruta]+0;
+
+                    //ADDITIONAL STATUS
+                    $adicionales['status_'.$slug_tranportacion] = "1";
                 }
             }
         }
