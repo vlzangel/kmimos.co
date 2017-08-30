@@ -92,6 +92,7 @@
 	//UPDATE Additional Services
 	function update_additional_service(){
 		global $wpdb;
+
 		$sql = "SELECT * FROM cuidadores";
 		$cuidadores = $wpdb->get_results($sql);
 		foreach ($cuidadores as $cuidador) {
@@ -112,6 +113,24 @@
 					//var_dump($servicio[0]);
 					if(!isset($adicionales['status_'.$servicio[0]])){
 						$adicionales['status_'.$servicio[0]]='1';
+					}
+				}
+			}
+
+			$service_extra=array('bano','corte','limpieza_dental','visita_al_veterinario','acupuntura');
+			$service_transportation=array('transportacion_sencilla','transportacion_redonda');
+			foreach($adicionales as $service => $amount){
+				if(in_array($service,$service_extra)){
+					if($amount>0){
+						$adicionales['status_'.$service]='1';
+					}
+				}
+
+				if(in_array($service,$service_transportation)){
+					foreach($service_transportation as $transportation => $amount){
+						if($amount>0){
+							$adicionales['status_'.$service]='1';
+						}
 					}
 				}
 			}
