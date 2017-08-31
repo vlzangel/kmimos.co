@@ -68,7 +68,10 @@
                 "6"
             );
 
-            if( in_array( $metas_orden["Metodo de Pago Usado"][0] , $metodo_card) || (  ($metas_orden["_order_total"]+0) == 0 ) ){
+            if( 
+                in_array( $metas_orden["Metodo de Pago Usado"][0] , $metodo_card) || 
+                (  ($metas_orden["_order_total"][0]+0) == 0 ) 
+            ){
                 if( $deposito['enable'] == 'yes' ){
                     $saldo = $deposito['deposit'];
                 } else {
