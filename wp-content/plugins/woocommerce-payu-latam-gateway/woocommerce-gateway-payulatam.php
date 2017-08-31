@@ -476,6 +476,9 @@ function woocommerce_payulatam_init(){
 
 			$_SESION["orden_actual"] = $order_id;
 
+			// Aqui hay que limpiar el carrito.
+			// Y cerrar el proceso de modificacion si aplica.
+
 			if ( $this->form_method == 'GET' ) {
 				$payulatam_args = $this->get_payulatam_args( $order_id );
 				$payulatam_args = http_build_query( $payulatam_args, '', '&' );
@@ -490,6 +493,7 @@ function woocommerce_payulatam_init(){
 					'redirect'	=> $payulatam_adr . $payulatam_args
 				);
 			} else {
+
 				if (version_compare( WOOCOMMERCE_VERSION, '2.1', '>=')) {
 					return array(
 						'result' 	=> 'success',
