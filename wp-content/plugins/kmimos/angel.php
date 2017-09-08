@@ -107,8 +107,12 @@ if(!function_exists('kmimos_mails_administradores_new')){
         $email_admin = $info["email"];
 
         $headers_admins = array(
-            'BCC: a.veloz@kmimos.la',
-            'BCC: a.pedroza@kmimos.la'
+             'BCC: a.lazaro@kmimos.la',
+             'BCC: r.cuevas@kmimos.la',
+             'BCC: r.gonzalez@kmimos.la',
+             'BCC: s.cedeno@kmimos.la',
+             'BCC: n.deligny@kmimos.la',
+             'BCC: a.pedroza@kmimos.la'
         );
 
         wp_mail( $email_admin, $titulo, $mensaje, $headers_admins);
