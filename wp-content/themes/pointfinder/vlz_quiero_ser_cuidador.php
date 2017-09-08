@@ -503,7 +503,7 @@
 																		
 								</div>
 
-								<div style="display: none;">
+								<!-- <div style="display: none;"> -->
 
 									<div>
 										<div class="vlz_cell50 jj_cell50">
@@ -575,7 +575,7 @@
 										?>
 									</div>
 
-								</div>
+								<!-- </div> -->
 
 								<h2 class="vlz_titulo_interno" style="margin-top: 10px;">Servicios Adicionales</h2>
 								<div class="vlz_seccion">

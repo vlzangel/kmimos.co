@@ -72,6 +72,8 @@
                     border-radius: 4px;
                     color: #FFF;
                     text-decoration: none;
+                    border: 0px;
+                    cursor: pointer;
                 }
                 .vlz_desactivar{
                     background: #ca4e4e;
@@ -91,6 +93,15 @@
                 .page-title-action,
                 #admin-post-nav{
                     display: none;
+                }
+
+                .info_container{
+                    overflow: hidden;
+                }
+
+                .info_box{
+                    float: left;
+                    width: 50%;
                 }
             </style>";
 
@@ -125,24 +136,79 @@
             $estado = utf8_decode($wpdb->get_var("SELECT name FROM states WHERE id = ".$estado[1]));
             $municipio = utf8_decode($wpdb->get_var("SELECT name FROM locations WHERE id = ".$municipio[1]));
 
+            $destacado = "";
+            $atributos = unserialize($cuidador->atributos);
+            if( isset($atributos["destacado"]) && $atributos["destacado"] == "1" ){
+                $destacado_opt = '
+                    <option value=1>Si</option>
+                    <option value=0>No</option>
+                ';
+            }else{
+                $destacado_opt = '
+                    <option value=0>No</option>
+                    <option value=1>Si</option>
+                ';
+            }
+
+            $destacado = "<select id='destacado' name='destacado'>{$destacado_opt}</select>";
+
             $HTML .= "
                 <div class='vlz_contenedor_datos_cuidador'>
-                    <div><strong>ID:</strong> {$cuidador->user_id}</div>
-                    
-                    <div><strong>Nombre:</strong> {$cuidador->nombre} {$cuidador->apellido}</div>
-                    <div><strong>IFE:</strong> {$cuidador->dni}</div>
 
-                    <div><strong>Correo Electr&oacute;nico:</strong> {$cuidador->email}</div>
-                    <div><strong>Tel&eacute;fono:</strong> {$cuidador->telefono}</div>
+                    <div class='info_container'>
+                        <div class='info_box'>
+                            <div><strong>ID:</strong> {$cuidador->user_id}</div>
+                            
+                            <div><strong>Nombre:</strong> {$cuidador->nombre} {$cuidador->apellido}</div>
+                            <div><strong>IFE:</strong> {$cuidador->dni}</div>
 
-                    <div><strong>Estado:</strong> {$estado}</div>
-                    <div><strong>Municipio:</strong> {$municipio}</div>
-                    <div><strong>Direcci&oacute;n:</strong> {$direccion}</div>
+                            <div><strong>Correo Electr&oacute;nico:</strong> {$cuidador->email}</div>
+                            <div><strong>Tel&eacute;fono:</strong> {$cuidador->telefono}</div>
 
-                    <div><strong>Método de captación:</strong> {$captacion}</div>
-                    <div><strong>Registrado:</strong> {$fecha}</div>
+                            <div><strong>Estado:</strong> {$estado}</div>
+                            <div><strong>Municipio:</strong> {$municipio}</div>
+                            <div><strong>Direcci&oacute;n:</strong> {$direccion}</div>
+
+                            <div><strong>Método de captación:</strong> {$captacion}</div>
+
+                            <div><strong>Registrado:</strong> {$fecha}</div>
+                        </div>
+
+                        <div class='info_box'>
+                            <input type='hidden' id='cuidador' name='cuidador' value='{$cuidador->id}' />
+                            <div><strong>Destacado:</strong> {$destacado}</div>
+
+                            <div class='vlz_contenedor_botones'>
+                                <span id='actualizar_btn' class='vlz_activar'>Actualizar</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class='vlz_contenedor_botones'>{$link}</div>
                 </div>
+
+                <script>
+                    jQuery( document ).ready(function() {
+
+                        jQuery('#actualizar_btn').on('click', function(e){
+                            
+                            jQuery('#actualizar_btn').html('Procesando...');
+
+                            jQuery.post( 
+                                '".get_home_url()."/wp-content/plugins/kmimos/dashboard/setup/php/update_cuidador.php', 
+                                {
+                                    cuidador: jQuery('#cuidador').val(),
+                                    destacado: jQuery('#destacado').val()
+                                },
+                                function( data ) {
+                                    console.log( data );
+                                    jQuery('#actualizar_btn').html('Actualizar');
+                                }
+                            );
+                        });
+
+                    });
+                </script>
             ";
 
             echo comprimir_styles($HTML);

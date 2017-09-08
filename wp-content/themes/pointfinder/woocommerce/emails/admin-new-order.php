@@ -50,10 +50,22 @@
 
 	$dudas = '<p align="justify">Para cualquier duda y/o comentario puedes contactar al Staff Kmimos a los teléfonos '.$info["telefono"].', o al correo '.$info["email"].'</p>';
 
-	if( $metodo_pago == "openpay_stores" ){
-		include("tienda.php");
-	}else{
+	global $wpdb;
+
+	$metodo = $wpdb->get_var("SELECT meta_value FROM wp_postmeta WHERE meta_key = 'Metodo de Pago Usado' AND post_id = '{$orden_id}'");
+	$order_total = $wpdb->get_var("SELECT meta_value FROM wp_postmeta WHERE meta_key = '_order_total' AND post_id = '{$orden_id}'");
+
+	$metodo_card = array(
+		"CREDIT_CARD",
+		"2",
+		"DEBIT_CARD",
+		"6"
+	);
+
+	if( in_array($metodo, $metodo_card)  || (  ($order_total+0) == 0 ) ){
 		include("otro.php");
+	}else{
+		include("tienda.php");
 	}
 
 ?>

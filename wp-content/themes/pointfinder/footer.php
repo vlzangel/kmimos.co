@@ -84,7 +84,7 @@ $HTML = "</div></div>
                     <h2>Navega</h2>
                     <ul>
                         <li><a href='#'>Nosotros</a></li>
-                        <li><a href='".get_home_url()."/blog/'>Blog</a></li>
+                        <li><a href='#'>Blog</a></li>
                         <li><a href='#'>Preguntas y Respuestas</a></li>
                         <li><a href='#'>Cobertura Veterinaria</a></li>
                         <li><a href='#'>Comunicados de prensa</a></li>

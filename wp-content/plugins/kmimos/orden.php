@@ -21,6 +21,7 @@
 	";
 	include("vlz_data_orden.php");
 	include("vlz_order_funciones.php");
+
 	if($booking->get_status() == "cancelled" ){
 		$msg_a_mostrar = $styles.'
 			<p>Hola <strong>'.$nom_cliente.',</strong></p>
@@ -120,15 +121,15 @@
 
 
    		$msg_cuidador = kmimos_get_email_html("Cancelación de Reserva", $msg_cuidador, "", true, true);
-		if($action !='noaction'){
-   			wp_mail( $cuidador_email, "Cancelación de Reserva", $msg_cuidador);
-		}
 
-		if($show =='noshow'){
-			if(!add_post_meta($o, '_show', 'noshow', true)){ 
-				update_post_meta($o, '_show', 'noshow');
-			}
-		}
+   		$tipo_order = get_post_meta($orden_id, "Metodo de Pago Usado", true);
+   		
+		if(
+            $tipo_order == 'CREDIT_CARD' || $tipo_order == '2' || 
+            $tipo_order == 'DEBIT_CARD'  || $tipo_order == '6'
+        ){
+   			wp_mail( $cuidador_email, "Cancelación de Reserva", $msg_cuidador);
+   		}
 
 	    $msg_a_mostrar = $styles.'
 	    	<p><strong>Cancelación de Reserva (N°. '.$reserva_id.')</strong></p>
