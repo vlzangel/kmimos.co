@@ -103,19 +103,19 @@
 if(!function_exists('kmimos_mails_administradores_new')){
     function kmimos_mails_administradores_new($titulo, $mensaje){
 
-        // $info = kmimos_get_info_syte();
-        // $email_admin = $info["email"];
+        $info = kmimos_get_info_syte();
+        $email_admin = $info["email"];
 
-        // $headers_admins = array(
+        $headers_admins = array(
         //     'BCC: e.celli@kmimos.la',
         //     'BCC: a.lazaro@kmimos.la',
         //     'BCC: r.cuevas@kmimos.la',
         //     'BCC: r.gonzalez@kmimos.la',
         //     'BCC: m.castellon@kmimos.la',
-        //     'BCC: a.pedroza@kmimos.la'
-        // );
+             'BCC: a.pedroza@kmimos.la'
+        );
 
-        // wp_mail( $email_admin, $titulo, $mensaje, $headers_admins);
+        wp_mail( $email_admin, $titulo, $mensaje, $headers_admins);
 
         // $headers_call_center = array(
         //     'BCC: operador01sincola@gmail.com',
