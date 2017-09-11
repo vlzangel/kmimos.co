@@ -65,8 +65,6 @@
             if( $descuento->num_rows > 0 ){
 		        $descuento = $descuento->fetch_assoc();
 		        $descuento = $descuento['meta_value']; 
-
-		        echo $descuento."<br>";
 		    }
         }
 
@@ -89,15 +87,22 @@
 			$items[ $f['meta_key'] ] = $f['meta_value'];
 		}
 
-		if( $orden['post_status'] == 'unpaid' && $order['post_status'] != 'wc-partially-paid' && $metas_orden['_payment_method'] == 'openpay_stores'){ }else{
-			$deposito = unserialize( $items['_wc_deposit_meta'] );
+		$metodo_card = array(
+            "CREDIT_CARD",
+            "2",
+            "DEBIT_CARD",
+            "6"
+        );
+
+        if( in_array( $metas_orden['Metodo de Pago Usado'] , $metodo_card)){
+            $deposito = unserialize( $items['_wc_deposit_meta'] );
 			$saldo = 0;
 			if( $deposito['enable'] == 'yes' ){
 				$saldo = $deposito['deposit'];
 			}else{
 				$saldo = $items['_line_total'];
 			}
-		}
+        }
 
 		$variaciones = unserialize( $metas_reserva['_booking_persons'] );
 

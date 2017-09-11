@@ -80,6 +80,11 @@ if( !$DS ){
 
              echo "jQuery('#billing_first_name').attr('value', '{$cu->user_firstname}');";
              echo "jQuery('#billing_last_name').attr('value', '{$cu->user_lastname}');";
+
+             echo "jQuery('#billing_address_1').attr('value', 'Colombia');";
+             echo "jQuery('#billing_city').attr('value', 'Colombia');";
+             echo "jQuery('#billing_state').attr('value', 'Colombia');";
+
              echo "jQuery('#billing_phone').attr('value', '+57{$metas_cliente["user_mobile"][0]}');";
          ?>
 
@@ -108,6 +113,9 @@ if( !$DS ){
 		font-size: 15px;
 		color: #54c8a7;
 		font-weight: 600;
+	}
+	.woocommerce-billing-fields{
+		display: none;
 	}
 	@media (max-width: 592px){
 		#add_payment_method #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods>li>label {

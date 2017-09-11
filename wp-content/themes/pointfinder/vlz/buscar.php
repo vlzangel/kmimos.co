@@ -73,7 +73,14 @@
     /* Fin Filtros por fechas */
 
     /* Filtros por rangos */
-	    if( isset($n) ){ if( $n != "" ){ $condiciones .= " AND nombre LIKE '".$n."%' "; } }
+	    
+	    if( isset($n) ){ if( $n != "" ){ 
+	    	$condiciones .= " AND nombre.post_title LIKE '%".$n."%' "; } 
+	    	$nombre_inner  = "INNER JOIN wp_posts AS nombre ON ( cuidadores.id_post = nombre.ID )";
+	   	}
+
+
+
 	    if( $rangos[0] != "" ){ $condiciones .= " AND (hospedaje_desde*1.2) >= '".$rangos[0]."' "; }
 	    if( $rangos[1] != "" ){ $condiciones .= " AND (hospedaje_desde*1.2) <= '".$rangos[1]."' "; }
 	    if( $rangos[2] != "" ){ $anio_1 = date("Y")-$rangos[2]; $condiciones .= " AND experiencia <= '".$anio_1."' "; }
@@ -164,6 +171,7 @@
         cuidadores 
     INNER JOIN wp_posts AS post_cuidador ON ( cuidadores.id_post = post_cuidador.ID )
     {$ubicaciones_inner}
+    {$nombre_inner}
     WHERE 
         activo = '1' {$condiciones} {$ubicaciones_filtro} {$FILTRO_UBICACION}
     ORDER BY {$orderby}";

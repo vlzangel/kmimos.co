@@ -20,7 +20,7 @@ function woocommerce_payulatam_init(){
         add_action('the_content', 'showPayuLatamMessage');
     }
     function showPayuLatamMessage($content){
-            return '<div class="'.htmlentities($_GET['type']).'">'.htmlentities(urldecode($_GET['msg'])).'</div>'.$content;
+        return '<div class="'.htmlentities($_GET['type']).'">'.htmlentities(urldecode($_GET['msg'])).'</div>'.$content;
     }
 
     /**
@@ -198,7 +198,7 @@ function woocommerce_payulatam_init(){
       			'description' => array(
 					'title' 		=> __('Description:', 'payu-latam-woocommerce'),
 					'type' 			=> 'textarea',
-					'default' 		=> __('Pay securely by Credit or Debit Card or Internet Banking through PayU Latam Secure Servers.','payu-latam-woocommerce'),
+					'default' 		=> "Pague con tarjeta de crédito, debito o transacción bancaria de forma segura a través de los servidores seguros de PayU Latinoamérica. xxx",
 					'description' 	=> __('This controls the description which the user sees during checkout.', 'payu-latam-woocommerce'),
 					'desc_tip' 		=> true
 				),
@@ -325,7 +325,13 @@ function woocommerce_payulatam_init(){
 	     * @return string
 	     */
 		function payment_fields(){
-			if($this->description) echo wpautop(wptexturize($this->description));
+			 echo "
+			<div style='font-size: 16px; margin-bottom: 5px;'>
+				Pague con tarjeta de crédito, debito o transacción bancaria de forma segura a través de los servidores seguros de PayU Latinoamérica.
+			</div>
+			<div style='font-size: 16px;'>
+				<span style='color: red; font-weight: 600;'>Importante:</span> Para finalizar con éxito el proceso de reserva, es necesario pulsar el enlace <span style='color: red; font-weight: 600;'>Regresar al sitio de la tienda</span> que se encuentra al final del comprobante de pago.
+			</div>";
 		}
 		/**
 		 * Generate the PayU Latam Form for checkout
@@ -465,6 +471,14 @@ function woocommerce_payulatam_init(){
 	     */
 		function process_payment( $order_id ) {
 			$order = new WC_Order( $order_id );
+
+			if( !isset($_SESION) ){ session_start(); }
+
+			$_SESION["orden_actual"] = $order_id;
+
+			// Aqui hay que limpiar el carrito.
+			// Y cerrar el proceso de modificacion si aplica.
+
 			if ( $this->form_method == 'GET' ) {
 				$payulatam_args = $this->get_payulatam_args( $order_id );
 				$payulatam_args = http_build_query( $payulatam_args, '', '&' );
@@ -479,6 +493,7 @@ function woocommerce_payulatam_init(){
 					'redirect'	=> $payulatam_adr . $payulatam_args
 				);
 			} else {
+
 				if (version_compare( WOOCOMMERCE_VERSION, '2.1', '>=')) {
 					return array(
 						'result' 	=> 'success',
@@ -558,6 +573,10 @@ function woocommerce_payulatam_init(){
 	        
 
 	        	$state=$posted['transactionState'];
+
+				if( !isset($_SESSION) ){ session_start(); }
+				$_SESSION["orden_actual"] = $order->id;
+
 	        	// We are here so lets check status and do actions
 		        switch ( $codes[$state] ) {
 		            case 'APPROVED' :
@@ -567,7 +586,7 @@ function woocommerce_payulatam_init(){
 		            	if ( $order->status == 'completed' ) {
 		            		 if ( 'yes' == $this->debug )
 		            		 	$this->log->add( 'payulatam', __('Aborting, Order #' . $order->id . ' is already complete.', 'payu-latam-woocommerce') );
-		            		 exit;
+		            		//exit;
 		            	}
 
 						// Validate Amount
@@ -629,8 +648,13 @@ function woocommerce_payulatam_init(){
 			$redirect_url = ($this->redirect_page_id=='default' || $this->redirect_page_id==""  || $this->redirect_page_id==0)?$order->get_checkout_order_received_url():get_permalink($this->redirect_page_id);
             //For wooCoomerce 2.0
             $redirect_url = add_query_arg( array('msg'=> urlencode($this->msg['message']), 'type'=>$this->msg['class']), $redirect_url );
+            /*
+            wp_redirect( $redirect_url );*/
+
+            $redirect_url = get_home_url()."/retorno/";
 
             wp_redirect( $redirect_url );
+
             exit;
 		}
 
@@ -641,6 +665,7 @@ function woocommerce_payulatam_init(){
 		* 
 		 */
 		function payulatam_confirmation_process($posted){
+
 			global $woocommerce;
 			    $order = $this->get_payulatam_order( $posted );
 
