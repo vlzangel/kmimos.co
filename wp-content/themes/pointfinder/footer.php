@@ -41,14 +41,32 @@
     function SubscribeSite(){
         clearTimeout(SubscribeTime);
 
-        var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">' +
-            '<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
+        var MailChimp='<!-- Begin MailChimp Signup Form -->'
+            +'<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">'
+            //+'<style type="text/css"> #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;} /* Add your own MailChimp form style overrides in your site stylesheet or in this style block. We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */</style>'
+            +'<div id="mc_embed_signup">'
+            +'<form action="//kmimos.us12.list-manage.com/subscribe/post?u=7d48532b21ffc4109cde43484&amp;id=30c11ceea9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>'
+            +'<div id="mc_embed_signup_scroll">'
+            +'<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Introduce tu correo aquí" required>'
+            +'<button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>'
+            +'<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->'
+            +'<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7d48532b21ffc4109cde43484_30c11ceea9" tabindex="-1" value=""></div>'
+            //+'<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>'
+            +'</div>'
+            +'</form>'
+            +'</div>'
+            +'<!--End mc_embed_signup-->';
 
-        var html='<div id="PageSubscribe"><i class="exit fa fa-times" aria-hidden="true" onclick="SubscribePopUp_Close(\'#message.Msubscribe\')"></i>' +
-            '<div class="section section1"><span>G&aacute;nate <strong>COP 8,000</strong> en tu primera reserva</span><br>&#8216;&#8216;Aplica para clientes nuevos&#8217;&#8217;<div class="images">'+dog+'</div></div>' +
-            '<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span><?php echo subscribe_input('home'); ?></div>' +
-            '<div class="section section3">*Dentro de 48 hrs. Te enviaremos v&iacute;a email tu c&uacute;pon de descuento</div>' +
-            '</div>';
+        var form = '<?php echo subscribe_input('home'); ?>';
+
+        var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">'
+            +'<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
+
+        var html='<div id="PageSubscribe"><i class="exit fa fa-times" aria-hidden="true" onclick="SubscribePopUp_Close(\'#message.Msubscribe\')"></i>'
+            +'<div class="section section1"><span>G&aacute;nate <strong>COP 8,000</strong> en tu primera reserva</span><br>&#8216;&#8216;Aplica para clientes nuevos&#8217;&#8217;<div class="images">'+dog+'</div></div>'
+            +'<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span>'+MailChimp+'</div>'
+            +'<div class="section section3">*Dentro de 48 hrs. Te enviaremos v&iacute;a email tu c&uacute;pon de descuento</div>'
+            +'</div>';
 
 
         SubscribePopUp_Create(html);
