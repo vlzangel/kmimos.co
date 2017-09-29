@@ -7,14 +7,16 @@ if(file_exists($kmimos_load)){
 
 function number_round($number){
     $number=(round($number*100))/100;
+    $number=number_format($number, 2, ',', '.');
     return $number;
 }
 
 $wlabel=$_wlabel_user->wlabel;
 $WLcommission=$_wlabel_user->wlabel_Commission();
 
+$_wlabel_user->wlabel_Options('booking');
 $_wlabel_user->wLabel_Filter(array('trdate'));
-$_wlabel_user->wlabel_Export('RESERVAS','title','table');
+$_wlabel_user->wlabel_Export('booking','RESERVAS','table');
 ?>
 
 <div class="module_title">
@@ -150,7 +152,7 @@ $_wlabel_user->wlabel_Export('RESERVAS','title','table');
        $duration_text=' Dia(s)';
 
        if($services=='hospedaje'){
-           $duration=(int)$duration-1;
+           $duration=(int)$duration;//-1
            $duration_text=' Noche(s)';
        }
 
@@ -159,8 +161,8 @@ $_wlabel_user->wlabel_Export('RESERVAS','title','table');
        }
 
        $duration_text= $duration.$duration_text;
-       //$duration_text.='<br>'.date('d/m/Y',(int) strtolower($_metas_booking_start));
-       //$duration_text.='<br>'.date('d/m/Y',(int) strtolower($_metas_booking_end));
+       $duration_text.='<br>'.date('d/m/Y',(int) strtolower($_metas_booking_start));
+       $duration_text.='<br>'.date('d/m/Y',(int) strtolower($_metas_booking_end));
 
        //var_dump($_meta_WCorder);
        $_meta_WCorder_services_additional=array();

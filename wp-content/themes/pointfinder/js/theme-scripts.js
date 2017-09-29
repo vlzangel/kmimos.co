@@ -517,8 +517,8 @@ if (!String.prototype.format) {
 		});
 
 
-		$('#pf-primary-nav').pfresponsivenav();
-		$('#pf-topprimary-nav').pfresponsivenav({mleft:0});
+		//$('#pf-primary-nav').pfresponsivenav();
+		//$('#pf-topprimary-nav').pfresponsivenav({mleft:0});
 		
 
 		//Scroll action
@@ -2018,29 +2018,7 @@ if (!String.prototype.format) {
 
 
 
-	// MANUAL SEARCH BUTTON STARTED --------------------------------------------------------------------------------------------
-	$('#pf-search-button-manual').live('click',function(){
-		var form = $('#pointfinder-search-form-manual');
-		form.validate();
 
-		var temp = ['input[name=pointfinder_radius_search]', 'input[name=ne]', 'input[name=ne2]', 'input[name=sw]', 'input[name=sw2]']
-
-		form.find("div:hidden[id$='_main']").each(function(){
-			$(this).find('input[type=hidden]').not(temp.join(',')).val(""); 
-			$(this).find('input[type=text]').val($.pfsliderdefaults.fields[$(this).attr('id')]);
-			$(this).find('.slider-wrapper .ui-slider-range').css('width','0%');
-			$(this).find('.slider-wrapper a:nth-child(2)').css('left','0%');
-			$(this).find('.slider-wrapper a:nth-child(3)').css('left','100%');
-		});
-		
-
-		if(form.valid()){
-			form.submit();
-		};
-		return false;
-	});
-	// MANUAL SEARCH BUTTON END --------------------------------------------------------------------------------------------
-	
 	// Footer row fix v1.6.1.3
 	$(document).ready(function($) {
 		$(".pointfinderexfooterclassx").appendTo(".wpf-footer-row-move");

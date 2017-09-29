@@ -66,70 +66,55 @@ if( isset($_SESSION['busqueda']) ){
 		}
 		ksort($url_servicio);
 
-		// echo '<pre>';
-		// print_r( $url_servicio );
-		// echo '</pre>';
 }
 if( count($url_servicio) > 1 ){
 
-	// Buscar solo productos relacionados a la busqueda por woocomerce
-	// $servicios_comando = '[products ids="'.$ids.'"]';
-	// do_shortcode($servicios_comando)
-
 	$content_modal .= '<!-- Button trigger modal -->
-		<button type="button" class="button reservar" data-toggle="modal" data-target="#selector_servicios">
+		<button id="btn_reservar" type="button" class="button reservar" data-toggle="modal" data-target="#selector_servicios">
 		  Reservar
 		</button>
 
 		<!-- Modal -->
 		<div class="modal" id="selector_servicios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		  <div class="modal-dialog" role="document">
-		    <div>
-		      <div class="modal-content">
-		        
-		        	<strong class="modal_title">Cual servicio deseas?</stronge>
-		        	<button style="float:right;" class="btn btn-default btn-sm close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        
-		      </div>
-		      <div class="modal-body">
-		      	<div  class="row">
-		        ';
-			    foreach($url_servicio as $url){
-					$content_modal .= '
-					<a href="'.$url['url'].'">
-						<div class="row text-left modal-items">	
-							<i class="'.$url['icon'].'"></i>
-							<span style="margin-left: 5px;">'.$url['name'].'</span>
-						</div>
-					</a>
-					';
-			    }
-		$content_modal .= '
-
-			      </div>
-		      </div>
-
-		    </div>
-		  </div>
+		  	<div class="modal-dialog" role="document">
+		    	<div>
+		      		<div class="modal-content">
+		        		<strong class="modal_title">Cual servicio deseas?</strong>
+		        		<button style="float:right;" class="btn btn-default btn-sm close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      		</div>
+		      		<div class="modal-body">
+		      			<div  class="row">';
+						    foreach($url_servicio as $url){
+								$content_modal .= '
+								<a href="'.$url['url'].'">
+									<div class="row text-left modal-items">	
+										<i class="'.$url['icon'].'"></i>
+										<span style="margin-left: 5px;">'.$url['name'].'</span>
+									</div>
+								</a>
+								';
+						    } $content_modal .= '
+			      		</div>
+		      		</div>
+		    	</div>
+		  	</div>
 		</div>';
 
-		echo $content_modal;
+		$HTML .= $content_modal;
 
 }else{
 	if( count($url_servicio) == 1){
 		// Buscar url del servicio
 		foreach ($url_servicio as $item) {
-			echo '<a class="button reservar" href="'.$item['url'].'">Reservar</a>';
+			$HTML .= '<a id="btn_reservar" class="button reservar" href="'.$item['url'].'">Reservar</a>';
 			break;
 		}
-	}
-	else{				
-		echo '<a class="button reservar" href="'.get_home_url().'/producto/'.$slug.'/'.'">Reservar</a>';
+	}else{				
+		$HTML .= '<a id="btn_reservar" class="button reservar" href="'.get_home_url().'/producto/'.$slug.'/'.'">Reservar</a>';
 	}
 }
 
-?>
-
+$HTML .= '
 <style type="text/css">
  #selector_servicios{
  	position: absolute;
@@ -177,4 +162,5 @@ if( count($url_servicio) > 1 ){
 	background: #0ab7a1;
 	color:#fff;
  }
-</style>
+</style>';
+?>

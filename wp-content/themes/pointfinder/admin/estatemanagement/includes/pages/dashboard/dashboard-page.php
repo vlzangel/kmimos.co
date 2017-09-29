@@ -31,24 +31,16 @@ if(isset($ua_action)){
  		if($setup4_membersettings_dashboard != 0){
 
 				if ($ua_action == 'profile') {
-					/**
-					*Start: Profile Form Request
-					**/
-						get_template_part('admin/estatemanagement/includes/pages/dashboard/form','profilereq');
-					/**
-						*End: Profile Form Request
-					**/
+					get_template_part('admin/estatemanagement/includes/pages/dashboard/form','profilereq');
 				}
-//				$setup3_pointposttype_pt1 = PFSAIssetControl('setup3_pointposttype_pt1','','pfitemfinder');
+
 				$setup3_pointposttype_pt1 = 'petsitters';
 				$setup4_membersettings_paymentsystem = PFSAIssetControl('setup4_membersettings_paymentsystem','','1');
 				$setup4_submitpage_status_old = PFSAIssetControl('setup4_submitpage_status_old','','0');
 
 				$current_user = wp_get_current_user();
 				$user_id = $current_user->ID;
-				/**
-				*Start: Member Page Actions
-				**/
+
 				if (is_page($setup4_membersettings_dashboard)) {
 
 					
@@ -96,15 +88,9 @@ if(isset($ua_action)){
 						$user_name_field = get_user_meta( $user_id, 'first_name', true ).' '.get_user_meta( $user_id, 'last_name', true );
 						if ($user_name_field == ' ') {$user_name_field = $current_user->user_login;}
 
-						$user = new WP_User( $user_id );
-						if( $user->roles[0] == "vendor" ){
-							$user_photo_field_output = kmimos_get_foto_cuidador($user_id);
-						}else{
-							$user_photo_field_output = kmimos_get_foto_cliente($user_id);
-						}
+						$user_photo_field_output = kmimos_get_foto($user_id);
+						$pfmenu_output .= '<li class="pf-dash-userprof"><img src="'.$user_photo_field_output.'" class="pf-dash-userphoto" style="width: 70px; height: 70px;"/><span class="pf-dash-usernamef">'.$user_name_field.'</span></li>';
 
-						$pfmenu_output .= '<li class="pf-dash-userprof"><img src="'.$user_photo_field_output.'" class="pf-dash-userphoto"/><span class="pf-dash-usernamef">'.$user_name_field.'</span></li>';
-						
                         /*
                         *   Muestra botón para ver el perfíl del usuario
                         */
@@ -202,10 +188,15 @@ if(isset($ua_action)){
                             $services = kmimos_get_my_services($current_user->ID);
                             if ($_GET['ua']=='myservices'){
                                 $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'<span class="pfbadge">'.$services['count'].'</span></li>';
-                            }
-                            else {
+                            } else {
                                 $class = ($_GET['ua']=='myservice' || $_GET['ua']=='newservice')? ' class="selected_option"':'';
                                 $pfmenu_output .= '<li'.$class.'><a href="'.$setup4_membersettings_dashboard_link.$pfmenu_perout.'ua=myservices"><i class="pfadmicon-glyph-453"></i> '. $setup29_dashboard_contents_vendor_shop_menuname.'<span class="pfbadge">'.$services['count'].'</span></a></li>';
+                            }
+
+                            if ($_GET['ua']=='disponibilidad'){
+                                $pfmenu_output .= '<li class="selected_option"><a href="#" onclick="return false;"><i class="pfadmicon-glyph-28"></i> Disponibilidad <span class="pfbadge"> </span></li>';
+                            } else {
+                                $pfmenu_output .= '<li'.$class.'><a href="?ua=disponibilidad"><i class="pfadmicon-glyph-28"></i> Disponibilidad <span class="pfbadge"> </span></a></li>';
                             }
                             
                             /* 
@@ -515,6 +506,23 @@ if(isset($ua_action)){
 							
                         case 'myservices':
 							include("./wp-content/themes/pointfinder/vlz/admin/process/myservices.php");
+                        break;						
+							
+                        case 'disponibilidad':
+							$output = new PF_Frontend_Fields(
+								array(
+									'formtype' => 'disponibilidad',
+									'current_user' => $user_id
+								)
+							);
+
+							echo $output->FieldOutput;
+							echo '<script type="text/javascript">
+                                    '.$output->ScriptOutput.'
+                                </script>';
+							unset($output);
+							
+							echo $output->FieldOutput;
                         break;
 
                         case 'mybookings':

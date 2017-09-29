@@ -40,15 +40,15 @@
     ';
 
     add_filter( 'wp_mail_from_name', function( $name ) {
-        return 'Kmimos México';
+        return 'Kmimos Colombia';
     });
     add_filter( 'wp_mail_from', function( $email ) {
-        return 'contactomex@kmimos.la';
+        return 'contactoco@kmimos.la';
     });
 
     $mail_msg = kmimos_get_email_html("Registro de Nuevo Usuario.", $mensaje_mail, '', true, true);
 
-    if ( wp_mail( $email, "Kmimos México Gracias por registrarte! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg) ) {
+    if ( wp_mail( $email, "Kmimos Colombia Gracias por registrarte! Kmimos la NUEVA forma de cuidar a tu perro!", $mail_msg) ) {
 
         $error = array(
             "error" => "NO",

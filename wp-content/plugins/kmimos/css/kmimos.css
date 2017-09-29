@@ -12,29 +12,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 *   Configuraciones globales del portal WEB de kmimos
 */
@@ -1576,10 +1553,6 @@ background-color: #d63053 !important;
 
 .select2-selection__rendered {
     height: 78px;
-}
-
-#popup_mas_servicios, #mas_servicios {
-    max-width: 340px !important;
 }
 
 

@@ -19,7 +19,7 @@
 				states AS s
 			WHERE 
 				country_id = 1
-			ORDER BY 
+			ORDER BY
 				name ASC");
 		$datos = array();
 		if( $result->num_rows > 0  ){
@@ -44,9 +44,14 @@
 					while ($row2 = $result2->fetch_assoc()){
 						$municipios[] = array(
 							"id" => $row2['id'],
-							"nombre" => $row2['muni']
+							"nombre" => utf8_encode($row2['muni'])
 						);
 					}
+				}else{
+					$municipios[] = array(
+						"id" => "",
+						"nombre" => $esta
+					);
 				}
 
 				$datos[$id] = array(

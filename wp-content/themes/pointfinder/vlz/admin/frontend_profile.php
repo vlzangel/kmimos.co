@@ -32,22 +32,18 @@
     }
 
     $this->ScriptOutput = "
-                                $.pfAjaxUserSystemVars4 = {};
-                                $.pfAjaxUserSystemVars4.email_err = '".esc_html__('Por favor, escriba un correo electrónico','pointfindert2d')."';
-                                $.pfAjaxUserSystemVars4.email_err2 = '".esc_html__('Su dirección de correo electrónico debe estar en el formato de nombre@dominio.com','pointfindert2d')."';
-                                $.pfAjaxUserSystemVars4.nickname_err = '".esc_html__('Por favor, escriba apodo','pointfindert2d')."';
-                                $.pfAjaxUserSystemVars4.nickname_err2 = '".esc_html__('Por favor, introduzca al menos 3 caracteres por el apodo.','pointfindert2d')."';
-                                $.pfAjaxUserSystemVars4.passwd_err = '".esc_html__('Introduzca al menos 7 caracteres','pointfindert2d')."';
-                                $.pfAjaxUserSystemVars4.passwd_err2 = '".esc_html__('Introduzca la misma contraseña que el anterior','pointfindert2d')."';
-                            ";
+        $.pfAjaxUserSystemVars4 = {};
+        $.pfAjaxUserSystemVars4.email_err = '".esc_html__('Por favor, escriba un correo electrónico','pointfindert2d')."';
+        $.pfAjaxUserSystemVars4.email_err2 = '".esc_html__('Su dirección de correo electrónico debe estar en el formato de nombre@dominio.com','pointfindert2d')."';
+        $.pfAjaxUserSystemVars4.nickname_err = '".esc_html__('Por favor, escriba apodo','pointfindert2d')."';
+        $.pfAjaxUserSystemVars4.nickname_err2 = '".esc_html__('Por favor, introduzca al menos 3 caracteres por el apodo.','pointfindert2d')."';
+        $.pfAjaxUserSystemVars4.passwd_err = '".esc_html__('Introduzca al menos 7 caracteres','pointfindert2d')."';
+        $.pfAjaxUserSystemVars4.passwd_err2 = '".esc_html__('Introduzca la misma contraseña que el anterior','pointfindert2d')."';
+    ";
 
     $user = new WP_User( $user_id );
 
-    if( $user->roles[0] == "vendor" ){
-        $imagen = kmimos_get_foto_cuidador($user_id);
-    }else{
-        $imagen = kmimos_get_foto_cliente($user_id);
-    }
+    $imagen = kmimos_get_foto($user_id);
 
     $referred = $usermetaarr['user_referred'][0];
 
@@ -77,6 +73,7 @@
 
         <section>
             <input type="hidden" name="tipo_user" value="'.$user->roles[0].'" />
+            <input type="hidden" name="user_tipo" value="'.$user_id_tipo.'" />
             <div class="img_portada">
                 <div class="img_portada_fondo" style="background-image: url('.$imagen.');"></div>
                 <div class="img_portada_normal" style="background-image: url('.$imagen.');"></div>

@@ -126,10 +126,28 @@
 		$valoraciones_rangos_2 .= "<option value='$i' ".selected($i, $_POST['rangos'][5], false).">$i</option>";
 	}
 
-	$token = md5(rand());
-	echo "
+	$FORMULARIO = "
+	<style>
+		input[type='date']{
+			line-height: 1;
+			margin-bottom: 3px;
+			border: 1px solid #ccc;
+		    padding-left: 30px;
+		}
+		.icono {
+		    position: absolute;
+		    font-size: 25px;
+		    margin-left: 3px;
+		}
+
+
+ 		.vlz_sub_seccion_interno sub {
+ 		    bottom: 0;
+ 		    font-size: 11px;
+ 		}
+	</style>
 	<div id='filtros'></div>
-	<form action='".get_home_url()."/busqueda' method='POST' class='vlz_form' id='vlz_form_buscar' style='margin-top: 20px;'>
+	<form action='".get_home_url()."/wp-content/themes/pointfinder/vlz/buscar.php' method='POST' class='vlz_form' id='vlz_form_buscar' style='margin-top: 20px;'>
 
 		<input type='submit' value='Aplicar Filtros' class='theme_button vlz_boton'>
 
@@ -163,6 +181,26 @@
 				<div class='vlz_contenedor'>
 					<input type='text' name='n' value='".$_POST['n']."' class='vlz_input' placeholder='Buscar por Nombre'>
 				</div>
+
+			</div>
+		</div>
+
+		<div class='vlz_sub_seccion'>
+			<div class='vlz_sub_seccion_titulo'>Por Fechas</div>
+			<div class='vlz_sub_seccion_interno'>
+				<!--
+				<sub>Desde:</sub><br>
+				<input type='date' id='checkin' value='".$_POST['checkin']."' min='".date("Y-m-d")."' name='checkin' class='fechas vlz_input' placeholder='Check In'>
+    			-->
+    			<div class='icono'><i class='icon-calendario embebed'></i></div>
+				<input type='text' id='checkin' name='checkin' placeholder='DESDE' value='".$_POST['checkin']."' class='date_to fechas vlz_input' readonly>
+
+				<!--
+				<sub>Hasta:</sub><br>
+				<input type='date' id='checkout' value='".$_POST['checkout']."' min='".$_POST['checkin']."' name='checkout' class='fechas vlz_input' placeholder='Check Out'>
+				-->
+				<div class='icono'><i class='icon-calendario embebed'></i></div>
+				<input type='text' id='checkout' name='checkout' placeholder='HASTA' value='".$_POST['checkout']."' class='date_to fechas vlz_input' readonly>
 
 			</div>
 		</div>
@@ -252,51 +290,88 @@
 		<input type='submit' value='Aplicar Filtros' class='theme_button vlz_boton'>
 	</form>";
 
-	/*
-	echo '
-		<div class="pfwidgettitle"><div class="widgetheader">Cuidadores Destacados</div></div>
-
-		<div class="pfwidgetinner">
-			<div class="pfwidgetinner">
-			    <ul class="pf-widget-itemlist">
-			        <li class="clearfix widget-featured">
-			            <a href="https://kmimos.com.mx/petsitters/deiree-miranda-diaz/" title="">
-			                <img src="https://kmimos.com.mx/wp-content/uploads/2016/03/0014_000-150x150.jpg" class="alignleft img40x40 wp-post-image" alt="0014_000p" srcset="https://kmimos.com.mx/wp-content/uploads/2016/03/0014_000-150x150.jpg 150w, https://kmimos.com.mx/wp-content/uploads/2016/03/0014_000-180x180.jpg 180w, https://kmimos.com.mx/wp-content/uploads/2016/03/0014_000-300x300.jpg 300w" sizes="(max-width: 150px) 100vw, 150px">                <div class="title">Deiree Miranda Diaz</div>
-			                <div class="price">Hospedaje desde $144.00/noche</div>
-			                <sup>Xochimilco - Distrito Federal</sup>
-			            </a>
-			        </li>
-			        <li class="clearfix widget-featured">
-			            <a href="https://kmimos.com.mx/petsitters/daniel-garcia-moreno/" title="">
-			                <img src="https://kmimos.com.mx/wp-content/uploads/2016/03/0024_000-150x150.jpg" class="alignleft img40x40 wp-post-image" alt="0024_000p" srcset="https://kmimos.com.mx/wp-content/uploads/2016/03/0024_000-150x150.jpg 150w, https://kmimos.com.mx/wp-content/uploads/2016/03/0024_000-180x180.jpg 180w, https://kmimos.com.mx/wp-content/uploads/2016/03/0024_000-300x300.jpg 300w" sizes="(max-width: 150px) 100vw, 150px">                <div class="title">Daniel García Moreno</div>
-			                <div class="price">Hospedaje desde $204.00/noche</div>
-			                <sup>Ocoyoacac - México</sup>
-			            </a>
-			        </li>
-			        <li class="clearfix widget-featured">
-			            <a href="https://kmimos.com.mx/petsitters/claudia-ramirez/" title="">
-			                <img src="https://kmimos.com.mx/wp-content/uploads/2016/03/0029_000-150x150.jpg" class="alignleft img40x40 wp-post-image" alt="0029_000p" srcset="https://kmimos.com.mx/wp-content/uploads/2016/03/0029_000-150x150.jpg 150w, https://kmimos.com.mx/wp-content/uploads/2016/03/0029_000-180x180.jpg 180w, https://kmimos.com.mx/wp-content/uploads/2016/03/0029_000-300x300.jpg 300w" sizes="(max-width: 150px) 100vw, 150px">                <div class="title">Claudia Ramirez</div>
-			                <div class="price">Hospedaje desde $252.00/noche</div>
-			                <sup>Tlalpan - Distrito Federal</sup>
-			            </a>
-			        </li>
-			        <li class="clearfix widget-featured">
-			            <a href="https://kmimos.com.mx/petsitters/pablo-alberto-herrera-santos/" title="">
-			                <img src="https://kmimos.com.mx/wp-content/uploads/2016/03/0411_000-150x150.jpg" class="alignleft img40x40 wp-post-image" alt="0411_000p" srcset="https://kmimos.com.mx/wp-content/uploads/2016/03/0411_000-150x150.jpg 150w, https://kmimos.com.mx/wp-content/uploads/2016/03/0411_000-180x180.jpg 180w, https://kmimos.com.mx/wp-content/uploads/2016/03/0411_000-300x300.jpg 300w" sizes="(max-width: 150px) 100vw, 150px">                <div class="title">Pablo Alberto Herrera Santos</div>
-			                <div class="price">Hospedaje desde $264.00/noche</div>
-			                <sup>Gustavo A. Madero - Distrito Federal</sup>
-			            </a>
-			        </li>
-			        <li class="clearfix widget-featured">
-			            <a href="https://kmimos.com.mx/petsitters/helga-perellon/" title="">
-			                <img src="https://kmimos.com.mx/wp-content/uploads/2016/03/0072_000-150x150.jpg" class="alignleft img40x40 wp-post-image" alt="0072_000p" srcset="https://kmimos.com.mx/wp-content/uploads/2016/03/0072_000-150x150.jpg 150w, https://kmimos.com.mx/wp-content/uploads/2016/03/0072_000-180x180.jpg 180w, https://kmimos.com.mx/wp-content/uploads/2016/03/0072_000-300x300.jpg 300w" sizes="(max-width: 150px) 100vw, 150px">                <div class="title">Helga Perellón</div>
-			                <div class="price">Hospedaje desde $240.00/noche</div>
-			                <sup>Miguel Hidalgo - Distrito Federal</sup>
-			            </a>
-			        </li>
-			    </ul>
-			</div>
-		</div>
-	';
-	*/
+	$FORMULARIO = ($FORMULARIO);
 ?>
+
+<style type="text/css">
+	input.fechas {
+		line-height: 1;
+		margin-bottom: 3px;
+		border: 1px solid #ccc;
+		padding-left: 30px;
+	}
+	.datepick-month td {
+		font-size: 12px;
+	}
+</style>
+<script type="text/javascript">
+	var fecha = new Date();
+	jQuery(document).ready(function(){
+		function initCheckin(date, actual){
+			if(actual){
+				jQuery('#checkout').datepick({
+					dateFormat: 'dd/mm/yyyy',
+					defaultDate: date,
+					selectDefaultDate: true,
+					minDate: date,
+					onSelect: function(xdate) {
+
+					},
+					yearRange: date.getFullYear()+':'+(parseInt(date.getFullYear())+1),
+					firstDay: 1,
+					onmonthsToShow: [1, 1]
+				});
+				// jQuery('#checkout').focus();
+			}else{
+				jQuery('#checkout').datepick({
+					dateFormat: 'dd/mm/yyyy',
+					minDate: date,
+					onSelect: function(xdate) {
+
+					},
+					yearRange: date.getFullYear()+':'+(parseInt(date.getFullYear())+1),
+					firstDay: 1,
+					onmonthsToShow: [1, 1]
+				});
+				// jQuery('#checkout').focus();
+			}
+		}
+
+		jQuery('#checkin').datepick({
+			dateFormat: 'dd/mm/yyyy',
+			minDate: fecha,
+			onSelect: function(date1) {
+				var ini = jQuery('#checkin').datepick( "getDate" );
+				var fin = jQuery('#checkout').datepick( "getDate" );
+				if( fin.length > 0 ){
+					var xini = ini[0].getTime();
+					var xfin = fin[0].getTime();
+					if( xini > xfin ){
+						jQuery('#checkout').datepick('destroy');
+						initCheckin(date1[0], true);
+					}else{
+						jQuery('#checkout').datepick('destroy');
+						initCheckin(date1[0], false);
+					}
+				}else{
+					jQuery('#checkout').datepick('destroy');
+					initCheckin(date1[0], true);
+				}
+			},
+			yearRange: fecha.getFullYear()+':'+(parseInt(fecha.getFullYear())+1),
+			firstDay: 1,
+			onmonthsToShow: [1, 1]
+		});
+
+		jQuery('#checkout').datepick({
+			dateFormat: 'dd/mm/yyyy',
+			minDate: fecha,
+			onSelect: function(xdate) {
+
+			},
+			yearRange: fecha.getFullYear()+':'+(parseInt(fecha.getFullYear())+1),
+			firstDay: 1,
+			onmonthsToShow: [1, 1]
+		});
+	});
+</script>

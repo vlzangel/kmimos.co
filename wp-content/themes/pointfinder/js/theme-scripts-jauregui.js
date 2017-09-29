@@ -527,8 +527,8 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 		});
 
 
-		$('#pf-primary-nav').pfresponsivenav();
-		$('#pf-topprimary-nav').pfresponsivenav({mleft:0});
+		//$('#pf-primary-nav').pfresponsivenav();
+		//$('#pf-topprimary-nav').pfresponsivenav({mleft:0});
 		
 
 		//Scroll action
@@ -2047,22 +2047,40 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 	$('#pf-enquiry-trigger-button-author').click(function(){$.pfOpenModal('open','enquiryformauthor','','','',$('#pf-enquiry-trigger-button-author').attr('data-pf-user'))});
 
 	// MANUAL SEARCH BUTTON STARTED --------------------------------------------------------------------------------------------
+
+	function error_home(error, id){
+		if(error){
+			jQuery("#"+id).removeClass("no_error");
+			jQuery("#"+id).addClass("error");
+		}else{
+			jQuery("#"+id).removeClass("error");
+			jQuery("#"+id).addClass("no_error");
+		}
+	}
+
 	$('#pf-search-button-manual').live('click',function(){
 		var form = $('#pointfinder-search-form-manual');
-		form.validate();
+		var ini = jQuery("#checkin").val();
+		var fin = jQuery("#checkout").val();
 
-		var temp = ['input[name=pointfinder_radius_search]', 'input[name=ne]', 'input[name=ne2]', 'input[name=sw]', 'input[name=sw2]']
-		form.find("div:hidden[id$='_main']").each(function(){
-			$(this).find('input[type=hidden]').not(temp.join(',')).val(""); 
-			$(this).find('input[type=text]').val($.pfsliderdefaults.fields[$(this).attr('id')]);
-			$(this).find('.slider-wrapper .ui-slider-range').css('width','0%');
-			$(this).find('.slider-wrapper a:nth-child(2)').css('left','0%');
-			$(this).find('.slider-wrapper a:nth-child(3)').css('left','100%');
-		});
-		
-		if(form.valid()){
+		var error = false;
+
+		if( ini == "" ){
+			error = true;
+			error_home(error, "val_error_fecha_ini");
+		}else{
+			error_home(false, "val_error_fecha_ini");
+		}
+		if( fin == "" ){
+			error = true;
+			error_home(error, "val_error_fecha_fin");
+		}else{
+			error_home(false, "val_error_fecha_fin");
+		}
+
+		if( !error ){
 			form.submit();
-		};
+		}
 		return false;
 	});
 	// MANUAL SEARCH BUTTON END --------------------------------------------------------------------------------------------

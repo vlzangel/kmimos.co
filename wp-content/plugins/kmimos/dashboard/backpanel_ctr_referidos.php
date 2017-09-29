@@ -114,11 +114,6 @@ $subscribe = getListsuscribe($landing, $referido, $desde, $hasta);
 			    			$showReferencia++;
 			    		}
 			    	}
-
-			  		// Cargar datos de reservas generadas
-
-			  		// testing //
-			  		//print_r($metaReservas);
 			  	 ?>
 				    <tr id="<?php echo $row['user_email']; ?>">
 				    	<th class="text-center"><?php echo ++$count; ?></th>

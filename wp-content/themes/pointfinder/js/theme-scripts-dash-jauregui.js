@@ -673,12 +673,12 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 				  	},
 				    phone:{
 				      required:true,
-				      minlength: 10,
+				      minlength: 7,
 				      number: true
 				    },
 				    mobile:{
 				      required:true,
-				      minlength: 10,
+				      minlength: 7,
 				      number: true
 				    },
 				    referred:{
@@ -710,12 +710,12 @@ jQuery.validator.addMethod("pattern", function(value, element, param) {
 				  	},
 				  	phone:{
 				  		required:"Debe ingresar un número de Teléfono",
-				  		minlength:"El número de Teléfono debe de 10 digitos como mínimo",
+				  		minlength:"El número de Teléfono debe de 7 digitos como mínimo",
 				  		number:"Debe colocar un número de Teléfono válido"
 				  	},
 				  	mobile:{
 				  		required:"Debe ingresar un número Móvil ",
-				  		minlength:"El número Móvil debe de 10 digitos como mínimo",
+				  		minlength:"El número Móvil debe de 7 digitos como mínimo",
 				  		number:"Debe colocar un número Móvil válido"
 				  	},
 				  	address:{

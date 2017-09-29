@@ -5,8 +5,18 @@
             <select name="month">
                 <option value="">Seleccionar ...</option>
                 <?php
-                for($month=1; $month<12 ; $month++){
-                    echo '<option value="'.$month.'">'.date('F',strtotime(''.$month.'/1/'.date('Y',time()))).'</option>';
+                $month_current=date('m',time());
+                $LC_month = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                for($month=1; $month<13 ; $month++){
+                    $string = $LC_month[$month-1];
+
+                    $selected='';
+                    if($month==$month_current){
+                        $selected='selected';
+                    }
+
+                    //$string = date('F',strtotime(''.$month.'/1/'.date('Y',time())));
+                    echo '<option value="'.$month.'" '.$selected.'>'.$string.'</option>';
                 }
                 ?>
             </select>
@@ -20,7 +30,13 @@
                 $year_date=date('Y',time());
                 for($year=0; $year<5; $year++){
                     $year_option=$year_date-$year;
-                    echo '<option value="'.$year_option.'">'.$year_option.'</option>';
+
+                    $selected='';
+                    if($year_option==$year_date){
+                        $selected='selected';
+                    }
+
+                    echo '<option value="'.$year_option.'" '.$selected.'>'.$year_option.'</option>';
                 }
                 ?>
             </select>

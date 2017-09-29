@@ -7,8 +7,9 @@ if(file_exists($kmimos_load)){
 global $wpdb;
 $wlabel=$_wlabel_user->wlabel;
 $WLresult=$_wlabel_user->wlabel_result;
+$_wlabel_user->wlabel_Options('client');
 $_wlabel_user->wLabel_Filter(array('tddate','tdcheck'));
-$_wlabel_user->wlabel_Export('CLIENTES','title','table');
+$_wlabel_user->wlabel_Export('client','CLIENTES','table');
 ?>
 
 
@@ -61,9 +62,9 @@ $sql = "
 
     WHERE
       (
-        usermeta.meta_value = 'volaris'
+        usermeta.meta_value = '{$wlabel}'
         OR
-        (postmeta.meta_value = 'volaris'  AND posts.post_type = 'wc_booking' AND NOT posts.post_status LIKE '%cart%')
+        (postmeta.meta_value = '{$wlabel}'  AND posts.post_type = 'wc_booking' AND NOT posts.post_status LIKE '%cart%')
       )
 
     ORDER BY
@@ -107,7 +108,7 @@ $sql = "
           LEFT JOIN wp_usermeta AS usermeta ON (usermeta.user_id=users.ID AND usermeta.meta_key='_wlabel')
 
         WHERE
-          usermeta.meta_value = 'volaris'
+          usermeta.meta_value = '{$wlabel}'
 
         ORDER BY
           users.ID DESC
@@ -149,7 +150,7 @@ $sql = "
           LEFT JOIN wp_postmeta AS postmeta ON (postmeta.post_id=posts.post_parent AND postmeta.meta_key='_wlabel')
 
         WHERE
-          postmeta.meta_value = 'volaris'
+          postmeta.meta_value = '{$wlabel}'
           AND
           posts.post_type = 'wc_booking'
           AND NOT

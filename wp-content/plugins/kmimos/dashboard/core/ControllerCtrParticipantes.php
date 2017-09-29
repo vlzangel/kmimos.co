@@ -62,3 +62,23 @@ function get_total_reservas( $participante_email = 0 ){
 	$result = get_fetch_assoc($sql);
 	return $result;
 }
+
+
+function getTracking($email=""){
+
+	$result = [];
+	$sql = "
+		SELECT 
+			lt.`user_email`,
+			lt.`option`,
+			lt.`value`
+		FROM
+			list_subscriber_tracking as lt
+		WHERE
+			lt.`user_email` = '".$email."'
+			and lt.`option` like 'referidos_%'
+	";
+
+	$result = get_fetch_assoc($sql);
+	return $result;
+}

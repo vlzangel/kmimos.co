@@ -61,21 +61,35 @@
 
             $saldo = 0;
 
-            if( $deposito['enable'] == 'yes' ){
-                $saldo = $deposito['deposit'];
-            }else{
-                $saldo = $items['_line_total'];
+            $metodo_card = array(
+                "CREDIT_CARD",
+                "2",
+                "DEBIT_CARD",
+                "6"
+            );
+
+            if( 
+                in_array( $metas_orden["Metodo de Pago Usado"][0] , $metodo_card) || 
+                (  ($metas_orden["_order_total"][0]+0) == 0 ) 
+            ){
+                if( $deposito['enable'] == 'yes' ){
+                    $saldo = $deposito['deposit'];
+                } else {
+                    $saldo = $items['_line_total'];
+                }
             }
 
             $descuento = 0;
-            if( $metas_orden[ "_cart_discount" ][0] != "" ){
-                $descuento = $metas_orden[ "_cart_discount" ][0]+0;
+            $order_item_id = $wpdb->get_var("SELECT order_item_id FROM wp_woocommerce_order_items WHERE order_id = '{$id_orden}' AND order_item_type = 'coupon' AND order_item_name LIKE '%saldo-%'"); 
+            if( $order_item_id != '' ){
+                $descuento = $wpdb->get_var("SELECT meta_value FROM wp_woocommerce_order_itemmeta WHERE order_item_id = '{$order_item_id}' AND meta_key = 'discount_amount' ");
             }
+            $saldo += $descuento;
 
-            if($status == 'wc-on-hold' && $metas_orden['_payment_method'][0] == 'openpay_stores'){ 
-                $saldo = $descuento;  
-            }else{
-                $saldo += $descuento;                
+            $otros_cupones = $wpdb->get_results("SELECT * FROM wp_woocommerce_order_items WHERE order_id = '{$id_orden}' AND order_item_type = 'coupon' AND order_item_name NOT LIKE '%saldo-%'");
+            foreach ($otros_cupones as $key => $value) {
+                $cupon_id = $wpdb->get_var("SELECT ID FROM wp_posts WHERE post_title = '{$value->order_item_name}'");
+                $wpdb->query("DELETE FROM wp_postmeta WHERE post_id = '{$cupon_id}' AND meta_key = '_used_by' AND meta_value = '{$id_cliente}'");
             }
 
             $saldo_persistente = get_user_meta($id_cliente, "kmisaldo", true)+0;
@@ -96,7 +110,7 @@
                 global $current_user;
                 $id_cupon = $wpdb->get_var("SELECT ID FROM wp_posts WHERE post_name='saldo-{$current_user->ID}'");
                 if( $id_cupon == NULL ){
-                    date_default_timezone_set('America/Bogota');
+                    date_default_timezone_set('America/Mexico_City');
                     $hoy = date("Y-m-d H:i:s");
                     $id_cupon = $wpdb->insert('wp_posts', array(
                         "ID" => NULL,
@@ -512,16 +526,18 @@
     if(!function_exists('kmimos_desglose_reserva')){
 
         function kmimos_borrar_formato_numerico($valor){
-            $valor = str_replace(",", "", $valor);
-            $valor = str_replace(".", ",", $valor);
+            /*$valor = str_replace(",", "", $valor);
+            $valor = str_replace(".", ",", $valor);*/
             return $valor+0;
         }
 
         function kmimos_format_adicionales($valor, $txt){
-            preg_match_all("#\((.*?)\)#", $valor, $matches);
+            //preg_match_all("#;(.*?)\)#", $valor, $matches);
+            preg_match_all("/\((.*?)\)/i", $valor, $matches);
+            $value = str_replace("$","",$matches[1][1]);
             return array(
                 $txt,
-                kmimos_borrar_formato_numerico( substr($matches[1][1], 1) )
+                kmimos_borrar_formato_numerico( $value )
             );
         }
 
@@ -559,9 +575,6 @@
 
             $adicionales_array = array();
             $transporte  = array();
-
-            
-
             foreach ($orden_item as $key => $value) {
 
                 switch ($value->meta_value) {
@@ -770,7 +783,7 @@
                         <tr>
                             <td></td>
                             <td></td>
-                            <th colspan=2 style="'.$styles_celdas_left.'">Descuento</th>
+                            <th colspan=2 style="'.$styles_celdas_left.'">Descuento (*)</th>
                             <td style="'.$styles_celdas_right.'" align="right"> '.$info["mon_izq"].' '.number_format( $metas_orden["_cart_discount"][0], 2, ',', '.').' '.$info["mon_der"].' </td>
                         </tr>
                     ';
@@ -783,8 +796,13 @@
                         <tr>
                             <td></td>
                             <td></td>
-                            <th colspan=2 style="'.$styles_celdas_left.'">Descuento</th>
+                            <th colspan=2 style="'.$styles_celdas_left.'">Descuento (*)</th>
                             <td style="'.$styles_celdas_right.'" align="right"> '.$info["mon_izq"].' '.number_format( $metas_orden["_cart_discount"][0], 2, ',', '.').' '.$info["mon_der"].' </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td colspan=3 style="'.$styles_celdas_left.' '.$styles_celdas_right.'">(*) Monto correspondiente a la aplicación de cupón y/o saldo a favor disponible para el cliente.</td>
                         </tr>
                     ';
 
@@ -799,6 +817,11 @@
                                 <td></td>
                                 <th colspan=2 class="texto_kmimos" style="'.$styles_celdas_left.' '.$nota_cuidador.'">Kmimos te reembolsará</th>
                                 <td class="texto_kmimos" style="'.$styles_celdas_right.' '.$nota_cuidador.' font-weight: 600;" align="right"> '.$info["mon_izq"].' '.number_format( $diferencia, 2, ',', '.').' '.$info["mon_der"].' </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td colspan=3 class="texto_kmimos" style="'.$styles_celdas_left.' '.$styles_celdas_right.'">(*) Monto correspondiente a la aplicación de cupón y/o saldo a favor disponible para el cliente.</td>
                             </tr>
                         ';
                     }

@@ -1,6 +1,6 @@
 <?php
     
-    date_default_timezone_set('America/Bogota');
+    date_default_timezone_set('America/Mexico_City');
 
     include("../../../../../vlz_config.php");
 
@@ -43,6 +43,9 @@
 	foreach ($adicionales['transportacion_sencilla'] as $key => $value) {
 		if( $_POST["transportacion_sencilla_".$key]+0 > 0 ){
 			$transportacion_sencilla = true;
+
+            //ADDITIONAL STATUS
+            $adicionales['status_transportacion_sencilla'] = "1";
 		}
 		$adicionales['transportacion_sencilla'][$key] = $_POST["transportacion_sencilla_".$key]+0;
 	}
@@ -54,8 +57,11 @@
         "largo" => "Largas"
     );
 	foreach ($adicionales['transportacion_redonda'] as $key => $value) {
-		if( $_POST["transportacion_sencilla_".$key]+0 > 0 ){
+		if( $_POST["transportacion_redonda_".$key]+0 > 0 ){
 			$transportacion_redonda = true;
+
+            //ADDITIONAL STATUS
+            $adicionales['status_transportacion_redonda'] = "1";
 		}
 		$adicionales['transportacion_redonda'][$key] = $_POST["transportacion_redonda_".$key]+0;
 	}
@@ -72,6 +78,9 @@
     foreach ($adicionales_extra as $key => $value) {
     	if( $value+0 > 0 ){
     		$adicionales[$key] = $value+0;
+
+            //ADDITIONAL STATUS
+            $adicionales['status_'.$key] = "1";
     	}
     }
 	
@@ -106,8 +115,13 @@
 		}
 
 		if( max($temp) > 0 ){
-    		$adicionales[$key] = $temp;
+            $adicionales[$key] = $temp;
 			$bases[$key] = $base_temp;
+
+            //ADDITIONAL STATUS
+            if(isset($_POST['status_'.$key])){
+                $adicionales['status_'.$key] = $_POST['status_'.$key];
+            }
 		}
 
     }
@@ -121,12 +135,12 @@
     ";
 
     $imgs_product = array(
-        "hospedaje"                 => "55477",
-        "guarderia"                 => "55478",
-        "adiestramiento_basico"     => "55479",
-        "adiestramiento_intermedio" => "55479",
-        "adiestramiento_avanzado"   => "55479",
-        "paseos"                    => "55479"
+        "hospedaje"         => "8370",
+        "guarderia"         => "8371",
+        "adiestramiento_basico"     => "8372",
+        "adiestramiento_intermedio" => "8372",
+        "adiestramiento_avanzado"   => "8372",
+        "paseos"                    => "8373"
     );
 
     $db = new db($conn);

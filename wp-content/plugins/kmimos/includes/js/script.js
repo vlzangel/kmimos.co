@@ -52,3 +52,52 @@ function filecss_import(file,count){
         filecss_import(file,(count+1));
     }
 }
+
+//MESSAGE
+var timeMessage=0;
+function message(message){
+    clearTimeout(timeMessage);
+    messageCreate('#message',message);
+}
+
+function messageCreate(element,message){
+    //console.log(message);
+    var action = function() {
+        jQuery(element).html(message);
+        messageShow(element);
+    }
+
+    if(jQuery(element).length==0){
+        jQuery('body').append('<div id="message"></div>');
+        action();
+
+    }else{
+        jQuery(element).fadeOut(500,function(){
+            //jQuery(element).remove();
+            action();
+        });
+    }
+}
+
+function messageInsite(element,message){
+    messageCreate(element,message);
+}
+
+function messageShow(element){
+    //var height = element.height();
+    jQuery(element).fadeIn(500,function(){
+        timeMessage = setTimeout(function(){
+            var callback = function(){}
+            messageClose(element, callback);
+        }, 6000);
+    });
+}
+
+function messageClose(element, callback){
+    if(jQuery(element).length>0){
+        jQuery(element).fadeOut(500,function(){
+            //jQuery(element).remove();
+            callback();
+        });
+    }
+}

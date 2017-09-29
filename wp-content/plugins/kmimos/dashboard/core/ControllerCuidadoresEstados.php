@@ -2,6 +2,18 @@
 require_once('base_db.php');
 require_once('GlobalFunction.php');
 
+
+function getServicesPaseo($user_id){
+	$sql = "SELECT m.meta_value as price, p.* 
+	FROM wp_posts as p
+		inner join wp_postmeta as m on m.post_id = p.ID and m.meta_key = '_price'
+	WHERE post_author = {$user_id} 
+		AND post_status = 'publish'
+		AND post_name like 'paseo%'";
+	$result = get_fetch_assoc($sql);
+	return $result;
+}
+
 function getEstadoMunicipio($estados, $municipios){
 	// buscar estados
 	$resultado['estado'] = '';
@@ -11,7 +23,7 @@ function getEstadoMunicipio($estados, $municipios){
 		$estado = '';
 		foreach ($e as $value) {
 			if( $value > 0 ){
-				$sql_e = 'select * from states where country_id = 1 and id = '.$value;
+				$sql_e = 'select * from states where country_id = 1 and ( id = '.$value." or id like '%=11=%')" ;
 				$result = get_fetch_assoc($sql_e);
 				$resultado['estado'] = (isset($result['rows'][0]['name'])) ? $result['rows'][0]['name'] : '';
 				break;

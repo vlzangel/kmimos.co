@@ -2,12 +2,16 @@
 	extract($_POST);
 
 	if( $previa != "" ){
-        if( file_exists("Temp/".$previa) ){
-            unlink("Temp/".$previa);
+        $TempFile="Temp/".$previa;
+        if(file_exists ($TempFile)){
+            unlink($TempFile);
         }
 	}
 
-	$img = end(explode(',', $img));
+	//$img = end(explode(',', $img));
+    $explode = explode(',', $img);
+    $img = end($explode);
+
     $sImagen = base64_decode($img);
 
     $dir = "Temp/";

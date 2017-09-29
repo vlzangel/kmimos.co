@@ -137,7 +137,7 @@
                             border: solid 1px #CCC;
                             border-top: 0;">
                             Hospedaje desde<br>
-                            MXN $'.$cuidador->hospedaje_desde.'
+                            COP $'.$cuidador->hospedaje_desde.'
                         </div>
                     </a>
                 </div>
@@ -235,7 +235,8 @@
 			.$lista_cercanos;
 	    
    		$msg_admin = kmimos_get_email_html("Solicitud Cancelada por Cuidador - ".$cuidador_post->post_title, $msg, "", true, true);
-   		wp_mail( $mail_admin, "Cancelación de Solicitud", $msg_admin, kmimos_mails_administradores());
+
+   		kmimos_mails_administradores_new("Cancelación de Solicitud", $msg_admin);
 
    		$msg = $styles.'
    			<div style="padding-right: 10px;">
@@ -252,7 +253,7 @@
 	    ';
 	    
    		$msg_cliente = kmimos_get_email_html("Solicitud Cancelada", $msg, "", true, true);
-   		wp_mail( $user->data->user_email, "Solicitud Cancelada", $msg_cliente, kmimos_mails_administradores());
+   		wp_mail( $user->data->user_email, "Solicitud Cancelada", $msg_cliente);
 
     } else {
 		$wpdb->query("UPDATE wp_postmeta SET meta_value = '2' WHERE post_id = $id AND meta_key = 'request_status';");
@@ -293,7 +294,8 @@
 			<p align="justify">Te notificamos que el cuidador <strong>'.$cuidador_post->post_title.'</strong> ha <strong>Confirmado</strong> la solicitud para conocerle N° <strong>'.$id.'</strong>.</p>';
 
    		$msg_admin = kmimos_get_email_html("Confirmación de Solicitud para Conocer Cuidador", $msg_admin, "", true, true);
-   		wp_mail( $mail_admin, "Confirmación de Solicitud para Conocer Cuidador", $msg_admin, kmimos_mails_administradores());
+
+   		kmimos_mails_administradores_new("Confirmación de Solicitud para Conocer Cuidador", $msg_admin);
 
 		$msg_cliente = $styles.'
 			<p align="center">¡Todo está listo <strong>'.$nom.'</strong>!</p>

@@ -24,6 +24,7 @@
     );
         
     $adicionales_principales = array(
+        "paseos"                    => "Paseos",
         "hospedaje"                 => "Hospedaje",
         "guarderia"                 => "Guardería",
         "adiestramiento_basico"     => "Adiestramiento Básico",

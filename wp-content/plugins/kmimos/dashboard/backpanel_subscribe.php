@@ -67,11 +67,13 @@ $subscribe = getListsuscribe($landing, $desde, $hasta);
 			      <th>Fecha Registro</th>
 			      <th>Tipo de Usuario</th>
 			      <th>Estatus</th>
+
 			    </tr>
 			  </thead>
 			  <tbody>
 			  	<?php $count=0; ?>
-			  	<?php while( $row = $subscribe->fetch_assoc() ){ ?>
+			  	<?php while( $row = $subscribe->fetch_assoc() ){ 
+			  		?>
 				    <tr>
 				    	<th class="text-center"><?php echo ++$count; ?></th>
 						<th><?php echo $row['source']; ?></th>
@@ -81,6 +83,7 @@ $subscribe = getListsuscribe($landing, $desde, $hasta);
 						<th class="text-center"><?php echo $row['fecha_registro']; ?></th>
 						<th class="text-center"><?php echo $row['tipo']; ?></th>
 						<th class="text-center"><?php echo $row['estatus']; ?></th>
+
 				    </tr>
 			   	<?php } ?>
 			  </tbody>

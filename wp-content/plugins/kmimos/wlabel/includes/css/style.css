@@ -14,7 +14,7 @@ img{max-width:100%;}
 #panel .module_data .item{position: relative; padding: 10px 0;}
 #panel .menu{position:relative; width:200px; height:100%; background:#555; overflow:hidden; overflow-y:auto; vertical-align:top; display:inline-block;}
 #panel .menu .item{position:relative; padding:20px 10px; color:#FFF; border-bottom:1px solid rgba(200,200,200,0.5); cursor:pointer;}
-
+#panel .menu .item.select{padding:20px 10px 20px 30px;  box-shadow:inset 15px 0px 0 -5px rgba(255,255,255,0.5); background:rgba(0,0,0,0.5);  }
 
 form{position:relative;}
 form.login{position:relative; max-width:300px; margin:200px auto;}
@@ -32,6 +32,9 @@ form input[type="submit"]{width:100%; color:#FFF; background:#59c9a8;}
 .export{position:relative; margin:5px; padding:10px;  font-size:12px;  border:1px solid #eee;}
 .export .action{padding:5px 10px;  border-radius:5px; cursor:pointer;  box-shadow:0 0 5px #CCC;  background:#EEE;  display:inline-block;}
 .export .file{padding:10px 0;}
+
+.options{position:relative; margin:5px; padding:10px;  font-size:12px;  border:1px solid #eee;}
+.options .button{padding:5px 10px;  border-radius:5px; cursor:pointer;  box-shadow:0 0 5px #CCC;  background:#EEE;  display:inline-block;}
 
 table{position:relative; border-radius:5px; background:#FFF;}
 table thead{color:#FFF; background:#555;}
