@@ -42,14 +42,13 @@
     function SubscribeSite(){
         clearTimeout(SubscribeTime);
 
-        // var CampaignMonitor = '<div class="createsend-button" style="height:22px;display:inline-block;" data-listid="j/1B/43F/9B8/EFDDCF3C8B928937"></div>';
-        // var form = '<?php echo subscribe_input('home'); ?>';
-        // action="http://kmimos.intaface.com/t/j/s/vcgl/"
         var CampaignMonitor = '<div id="subForm">'+
         '<input id="fieldEmail" name="cm-vcgl-vcgl" type="email" placeholder="Introduce tu correo aqu&iacute" required />'+
         '<button onclick="register()" id="btn-envio"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>'+
-        '<div id="msg" class="span-email-hide">Datos guardados</div><div id="msg-vacio" class="span-email-hide">Debe completar los datos</div>'+
-        '<div id="msg-error" class="span-email-hide">Error al guardar los datos</div>';
+        '<div id="msg" class="span-email-hide">Datos guardados</div>'+
+        '<div id="msg-vacio" class="span-email-hide">Debe completar los datos</div>'+
+        '<div id="msg-register" class="span-email-hide">El email no es valido</div>'+
+        '<div id="msg-error" class="span-email-hide">Email registrado </div>';
 
         var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">'
             +'<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
@@ -60,10 +59,8 @@
             +'<div class="section section3">*Dentro de 48 hrs. Te enviaremos v&iacute;a email tu c&uacute;pon de descuento</div>'
             +'</div>';
 
-
-
         SubscribePopUp_Create(html);
-        // (function () { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();
+        
     }
     function register(){     
         if( jQuery('#fieldEmail').val() == ""){
@@ -71,27 +68,48 @@
             jQuery("#msg-vacio").addClass('span-email-show');
             return;
         }else{
-            // jQuery('.loading').removeClass('hidden');
             var mail= jQuery('#fieldEmail').val();
             var email = {'cm-vcgl-vcgl': mail}
             var datos = {'source': 'home', 'email': mail}
-            var result = getGlobalData("http://kmimos.intaface.com/t/j/s/vcgl/",'POST', email);
-                result = getGlobalData("../../../landing/newsletter.php",'POST', datos);
+            var result = getGlobalData("../../../landing/newsletter.php",'POST', datos);
                 console.log(result);
-            if (result === 1) {
+            if (result == 1) {
                 jQuery("#msg-vacio").removeClass('span-email-show');
-                jQuery("#msg-vacio").addClass('span-email-hide');
                 jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-hide');
                 jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg-register').addClass('span-email-hide');
                 jQuery('#msg').removeClass('span-email-hide');
                 jQuery('#msg').addClass('span-email-show');
-            }else{
+                result = getGlobalData("http://kmimos.intaface.com/t/j/s/vcgl/",'POST', email);
+            }else if (result == 2){
+                jQuery("#msg-vacio").removeClass('span-email-show');
+                jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg').removeClass('span-email-show');
+                jQuery('#msg-register').addClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-hide');
+                jQuery("#msg-vacio").addClass('span-email-hide');
+                jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg').addClass('span-email-hide');
+            }else if (result == 3){
+                jQuery("#msg-vacio").removeClass('span-email-show');
+                jQuery('#msg-error').removeClass('span-email-hide');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-hide');
+                jQuery('#msg-error').addClass('span-email-show');
+                jQuery('#msg-register').addClass('span-email-hide');
                 jQuery('#msg').removeClass('span-email-show');
                 jQuery('#msg').addClass('span-email-hide');
-                jQuery("#msg-vacio").removeClass('span-email-show');
-                jQuery("#msg-vacio").addClass('span-email-hide');
-                jQuery('#msg-error').removeClass('span-email-hide');
-                jQuery('#msg-error').addClass('span-email-show');
+            }else{
+                jQuery("#msg-vacio").removeClass('span-email-hide');
+                jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-show');
+                jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg-register').addClass('span-email-hide');
+                jQuery('#msg').removeClass('span-email-show');
+                jQuery('#msg').addClass('span-email-hide');
             }
         }
     }
