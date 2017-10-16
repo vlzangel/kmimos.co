@@ -82,7 +82,7 @@
                 jQuery('#msg-register').addClass('span-email-hide');
                 jQuery('#msg').removeClass('span-email-hide');
                 jQuery('#msg').addClass('span-email-show');
-                result = getGlobalData("http://kmimos.intaface.com/t/j/s/vcgl/",'POST', email);
+                result = getGlobalData("http://kmimos.intaface.com/t/j/s/vydlhy/",'POST', email);
             }else if (result == 2){
                 jQuery("#msg-vacio").removeClass('span-email-show');
                 jQuery('#msg-error').removeClass('span-email-show');
