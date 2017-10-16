@@ -43,7 +43,7 @@
         clearTimeout(SubscribeTime);
 
         var CampaignMonitor = '<div id="subForm">'+
-        '<input id="fieldEmail" name="cm-vcgl-vcgl" type="email" placeholder="Introduce tu correo aqu&iacute" required />'+
+        '<input id="fieldEmail" name="cm-vydlhy-vydlhy" type="email" placeholder="Introduce tu correo aqu&iacute" required />'+
         '<button onclick="register()" id="btn-envio"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>'+
         '<div id="msg" class="span-email-hide">Datos guardados</div>'+
         '<div id="msg-vacio" class="span-email-hide">Debe completar los datos</div>'+
@@ -69,7 +69,7 @@
             return;
         }else{
             var mail= jQuery('#fieldEmail').val();
-            var email = {'cm-vcgl-vcgl': mail}
+            var email = {'cm-vydlhy-vydlhy': mail}
             var datos = {'source': 'home', 'email': mail}
             var result = getGlobalData("../../../landing/newsletter.php",'POST', datos);
                 console.log(result);
