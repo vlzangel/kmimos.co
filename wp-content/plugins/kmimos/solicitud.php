@@ -101,10 +101,10 @@
 			$cuidador_id = $cuidador->id;
 
 			if( empty($name_photo)  ){ $name_photo = "0"; }
-			if( file_exists("../../uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}") ){
-				$img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/{$name_photo}";
-			}elseif( file_exists("../../uploads/cuidadores/avatares/".$cuidador_id."/0.jpg") ){
-				$img = get_home_url()."/wp-content/uploads/cuidadores/avatares/".$cuidador_id."/0.jpg";
+			if( file_exists("../../uploads/avatares/".$cuidador_id."/{$name_photo}") ){
+				$img = get_home_url()."/wp-content/uploads/avatares/".$cuidador_id."/{$name_photo}";
+			}elseif( file_exists("../../uploads/avatares/".$cuidador_id."/0.jpg") ){
+				$img = get_home_url()."/wp-content/uploads/avatares/".$cuidador_id."/0.jpg";
 			}else{
 				$img = get_home_url()."/wp-content/themes/pointfinder".'/images/noimg.png';
 			}
