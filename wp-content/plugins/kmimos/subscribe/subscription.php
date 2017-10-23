@@ -71,7 +71,7 @@ if(mail_validate($mail)){
 		$_subscribe->insert(array('name' => $name  ,'email' => $mail , 'source' => $section,'time' => date('Y-m-d H:i:s', time())));
 		$return['message']='Registro Exitoso. Por favor revisa tu correo en la Bandeja de Entrada o en No Deseados';
 	}else{
-		$return['message']='Este correo ya estaba registrado. Por favor intentar con uno nuevo';
+		$return['message']='Este correo ya est&aacute; registrado. Por favor intentar con uno nuevo';
 	}
 
 }else{
