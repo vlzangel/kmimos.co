@@ -45,19 +45,17 @@
         var CampaignMonitor = '<div id="subForm">'+
         '<input id="fieldEmail" name="cm-vydlhy-vydlhy" type="email" placeholder="Introduce tu correo aqu&iacute" required />'+
         '<button onclick="register()" id="btn-envio"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>'+
-        '<div id="msg" class="span-email-hide">Datos guardados</div>'+
+        '<div id="msg" class="span-email-hide">Registro Exitoso. Por favor revisa tu correo en la Bandeja de Entrada o en No Deseados</div>'+
         '<div id="msg-vacio" class="span-email-hide">Debe completar los datos</div>'+
         '<div id="msg-register" class="span-email-hide">El email no es valido</div>'+
-        '<div id="msg-error" class="span-email-hide">Email registrado </div>';
+        '<div id="msg-error" class="span-email-hide">Este correo ya estaba registrado. Por favor intentar con uno nuevo</div>';
 
         var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">'
             +'<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
 
         var html='<div id="PageSubscribe"><i class="exit fa fa-times" aria-hidden="true" onclick="SubscribePopUp_Close(\'#message.Msubscribe\')"></i>'
             +'<div class="section section1"><span>G&aacute;nate <strong>COP 8,000</strong> en tu primera reserva</span><br>&#8216;&#8216;Aplica para clientes nuevos&#8217;&#8217;<div class="images">'+dog+'</div></div>'
-            +'<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span>'+CampaignMonitor+'</div>'
-            +'<div class="section section3">*Dentro de 48 hrs. Te enviaremos v&iacute;a email tu c&uacute;pon de descuento</div>'
-            +'</div>';
+            +'<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span>'+CampaignMonitor+'</div>';
 
         SubscribePopUp_Create(html);
         
@@ -131,7 +129,7 @@
         if(jQuery('body').hasClass('home')){
             SubscribeTime = setTimeout(function(){
                 SubscribeSite();
-            }, 700);
+            }, 7400);
         }
     });
 </script>
