@@ -48,7 +48,7 @@
         '<div id="msg" class="span-email-hide">Registro Exitoso. Por favor revisa tu correo en la Bandeja de Entrada o en No Deseados</div>'+
         '<div id="msg-vacio" class="span-email-hide">Debe completar los datos</div>'+
         '<div id="msg-register" class="span-email-hide">El email no es valido</div>'+
-        '<div id="msg-error" class="span-email-hide">Este correo ya estaba registrado. Por favor intentar con uno nuevo</div>';
+        '<div id="msg-error" class="span-email-hide">Este correo ya est&aacute; registrado. Por favor intentar con uno nuevo</div>';
 
         var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">'
             +'<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
