@@ -21,15 +21,6 @@
 
 		<script src="js/jquery/jquery.js"></script>
 		<script src="js/script.js"></script>
-        <script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-93578532-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
 
 		<style type="text/css">
 			#PageSubscribe{position:relative; max-width: 700px;  margin: 0 auto;  padding: 25px;  top: 75px; border-radius: 20px;  background: #ba2287;  overflow: hidden;}
@@ -174,7 +165,7 @@
 				<p><strong>Libre de Jaulas</strong></p>
 			</div>
 			<div class="action">
-				<a href="/?home&utm_source=youtube&utm_medium=landing_page&utm_campaign=buscar_cuidador_disponible&utm_term=cuidador%2Bperros%2Bcolombia&utm_content=landing_page#jj-landing-page" tile="kmimos">
+				<a href="http://kmimos.co?utm_source=landing&utm_campaign=usuarios_landing_medellin&utm_term=cuidado_perro_hospedaje_paseos#jj-landing-page" tile="kmimos">
 					<div class="button wow zoomIn">BUSCAR CUIDADORES DISPONIBLES</div>
 				</a>
 				<div>
@@ -338,7 +329,7 @@
 									frameborder="0" allowfullscreen></iframe>
 							</article>
 							<article class="col-sm-12 text-center" style="padding-top:20px;">
-								<a href="/?home&utm_source=youtube&utm_medium=landing_page&utm_campaign=buscar_cuidador_disponible&utm_term=cuidador%2Bperros%2Bcolombia&utm_content=landing_page#jj-landing-page" class="btn btn-kmimos">Buscar Cuidadores Disponibles</a>
+								<a href="http://kmimos.co?utm_source=landing&utm_campaign=usuarios_landing_medellin&utm_term=cuidado_perro_hospedaje_paseos#jj-landing-page" class="btn btn-kmimos">Buscar Cuidadores Disponibles</a>
 							</article>
 						</div>
 					</div>
