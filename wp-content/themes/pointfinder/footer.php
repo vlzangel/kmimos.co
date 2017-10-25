@@ -548,7 +548,7 @@ $HTML = "</div></div>
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','".get_home_url().'/wp-content/plugins/kmimos/javascript/analytics.js'."','ga');
 
-                ga('create', 'UA-103343585-1', 'auto');
+                ga('create', 'UA-93578532-1', 'auto');
                 ga('send', 'pageview');
             </script>
         ";
