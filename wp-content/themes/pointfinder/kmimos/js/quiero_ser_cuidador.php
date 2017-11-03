@@ -481,8 +481,8 @@
 	// Generales
 
 		function GoToHomePage(){
-			// location = 'http://kmimos.ilernus.com';
-			location = "<?php echo get_home_url().'/perfil-usuario/?ua=profile'; ?>";
+			location = 'http://kmimos.ilernus.com';
+			//location = "<?php echo get_home_url().'/perfil-usuario/?ua=profile'; ?>";
 		}
 			
 		function vlz_modal(tipo, titulo, contenido){
