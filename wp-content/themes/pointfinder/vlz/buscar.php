@@ -176,9 +176,9 @@
         activo = '1' {$condiciones} {$ubicaciones_filtro} {$FILTRO_UBICACION}
     ORDER BY {$orderby}";
 
-    //echo "<pre>";
-    //print_r($sql);
-    //echo "</pre>";
+    // echo "<pre>";
+    // 	print_r($sql);
+    // echo "</pre>";
 
     $cuidadores = $db->get_results($sql);
 

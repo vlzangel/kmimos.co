@@ -6,7 +6,7 @@ $HTML = '
         </a>
         <div id="contenido-centro">
         	<span id="icono-centro" class="vc_icon_element-icon fa fa-map-marker"></span>
-        	<div id="ubicacion-actual">M&eacute;xico</div>
+        	<div id="ubicacion-actual">Colombia</div>
         </div>
         <a id="boton-derecha" href="#filtros">
         	<span id="icono-derecha" class="dashicons dashicons-admin-settings"></span><div id="titulo-derecha">Filtros</div>
