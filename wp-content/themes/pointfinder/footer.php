@@ -9,15 +9,16 @@
     #PageSubscribe .section.section1 .images{padding:10px 0; text-align: center;}
     #PageSubscribe .section.section3{width: 100%; font-size: 17px; font-weight: bold; text-align: center;}
     #PageSubscribe .section.section2{}
-    #PageSubscribe .section.section2 .message{font-size: 15px; border: none; background: none; opacity:0; visible: hidden; transition: all .3s;}
-    #PageSubscribe .section.section2 .message.show{opacity:1; visible:visible;}
+    
     #PageSubscribe .section.section2 .icon{width: 30px; padding: 5px 0;}
     #PageSubscribe .section.section2 .subscribe {margin: 20px 0;  }
     #PageSubscribe .section.section2 form{margin: 0; display:flex;}
     #PageSubscribe .section.section2 input,
-    #PageSubscribe .section.section2 button{width: 100%; max-width: calc(100% - 60px); margin: 5px; padding: 5px 10px; color: #CCC; font-size: 15px; border-radius: 20px;  border: none; background: #FFF; }
+    #PageSubscribe .section.section2 button{width: 100%; max-width: calc(100% - 70px); margin-top: 25px;
+    margin-left: 5px; padding: 10px 10px; color: #CCC; font-size: 15px; border-radius: 20px;  border: none; background: #FFF; }
     #PageSubscribe .section.section2 button {padding: 10px;  width: 40px;}
-
+    .span-email-show{ display: list-item; }
+    .span-email-hide{ display: none; }
     @media screen and (max-width:480px), screen and (max-device-width:480px) {
         #PageSubscribe { top: 15px;}
         #PageSubscribe .section{ width: 100%; padding: 10px 0; font-size: 12px;}
@@ -41,18 +42,88 @@
     function SubscribeSite(){
         clearTimeout(SubscribeTime);
 
-        var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">' +
-            '<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
+        var CampaignMonitor = '<div id="subForm">'+
+        '<input id="fieldEmail" name="cm-vydlhy-vydlhy" type="email" placeholder="Introduce tu correo aqu&iacute" required />'+
+        '<button onclick="register()" id="btn-envio"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>'+
+        '<div id="msg" class="span-email-hide">Registro Exitoso. Por favor revisa tu correo en la Bandeja de Entrada o en No Deseados</div>'+
+        '<div id="msg-vacio" class="span-email-hide">Debe completar los datos</div>'+
+        '<div id="msg-register" class="span-email-hide">El email no es valido</div>'+
+        '<div id="msg-error" class="span-email-hide">Este correo ya est&aacute; registrado. Por favor intenta con uno nuevo</div>';
 
-        var html='<div id="PageSubscribe"><i class="exit fa fa-times" aria-hidden="true" onclick="SubscribePopUp_Close(\'#message.Msubscribe\')"></i>' +
-            '<div class="section section1"><span>G&aacute;nate <strong>COP 8,000</strong> en tu primera reserva</span><br>&#8216;&#8216;Aplica para clientes nuevos&#8217;&#8217;<div class="images">'+dog+'</div></div>' +
-            '<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span><?php echo subscribe_input('home'); ?></div>' +
-            '<div class="section section3">*Dentro de 48 hrs. Te enviaremos v&iacute;a email tu c&uacute;pon de descuento</div>' +
-            '</div>';
+        var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">'
+            +'<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
 
+        var html='<div id="PageSubscribe"><i class="exit fa fa-times" aria-hidden="true" onclick="SubscribePopUp_Close(\'#message.Msubscribe\')"></i>'
+            +'<div class="section section1"><span>G&aacute;nate <strong>COP 8,000</strong> en tu primera reserva</span><br>&#8216;&#8216;Aplica para clientes nuevos&#8217;&#8217;<div class="images">'+dog+'</div></div>'
+            +'<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span>'+CampaignMonitor+'</div>';
 
         SubscribePopUp_Create(html);
+        
     }
+    function register(){     
+        if( jQuery('#fieldEmail').val() == ""){
+            jQuery("#msg-vacio").removeClass('span-email-hide');
+            jQuery("#msg-vacio").addClass('span-email-show');
+            return;
+        }else{
+            var mail= jQuery('#fieldEmail').val();
+            var email = {'cm-vydlhy-vydlhy': mail}
+            var datos = {'source': 'home', 'email': mail}
+            var result = getGlobalData("../../../landing/newsletter.php",'POST', datos);
+                console.log(result);
+            if (result == 1) {
+                jQuery("#msg-vacio").removeClass('span-email-show');
+                jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-hide');
+                jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg-register').addClass('span-email-hide');
+                jQuery('#msg').removeClass('span-email-hide');
+                jQuery('#msg').addClass('span-email-show');
+                result = getGlobalData("http://kmimos.intaface.com/t/j/s/vydlhy/",'POST', email);
+            }else if (result == 2){
+                jQuery("#msg-vacio").removeClass('span-email-show');
+                jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg').removeClass('span-email-show');
+                jQuery('#msg-register').addClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-hide');
+                jQuery("#msg-vacio").addClass('span-email-hide');
+                jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg').addClass('span-email-hide');
+            }else if (result == 3){
+                jQuery("#msg-vacio").removeClass('span-email-show');
+                jQuery('#msg-error').removeClass('span-email-hide');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-hide');
+                jQuery('#msg-error').addClass('span-email-show');
+                jQuery('#msg-register').addClass('span-email-hide');
+                jQuery('#msg').removeClass('span-email-show');
+                jQuery('#msg').addClass('span-email-hide');
+            }else{
+                jQuery("#msg-vacio").removeClass('span-email-hide');
+                jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-show');
+                jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg-register').addClass('span-email-hide');
+                jQuery('#msg').removeClass('span-email-show');
+                jQuery('#msg').addClass('span-email-hide');
+            }
+        }
+    }
+
+    function getGlobalData(url,method, datos){
+        return jQuery.ajax({
+            data: datos,
+            type: method,
+            url: url,
+            async:false,
+            success: function(data){
+                return data;
+            }
+        }).responseText;
+    }
+
 
     jQuery(document).ready(function(e){
         if(jQuery('body').hasClass('home')){
@@ -466,7 +537,7 @@ $HTML = "</div></div>
                         });
                     ";
                 }
-
+/*
         $HTML .= "}); </script>
             <!--[if lt IE 9]>
                 <script src='".get_home_url()."/wp-content/themes/pointfinder/js/html5shiv.js'></script>
@@ -477,10 +548,11 @@ $HTML = "</div></div>
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','".get_home_url().'/wp-content/plugins/kmimos/javascript/analytics.js'."','ga');
 
-                ga('create', 'UA-103343585-1', 'auto');
+                ga('create', 'UA-93578532-1', 'auto');
                 ga('send', 'pageview');
             </script>
         ";
+*/
 
         if(  $_SESSION['admin_sub_login'] == 'YES' ){
             $HTML .= "
@@ -596,6 +668,17 @@ $HTML = "</div></div>
     
         wp_footer();
 
-        echo "</body></html>";
+
+
+        echo "
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-93578532-1', 'auto');
+        ga('send', 'pageview');
+        </script></body></html>";
 ?>
         

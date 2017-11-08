@@ -88,8 +88,8 @@
                 "pais"      => "Colombia",
                 "titulo"    => "Kmimos Colombia",
                 "email"     => "contactoco@kmimos.la",
-                "telefono"  => "+57 (1) 593 8719",
-                "telefono_solo"  => "+57 (1) 593 8719",
+                "telefono"  => "Bogota: +57 (1) 593 8719",
+                "telefono_solo"  => "Bogota: +57 (1) 593 8719",
                 "whatsApp"  => "+57 318 350 2391",
                 "twitter"   => "kmimosco",
                 "facebook"  => "Kmimosco",
@@ -107,8 +107,11 @@ if(!function_exists('kmimos_mails_administradores_new')){
         $email_admin = $info["email"];
 
         $headers_admins = array(
-            'BCC: a.veloz@kmimos.la',
-            'BCC: a.pedroza@kmimos.la'
+             'BCC: r.cuevas@kmimos.la',
+             'BCC: r.gonzalez@kmimos.la',
+             'BCC: s.cedeno@kmimos.la',
+             'BCC: n.deligny@kmimos.la',
+             'BCC: kmiandino01sincola@gmail.com'
         );
 
         wp_mail( $email_admin, $titulo, $mensaje, $headers_admins);
