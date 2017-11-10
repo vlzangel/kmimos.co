@@ -1,0 +1,84 @@
+html, body{ font-family: 'Lato', san-serif !important; background: #49c9b0 !important;}
+.contain{position: relative; width: 95%; max-width: 500px; margin:0 auto;}
+.contain_window{height: 1000px; margin: 0; overflow: hidden; }
+
+.header{padding: 20px 0; color: #FFF; font-size: 25px; text-align:center; background:#00B190;}
+.header .logo{width:200px; max-width: 80%;}
+
+section{position: relative;}
+section .content{padding:30px; color:#FFF; font-size:40px; text-align:left;}
+section .content strong{font-size:50px; font-weight:900;}
+section .action{position:absolute; width: 100%; left: 0; right: 0; bottom:0px; text-align:center;}
+section .button{margin:0 auto; padding:15px 30px; color:#ff8700; font-size:15px; font-weight:900; text-align: center; cursor: pointer; border-radius:30px; background: #FFF; display: inline-block;}
+section .down {width:46px; margin:20px;  color:#FFF; font-size:40px; cursor: pointer; border:3px solid #FFF;  border-radius:50%;}
+
+section.red{}
+section.red .content{font-size:25px; font-weight: lighter;}
+section.red .content strong{font-size:25px;}
+section.red .images{position:absolute; width: 100%; bottom:20px; text-align:center;}
+section.red .image{position:absolute; bottom:0;}
+
+section.red .group{position:absolute; bottom: 20px;}
+section.red .group1{width: 200px; height:200px; left:10%; bottom: 115px;}
+section.red #img1{height:100%; left: 0;}
+section.red #img4{height:40%; left:60px; bottom:10px;}
+
+section.red .group2{width: 150px; height:140px; left: 30%;}
+section.red #img2{height:100%; left:0;}
+section.red #img5{height:50%; left:-10px;}
+
+section.red .group3{width: 250px; height:200px; right: 0;}
+section.red #img3{height:100%; left:0;}
+section.red #img7{height:10%; left:90px; }
+section.red #img6{height:40%; left:125px;}
+
+
+
+/* TESTIMONY */
+.navigate{position:absolute; width:100%; height:100%; top:0; left:0;  }
+.navigate .direction{position:absolute; width:auto; top:calc(50% - 25px); left:0; color:#FFF; font-size:50px; cursor:pointer;  }
+.navigate .direction[data-direction="sig"]{left:auto; right:0;}
+
+#testimony{}
+#testimony .header{position: relative; background: #900fa2;}
+#testimony .image{position: absolute; width: 100%; height: 100%; bottom: 0px; left: 0px; background:center top/cover no-repeat; transition:all .5s;}
+#testimony .content{position: relative; font-size: 20px; font-weight: lighter; background: #900fa2;}
+#testimony .content .title{padding:0; font-size: 30px; font-weight: bold; text-align:left; background:none !important;}
+#testimony .testimonials{position:relative; margin:0 50px;}
+#testimony .testimonials .testimony{position:relative; display:none;}
+#testimony .testimonials .testimony.select{opacity:1; visibility:visible; display:block;}
+/*NEW*/
+#testimony .image{background:#000 center center/contain no-repeat;}
+
+@media screen and (max-width:768px), screen and (max-device-width:768px){}
+@media screen and (max-width:480px), screen and (max-device-width:480px){
+    section .content{font-size:25px;}
+    section .content strong{font-size: 40px;}
+    section.red .group3{bottom: 64px;}
+/*
+    section.red .group1,
+    section.red .group3{display: none;}
+    section.red .group2{bottom:60px;}
+*/
+    section.red .group3{ width: 220px; height:150px;}
+    section.red .group1{ height:150px; bottom: 70px;}
+    section.red .group2{ height:130px;}
+
+    #testimony .content{font-size: 15px;}
+    #testimony .image{background:#000 center top/cover no-repeat;}
+}
+
+@media screen and (max-width:360px), screen and (max-device-width:360px){
+    /*
+    section .content{font-size:15px;}
+    section .content strong{font-size: 20px;}
+    */
+    section .button{font-size: 12px;}
+
+    section.red .content,
+    section.red .content strong{font-size: 20px;}
+    section.red .group3{ width: 190px; height:100px;}
+    section.red .group1{ height:100px; bottom: 70px;}
+    section.red .group2{ height:80px;}
+}
+
