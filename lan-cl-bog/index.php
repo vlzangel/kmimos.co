@@ -21,7 +21,16 @@
 
 		<script src="js/jquery/jquery.js"></script>
 		<script src="js/script.js"></script>
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+	  ga('create', 'UA-93578532-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 		<style type="text/css">
 			#PageSubscribe{position:relative; max-width: 700px;  margin: 0 auto;  padding: 25px;  top: 75px; border-radius: 20px;  background: #ba2287;  overflow: hidden;}
 			#PageSubscribe .exit{float: right; cursor: pointer;}
@@ -152,16 +161,6 @@
 				}, 7400);
 			});
 		</script>
-         
-        <script type='text/javascript'>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','".get_home_url().'/wp-content/plugins/kmimos/javascript/analytics.js'."','ga');
-
-            ga('create', 'UA-93578532-1', 'auto');
-            ga('send', 'pageview');
-    	</script>
     </head>
 
     <body id="waypoint">

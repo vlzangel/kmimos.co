@@ -88,8 +88,8 @@
                 "pais"      => "Colombia",
                 "titulo"    => "Kmimos Colombia",
                 "email"     => "contactoco@kmimos.la",
-                "telefono"  => "+57 (1) 593 8719",
-                "telefono_solo"  => "+57 (1) 593 8719",
+                "telefono"  => "Bogota: +57 (1) 593 8719",
+                "telefono_solo"  => "Bogota: +57 (1) 593 8719",
                 "whatsApp"  => "+57 318 350 2391",
                 "twitter"   => "kmimosco",
                 "facebook"  => "Kmimosco",
@@ -107,14 +107,11 @@ if(!function_exists('kmimos_mails_administradores_new')){
         $email_admin = $info["email"];
 
         $headers_admins = array(
-             //'BCC: e.celli@kmimos.la',
-             //'BCC: a.lazaro@kmimos.la',
              'BCC: r.cuevas@kmimos.la',
              'BCC: r.gonzalez@kmimos.la',
              'BCC: s.cedeno@kmimos.la',
              'BCC: n.deligny@kmimos.la',
-             //'BCC: m.castellon@kmimos.la',
-             'BCC: a.pedroza@kmimos.la'
+             'BCC: kmiandino01sincola@gmail.com'
         );
 
         wp_mail( $email_admin, $titulo, $mensaje, $headers_admins);
@@ -240,7 +237,7 @@ if(!function_exists('kmimos_mails_administradores_new')){
 
     if(!function_exists('kmimos_get_foto_cuidador')){
         function kmimos_get_foto_cuidador($id){
-            global $wpdb, $home;
+            global $wpdb;
             $cuidador = $wpdb->get_row("SELECT * FROM cuidadores WHERE id = ".$id);
             $name_photo = $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = {$cuidador->user_id} AND meta_key = 'name_photo'");
             if( !empty($name_photo)  ){
@@ -248,7 +245,7 @@ if(!function_exists('kmimos_mails_administradores_new')){
                 if( count($ext) == 1 ){
                     $name_photo .= ".jpg";
                 }
-                $img = $home."/wp-content/uploads/avatares/{$cuidador->user_id}/{$name_photo}";
+                $img = get_home_url()."/wp-content/uploads/avatares/{$cuidador->user_id}/{$name_photo}";
             }
             return $img;
         }

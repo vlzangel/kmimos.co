@@ -9,15 +9,16 @@
     #PageSubscribe .section.section1 .images{padding:10px 0; text-align: center;}
     #PageSubscribe .section.section3{width: 100%; font-size: 17px; font-weight: bold; text-align: center;}
     #PageSubscribe .section.section2{}
-    #PageSubscribe .section.section2 .message{font-size: 15px; border: none; background: none; opacity:0; visible: hidden; transition: all .3s;}
-    #PageSubscribe .section.section2 .message.show{opacity:1; visible:visible;}
+    
     #PageSubscribe .section.section2 .icon{width: 30px; padding: 5px 0;}
     #PageSubscribe .section.section2 .subscribe {margin: 20px 0;  }
     #PageSubscribe .section.section2 form{margin: 0; display:flex;}
     #PageSubscribe .section.section2 input,
-    #PageSubscribe .section.section2 button{width: 100%; max-width: calc(100% - 60px); margin: 5px; padding: 5px 10px; color: #CCC; font-size: 15px; border-radius: 20px;  border: none; background: #FFF; }
+    #PageSubscribe .section.section2 button{width: 100%; max-width: calc(100% - 70px); margin-top: 25px;
+    margin-left: 5px; padding: 10px 10px; color: #CCC; font-size: 15px; border-radius: 20px;  border: none; background: #FFF; }
     #PageSubscribe .section.section2 button {padding: 10px;  width: 40px;}
-
+    .span-email-show{ display: list-item; }
+    .span-email-hide{ display: none; }
     @media screen and (max-width:480px), screen and (max-device-width:480px) {
         #PageSubscribe { top: 15px;}
         #PageSubscribe .section{ width: 100%; padding: 10px 0; font-size: 12px;}
@@ -41,24 +42,13 @@
     function SubscribeSite(){
         clearTimeout(SubscribeTime);
 
-        var MailChimp='<!-- Begin MailChimp Signup Form -->'
-            +'<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">'
-            //+'<style type="text/css"> #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;} /* Add your own MailChimp form style overrides in your site stylesheet or in this style block. We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */</style>'
-            +'<div id="mc_embed_signup">'
-            +'<form action="//kmimos.us12.list-manage.com/subscribe/post?u=7d48532b21ffc4109cde43484&amp;id=30c11ceea9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>'
-            +'<div id="mc_embed_signup_scroll">'
-            +'<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Introduce tu correo aquí" required>'
-            +'<button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>'
-            +'<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->'
-            +'<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7d48532b21ffc4109cde43484_30c11ceea9" tabindex="-1" value=""></div>'
-            //+'<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>'
-            +'</div>'
-            +'</form>'
-            +'</div>'
-            +'<!--End mc_embed_signup-->';
-
-        var CampaignMonitor = '<div class="createsend-button" style="height:22px;display:inline-block;" data-listid="j/1B/43F/9B8/EFDDCF3C8B928937"></div>';
-        var form = '<?php echo subscribe_input('home'); ?>';
+        var CampaignMonitor = '<div id="subForm">'+
+        '<input id="fieldEmail" name="cm-vydlhy-vydlhy" type="email" placeholder="Introduce tu correo aqu&iacute" required />'+
+        '<button onclick="register()" id="btn-envio"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>'+
+        '<div id="msg" class="span-email-hide">Datos guardados</div>'+
+        '<div id="msg-vacio" class="span-email-hide">Debe completar los datos</div>'+
+        '<div id="msg-register" class="span-email-hide">El email no es valido</div>'+
+        '<div id="msg-error" class="span-email-hide">Email registrado </div>';
 
         var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">'
             +'<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
@@ -69,10 +59,73 @@
             +'<div class="section section3">*Dentro de 48 hrs. Te enviaremos v&iacute;a email tu c&uacute;pon de descuento</div>'
             +'</div>';
 
-
         SubscribePopUp_Create(html);
-        (function () { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();
+        
     }
+    function register(){     
+        if( jQuery('#fieldEmail').val() == ""){
+            jQuery("#msg-vacio").removeClass('span-email-hide');
+            jQuery("#msg-vacio").addClass('span-email-show');
+            return;
+        }else{
+            var mail= jQuery('#fieldEmail').val();
+            var email = {'cm-vydlhy-vydlhy': mail}
+            var datos = {'source': 'home', 'email': mail}
+            var result = getGlobalData("../../../landing/newsletter.php",'POST', datos);
+                console.log(result);
+            if (result == 1) {
+                jQuery("#msg-vacio").removeClass('span-email-show');
+                jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-hide');
+                jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg-register').addClass('span-email-hide');
+                jQuery('#msg').removeClass('span-email-hide');
+                jQuery('#msg').addClass('span-email-show');
+                result = getGlobalData("http://kmimos.intaface.com/t/j/s/vydlhy/",'POST', email);
+            }else if (result == 2){
+                jQuery("#msg-vacio").removeClass('span-email-show');
+                jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg').removeClass('span-email-show');
+                jQuery('#msg-register').addClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-hide');
+                jQuery("#msg-vacio").addClass('span-email-hide');
+                jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg').addClass('span-email-hide');
+            }else if (result == 3){
+                jQuery("#msg-vacio").removeClass('span-email-show');
+                jQuery('#msg-error').removeClass('span-email-hide');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-hide');
+                jQuery('#msg-error').addClass('span-email-show');
+                jQuery('#msg-register').addClass('span-email-hide');
+                jQuery('#msg').removeClass('span-email-show');
+                jQuery('#msg').addClass('span-email-hide');
+            }else{
+                jQuery("#msg-vacio").removeClass('span-email-hide');
+                jQuery('#msg-error').removeClass('span-email-show');
+                jQuery('#msg-register').removeClass('span-email-show');
+                jQuery("#msg-vacio").addClass('span-email-show');
+                jQuery('#msg-error').addClass('span-email-hide');
+                jQuery('#msg-register').addClass('span-email-hide');
+                jQuery('#msg').removeClass('span-email-show');
+                jQuery('#msg').addClass('span-email-hide');
+            }
+        }
+    }
+
+    function getGlobalData(url,method, datos){
+        return jQuery.ajax({
+            data: datos,
+            type: method,
+            url: url,
+            async:false,
+            success: function(data){
+                return data;
+            }
+        }).responseText;
+    }
+
 
     jQuery(document).ready(function(e){
         if(jQuery('body').hasClass('home')){
@@ -497,7 +550,7 @@ $HTML = "</div></div>
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','".get_home_url().'/wp-content/plugins/kmimos/javascript/analytics.js'."','ga');
 
-                ga('create', 'UA-103343585-1', 'auto');
+                ga('create', 'UA-93578532-1', 'auto');
                 ga('send', 'pageview');
             </script>
         ";

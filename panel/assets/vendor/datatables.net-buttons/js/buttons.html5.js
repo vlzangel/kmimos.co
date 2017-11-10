@@ -975,7 +975,7 @@ DataTable.ext.buttons.csvHtml5 = {
 
 	exportOptions: {},
 
-	fieldSeparator: ',',
+	fieldSeparator: ';',
 
 	fieldBoundary: '"',
 

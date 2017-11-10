@@ -579,7 +579,58 @@ function woocommerce_payulatam_init(){
 
 	        	// We are here so lets check status and do actions
 		        switch ( $codes[$state] ) {
+		        	
 		            case 'APPROVED' :
+
+		            // Check order not already completed
+		            	if ( $order->status == 'completed' ) {
+		            		 if ( 'yes' == $this->debug )
+		            		 	$this->log->add( 'payulatam', __('Aborting, Order #' . $order->id . ' is already complete.', 'payu-latam-woocommerce') );
+		            		//exit;
+		            	}
+
+						// Validate Amount
+					    if ( $order->get_total() != $posted['TX_VALUE'] ) {
+					    	$order->update_status( 'on-hold', sprintf( __( 'Validation error: PayU Latam amounts do not match (gross %s).', 'payu-latam-woocommerce'), $posted['TX_VALUE'] ) );
+
+							$this->msg['message'] = sprintf( __( 'Validation error: PayU Latam amounts do not match (gross %s).', 'payu-latam-woocommerce'), $posted['TX_VALUE'] );
+							$this->msg['class'] = 'woocommerce-error';	
+
+					    }
+
+					    // Validate Merchand id 
+						if ( strcasecmp( trim( $posted['merchantId'] ), trim( $this->merchant_id ) ) != 0 ) {
+					    	$order->update_status( 'on-hold', sprintf( __( 'Validation error: Payment in PayU Latam comes from another id (%s).', 'payu-latam-woocommerce'), $posted['merchantId'] ) );
+							$this->msg['message'] = sprintf( __( 'Validation error: Payment in PayU Latam comes from another id (%s).', 'payu-latam-woocommerce'), $posted['merchantId'] );
+							$this->msg['class'] = 'woocommerce-error';
+
+						}
+
+						 // Payment Details
+		                if ( ! empty( $posted['buyerEmail'] ) )
+		                	update_post_meta( $order->id, __('Payer PayU Latam email', 'payu-latam-woocommerce'), $posted['buyerEmail'] );
+		                if ( ! empty( $posted['transactionId'] ) )
+		                	update_post_meta( $order->id, __('Transaction ID', 'payu-latam-woocommerce'), $posted['transactionId'] );
+		                if ( ! empty( $posted['trazabilityCode'] ) )
+		                	update_post_meta( $order->id, __('Trasability Code', 'payu-latam-woocommerce'), $posted['trazabilityCode'] );
+		                /*if ( ! empty( $posted['last_name'] ) )
+		                	update_post_meta( $order->id, 'Payer last name', $posted['last_name'] );*/
+		                if ( ! empty( $posted['lapPaymentMethodType'] ) )
+		                	update_post_meta( $order->id, __('Payment type', 'payu-latam-woocommerce'), $posted['lapPaymentMethodType'] );
+
+		                if ( $codes[$state] == 'APPROVED' ) {
+		                	$order->add_order_note( __( 'PayU Latam payment approved', 'payu-latam-woocommerce') );
+							$this->msg['message'] = $this->msg_approved;
+							$this->msg['class'] = 'woocommerce-message';
+		                	$order->payment_complete();
+		                } else {
+		                	$order->update_status( 'on-hold', sprintf( __( 'Payment pending: %s', 'payu-latam-woocommerce'), $codes[$state] ) );
+							$this->msg['message'] = $this->msg_pending;
+							$this->msg['class'] = 'woocommerce-info';
+		                }
+
+		            break;
+
 		            case 'PENDING' :
 
 		            	// Check order not already completed
@@ -741,41 +792,6 @@ function woocommerce_payulatam_init(){
 							$this->msg['message'] =  $this->msg_approved;
 							$this->msg['class'] = 'woocommerce-message';
 		                	$order->payment_complete();
-
-		                	/* 
-		                		INICIO: Disparar correos de pago recibido
-		                	*/
-
-		                		$info = kmimos_get_info_syte();
-								add_filter( 'wp_mail_from_name', function( $name ) {
-							        global $info;
-							        return $info["titulo"];
-							    });
-							    add_filter( 'wp_mail_from', function( $email ) {
-							        global $info;
-							        return $info["email"]; 
-							    });	
-								include( "../../themes/pointfinder/woocommerce/emails/vlz_data_orden.php");
-								$email_admin = $info["email"];
-								$aceptar_rechazar = '
-									<center>
-										<p><strong>¿ACEPTAS ESTA RESERVA?</strong></p>
-										<table> <tr> <td>
-											<a href="'.get_home_url().'/wp-content/plugins/kmimos/order.php?o='.$orden_id.'&s=1&t=1" style="text-decoration: none; padding: 7px 0px; background: #00d2b7; color: #FFF; font-size: 16px; font-weight: 500; border-radius: 5px; width: 100px; display: inline-block; text-align: center;">
-												Aceptar
-											</a> </td> <td>
-											 <a href="'.get_home_url().'/wp-content/plugins/kmimos/order.php?o='.$orden_id.'&s=0&t=1" style="text-decoration: none; padding: 7px 0px; background: #dc2222; color: #FFF; font-size: 16px; font-weight: 500; border-radius: 5px; width: 100px; display: inline-block; text-align: center;">
-											 	Rechazar
-											 </a> </td> </tr>
-										</table>
-									</center>
-								';
-								$dudas = '<p align="justify">Para cualquier duda y/o comentario puedes contactar al Staff Kmimos a los teléfonos '.$info["telefono"].', o al correo '.$info["email"].'</p>';
-								include("../../themes/pointfinder/woocommerce/emails/otro.php");
-
-		                	/* 
-		                		FIN: Disparar correos de pago recibido
-		                	*/
 
 			            	if ( 'yes' == $this->debug ){ $this->log->add( 'payulatam', __('Payment complete.', 'payu-latam-woocommerce'));}
 
