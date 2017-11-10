@@ -19,6 +19,13 @@ apk/
 app/
 movil/
 
+
+/.tmb/
+/datos.txt
+/ic.txt
+/wp-content/plugins/file-manager/
+
+
 /.htaccess
 /license.txt
 /readme.html
