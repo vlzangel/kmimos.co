@@ -18,6 +18,7 @@
     include_once('angel.php');
     include_once('carlos.php');
     include_once('italo.php');
+    include_once('dajan.php');
     include_once('viejos.php');
 
     /** Incluye las funciones de javascript en la página WEB bajo Wordpress **/
@@ -27,6 +28,7 @@
             angel_include_script();
             carlos_include_script();
             italo_include_script();
+            dajan_include_script();
             viejos_include_script();
         }
     }
@@ -36,6 +38,7 @@
             angel_include_admin_script();
             carlos_include_admin_script();
             italo_include_admin_script();
+            dajan_include_admin_script();
             viejos_include_admin_script();
         }
     }

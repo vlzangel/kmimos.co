@@ -73,17 +73,17 @@
 	if(!function_exists('kmimos_get_info_syte')){
 	    function kmimos_get_info_syte(){
 	        return array(
-	            "pais"      => "México",
-	            "titulo"    => "Kmimos México",
-	            "email"     => "contactomex@kmimos.la",
+	            "pais"      => get_region('pais'),
+	            "titulo"    => get_region('titulo'),
+	            "email"     => get_region('email'),
 
-                "telefono" => "(01) 55 4742 3162",
+                "telefono" => get_region('telefono'),
                 "telefono_sincosto" => "(01) 800 056 4667",
-                "whatsapp"=> "+52 (55) 6892 2182", 
+                "whatsapp"=> get_region('whatsapp'), 
 
-	            "twitter"   => "kmimosmx",
-	            "facebook"  => "Kmimosmx",
-	            "instagram" => "kmimosmx",
+	            "twitter"   => get_region('twitter'),
+	            "facebook"  => get_region('facebook'),
+	            "instagram" => get_region('instagram'),
 	            "mon_izq" => "",
 	            "mon_der" => "$"
 	        );
