@@ -1,0 +1,73 @@
+@media (max-width: 992px){
+	.main .vlz_tabla .vlz_tabla_cuidador div {
+	    font-size: 12px;
+	    padding-right: 20px;
+	}
+	.main .vlz_tabla .vlz_botones span {
+	    padding: 10px;
+	}
+	.main .vlz_tabla .vlz_botones span.cancelar {
+	    padding: 8px;
+	}
+	.main .vlz_tabla .vlz_botones {
+	    width: 178px;
+	}
+	.main .vlz_tabla .vlz_tabla_img {
+	    width: 60px;
+	}
+	.main .vlz_tabla .vlz_tabla_img span {
+	    width: 50px;
+	    height: 50px;
+	}
+}
+
+@media (min-width: 768px){
+	.km-link-favorito:hover{
+	    color: #337ab7;
+	}
+}
+
+@media (max-width: 768px){
+	.bg-white-secondary{
+	    padding-top: 0px;
+	}
+	.navbar-brand>img {
+	    height: 100%;
+	}
+	.sin_logear img{
+	    width: 30px;
+	    height: 30px;
+	    padding-top: 5px;
+	}
+	.bg-white .navbar-brand>img {
+	    padding: 6px 0px 3px;
+	}
+
+	.msg_acciones {
+	    padding: 10px 0px 10px !important;
+	    margin: 0px auto 10px !important;
+	    font-size: 15px !important;
+	}
+}
+
+@media (max-width: 480px){
+    .navbar .container {
+	    padding: 0px 0px 10px;
+	}
+
+	.vlz_solo_movil{
+        display: block;
+    }
+
+    .volver_msg {
+	    width: 100% !important;
+	}
+
+	.msg_acciones {
+	    font-size: 10px !important;
+	}
+}
+
+@media (max-width: 350px){
+    
+}

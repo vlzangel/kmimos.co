@@ -1,0 +1,27 @@
+@media (max-width: 992px){
+	.vlz_celda_20 {
+	    width: 25%;
+	}
+}
+
+@media (max-width: 768px){
+	.vlz_celda_20 {
+	    width: 33.3333333%;
+	}
+}
+
+@media (max-width: 480px){
+    .vlz_celda_25 {
+	    width: 50%;
+	}
+	.vlz_celda_50 {
+	    width: 100%;
+	}
+	.vlz_celda_20 {
+	    width: 50%;
+	}
+}
+
+@media (max-width: 350px){
+    
+}

@@ -32,14 +32,23 @@
 				draggable: false,
 				animation: google.maps.Animation.DROP,
 				position: new google.maps.LatLng(latitud, longitud),
-				icon: "https://www.kmimos.com.ve/wp-content/uploads/2016/04/pin.png"
+				icon: "https://www.kmimos.com.mx/wp-content/themes/kmimos/images/new/icon/pin.png"
 			});
 		}
 
+		(function(d, s){
+			$ = d.createElement(s), e = d.getElementsByTagName(s)[0];
+			$.async=!0;
+			$.setAttribute('charset','utf-8');
+			$.src='//maps.googleapis.com/maps/api/js?v=3&key=AIzaSyD-xrN3-wUMmJ6u2pY_QEQtpMYquGc70F8&callback=initMap';
+			$.type='text/javascript';
+			e.parentNode.insertBefore($, e)
+		})(document,'script');
+	
     </script>
-    <script async defer
+<!--     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=<?php echo $keyApi; ?>&callback=initMap">
-    </script>
+    </script> -->
   </body>
 </html>
 

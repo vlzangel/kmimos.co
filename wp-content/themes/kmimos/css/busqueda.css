@@ -1,0 +1,134 @@
+.km-img{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #292929;
+    height: 150px;
+}
+
+#mapa{
+    height: 375px;
+}
+
+h1 a{
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+h1 a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.rating img {
+    width: 20px;
+}
+
+.km-sellos.maps{
+    padding: 10px 0px 0px;
+}
+
+.km-sellos.maps .km-sellos{
+    padding: 0px;
+}
+
+h1.maps {
+    margin: 0;
+    padding: 5px 0 0 0;
+    font-size: 14px;
+    font-family: Gotham-Pro-Bold,arial,sans-serif;
+    text-transform: uppercase;
+}
+.km-opciones.maps {
+    width: 100%;
+    padding: 10px 0 0 0 !important;
+    text-align: left;
+}
+#map .km-opciones .precio {
+    color: #6a2499;
+    font-size: 17px;
+    text-align: left;
+}
+
+.km-valoraciones {
+    font-size: 10px;
+    padding: 5px 2px;
+}
+
+.km-resultados-lista .km-sellos {
+    padding-top: 5px !important;
+}
+
+#mapa-close{
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.km-titulo-mapa{
+    display: none;
+}
+
+.btnOpenPopupMap{
+    border-radius: 0px !important;
+}
+
+.km-leyenda{
+    display: block;
+    padding-bottom: 5px;
+}
+
+.filtros_aplicados{
+    padding: 5px 10px;
+    background: rgba(255, 190, 95, 0.4);
+    color: #000;
+    box-shadow: 1px 1px 1px #939393;
+}
+
+.filtros_aplicados li {
+    padding: 3px 0px;
+}
+.items_filtros {
+    overflow: hidden;
+}
+.items_filtros{
+    padding-left: 10px;
+}
+.items_filtros div {
+    float: left;
+    width: 50%;
+}
+.pocos_resultados{
+    padding-right: 20px !important; 
+    font-size: 21px !important; 
+    text-align: justify; 
+    margin: 10px 0px;
+}
+
+.km-select-custom-list{
+    position: relative;
+}
+
+@media All and (max-width: 768px){
+    .zopim{
+        top:auto!important;
+        position: fixed!important;
+        bottom: 9%!important;
+    }
+}
+@media All and (max-width: 520px){
+    .zopim{
+        bottom: 10%!important;
+    }
+}
+
+@media all and (max-width: 768px) and (orientation: landscape ){
+    .zopim{
+        bottom: 15%!important;
+    }
+}

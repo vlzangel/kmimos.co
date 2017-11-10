@@ -1,0 +1,88 @@
+.km-btn-border:hover{
+	text-decoration: none;
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+	.km-hero-bg {
+	    height: 400px;
+	}
+	.km-titular-cuidador {
+	    text-align: left;
+	    top: 160px;
+	}
+	h2 {
+	    font-size: 35px !important;
+	}
+	p {
+	    line-height: 15px !important;
+	}
+	section {
+	    text-align: left !important;
+	}
+	.km-btn {
+	    width: auto !important;
+        margin: 20px auto 0 !important;
+	}
+
+	.km-btn-borderw {
+	    background-color: #fff;
+	    box-shadow: 0 5px 0 0 #480571;
+	    color: #6b1c9b;
+	}
+	.navbar-header {
+	    margin-top: -22px !important;
+	}
+	.navbar-brand>img {
+	    height: 40px !important;
+    	top: 5px !important;
+	}
+
+	.bg-white .navbar-header {
+	    margin-top: 0px !important;
+	}
+
+}
+
+@media (max-width: 480px){
+    .km-titular-cuidador h2,
+    .km-titular-cuidador p {
+	    text-align: left;
+	}
+	h2 {
+	    font-size: 20px !important;
+	}
+}
+
+@media (max-width: 350px){
+    
+	.km-titular-cuidador {
+	    top: 145px;
+	}
+
+	ol, ul {
+	    font-size: 12px !important;
+	}
+	.page-reservation .steps-numbers li.line {
+	    width: 60px !important;
+	}
+
+	.page-reservation .steps-numbers {
+	    width: 235px;
+	}
+
+	.h3, h3 {
+	    font-size: 22px !important;
+	}
+
+	.km-block-1 p{
+		font-size: 11px !important;
+	}
+
+	.popup-registro-exitoso-text h2{
+		font-size: 18px !important;
+	}
+}

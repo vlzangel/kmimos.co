@@ -1,0 +1,62 @@
+div{
+    vertical-align: top;
+}
+.row_1 section{
+    width: 100%;
+    vertical-align: top;
+}
+.row_2 section{
+    width: 50%;
+    vertical-align: top;
+}
+.row_3 section{
+    width: 33.33333333333%;
+    vertical-align: top;
+}
+.row_4 section{
+    width: 25%;
+    vertical-align: top;
+}
+.tamanos_checks{
+    display: inline-block;
+    padding: 7px 8px 0px 0px;
+}
+.vlz_check, .vlz_no_check{
+    cursor: pointer;
+    position: relative;
+    background-color: #EEE;
+    font-size: 11px  !important;
+    font-weight: 400;
+    padding: 8px 12px;
+    border: solid 1px #EEE;
+    margin-bottom: 3px;
+    text-align: left;
+}
+.vlz_check{
+    background-color: #a8d8c9 !important;
+    border: 1px solid #87b8ab !important;
+}
+.vlz_no_check:after{
+    content: ' ';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 15px;
+    height: 15px;
+    border: solid 1px #CCC;
+    border-radius: 2px;
+}
+.vlz_check:after{
+    content: ' ';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #87b8ab;
+    border-radius: 2px;
+    background-size: 11px;
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    background-image: url("https://www.kmimos.com.mx/wp-content/themes/kmimos/images/new_check.png");
+}

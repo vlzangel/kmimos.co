@@ -1,0 +1,49 @@
+ul.beneficios{
+    margin: 0px;
+    padding: 0px;
+    display: table;
+    width: 100%;
+}
+
+ul.beneficios li div{
+    text-align: center;
+}
+
+ul.beneficios li{
+    list-style: none;
+    text-align: justify;
+    display: table-row;
+    height: 450px;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+ul.beneficios li h1{
+    line-height: 30px;
+    font-size: 24px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #5f5f5f;
+}
+
+ul.beneficios li p{
+	max-width: 400px;
+    margin: 20px auto 20px auto;
+    font-size: 1.2em;
+    color: #5f5f5f;
+    text-align: justify;
+}
+
+ul.beneficios li div{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ul.beneficios li:nth-child(2n+1) {
+	background: #FFF;
+}  
+
+ul.beneficios li:nth-child(2n) {
+	background: #ffffbf;
+} 

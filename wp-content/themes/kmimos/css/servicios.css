@@ -1,0 +1,133 @@
+.body {
+    padding: 10px !important;
+}
+.main {
+    padding: 0px;
+}
+.main h1{ 
+	margin-top: 5px; 
+	margin-bottom: 0px; 
+	line-height: 15px; 
+}
+.vlz_seccion{
+    position: relative;
+    margin-bottom: 20px;
+    border: solid 1px #e3e3e3;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 0px 3px 3px 3px;
+    font-weight: 600;
+    background-color: rgb(249, 249, 249);
+    box-shadow: 1px 1px 1px #CCC;
+}
+.vlz_seccion label{
+	display: block;
+	font-weight: 600;
+    font-size: 11px;
+    margin: 3px 0px;
+}
+.vlz_titulo_seccion {
+    border-bottom: solid 2px #6a6a6a;
+    color: #000000;
+    padding: 8px 0px;
+    border-radius: 0px 3px 0px 0px;
+    margin: 0px 3px 3px;
+    font-size: 14px;
+}
+.vlz_seccion_interna{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.vlz_input{
+	width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: solid 1px #d0d0d0;
+    font-weight: 400;
+}
+.vlz_celda_20 {
+    width: 20%;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    padding: 0px 2px;
+}
+.vlz_celda_25 {
+    width: 25%;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    padding: 0px 2px;
+    font-weight: 600 !important;
+    font-size: 10px;
+}
+.vlz_celda_33 {
+    width: 33.3333333%;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    padding: 0px 2px;
+}
+.vlz_celda_50 {
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    padding: 0px 2px;
+}
+
+.vlz_activado{
+	float: right;
+    border: solid 1px #59c9a8;
+    padding: 2px 5px;
+    background: #59c9a8;
+    color: #FFF !important;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.vlz_desactivado{
+    float: right;
+    border: solid 1px #c95959;
+    padding: 2px 5px;
+    background: #c95959;
+    color: #FFF !important;
+    font-weight: 400;
+    font-size: 12px;
+    background: #CCC !important;
+}
+.alertas{
+	padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+ 	border-radius: 4px;
+}
+.alertas-info{
+	color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.alertas-success{
+	color: #468847;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alertas-warning{
+    color: #c09853;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+.alertas-error{
+	color: #b94a48;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.error{
+	color: #b94a48;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+
+}

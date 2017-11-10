@@ -1,0 +1,33 @@
+#PageSubscribe{position:relative; max-width: 700px;  margin: 0 auto;  padding: 25px;  top: 75px; border-radius: 20px;  background: #ba2287;  overflow: hidden;}
+#PageSubscribe .exit{float: right; cursor: pointer;}
+#PageSubscribe .section{ width: 50%; padding: 10px; float: left; font-size: 17px; text-align: left;}
+#PageSubscribe .section.section1{font-size: 20px;}
+#PageSubscribe .section.section1 span{font-size: 25px;}
+#PageSubscribe .section.section1 .images{padding:10px 0; text-align: center;}
+#PageSubscribe .section.section3{width: 100%; font-size: 17px; font-weight: bold; text-align: center;}
+#PageSubscribe .section.section2{}
+#PageSubscribe .section.section2 .message{font-size: 15px; border: none; background: none; opacity:0; visible: hidden; transition: all .3s;}
+#PageSubscribe .section.section2 .message.show{opacity:1; visible:visible;}
+#PageSubscribe .section.section2 .icon{width: 30px; padding: 5px 0;}
+#PageSubscribe .section.section2 .subscribe {margin: 20px 0;  }
+#PageSubscribe .section.section2 form{margin: 0; display:flex;}
+#PageSubscribe .section.section2 input,
+#PageSubscribe .section.section2 button{width: 100%; max-width: calc(100% - 60px); margin: 5px; padding: 5px 10px; color: #CCC; font-size: 15px; border-radius: 20px;  border: none; background: #FFF; }
+#PageSubscribe .section.section2 button {padding: 10px;  width: 40px;}
+
+@media screen and (max-width:480px), screen and (max-device-width:480px) {
+    #PageSubscribe { top: 15px;}
+    #PageSubscribe .section{ width: 100%; padding: 10px 0; font-size: 12px;}
+    #PageSubscribe .section.section1 {font-size: 15px;}
+    #PageSubscribe .section.section1 span {font-size: 20px;}
+    #PageSubscribe .section.section3 {font-size: 12px;}
+}
+
+    .gm-style * {
+        font-family: caviar_dreamsregular !important;
+        font-size: 9px  !important;
+    }
+
+    .gm-style > div > div > div > div {
+        padding-top: 1px !important;
+    }

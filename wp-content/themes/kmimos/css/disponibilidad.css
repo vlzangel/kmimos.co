@@ -1,0 +1,301 @@
+.body {
+    padding: 10px !important;
+}
+.km-btn-primary {
+    padding: 17px 20px !important;
+}
+.fechas_box{
+    overflow: hidden;
+}
+.fechas_item{
+    float: left;
+    width: 33.33333333%;
+    box-sizing: border-box;
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.fechas_item i{
+    position: absolute;
+    top: 11px;
+    font-size: 25px;
+    color: #777;
+    left: 10px;
+}
+
+.fechas_item input,
+.fechas_item select
+{
+    width: 100%;
+    border: solid 1px #CCC;
+    font-size: 16px;
+    padding: 5px 10px 5px 35px;
+    cursor: pointer;
+    line-height: 1.42857143;
+}
+
+.fechas_item select{
+    width: 100%;
+    border: solid 1px #CCC;
+    font-size: 16px;
+    padding: 7px 10px 6px;
+    outline: none !important;
+}
+
+.fechas_item select:focus{
+    outline: none !important;
+}
+
+.table_main {
+    margin-top: 10px;
+}
+
+.table_main table {
+    width: 100%;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
+    font-size: 12px;  
+    text-align: left;    
+    border-collapse: collapse; 
+    border: 0px solid #ddd;
+    padding: 0px;
+    margin: 0px;
+}
+
+.table_main th {     
+    font-size: 14px;     
+    font-weight: normal;     
+    padding: 8px;     
+    background: #59c9a8;
+    border-bottom: 1px solid #fff; 
+    color: #FFF; 
+}
+
+.table_main td {    
+    padding: 10px 10px 0px;
+    background: #f1f1f1;
+    border-top: 1px solid #dadada;
+    vertical-align: top;
+    font-size: 13px;
+    color: #444;
+}
+
+.table_main th:nth-last-child(1),  
+.table_main td:nth-last-child(1) {    
+    width: 170px;
+}
+
+.table_main td a{    
+    color: #000; 
+}
+
+.table_main td a:hover{    
+    color: #2f9c7c;
+}
+
+.table_main tr:hover td { 
+    background: #e0e0e0; 
+    color: #444; 
+}
+
+.table_main td input{    
+    padding: 3px 0px;
+    width: 100%;
+    background-color: #bf2020;
+    border: 0;
+    outline: none;
+    box-shadow: 0px 0px 0px #000;
+    color: #FFF !important;
+}
+
+.table_main td input:focus{  
+    outline: none;
+    box-shadow: 0px 0px 0px #000;
+}
+
+.table_main .cancelled {
+    background-color: red;
+}
+
+.acciones{
+    padding: 5px !important;
+}
+
+.botones_container{
+    display: block;
+    overflow: hidden;
+}
+
+.botones_box{
+    display: inline-block;
+    float: right;
+    width: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.botones_box input {
+    border: 0px;
+    border-bottom: 3px solid #7DD1C4;
+}
+
+.fechas{
+    display: none;
+}
+
+.main *{
+    font-family: "Roboto Condensed",Arial, Helvetica, sans-serif;
+}
+
+.main p,
+.main dl{
+    margin: 0px;
+}
+
+.main p {
+    text-align: right;
+}
+
+.main dt{
+    font-weight: 600;
+}
+
+.main h1.titulo {
+    margin: 0px 0px 5px;
+    color: #59c9a8;
+    border-top: solid 2px #59c9a8;
+    padding-top: 10px !important;
+}
+
+.main .vlz_tabla {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px #a0a0a0;
+    margin: 0px 0px 10px;
+}
+
+.main .vlz_tabla_box {
+    margin-bottom: 30px;
+}
+
+.main .vlz_tabla .vlz_tabla_superior {
+    display: table;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 10px 10px 20px;
+    float: left;
+    height: 70px;
+}
+
+.main .vlz_tabla.vlz_desplegado .vlz_tabla_superior {
+    width: calc( 100% - 150px );
+}
+
+.main .vlz_tabla.vlz_desplegado .vlz_cerrar {
+    display: table-cell;
+}
+
+.main .vlz_tabla.vlz_desplegado .vlz_tabla_inferior,
+.main .vlz_tabla.vlz_desplegado .ver_reserva_init_closet
+{
+    display: block !important;
+}
+
+.main .vlz_tabla.vlz_desplegado .vlz_botones  {
+    display: none !important;
+}
+
+.main .vlz_tabla .vlz_tabla_superior > div {
+    vertical-align: middle;
+}
+
+.main .vlz_tabla .vlz_tabla_superior > div.vlz_celda {
+    display: table-cell;
+    padding: 0px 10px 0px 0px;
+}
+
+.main .vlz_tabla .vlz_tabla_cuidador {   
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.main .vlz_tabla .vlz_tabla_cuidador span {     
+    font-weight: 600;
+    color: #969696;
+    padding: 0px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.main .vlz_tabla .vlz_tabla_cuidador div {     
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.main .vlz_tabla .vlz_tabla_cuidador b {     
+    color: #59c9a8;
+}
+
+.main .vlz_tabla .vlz_botones {     
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 10px;
+    overflow: hidden;
+    width: 50px !important;
+}
+
+.main .vlz_tabla .vlz_botones a {     
+    font-weight: 600;
+    color: #59c9a8;
+    padding: 0px;
+    display: inline-block;
+    font-size: 13px;
+    padding: 15px;
+    border: solid 1px #59c9a8;
+    border-radius: 5px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    float: right;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.main .vlz_tabla .vlz_botones a.vlz_cancelar {   
+    padding: 13px 15px;
+}
+
+.main .vlz_tabla .vlz_botones a.vlz_cancelar i {    
+    font-size: 20px;
+}
+
+.main .vlz_tabla .ver_reserva_botones .vlz_cancelar{
+    color: #FFF;
+    background: #b01d1d;
+    border: solid 1px #b01d1d;
+}
+
+.main .vlz_tabla .boton_fuera {
+    display: none !important;
+    width: 100% !important;
+    display: block;
+}
+
+.main .vlz_tabla .boton_fuera a {
+    padding: 10px;
+    display: block;
+    float: none;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.vlz_row{
+    display: table-cell;
+    width: 100%;
+}
+
+h2 {
+    font-size: 24px !important;
+}

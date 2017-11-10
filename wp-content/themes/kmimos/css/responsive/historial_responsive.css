@@ -1,0 +1,141 @@
+@media (max-width: 992px){
+	.main .vlz_tabla .ver_reserva_botones a{
+	    margin-top: 10px;
+	}
+	
+	.main .vlz_tabla .boton_interno a {
+		padding: 8px;
+	}
+	.main .vlz_tabla .vlz_botones a.cancelar {
+	    padding: 6px 8px;
+	}
+}
+@media (max-width: 650px){
+	.main .vlz_tabla .ver_reserva_botones a {
+	    padding: 8px 15px 8px 5px;
+	}
+}
+@media (max-width: 500px){
+	.main .vlz_tabla .ver_reserva_botones a {
+	    width: calc( 100% - 5px );
+	    padding: 15px;
+	}	
+	.main .vlz_tabla .boton_interno {
+		display: none !important;
+	}
+	.main .vlz_tabla .boton_fuera {
+		display: block !important;
+	}
+
+	.main .vlz_tabla .vlz_tabla_superior {
+	    display: block;
+	    float: left;
+	    height: auto;
+	}
+
+	.main .vlz_tabla .vlz_tabla_cuidador span {
+	    font-size: 14px;
+	}
+
+	.main .vlz_tabla .vlz_tabla_cuidador {
+	    width: 100%;
+	}
+
+	.main .vlz_tabla .vlz_tabla_superior > div.vlz_celda {
+	    display: block;
+	}
+
+	.main .vlz_tabla .vlz_tabla_inferior {
+	    float: left;
+	    width: 100%;
+	    margin: 0px;
+	    padding: 0px 10px 10px;
+	}
+
+	.main .vlz_tabla .vlz_tabla_inferior .desglose_reserva .item_desglose {
+	    font-size: 11px;
+	}
+
+	.main .vlz_tabla.vlz_desplegado .vlz_cerrar {
+	    display: none !important;
+	}
+
+	.main .vlz_tabla .vlz_img span {
+	    width: 50px;
+	    height: 50px;
+	}
+
+	.main .vlz_tabla .vlz_img {
+	    padding: 20px 0px;
+	}
+
+	form h1 {
+	    font-size: 13px !important;
+	    font-weight: 600;
+	}
+
+	.main .vlz_tabla .vlz_tabla_cuidador span {
+	    font-size: 12px;
+	}
+
+	.main .vlz_tabla .vlz_tabla_cuidador div {
+	    font-size: 11px;
+	}
+
+	.main .vlz_tabla .ver_reserva_botones {
+	    padding-top: 0px;
+	}
+	.main .vlz_tabla .ver_reserva_botones a {
+	    padding: 10px;
+	}
+
+	.vlz_solo_movil {
+	    margin-bottom: 10px;
+	}
+
+
+	/* Solicitudes */
+
+	.desglose_columna .item_desglose div,
+	.desglose_columna .item_desglose span
+	{
+	    font-size: 12px;
+	}
+	.desglose_columna {
+	    width: 100%;
+	    padding: 0px 0px 10px 10px;
+	}
+	.desglose_titulo {
+	    font-size: 13px;
+	    padding-bottom: 5px;
+	}
+	.main .vlz_tabla .vlz_tabla_inferior .desglose_reserva {
+	    margin-bottom: 0px;
+	}
+	.info_solicitud .info_titulo {
+	    font-size: 13px;
+	}
+	.info_solicitud > ul li {
+	    font-size: 24px;
+	    line-height: 15px;
+	}
+	.info_solicitud > ul li span {
+	    font-size: 10px;
+	    line-height: 10px !important;
+	}
+	.datos_de_contacto ul li {
+	    width: 100%;
+	    margin-bottom: 5px;
+    	font-size: 10px;
+	}
+	.main .vlz_tabla .vlz_img {
+	    width: 70px;
+	}
+	.main .vlz_tabla.vlz_desplegado .vlz_tabla_superior {
+	    width: calc( 100% - 105px );
+	}
+}
+
+@media (max-width: 400px){
+	
+}

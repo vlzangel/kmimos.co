@@ -1,0 +1,21 @@
+.content_rating{ 
+	width: 100%; 
+	text-align: center;
+}
+.fila_rate div { 
+	display: inline-block; 
+	text-align: center; 
+	height: 30px; 
+	vertical-align: top; 
+	height: 100px;
+}
+.fila_rate div img { 
+	width: 30px; 
+	margin-top: -30px;
+}
+.fila_rate div input.huesito { 
+	display: none; 
+}
+.reset_rate { 
+	margin-right: 40px; 
+}

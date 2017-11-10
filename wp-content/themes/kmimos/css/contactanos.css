@@ -1,0 +1,74 @@
+#contactanos{
+    display: block;
+    margin: 0px auto;
+    max-width: 700px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#campos,
+#botones{
+    overflow: hidden;
+}
+
+#contactanos #campos input,
+#contactanos #campos textarea
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 0px;
+    border: solid 1px #59c9a8;
+    font-size: 13px;
+    font-family: Open Sans;
+}
+
+#contactanos #campos input:focus,
+#contactanos #campos textarea:focus
+{
+    outline: none;
+}
+
+#contactanos #campos textarea{
+    resize: none;
+    height: 200px;
+}
+
+#contactanos #botones span{
+    color: red;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+#contactanos #botones input{
+    font-size: 13px;
+    font-family: Open Sans;
+    background: #59c9a8;
+    padding: 10px 20px;
+    float: right;
+    border: solid 1px #59c9a8;
+    color: #FFF !important;
+    cursor: pointer;
+}
+
+#contactanos #botones input:hover{
+    background: #1dbf8f;
+}
+
+.bloquear{
+    background: rgb(164, 164, 164);
+    border: solid 1px #CCC;
+    color: #000 !important;
+}
+
+#contactanos .mensaje{
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(89, 201, 168, 0.78);
+    color: #FFF;
+    border-radius: 3px;
+    font-weight: 600;
+    display: none;
+}
