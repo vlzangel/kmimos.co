@@ -13,7 +13,8 @@
 	$cuidador_email = $datos_generales["cuidador_email"];
 
     $orden_id = $datos_generales["orden"];
-    $reserva_id = $datos_generales["booking"];
+    $reserva_id = $datos_generales["booking"]; 
+    
 
     $order = new WC_Order($orden_id);
 	$booking = new WC_Booking($reserva_id);
