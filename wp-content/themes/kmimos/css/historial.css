@@ -1,0 +1,349 @@
+.main *{
+    font-family: "Roboto Condensed",Arial, Helvetica, sans-serif;
+}
+
+.main p,
+.main dl{
+    margin: 0px;
+}
+
+.main p {
+    text-align: right;
+}
+
+.main dt{
+    font-weight: 600;
+}
+
+.main h1.titulo {
+    margin: 0px 0px 5px;
+    color: #59c9a8;
+    border-top: solid 2px #59c9a8;
+    padding-top: 10px !important;
+}
+
+.main h1.titulo_pequenio {
+    font-size: 19px;
+}
+
+.main .vlz_tabla {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px #a0a0a0;
+    margin: 0px 0px 10px;
+}
+
+.main .vlz_tabla_box {
+    margin-bottom: 30px;
+}
+
+.main .vlz_tabla .vlz_tabla_superior {
+    display: table;
+    width: calc( 100% - 100px );
+    overflow: hidden;
+    padding: 10px 0px;
+    float: left;
+    height: 100px;
+}
+
+.main .vlz_tabla.vlz_desplegado .vlz_tabla_superior {
+    width: calc( 100% - 150px );
+}
+
+.main .vlz_tabla.vlz_desplegado .vlz_cerrar {
+    display: table-cell;
+}
+
+.main .vlz_tabla.vlz_desplegado .vlz_tabla_inferior,
+.main .vlz_tabla.vlz_desplegado .ver_reserva_init_closet
+{
+    display: block !important;
+}
+
+.main .vlz_tabla.vlz_desplegado .vlz_botones  {
+    display: none !important;
+}
+
+.main .vlz_tabla .vlz_tabla_superior > div {
+    vertical-align: middle;
+}
+
+.main .vlz_tabla .vlz_tabla_superior > div.vlz_celda {
+    display: table-cell;
+    padding: 0px 10px 0px 0px;
+}
+
+.main .vlz_tabla .vlz_img {    
+    width: 100px;
+    padding: 12px 0px;
+    text-align: center;
+    float: left;
+}
+
+.main .vlz_tabla .vlz_img span {  
+    display: inline-block;   
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.main .vlz_tabla .vlz_tabla_cuidador {   
+    width: 33.33333333%;
+}
+
+.main .vlz_tabla .vlz_tabla_cuidador span {     
+    font-weight: 600;
+    color: #969696;
+    padding: 0px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.main .vlz_tabla .vlz_tabla_cuidador div {     
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.main .vlz_tabla .vlz_tabla_cuidador b {     
+    color: #59c9a8;
+}
+
+.main .vlz_tabla .vlz_botones {     
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 10px;
+    overflow: hidden;
+}
+
+.main .vlz_tabla .vlz_botones a {     
+    font-weight: 600;
+    color: #59c9a8;
+    padding: 0px;
+    display: inline-block;
+    font-size: 13px;
+    padding: 15px;
+    border: solid 1px #59c9a8;
+    border-radius: 5px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    float: right;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.main .vlz_tabla .vlz_botones a.vlz_cancelar {   
+    padding: 13px 15px;
+}
+
+.main .vlz_tabla .vlz_botones a.vlz_cancelar i {    
+    font-size: 20px;
+}
+
+.main .vlz_tabla .vlz_tabla_inferior {
+    margin-left: 100px;
+    margin-right: 50px;
+    padding: 0px 0px 10px 0px;
+    display: none;
+    float: left;
+    width: calc( 100% - 150px );
+}
+
+.main .vlz_tabla .vlz_tabla_inferior .desglose_reserva {
+    padding: 15px 0px;
+    border-top: solid 1px #969696;
+    border-bottom: solid 1px #969696;
+    margin-bottom: 15px;
+}
+
+.main .vlz_tabla .vlz_tabla_inferior .desglose_reserva .item_desglose {
+    overflow: hidden;
+}
+
+.main .vlz_tabla .vlz_tabla_inferior .desglose_reserva .vlz_bold {
+    font-weight: 600;
+}
+
+.main .vlz_tabla .vlz_tabla_inferior .total_reserva {
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.main .vlz_tabla .vlz_tabla_inferior .desglose_reserva .item_desglose div,
+.main .vlz_tabla .vlz_tabla_inferior .total_reserva .item_desglose div
+ {
+    float: left;
+    max-width: 50%;
+}
+
+.main .vlz_tabla .vlz_tabla_inferior .desglose_reserva .item_desglose span,
+.main .vlz_tabla .vlz_tabla_inferior .total_reserva .item_desglose span
+ {
+    float: right;
+    max-width: 50%;
+}
+
+.main .vlz_tabla .ver_reserva_botones{
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.main .vlz_tabla .ver_reserva_botones a{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    color: #59c9a8;
+    padding: 0px;
+    display: inline-block;
+    font-size: 11px;
+    padding: 8px 15px 8px 10px;
+    border: solid 1px #59c9a8;
+    border-radius: 5px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.main .vlz_tabla .ver_reserva_botones a i {
+    font-size: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.main .vlz_tabla .ver_reserva_botones .vlz_cancelar{
+    /* float: left; */
+    color: #FFF;
+    background: #b01d1d;
+    border: solid 1px #b01d1d;
+}
+
+.main .vlz_tabla .ver_reserva_botones .pdf{
+    float: right;
+}
+
+.main .vlz_tabla .vlz_cerrar {
+    position: relative;
+    display: none;
+}
+
+.ver_reserva_init_closet {
+    display: none !important;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-size: 25px !important;
+    cursor: pointer;
+}
+
+.desplegado .ver_reserva_init_closet{
+    display: block !important;
+}
+
+.main .vlz_tabla .boton_fuera {
+    display: none !important;
+    width: 100% !important;
+    display: block;
+}
+
+.main .vlz_tabla .boton_fuera a {
+    padding: 10px;
+    display: block;
+    float: none;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+a.vlz_accion.vlz_pdf {
+    float: right;
+}
+
+.desglose_sin_borde{
+    border: 0px !important;
+    padding: 0px !important;
+    overflow: hidden;
+}
+
+.desglose_columna{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 10px;
+}
+
+.desglose_titulo{
+    color: #7dd1c4;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.desglose_columna .item_desglose div {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.desglose_columna .item_desglose span {
+    font-weight: 400;
+    float: left !important;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+.desglose_columna .item_desglose {
+    padding: 0px 3px 0px;
+}
+
+.info_solicitud .info_titulo {
+    font-size: 16px;
+    font-weight: 600;
+    color: #6b1c9b;
+    padding: 0px 0px 10px 40px;
+}
+
+.info_solicitud > ul{
+    padding: 0px 40px;
+    list-style: inherit;
+    text-align: justify;
+}
+
+.info_solicitud > ul li{
+    color: #6b1c9b;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.info_solicitud > ul li span{
+    color: #000;
+    font-size: 13px;
+    line-height: 13px !important;
+}
+
+.datos_de_contacto {
+    padding: 15px 30px 10px;
+    overflow: hidden;
+}
+
+.datos_de_contacto ul li{
+    float: left;
+    width: 33.333333333%;
+}
+
+.datos_de_contacto ul li img{
+    padding-right: 5px;
+}
+
+.datos_de_contacto span {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+}
+
+.datos_de_contacto span img {
+    height: 100%;
+}

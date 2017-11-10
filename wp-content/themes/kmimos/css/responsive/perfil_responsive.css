@@ -1,0 +1,36 @@
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+	.menu_perfil {
+	    display: none;
+	}
+	.main {
+	    width: 100%;
+        padding: 5px 5px 10px;
+	}
+	.vlz_img_portada_perfil {
+	    height: 300px;
+	}
+}
+
+@media (max-width: 480px){
+    .inputs_containers section {
+	    width: 100%;
+	}
+	.vlz_cambiar_portada {
+	    font-size: 11px !important;
+	    padding: 5px 10px !important;
+	}
+
+	.btn_rotar{
+	    font-size: 11px;
+	}
+}
+
+@media (max-width: 350px){
+	.vlz_img_portada_perfil {
+	    height: 250px;
+	}
+}

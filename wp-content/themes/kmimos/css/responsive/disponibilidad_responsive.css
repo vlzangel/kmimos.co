@@ -1,0 +1,29 @@
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 480px){
+    .main .vlz_tabla .vlz_tabla_cuidador {
+	    width: 100%;
+	    margin: 5px;
+	}
+	.fechas_item {
+	    width: 100%;
+	}
+
+	.box_100{
+		width: 100%;
+	}
+
+	.box_50{
+		width: 50%;
+	}
+}
+
+@media (max-width: 350px){
+    
+}

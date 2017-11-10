@@ -1,0 +1,31 @@
+
+.km-opcion,
+.km-search-wlabel,
+.km-select-custom-home,
+/*
+.km-input-content,
+.km-select-custom-button,
+*/
+.km-fechas .km-fechas input{
+	    border: solid 1px #6B1C9B!important;
+}
+.km-cajas-filtro .km-caja-filtro,
+.km-cajas-filtro .form-group{
+	padding-bottom:2px;
+}
+
+.km-servicio-opcionactivo,
+.km-servicio-opcionactivo:before,
+.km-opcionactivo:hover,
+.km-opcionactivo:before {
+    border-color: #6B1C9B;
+}
+
+.km-opcion:hover:before {
+	border-top: 6px solid #6B1C9B;
+}
+
+.km-div-enviar, 
+.km-div-fechas input{
+   border-left: 1px solid #6B1C9B!important;
+}

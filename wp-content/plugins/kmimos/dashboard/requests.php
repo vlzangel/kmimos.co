@@ -90,7 +90,7 @@ if(!function_exists('kmimos_box_details_of_request')){
 
 //        $values = kmimos_details_of_request_load_fields();
 
-        $values = kmimos_get_fields_values(array());
+        //$values = kmimos_get_fields_values(array());
 
         add_meta_box('details_of_request','Detalles de la Solicitud', 'kmimos_details_of_request', 'request', 'normal', 'high', $values);
 

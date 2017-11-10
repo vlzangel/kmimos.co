@@ -1,0 +1,307 @@
+/*
+	Theme Name: kmimos
+	Description: Tema de kmimos
+	Version: 2.0.0
+*/
+
+@font-face {
+    font-family: 'kmimos';
+    src: url('font/kmimos.eot');
+    src: url('font/kmimos.eot?#iefix') format('embedded-opentype'), url('font/kmimos.woff') format('woff'), url('font/kmimos.ttf') format('truetype'), url('font/kmimos.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'kmimos' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sentado:before {
+    content: "\e900";
+}
+
+.icon-parado:before {
+    content: "\e901";
+}
+
+.icon-paseos:before {
+    content: "\e902";
+}
+
+.icon-adiestramiento:before {
+    content: "\e903";
+}
+
+.icon-hospedaje:before {
+    content: "\e904";
+}
+
+.icon-guarderia:before {
+    content: "\e905";
+}
+
+.icon-mapa:before {
+    content: "\e906";
+}
+
+.icon-calendario:before {
+    content: "\e907";
+}
+
+.icon-acupuntura:before {
+    content: "\e908";
+}
+
+.icon-bano:before {
+    content: "\e909";
+}
+
+.icon-limpieza:before {
+    content: "\e90a";
+}
+
+.icon-peluqueria:before {
+    content: "\e90b";
+}
+
+.icon-transporte:before {
+    content: "\e954";
+}
+
+.icon-transporte2:before {
+    content: "\e955";
+}
+
+.icon-veterinario:before {
+    content: "\e956";
+}
+
+
+input { outline: none!important; }
+.clear:before,
+.clear:after{ content:' ';  display:table}
+.clear:after{ clear:both}
+.clear{ *zoom:1}
+ul{margin: 0px; padding: 0px; list-style: none;}
+.menu li *{color: #FFF;}
+
+/* Generales */
+    .container{
+    	position: relative;
+		display: block;
+		margin: 0px auto;
+		padding: 0px 20px;
+    }
+
+    .body{
+    	position: relative;
+		display: block;
+		margin: 0px auto;
+		max-width: 1140px;
+		z-index: 3;
+	    padding: 0px 20px;
+    }
+
+/* Contenedor del header */
+
+	body{
+		padding-top: 0px;
+	}
+
+/* Menu de usuarios */
+	.menu_usuario{
+		height: 30px;
+		box-sizing: border-box;
+		background: #23475e;
+	}
+
+	.menu_usuario .container{
+		height: 30px;
+	    vertical-align: top;
+	}
+
+	.menu_usuario ul{
+		text-align: right;
+	    vertical-align: top;
+	}
+
+	.menu_usuario ul li{
+		position: relative;
+		display: inline-block;
+		font-size: 13px;
+		padding: 5px;
+	    vertical-align: top;
+
+	    border-right: 1px solid rgba(255,255,255,0.2);
+	    height: 30px;
+	}
+
+	.menu_usuario ul li a{
+		color: #e8e8e8;
+		font-family: "Roboto Condensed",Arial, Helvetica, sans-serif;
+		font-size: 15px;
+	    transition: all 0.24s ease-in-out;
+
+	    padding: 0 8px;
+	}
+
+	.menu_usuario ul li:hover{
+		background-color: #6bd8b8;
+		color: #fff;
+	    transition: all 0.24s ease-in-out;
+	}
+	.menu_usuario ul li:hover a{
+		color: #fff;
+	}
+
+	.menu_usuario ul li ul.sub-menu {
+	    width: 200px;
+	    background: #23475e;
+	    z-index: 9999999999999999;
+	    position: absolute;
+	    left: 0px;
+	    top: 30px;
+	    border-top: solid 1px #4f6c7e;
+	    display: none;
+	}
+
+	.menu_usuario ul li:hover ul.sub-menu {
+	    display: block;
+	}
+
+	.menu_usuario ul li ul.sub-menu li {
+	    display: block;
+	    text-align: left;
+	}
+
+/* Menu del syte */
+	
+	#menu_syte{
+		height: 75px;
+	}
+
+	.logo_box{
+		float: left;
+		background-image: url(https://www.kmimos.com.mx/wp-content/uploads/2017/02/logo-kmimos.png);
+	    width: 200px;
+	    height: 55px;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    margin: 10px 0px;
+	}
+
+	.menu_syte_box{
+		float: right;
+    	width: calc( 100% - 210px );
+    	text-align: right;
+	}
+
+	.menu_syte_box > li{
+	    display: inline-block;
+	    position: relative;
+	}
+
+	.menu_syte_box > li > a{
+	    display: inline-block;
+	    height: 75px;
+    	line-height: 75px;
+    	padding: 0 14px 0 14px;
+	    transition: all 0.24s ease-in-out;
+	    cursor: pointer;
+        font-size: 15px;
+	}
+
+	.menu_syte_box > li:hover > a{
+		background-color: #6bd8b8;
+		color: #fff;
+	    transition: all 0.24s ease-in-out;
+	}
+
+	.menu_syte_box > li:hover a{
+		color: #fff;
+	}
+
+	.menu_syte_box > li > .sub-menu{
+		display: none;
+		position: absolute;
+		text-align: left;
+		left: 0px;
+		top: 75px;
+		border: solid 1px #EEE;
+    	border-top: 0px;
+	}
+
+	.menu_syte_box > li:hover > .sub-menu{
+		display: inline-block;
+	}
+
+	.menu_syte_box > li > .sub-menu li{
+	    min-width: 200px;
+	    background: #FFF;
+	    color: #757575;
+	    box-sizing: border-box;
+	    padding: 10px;
+	    transition: all 0.24s ease-in-out;
+	}
+
+	.menu_syte_box > li > .sub-menu li a{
+	    color: #757575;
+	}
+
+	.menu_syte_box > li > .sub-menu li:hover{
+		background-color: #6bd8b8;
+	    transition: all 0.24s ease-in-out;
+	}
+
+	.menu_syte_box > li > .sub-menu li:hover a{
+		color: #fff;
+	}
+
+	.ser_cuidador div {
+	    vertical-align: middle;
+	    display: inline-block;
+	    padding: 5px 10px;
+	    background-color: #fefe78;
+	    color: #333333;
+	    box-sizing: border-box;
+	    -webkit-font-smoothing: antialiased;
+	    text-rendering: optimizeLegibility;
+	    font-family: "Open Sans";
+	    font-weight: 600;
+	    font-style: normal;
+	    border-radius: 2px;
+	    font-size: 15px;
+        cursor: pointer;
+        margin: 0px 10px;
+	}
+
+/* Footer */
+
+	.subir{
+	    position: fixed;
+	    bottom: 75px;
+	    right: 50px;
+	    z-index: 1000;
+	    border: solid 1px #fff;
+	    display: inline-block;
+	    padding: 10px;
+	    background: rgba(0, 0, 0, 0.8);
+	    text-align: center;
+	    color: #FFF;
+	    font-size: 20px;
+	    transition: all .2s ease;
+	}
+
+	.subir:hover{
+	    background: rgba(255, 255, 255, 0.8);
+	    color: #000;
+	    transition: all .2s ease;
+	}

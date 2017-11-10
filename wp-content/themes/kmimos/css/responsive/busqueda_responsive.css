@@ -1,0 +1,79 @@
+@media (max-width: 992px){
+	#listado li{
+	    width: 50%;
+	}
+	.col-mapa{
+        display: inline-block!important; 
+        position: initial!important; 
+        padding: 0px!important; 
+    }
+
+    .km-titulo-mapa{
+    	display: block;
+    }
+}
+
+@media (max-width: 768px){
+	.columna_listado,
+	.columna_formulario{
+	    width: 100%;
+	}
+
+	.km-select-custom-list::before {
+	    content: "X";
+	    position: absolute;
+	    top: 10px;
+	    right: 0px;
+	    padding: 5px 10px;
+	    font-size: 20px;
+	}
+}
+
+@media (max-width: 480px){
+	#listado li{
+	    width: 100%;
+	}
+	.items_filtros div {
+	    width: 100%;
+	}
+
+	.popup-iniciar-sesion-2 h2 {
+    	font-size: 25px !important;
+	}
+
+	.btn_fin_reserva {
+	    font-size: 15px;
+	}
+
+	.popup-iniciar-sesion-2 img {
+	    padding: 0px 30px;
+	}
+
+	#popup-conoce-cuidador *{
+		font-size: 10px;
+	}
+
+	.pre_requisitos *{
+		font-size: 8px !important;
+	}
+
+	.popup-tit {
+	    margin-bottom: 0px !important;
+	}
+
+	.pre_requisitos p{
+		margin: 0px !important; 
+	}
+
+	.close{
+		font-size: 40px !important;
+	}
+
+}
+
+@media (max-width: 350px){
+
+	.popup-iniciar-sesion-2 h2 {
+    	font-size: 20px !important;
+	}
+}

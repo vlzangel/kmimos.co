@@ -1,0 +1,22 @@
+@media (max-width: 992px){
+	.row_4 section {
+	    width: 50%;
+	}
+	.row_3 section {
+	    width: 100%;
+	}
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 480px){
+	.row_4 section {
+	    width: 100%;
+	}
+}
+
+@media (max-width: 350px){
+    
+}

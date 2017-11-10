@@ -1,0 +1,52 @@
+
+@media (max-width: 768px){
+
+	.servicio_desde {
+    	display: none;
+	}
+
+}
+
+@media (max-width: 480px){
+
+	.popup-iniciar-sesion-2 h2 {
+    	font-size: 25px !important;
+	}
+
+	.btn_fin_reserva {
+	    font-size: 15px;
+	}
+
+	.popup-iniciar-sesion-2 img {
+	    padding: 0px 30px;
+	}
+
+	#popup-conoce-cuidador *{
+		font-size: 10px;
+	}
+
+	.pre_requisitos *{
+		font-size: 8px !important;
+	}
+
+	.popup-tit {
+	    margin-bottom: 0px !important;
+	}
+
+	.pre_requisitos p{
+		margin: 0px !important; 
+	}
+
+	.close{
+		font-size: 40px !important;
+	}
+
+}
+
+@media (max-width: 350px){
+
+	.popup-iniciar-sesion-2 h2 {
+    	font-size: 20px !important;
+	}
+
+}

@@ -1,0 +1,66 @@
+.mascotas_container{
+	overflow: hidden;
+}
+.mascotas_box{
+	float: left;
+	width: 33.333333%;
+	box-sizing: border-box;
+	padding: 0px 5px 10px;
+}
+.mascotas_item{
+	position: relative;
+	display: block;
+	border: solid 1px #CCC;
+	border-radius: 3px;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 100%;
+	height: 200px;
+}
+.mascotas_item a.mascotas_content{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: calc( 100% - 30px );
+	z-index: 999999999;
+}
+.vlz_img_portada_perfil {
+    height: 150px;
+    margin: 8px;
+}
+.mascotas_data{
+    margin: 0px 8px;
+    text-align: center;
+}
+.mascotas_data h3{
+    margin: 0px;
+}
+.mascotas_item a.mascotas_content:hover h3{
+	color: #59c9a8;
+}
+.mascotas_delete{
+	position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    border-top: solid 1px #909090;
+    background: #909090;
+    color: #FFF;
+    border-radius: 0px 0px 3px 3px;
+    cursor: pointer;
+}
+.mascotas_delete:hover{
+    border-top: solid 1px #c72929;
+    background: #c72929;
+}
+.mascotas_vacio{
+	text-align: center;
+}
+.mascotas_vacio img{
+    display: block;
+    margin: 0px auto;
+}

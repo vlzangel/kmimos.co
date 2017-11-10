@@ -1,0 +1,24 @@
+@media (max-width: 992px){
+	.mascotas_box {
+	    width: 50%;
+	}
+}
+
+@media (max-width: 768px){
+	.row_3 section {
+	    width: 50% !important;
+	}
+}
+
+@media (max-width: 480px){
+	.row_3 section {
+	    width: 100% !important;
+	}
+	.vlz_img_portada_perfil {
+	    height: 200px;
+	}
+}
+
+@media (max-width: 350px){
+    
+}

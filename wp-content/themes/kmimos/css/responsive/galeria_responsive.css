@@ -1,0 +1,19 @@
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 480px){
+    .mascotas_box {
+	    width: 50%;
+	}
+}
+
+@media (max-width: 350px){
+    .mascotas_box {
+	    width: 100%;
+	}
+}

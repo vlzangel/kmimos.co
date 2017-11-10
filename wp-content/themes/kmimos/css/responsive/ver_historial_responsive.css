@@ -1,0 +1,24 @@
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+	.main * {
+	    font-size: 13px;
+	}
+}
+
+@media (max-width: 500px){
+	.body {
+	    padding: 0px !important;
+	}
+	.main * {
+	    font-size: 11px;
+	}
+}
+
+@media (max-width: 350px){
+	.main * {
+	    font-size: 10px;
+	}
+}

@@ -1,0 +1,17 @@
+.modal-backdrop{
+	z-index:1!important;
+	width: 100%!important;
+}
+
+.modal-open .modal,
+.modal{
+    overflow-x: initial!important;
+    overflow-y: initial!important;
+	position: absolute!important; 
+	width: 100%!important;
+}
+.modal{
+	top:2%;
+	width: 100%!important;
+}
+

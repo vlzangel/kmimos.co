@@ -1,0 +1,80 @@
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+
+    #mapa{
+        height: 93%!important;
+    }
+    .zopim{
+        top:auto!important;
+        position: fixed!important;
+        bottom: 22%!important;
+    }
+
+	.comment_valuation{
+        width: 50% !important;
+	    box-sizing: border-box;
+	    margin: 0px !important;
+	}
+	.vlz_contenedor_header div{
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+	.vlz_centro{
+		padding-bottom: 10px !important;
+	}
+
+	.vlz_item_detalles{
+		width: 50%;
+	}
+
+	.vlz_separador_item{
+	    clear: left;
+	    display: block;
+	}
+
+	#form_cuidador{
+		text-align: center;
+	}
+
+	.km-costo .km-btn-secondary {
+	    float: none !important;
+	    display: inline-block !important;
+    	width: calc( 50% - 2px ) !important;
+    	border-radius: 8px !important;
+    	font-size: 11px !important;
+	}
+
+}
+
+@media (max-width: 480px){
+	.menu_perfil {
+	    display: none;
+	}
+	.mascotas_box {
+	    width: 100%;
+	}
+}
+
+@media (max-width: 350px){
+    .comment_valuation{
+        width: 100% !important;
+	    box-sizing: border-box;
+	    margin: 0px !important;
+	}
+}
+
+@media All and (max-width: 520px){
+    .zopim{
+        bottom: 25%!important;
+    }
+}
+
+@media all and (max-width: 768px) and (orientation: landscape ){
+    .zopim{
+        bottom: 25%!important;
+    }
+}

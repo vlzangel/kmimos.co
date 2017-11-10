@@ -1,0 +1,101 @@
+.desglose_container {
+    font-family: Lato, Arial;
+    color: #4e4e4e;
+    font-size: 13px;
+    line-height: 1.42857143;
+    padding: 10px;
+}
+
+.desglose_box {
+    border-bottom: 1px solid #979797;
+}
+
+.info_box{
+	overflow: hidden;   
+}
+
+.info_box strong{
+	font-weight: 600 !important;
+}
+
+.info_box > div{
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.info_box > div > span{
+	margin-left: 10px;
+	display: inline-block;
+	padding: 5px 0px 5px;
+}
+
+.desglose_box > div {
+	overflow: hidden;    
+	padding: 5px 0 5px 0;
+}
+
+.desglose_box > div.item {
+    margin-left: 10px;
+}
+
+.desglose_box div > div {
+	float: left;
+}
+
+.datos_cuidador div > div {
+	font-weight: 600;
+}
+
+.datos_cuidador {
+    padding-bottom: 10px;
+}
+
+.datos_cuidador .item {
+	padding: 0px;
+}
+
+.totales div > div {
+	font-weight: 600;
+}
+
+.desglose_box div > span {
+	float: right;
+}
+
+.sub_titulo{
+	font-weight: 600;
+}
+
+.pago_en_efectivo{
+	color: #6b1c9b;
+}
+
+.total{
+    border-top: 1px solid #979797;
+}
+
+.total *{
+    font-weight: 800 !important;
+}
+
+.totales{
+	border-bottom: 0px !important;
+}
+
+.desglose_box strong{
+	display: block;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.volver{
+	padding: 10px;
+    border-bottom: solid 1px #777;
+}
+
+.volver a{
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none !important;
+}

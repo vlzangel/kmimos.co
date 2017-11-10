@@ -1,0 +1,256 @@
+@media (max-width: 992px){
+    .wpf-container {
+        margin: 106px 0 0 0 !important;
+    }
+    .slider_home,
+    .slider_home li
+    {
+        background-size: cover; 
+    }
+    #bloque_testimonios{
+        padding: 0px;
+    }
+    .testimonio_titulo{
+        font-size: 30px;
+    }
+    .testimonio_texto{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .testimonio {
+        padding: 10px 30px;
+        width: 80%;
+    }
+
+    #logo_solo_movil{
+        display: inline-block;
+    }
+
+    .slider_logos_box{
+        width: 300% !important;
+    }
+
+    .servicios_container .contenedor_servicio .boton_servicio p span {
+        display: block;
+        font-size: 15px;
+    }
+
+    .servicios_container .contenedor_servicio .boton_servicio p sup {
+        display: block;
+        font-size: 13px;
+    }
+
+    ul.beneficios_home li div img{
+        height: 80px;
+    }
+
+    ul.beneficios_home h3{
+        font-size: 16px;
+    }
+
+    .ser_cuidador div {
+        vertical-align: middle;
+        background-color: #fefe78;
+        color: #333333;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-style: normal;
+        font-size: 15px;
+        cursor: pointer;
+        border: solid 1px #777;
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    @keyframes slider_logo{
+        0% { margin-left: 0; }
+        30% { margin-left: 0; }
+
+        40% { margin-left: -33%; }
+        55% { margin-left: -33%; }
+
+        60% { margin-left: -66%; }
+        75% { margin-left: -66%; }
+
+        80% { margin-left: -100%; }
+        100% { margin-left: -100%; }
+    }
+}
+
+@media (max-width: 768px){
+    .wpf-container {
+        margin: 79px 0 0 0 !important;
+    }
+    ul.slider_logos_box {
+        height: 100px;
+    }
+    
+    .servicios_container .contenedor_servicio {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .servicios_container .contenedor_tamanos {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .adicionales_button{
+        width: calc( 50% - 8px );
+    }
+
+    ul.beneficios_home li {
+        width: 50%;
+    }
+
+    .servicios_container .contenedor_servicio .boton_servicio:hover{
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 480px){
+    ul.slider_home_box{
+        height: 200px;
+    }
+
+    /* Buscador */
+
+    .titulo_buscar_label {
+        font-size: 20px;
+    }
+
+    .adicionales_button {
+        font-size: 12px;
+    }
+
+    .servicios_container .contenedor_servicio .boton_servicio p span {
+        font-size: 14px;
+    }
+
+    .servicios_container .contenedor_servicio .boton_servicio p sup {
+        font-size: 11px;
+    }
+
+    .servicios_container .contenedor_tamanos .boton_tamanos p span {
+        font-size: 14px;
+    }
+
+    .selects_ubicacion_container select {
+        width: 100%;
+        margin: 0px 0px 15px;
+    }
+
+    .servicios_container {
+        margin: 10px 0px 0px;
+    }
+
+    .servicios_container .contenedor_tamanos label{
+        line-height: 15px;
+        padding: 0px;
+        display: block;
+    }
+
+    .selects_ubicacion_container {
+        padding: 10px 10px 0px;
+    }
+
+    /* Beneficios */
+
+    .beneficios_container > h1{
+        margin: 0px 0px 15px;
+    }
+
+    ul.beneficios_home {
+        padding: 0px;
+    }
+
+    ul.beneficios_home li div{
+        border: solid 1px #eee;
+        border-radius: 5px;
+        margin: 5px;
+        background: #FFF;
+    }
+
+    ul.beneficios_home li {
+        list-style: none;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        border-radius: 0px;
+        width: 50%;
+        float: left;
+        background: transparent;
+    }
+    
+    ul.beneficios_home li h3 {
+        font-size: 14px;
+    }
+
+    #bloque_testimonios > h1 {
+        font-size: 20px;
+    }
+
+    .testimonio {
+        padding: 0px;
+    }
+
+    .testimonio_titulo {
+        font-size: 20px;
+    }
+
+    .testimonio_texto {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    .slider_logos_container{
+        display: none;
+    }
+
+    ul.beneficios_home li div {
+        padding: 0px;
+    }
+
+    .contenedor_tamanos .boton_servicio p {
+        padding: 0px;
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 350px){
+    ul.beneficios_home li h3 {
+        font-size: 13px;
+    }
+
+    .servicios_container .contenedor_servicio .boton_servicio i {
+        font-size: 15px;
+    }
+
+    .servicios_container .contenedor_servicio .boton_servicio p span {
+        font-size: 12px;
+    }
+
+    .servicios_container .contenedor_servicio .boton_servicio p sup {
+        font-size: 10px;
+    }
+
+    .adicionales_button {
+        padding: 10px 4px;
+        font-size: 11px;
+    }
+
+    .titulo_buscar_label {
+        font-size: 16px;
+    }
+
+    ul.beneficios_home li {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,45 @@
+#conoce_cuidador .km-datos-mascota {
+    line-height: 12px !important;
+}
+
+#conoce_cuidador small{
+    padding: 5px 0px 0px;
+}
+
+.popup-iniciar-sesion-2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.popup-iniciar-sesion-2 img {
+    max-width: 100%;
+}
+
+.popup-iniciar-sesion-2 h2 {
+    padding: 25px 20px 20px;
+    margin: 0px;
+    color: #000;
+    font-size: 29px;
+}
+
+.btn_fin_reserva {
+    background: #7dd1c4;
+    color: #6b1c9b;
+    display: block;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    line-height: 55px;
+    margin-top: 30px;
+    max-width: 500px;
+    margin: 0px auto 10px;
+}
+
+.km-btn-basic,
+.btn_fin_reserva {
+    text-decoration: none !important;
+}
+.disabled {
+    cursor: default;
+    background: rgba(0, 0, 0, .2) !important;
+}

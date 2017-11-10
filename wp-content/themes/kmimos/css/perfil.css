@@ -1,0 +1,190 @@
+.vlz_img_portada_perfil{ position: relative; height: 450px; overflow: hidden; border: solid 1px #ccc; background: #EEE; margin: 0px 5px 10px; }
+.body{
+	position: relative;
+}
+.menu_perfil{
+	float: left;
+	width: 220px;
+	box-sizing: border-box;
+	padding: 5px;
+    position: relative;
+    top: -85px;
+}
+
+.menu_perfil ul{    
+	border-bottom: solid 1px #CCC;
+	margin-top: 10px;
+}
+.menu_perfil ul li{
+	display: block;
+    border-top: solid 1px #CCC;
+}
+.menu_perfil ul li a{
+	display: block;
+    padding: 10px 0px;
+    text-decoration: none;
+}
+.menu_perfil ul li a i:before{
+	margin-right: 5px;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: 0px;
+    font-size: 20px;
+}
+}
+.menu_perfil ul li a:hover{
+	background: #59c9a8;
+    color: #FFF;
+}
+.main{
+	float: left;
+	width: calc( 100% - 220px );
+	box-sizing: border-box;
+	padding: 5px 0px 5px 15px;
+}
+
+/* Contenedores */
+
+	.inputs_containers{
+		display: block;
+		overflow: hidden;
+		padding-bottom: 15px;
+	}
+
+	.inputs_containers section{
+		float: left;
+		width: 50%;
+	    box-sizing: border-box;
+	    padding: 0px 5px;
+	}
+
+	.lbl-text{
+		display: block;
+	    font-size: 12px;
+	    padding: 5px 4px 0px;
+	    font-weight: 600;
+	    color: #444;
+	    text-align: left;
+	    margin: 0px;
+	}
+
+	.lbl-ui{
+	    display: block;
+	    box-sizing: border-box;
+	    padding: 0px 2px 5px;
+	    position: relative;
+	}
+
+	.lbl-ui input,
+	.lbl-ui select,
+	.lbl-ui textarea
+	{
+		width: calc( 100% - 4px );
+	    padding: 10px;
+	    outline: none !important;
+	    resize: none;
+	    height: 42px;
+	    background: #FFF;
+	    border: solid 1px #CCC;
+	    font-weight: 400;
+	    border-radius: 5px;
+	    margin: 2px;
+	    font-size: 12px;
+	}
+
+	.lbl-ui input:focus,
+	.lbl-ui select:focus,
+	.lbl-ui textarea:focus
+	{
+	    outline: none !important;
+	}
+
+	.container_full{
+		width: 100% !important;
+	}
+
+	.lbl-ui textarea{
+	    height: 130px;
+	}
+
+	.lbl-ui input[type="date"]{
+        padding: 8px;
+	}
+
+	.container_btn{
+	    overflow: hidden;
+	    padding: 0px 0px;
+	    margin: 0px 5px 0px;
+	}
+
+	.container_btn input{
+	    float: right !important;
+	    width: auto !important;
+	    border: 0px;
+	    padding: 12px 30px;
+	    border-bottom: 3px solid #7DD1C4;
+	}
+
+	.perfil_cargando{
+		display: none;
+		float: right;
+		width: 30px;
+		height: 30px;
+	    margin: 5px;
+		background-size: contain;
+		background-position: center; 
+		background-repeat: no-repeat; 
+		background-color: transparent;
+	}
+
+	.btn_rotar{
+		position: absolute;
+	    bottom: 10px;
+	    left: 10px;
+	    width: auto;
+	    padding: 5px 10px;
+	    font-size: 16px;
+	    color: #FFF;
+	    background: #23475e;
+	    border: solid 1px #fff;
+	    z-index: 200;
+	    cursor: pointer;
+	}
+
+	#rotar_d{
+	    left: 50px;
+	}
+
+	.btn_aplicar_rotar{
+		width: auto;
+		padding: 10px;
+		font-size: 12px;
+		color: #FFF;
+		background: #23475e;
+		border: solid 1px #fff;
+		z-index: 200;
+		cursor: pointer;
+	}
+
+	.btn_aplicar_rotar_inactivo{
+	    background: #949494 !important;
+	}
+
+	section {
+	    text-align: center;
+	    padding: 0px !important;
+	}
+
+	form h1 {
+    	font-size: 24px;
+	    padding: 5px 0px !important;
+	}
