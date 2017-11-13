@@ -14,6 +14,8 @@
     }
     extract($_POST);
 
+
+    $msg = '';
     $email = $rc_email;
     $estado = $rc_estado;
     $municipio = $rc_municipio;
@@ -103,8 +105,7 @@
             }else{
                 $error = array(
                     "error" => "SI",
-                    "msg" => $msg,
-                    "fields" => $fields,
+                    "msg" => 'Cuidador no encontrado'
                 );
             }
             echo "(".json_encode( $error ).")";
