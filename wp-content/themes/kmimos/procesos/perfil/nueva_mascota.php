@@ -1,6 +1,6 @@
 <?php 
 
-    date_default_timezone_set('America/Mexico_City');
+    date_default_timezone_set('America/Bogota');
     $hoy = date("Y-m-d H:i:s");
 
 	$slug = time();
