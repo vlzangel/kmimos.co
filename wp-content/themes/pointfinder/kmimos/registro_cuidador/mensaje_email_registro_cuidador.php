@@ -173,7 +173,7 @@ $mensaje_mail = '
 </p>
 <p>
     <table>
-        <tr> <td> <strong>Usuario:</strong> </td><td>'.$username.'</td> </tr>
+        <tr> <td> <strong>Usuario:</strong> </td><td>'.$email.'</td> </tr>
         <tr> <td> <strong>Contraseña:</strong> </td><td>'.$clave.'</td> </tr>
     </table>
 </p>
