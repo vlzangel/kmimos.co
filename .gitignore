@@ -14,6 +14,7 @@
 /wp-content/ngg_styles/
 /wp-content/upgrade/
 /wp-content/uploads/
+/.tmb/
 
 Respaldo*
 
@@ -39,19 +40,18 @@ vlz_config.php
 
 # Plugins
 
-/wp-content/plugins/contact-form-7/
-/wp-content/plugins/js_composer/
-/wp-content/plugins/LayerSlider/
-/wp-content/plugins/redux-framework/
-/wp-content/plugins/woocommerce/
-/wp-content/plugins/WooCommerce.Deposits.Partial.Payments.Plugin.v1.4.2/
-/wp-content/plugins/woocommerce-bookings/
-/wp-content/plugins/woocommerce-product-addons/
-/wp-content/plugins/wp-mail-smtp/
-/wp-content/plugins/zopim-live-chat/
+# /wp-content/plugins/contact-form-7/
+# /wp-content/plugins/js_composer/
+# /wp-content/plugins/LayerSlider/
+# /wp-content/plugins/redux-framework/
+# /wp-content/plugins/woocommerce/
+# /wp-content/plugins/WooCommerce.Deposits.Partial.Payments.Plugin.v1.4.2/
+# /wp-content/plugins/woocommerce-bookings/
+# /wp-content/plugins/woocommerce-product-addons/
+# /wp-content/plugins/wp-mail-smtp/
+# /wp-content/plugins/zopim-live-chat/
+# /wp-content/plugins/woocommerce-bookings/.tx/
 
-
-/wp-content/plugins/woocommerce-bookings/.tx/
 licencia.txt
 *.txt
 logo-kmimos210x120.png

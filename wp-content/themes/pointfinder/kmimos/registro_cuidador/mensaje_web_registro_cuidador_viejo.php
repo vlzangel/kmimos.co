@@ -165,6 +165,7 @@ $mensaje_web = '
                         <li style="text-align: justify;">Por último, recibirás una llamada para entrevista telefónica y notificación para la auditoría a tu hogar.</li>
                     </ul>
                 </p>
+<<<<<<< HEAD
                 <p style="text-align: justify;">
                     Ahora serás dirigido hacia el paso 1, PRUEBAS DE CONOCIMIENTO VETERINARIO.
                 </p>
@@ -207,4 +208,6 @@ $mensaje_web = '
                         "
                     >CONTINUAR</a>
                 </p>
+=======
+>>>>>>> a9fc5f9bf4b6226788ad8016c4a039484d3a3786
             ';

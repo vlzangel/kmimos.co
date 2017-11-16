@@ -414,7 +414,7 @@
 					    <input type="text" class="form-control" name="phone" id="phone" placeholder="Escribe tu Tel&eacute;fono">
 					</div><!-- /input-group -->
 				</div>
-	      		<div class="form-group">
+				<div class="form-group">
 					<div class="col-xs-7" style="padding-left:21px;" >
 						<label class="checkbox">
 							<input type="checkbox" id="terminos" name="terminos" required value="0">
@@ -440,6 +440,12 @@
 				  </div>
 				</div>
   				<div class="clearfix"></div>
+	      		<br>
+				<div>
+					<i id="loading" class="hidden" style="font-size:12px;" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+					<span id="msg"></span>
+				</div>
+	      		<br>
       		</form>
 			<form id="frm-redirect" action="/quiero-ser-cuidador-certificado-de-perros/"  method="post" >
       		</form>

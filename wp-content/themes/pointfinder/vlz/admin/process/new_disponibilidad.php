@@ -97,8 +97,8 @@
             $autor = $db->get_var("SELECT post_author FROM wp_posts WHERE ID = '{$servicio->ID}' ", "post_author");
             $acepta = $db->get_var("SELECT meta_value FROM wp_postmeta WHERE post_id = '{$servicio->ID}' AND meta_key = '_wc_booking_qty' ", "meta_value");
 
-            $inicio = strtotime($inicio);
-            $fin = strtotime($fin);
+           // $inicio = strtotime($inicio);
+           // $fin = strtotime($fin);
 
             for ($i=$inicio; $i <= $fin; $i+=86400) {
                 $fecha = date("Y-m-d", $i);
