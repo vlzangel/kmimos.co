@@ -36,7 +36,7 @@ function _subscribe(){
 
     $('#loading').removeClass('hidden');
     $('#msg').html('Validando datos...');
-    $.ajax( "/landing/list-subscriber.php?source=kmimos-co-cuidadores&email="+$('#email').val()+"&phone="+$('#phone').val() )
+    $.ajax( "/QA1/landing/list-subscriber.php?source=kmimos-co-cuidadores&email="+$('#email').val()+"&phone="+$('#phone').val() )
     .done(function(data) { 
       if(data == 1){ 
         $('#loading').addClass('hidden');
