@@ -47,6 +47,11 @@
 							"nombre" => utf8_encode($row2['muni'])
 						);
 					}
+				}else{
+					$municipios[] = array(
+						"id" => "",
+						"nombre" => $esta
+					);
 				}
 
 				$datos[$id] = array(

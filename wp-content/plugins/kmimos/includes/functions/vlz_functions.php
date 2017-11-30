@@ -61,10 +61,22 @@
 
             $saldo = 0;
 
-            if( $deposito['enable'] == 'yes' ){
-                $saldo = $deposito['deposit'];
-            }else{
-                $saldo = $items['_line_total'];
+            $metodo_card = array(
+                "CREDIT_CARD",
+                "2",
+                "DEBIT_CARD",
+                "6"
+            );
+
+            if( 
+                in_array( $metas_orden["Metodo de Pago Usado"][0] , $metodo_card) || 
+                (  ($metas_orden["_order_total"][0]+0) == 0 ) 
+            ){
+                if( $deposito['enable'] == 'yes' ){
+                    $saldo = $deposito['deposit'];
+                } else {
+                    $saldo = $items['_line_total'];
+                }
             }
 
             $descuento = 0;
@@ -72,18 +84,12 @@
             if( $order_item_id != '' ){
                 $descuento = $wpdb->get_var("SELECT meta_value FROM wp_woocommerce_order_itemmeta WHERE order_item_id = '{$order_item_id}' AND meta_key = 'discount_amount' ");
             }
+            $saldo += $descuento;
 
             $otros_cupones = $wpdb->get_results("SELECT * FROM wp_woocommerce_order_items WHERE order_id = '{$id_orden}' AND order_item_type = 'coupon' AND order_item_name NOT LIKE '%saldo-%'");
             foreach ($otros_cupones as $key => $value) {
                 $cupon_id = $wpdb->get_var("SELECT ID FROM wp_posts WHERE post_title = '{$value->order_item_name}'");
                 $wpdb->query("DELETE FROM wp_postmeta WHERE post_id = '{$cupon_id}' AND meta_key = '_used_by' AND meta_value = '{$id_cliente}'");
-            }
-
-            // En pago en tienda pasa de wc-on-hold a: wc-partially-paid OR wc-completed
-            if($status == 'wc-on-hold' && $metas_orden['_payment_method'][0] == 'openpay_stores'){
-                $saldo = $descuento;  
-            }else{
-                $saldo += $descuento;                
             }
 
             $saldo_persistente = get_user_meta($id_cliente, "kmisaldo", true)+0;

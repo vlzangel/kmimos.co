@@ -26,7 +26,7 @@
 				$r = $cnn->query( $rows );
 				if( $r->num_rows == 0){
 					# Insertar registro
-				$sql = "insert into list_subscribe( source, email, phone) 
+				$sql = "INSERT INTO list_subscribe( source, email ,phone) 
 					values ( '".$_GET['source']."','".$_GET['email']."','".$_GET['phone']."' )";
 					$rows = $cnn->query( $sql );
 				}

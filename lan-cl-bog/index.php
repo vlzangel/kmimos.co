@@ -21,16 +21,16 @@
 
 		<script src="js/jquery/jquery.js"></script>
 		<script src="js/script.js"></script>
-        <script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-93578532-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
+	  ga('create', 'UA-93578532-1', 'auto');
+	  ga('send', 'pageview');
 
+	</script>
 		<style type="text/css">
 			#PageSubscribe{position:relative; max-width: 700px;  margin: 0 auto;  padding: 25px;  top: 75px; border-radius: 20px;  background: #ba2287;  overflow: hidden;}
 			#PageSubscribe .exit{float: right; cursor: pointer;}
@@ -48,7 +48,8 @@
 			#PageSubscribe .section.section2 input,
 			#PageSubscribe .section.section2 button{width: 100%; max-width: calc(100% - 60px); margin: 5px; padding: 5px 10px; color: #CCC; font-size: 15px; border-radius: 20px;  border: none; background: #FFF; }
 			#PageSubscribe .section.section2 button {padding: 10px;  width: 40px;}
-
+			.span-email-show{ display: list-item; }
+    		.span-email-hide{ display: none; }
 			@media screen and (max-width:480px), screen and (max-device-width:480px) {
 				#PageSubscribe { top: 15px;}
 				#PageSubscribe .section{ width: 100%; padding: 10px 0; font-size: 12px;}
@@ -69,21 +70,90 @@
 
 		<script type='text/javascript'>
 			//Subscribe
-			function SubscribeSite(){
-				clearTimeout(SubscribeTime);
+			 function SubscribeSite(){
+		        clearTimeout(SubscribeTime);
 
-				var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">' +
-					'<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
+		        var CampaignMonitor = '<div id="subForm">'+
+		        '<input id="fieldEmail" name="cm-vydlhj-vydlhj" type="email" placeholder="Introduce tu correo aqu&iacute" required />'+
+		        '<button onclick="register()" id="btn-envio"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>'+
+		        '<div id="msg" class="span-email-hide">Registro Exitoso. Por favor revisa tu correo en la Bandeja de Entrada o en No Deseados</div>'+
+		        '<div id="msg-vacio" class="span-email-hide">Debe completar los datos</div>'+
+		        '<div id="msg-register" class="span-email-hide">El email no es valido</div>'+
+		        '<div id="msg-error" class="span-email-hide">Este correo ya est&aacute; registrado. Por favor intenta con uno nuevo</div>';
 
-				var html='<div id="PageSubscribe"><i class="exit fa fa-times" aria-hidden="true" onclick="SubscribePopUp_Close(\'#message.Msubscribe\')"></i>' +
-					'<div class="section section1"><span>G&aacute;nate <strong>COP 8,000</strong> en tu primera reserva</span><br>&#8216;&#8216;Aplica para clientes nuevos&#8217;&#8217;<div class="images">'+dog+'</div></div>' +
-					'<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span><?php echo subscribe_input('lan-cl-bog'); ?></div>' +
-					'<div class="section section3">*Dentro de 48 hrs. Te enviaremos v&iacute;a email tu c&uacute;pon de descuento</div>' +
-					'</div>';
+		        var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">'
+		            +'<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
 
+		        var html='<div id="PageSubscribe"><i class="exit fa fa-times" aria-hidden="true" onclick="SubscribePopUp_Close(\'#message.Msubscribe\')"></i>'
+		            +'<div class="section section1"><span>G&aacute;nate <strong>COP 8,000</strong> en tu primera reserva</span><br>&#8216;&#8216;Aplica para clientes nuevos&#8217;&#8217;<div class="images">'+dog+'</div></div>'
+		            +'<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span>'+CampaignMonitor+'</div>';
 
-				SubscribePopUp_Create(html);
-			}
+		        SubscribePopUp_Create(html);
+		        
+		    }
+		    function register(){     
+		        if( jQuery('#fieldEmail').val() == ""){
+		            jQuery("#msg-vacio").removeClass('span-email-hide');
+		            jQuery("#msg-vacio").addClass('span-email-show');
+		            return;
+		        }else{
+		            var mail= jQuery('#fieldEmail').val();
+		            var email = {'cm-vydlhj-vydlhj': mail}
+		            var datos = {'source': 'lan-cl-bog', 'email': mail}
+		            var result = getGlobalData("../../../landing/newsletter.php",'POST', datos);
+		                console.log(result);
+		            if (result == 1) {
+		                jQuery("#msg-vacio").removeClass('span-email-show');
+		                jQuery('#msg-error').removeClass('span-email-show');
+		                jQuery('#msg-register').removeClass('span-email-show');
+		                jQuery("#msg-vacio").addClass('span-email-hide');
+		                jQuery('#msg-error').addClass('span-email-hide');
+		                jQuery('#msg-register').addClass('span-email-hide');
+		                jQuery('#msg').removeClass('span-email-hide');
+		                jQuery('#msg').addClass('span-email-show');
+		                result = getGlobalData("http://kmimos.intaface.com/t/j/s/vydlhj/",'POST', email);
+		            }else if (result == 2){
+		                jQuery("#msg-vacio").removeClass('span-email-show');
+		                jQuery('#msg-error').removeClass('span-email-show');
+		                jQuery('#msg').removeClass('span-email-show');
+		                jQuery('#msg-register').addClass('span-email-show');
+		                jQuery('#msg-register').removeClass('span-email-hide');
+		                jQuery("#msg-vacio").addClass('span-email-hide');
+		                jQuery('#msg-error').addClass('span-email-hide');
+		                jQuery('#msg').addClass('span-email-hide');
+		            }else if (result == 3){
+		                jQuery("#msg-vacio").removeClass('span-email-show');
+		                jQuery('#msg-error').removeClass('span-email-hide');
+		                jQuery('#msg-register').removeClass('span-email-show');
+		                jQuery("#msg-vacio").addClass('span-email-hide');
+		                jQuery('#msg-error').addClass('span-email-show');
+		                jQuery('#msg-register').addClass('span-email-hide');
+		                jQuery('#msg').removeClass('span-email-show');
+		                jQuery('#msg').addClass('span-email-hide');
+		            }else{
+		                jQuery("#msg-vacio").removeClass('span-email-hide');
+		                jQuery('#msg-error').removeClass('span-email-show');
+		                jQuery('#msg-register').removeClass('span-email-show');
+		                jQuery("#msg-vacio").addClass('span-email-show');
+		                jQuery('#msg-error').addClass('span-email-hide');
+		                jQuery('#msg-register').addClass('span-email-hide');
+		                jQuery('#msg').removeClass('span-email-show');
+		                jQuery('#msg').addClass('span-email-hide');
+		            }
+		        }
+		    }
+
+		    function getGlobalData(url,method, datos){
+		        return jQuery.ajax({
+		            data: datos,
+		            type: method,
+		            url: url,
+		            async:false,
+		            success: function(data){
+		                return data;
+		            }
+		        }).responseText;
+		    }
 
 			jQuery(document).ready(function(e){
 				SubscribeTime = setTimeout(function(){
@@ -105,10 +175,14 @@
 				<p><strong>Libre de Jaulas</strong></p>
 			</div>
 			<div class="action">
-				<a href="/?home&utm_source=youtube&utm_medium=landing_page&utm_campaign=buscar_cuidador_disponible&utm_term=cuidador%2Bperros%2Bcolombia&utm_content=landing_page#jj-landing-page" tile="kmimos">
+				<a href="http://kmimos.co?utm_source=landing&utm_campaign=usuarios_landing_bogota&utm_term=cuidado_perro_hospedaje_paseos#jj-landing-page" tile="kmimos">
 					<div class="button wow zoomIn">BUSCAR CUIDADORES DISPONIBLES</div>
 				</a>
-				<div>
+<!--
+ 				<a href="/?home&utm_source=youtube&utm_medium=landing_page&utm_campaign=buscar_cuidador_disponible&utm_term=cuidador%2Bperros%2Bcolombia&utm_content=landing_page#jj-landing-page" tile="kmimos">
+					<div class="button wow zoomIn">BUSCAR CUIDADORES DISPONIBLES</div>
+				</a>
+ -->				<div>
 					<i class="down fa fa-angle-down" aria-hidden="true"></i>
 				</div>
 			</div>
@@ -265,7 +339,10 @@
 									frameborder="0" allowfullscreen></iframe>
 							</article>
 							<article class="col-sm-12 text-center" style="padding-top:20px;">
-								<a href="/?home&utm_source=youtube&utm_medium=landing_page&utm_campaign=buscar_cuidador_disponible&utm_term=cuidador%2Bperros%2Bcolombia&utm_content=landing_page#jj-landing-page" class="btn btn-kmimos">Buscar Cuidadores Disponibles</a>
+								<a href="http://kmimos.co?utm_source=landing&utm_campaign=usuarios_landing_bogota&utm_term=cuidado_perro_hospedaje_paseos#jj-landing-page" class="btn btn-kmimos">Buscar Cuidadores Disponibles</a>
+<!--
+ 								<a href="/?home&utm_source=youtube&utm_medium=landing_page&utm_campaign=buscar_cuidador_disponible&utm_term=cuidador%2Bperros%2Bcolombia&utm_content=landing_page#jj-landing-page" class="btn btn-kmimos">Buscar Cuidadores Disponibles</a> 
+-->
 							</article>
 						</div>
 					</div>

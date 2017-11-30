@@ -66,6 +66,10 @@ $subscribe = getListsuscribe($landing, $desde, $hasta);
 			      <th>Fecha Registro</th>
 			      <th>Tipo de Usuario</th>
 			      <th>Estatus</th>
+
+			      <th>Facebook</th>
+			      <th>Twitter</th>
+			      <th>Email</th>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -75,7 +79,13 @@ $subscribe = getListsuscribe($landing, $desde, $hasta);
 			  		if( count($cant_reservas['rows']) > 0 ){
 			  			$cant_reservas = $cant_reservas['rows'][0];
 			  		}
-			  		
+			  		$arr_track = [];
+			    	$_tracking = getTracking($row['email']);
+			    	foreach ($_tracking['rows'] as $val) {
+			    		if( $val['user_email'] == $row['email']){
+				  			$arr_track[ $val['option'] ] = $val['value'];
+				  		}
+			    	}
 			  	?>
 				    <tr>
 				    	<th class="text-center"><?php echo ++$count; ?></th>
@@ -90,6 +100,10 @@ $subscribe = getListsuscribe($landing, $desde, $hasta);
 						<th class="text-center"><?php echo $row['fecha_registro']; ?></th>
 						<th class="text-center"><?php echo $row['tipo']; ?></th>
 						<th class="text-center"><?php echo $row['estatus']; ?></th>
+						<th><?php echo (!empty($arr_track['referidos_facebook'])) ? $arr_track['referidos_facebook'] : 0 ; ?></th>
+						<th><?php echo (!empty($arr_track['referidos_twitter'])) ? $arr_track['referidos_twitter'] : 0 ; ?></th>
+						<th><?php echo (!empty($arr_track['referidos_email'])) ? $arr_track['referidos_email'] : 0 ; ?></th>
+
 				    </tr>
 			   	<?php } ?>
 			  </tbody>

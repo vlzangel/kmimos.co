@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Quiero ser cuidador</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/kmimos.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+       
+       	<div class="container-fluid">
+
+		<section class="row " id="section-1">
+			<header class="text-center">
+	       	 	<img src="img/LogoKmimos.png" class="logo">
+	       	</header>
+
+	       	<article class="col-sm-5 hidden-xs">
+	       		<img src="img/Character_section1.png" class=" img-kmimos img-responsive">
+	       	</article>
+       	 	<article class="col-sm-7">
+				<h1>Kmimos es un servicio digital que 
+				<strong>conecta Doglovers como t&uacute;</strong>, con dueños de perros que necesitan que les cuiden a sus peludos mientras no est&aacute;n en casa
+				</h1>
+       	 	</article>
+	       	<article class="img-section-1 col-sm-5 pull-left  hidden-md hidden-sm hidden-lg">
+	       		<img src="img/Character_section1.png" class="img-kmimos img-responsive">
+	       	</article>
+
+       	 	<article class="col-xs-12 text-center">
+	       	 	<a href="http://www.kmimos.co/quiero-ser-cuidador/" class="btn btn-kmimos">Quiero ser un Cuidador Certificado Kmimos</a>
+       	 	</article>
+       	 	<article class="col-sm-12 text-center">
+				<a  href="#section-2" 
+					class="controll-pagination back-white">
+					<i class="fa fa-angle-down" aria-hidden="true"></i>
+					<!-- img src="img/7.png" -->
+				</a>
+       	 	</article>
+		</section>
+		<div class="clearfix"></div>
+
+		<section class="row" id="section-2">
+			<div>
+				<article class="col-sm-12">
+		       	 	<article class="margin-top-20 subtitle-container">
+		       	 		<span class="subtitle subtitle-verde">VENTAJAS</span>
+		       	 	</article>
+		       	 	<article class="container">
+		       	 		<div class="col-sm-1 col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+		       	 			<img src="img/icon 1.png">
+		       	 		</div>
+		       	 		<div class="col-sm-10 col-sm-offset-1">
+			       	 		<h2>Llenarás tu casa con nuevos amigos peludos!</h2>
+			       	 	</div>
+		       	 	</article>
+		       	 	<hr>
+		       	 	<article class="container">
+		       	 		<div class="col-sm-1 col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+		       	 			<img src="img/icon 2.png">
+		       	 		</div>
+		       	 		<div class="col-sm-10 col-sm-offset-1">
+			       	 		<h2>Podrás ganarte hasta $4 millones de pesos mensualeas (Depende de la demanda)</h2>
+			       	 	</div>
+		       	 	</article>
+		       	 	<hr>
+		       	 	<article class="container">
+		       	 		<div class="col-sm-1 col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+		       	 			<img src="img/icon 3.png">
+		       	 		</div>
+		       	 		<div class="col-sm-10 col-sm-offset-1">
+			       	 		<h2>¡El proceso de certificación es gratis, inscríbete ya!</h2>
+			       	 	</div>
+		       	 	</article>
+		       	 	<hr>
+		       	 	<article class="container">
+		       	 		<div class="col-sm-1 col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+		       	 			<img src="img/icon 4.png">
+		       	 		</div>
+		       	 		<div class="col-sm-10 col-sm-offset-1">
+			       	 		<h2>Tendrás flexibilidad en tus horarios</h2>
+			       	 	</div>
+		       	 	</article>
+			       	<div class="col-sm-12 text-center">
+						<a  
+							href="#section-3" 
+							class="controll-pagination back-white">
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</a>
+					</div>
+		       	</article>
+			</div>
+		</section>
+		<div class="clearfix"></div>
+
+		<section class="row" id="section-3">
+				
+       	 	<article class="container">
+				<h3 class="subtitle-3 title">CU&Aacute;LES SON LOS REQUISITOS</h3>
+			</article>
+   	 		<hr class="hr-special">
+       	 	<article class="container">
+       	 		<div class="col-sm-2">
+       	 			<img src="img/shape 1.png">
+       	 		</div>
+       	 		<div class="col-sm-10  col-sm-offset-0">
+	       	 		<h2 class="center-subtitle">Ser mayor de edad</h2>
+	       	 	</div>
+       	 	</article>
+       	 	<hr>
+       	 	<article class="container">
+       	 		<div class="col-sm-10 text-right col-sm-offset-0">
+	       	 		<h2  class="center-subtitle">Tener experiencia cuidando perros propios 
+	       	 		por lo menos durante 3 años</h2>
+	       	 	</div>
+       	 		<div class="col-sm-2">
+       	 			<img src="img/shape 2.png">
+       	 		</div>
+       	 	</article>
+       	 	<hr>
+       	 	<article class="container">
+       	 		<div class="col-sm-2 ">
+       	 			<img src="img/shape 3.png">
+       	 		</div>
+       	 		<div class="col-sm-10  col-sm-offset-0">
+	       	 		<h2  class="center-subtitle">Confirmar que en tu domicilio puedes aceptar mascotas</h2>
+	       	 	</div>
+       	 	</article>
+       	 	<hr>
+       	 	<article class="container">
+       	 		<div class="col-sm-10">
+	       	 		<h2 class=" text-right center-subtitle">APROBAR nuestras pruebas de certificación que son totalmente gratuitas</h2>
+	       	 	</div>
+       	 		<div class="col-sm-2 ">
+       	 			<img src="img/shape 4.png">
+       	 		</div>
+       	 	</article>
+	       	<div class="col-sm-12 text-center">
+			<a  
+				href="#section-4" 
+				class="controll-pagination back-green">
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+			</a>
+			</div>
+		</section>
+		<div class="clearfix"></div>
+
+		<section class="row" id="section-4">
+				
+       	 	<article class="container text-center">
+				<h3 class="subtitle-4 title">¿CU&Aacute;L ES EL PROCESO DE CERTIFICACI&Oacute;N?</h3>
+			</article>
+   	 		<article class="container text-center">
+			
+   	 			<div class="col-sm-4 center-subtitle">
+   	 				<img src="img/icon 5.png">
+   	 				<h2>Llena el formulario y env&iacute;anos una foto de un recibo con tu nombre y una foto de tu cedula en Mensaje Directo a nuestro Facebook<br>@Kmimosco</h2>
+   	 			</div>
+
+<div style="position:absolute;left:0px;"class="col-sm-5 hidden-xs hidden-sm arrow-left"><img src="img/Arrow 1.png"></div>
+
+   	 			<div class="col-sm-4 center-subtitle">
+   	 				<img src="img/icon 6.png">
+   	 				<h2>Pruebas Psicom&eacute;tricas y conocimientos Veterinarios, No olvides revisar tu correo y spam, se realizan en l&iacute;nea!</h2>
+   	 			</div>
+
+<div style="position:absolute;right:0px;"class="col-sm-5 hidden-xs hidden-sm arrow-right"><img src="img/Arrow 1.png"></div>
+
+   	 			<div class="col-sm-4 center-subtitle">
+   	 				<img src="img/icon 7.png">
+   	 				<h2>Una Entrevista</h2>
+   	 			</div>
+   	 		</article>
+   	 		<article class="container text-center">
+   	 			<div class="row">
+   	 			
+				<div style="position:absolute;left:0px;"class="col-sm-5 hidden-xs hidden-sm arrow-2"><img src="img/Arrow 1.png">
+   	 			</div>
+	
+				<div class="col-sm-offset-4 col-sm-4">
+	   	 				<img src="img/icon 8.png">
+	   	 				<h2>Una vez activado, recibir&aacute;s visitas aleatorias a tu casa para revisar que todo est&eacute; en condiciones &oacute;ptimas para nuestros amigos peludos y... ¡A Recibir Peludos!</h2>
+	   	 			</div>   	 			
+   	 			</div>
+   	 		</article>
+	       	<div class="col-sm-12 text-center">
+			<a  
+				href="#section-5" 
+				class="controll-pagination back-white">
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+			</a>
+			</div>
+		</section>
+		<div class="clearfix"></div>
+
+		<section class="row" id="section-5">
+			<div>
+				<article class="col-sm-12">
+
+       	 	<aside class="container">
+				<h3 class="subtitle-3 title">EN QU&Eacute; CONSTA EL SERVICIO ></h3>
+			</aside>
+   	 		<hr>
+       	 	<article class="container">
+       	 		<div class="col-sm-2">
+       	 			<img src="img/shape 5.png">
+       	 		</div>
+       	 		<div class="col-sm-8 col-sm-offset-1">
+	       	 		<h2 class="center-subtitle">Con Kmimos contar&aacute;s con una cobertura de servicios veterinarios para la estad&iacute;a del perrito que se queda en tu casa.</h2>
+	       	 	</div>
+       	 	</article>
+       	 	<hr>
+       	 	<article class="container">
+       	 		<div class="col-sm-2">
+       	 			<img src="img/shape 6.png">
+       	 		</div>
+       	 		<div class="col-sm-8 col-sm-offset-1">
+	       	 		<h2  class="center-subtitle">Enviar&aacute;s fotos y v&iacute;deos diarios, ¡Mu&eacute;strale a su dueño que es el Rey de la casa! </h2>
+	       	 	</div>
+       	 	</article>
+       	 	<hr>
+       	 	<article class="container">
+       	 		<div class="col-sm-2">
+       	 			<img src="img/shape 7.png">
+       	 		</div>
+       	 		<div class="col-sm-8 col-sm-offset-1">
+	       	 		<h2  class="center-subtitle">Cuentas con un equipo de atenci&oacute;n personalizada para el manejo del perrito, <br>¡Nunca est&aacute;s solo!</h2>
+	       	 	</div>
+       	 	</article>
+
+
+	       	<div class="col-sm-12 text-center">
+				<a  
+					href="#section-6" 
+					class="controll-pagination back-green">
+					<i class="fa fa-angle-down" aria-hidden="true"></i>
+				</a>
+			</div>
+		</section>
+		<div class="clearfix"></div>
+
+		<section class="row" id="section-6">
+			<div class="col-sm-10 col-sm-offset-1">			
+				<aside class="col-sm-2 hidden-sm hidden-xs">
+					<img src="img/object 1.png" width="80px">
+				</aside>
+				<div class="col-sm-7 text-center container-iframe">
+					<article class="video video-container">
+						<iframe src="https://www.youtube.com/embed/ZWIRhPjkRG0" frameborder="0" allowfullscreen></iframe>
+					</article>
+				</div>
+				<aside class="col-sm-2">
+					<img src="img/Character 5.png" class="img-responsive ">
+				</aside>
+			</div>
+		</section>
+		<div class="clearfix"></div>
+
+	</div>
+	<footer class="text-center">
+		<h2>¡EN KMIMOS, LLEGAN COMO HU&Eacute;SPED Y CONSIGUEN A UN NUEVO AMIGO!</h2>
+		<a href="http://www.kmimos.co/quiero-ser-cuidador/" class="btn btn-kmimos">Quiero ser un Cuidador Certificado Kmimos</a>
+		<aside class="text-center">
+       	 	<img src="img/LogoKmimos.png" width="150px">
+       	</aside>
+	</footer>
+
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    
+    </body>
+</html>

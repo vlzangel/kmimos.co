@@ -15,10 +15,11 @@
 
 		$destacado = "";
 		$atributos = unserialize($cuidador->atributos);
-		if( isset($atributos["destacado"]) && $atributos["destacado"] == "1" ){
-			$destacado = '<div class="pfribbon-wrapper-featured"><div class="pfribbon-featured">DESTACADO</div></div>';
-		}
 
+		if( isset($atributos["destacado"]) && $atributos["destacado"] == "1" ){
+			$destacado = '<div class="pfribbon-wrapper-featured"><div class="pfribbon-featured">30% OFF</div></div>';
+		}
+		
 		$ficha = '
 		<li class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wpfitemlistdata isotope-item">
 			<div class="pflist-item" style="background-color:#ffffff;">  
