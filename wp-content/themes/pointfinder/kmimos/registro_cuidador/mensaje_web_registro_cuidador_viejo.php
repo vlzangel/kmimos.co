@@ -165,4 +165,49 @@ $mensaje_web = '
                         <li style="text-align: justify;">Por último, recibirás una llamada para entrevista telefónica y notificación para la auditoría a tu hogar.</li>
                     </ul>
                 </p>
+<<<<<<< HEAD
+                <p style="text-align: justify;">
+                    Ahora serás dirigido hacia el paso 1, PRUEBAS DE CONOCIMIENTO VETERINARIO.
+                </p>
+                <p style="text-align: justify;">
+                    Guarda el siguiente link, ahí puedes continuar con las pruebas en caso de no terminarlas por algún imprevisto y/o para cargar documentos.
+                </p>
+                <p style="text-align: justify;">
+                   <strong>Link para continuar es: http://kmimos.ilernus.com</strong>
+                </p>
+                <p style="text-align: justify; color: #f00;">
+                    <strong>INGRESA CON EL NOMBRE DE USUARIO Y CONTRASEÑA:</strong>
+                </p>
+                <p>
+                    <table>
+                        <tr> <td> <strong>Usuario:</strong> </td><td>'.$email.'</td> </tr>
+                        <tr> <td> <strong>Contraseña:</strong> </td><td>'.$clave.'</td> </tr>
+                    </table>
+                </p>
+
+                <p>
+                    ¡EXITO!
+                </p>
+                <p style="text-align: center;">
+                    <a
+                        href="https://kmimos.ilernus.com"
+                        style="
+                            padding: 10px;
+                            background: #59c9a8;
+                            color: #fff;
+                            font-weight: 400;
+                            font-size: 17px;
+                            font-family: Roboto;
+                            border-radius: 3px;
+                            border: solid 1px #1f906e;
+                            display: block;
+                            max-width: 300px;
+                            margin: 0px auto;
+                            text-align: center;
+                            text-decoration: none;
+                        "
+                    >CONTINUAR</a>
+                </p>
+=======
+>>>>>>> a9fc5f9bf4b6226788ad8016c4a039484d3a3786
             ';
