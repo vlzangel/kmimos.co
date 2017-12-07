@@ -36,10 +36,12 @@ function set_input_attrs( $fields ) {
 	$fields['billing']['billing_last_name'] = array('required'  => false);
 	$fields['billing']['billing_email'] = array('required'  => false);
 	$fields['billing']['billing_phone'] = array('required'  => false);
-	$fields['billing']['billing_address_1'] = array('required'  => false);
-	$fields['billing']['billing_address_2'] = array('required'  => false);
-	$fields['billing']['billing_city'] = array('required'  => false);
-	$fields['billing']['billing_state'] = array('required'  => false);
+
+	$fields['billing']['billing_address_1'] = array('required'  => true);
+	$fields['billing']['billing_address_2'] = array('required'  => true);
+	$fields['billing']['billing_city'] = array('required'  => true);
+	$fields['billing']['billing_state'] = array('required'  => true);
+	
 	$fields['billing']['billing_postcode'] = array('required'  => false);
    	return $fields;
 }
