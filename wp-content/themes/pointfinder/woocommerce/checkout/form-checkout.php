@@ -81,10 +81,22 @@ if( !$DS ){
              echo "jQuery('#billing_first_name').attr('value', '{$cu->user_firstname}');";
              echo "jQuery('#billing_last_name').attr('value', '{$cu->user_lastname}');";
 
-             echo "jQuery('#billing_address_1').attr('value', 'Colombia');";
-             echo "jQuery('#billing_city').attr('value', 'Colombia');";
-             echo "jQuery('#billing_state').attr('value', 'Colombia');";
+             echo "jQuery('#billing_address_1').before('<label for=\"billing_country\" class=\"\">Direcci&oacute;n <abbr class=\"required\" title=\"obligatorio\">*</abbr></label>');";
+             echo "jQuery('#billing_address_1').attr('placeholder', 'Direccion');";
+             echo "jQuery('#billing_address_1').attr('value', '');";
 
+             echo "jQuery('#billing_address_2').attr('placeholder', 'Direccion');";
+             echo "jQuery('#billing_address_2').attr('value', '');";
+             
+
+             echo "jQuery('#billing_city').before('<label for=\"billing_country\" class=\"\">Ciudad <abbr class=\"required\" title=\"obligatorio\">*</abbr></label>');";
+             echo "jQuery('#billing_city').attr('placeholder', 'Ciudad');";
+             echo "jQuery('#billing_city').attr('value', '');";
+
+             echo "jQuery('#billing_state').before('<label for=\"billing_country\" class=\"\">Estado <abbr class=\"required\" title=\"obligatorio\">*</abbr></label>');";
+             echo "jQuery('#billing_state').attr('placeholder', 'Estado');"; 
+             echo "jQuery('#billing_state').attr('value', '');"; 
+             
              echo "jQuery('#billing_phone').attr('value', '+57{$metas_cliente["user_mobile"][0]}');";
          ?>
 
@@ -114,8 +126,15 @@ if( !$DS ){
 		color: #54c8a7;
 		font-weight: 600;
 	}
-	.woocommerce-billing-fields{
-		display: none;
+	.woocommerce-billing-fields h3,
+	#billing_first_name_field,
+	#billing_last_name_field,
+	#billing_company_field,
+	#billing_email_field,
+	#billing_phone_field,
+	#billing_postcode_field
+	{
+		display: none!important;
 	}
 	@media (max-width: 592px){
 		#add_payment_method #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods>li>label {
