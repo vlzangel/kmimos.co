@@ -256,11 +256,11 @@
                 'moodlewsrestformat'    =>  "json",
                 'users' => array(
                     0 => array(
-                        'username'      => $username,
+                        "email"         => $email,
                         'password'      => $clave,
+                        'username'      => $username,
                         'firstname'     => $nombres,
                         "lastname"      => $apellidos,
-                        "email"         => $email,
                         "preferences"   => array(
                             0 => array(
                                 "type"  => 'kmimostoken',
