@@ -62,10 +62,10 @@
 	$lista_servicios_adicionales .= '</div>';
 
 	$tamanos = array(
-		'pequenos' => '<p>Pequeño<br><sup>0.0cm - 25.0cm</sup></p>', 
-		'medianos' => '<p>Mediano<br><sup>25.0cm - 58.0cm</sup></p>', 
-		'grandes'  => '<p>Grande<br><sup>58.0cm - 73.0cm</sup></p>', 
-		'gigantes' => '<p>Gigante<br><sup>73.0cm - 200.0cm</sup></p>'
+		'pequenos' => '<p>Pequeño<br><sup>Hasta 25.4 cm</sup></p>', 
+		'medianos' => '<p>Mediano<br><sup>27.9 a 50.8 cm</sup></p>', 
+		'grandes'  => '<p>Grande<br><sup>53.3 a 73.6 cm</sup></p>', 
+		'gigantes' => '<p>Gigante<br><sup>Más 76.2 cm</sup></p>'
 	);
 
 	$tamanos_mascotas_form = '<div class="vlz_checkbox_contenedor">';
