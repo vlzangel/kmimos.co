@@ -98,10 +98,10 @@
 
 							<?php
 								$tam = array(
-									"pequenos" => "Peque&ntilde;os (0.0 cm - 25.0)",
-									"medianos" => "Medianos (25.0 cm - 58.0 cm)",
-									"grandes"  => "Grandes (58.0 cm - 73.0 cm)",
-									"gigantes" => "Gigantes (73.0 cm - 200.0 cm)",
+									"pequenos" => "Peque&ntilde;os (Hasta 25.4 cm)",
+									"medianos" => "Medianos (27.9 a 50.8 cm)",
+									"grandes"  => "Grandes (53.3 a 73.6 cm)",
+									"gigantes" => "Gigantes (Más 76.2 cm)",
 								);
 							?>
 

@@ -120,10 +120,10 @@ $servicios = array(
     }
 
     $tamanos = array(
-        'pequenos' => 'Peque&ntilde;os <br><sub>0.0 cm - 25.0cm</sub>',
-        'medianos' => 'Medianos <br><sub>25.0 cm - 58.0 cm</sub>',
-        'grandes'  => 'Grandes <br><sub>58.0 cm - 73.0 cm</sub>',
-        'gigantes' => 'Gigantes <br><sub>73.0 cm - 200.0 cm</sub>',
+        'pequenos' => '<p>Pequeño<br><sup>Hasta 25.4 cm</sup></p>', 
+        'medianos' => '<p>Mediano<br><sup>27.9 a 50.8 cm</sup></p>', 
+        'grandes'  => '<p>Grande<br><sup>53.3 a 73.6 cm</sup></p>', 
+        'gigantes' => '<p>Gigante<br><sup>Más 76.2 cm</sup></p>',
     );
     $TAMANOS = "";
     foreach($tamanos as $key => $value){
@@ -131,7 +131,7 @@ $servicios = array(
         <div class='jj_btn_tamanos' style='float: left; box-sizing: border-box; padding: 0px 1px; margin-bottom: 2px !important;'>
             <div class='boton_portada boton_servicio' style='margin: 0px !important;'>
                 <input type='checkbox' name='tamanos[]' id='tamano_mascota_{$key}' value='{$key}' class='servicio_cuidador_{$key}' data-key='{$key}'>
-                <label for='tamano_mascota_{$key}' style='line-height: 12px; padding: 5px;'>
+                <label for='tamano_mascota_{$key}' style='line-height: 16px; padding: 5px;'>
                     <i class='icon-{$key}'></i>
                     {$value}
                 </label>
